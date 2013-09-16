@@ -44,9 +44,9 @@
    <wing_incidence unit="DEG">          3.00 </wing_incidence>
    <chord     unit="M" >    2.813 </chord>
    <htailarea unit="M2">    17.23 </htailarea>
-   <htailarm  unit="M" >    12.25 </htailarm> <!-- Just a guess from blueprint -->
+   <htailarm  unit="M" >    12.249 </htailarm> <!-- Just a guess from blueprint -->
    <vtailarea unit="M2">    13.28 </vtailarea>
-   <vtailarm  unit="M" >    11.75 </vtailarm> <!-- Just a guess from blueprint -->
+   <vtailarm  unit="M" >    11.297 </vtailarm> <!-- Just a guess from blueprint -->
    <location name="AERORP" unit="IN">
      <x> 444.12 </x>
      <y>   0.00 </y>
@@ -299,8 +299,11 @@
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
    <rolling_friction> 0.02 </rolling_friction>
-   <spring_coeff unit="LBS/FT">      14420.70 </spring_coeff>
-   <damping_coeff unit="LBS/FT/SEC"> 24034.50 </damping_coeff>
+   <!-- <spring_coeff unit="LBS/FT">      14420.70 </spring_coeff>
+   <damping_coeff unit="LBS/FT/SEC"> 24034.50 </damping_coeff> -->
+            <spring_coeff unit="LBS/FT">60000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
+            <damping_coeff_rebound unit="LBS/FT/SEC">10000</damping_coeff_rebound>
    <max_steer unit="DEG"> 45.00 </max_steer>
    <brake_group>NONE</brake_group>
    <retractable>1</retractable>
@@ -315,8 +318,11 @@
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
    <rolling_friction> 0.02 </rolling_friction>
-   <spring_coeff unit="LBS/FT">      48069.00 </spring_coeff>
-   <damping_coeff unit="LBS/FT/SEC"> 24034.50 </damping_coeff>
+   <!-- <spring_coeff unit="LBS/FT">      48069.00 </spring_coeff>
+   <damping_coeff unit="LBS/FT/SEC"> 24034.50 </damping_coeff> -->
+            <spring_coeff unit="LBS/FT"> 30000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
+            <damping_coeff_rebound unit="LBS/FT/SEC">10000</damping_coeff_rebound>
    <max_steer unit="DEG">0</max_steer>
    <brake_group>LEFT</brake_group>
    <retractable>1</retractable>
@@ -331,41 +337,56 @@
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
    <rolling_friction> 0.02 </rolling_friction>
-   <spring_coeff unit="LBS/FT">      48069.00 </spring_coeff>
-   <damping_coeff unit="LBS/FT/SEC"> 24034.50 </damping_coeff>
+   <!-- <spring_coeff unit="LBS/FT">      48069.00 </spring_coeff>
+   <damping_coeff unit="LBS/FT/SEC"> 24034.50 </damping_coeff> -->
+            <spring_coeff unit="LBS/FT"> 30000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
+            <damping_coeff_rebound unit="LBS/FT/SEC">10000</damping_coeff_rebound>
    <max_steer unit="DEG">0</max_steer>
    <brake_group>RIGHT</brake_group>
    <retractable>1</retractable>
   </contact>
 
   <contact type="STRUCTURE" name="LEFT_WING">
-    <location unit="IN">
-     <x> 444.12 </x>
-     <y> -47.90 </y>
-     <z> -23.16 </z>
+    <location unit="M">
+     <x>  10.270 </x>
+     <y> -14.100 </y>
+     <z>   1.214 </z>
     </location>
     <static_friction>  1.00 </static_friction>
     <dynamic_friction> 1.00 </dynamic_friction>
-    <spring_coeff unit="LBS/FT">      48069.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC"> 48069.00 </damping_coeff>
+    <spring_coeff unit="LBS/FT">      4869.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 4809.00 </damping_coeff>
   </contact>
 
   <contact type="STRUCTURE" name="RIGHT_WING">
-    <location unit="IN">
-     <x> 444.12 </x>
-     <y>  47.90 </y>
-     <z> -23.16 </z>
+    <location unit="M">
+     <x>  10.270 </x>
+     <y>  14.100 </y>
+     <z>   1.214 </z>
     </location>
     <static_friction>  1.00 </static_friction>
     <dynamic_friction> 1.00 </dynamic_friction>
-    <spring_coeff unit="LBS/FT">      48069.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC"> 48069.00 </damping_coeff>
+    <spring_coeff unit="LBS/FT">      4069.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 4869.00 </damping_coeff>
+  </contact>
+
+  <contact type="STRUCTURE" name="TAIL">
+    <location unit="M">
+     <x>  14.100 </x>
+     <y>   0.0   </y>
+     <z>  -1.050 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">      4069.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 4869.00 </damping_coeff>
   </contact>
 
  </ground_reactions>
 
  <propulsion>
-
+<!--
    <engine file="ai24">
     <location unit="IN">
       <x> 444.12 </x>
@@ -447,7 +468,7 @@
      <capacity unit="LBS"> 4069.84 </capacity>
      <contents unit="LBS"> 2034.92 </contents>
   </tank>
-
+-->
  </propulsion>
 
  <flight_control name="FCS: an24">
@@ -653,7 +674,7 @@
  </flight_control>
 
  <aerodynamics>
-<!--
+
 
         <function name="aero/function/cmf">
             <description>Mach and flaps parameter</description>
@@ -802,7 +823,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>gear/gear-pos-norm</property>
-           <value>0.023</value>
+           <value>0.014</value>
          </product>
     </function>
 
@@ -826,7 +847,15 @@
             <tableData>
               -1.57    1.230
               -0.26    0.050
+              -0.14    0.018
+              -0.13    0.014
+              -0.105   0.008
+              -0.07    0.004
                0.00    0.000
+               0.07    0.004
+               0.105   0.008
+               0.13    0.014
+               0.14    0.018
                0.26    0.050
                1.57    1.230
             </tableData>
@@ -1025,7 +1054,7 @@
     </function>
 
   </axis>
--->
+
  </aerodynamics>
 
  <external_reactions>
