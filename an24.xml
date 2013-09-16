@@ -139,16 +139,6 @@
       <z>  -0.35 </z>
     </location>
   </pointmass>
-<!-- For engines with water injection
-  <pointmass name="Water for engines">
-    <weight unit="KG">    68.0 </weight>
-    <location name="POINTMASS" unit="M">
-      <x>  10.39 </x>
-      <y>   0.00 </y>
-      <z>   1.30 </z>
-    </location>
-  </pointmass>
--->
   <pointmass name="Passangers row 1">
     <weight unit="KG">   300.0 </weight>
     <location name="POINTMASS" unit="M">
@@ -271,7 +261,7 @@
     </location>
   </pointmass>
   <pointmass name="Baggage room 2">
-    <weight unit="KG">   200.0 </weight> <!-- Maximum load 600 kg -->
+    <weight unit="KG">   50.0 </weight> <!-- Maximum load 600 kg -->
     <location name="POINTMASS" unit="M">
       <x>  18.00 </x>
       <y>   0.00 </y>
@@ -279,23 +269,32 @@
     </location>
   </pointmass>
   <pointmass name="Baggage room 3">
-    <weight unit="KG">   200.0 </weight> <!-- Maximum load 570 kg -->
+    <weight unit="KG">   50.0 </weight> <!-- Maximum load 570 kg -->
     <location name="POINTMASS" unit="M">
       <x>  19.28 </x>
       <y>   0.00 </y>
       <z>   0.60 </z>
     </location>
   </pointmass>
-  
+  <!-- For engines with water injection
+  <pointmass name="Water for engines">
+    <weight unit="KG">    68.0 </weight>
+    <location name="POINTMASS" unit="M">
+      <x>  10.39 </x>
+      <y>   0.00 </y>
+      <z>   1.30 </z>
+    </location>
+  </pointmass>
+-->
  </mass_balance>
 
  <ground_reactions>
 
   <contact type="BOGEY" name="NOSE">
-   <location unit="IN">
-     <x> 120.44 </x>
-     <y>   0.00 </y>
-     <z> -111.17 </z>
+   <location unit="M">
+     <x>   2.420 </x>
+     <y>   0.000 </y>
+     <z>  -1.910 </z>
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
@@ -308,10 +307,10 @@
   </contact>
 
   <contact type="BOGEY" name="LEFT_MAIN">
-   <location unit="IN">
-     <x> 661.88 </x>
-     <y> -126.46 </y>
-     <z> -111.17 </z>
+   <location unit="M">
+     <x>   10.270 </x>
+     <y>   -3.950 </y>
+     <z>   -1.910 </z>
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
@@ -324,10 +323,10 @@
   </contact>
 
   <contact type="BOGEY" name="RIGHT_MAIN">
-   <location unit="IN">
-     <x> 661.88 </x>
-     <y> 126.46 </y>
-     <z> -111.17 </z>
+   <location unit="M">
+     <x>  10.270 </x>
+     <y>   3.950 </y>
+     <z>  -1.910 </z>
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
@@ -421,7 +420,7 @@
 
   <tank type="FUEL" number="0">
      <location unit="IN">
-       <x> 444.12 </x>
+       <x> 344.12 </x>
        <y>   0.00 </y>
        <z> -23.16 </z>
      </location>
@@ -431,7 +430,7 @@
 
   <tank type="FUEL" number="1">
      <location unit="IN">
-       <x> 444.12 </x>
+       <x> 344.12 </x>
        <y>   0.00 </y>
        <z> -23.16 </z>
      </location>
@@ -441,7 +440,7 @@
 
   <tank type="FUEL" number="2">
      <location unit="IN">
-       <x> 444.12 </x>
+       <x> 344.12 </x>
        <y>   0.00 </y>
        <z> -23.16 </z>
      </location>
@@ -654,6 +653,40 @@
  </flight_control>
 
  <aerodynamics>
+<!--
+
+        <function name="aero/function/cmf">
+            <description>Mach and flaps parameter</description>
+            <sum>
+                <property>fcs/flap-pos-deg</property>
+                <product>
+                    <property>velocities/mach</property>
+                    <value>-1</value>
+                </product>
+            </sum>
+        </function>
+        <function name="aero/function/cy">
+            <description>Lift due to alpha</description>
+            <table name="Cy">
+                <independentVar lookup="row">aero/alpha-wing-rad</independentVar>
+                <independentVar lookup="column">aero/function/cmf</independentVar>
+                <tableData>
+                               -0.95         -0.8          -0.5          0.2           28            45            
+                  -0.06981      -0.65         -0.65         -0.65         -0.65         0             0.25          
+                  0             -0.22         -0.2          -0.25         -0.25         0.4           0.65          
+                  0.04887       0.05          0.1           0.05          0             0.65          0.93          
+                  0.08727       0.24          0.36          0.3           0.2           0.87          1.15          
+                  0.1658        0.62          0.8           0.78          0.6           1.3           1.58          
+                  0.2618        0.78          1             1.19          1.05          1.78          2.08          
+                  0.2792        0.78          1.01          1.25          1.11          1.85          2.13          
+                  0.2967        0.75          0.95          1.28          1.18          1.9           2.08          
+                  0.3316        0.56          0.78          1.25          1.26          1.85          1.7           
+                  0.3665        0.3           0.5           1.18          1.3           1.7           1.4           
+                  0.384         0.18          0.35          1.1           1.27          1.6           1.3           
+                  0.4363        -0.2          -0.1          0.9           1.13          1.3           1             
+                </tableData>
+            </table>
+        </function>
 
   <axis name="LIFT">
 
@@ -992,6 +1025,7 @@
     </function>
 
   </axis>
+-->
  </aerodynamics>
 
  <external_reactions>

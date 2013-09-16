@@ -72,4 +72,115 @@ Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
   </help>
 
  </sim>
+
+<payload>
+  <weight>
+   <name type="string">Buffet</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">88.18</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 1</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[8]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 2</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[9]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 3</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[10]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 4</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[11]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 5</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[12]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 6</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[13]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 7</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[14]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 8</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[15]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 9</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[16]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 10</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[17]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 11</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[18]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 12</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[19]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Passengers row 13</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[20]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">661.39</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Baggage room 1 left</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[21]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">1985.0</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Baggage room 1 right</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[22]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">1323.0</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Baggage room 2</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[23]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">1323.0</max-lb>
+  </weight>
+  <weight>
+   <name type="string">Baggage room 3</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[24]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">1255.0</max-lb>
+  </weight>
+ </payload>
 </PropertyList>

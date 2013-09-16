@@ -2,7 +2,15 @@
 
 <PropertyList>
 
-  <path>An-24.3af.ac</path>
+<!--  <path>An-24.3af.ac</path>  -->
 
-  
+   <model>
+          <path>An-24.3af.ac</path>
+          <offsets>
+             <x-m>0</x-m>
+             <y-m>0</y-m>
+             <z-m>0</z-m>
+             <heading-deg>90</heading-deg>
+          </offsets>
+ </model>
 </PropertyList>
