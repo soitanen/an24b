@@ -487,15 +487,15 @@ Models        </description>
                 </setting>
                 <setting>
                   <position>15</position>
-                  <time>4</time>
+                  <time>6</time>
                 </setting>
                 <setting>
                   <position>30</position>
-                  <time>3</time>
+                  <time>6</time>
                 </setting>
                 <setting>
                   <position>38</position>
-                  <time>2</time>
+                  <time>3</time>
                 </setting>
               </traverse>
               <output>fcs/flap-pos-deg</output>
