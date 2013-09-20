@@ -72,6 +72,25 @@ Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
   </help>
 
  </sim>
+ <engines>
+  <engine n="0">
+   <running type="bool">true</running>
+  </engine>
+  <engine n="1">
+   <running type="bool">true</running>
+  </engine>
+ </engines>
+
+  <flaps>
+	  <setting>0.0</setting>
+	  <setting>0.1316</setting>
+	  <setting>0.2632</setting>
+	  <setting>0.3947</setting>
+	  <setting>0.5263</setting>
+	  <setting>0.6579</setting>
+	  <setting>0.7895</setting>
+	  <setting>1.0</setting>
+  </flaps>
 
 <payload>
   <weight>
