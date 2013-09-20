@@ -16,7 +16,7 @@
 -->
 
 <propeller name="an24_prop">
-  <ixx>  28.45 </ixx>
+  <ixx>  7.355 </ixx>
   <diameter unit="M">   3.9 </diameter>
   <numblades> 4 </numblades>
   <gearratio> 12.11341 </gearratio>
