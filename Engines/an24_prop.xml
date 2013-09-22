@@ -21,8 +21,9 @@
   <numblades> 4 </numblades>
   <gearratio> 12.11341 </gearratio>
   <p_factor>   9.33 </p_factor>
-  <minpitch> 8 </minpitch>
+  <minpitch> 19 </minpitch> <!-- was 8 -->
   <maxpitch> 92.5 </maxpitch>
+  <reversepitch> 8 </reversepitch>
   <minrpm>   1146 </minrpm>
   <maxrpm>   1245 </maxrpm>
 
