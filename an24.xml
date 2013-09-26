@@ -357,7 +357,8 @@ Models        </description>
                 <yaw> 0 </yaw>
             </orient>
             <feed>0</feed>
-            <thruster file="an24_prop">
+            <thruster file="prop_4-smv-4">
+                <sense>-1</sense>
                 <location unit="M">
                     <x> 5.940 </x>
                     <y> -3.950 </y>
@@ -383,7 +384,8 @@ Models        </description>
                 <yaw> 0 </yaw>
             </orient>
             <feed>1</feed>
-            <thruster file="an24_prop">
+            <thruster file="prop_4-smv-4">
+                <sense>-1</sense>
                 <location unit="M">
                     <x> 5.940 </x>
                     <y> 3.950 </y>
