@@ -401,21 +401,57 @@ Models        </description>
 
         <tank type="FUEL" number="1">
             <location unit="M">
-                <x> 10 </x>
-                <y> 0 </y>
-                <z> 0 </z>
+                <x> 9.654 </x>
+                <y> -1.4 </y>
+                <z> 1.415 </z>
             </location>
-            <capacity unit="KG">1000</capacity>
-            <contents unit="KG">800</contents>
+            <capacity unit="KG">275</capacity>
+            <contents unit="KG">275</contents>
         </tank>
         <tank type="FUEL" number="2">
             <location unit="M">
-                <x> 10 </x>
-                <y> 0 </y>
-                <z> 0 </z>
+                <x> 9.654 </x>
+                <y> -3 </y>
+                <z> 1.415 </z>
             </location>
-            <capacity unit="KG">1000</capacity>
-            <contents unit="KG">800</contents>
+            <capacity unit="KG">275</capacity>
+            <contents unit="KG">275</contents>
+        </tank>
+        <tank type="FUEL" number="3">
+            <location unit="M">
+                <x> 9.838 </x>
+                <y> -7.45 </y>
+                <z> 1.474 </z>
+            </location>
+            <capacity unit="KG">1425</capacity>
+            <contents unit="KG">1425</contents>
+        </tank>
+        <tank type="FUEL" number="4">
+            <location unit="M">
+                <x> 9.838 </x>
+                <y> 7.45 </y>
+                <z> 1.474 </z>
+            </location>
+            <capacity unit="KG">1425</capacity>
+            <contents unit="KG">1425</contents>
+        </tank>
+        <tank type="FUEL" number="5">
+            <location unit="M">
+                <x> 9.654 </x>
+                <y> 3 </y>
+                <z> 1.415 </z>
+            </location>
+            <capacity unit="KG">275</capacity>
+            <contents unit="KG">275</contents>
+        </tank>
+        <tank type="FUEL" number="6">
+            <location unit="M">
+                <x> 9.654 </x>
+                <y> 1.4 </y>
+                <z> 1.415 </z>
+            </location>
+            <capacity unit="KG">275</capacity>
+            <contents unit="KG">275</contents>
         </tank>
     </propulsion>
 
