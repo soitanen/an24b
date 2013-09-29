@@ -356,7 +356,9 @@ Models        </description>
                 <pitch> 0 </pitch>
                 <yaw> 0 </yaw>
             </orient>
-            <feed>0</feed>
+            <feed>3</feed>
+            <feed>2</feed>
+            <feed>1</feed>
             <thruster file="prop_4-smv-4">
                 <sense>-1</sense>
                 <location unit="M">
@@ -383,7 +385,9 @@ Models        </description>
                 <pitch> 0 </pitch>
                 <yaw> 0 </yaw>
             </orient>
-            <feed>1</feed>
+            <feed>4</feed>
+            <feed>5</feed>
+            <feed>6</feed>
             <thruster file="prop_4-smv-4">
                 <sense>-1</sense>
                 <location unit="M">
@@ -407,6 +411,7 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
+            <priority>3</priority>
         </tank>
         <tank type="FUEL" number="2">
             <location unit="M">
@@ -416,6 +421,7 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
+            <priority>2</priority>
         </tank>
         <tank type="FUEL" number="3">
             <location unit="M">
@@ -425,6 +431,7 @@ Models        </description>
             </location>
             <capacity unit="KG">1425</capacity>
             <contents unit="KG">1425</contents>
+            <priority>1</priority>
         </tank>
         <tank type="FUEL" number="4">
             <location unit="M">
@@ -434,6 +441,7 @@ Models        </description>
             </location>
             <capacity unit="KG">1425</capacity>
             <contents unit="KG">1425</contents>
+            <priority>1</priority>
         </tank>
         <tank type="FUEL" number="5">
             <location unit="M">
@@ -443,6 +451,7 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
+            <priority>2</priority>
         </tank>
         <tank type="FUEL" number="6">
             <location unit="M">
@@ -452,6 +461,7 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
+            <priority>3</priority>
         </tank>
     </propulsion>
 
