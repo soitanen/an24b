@@ -347,8 +347,35 @@ Models        </description>
     <propulsion>
         <engine file="ai24">
             <location unit="M">
-                <x> 5.940 </x>
-                <y> -3.950 </y>
+                <x> 5.94 </x>
+                <y> -3.95 </y>
+                <z> 1.185 </z>
+            </location>
+            <orient unit="DEG">
+                <roll> 0 </roll>
+                <pitch> 0 </pitch>
+                <yaw> 0 </yaw>
+            </orient>
+            <feed>2</feed>
+            <feed>1</feed>
+            <feed>0</feed>
+            <thruster file="prop_4-smv-4">
+                <location unit="M">
+                    <x> 5.94 </x>
+                    <y> -3.95 </y>
+                    <z> 1.185 </z>
+                </location>
+                <orient unit="DEG">
+                    <roll> 0 </roll>
+                    <pitch> 1 </pitch>
+                    <yaw> 0 </yaw>
+                </orient>
+            </thruster>
+        </engine>
+        <engine file="ai24">
+            <location unit="M">
+                <x> 5.94 </x>
+                <y> 3.95 </y>
                 <z> 1.185 </z>
             </location>
             <orient unit="DEG">
@@ -357,42 +384,12 @@ Models        </description>
                 <yaw> 0 </yaw>
             </orient>
             <feed>3</feed>
-            <feed>2</feed>
-            <feed>1</feed>
-            <thruster file="prop_4-smv-4">
-                <sense>-1</sense>
-                <location unit="M">
-                    <x> 5.940 </x>
-                    <y> -3.950 </y>
-                    <z> 1.185 </z>
-                </location>
-                <orient unit="DEG">
-                    <roll> 0 </roll>
-                    <pitch> 1 </pitch>
-                    <yaw> 0 </yaw>
-                </orient>
-            </thruster>
-        </engine>
-
-        <engine file="ai24">
-            <location unit="M">
-                <x> 5.940 </x>
-                <y> 3.950 </y>
-                <z> 1.185 </z>
-            </location>
-            <orient unit="DEG">
-                <roll> 0 </roll>
-                <pitch> 0 </pitch>
-                <yaw> 0 </yaw>
-            </orient>
             <feed>4</feed>
             <feed>5</feed>
-            <feed>6</feed>
             <thruster file="prop_4-smv-4">
-                <sense>-1</sense>
                 <location unit="M">
-                    <x> 5.940 </x>
-                    <y> 3.950 </y>
+                    <x> 5.94 </x>
+                    <y> 3.95 </y>
                     <z> 1.185 </z>
                 </location>
                 <orient unit="DEG">
@@ -402,8 +399,7 @@ Models        </description>
                 </orient>
             </thruster>
         </engine>
-
-        <tank type="FUEL" number="1">
+        <tank type="FUEL">
             <location unit="M">
                 <x> 9.654 </x>
                 <y> -1.4 </y>
@@ -411,9 +407,8 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>3</priority>
         </tank>
-        <tank type="FUEL" number="2">
+        <tank type="FUEL">
             <location unit="M">
                 <x> 9.654 </x>
                 <y> -3 </y>
@@ -421,9 +416,8 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>2</priority>
         </tank>
-        <tank type="FUEL" number="3">
+        <tank type="FUEL">
             <location unit="M">
                 <x> 9.838 </x>
                 <y> -7.45 </y>
@@ -431,9 +425,8 @@ Models        </description>
             </location>
             <capacity unit="KG">1425</capacity>
             <contents unit="KG">1425</contents>
-            <priority>1</priority>
         </tank>
-        <tank type="FUEL" number="4">
+        <tank type="FUEL">
             <location unit="M">
                 <x> 9.838 </x>
                 <y> 7.45 </y>
@@ -441,9 +434,8 @@ Models        </description>
             </location>
             <capacity unit="KG">1425</capacity>
             <contents unit="KG">1425</contents>
-            <priority>1</priority>
         </tank>
-        <tank type="FUEL" number="5">
+        <tank type="FUEL">
             <location unit="M">
                 <x> 9.654 </x>
                 <y> 3 </y>
@@ -451,9 +443,8 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>2</priority>
         </tank>
-        <tank type="FUEL" number="6">
+        <tank type="FUEL">
             <location unit="M">
                 <x> 9.654 </x>
                 <y> 1.4 </y>
@@ -461,7 +452,6 @@ Models        </description>
             </location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>3</priority>
         </tank>
     </propulsion>
 
