@@ -27,6 +27,7 @@
   <reversepitch> 8 </reversepitch>
   <minrpm>   1240 </minrpm>
   <maxrpm>   1250 </maxrpm>
+  <ct_factor> 1.236 </ct_factor>
 
  <!-- thrust coefficient as a function of advance ratio and blade angle -->
   <table name="C_THRUST" type="internal">
