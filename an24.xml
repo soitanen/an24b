@@ -20,7 +20,7 @@ Models        </description>
         <vtailarea unit="M2"> 13.28 </vtailarea>
         <vtailarm unit="M"> 11.297 </vtailarm>
         <location name="AERORP" unit="M">
-            <x> 10.298 </x>
+            <x> 8.86337 </x>
             <y> 0 </y>
             <z> 1.392 </z>
         </location>
@@ -638,6 +638,18 @@ Models        </description>
     </flight_control>
 
     <aerodynamics>
+        <aero_ref_pt_shift_x>
+                 <function>
+                    <table>
+                        <independentVar>fcs/flap-pos-deg</independentVar>
+                        <tableData>
+                          0             0.55           
+                          15            0.50
+                          38            0.42        
+                        </tableData>
+                    </table>
+                </function>
+        </aero_ref_pt_shift_x>
         <function name="aero/function/yt0">
             <difference>
                 <value>1.467</value>
