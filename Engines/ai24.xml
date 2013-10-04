@@ -62,7 +62,7 @@ itt_delay [-] time constant for ITT change
     <tableData>
             0   5   90    100
          0  0   0.5  0.5   0.5
-       200  0   0.1  50  2550
+       200  0   0.1  20  2550
     </tableData>
   </table>
 
