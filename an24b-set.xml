@@ -38,7 +38,7 @@ Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
   <aero>an24</aero>
 
   <sound>
-   <path>Aircraft/Generic/generic-sound.xml</path>
+   <path>Aircraft/an24b/Sound/an24b-sound.xml</path>
   </sound>
 
   <panel_2>
