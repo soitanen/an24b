@@ -119,7 +119,7 @@
   </axis>
 </animation>
 
-<!--Elevators -->
+<!--Elevators
 <animation>
   <type>rotate</type>
   <object-name>elevatorL</object-name>  
@@ -151,7 +151,7 @@
     <z2-m>1.737</z2-m>
   </axis>
 </animation>
-<!-- -->
+-->
 
 <!--Flaps-->
 <animation>
