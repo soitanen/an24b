@@ -54,16 +54,6 @@ Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
    <title>An-24B</title>
   </help>
 
- </sim>
- <engines>
-  <engine n="0">
-   <running type="bool">true</running>
-  </engine>
-  <engine n="1">
-   <running type="bool">true</running>
-  </engine>
- </engines>
-
   <flaps>
 	  <setting>0.0</setting>
 	  <setting>0.1316</setting>
@@ -74,6 +64,15 @@ Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
 	  <setting>0.7895</setting>
 	  <setting>1.0</setting>
   </flaps>
+ </sim>
+ <engines>
+  <engine n="0">
+   <running type="bool">true</running>
+  </engine>
+  <engine n="1">
+   <running type="bool">true</running>
+  </engine>
+ </engines>
 
 <payload>
   <weight>

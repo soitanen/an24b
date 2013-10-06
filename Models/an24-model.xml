@@ -73,8 +73,8 @@
 <animation>
   <type>rotate</type>
   <object-name>aileronL</object-name>  
-  <property>controls/flight/aileron</property>
-  <factor>25.0</factor>
+  <property>fdm/jsbsim/fcs/left-aileron-pos-deg</property>
+  <factor>1.0</factor>
   <offset-deg>0.0</offset-deg>
   <axis>
     <x1-m>10.7169</x1-m>
@@ -89,8 +89,8 @@
 <animation>
   <type>rotate</type>
   <object-name>aileronR</object-name>  
-  <property>controls/flight/aileron</property>
-  <factor>25.0</factor>
+  <property>fdm/jsbsim/fcs/right-aileron-pos-deg</property>
+  <factor>1.0</factor>
   <offset-deg>0.0</offset-deg>
   <axis>
     <x1-m>10.7169</x1-m>
