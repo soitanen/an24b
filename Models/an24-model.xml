@@ -106,8 +106,8 @@
 <animation>
   <type>rotate</type>
   <object-name>rudder</object-name>  
-  <property>controls/flight/rudder</property>
-  <factor>35.0</factor>
+  <property>fdm/jsbsim/fcs/rudder-pos-deg</property> <!-- <property>controls/flight/rudder</property> -->
+  <factor>-1.0</factor> <!-- 35 -->
   <offset-deg>0.0</offset-deg>
   <axis>
     <x1-m>21.7706</x1-m>
@@ -193,8 +193,8 @@
 <animation>
   <object-name>propL</object-name>
   <type>spin</type>
-  <property>engines/engine[0]/n2</property>
-  <factor>0.25</factor>
+  <property>fdm/jsbsim/propulsion/engine/propeller-rpm</property>
+  <factor>1</factor>
   <center>
    <x-m>0.0</x-m>
    <y-m>-3.9090</y-m>
@@ -210,8 +210,8 @@
 <animation>
   <object-name>propR</object-name>
   <type>spin</type>
-  <property>engines/engine[0]/n2</property>
-  <factor>0.25</factor>
+  <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+  <factor>1</factor>
   <center>
    <x-m>0.0</x-m>
    <y-m>3.9090</y-m>
