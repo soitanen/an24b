@@ -1,0 +1,113 @@
+<PropertyList>
+
+<!-- AGD-1, Pilot's AI -->
+
+  <path>agd-1.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <object-name>PitchScale</object-name>
+   <object-name>Plane</object-name>
+   <object-name>pitch</object-name>
+   <object-name>Blanker</object-name>
+   <object-name>bull_tube</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>skid_ball</object-name>
+   <object-name>knob</object-name>
+   <object-name>Cylinder.002</object-name>
+   <object-name>Cylinder.003</object-name>
+   <object-name>Cylinder.004</object-name>
+   <object-name>Cylinder.005</object-name>
+   <object-name>arretir</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.6</green>
+     <blue>0.6</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>PitchScale</object-name>
+    <property>/instrumentation/attitude-indicator[0]/indicated-pitch-deg</property>
+    <interpolation>
+      <entry><ind>	-80.0</ind>	<dep>	-0.437</dep></entry>
+      <entry><ind>	-70.0</ind>	<dep>	-0.383</dep></entry>
+      <entry><ind>	-60.0</ind>	<dep>	-0.327</dep></entry>
+      <entry><ind>	-50.0</ind>	<dep>	-0.273</dep></entry>
+      <entry><ind>	-40.0</ind>	<dep>	-0.218</dep></entry>
+      <entry><ind>	-30.0</ind>	<dep>	-0.163</dep></entry>
+      <entry><ind>	-20.0</ind>	<dep>	-0.109</dep></entry>
+      <entry><ind>	-10.0</ind>	<dep>	-0.054</dep></entry>
+      <entry><ind>	-5.0</ind>	<dep>	-0.027</dep></entry>
+      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	5.0</ind>	<dep>	0.026</dep></entry>
+      <entry><ind>	10.0</ind>	<dep>	0.053</dep></entry>
+      <entry><ind>	20.0</ind>	<dep>	0.108</dep></entry>
+      <entry><ind>	30.0</ind>	<dep>	0.163</dep></entry>
+      <entry><ind>	40.0</ind>	<dep>	0.218</dep></entry>
+      <entry><ind>	50.0</ind>	<dep>	0.273</dep></entry>
+      <entry><ind>	60.0</ind>	<dep>	0.327</dep></entry>
+      <entry><ind>	70.0</ind>	<dep>	0.382</dep></entry>
+      <entry><ind>	80.0</ind>	<dep>	0.437</dep></entry>
+    </interpolation>
+    <!--<factor>0.0053</factor>-->
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!--Attitude-->
+<animation>
+  <type>rotate</type>
+  <object-name>Plane</object-name>
+  <property>/instrumentation/attitude-indicator[0]/indicated-roll-deg</property>
+  <max-deg>70.0</max-deg>
+  <min-deg>-70.0</min-deg>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
+
+<!--Slip-->
+<animation>
+  <type>rotate</type>
+  <object-name>skid_ball</object-name>
+  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+  <max-deg>10.0</max-deg>
+  <min-deg>-10.0</min-deg>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.006</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+
+
+</PropertyList>

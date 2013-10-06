@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>crewsection03.ac</path>
+
+<model>
+  <name>RPSN-2</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/RPSN-2_nav/rpsn-2.xml</path>
+  <offsets>
+    <x-m>3.1</x-m>
+    <y-m>-0.86</y-m>
+    <z-m>0.97</z-m>
+    <roll-deg>35</roll-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>SPU-7</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnav/navspu-7.xml</path>
+  <offsets>
+    <x-m>3.77</x-m>
+    <y-m>-0.76</y-m>
+    <z-m>1.01</z-m>
+    <heading-deg>175</heading-deg>
+  </offsets>
+</model>
+
+</PropertyList>

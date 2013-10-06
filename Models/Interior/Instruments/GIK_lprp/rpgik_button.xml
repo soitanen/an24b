@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- Fast align button for GIK-1 compass -->
+<PropertyList>
+ <path>gik_button.ac</path>
+</PropertyList>

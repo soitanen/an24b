@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!-- FO's KPPM, HSI -->
+
+<PropertyList>
+ <path>kppm.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+
+</PropertyList>

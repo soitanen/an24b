@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- Exterior -->
+
+<path>Aircraft/an24b/Models/Exterior/an24-model.ac</path>
+    <offsets>
+      <x-m>-8.5</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+
+<animation>
+  <type>select</type>
+  <object-name>exterior</object-name>
+  <condition>
+    <not>
+    	<property>/sim/current-view/internal</property>
+    </not>
+  </condition>
+</animation>
+
+<!-- Interior -->
+
+<model>
+    <name>cockpit</name>
+    <path>Aircraft/an24b/Models/Interior/cockpit.xml</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+    <nopreview/>
+</model>
+
+<model>
+    <name>crewsection</name>
+    <path>Aircraft/an24b/Models/Interior/crewsection.xml</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+    <nopreview/>
+</model>
+
+<model>
+    <name>cargosection</name>
+    <path>Aircraft/an24b/Models/Interior/cargosection.xml</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+    <nopreview/>
+</model>
+
+<model>
+    <name>paxsection</name>
+    <path>Aircraft/an24b/Models/Interior/paxsection.xml</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+    <nopreview/>
+</model>
+
+
+<!--****************************** Control surfaces **************************************-->
+<!--Ailerons-->
+<animation>
+  <type>rotate</type>
+  <object-name>aileronL</object-name>  
+  <property>controls/flight/aileron</property>
+  <factor>25.0</factor>
+  <offset-deg>0.0</offset-deg>
+  <axis>
+    <x1-m>10.7169</x1-m>
+    <y1-m>-14.4454</y1-m>
+    <z1-m>1.7360</z1-m>
+    <x2-m>10.6020</x2-m>
+    <y2-m>-9.1487</y2-m>
+    <z2-m>1.737</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>aileronR</object-name>  
+  <property>controls/flight/aileron</property>
+  <factor>25.0</factor>
+  <offset-deg>0.0</offset-deg>
+  <axis>
+    <x1-m>10.7169</x1-m>
+    <y1-m>14.4454</y1-m>
+    <z1-m>1.7360</z1-m>
+    <x2-m>10.6020</x2-m>
+    <y2-m>9.1487</y2-m>
+    <z2-m>1.737</z2-m>
+  </axis>
+</animation>
+
+<!--Rudder-->
+<animation>
+  <type>rotate</type>
+  <object-name>rudder</object-name>  
+  <property>controls/flight/rudder</property>
+  <factor>35.0</factor>
+  <offset-deg>0.0</offset-deg>
+  <axis>
+    <x1-m>21.7706</x1-m>
+    <y1-m>0.0</y1-m>
+    <z1-m>2.0383</z1-m>
+    <x2-m>22.6946</x2-m>
+    <y2-m>0.0</y2-m>
+    <z2-m>6.5533</z2-m>
+  </axis>
+</animation>
+
+<!--Elevators
+<animation>
+  <type>rotate</type>
+  <object-name>elevatorL</object-name>  
+  <property>controls/flight/elevators</property>
+  <factor>25.0</factor>
+  <offset-deg>0.0</offset-deg>
+  <axis>
+    <x1-m>10.7169</x1-m>
+    <y1-m>-14.4454</y1-m>
+    <z1-m>1.7360</z1-m>
+    <x2-m>10.6020</x2-m>
+    <y2-m>-9.1487</y2-m>
+    <z2-m>1.737</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>elevatorR</object-name>  
+  <property>controls/flight/elevators</property>
+  <factor>25.0</factor>
+  <offset-deg>0.0</offset-deg>
+  <axis>
+    <x1-m>10.7169</x1-m>
+    <y1-m>14.4454</y1-m>
+    <z1-m>1.7360</z1-m>
+    <x2-m>10.6020</x2-m>
+    <y2-m>9.1487</y2-m>
+    <z2-m>1.737</z2-m>
+  </axis>
+</animation>
+-->
+
+<!--Flaps-->
+<animation>
+  <type>rotate</type>
+  <object-name>flapinnerL</object-name>  
+  <property>controls/flight/flaps</property>
+  <factor>38.0</factor>
+  <center>
+    <x-m>10.43</x-m>
+    <y-m>0.0</y-m>
+    <z-m>1.52</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>flapinnerR</object-name>  
+  <property>controls/flight/flaps</property>
+  <factor>38.0</factor>
+  <center>
+    <x-m>10.43</x-m>
+    <y-m>0.0</y-m>
+    <z-m>1.52</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--Props-->
+
+<animation>
+  <object-name>propL</object-name>
+  <type>spin</type>
+  <property>engines/engine[0]/n2</property>
+  <factor>0.25</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-3.9090</y-m>
+   <z-m>1.4929</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <object-name>propR</object-name>
+  <type>spin</type>
+  <property>engines/engine[0]/n2</property>
+  <factor>0.25</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>3.9090</y-m>
+   <z-m>1.4929</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+<!-- Doors -->
+
+<animation>
+  <type>pick</type>
+  <object-name>cargodoor</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/animations/exterior/cargodoor" ) == 1.0 ){
+        interpolate("an24/animations/exterior/cargodoor", 0.0, 3.0 );
+        }
+        else {
+        interpolate("an24/animations/exterior/cargodoor", 1.0, 3.0 );
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>cargodoor</object-name>
+  <property>an24/animations/exterior/cargodoor</property>
+  <factor>0.1</factor>
+  <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>    
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>cargodoor</object-name>
+  <property>an24/animations/exterior/cargodoor</property>
+  <factor>60</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>    
+  </axis>
+</animation>
+
+</PropertyList>

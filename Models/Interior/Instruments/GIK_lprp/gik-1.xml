@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+
+<!-- Gyro Induction compass with ADF indication -->
+<PropertyList>
+ <path>gik-1.ac</path>
+<!-- Internal instruments lighting -->
+
+<animation>
+  <type>material</type>
+  <object-name>circle</object-name>
+  <emission>
+    <red-prop>an2/controls/light/int-red</red-prop>
+    <green-prop>an2/controls/light/int-green</green-prop>
+    <blue-prop>an2/controls/light/int-blue</blue-prop>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>long_needle</object-name>
+  <emission>
+    <red-prop>an2/controls/light/int-red</red-prop>
+    <green-prop>an2/controls/light/int-green</green-prop>
+    <blue-prop>an2/controls/light/int-blue</blue-prop>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>short_needle</object-name>
+  <emission>
+    <red-prop>an2/controls/light/int-red</red-prop>
+    <green-prop>an2/controls/light/int-green</green-prop>
+    <blue-prop>an2/controls/light/int-blue</blue-prop>
+  </emission>
+</animation>
+
+<!-- External instruments lighting -->
+
+<animation>
+  <type>material</type>
+  <object-name>front</object-name>
+  <emission>
+    <red-prop>an2/controls/light/ext-red</red-prop>
+    <green-prop>an2/controls/light/ext-green</green-prop>
+    <blue-prop>an2/controls/light/ext-blue</blue-prop>
+  </emission>
+</animation>
+
+<!--UV staff-->
+
+<animation>
+   <type>select</type>
+   <object-name>circle_uv</object-name>
+   <object-name>short_needle_uv</object-name>
+   <object-name>long_needle_uv</object-name>
+   <object-name>front_uv</object-name>
+   <condition>
+   	<property>an2/controls/switches/uv_light</property>
+   </condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>circle_uv</object-name>
+  <object-name>short_needle_uv</object-name>
+  <object-name>long_needle_uv</object-name>
+  <object-name>front_uv</object-name>
+  <condition>
+    <property>an2/controls/switches/uv_light</property>
+  </condition>
+ <emission>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>an2/controls/light/uv-bright</factor-prop>
+  </emission>
+</animation>
+<!--Needles-->
+<animation>
+  <type>rotate</type>
+  <object-name>short_needle</object-name>
+  <object-name>short_needle_uv</object-name>
+  <object-name>circle</object-name>
+  <object-name>circle_uv</object-name>
+  <property>an2/instrumentation/gik/indicated-heading-deg</property>
+  <factor>1.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>short_needle</object-name>
+  <object-name>short_needle_uv</object-name>
+  <property>instrumentation/adf/rotation-deg</property>
+  <factor>-1.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>long_needle</object-name>
+  <object-name>long_needle_uv</object-name>
+  <property>instrumentation/adf/indicated-bearing-deg</property>
+  <factor>-1.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>hs</object-name>
+	<visible>false</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf/rotation-deg</property>
+			<step>1</step>
+<!--			<min>0</min>
+			<max>360</max>-->
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf/rotation-deg</property>
+			<step>-1</step>
+<!--			<min>0</min>
+			<max>360</max>-->
+		</binding>
+	</action>
+	<action>
+		<button>3</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf/rotation-deg</property>
+			<step>1</step>
+<!--			<min>0</min>
+			<max>360</max>-->
+		</binding>
+	</action>
+	<action>
+		<button>4</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/adf/rotation-deg</property>
+			<step>-1</step>
+<!--			<min>0</min>
+			<max>360</max>-->
+		</binding>
+	</action>
+</animation>
+
+
+</PropertyList>

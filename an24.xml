@@ -30,7 +30,7 @@ Models        </description>
             <z> 65 </z>
         </location>
         <location name="VRP" unit="M">
-            <x> 0 </x>
+            <x> 8.5 </x>
             <y> 0 </y>
             <z> 0 </z>
         </location>
@@ -975,7 +975,16 @@ Models        </description>
                 </tableData>
             </table>
         </function>
-
+        <function name="aero/function/mx">
+		<product>                    
+			<sum>
+                      <property>fcs/mixture-cmd-norm</property>
+                      <value>-0.5</value>
+                    </sum>
+                    <value>0.4</value>
+			<value>2</value>
+		</product>
+        </function>
         <axis name="LIFT" unit="LBS">
             <function name="aero/force/Lift_alpha">
                 <description>Lift due to alpha</description>
@@ -1144,6 +1153,15 @@ Models        </description>
                     <value>0.01</value>
                 </product>
             </function>
+          <!--  <function name="aero/moment/Roll_experiment">
+                <description>Yaw moment due to rudder</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>metrics/cbarw-ft</property>
+                    <property>aero/function/mx</property>
+                </product>
+            </function> -->
         </axis>
         <axis name="PITCH" unit="LBS*FT">
             <function name="aero/moment/Pitch_alpha">

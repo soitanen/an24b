@@ -1,0 +1,213 @@
+<PropertyList>
+
+<!-- Fuel control panel -->
+
+  <path>fuelcontrol.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>background</object-name>
+  <condition>
+   <equals>
+    <property>an24/lights/instrlights</property>
+    <value>1.0</value>
+   </equals>
+  </condition>
+  <emission>
+   <red>1.0</red>
+   <green>0.5</green>
+   <blue>0.5</blue>
+   <factor-prop>an24/lights/instrlights</factor-prop>
+  </emission>
+ </animation>
+
+<!-- ************ Top row *********** -->
+
+<model>
+ <path>wl_leftenginefeed.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>-0.06</y-m>
+    <z-m>0.1018</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_crossfeed.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.1118</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_rightenginefeed.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.06</y-m>
+    <z-m>0.1018</z-m>
+  </offsets>
+</model>
+
+<!-- ************* 2nd row ************ -->
+
+<model>
+ <path>wl_pumpleft.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>-0.0393</y-m>
+    <z-m>0.068</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_groupleft.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>-0.018</y-m>
+    <z-m>0.068</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_groupright.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.018</y-m>
+    <z-m>0.068</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_pumpright.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.0393</y-m>
+    <z-m>0.068</z-m>
+  </offsets>
+</model>
+
+<!-- ************* 3rd row ************ -->
+
+<model>
+ <path>wl_pumpfireleft.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>-0.06095</y-m>
+    <z-m>0.038</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_pumpbackleft.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>-0.0214</y-m>
+    <z-m>0.038</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_pumpbackright.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.0214</y-m>
+    <z-m>0.038</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_pumpfireright.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.06095</y-m>
+    <z-m>0.038</z-m>
+  </offsets>
+</model>
+
+<!-- ************* 4th row ************ -->
+
+<model>
+ <path>sw_leftvalve.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.05876</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_leftvalveauto.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.03866</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_leftrearvalve.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.01855</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_annularvalve.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_rightrearvalve.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.01855</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_rightvalveauto.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.0386</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_rightvalve.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.05876</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
+
+<!-- ************* 5th row ************ -->
+
+<model>
+ <path>wl_flakesinengineleft.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>-0.06095</y-m>
+    <z-m>-0.038</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_flakesinengineright.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.06095</y-m>
+    <z-m>-0.038</z-m>
+  </offsets>
+</model>
+</PropertyList>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Fokker Dr.1 (triplane) simulation config.  This file ties together all
+the components used by FGFS to represent the flight data model,
+instrument panel, and external model.
+
+Flight model details: 
+Aircraft/UIUC/fkdr1-v1-nl/README.fkdr1.html
+
+External model details:  
+- Currently no GNU GPL version exists.
+- To obtain an external model, separately download the file
+  fokdr1m2.zip from http://www.flightsim.com.  There are several
+  variants of this which can also be used, namely these files:
+
+  dr-1cfs.zip
+  dr1mp98.zip
+  dr1mpcfs.zip
+  fkdr1blk.zip
+  fokdr-15.zip
+
+- The read the file Aircraft/UIUC/fkdr1-v1-nl/README.fkdr1.html
+
+Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
+************************************************************************
+-->
+
+<PropertyList include="an24b-main.xml">
+
+ <sim>
+
+  <description>An-24B with easy model for FDM testing</description>
+  <author>Michael Soitanen (FDM), Adrian (3D)</author>
+
+  <model>
+   <path>Aircraft/an24b/Models/an24.xml</path>
+  </model>
+
+
+ </sim>
+ 
+</PropertyList>

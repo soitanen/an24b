@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!-- RTMS-0.85-B1, engine 1 fuel flow-->
+
+<PropertyList>
+ <path>rtms.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <object-name>needle</object-name>
+   <object-name>cover</object-name>
+   <object-name>dig100</object-name>
+   <object-name>dig10</object-name>
+   <object-name>dig1</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+
+</PropertyList>

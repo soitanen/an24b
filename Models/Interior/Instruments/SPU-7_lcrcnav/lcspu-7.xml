@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- Pilot's SPU-7, crew communication selector -->
+
+<PropertyList>
+  <path>spu-7.ac</path>
+
+<property>
+  <an24>
+    <instrumentation>
+     <value01>1.0</value01>
+    </instrumentation>
+  </an24>
+</property>
+
+</PropertyList>

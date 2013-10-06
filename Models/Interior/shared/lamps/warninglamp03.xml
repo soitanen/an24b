@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!-- Red warning light -->
+
+<PropertyList>
+ <path>warninglamp03.ac</path>
+<animation>
+ <type>material</type>
+ <object-name>lampon</object-name>
+ <texture>warninglamp03orangeplain.png</texture>
+</animation>
+</PropertyList>

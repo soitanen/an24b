@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!-- Instruments' background, clamp and bolt-on lamps -->
+
+<PropertyList>
+
+<model>
+ <path>sw_instrlights.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.118</x-m>
+    <y-m>-0.6397</y-m>
+    <z-m>0.662</z-m>
+  </offsets>
+</model>
+
+
+</PropertyList>

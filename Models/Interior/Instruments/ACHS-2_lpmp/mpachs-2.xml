@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<!-- Achs-2, clock -->
+
+<PropertyList>
+ <path>achs-2.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>hour_needle</object-name>
+  <property>/instrumentation/clock/indicated-min</property>
+  <factor>-0.5</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>hour_needle</object-name>
+  <property>/instrumentation/clock/local-hour</property>
+  <factor>-30.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>min_needle</object-name>
+  <property>/instrumentation/clock/indicated-sec</property>
+  <factor>-0.1</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>sec_needle</object-name>
+  <property>/instrumentation/clock/indicated-sec</property>
+  <factor>-6.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+</PropertyList>
