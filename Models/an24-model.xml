@@ -157,8 +157,8 @@
 <animation>
   <type>rotate</type>
   <object-name>flapinnerL</object-name>  
-  <property>controls/flight/flaps</property>
-  <factor>38.0</factor>
+  <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+  <factor>1.0</factor>
   <center>
     <x-m>10.43</x-m>
     <y-m>0.0</y-m>
@@ -174,8 +174,8 @@
 <animation>
   <type>rotate</type>
   <object-name>flapinnerR</object-name>  
-  <property>controls/flight/flaps</property>
-  <factor>38.0</factor>
+  <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+  <factor>1.0</factor>
   <center>
     <x-m>10.43</x-m>
     <y-m>0.0</y-m>
