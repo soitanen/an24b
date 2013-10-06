@@ -244,7 +244,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/us/kus730_1100-cp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/us/kus730_1100.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.6907</y-m>
@@ -269,7 +269,7 @@
 
 <model>
   <name>Var_30MK</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/VAR-30MK_lpmp/lpvar-30.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/var/var-30.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.5974</y-m>
@@ -453,7 +453,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/us/kus730_1100-cp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/us/kus730_1100.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.2669</y-m>
