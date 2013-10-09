@@ -74,6 +74,23 @@ Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
   </engine>
  </engines>
 
+<input>
+   <keyboard>
+     <key n="258">
+       <name>F2</name>
+       <desc>Prop pitch lock</desc>
+       <binding>
+         <command>property-toggle</command>
+         <property>/an24/instrumentation/prop-lock/prop-lock-left</property>
+       </binding>
+       <binding>
+         <command>property-toggle</command>
+         <property>/an24/instrumentation/prop-lock/prop-lock-right</property>
+       </binding>
+       </key>
+   </keyboard>
+</input>
+
 <payload>
   <weight>
    <name type="string">Buffet</name>
