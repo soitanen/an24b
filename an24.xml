@@ -645,7 +645,7 @@ Models        </description>
 
     </flight_control>
 
- <!--   <system file="prop-governor"/> -->
+    <system file="prop-governor"/>
 
     <aerodynamics>
         <aero_ref_pt_shift_x>
@@ -1163,14 +1163,24 @@ Models        </description>
                     <value>0.15</value>
                 </product>
             </function>
-            <function name="aero/moment/Roll_aileron">
+            <function name="aero/moment/Roll_aileron_left">
                 <description>Roll moment due to aileron</description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <property>fcs/left-aileron-pos-rad</property>
-                    <value>0.15</value>
+                    <value>0.075</value>
+                </product>
+            </function>
+            <function name="aero/moment/Roll_aileron_right">
+                <description>Roll moment due to aileron</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>metrics/bw-ft</property>
+                    <property>fcs/right-aileron-pos-rad</property>
+                    <value>0.075</value>
                 </product>
             </function>
             <function name="aero/moment/Roll_rudder">

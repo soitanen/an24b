@@ -20,11 +20,10 @@
   <diameter unit="M">   3.9 </diameter>
   <numblades> 4 </numblades>
   <gearratio> 12.11341 </gearratio>
-  <constspeed> 1 </constspeed>
+  <constspeed> 0 </constspeed>
   <p_factor>   9.33 </p_factor>
-  <minpitch> 19 </minpitch> <!-- was 8 -->
+  <minpitch> 8 </minpitch> <!-- was 8 -->
   <maxpitch> 92.5 </maxpitch>
-  <reversepitch> 8 </reversepitch>
   <minrpm>   1240 </minrpm>
   <maxrpm>   1250 </maxrpm>
   <ct_factor> 1.236 </ct_factor>
