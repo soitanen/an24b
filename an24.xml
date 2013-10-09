@@ -645,6 +645,8 @@ Models        </description>
 
     </flight_control>
 
+ <!--   <system file="prop-governor"/> -->
+
     <aerodynamics>
         <aero_ref_pt_shift_x>
                  <function>
@@ -1060,6 +1062,34 @@ Models        </description>
                           1.57          1.23        
                         </tableData>
                     </table>
+                </product>
+            </function>
+            <function name="aero/force/Drag_rudder">
+                <description>Drag due to rudder deflection</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <abs>
+                       <property>fcs/rudder-pos-rad</property>
+                    </abs>
+                    <abs>
+                       <property>fcs/rudder-pos-rad</property>
+                    </abs>
+                    <value>0.075</value>
+                </product>
+            </function>
+            <function name="aero/force/Drag_ailerons">
+                <description>Drag due to ailerons deflection</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <abs>
+                       <property>fcs/right-aileron-pos-norm</property>
+                    </abs>
+                    <abs>
+                       <property>fcs/right-aileron-pos-norm</property>
+                    </abs>
+                    <value>0.01159</value>
                 </product>
             </function>
             <function name="aero/force/Drag_elevator">
