@@ -32,6 +32,14 @@
    </test>
   </switch> -->
 
+  <switch name="fcs/etc/min-blade-angle[0]">
+   <default value="8"/>
+   <test value="19.0">
+     propulsion/engine[0]/blade-angle GE 19.0
+     /an24/instrumentation/prop-lock/prop-lock-left == 0
+   </test>
+  </switch>
+
  <pid name="fcs/etc/blade-controller-pid[0]">
    <input>fcs/etc/propeller-speed-error-switch[0]</input>
    <kp> -0.001 </kp>
@@ -44,7 +52,7 @@
 <input>fcs/etc/blade-controller-pid[0]</input>
 <input>propulsion/engine[0]/blade-angle</input>
    <clipto>
-    <min>8.0</min>
+    <min>fcs/etc/min-blade-angle[0]</min>
     <max>92.5</max>
    </clipto>
 <output>propulsion/engine[0]/blade-angle</output>
@@ -76,6 +84,14 @@
    </test>
   </switch> -->
 
+  <switch name="fcs/etc/min-blade-angle[1]">
+   <default value="8"/>
+   <test value="19.0">
+     propulsion/engine[1]/blade-angle GE 19.0
+     /an24/instrumentation/prop-lock/prop-lock-right == 0
+   </test>
+  </switch>
+
  <pid name="fcs/etc/blade-controller-pid[1]">
    <input>fcs/etc/propeller-speed-error-switch[1]</input>
    <kp> -0.001 </kp>
@@ -88,7 +104,7 @@
 <input>fcs/etc/blade-controller-pid[1]</input>
 <input>propulsion/engine[1]/blade-angle</input>
    <clipto>
-    <min>8.0</min>
+    <min>fcs/etc/min-blade-angle[1]</min>
     <max>92.5</max>
    </clipto>
 <output>propulsion/engine[1]/blade-angle</output>

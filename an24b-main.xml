@@ -90,7 +90,14 @@ Last update: Nov 10, 2002 Michael Selig, m-selig@uiuc.edu
        </key>
    </keyboard>
 </input>
-
+<an24>
+<instrumentation>
+<prop-lock>
+<prop-lock-left type="bool">false</prop-lock-left>
+<prop-lock-right type="bool">false</prop-lock-right>
+</prop-lock>
+</instrumentation>
+</an24>
 <payload>
   <weight>
    <name type="string">Buffet</name>
