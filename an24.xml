@@ -466,6 +466,46 @@ Models        </description>
 
     <flight_control name="FCS: an24">
 
+        <channel name="exhaust thrust left">
+          <fcs_function name="aero/function/left-engine-exhaust-thrust">
+                <function>
+                    <product>
+                        <property>propulsion/engine[0]/fuel-flow-rate-pps</property>
+                        <value>3.1441</value>
+                        <sum>
+                          <value>178</value>
+                          <product>
+                            <value>-0.5144</value>
+                            <property>velocities/ve-kts</property>
+                          </product>
+                        </sum>
+                        <value>2.2026</value>
+                    </product>
+                </function>
+                <output> external_reactions/exhaust-thrust-left/magnitude </output>
+            </fcs_function>
+        </channel>
+
+        <channel name="exhaust thrust right">
+          <fcs_function name="aero/function/right-engine-exhaust-thrust">
+                <function>
+                    <product>
+                        <property>propulsion/engine[1]/fuel-flow-rate-pps</property>
+                        <value>3.1441</value>
+                        <sum>
+                          <value>178</value>
+                          <product>
+                            <value>-0.5144</value>
+                            <property>velocities/ve-kts</property>
+                          </product>
+                        </sum>
+                        <value>2.2026</value>
+                    </product>
+                </function>
+                <output> external_reactions/exhaust-thrust-right/magnitude </output>
+            </fcs_function>
+        </channel>
+
         <channel name="Pitch">
 
             <summer name="Pitch Trim Sum">
@@ -647,6 +687,36 @@ Models        </description>
     </flight_control>
 
     <system file="prop-governor"/>
+
+       <external_reactions>
+    
+        <force name="exhaust-thrust-left" frame="BODY">
+            <location unit="M">
+            <x>  7.5  </x>
+            <y>    -4.2 </y>
+            <z>    1.185 </z>
+            </location>
+            <direction>
+            <x>    1 </x>
+            <y>    0.707 </y>
+            <z>    -0.707 </z>
+            </direction>
+        </force>
+
+        <force name="exhaust-thrust-right" frame="BODY">
+            <location unit="M">
+            <x>  7.5  </x>
+            <y>    4.2 </y>
+            <z>    1.185 </z>
+            </location>
+            <direction>
+            <x>    1 </x>
+            <y>    -0.707 </y>
+            <z>    -0.707 </z>
+            </direction>
+        </force>
+    
+    </external_reactions>
 
     <aerodynamics>
         <aero_ref_pt_shift_x>
