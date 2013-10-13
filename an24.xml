@@ -218,7 +218,7 @@ Models        </description>
             </location>
         </pointmass>
         <pointmass name="Baggage room 1 left">
-            <weight unit="KG">200</weight>
+            <weight unit="KG">700</weight>
             <location unit="M">
                 <x>5.02</x>
                 <y>-0.7</y>
@@ -226,7 +226,7 @@ Models        </description>
             </location>
         </pointmass>
         <pointmass name="Baggage room 1 right">
-            <weight unit="KG">200</weight>
+            <weight unit="KG">250</weight>
             <location unit="M">
                 <x>5.34</x>
                 <y>0.7</y>
@@ -234,7 +234,7 @@ Models        </description>
             </location>
         </pointmass>
         <pointmass name="Baggage room 2">
-            <weight unit="KG">50</weight>
+            <weight unit="KG">260</weight>
             <location unit="M">
                 <x>18</x>
                 <y>0</y>
@@ -242,7 +242,7 @@ Models        </description>
             </location>
         </pointmass>
         <pointmass name="Baggage room 3">
-            <weight unit="KG">50</weight>
+            <weight unit="KG">0</weight>
             <location unit="M">
                 <x>19.28</x>
                 <y>0</y>
@@ -429,7 +429,7 @@ Models        </description>
                 <z> 1.474 </z>
             </location>
             <capacity unit="KG">1425</capacity>
-            <contents unit="KG">1425</contents>
+            <contents unit="KG">390</contents>
             <priority>1</priority>
         </tank>
         <tank type="FUEL">
@@ -439,7 +439,7 @@ Models        </description>
                 <z> 1.474 </z>
             </location>
             <capacity unit="KG">1425</capacity>
-            <contents unit="KG">1425</contents>
+            <contents unit="KG">390</contents>
             <priority>1</priority>
         </tank>
         <tank type="FUEL">
