@@ -31,7 +31,7 @@ itt_delay [-] time constant for ITT change
   <maxn1>                       100.0   </maxn1>
   <maxpower unit="HP">         2550.0   </maxpower>
   <psfc unit="LBS/HR/HP">         0.582 </psfc>
-  <idlefuelflow>                 50.0   </idlefuelflow>
+  <idlefuelflow>                440.0   </idlefuelflow>
   <n1idle_max_delay>              1     </n1idle_max_delay>
   <maxstartingtime>              20     </maxstartingtime>
   <startern1>                    20     </startern1>
@@ -44,7 +44,7 @@ itt_delay [-] time constant for ITT change
     <description> Engine power, function of airspeed and pressure </description>
     <independentVar lookup="row">atmosphere/P-sl-psf</independentVar>
     <independentVar lookup="column">velocities/ve-kts</independentVar>
-    <tableData>
+   <!-- <tableData>
                  0     50    100    150    200    250
        503   0.357  0.380  0.400  0.425  0.457  0.486
       1048   0.586  0.589  0.600  0.621  0.650  0.686
@@ -54,6 +54,11 @@ itt_delay [-] time constant for ITT change
       1896   0.914  0.929  0.946  0.971  1      1.057
       2135   1      1.011  1.029  1.043  1.083  1.150
       2213   1.029  1.043  1.057  1.079  1.114  1.171
+    </tableData> -->
+<tableData>
+             0 100
+       503   1 1
+      1000   1 1
     </tableData>
   </table>
 
@@ -62,7 +67,7 @@ itt_delay [-] time constant for ITT change
     <tableData>
             0   5   90    100
          0  0   0.5  0.5   0.5
-       200  0   0.1  20  2550
+       200  0   0.1  413  2550
     </tableData>
   </table>
 
