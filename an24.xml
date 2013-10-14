@@ -719,6 +719,33 @@ Models        </description>
     </external_reactions>
 
     <aerodynamics>
+        <function name="aero/function/alpha_stab">
+            <description>Alpha angle at stabilzer due to epsilon</description>
+            <table>
+                <independentVar lookup="row">aero/alpha-wing-rad</independentVar>
+                <independentVar lookup="column">fcs/flap-pos-deg</independentVar>
+                <tableData>
+	0	15	38
+-0.1745	-8.25	-9.05	-11.14
+-0.1396	-7.56	-8.56	-10.68
+-0.1047	-6.79	-7.92	-10.16
+-0.0698	-5.95	-7.26	-9.59
+-0.0349	-4.93	-6.57	-9
+0	-3.92	-5.78	-8.34
+0.0349	-2.84	-4.99	-7.64
+0.0698	-1.7	-4.13	-6.86
+0.1047	-0.38	-3.17	-6.04
+0.1396	1.56	-1.99	-5.07
+0.1745	3.15	-0.61	-3.95
+0.2094	4.77	2.16	-2.59
+0.2443	6.4	3.78	1.64
+0.2793	8.02	5.4	3.48
+0.3142	9.64	7.02	5.32
+0.3491	11.27	8.64	7.16            
+                </tableData>
+            </table>
+        </function>
+
         <aero_ref_pt_shift_x>
                  <function>
                     <table>
@@ -1322,18 +1349,17 @@ Models        </description>
                     <value>-8</value>
                 </product>
             </function>
-        </axis>
-        <axis name="YAW" unit="LBS*FT">
-           <!-- <function name="aero/moment/Yaw_beta">
-                <description>Yaw moment due to beta</description>
+            <!-- <function name="aero/moment/Pitch_experiment">
+                <description>Yaw moment due to rudder</description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>metrics/bw-ft</property>
-                    <property>aero/beta-rad</property>
-                    <value>0.12</value>
+                    <property>metrics/cbarw-ft</property>
+                    <property>aero/function/mx</property>
                 </product>
             </function> -->
+        </axis>
+        <axis name="YAW" unit="LBS*FT">
             <function name="aero/moment/Yaw_damp">
                 <description>Yaw moment due to yaw rate</description>
                 <product>
@@ -1345,8 +1371,8 @@ Models        </description>
                     <value>-0.15</value>
                 </product>
             </function>
-            <function name="aero/moment/Yaw_rudder">
-                <description>Yaw moment due to rudder</description>
+            <function name="aero/moment/Yaw_rudder_and_beta">
+                <description>Yaw moment due to rudder and beta</description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
