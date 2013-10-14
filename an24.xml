@@ -1285,14 +1285,28 @@ Models        </description>
                     <value>1</value>
                 </product>
             </function>
-            <function name="aero/moment/Yaw_aileron">
+            <function name="aero/moment/Yaw_aileron_left">
                 <description>Adverse yaw</description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
-                    <property>fcs/left-aileron-pos-rad</property>
-                    <value>-0.008</value>
+                    <abs>
+                      <property>fcs/left-aileron-pos-rad</property>
+                    </abs>
+                    <value>-0.004</value>
+                </product>
+            </function>
+            <function name="aero/moment/Yaw_aileron_right">
+                <description>Adverse yaw</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>metrics/bw-ft</property>
+                    <abs>
+                      <property>fcs/right-aileron-pos-rad</property>
+                    </abs>
+                    <value>0.004</value>
                 </product>
             </function>
         </axis>
