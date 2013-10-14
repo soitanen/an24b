@@ -42,7 +42,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>PitchScale</object-name>
-    <property>/instrumentation/attitude-indicator[0]/indicated-pitch-deg</property>
+    <property>/orientation/pitch-deg</property>
     <interpolation>
       <entry><ind>	-80.0</ind>	<dep>	-0.437</dep></entry>
       <entry><ind>	-70.0</ind>	<dep>	-0.383</dep></entry>
@@ -77,7 +77,7 @@
 <animation>
   <type>rotate</type>
   <object-name>Plane</object-name>
-  <property>/instrumentation/attitude-indicator[0]/indicated-roll-deg</property>
+  <property>/orientation/roll-deg</property>
   <max-deg>70.0</max-deg>
   <min-deg>-70.0</min-deg>
   <center>
