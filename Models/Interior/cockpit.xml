@@ -517,7 +517,7 @@
 
 <model>
   <name>UPDB-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/UPDB-2_mp/updb-2.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/uap-12/uap-12.xml</path> <!--   <path>Aircraft/an24b/Models/Interior/Instruments/UPDB-2_mp/updb-2.xml</path> -->
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.25672</y-m>
