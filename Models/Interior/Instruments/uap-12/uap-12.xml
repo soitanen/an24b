@@ -107,7 +107,7 @@
 <animation>
   <type>rotate</type>
   <object-name>n_needle</object-name>
-  <property>fdm/jsbsim/instrumentation/n-norm</property>
+  <property>fdm/jsbsim/accelerations/n-pilot-z-norm</property>
   <interpolation>
     <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
     <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>
