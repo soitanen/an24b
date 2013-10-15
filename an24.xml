@@ -43,7 +43,7 @@ Models        </description>
         <ixz unit="KG*M2">0</ixz>
         <iyz unit="KG*M2">0</iyz>
         <ixy unit="KG*M2">0</ixy>
-        <emptywt unit="KG">13750</emptywt>
+        <emptywt unit="KG">13250</emptywt>
         <location name="CG" unit="M">
             <x>9.446</x>
             <y>0</y>
@@ -247,6 +247,14 @@ Models        </description>
                 <x>19.28</x>
                 <y>0</y>
                 <z>0.6</z>
+            </location>
+        </pointmass>
+        <pointmass name="Ballast for gear weight shift">
+            <weight unit="KG">500</weight>
+            <location unit="M">
+                <x>9.446</x>
+                <y>0</y>
+                <z>0.73</z>
             </location>
         </pointmass>
     </mass_balance>
@@ -681,6 +689,23 @@ Models        </description>
               </traverse>
               <output>gear/gear-pos-norm</output>
             </kinematic>
+
+        </channel>
+
+        <channel name="Landing Gear Weight Shift">
+
+          <fcs_function name="aero/function/weight-shift-gears">
+                <function>
+                  <sum>
+                    <product>
+                        <property>gear/gear-pos-norm</property>
+                        <value>104.34</value>
+                    </product>
+                    <value>267.55</value>
+                  </sum>
+                </function>
+                <output> inertia/pointmass-location-X-inches[25] </output>
+            </fcs_function>
 
         </channel>
 
