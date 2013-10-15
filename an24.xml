@@ -22,7 +22,7 @@ Models        </description>
         <location name="AERORP" unit="M">
             <x> 8.86337 </x>
             <y> 0 </y>
-            <z> 1.392 </z>
+            <z> 0.73 </z> <!-- 1.392 -->
         </location>
         <location name="EYEPOINT" unit="IN">
             <x> 74.11 </x>
@@ -1375,6 +1375,16 @@ Models        </description>
                        <property>aero/force/Lift_alpha_ground</property>
 
                     </sum>
+                </product>
+            </function>
+            <function name="aero/moment/Pitch_gear">
+                <description>Pitch moment due to gear retraction</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>metrics/cbarw-ft</property>
+                    <value>-0.025</value>
+                    <property>gear/gear-pos-norm</property>
                 </product>
             </function>
             <function name="aero/moment/Pitch_elevator">
