@@ -1475,7 +1475,7 @@ Models        </description>
         </axis>
     </aerodynamics>
 
-    <output name="JSBout.csv" type="CSV" rate="100">
+   <!-- <output name="JSBout.csv" type="CSV" rate="100">
         <simulation> OFF </simulation>
         <atmosphere> OFF </atmosphere>
         <massprops> OFF </massprops>
@@ -1489,5 +1489,5 @@ Models        </description>
         <ground_reactions> OFF </ground_reactions>
         <fcs> OFF </fcs>
         <propulsion> OFF </propulsion>
-    </output>
+    </output> -->
 </fdm_config>
