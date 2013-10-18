@@ -1425,15 +1425,6 @@ Models        </description>
                     <value>-8</value>
                 </product>
             </function>
-            <!-- <function name="aero/moment/Pitch_experiment">
-                <description>Yaw moment due to rudder</description>
-                <product>
-                    <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
-                    <property>metrics/cbarw-ft</property>
-                    <property>aero/function/mx</property>
-                </product>
-            </function> -->
         </axis>
         <axis name="YAW" unit="LBS*FT">
             <function name="aero/moment/Yaw_damp">
@@ -1484,7 +1475,7 @@ Models        </description>
         </axis>
     </aerodynamics>
 
-    <output name="JSBout.csv" type="CSV" rate="100">
+   <!-- <output name="JSBout.csv" type="CSV" rate="100">
         <simulation> OFF </simulation>
         <atmosphere> OFF </atmosphere>
         <massprops> OFF </massprops>
@@ -1498,5 +1489,5 @@ Models        </description>
         <ground_reactions> OFF </ground_reactions>
         <fcs> OFF </fcs>
         <propulsion> OFF </propulsion>
-    </output>
+    </output> -->
 </fdm_config>
