@@ -112,12 +112,29 @@
   </rumble>
 
 
-  <gear>
-   <name>gear</name>
-   <mode>once</mode>
-   <path>Aircraft/an24b/Sound/Systems/24gear.wav</path>
-   <property>/gear/gear[0]/position-norm</property>
-  </gear>
+<gear>
+  <name>gear up</name>
+  <path>Aircraft/an24b/Sound/Systems/24gear.wav</path>
+  <condition>
+    <less-than>
+      <property>gear/gear[1]/position-norm</property>
+      <value>0.9</value>
+    </less-than>
+  </condition>
+  <mode>once</mode>
+</gear> 
+
+<gear>
+  <name>gear down</name>
+  <path>Aircraft/an24b/Sound/Systems/24gear.wav</path>
+  <condition>
+    <greater-than>
+      <property>gear/gear[1]/position-norm</property>
+      <value>0.1</value>
+    </greater-than>
+  </condition>
+  <mode>once</mode>
+</gear> 
 <!-- 
   <gear>
    <name>gear-lock</name>
@@ -166,10 +183,10 @@
   <flap>
    <name>flaps</name>
    <mode>in-transit</mode>
-   <path>Sounds/flaps.wav</path>
+   <path>Aircraft/an24b/Sound/Systems/24flaps.wav</path>
    <property>/surface-positions/flap-pos-norm</property>
    <volume>
-    <factor>0.8</factor>
+    <factor>1.5</factor>
    </volume>
    <reference-dist>10.0</reference-dist>
    <max-dist>20.0</max-dist>
@@ -233,6 +250,44 @@
    <path>Sounds/click.wav</path>
   </click>
 -->
+
+ <marker>
+    <name>inner</name>
+    <path>Aircraft/an24b/Sound/Systems/Innermk.wav</path>
+    <condition>
+      <property>instrumentation/marker-beacon/inner</property>
+      <property>sim/current-view/internal</property>
+    </condition>
+    <mode>once</mode>
+    <volume>
+      <offset type="double">0.5</offset>
+    </volume>
+  </marker>
+  <marker>
+    <name>middle</name>
+    <path>Aircraft/an24b/Sound/Systems/Middmk.wav</path>
+    <condition>
+      <property>instrumentation/marker-beacon/middle</property>
+      <property>sim/current-view/internal</property>
+    </condition>
+    <mode>once</mode>
+    <volume>
+      <offset type="double">0.5</offset>
+    </volume>
+  </marker>
+  
+  <marker>
+    <name>outer</name>
+    <path>Aircraft/an24b/Sound/Systems/Outermk.wav</path>
+    <condition>
+      <property>instrumentation/marker-beacon/outer</property>
+      <property>sim/current-view/internal</property>
+    </condition>
+    <mode>once</mode>
+    <volume>
+      <offset type="double">0.5</offset>
+    </volume>
+  </marker>
 
 </fx>
  
