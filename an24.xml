@@ -37,9 +37,12 @@ Models        </description>
     </metrics>
 
     <mass_balance>
-        <ixx unit="SLUG*FT2">214809</ixx>
+    <!--    <ixx unit="SLUG*FT2">214809</ixx>
         <iyy unit="SLUG*FT2">166865</iyy>
-        <izz unit="SLUG*FT2">377779</izz>
+        <izz unit="SLUG*FT2">377779</izz> -->
+        <ixx unit="SLUG*FT2">400000</ixx>
+        <iyy unit="SLUG*FT2">250000</iyy>
+        <izz unit="SLUG*FT2">500000</izz>
         <ixz unit="KG*M2">0</ixz>
         <iyz unit="KG*M2">0</iyz>
         <ixy unit="KG*M2">0</ixy>
