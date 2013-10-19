@@ -1247,9 +1247,9 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>metrics/bw-ft</property>
+                    <property>metrics/cbarw-ft</property>
                     <property>aero/beta-rad</property>
-                    <value>-0.1</value>
+                    <value>-0.0722</value>
                 </product>
             </function>
             <function name="aero/moment/Roll_damp">
