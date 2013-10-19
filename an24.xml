@@ -1427,6 +1427,19 @@ Models        </description>
                     <value>0.004</value>
                 </product>
             </function>
+            <function name="aero/moment/Yaw_anti_side">
+                <description>Yaw moment to match my from book</description>
+                <product>
+                    <sum>                    
+                       <property>aero/function/aero-ref-shift</property>
+                       <value>-0.25</value>
+                    </sum>
+                    <property>metrics/cbarw-ft</property>
+                    <sum>
+                       <property>aero/force/Side_beta</property>
+                    </sum>
+                </product>
+            </function>
         </axis>
     </aerodynamics>
 
