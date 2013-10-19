@@ -1228,8 +1228,16 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>aero/beta-rad</property>
-                    <value>-1</value>
+                    <sum>
+                      <product>
+                        <property>aero/beta-rad</property>
+                        <value>-0.716</value>
+                      </product>
+                      <product>
+                        <property>fcs/rudder-pos-rad</property>
+                        <value>0.1145</value>
+                      </product>
+                    </sum>
                 </product>
             </function>
         </axis>
