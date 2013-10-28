@@ -30,6 +30,10 @@
   <help>
    <title>An-24B</title>
    	   <key>
+	    <name>F1</name>
+	    <desc>Release Idle Lock (press for release)</desc>
+	   </key>
+   	   <key>
 	    <name>F2</name>
 	    <desc>Toggles Propeller Pitch Lock (UPOR VINTA)</desc>
 	   </key>
@@ -69,11 +73,30 @@
          <property>/an24/instrumentation/prop-lock/prop-lock-right</property>
        </binding>
        </key>
+<key n="257">
+       <name>F1</name>
+       <desc>Idle lock</desc>
+       <binding>
+          <command>property-assign</command>
+          <property>/an24/instrumentation/idle-lock/idle-lock</property>
+          <value>1</value>
+       </binding>
+       <mod-up>
+         <binding>
+           <command>property-assign</command>
+           <property>/an24/instrumentation/idle-lock/idle-lock</property>
+           <value>0</value>
+         </binding>            
+       </mod-up>
+      </key>
    </keyboard>
 </input>
 
 <an24>
   <instrumentation>
+    <idle-lock>
+      <idle-lock>0</idle-lock>
+    </idle-lock>
     <prop-lock>
       <prop-lock-left type="bool">false</prop-lock-left>
       <prop-lock-right type="bool">false</prop-lock-right>
