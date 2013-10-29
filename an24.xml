@@ -712,6 +712,9 @@ Models        </description>
 
         </channel>
 
+
+<property value="0">fcs/throttle/min-thr-pos[0]</property>
+<property value="0">fcs/throttle/min-thr-pos[1]</property>
         <channel name="Throttle">
 
   <switch name="fcs/throttle/min-thr-pos[0]">

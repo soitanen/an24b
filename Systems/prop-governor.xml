@@ -5,34 +5,34 @@
 -->
 <system name="PropGovernor">
 
-<property value="1245">fcs/etc/propeller-speed-target</property>
+<property value="1245">fcs/prop-governor/propeller-speed-target</property>
 
   <channel name="Left">
 
-  <summer name="fcs/etc/propeller-speed-error-rpm[0]">
-   <input>fcs/etc/propeller-speed-target</input>
+  <summer name="fcs/prop-governor/propeller-speed-error-rpm[0]">
+   <input>fcs/prop-governor/propeller-speed-target</input>
    <input>-propulsion/engine[0]/propeller-rpm</input>
   </summer>
 
-  <switch name="fcs/etc/propeller-speed-error-switch[0]">
+  <switch name="fcs/prop-governor/propeller-speed-error-switch[0]">
    <default value="0.0"/>
-   <test value="fcs/etc/propeller-speed-error-rpm[0]">
+   <test value="fcs/prop-governor/propeller-speed-error-rpm[0]">
      /engines/engine[0]/running == 1
    </test>
   </switch>
 
- <!-- <switch name="fcs/etc/windup-trigger[0]">
+ <!-- <switch name="fcs/prop-governor/windup-trigger[0]">
    <default value="0.0"/>
    <test value="-1.0">
-     fcs/etc/blade-controller-pid[0] LT -1.0
+     fcs/prop-governor/blade-controller-pid[0] LT -1.0
    </test>
    <test value="1.0">
-     fcs/etc/propeller-speed-error-switch[0] GT 0.0
-     fcs/etc/blade-controller-pid[0] GT 1.0
+     fcs/prop-governor/propeller-speed-error-switch[0] GT 0.0
+     fcs/prop-governor/blade-controller-pid[0] GT 1.0
    </test>
   </switch> -->
 
-  <switch name="fcs/etc/min-blade-angle[0]">
+  <switch name="fcs/prop-governor/min-blade-angle[0]">
    <default value="8"/>
    <test value="19.0">
      propulsion/engine[0]/blade-angle GE 19.0
@@ -40,19 +40,19 @@
    </test>
   </switch>
 
- <pid name="fcs/etc/blade-controller-pid[0]">
-   <input>fcs/etc/propeller-speed-error-switch[0]</input>
+ <pid name="fcs/prop-governor/blade-controller-pid[0]">
+   <input>fcs/prop-governor/propeller-speed-error-switch[0]</input>
    <kp> -0.001 </kp>
    <ki> -0.0 </ki>
    <kd> -0.0 </kd>
-   <!-- <trigger>fcs/etc/windup-trigger[0]</trigger> -->
+   <!-- <trigger>fcs/prop-governor/windup-trigger[0]</trigger> -->
   </pid>
  
-  <summer name="fcs/etc/blade-angle[0]">
-<input>fcs/etc/blade-controller-pid[0]</input>
+  <summer name="fcs/prop-governor/blade-angle[0]">
+<input>fcs/prop-governor/blade-controller-pid[0]</input>
 <input>propulsion/engine[0]/blade-angle</input>
    <clipto>
-    <min>fcs/etc/min-blade-angle[0]</min>
+    <min>fcs/prop-governor/min-blade-angle[0]</min>
     <max>92.5</max>
    </clipto>
 <output>propulsion/engine[0]/blade-angle</output>
@@ -61,30 +61,30 @@
   </channel>
 
   <channel name="Right">
-<summer name="fcs/etc/propeller-speed-error-rpm[1]">
-   <input>fcs/etc/propeller-speed-target</input>
+<summer name="fcs/prop-governor/propeller-speed-error-rpm[1]">
+   <input>fcs/prop-governor/propeller-speed-target</input>
    <input>-propulsion/engine[1]/propeller-rpm</input>
   </summer>
 
-  <switch name="fcs/etc/propeller-speed-error-switch[1]">
+  <switch name="fcs/prop-governor/propeller-speed-error-switch[1]">
    <default value="0.0"/>
-   <test value="fcs/etc/propeller-speed-error-rpm[1]">
+   <test value="fcs/prop-governor/propeller-speed-error-rpm[1]">
      /engines/engine[1]/running == 1
    </test>
   </switch>
 
- <!-- <switch name="fcs/etc/windup-trigger[1]">
+ <!-- <switch name="fcs/prop-governor/windup-trigger[1]">
    <default value="0.0"/>
    <test value="-1.0">
-     fcs/etc/blade-controller-pid[1] LT -1.0
+     fcs/prop-governor/blade-controller-pid[1] LT -1.0
    </test>
    <test value="1.0">
-     fcs/etc/propeller-speed-error-switch[1] GT 0.0
-     fcs/etc/blade-controller-pid[1] GT 1.0
+     fcs/prop-governor/propeller-speed-error-switch[1] GT 0.0
+     fcs/prop-governor/blade-controller-pid[1] GT 1.0
    </test>
   </switch> -->
 
-  <switch name="fcs/etc/min-blade-angle[1]">
+  <switch name="fcs/prop-governor/min-blade-angle[1]">
    <default value="8"/>
    <test value="19.0">
      propulsion/engine[1]/blade-angle GE 19.0
@@ -92,19 +92,19 @@
    </test>
   </switch>
 
- <pid name="fcs/etc/blade-controller-pid[1]">
-   <input>fcs/etc/propeller-speed-error-switch[1]</input>
+ <pid name="fcs/prop-governor/blade-controller-pid[1]">
+   <input>fcs/prop-governor/propeller-speed-error-switch[1]</input>
    <kp> -0.001 </kp>
    <ki> -0.0 </ki>
    <kd> -0.0 </kd>
-   <!-- <trigger>fcs/etc/windup-trigger[1]</trigger> -->
+   <!-- <trigger>fcs/prop-governor/windup-trigger[1]</trigger> -->
   </pid>
  
-  <summer name="fcs/etc/blade-angle[1]">
-<input>fcs/etc/blade-controller-pid[1]</input>
+  <summer name="fcs/prop-governor/blade-angle[1]">
+<input>fcs/prop-governor/blade-controller-pid[1]</input>
 <input>propulsion/engine[1]/blade-angle</input>
    <clipto>
-    <min>fcs/etc/min-blade-angle[1]</min>
+    <min>fcs/prop-governor/min-blade-angle[1]</min>
     <max>92.5</max>
    </clipto>
 <output>propulsion/engine[1]/blade-angle</output>
