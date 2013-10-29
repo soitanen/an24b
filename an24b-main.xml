@@ -110,6 +110,12 @@
   </marker-beacon>
 </instrumentation>
 
+<nasal>
+	<friction>
+	  <file>Aircraft/an24b/Nasal/friction.nas</file>
+	 </friction>
+</nasal>
+
 <payload>
   <weight>
    <name type="string">Buffet</name>

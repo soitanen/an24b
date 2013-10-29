@@ -371,10 +371,9 @@
    <path>Aircraft/an24b/Sound/Systems/24flaps.wav</path>
    <property>/surface-positions/flap-pos-norm</property>
    <volume>
-    <factor>1.5</factor>
+    <property>sim/current-view/internal</property>
+    <factor>1</factor>
    </volume>
-   <reference-dist>10.0</reference-dist>
-   <max-dist>20.0</max-dist>
   </flap>
 
   <wind>
