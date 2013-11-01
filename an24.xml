@@ -695,6 +695,31 @@ Models        </description>
 
         </channel>
 
+        <channel name="Steering">
+          
+          <kinematic name="Gear Steer Control">
+              <input>fcs/steer-cmd-norm</input>
+              <traverse>
+                <setting>
+                  <position>-1</position>
+                  <time>0</time>
+                </setting>
+                <setting>
+                  <position>1</position>
+                  <time>8</time>
+                </setting>
+              </traverse>
+              <output>fcs/steer-pos-norm</output>
+            </kinematic>
+
+          <pure_gain name="gear/steering-cmd-norm-switched-deg2">
+            <input>fcs/steer-pos-norm</input>
+            <gain>45.0</gain>
+            <output>fcs/steer-pos-deg</output>
+          </pure_gain>
+
+        </channel>
+
         <channel name="Landing Gear Weight Shift">
 
           <fcs_function name="aero/function/weight-shift-gears">
