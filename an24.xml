@@ -699,6 +699,28 @@ Models        </description>
         <property>gear/nose-wheel-steering</property>
 
         <channel name="Steering">
+
+  <pure_gain name="fcs/steering/slip-error-deg">
+   <input>gear/unit[0]/slip-angle-deg</input>
+   <gain>0.1</gain>
+  </pure_gain>
+  <pure_gain name="fcs/steering/center-error-deg">
+   <input>fcs/steering/steer-now-pos-deg</input>
+   <gain>-0.03</gain>
+  </pure_gain>
+
+
+
+<summer name="fcs/steering/steer-cmd-castered-deg">
+<input>fcs/steering/steer-now-pos-deg</input>
+<input>fcs/steering/slip-error-deg</input>
+<input>fcs/steering/center-error-deg</input>
+   <clipto>
+    <min>-45</min>
+    <max>45</max>
+   </clipto>
+<output>fcs/steering/steer-cmd-castered-sum-deg</output>
+  </summer>
           
           <scheduled_gain name="fcs/steer-cmd-norm-switched">
             <input>fcs/steer-cmd-norm</input>
@@ -726,11 +748,55 @@ Models        </description>
               <output>fcs/steer-cmd-norm-kinematic</output>
             </kinematic>
 
+<fcs_function>
+<function>
+<sum>
+<product>
+  <property>fcs/steer-cmd-norm-kinematic</property>
+  <property>gear/nose-wheel-steering</property>
+</product>
+<product>
+  <value>0.0222222222222</value>
+  <property>fcs/steering/steer-cmd-castered-sum-deg</property>
+  <sum>
+  <product>
+  <property>gear/nose-wheel-steering</property>
+  <value>-1</value>
+  </product>
+  <value>1</value>
+  </sum>
+</product>
+</sum>
+</function>
+              <output>fcs/steer-cmd-norm-final</output>
+</fcs_function>
+
           <pure_gain>
-            <input>fcs/steer-cmd-norm-kinematic</input>
+            <input>fcs/steer-cmd-norm-final</input>
             <gain>45</gain>
             <output>fcs/steer-pos-deg</output>
           </pure_gain>
+
+<fcs_function name="fcs/steering/steer-now-pos-deg">
+<function>
+<sum>
+<product>
+  <property>fcs/steer-pos-deg</property>
+  <property>gear/nose-wheel-steering</property>
+</product>
+<product>
+  <property>fcs/steering/steer-cmd-castered-sum-deg</property>
+  <sum>
+  <product>
+  <property>gear/nose-wheel-steering</property>
+  <value>-1</value>
+  </product>
+  <value>1</value>
+  </sum>
+</product>
+</sum>
+</function>
+</fcs_function>
 
         </channel>
 
