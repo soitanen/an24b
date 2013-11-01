@@ -16,6 +16,10 @@
       <command>nasal</command>
       <script>
         interpolate("an24/gear/steer_mode", 0.0, 0.1 );
+        setprop("controls/gear/steering", 45.0 );
+        setprop("controls/gear/nose-wheel-steering", 1.0 );
+        setprop("fdm/jsbsim/gear/steering", 45.0 );
+        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
       </script>
     </binding>
   </action>
@@ -32,6 +36,8 @@
       <command>nasal</command>
       <script>
         interpolate("an24/gear/steer_mode", 1.0, 0.1 );
+        setprop("controls/gear/nose-wheel-steering", 0.0 );
+        setprop("fdm/jsbsim/gear/nose-wheel-steering", 0.0 );
       </script>
     </binding>
   </action>
@@ -48,6 +54,10 @@
       <command>nasal</command>
       <script>
         interpolate("an24/gear/steer_mode", 2.0, 0.1 );
+        setprop("controls/gear/steering", 10.0 );
+        setprop("controls/gear/nose-wheel-steering", 1.0 );
+        setprop("fdm/jsbsim/gear/steering", 10.0 );
+        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
       </script>
     </binding>
   </action>

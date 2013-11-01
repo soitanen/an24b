@@ -695,10 +695,24 @@ Models        </description>
 
         </channel>
 
+        <property>gear/steering</property>
+        <property>gear/nose-wheel-steering</property>
+
         <channel name="Steering">
           
-          <kinematic name="Gear Steer Control">
-              <input>fcs/steer-cmd-norm</input>
+          <scheduled_gain name="fcs/steer-cmd-norm-switched">
+            <input>fcs/steer-cmd-norm</input>
+            <table>
+              <independentVar> gear/steering </independentVar>
+              <tableData>
+                10            0.22222
+                45            1.0
+              </tableData>
+            </table>
+          </scheduled_gain> 
+
+          <kinematic>
+              <input>fcs/steer-cmd-norm-switched</input>
               <traverse>
                 <setting>
                   <position>-1</position>
@@ -709,12 +723,12 @@ Models        </description>
                   <time>8</time>
                 </setting>
               </traverse>
-              <output>fcs/steer-pos-norm</output>
+              <output>fcs/steer-cmd-norm-kinematic</output>
             </kinematic>
 
-          <pure_gain name="gear/steering-cmd-norm-switched-deg2">
-            <input>fcs/steer-pos-norm</input>
-            <gain>45.0</gain>
+          <pure_gain>
+            <input>fcs/steer-cmd-norm-kinematic</input>
+            <gain>45</gain>
             <output>fcs/steer-pos-deg</output>
           </pure_gain>
 
