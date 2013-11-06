@@ -8,7 +8,8 @@
  <animation>
    <type>material</type>
    <object-name>housing</object-name>
-   <object-name>needle</object-name>
+   <object-name>needle_1</object-name>
+   <object-name>needle_2</object-name>
    <emission>
      <red>1.0</red>
      <green>0.3</green>
@@ -16,5 +17,37 @@
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle_1</object-name>
+  <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	46.9</dep></entry>
+    <entry><ind>       1245</ind>	<dep>  360.0</dep></entry>
+    <entry><ind>       1370</ind>	<dep>  391.3</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle_2</object-name>
+  <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	46.9</dep></entry>
+    <entry><ind>       1245</ind>	<dep>  360.0</dep></entry>
+    <entry><ind>       1370</ind>	<dep>  391.3</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 
 </PropertyList>

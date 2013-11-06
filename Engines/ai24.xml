@@ -64,9 +64,9 @@ itt_delay [-] time constant for ITT change
   <table name="EnginePowerRPM_N1" type="internal">
     <description> Engine Power, function of RPM and N1 </description>
     <tableData>
-            0   5   90    100
-         0  0   0.5  0.5   0.5
-       200  0   0.1  93  2550
+            0   5    90   91.2   92.2  93.4  94.1  95.2  96.5  100
+         0  0   0.5  0.5   0.5    0.5   0.5   0.5   0.5   0.5  0.5
+       200  0   0.1  94    326    747  1212  1410  1721  2019  2550
     </tableData>
   </table>
 

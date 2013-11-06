@@ -98,6 +98,7 @@
         <nose-wheel-steering type="bool">true</nose-wheel-steering>
     </gear>
 </controls>
+
 <fdm>
 <jsbsim>
     <gear>
@@ -106,6 +107,11 @@
     </gear>
 </jsbsim>
 </fdm>
+
+ <gear>
+    <zsink-in type="double">25</zsink-in>
+ </gear>
+
 <an24>
   <gear>
     <steer_mode>0</steer_mode>

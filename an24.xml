@@ -354,6 +354,21 @@ Models        </description>
             <brake_group> NONE </brake_group>
             <retractable> 0 </retractable>
         </contact>
+        <contact type="STRUCTURE" name="NOSE">
+            <location unit="M">
+                <x> 0 </x>
+                <y> 0 </y>
+                <z> 0 </z>
+            </location>
+            <static_friction> 1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <rolling_friction> 0 </rolling_friction>
+            <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+            <max_steer unit="DEG"> 0 </max_steer>
+            <brake_group> NONE </brake_group>
+            <retractable> 0 </retractable>
+        </contact>
     </ground_reactions>
 
     <propulsion>
@@ -371,7 +386,7 @@ Models        </description>
             <feed>2</feed>
             <feed>1</feed>
             <feed>0</feed>
-            <thruster file="prop_4-smv-4">
+            <thruster file="prop_av72">
                 <sense>-1</sense>
                 <location unit="M">
                     <x> 5.94 </x>
@@ -399,7 +414,7 @@ Models        </description>
             <feed>3</feed>
             <feed>4</feed>
             <feed>5</feed>
-            <thruster file="prop_4-smv-4">
+            <thruster file="prop_av72">
                 <sense>-1</sense>
               <location unit="M">
                     <x> 5.94 </x>
@@ -817,9 +832,6 @@ Models        </description>
 
         </channel>
 
-
-<property value="0">fcs/throttle/min-thr-pos[0]</property>
-<property value="0">fcs/throttle/min-thr-pos[1]</property>
         <channel name="Throttle">
 
   <switch name="fcs/throttle/min-thr-pos[0]">

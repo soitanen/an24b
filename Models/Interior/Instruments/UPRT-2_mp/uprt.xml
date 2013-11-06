@@ -8,6 +8,8 @@
  <animation>
    <type>material</type>
    <object-name>housing</object-name>
+   <object-name>needle_1</object-name>
+   <object-name>needle_2</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
@@ -15,5 +17,35 @@
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle_1</object-name>
+  <property>fdm/jsbsim/fcs/throttle-pos-norm[0]</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep> -145.0</dep></entry>
+    <entry><ind>        1.0</ind>	<dep>  110.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle_2</object-name>
+  <property>fdm/jsbsim/fcs/throttle-pos-norm[1]</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep> -145.0</dep></entry>
+    <entry><ind>        1.0</ind>	<dep>  110.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 
 </PropertyList>
