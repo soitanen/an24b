@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!-- 
+
+  
+-->
+<system name="ThrottleIdleLock">
+        <channel name="Throttle">
+
+  <switch name="fcs/throttle/min-thr-pos[0]">
+   <default value="0"/>
+   <test value="0.12">
+     fcs/throttle/throttle-pos-norm[0] GE 0.12
+     /an24/instrumentation/idle-lock/idle-lock == 0
+   </test>
+  </switch>
+
+             <fcs_function name="fcs/throttle/throttle-cmd-norm[0]">
+                 <function>
+                     <product>
+                         <property> /controls/engines/engine[0]/throttle </property>
+			 <value>1</value>
+                     </product>
+                 </function>
+             </fcs_function>
+
+  <summer name="fcs/throttle/throttle-pos-norm[0]">
+<input>fcs/throttle/throttle-cmd-norm[0]</input>
+   <clipto>
+    <min>fcs/throttle/min-thr-pos[0]</min>
+    <max>1</max>
+   </clipto>
+<output>fcs/throttle-pos-norm[0]</output>
+  </summer>
+
+ <switch name="fcs/throttle/min-thr-pos[1]">
+   <default value="0"/>
+   <test value="0.12">
+     fcs/throttle/throttle-pos-norm[1] GE 0.12
+     /an24/instrumentation/idle-lock/idle-lock == 0
+   </test>
+  </switch>
+
+             <fcs_function name="fcs/throttle/throttle-cmd-norm[1]">
+                 <function>
+                     <product>
+                         <property> /controls/engines/engine[1]/throttle </property>
+			 <value>1</value>
+                     </product>
+                 </function>
+             </fcs_function>
+
+  <summer name="fcs/throttle/throttle-pos-norm[1]">
+<input>fcs/throttle/throttle-cmd-norm[1]</input>
+   <clipto>
+    <min>fcs/throttle/min-thr-pos[1]</min>
+    <max>1</max>
+   </clipto>
+<output>fcs/throttle-pos-norm[1]</output>
+  </summer>
+
+        </channel>
+</system>

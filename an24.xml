@@ -318,8 +318,8 @@ Models        </description>
             <static_friction> 1 </static_friction>
             <dynamic_friction> 1 </dynamic_friction>
             <rolling_friction> 0 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 20000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
             <max_steer unit="DEG"> 0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable> 0 </retractable>
@@ -333,8 +333,8 @@ Models        </description>
             <static_friction> 1 </static_friction>
             <dynamic_friction> 1 </dynamic_friction>
             <rolling_friction> 0 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 20000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
             <max_steer unit="DEG"> 0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable> 0 </retractable>
@@ -348,8 +348,8 @@ Models        </description>
             <static_friction> 1 </static_friction>
             <dynamic_friction> 1 </dynamic_friction>
             <rolling_friction> 0 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 20000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
             <max_steer unit="DEG"> 0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable> 0 </retractable>
@@ -363,8 +363,23 @@ Models        </description>
             <static_friction> 1 </static_friction>
             <dynamic_friction> 1 </dynamic_friction>
             <rolling_friction> 0 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 50000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 20000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
+            <max_steer unit="DEG"> 0 </max_steer>
+            <brake_group> NONE </brake_group>
+            <retractable> 0 </retractable>
+        </contact>
+        <contact type="STRUCTURE" name="FUSELAGE_FRONT">
+            <location unit="M">
+                <x> 5 </x>
+                <y> 0 </y>
+                <z> -1.05 </z>
+            </location>
+            <static_friction> 1 </static_friction>
+            <dynamic_friction> 1 </dynamic_friction>
+            <rolling_friction> 0 </rolling_friction>
+            <spring_coeff unit="LBS/FT"> 20000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 5000 </damping_coeff>
             <max_steer unit="DEG"> 0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable> 0 </retractable>
@@ -710,111 +725,6 @@ Models        </description>
 
         </channel>
 
-        <property>gear/steering</property>
-        <property>gear/nose-wheel-steering</property>
-
-        <channel name="Steering">
-
-  <pure_gain name="fcs/steering/slip-error-deg">
-   <input>gear/unit[0]/slip-angle-deg</input>
-   <gain>0.1</gain>
-  </pure_gain>
-  <pure_gain name="fcs/steering/center-error-deg">
-   <input>fcs/steering/steer-now-pos-deg</input>
-   <gain>-0.03</gain>
-  </pure_gain>
-
-
-
-<summer name="fcs/steering/steer-cmd-castered-deg">
-<input>fcs/steering/steer-now-pos-deg</input>
-<input>fcs/steering/slip-error-deg</input>
-<input>fcs/steering/center-error-deg</input>
-   <clipto>
-    <min>-45</min>
-    <max>45</max>
-   </clipto>
-<output>fcs/steering/steer-cmd-castered-sum-deg</output>
-  </summer>
-          
-          <scheduled_gain name="fcs/steer-cmd-norm-switched">
-            <input>fcs/steer-cmd-norm</input>
-            <table>
-              <independentVar> gear/steering </independentVar>
-              <tableData>
-                10            0.22222
-                45            1.0
-              </tableData>
-            </table>
-          </scheduled_gain> 
-
-          <kinematic>
-              <input>fcs/steer-cmd-norm-switched</input>
-              <traverse>
-                <setting>
-                  <position>-1</position>
-                  <time>0</time>
-                </setting>
-                <setting>
-                  <position>1</position>
-                  <time>8</time>
-                </setting>
-              </traverse>
-              <output>fcs/steer-cmd-norm-kinematic</output>
-            </kinematic>
-
-<fcs_function>
-<function>
-<sum>
-<product>
-  <property>fcs/steer-cmd-norm-kinematic</property>
-  <property>gear/nose-wheel-steering</property>
-</product>
-<product>
-  <value>0.0222222222222</value>
-  <property>fcs/steering/steer-cmd-castered-sum-deg</property>
-  <sum>
-  <product>
-  <property>gear/nose-wheel-steering</property>
-  <value>-1</value>
-  </product>
-  <value>1</value>
-  </sum>
-</product>
-</sum>
-</function>
-              <output>fcs/steer-cmd-norm-final</output>
-</fcs_function>
-
-          <pure_gain>
-            <input>fcs/steer-cmd-norm-final</input>
-            <gain>45</gain>
-            <output>fcs/steer-pos-deg</output>
-          </pure_gain>
-
-<fcs_function name="fcs/steering/steer-now-pos-deg">
-<function>
-<sum>
-<product>
-  <property>fcs/steer-pos-deg</property>
-  <property>gear/nose-wheel-steering</property>
-</product>
-<product>
-  <property>fcs/steering/steer-cmd-castered-sum-deg</property>
-  <sum>
-  <product>
-  <property>gear/nose-wheel-steering</property>
-  <value>-1</value>
-  </product>
-  <value>1</value>
-  </sum>
-</product>
-</sum>
-</function>
-</fcs_function>
-
-        </channel>
-
         <channel name="Landing Gear Weight Shift">
 
           <fcs_function name="aero/function/weight-shift-gears">
@@ -832,65 +742,11 @@ Models        </description>
 
         </channel>
 
-        <channel name="Throttle">
-
-  <switch name="fcs/throttle/min-thr-pos[0]">
-   <default value="0"/>
-   <test value="0.12">
-     fcs/throttle/throttle-pos-norm[0] GE 0.12
-     /an24/instrumentation/idle-lock/idle-lock == 0
-   </test>
-  </switch>
-
-             <fcs_function name="fcs/throttle/throttle-cmd-norm[0]">
-                 <function>
-                     <product>
-                         <property> /controls/engines/engine[0]/throttle </property>
-			 <value>1</value>
-                     </product>
-                 </function>
-             </fcs_function>
-
-  <summer name="fcs/throttle/throttle-pos-norm[0]">
-<input>fcs/throttle/throttle-cmd-norm[0]</input>
-   <clipto>
-    <min>fcs/throttle/min-thr-pos[0]</min>
-    <max>1</max>
-   </clipto>
-<output>fcs/throttle-pos-norm[0]</output>
-  </summer>
-
- <switch name="fcs/throttle/min-thr-pos[1]">
-   <default value="0"/>
-   <test value="0.12">
-     fcs/throttle/throttle-pos-norm[1] GE 0.12
-     /an24/instrumentation/idle-lock/idle-lock == 0
-   </test>
-  </switch>
-
-             <fcs_function name="fcs/throttle/throttle-cmd-norm[1]">
-                 <function>
-                     <product>
-                         <property> /controls/engines/engine[1]/throttle </property>
-			 <value>1</value>
-                     </product>
-                 </function>
-             </fcs_function>
-
-  <summer name="fcs/throttle/throttle-pos-norm[1]">
-<input>fcs/throttle/throttle-cmd-norm[1]</input>
-   <clipto>
-    <min>fcs/throttle/min-thr-pos[1]</min>
-    <max>1</max>
-   </clipto>
-<output>fcs/throttle-pos-norm[1]</output>
-  </summer>
-
-        </channel>
-
     </flight_control>
 
+    <system file="throttle-idle-lock"/>
     <system file="prop-governor"/>
+    <system file="steering"/>
 
        <external_reactions>
     

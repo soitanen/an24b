@@ -109,7 +109,7 @@
 </fdm>
 
  <gear>
-    <zsink-in type="double">25</zsink-in>
+    <zsink-in type="double">10</zsink-in>
  </gear>
 
 <an24>
