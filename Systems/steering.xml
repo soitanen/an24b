@@ -21,10 +21,15 @@
       </clipto>
     </pure_gain>
 
-    <pure_gain name="fcs/steering/slip-error-deg">
-      <input>gear/unit[0]/slip-angle-deg</input>
-      <gain>0.1</gain>
-    </pure_gain>
+    <fcs_function name="fcs/steering/slip-error-deg">
+      <function>
+        <product>
+          <property>gear/unit[0]/slip-angle-deg</property>
+          <property>fcs/steering/speed-sensitive-centering</property>
+          <value>0.1</value>
+        </product>
+      </function>
+    </fcs_function>
 
     <fcs_function name="fcs/steering/center-error-deg">
       <function>
