@@ -16,8 +16,8 @@
  <type>select</type>
  <condition>
    <equals>
-    <property>an24/instrumentation/nosewheel/pedals_armed</property>
-    <value>1</value>
+    <property>an24/gear/steer_mode</property>
+    <value>2</value>
    </equals>
   </condition>
  <object-name>lampon</object-name>

@@ -13,14 +13,20 @@
 </animation>
 
 <animation>
- <type>select</type>
- <condition>
-   <equals>
-    <property>an24/instrumentation/nosewheel/pedals_on</property>
-    <value>1</value>
-   </equals>
+  <type>select</type>
+  <condition>
+    <and>
+      <equals>
+        <property>an24/gear/steer_mode</property>
+        <value>2</value>
+      </equals>
+      <equals>
+        <property>gear/gear/wow</property>
+        <value>1</value>
+      </equals>
+    </and>
   </condition>
- <object-name>lampon</object-name>
+  <object-name>lampon</object-name>
 </animation>
 
 </PropertyList>
