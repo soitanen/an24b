@@ -1,24 +1,28 @@
 ######################################################################
 #
-# Terrain reactions (friction, bumpiness, water sinking).
+# Terrain reactions for JSBSim (friction, bumpiness, water sinking).
 #
 # Configuration:
 #
 # Add the following to ...-set.xml:
 #
-# <nasal>
-#   ...
-#   <friction>
-#     <file>path/to/friction.nas</file>
-#   </friction>
-# </nasal>
+#   <nasal>
+#     ...
+#     <friction>
+#       <file>path/to/friction.nas</file>
+#     </friction>
+#   </nasal>
 #
-# <gear>
-#   ...
-#   <zsink-in type="double">INCHES</zsink-in>
-# </gear>
+#   <gear>
+#     <gear n="N">
+#       ...
+#       <zsink-in type="double">INCHES</zsink-in>
+#     </gear>
+#   </gear>
 #
-# where INCHES is how deep the aircraft should sink in the water.
+# where N is the index of the point of contact (<zsink-in> should be
+# specified for every point of contact, not just the gears) and INCHES
+# is how deep that point should sink in the water.
 #
 # Information about surface properties will appear in
 #
@@ -30,21 +34,24 @@ var rain_factor = 0.3;
 var snow_factor = 0.45;
 var meters_in_degree = 1852 * 60;
 var degrees_in_inch = 0.0254 / meters_in_degree;
-var radian_in_degree = math.pi / 180;
+var radians_in_degree = math.pi / 180;
 
 var points_of_contact = getprop("fdm/jsbsim/gear/num-units");
-var gears_count =
-   size(props.globals.getNode("fdm/jsbsim/gear").getChildren("unit"));
 var point_info = [];
 for (var i = 0; i < points_of_contact; i += 1) {
     var x = getprop("gear/gear["~i~"]/xoffset-in") * degrees_in_inch;
     var y = getprop("gear/gear["~i~"]/yoffset-in") * degrees_in_inch;
     var z = getprop("gear/gear["~i~"]/zoffset-in");
+    var zs = getprop("gear/gear["~i~"]/zsink-in");
+    if (zs == nil)
+        zs = z;
 
+    var g = 0;
     var r = 0;
     var prop = "";
-    if (i < gears_count) {
+    if (props.globals.getNode("fdm/jsbsim/gear/unit["~i~"]") != nil) {
         prop = "fdm/jsbsim/gear/unit["~i~"]";
+        g = 1;
         r = getprop(prop~"/rolling_friction_coeff");
     } else {
         prop = "fdm/jsbsim/contact/unit["~i~"]";
@@ -52,7 +59,7 @@ for (var i = 0; i < points_of_contact; i += 1) {
     var s = getprop(prop~"/static_friction_coeff");
     var d = getprop(prop~"/dynamic_friction_coeff");
 
-    append(point_info, { x: x, y: y, z: z, s: s, d: d, r: r });
+    append(point_info, { g: g, x: x, y: y, z: z, zs: zs, s: s, d: d, r: r });
 }
 
 
@@ -67,7 +74,7 @@ var update_reactions = func {
     var rot = -getprop("fdm/jsbsim/attitude/heading-true-rad");
     var h_cos = math.cos(rot);
     var h_sin = math.sin(rot);
-    var cg = getprop("fdm/jsbsim/inertia/cg-x-in") * -degrees_in_inch;
+    var cg = -getprop("fdm/jsbsim/inertia/cg-x-in") * degrees_in_inch;
 
     var rain_coeff = (getprop("environment/rain-norm")
                       or getprop("environment/metar/rain-norm")
@@ -75,7 +82,6 @@ var update_reactions = func {
     var snow_coeff = (getprop("environment/snow-norm")
                       or getprop("environment/metar/snow-norm")
                       or 0) * snow_factor;
-    var sink_z = getprop("gear/zsink-in");
     var wave_amp = ((getprop("environment/wave/amp") or 1) - 1) * 40;
     var wave_freq = (getprop("environment/wave/freq") or 0) * 60;
 
@@ -85,7 +91,7 @@ var update_reactions = func {
 
         var north = (point_info[i].x - cg) * h_cos + point_info[i].y * h_sin;
         var east = (point_info[i].x - cg) * -h_sin + point_info[i].y * h_cos;
-        var lat_corr = math.cos(lat * radian_in_degree) or 0.0000000001;
+        var lat_corr = math.cos(lat * radians_in_degree) or 0.0000000001;
         east /= lat_corr;
         var p_lat = lat + north;
         var p_lon = lon + east;
@@ -121,21 +127,24 @@ var update_reactions = func {
             if (static_friction < 0.1)
                 static_friction = 0.1;
         } else {
-            z = sink_z;
+            if (point_info[i].g)
+                rolling_friction = 1;
+
+            z = point_info[i].zs;
             z += wave_amp * math.sin(wave_freq * systime() + i);
-            static_friction = rolling_friction;
+            static_friction = rolling_friction; # Make brakes ineffective.
         }
 
         if (dynamic_friction > static_friction)
             dynamic_friction = static_friction;
 
-        var prop = (i < gears_count
+        var prop = (point_info[i].g
                     ? "fdm/jsbsim/gear/unit["~i~"]"
                     : "fdm/jsbsim/contact/unit["~i~"]");
 
         setprop(prop~"/static_friction_coeff", static_friction);
         setprop(prop~"/dynamic_friction_coeff", dynamic_friction);
-        if (i < gears_count)
+        if (point_info[i].g)
             setprop(prop~"/rolling_friction_coeff", rolling_friction);
         setprop(prop~"/z-position", z);
 

@@ -109,7 +109,30 @@
 </fdm>
 
  <gear>
-    <zsink-in type="double">10</zsink-in>
+    <gear n="0">
+      <zsink-in type="double">150</zsink-in>
+    </gear>
+    <gear n="1">
+      <zsink-in type="double">150</zsink-in>
+    </gear>
+    <gear n="2">
+      <zsink-in type="double">150</zsink-in>
+    </gear>
+    <gear n="3">
+      <zsink-in type="double">100</zsink-in>
+    </gear>
+    <gear n="4">
+      <zsink-in type="double">100</zsink-in>
+    </gear>
+    <gear n="5">
+      <zsink-in type="double">-30</zsink-in>
+    </gear>
+    <gear n="6">
+      <zsink-in type="double">-30</zsink-in>
+    </gear>
+    <gear n="7">
+      <zsink-in type="double">-30</zsink-in>
+    </gear>
  </gear>
 
 <an24>
