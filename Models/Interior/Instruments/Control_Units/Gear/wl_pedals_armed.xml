@@ -9,12 +9,12 @@
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/warninglamp03orangeplain.png</texture>
+ <texture>../../../shared/lamps/warninglamp03orange.png</texture>
 </animation>
 
 <animation>
  <type>select</type>
- <condition>
+ <condition> <!-- Add AZS #5 in future -->
    <equals>
     <property>an24/gear/steer_mode</property>
     <value>2</value>
