@@ -4,12 +4,26 @@
   
 -->
 <system name="ThrottleIdleLock">
-        <channel name="Throttle">
+
+  <property value="0.12">fcs/throttle/idle-lock-pos</property>
+
+    <channel name="Throttle">
+
+      <switch>
+        <default value="fcs/throttle/idle-lock-pos"/>
+        <test value="0.12">
+          fcs/throttle/idle-lock-pos LT 0.12
+        </test>
+        <test value="0.22">
+          fcs/throttle/idle-lock-pos GT 0.22
+        </test>
+        <output>fcs/throttle/idle-lock-pos</output>
+      </switch>
 
   <switch name="fcs/throttle/min-thr-pos[0]">
    <default value="0"/>
-   <test value="0.12">
-     fcs/throttle/throttle-pos-norm[0] GE 0.12
+   <test value="fcs/throttle/idle-lock-pos">
+     fcs/throttle/throttle-pos-norm[0] GE fcs/throttle/idle-lock-pos
      /an24/instrumentation/idle-lock/idle-lock == 0
    </test>
   </switch>
@@ -34,8 +48,8 @@
 
  <switch name="fcs/throttle/min-thr-pos[1]">
    <default value="0"/>
-   <test value="0.12">
-     fcs/throttle/throttle-pos-norm[1] GE 0.12
+   <test value="fcs/throttle/idle-lock-pos">
+     fcs/throttle/throttle-pos-norm[1] GE fcs/throttle/idle-lock-pos
      /an24/instrumentation/idle-lock/idle-lock == 0
    </test>
   </switch>

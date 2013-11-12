@@ -10,7 +10,7 @@
   <status>alpha</status>
 
   <flight-model>jsb</flight-model>
-  <aero>an24</aero>
+  <aero>an24b</aero>
 
   <sound>
    <path>Aircraft/an24b/Sound/an24b-sound.xml</path>
@@ -72,8 +72,9 @@
          <command>property-toggle</command>
          <property>/an24/instrumentation/prop-lock/prop-lock-right</property>
        </binding>
-       </key>
-<key n="257">
+     </key>
+
+     <key n="257">
        <name>F1</name>
        <desc>Idle lock</desc>
        <binding>
@@ -89,6 +90,23 @@
          </binding>            
        </mod-up>
       </key>
+
+      <key n="45">
+      <name>minus</name>
+      <binding>
+        <command>property-adjust</command>
+        <property>/fdm/jsbsim/fcs/throttle/idle-lock-pos</property>
+        <step>-0.02</step>
+      </binding>
+    </key>
+    <key n="61">
+      <name>equal</name>
+      <binding>
+        <command>property-adjust</command>
+        <property>/fdm/jsbsim/fcs/throttle/idle-lock-pos</property>
+        <step>0.02</step>
+      </binding>
+    </key>
    </keyboard>
 </input>
 
