@@ -37,6 +37,13 @@
 	    <name>F2</name>
 	    <desc>Toggles Propeller Pitch Lock (UPOR VINTA)</desc>
 	   </key>
+   	   <key>
+	    <name>-</name>
+	    <desc>Decrease Idle Lock value</desc>
+	   </key>   	   <key>
+	    <name>=</name>
+	    <desc>Increase Idle Lock value</desc>
+	   </key>
   </help>
 
   <flaps>
