@@ -16,7 +16,7 @@
 -->
 
 <propeller name="prop_AV72">
-  <ixx>  70.355 </ixx> <!-- original - 7.355 -->
+  <ixx>  73.579 </ixx> <!-- real value -->
   <diameter unit="M">   3.9 </diameter>
   <numblades> 4 </numblades>
   <gearratio> 12.11341 </gearratio>
