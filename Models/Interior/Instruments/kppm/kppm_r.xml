@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>kppm.ac</path>
+
+<animation>
+  <type>material</type>
+  <condition>
+    <property>yak-40/switches/board_right</property>
+    <greater-than>
+      <property>yak-40/systems/electrical/buses/bus27/volts</property>
+      <value>16.0</value>
+    </greater-than>
+  </condition>
+  <object-name>back</object-name>
+  <object-name>back_0</object-name>
+  <object-name>back_1</object-name>
+  <object-name>base</object-name>
+  <object-name>glass</object-name>
+  <object-name>gs_blenker</object-name>
+  <object-name>gs_blenker.001</object-name>
+  <object-name>hs_blenker</object-name>
+  <object-name>hs_blenker.001</object-name>
+  <object-name>gs_needle</object-name>
+  <object-name>hs_needle</object-name>
+  <object-name>knob</object-name>
+  <object-name>needle</object-name>
+  <object-name>scale</object-name>
+  <emission>
+    <red-prop>yak-40/light/panel-r/red</red-prop>
+    <green-prop>yak-40/light/panel-r/green</green-prop>
+    <blue-prop>yak-40/light/panel-r/blue</blue-prop>
+    <factor-prop>yak-40/instrumentation/lights/board_right</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>Plane.059</object-name>
+	<emission>
+		<red>0.2</red>
+		<green>0.2</green>
+		<blue>0.2</blue>
+		<factor-prop>/controls/switches/map-lights</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>needle</object-name>
+	<property>yak-40/instrumentation/kppm[1]/needle</property>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>scale</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>hs_needle</object-name>
+	<property>instrumentation/nav[1]/heading-needle-deflection</property>
+	<interpolation>
+		<entry><ind>-3.5</ind><dep>-0.019</dep></entry>
+		<entry><ind>0.0</ind><dep>0.0</dep></entry>
+		<entry><ind>3.5</ind><dep>0.019</dep></entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>gs_needle</object-name>
+	<property>instrumentation/nav[1]/gs-needle-deflection</property>
+	<interpolation>
+		<!--<entry><ind>-9999.0</ind><dep>-0.0213</dep></entry>-->
+		<entry><ind>-3.5</ind><dep>-0.019</dep></entry>
+		<entry><ind>0.0</ind><dep>0.0</dep></entry>
+		<entry><ind>3.5</ind><dep>0.019</dep></entry>
+		<!--<entry><ind>9999.0</ind><dep>0.0213</dep></entry>-->
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>gs_blenker</object-name>
+    <condition>
+		<not>
+			<property>instrumentation/nav/has-gs</property>
+		</not>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>hs_blenker</object-name>
+    <condition>
+		<not>
+			<property>instrumentation/nav/in-range</property>
+		</not>
+    </condition>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>knob</object-name>
+  <property>yak-40/instrumentation/kppm[1]/kurs</property>  
+  <factor>5</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.02904</y-m>
+    <z-m>-0.02885</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<!--Mouse wheel-->
+<animation>
+  <type>pick</type>
+  <object-name>knob</object-name>
+  <visible>true</visible>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>yak-40/instrumentation/kppm[1]/kurs</property>
+      <step>1</step>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>knob</object-name>
+  <visible>true</visible>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>yak-40/instrumentation/kppm[1]/kurs</property>
+      <step>-1</step>
+    </binding>
+  </action>
+</animation>
+
+</PropertyList>

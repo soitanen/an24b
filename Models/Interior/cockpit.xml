@@ -431,7 +431,7 @@
 
 <model>
   <name>KPPM</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/KPPM_mprp/mpkppm.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/kppm/kppm_l.xml</path> <!-- <path>Aircraft/an24b/Models/Interior/Instruments/KPPM_mprp/mpkppm.xml</path> -->
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.3441</y-m>
