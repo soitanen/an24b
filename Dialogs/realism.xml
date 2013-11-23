@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<name>realism</name>
+	<layout>vbox</layout>
+	<draggable>true</draggable>
+	<resizable>true</resizable>
+
+	<group>
+		<layout>hbox</layout>
+		<text>
+			<label>Realism settings</label>
+		</text>
+
+		<empty>
+			<stretch>true</stretch>
+		</empty>
+
+		<button>
+			<legend/>
+			<key>Esc</key>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<border>2</border>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+	<hrule/>
+
+	<group>
+		<stretch>true</stretch>
+		<layout>vbox</layout>
+		<halign>left</halign>
+		<valign>top</valign>
+		<padding>5</padding>
+		<pref-width>600</pref-width>
+	
+		<checkbox>
+			<halign>left</halign>
+			<label>Enable tiller steering</label>
+			<property>/fdm/jsbsim/fcs/realism/tiller-enabled</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</checkbox>
+
+        <text>
+		<label>   - When steering mode is set to taxing, nosewheel</label>
+	</text>
+        <text>
+		<label>     will be steerable only from tiller, not pedals.</label>
+	</text>
+
+	</group>
+
+	<hrule/>
+
+</PropertyList>

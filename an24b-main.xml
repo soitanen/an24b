@@ -46,6 +46,36 @@
 	   </key>
   </help>
 
+  <menubar>
+    <default>
+      <menu n="10">
+        <label>An-24B</label>
+        <enabled type="bool">true</enabled>
+        <item>
+          <label>Tiller steering</label>
+          <binding>
+            <command>nasal</command>
+            <script>
+              var tiller = gui.Dialog.new("/sim/gui/dialogs/an-24b/menu/dialog","Aircraft/an24b/Dialogs/tiller-steering.xml");
+              tiller.open();
+            </script>
+          </binding>
+        </item>
+        <item>
+          <label>Realism settings</label>
+          <binding>
+            <command>nasal</command>
+            <script>
+              var realism = gui.Dialog.new("/sim/gui/dialogs/an-24b/menu/dialog","Aircraft/an24b/Dialogs/realism.xml");
+              realism.open();
+            </script>
+          </binding>
+        </item>
+      </menu>
+    </default>
+  </menubar>
+
+
   <flaps>
 	  <setting>0.0</setting>
 	  <setting>0.1316</setting>
