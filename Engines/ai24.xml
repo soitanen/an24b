@@ -30,7 +30,7 @@ itt_delay [-] time constant for ITT change
   <idlen1>                       90.0   </idlen1>
   <maxn1>                       100.0   </maxn1>
   <maxpower unit="HP">         2550.0   </maxpower>
-  <psfc unit="LBS/HR/HP">         0.582 </psfc>
+  <psfc unit="LBS/HR/HP">         0.632 </psfc>
   <idlefuelflow>                0.1   </idlefuelflow>
   <n1idle_max_delay>              1     </n1idle_max_delay>
   <maxstartingtime>              20     </maxstartingtime>
@@ -79,6 +79,20 @@ itt_delay [-] time constant for ITT change
        60   180   520
        96   270   680
       100   280   730
+    </tableData>
+  </table>
+
+  <table name="CombustionEfficiency_N1" type="internal">
+    <description>Dependency of fuel efficiency coefficient on N1 (and RPM)</description>
+    <tableData>
+      90    0.1221
+      91.2  0.2834
+      92.2  0.5336
+      93.4  0.7188
+      94.1  0.7741
+      95.2  0.8471
+      96.5  0.9001
+     100    1
     </tableData>
   </table>
 
