@@ -21,4 +21,20 @@
    </emission>
  </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>fdm/jsbsim/propulsion/engine[0]/fuel-flow-rate-pps</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep> -148.0</dep></entry>
+    <entry><ind>        0.12236</ind>	<dep> -113.0</dep></entry>
+    <entry><ind>        0.48947</ind>	<dep>  114.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
 </PropertyList>
