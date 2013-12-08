@@ -32,9 +32,9 @@
   <object-name>long_needle</object-name>
   <property>instrumentation/altimeter/indicated-altitude-ft</property>
   <factor>-0.11</factor>
-  <condition>
+  <!--<condition>
     <property>tu154/systems/svs/powered</property>
-  </condition>
+  </condition>-->
   <axis>
     <x>1.0</x>
     <y>0.0</y>
@@ -46,9 +46,9 @@
   <object-name>short_needle</object-name>
   <property>instrumentation/altimeter/indicated-altitude-ft</property>
   <factor>-0.011</factor>
-  <condition>
+  <!--<condition>
     <property>tu154/systems/svs/powered</property>
-  </condition>
+  </condition>-->
   <axis>
     <x>1.0</x>
     <y>0.0</y>
@@ -61,8 +61,8 @@
 <animation>
   <type>rotate</type>
   <object-name>dig_p_ones</object-name>
-  <property>tu154/instrumentation/altimeter/mmhg</property>
-  <factor>36.0</factor>
+  <property>instrumentation/altimeter/setting-hpa</property>
+  <factor>27.0088845014</factor>
   <center>
     <x-m>-0.01117</x-m>
     <y-m>0.0</y-m>
@@ -81,7 +81,10 @@
   <expression>
     <table>
       <mod>
-        <property>tu154/instrumentation/altimeter/mmhg</property>
+        <product>
+          <property>instrumentation/altimeter/setting-hpa</property>
+          <value>0.7500616827</value>
+        </product>
         <value>100</value>
       </mod>
       <entry><ind>	 0</ind>	<dep>	0</dep></entry>
@@ -125,7 +128,10 @@
   <expression>
     <table>
       <mod>
-        <property>tu154/instrumentation/altimeter/mmhg</property>
+        <product>
+          <property>instrumentation/altimeter/setting-hpa</property>
+          <value>0.7500616827</value>
+        </product>
         <value>1000</value>
       </mod>
       <entry><ind>	  0</ind>	<dep>	0</dep></entry>

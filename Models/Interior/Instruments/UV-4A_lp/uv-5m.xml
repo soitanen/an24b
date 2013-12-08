@@ -29,5 +29,21 @@
    </emission>
  </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>position/altitude-agl-ft</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>    1.4</dep></entry>
+    <entry><ind>      328.0</ind>	<dep>  152.0</dep></entry>
+    <entry><ind>      393.7</ind>	<dep>  181.5</dep></entry>
+    <entry><ind>     2460.6</ind>	<dep>  311.5</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 
 </PropertyList>

@@ -291,7 +291,7 @@
 
 <model>
   <name>VD-10K</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/VD-10K_lpmp/lpvd-10k.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/uvo/uvo.xml</path> <!--   <path>Aircraft/an24b/Models/Interior/Instruments/VD-10K_lpmp/lpvd-10k.xml</path>-->
   <offsets>
     <x-m>2.092</x-m>
     <y-m>-0.6906</y-m>
