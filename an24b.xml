@@ -1357,9 +1357,16 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>metrics/bw-ft</property>
+                    <property>metrics/cbarw-ft</property>
                     <property>fcs/rudder-pos-rad</property>
                     <value>0.01</value>
+                </product>
+            </function>
+            <function name="aero/moment/Roll_anti_engine">
+                <description>Reduce roll moment due to engines</description>
+                <product>
+                    <property>moments/l-prop-lbsft</property>
+                    <value>-0.75</value>
                 </product>
             </function>
           <!--  <function name="aero/moment/Roll_experiment">
