@@ -21,18 +21,19 @@
   <object-name>dig_p_dec</object-name>
   <object-name>dig_p_hund</object-name>
   <object-name>knob</object-name>
-  <emission>
-    <red-prop>tu154/light/instruments/int-red</red-prop>
-    <green-prop>tu154/light/instruments/int-green</green-prop>
-    <blue-prop>tu154/light/instruments/int-blue</blue-prop>
-  </emission>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
 </animation>
 <!--Needles-->
 <animation>
   <type>rotate</type>
   <object-name>long_needle</object-name>
   <property>instrumentation/altimeter/indicated-altitude-ft</property>
-  <factor>-0.11</factor>
+  <factor>-0.109728</factor>
   <!--<condition>
     <property>tu154/systems/svs/powered</property>
   </condition>-->
@@ -46,7 +47,7 @@
   <type>rotate</type>
   <object-name>short_needle</object-name>
   <property>instrumentation/altimeter/indicated-altitude-ft</property>
-  <factor>-0.011</factor>
+  <factor>-0.0109728</factor>
   <!--<condition>
     <property>tu154/systems/svs/powered</property>
   </condition>-->

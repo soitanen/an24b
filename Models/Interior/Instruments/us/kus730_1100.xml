@@ -17,11 +17,12 @@
   <object-name>text</object-name>
   <object-name>long_needle</object-name>
   <object-name>short_needle</object-name>
-  <emission>
-    <red-prop>tu154/light/instruments/int-red</red-prop>
-    <green-prop>tu154/light/instruments/int-green</green-prop>
-    <blue-prop>tu154/light/instruments/int-blue</blue-prop>
-  </emission>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
 </animation>
 
   
@@ -29,25 +30,15 @@
 <animation>
     <type>rotate</type>
     <object-name>short_needle</object-name>
-    <property>fdm/jsbsim/velocities/vt-fps</property>
-<!--fps-->
+    <property>instrumentation/airspeed-indicator/true-speed-kt</property>
     <interpolation>
       <entry><ind>	0.0</ind>	<dep>	180.0</dep></entry>
-      <entry><ind>	363.64</ind>	<dep>	196.0</dep></entry>
-      <entry><ind>	454.55</ind>	<dep>	244.0</dep></entry>
-      <entry><ind>	727.27</ind>	<dep>	383.0</dep></entry>
-      <entry><ind>	909.09</ind>	<dep>	476.0</dep></entry>
-      <entry><ind>	1000.0</ind>	<dep>	527.0</dep></entry>
+      <entry><ind>	215.98</ind>	<dep>	196.0</dep></entry>
+      <entry><ind>	269.98</ind>	<dep>	244.0</dep></entry>
+      <entry><ind>	323.97</ind>	<dep>	292.0</dep></entry>
+      <entry><ind>	377.97</ind>	<dep>	338.0</dep></entry>
+      <entry><ind>	593.95</ind>	<dep>	527.0</dep></entry>
     </interpolation>
-<!--kmh-->
-<!--    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	180.0</dep></entry>
-      <entry><ind>	400.0</ind>	<dep>	196.0</dep></entry>
-      <entry><ind>	500.0</ind>	<dep>	244.0</dep></entry>
-      <entry><ind>	800.0</ind>	<dep>	383.0</dep></entry>
-      <entry><ind>	1000.0</ind>	<dep>	476.0</dep></entry>
-      <entry><ind>	1100.0</ind>	<dep>	527.0</dep></entry>
-    </interpolation>-->
     <axis>
       <x>-1.0</x>
       <y>0.0</y>
@@ -58,9 +49,9 @@
 <animation>
   <type>rotate</type>
   <object-name>long_needle</object-name>
-  <property>fdm/jsbsim/velocities/ve-kts</property>
+  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
   <interpolation>
-    <entry><ind>	0.0</ind>	<dep>	5.0</dep></entry>
+    <entry><ind>	27.0</ind>	<dep>	5.0</dep></entry>
     <entry><ind>	54.0</ind>	<dep>	23.0</dep></entry>
     <entry><ind>	108.0</ind>	<dep>	75.0</dep></entry>
     <entry><ind>	215.98</ind>	<dep>	181.0</dep></entry>

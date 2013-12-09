@@ -28,12 +28,12 @@
   <object-name>knob</object-name>
   <object-name>needle</object-name>
   <object-name>scale</object-name>
-  <emission>
-    <red-prop>yak-40/light/panel-l/red</red-prop>
-    <green-prop>yak-40/light/panel-l/green</green-prop>
-    <blue-prop>yak-40/light/panel-l/blue</blue-prop>
-    <factor-prop>yak-40/instrumentation/lights/board_left</factor-prop>
-  </emission>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
 </animation>
 
 <animation>
