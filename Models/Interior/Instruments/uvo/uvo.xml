@@ -10,7 +10,7 @@
 <!-- UVO altimeter
      3D instrument for Tu-154 -->
 <PropertyList>
- <path>uvo.ac</path>
+ <path>uvo_knob.ac</path>
 <!-- Internal instruments lighting -->
 <animation>
   <type>material</type>
@@ -20,6 +20,7 @@
   <object-name>dig_p_ones</object-name>
   <object-name>dig_p_dec</object-name>
   <object-name>dig_p_hund</object-name>
+  <object-name>knob</object-name>
   <emission>
     <red-prop>tu154/light/instruments/int-red</red-prop>
     <green-prop>tu154/light/instruments/int-green</green-prop>
@@ -169,6 +170,50 @@
   </axis>
 </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>knob</object-name>
+  <property>instrumentation/altimeter/setting-hpa</property>  
+  <factor>5</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0579693</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 
+<animation>
+  <type>pick</type>
+  <object-name>knob</object-name>
+  <visible>true</visible>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/altimeter/setting-hpa</property>
+      <step>0.5</step>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>knob</object-name>
+  <visible>true</visible>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/altimeter/setting-hpa</property>
+      <step>-0.5</step>
+    </binding>
+  </action>
+</animation>
 
 </PropertyList>

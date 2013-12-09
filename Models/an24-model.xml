@@ -188,6 +188,40 @@
   </axis>
 </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>flapcenterL</object-name>  
+  <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+  <factor>1.0</factor>
+  <center>
+    <x-m>10.66</x-m>
+    <y-m>0.0</y-m>
+    <z-m>1.70</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>flapcenterR</object-name>  
+  <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+  <factor>1.0</factor>
+  <center>
+    <x-m>10.66</x-m>
+    <y-m>0.0</y-m>
+    <z-m>1.70</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
 <!--Props-->
 
 <animation>
