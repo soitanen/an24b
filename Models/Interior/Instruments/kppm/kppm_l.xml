@@ -39,9 +39,14 @@
 <animation>
 	<type>rotate</type>
 	<object-name>needle</object-name>
-	<property>yak-40/instrumentation/kppm/needle</property>
+        <expression>
+          <dif>
+	    <property>instrumentation/nav/radials/selected-deg</property>
+            <property>/orientation/heading-magnetic-deg</property>
+          </dif>
+        </expression>
 	<axis>
-		<x>1</x>
+		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
 	</axis>
@@ -115,7 +120,7 @@
 <animation>
   <type>rotate</type>
   <object-name>knob</object-name>
-  <property>yak-40/instrumentation/kppm/needle</property>  
+  <property>instrumentation/nav/radials/selected-deg</property>  
   <factor>5</factor>
   <center>
     <x-m>0.0</x-m>
@@ -138,7 +143,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>yak-40/instrumentation/kppm/needle</property>
+      <property>instrumentation/nav/radials/selected-deg</property>
       <step>1</step>
     </binding>
   </action>
@@ -152,7 +157,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>yak-40/instrumentation/kppm/needle</property>
+      <property>instrumentation/nav/radials/selected-deg</property>
       <step>-1</step>
     </binding>
   </action>

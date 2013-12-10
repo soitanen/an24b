@@ -22,11 +22,12 @@
   <object-name>n_min</object-name>
   <object-name>sector</object-name>
   <object-name>n_blank</object-name>
-  <emission>
-    <red-prop>tu154/light/instruments/int-red</red-prop>
-    <green-prop>tu154/light/instruments/int-green</green-prop>
-    <blue-prop>tu154/light/instruments/int-blue</blue-prop>
-  </emission>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
 </animation>
 
 <!-- External instruments lighting -->
@@ -34,11 +35,12 @@
   <type>material</type>
   <object-name>center</object-name>
   <object-name>corner</object-name>
-  <emission>
-    <red-prop>tu154/light/panel/ext-red</red-prop>
-    <green-prop>tu154/light/panel/ext-green</green-prop>
-    <blue-prop>tu154/light/panel/ext-blue</blue-prop>
-  </emission>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
 </animation>
 
 
@@ -85,10 +87,10 @@
       <z>0.0</z>
     </axis>
 </animation>
-<!--<animation>
+<animation>
   <type>rotate</type>
   <object-name>sector</object-name>
-  <property>fdm/jsbsim/aero/function/auasp</property>
+  <property>fdm/jsbsim/fcs/aero/auasp-limit</property>
   <interpolation>
     <entry><ind>	15.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	12.0</ind>	<dep>	37.0</dep></entry>
@@ -102,7 +104,7 @@
     <y>0.0</y>
     <z>0.0</z>
   </axis>
-</animation>-->
+</animation>
 
 <animation>
   <type>rotate</type>
@@ -123,44 +125,18 @@
 </animation>
 
 <animation>
-  <type>rotate</type>
+  <type>select</type>
   <object-name>n_max</object-name>
-  <property>tu154/instrumentation/uap-12/accelerate-max</property>
   <condition>
     <property>tu154/instrumentation/uap-12/powered</property>
   </condition>
-  <interpolation>
-    <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
-    <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>
-    <entry><ind>	-1.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	-2.0</ind>	<dep>	-45.0</dep></entry>
-    <entry><ind>	-3.0</ind>	<dep>	-90.0</dep></entry>
-  </interpolation>
-  <axis>
-    <x>-1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
 </animation>
 <animation>
-  <type>rotate</type>
+  <type>select</type>
   <object-name>n_min</object-name>
-  <property>tu154/instrumentation/uap-12/accelerate-min</property>
   <condition>
     <property>tu154/instrumentation/uap-12/powered</property>
   </condition>
-  <interpolation>
-    <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
-    <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>
-    <entry><ind>	-1.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	-2.0</ind>	<dep>	-45.0</dep></entry>
-    <entry><ind>	-3.0</ind>	<dep>	-90.0</dep></entry>
-  </interpolation>
-  <axis>
-    <x>-1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
 </animation>
 
 <animation>

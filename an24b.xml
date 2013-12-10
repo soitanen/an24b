@@ -742,6 +742,8 @@ Models        </description>
 
         </channel>
 
+      <property value="12.5">fcs/aero/auasp-limit</property>
+
     </flight_control>
 
     <system file="throttle-idle-lock"/>
