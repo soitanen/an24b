@@ -310,4 +310,25 @@
   </axis>
 </animation>
 
+<!-- Nosewheel spin animation -->
+<animation>
+  <type>spin</type>
+  <object-name>frontwheels</object-name>
+  <condition>
+      <property>gear/gear[0]/compression-norm</property>
+  </condition>
+  <property>gear/gear[0]/rollspeed-ms</property>
+  <factor>25.4</factor>
+  <center>
+    <x-m>2.2875</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-1.5638</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
 </PropertyList>

@@ -809,7 +809,7 @@ Models        </description>
         </function>
         <function name="aero/function/epsilon-deg">
             <description>Epsilon at stabilizer</description>
-<product>
+            <product>
               <sum>
                 <property>aero/alpha-wing-rad</property>
 		<product>
@@ -818,8 +818,8 @@ Models        </description>
                 </product>
                 <value>-0.052356021</value>		
 	      </sum>
-<value>57.3</value>
-</product>
+             <value>57.3</value>
+           </product>
         </function>
 
         <aero_ref_pt_shift_x>
@@ -832,17 +832,6 @@ Models        </description>
                           38            0.42        
                         </tableData>
                     </table>
-		                  
-			<!-- <sum>
-                            <product>
-                      <property>fcs/mixture-cmd-norm</property>
-                      <value>0.21</value>
-                       </product>
-                    <value>0.42</value>
-                    </sum> -->
-
-
-		
                 </function>
         </aero_ref_pt_shift_x>
         <function name="aero/function/yt0">
@@ -904,7 +893,7 @@ Models        </description>
                 <independentVar lookup="row">aero/alpha-wing-rad</independentVar>
                 <independentVar lookup="column">aero/function/cmf</independentVar>
                 <tableData>
-                               -0.5          -0.15         0             15            38            
+		-0.5		-0.15		0		15		38            
 -0.17453293	-1.02052	-0.813949	-0.813949	-0.644044	0.030347
 -0.15707963	-0.910132	-0.724111	-0.724111	-0.531228	0.144148
 -0.13962634	-0.79974	-0.634274	-0.634274	-0.418412	0.25795
@@ -914,11 +903,11 @@ Models        </description>
 -0.06981317	-0.358171	-0.274923	-0.274923	0.0328506	0.713155
 -0.05235988	-0.247779	-0.185085	-0.185085	0.145666	0.826956
 -0.03490659	-0.137387	-0.0952473	-0.0952473	0.258482	0.939772
--0.01745329	-0.0269949	-0.00540958	-0.00540958	0.3672	1.04817
-0	0.0833972	0.0844281	0.0844281	0.474402	1.15657
+-0.01745329	-0.0269949	-0.00540958	-0.00540958	0.3672		1.04817
+0		0.0833972	0.0844281	0.0844281	0.474402	1.15657
 0.01745329	0.193789	0.174266	0.174266	0.581605	1.26497
 0.03490659	0.304181	0.264104	0.264104	0.688807	1.37338
-0.05235988	0.411746	0.35231	0.35231	0.797637	1.48178
+0.05235988	0.411746	0.35231		0.35231		0.797637	1.48178
 0.06981317	0.515116	0.439643	0.439643	0.906849	1.58847
 0.08726646	0.618008	0.526976	0.526976	1.01367	1.68901
 0.10471976	0.711172	0.614309	0.614309	1.11783	1.78954
@@ -956,7 +945,7 @@ Models        </description>
 -0.05235988	0.036	0.0275	0.0275	0.0389	0.1289
 -0.03490659	0.035	0.027	0.027	0.038	0.1305
 -0.01745329	0.03415	0.0263	0.0263	0.0389	0.13665
-0	0.0333	0.0256	0.0256	0.0398	0.1428
+0		0.0333	0.0256	0.0256	0.0398	0.1428
 0.01745329	0.03355	0.025	0.025	0.04365	0.15035
 0.03490659	0.0338	0.0244	0.0244	0.0475	0.1579
 0.05235988	0.036	0.02655	0.02655	0.053	0.16625
@@ -1140,15 +1129,23 @@ Models        </description>
                 </tableData>
             </table>
         </function>
-        <function name="aero/function/mx">
-		<product>                    
-			<sum>
-                      <property>fcs/mixture-cmd-norm</property>
-                      <value>-0.5</value>
-                    </sum>
-                    <value>0.4</value>
-			<value>2</value>
-		</product>
+        <function name="aero/function/K">
+		<quotient>                    
+                  <sum>
+                    <property>aero/force/Lift_alpha</property>
+                    <property>aero/force/Lift_elevator</property>
+                    <property>aero/force/Lift_alpha_ground</property>
+                  </sum>
+                  <sum>
+                    <property>aero/force/Drag_basic</property>
+                    <property>aero/force/Drag_gear</property>
+                    <property>aero/force/Drag_beta</property>
+                    <property>aero/force/Drag_rudder</property>
+                    <property>aero/force/Drag_ailerons</property>
+                    <property>aero/force/Drag_elevator</property>
+                    <property>aero/force/Drag_ground</property>
+                  </sum>
+		</quotient>
         </function>
         <axis name="LIFT" unit="LBS">
             <function name="aero/force/Lift_alpha">
@@ -1178,7 +1175,7 @@ Models        </description>
                         <independentVar>position/h-agl-ft</independentVar>
                         <tableData>
                           0             1           
-                          36            0           
+                          27            0           
                         </tableData>
                     </table>
                 </product>
@@ -1232,12 +1229,8 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <abs>
-                       <property>fcs/rudder-pos-rad</property>
-                    </abs>
-                    <abs>
-                       <property>fcs/rudder-pos-rad</property>
-                    </abs>
+                    <property>fcs/rudder-pos-rad</property>
+                    <property>fcs/rudder-pos-rad</property>
                     <value>0.075</value>
                 </product>
             </function>
@@ -1246,12 +1239,8 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <abs>
-                       <property>fcs/right-aileron-pos-norm</property>
-                    </abs>
-                    <abs>
-                       <property>fcs/right-aileron-pos-norm</property>
-                    </abs>
+                    <property>fcs/right-aileron-pos-norm</property>
+                    <property>fcs/right-aileron-pos-norm</property>
                     <value>0.01159</value>
                 </product>
             </function>
@@ -1260,10 +1249,9 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <abs>
-                        <property>fcs/elevator-pos-norm</property>
-                    </abs>
-                    <value>0.04</value>
+                    <property>fcs/elevator-pos-rad</property>
+                    <property>fcs/elevator-pos-rad</property>
+                    <value>0.00774</value>
                 </product>
             </function>
             <function name="aero/force/Drag_ground">
@@ -1276,7 +1264,7 @@ Models        </description>
                         <independentVar>position/h-agl-ft</independentVar>
                         <tableData>
                           0             1           
-                          36            0           
+                          27            0           
                         </tableData>
                     </table>
                 </product>
@@ -1371,15 +1359,6 @@ Models        </description>
                     <value>-0.75</value>
                 </product>
             </function>
-          <!--  <function name="aero/moment/Roll_experiment">
-                <description>Yaw moment due to rudder</description>
-                <product>
-                    <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
-                    <property>metrics/cbarw-ft</property>
-                    <property>aero/function/mx</property>
-                </product>
-            </function> -->
         </axis>
         <axis name="PITCH" unit="LBS*FT">
             <function name="aero/moment/Pitch_alpha">

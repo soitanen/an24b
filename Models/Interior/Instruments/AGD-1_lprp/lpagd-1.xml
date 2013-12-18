@@ -75,8 +75,6 @@
   <type>rotate</type>
   <object-name>Plane</object-name>
   <property>/orientation/roll-deg</property>
-  <max-deg>70.0</max-deg>
-  <min-deg>-70.0</min-deg>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
