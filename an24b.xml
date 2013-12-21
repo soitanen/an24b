@@ -1147,6 +1147,10 @@ Models        </description>
                   </sum>
 		</quotient>
         </function>
+
+<!--                 End of pre-calculations                   -->
+<!--                 Starting to calculate actual forces       -->
+
         <axis name="LIFT" unit="LBS">
             <function name="aero/force/Lift_alpha">
                 <description>Lift due to alpha</description>
@@ -1356,7 +1360,7 @@ Models        </description>
                 <description>Reduce roll moment due to engines</description>
                 <product>
                     <property>moments/l-prop-lbsft</property>
-                    <value>-0.75</value>
+                    <value>-0.75</value> <!-- Idea - reduce moment according to gear ratio (-0.9175) -->
                 </product>
             </function>
         </axis>

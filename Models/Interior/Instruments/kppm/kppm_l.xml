@@ -146,6 +146,14 @@
       <property>instrumentation/nav/radials/selected-deg</property>
       <step>1</step>
     </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+	var radial=getprop("instrumentation/nav/radials/selected-deg");
+        var normalised = geo.normdeg(radial);
+	setprop("instrumentation/nav/radials/selected-deg", normalised);
+      </script>
+    </binding>
   </action>
 </animation>
 <animation>
@@ -159,6 +167,14 @@
       <command>property-adjust</command>
       <property>instrumentation/nav/radials/selected-deg</property>
       <step>-1</step>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+	var radial=getprop("instrumentation/nav/radials/selected-deg");
+        var normalised = geo.normdeg(radial);
+	setprop("instrumentation/nav/radials/selected-deg", normalised);
+      </script>
     </binding>
   </action>
 </animation>
