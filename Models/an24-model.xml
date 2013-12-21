@@ -315,7 +315,10 @@
   <type>spin</type>
   <object-name>frontwheels</object-name>
   <condition>
-      <property>gear/gear[0]/compression-norm</property>
+    <greater-than>
+      <property>gear/gear[0]/position-norm</property>
+      <value>0.8</value>
+    </greater-than>
   </condition>
   <property>gear/gear[0]/rollspeed-ms</property>
   <factor>25.4</factor>

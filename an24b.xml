@@ -24,10 +24,10 @@ Models        </description>
             <y> 0 </y>
             <z> 0.73 </z> <!-- 1.392 -->
         </location>
-        <location name="EYEPOINT" unit="IN">
-            <x> 74.11 </x>
-            <y> -24 </y>
-            <z> 65 </z>
+        <location name="EYEPOINT" unit="M">
+            <x> 2.1 </x>
+            <y> -0.48 </y>
+            <z> 1.1 </z>
         </location>
         <location name="VRP" unit="M">
             <x> 8.5 </x>
@@ -1146,6 +1146,18 @@ Models        </description>
                     <property>aero/force/Drag_ground</property>
                   </sum>
 		</quotient>
+        </function>
+        <function name="aero/function/slip-skid-indicator">
+           <!--<sum>-->
+             <product>
+		<atan2>
+                   <property>accelerations/a-pilot-y-ft_sec2</property>
+                   <property>accelerations/a-pilot-z-ft_sec2</property>
+                </atan2>
+                <value>57.2957795131</value>
+             </product>
+             <!--<value>-180</value>
+           </sum>-->
         </function>
 
 <!--                 End of pre-calculations                   -->
