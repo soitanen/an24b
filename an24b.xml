@@ -1299,7 +1299,7 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>metrics/cbarw-ft</property>
+                    <property>metrics/bw-ft</property>
                     <property>aero/beta-rad</property>
                     <value>-0.0722</value>
                 </product>
@@ -1351,7 +1351,7 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>metrics/cbarw-ft</property>
+                    <property>metrics/bw-ft</property>
                     <property>fcs/rudder-pos-rad</property>
                     <value>0.01</value>
                 </product>
@@ -1456,7 +1456,7 @@ Models        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>metrics/cbarw-ft</property>
+                    <property>metrics/bw-ft</property>
                     <property>aero/function/my</property>
                     <value>1</value>
                 </product>
