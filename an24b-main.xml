@@ -87,6 +87,8 @@
 	  <setting>1.0</setting>
   </flaps>
  </sim>
+
+
  <engines>
   <engine n="0">
    <running type="bool">true</running>
@@ -160,6 +162,9 @@
 	<steering>45.0</steering>
         <nose-wheel-steering type="bool">true</nose-wheel-steering>
     </gear>
+    <fcs>
+      <throttle-pos-norm>0</throttle-pos-norm>
+    </fcs>
 </jsbsim>
 </fdm>
 
