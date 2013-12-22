@@ -749,6 +749,7 @@ Models        </description>
     <system file="throttle-idle-lock"/>
     <system file="prop-governor"/>
     <system file="steering"/>
+    <system file="skid-slip-ball"/>
 
        <external_reactions>
     
@@ -1146,18 +1147,6 @@ Models        </description>
                     <property>aero/force/Drag_ground</property>
                   </sum>
 		</quotient>
-        </function>
-        <function name="aero/function/slip-skid-indicator">
-           <!--<sum>-->
-             <product>
-		<atan2>
-                   <property>accelerations/a-pilot-y-ft_sec2</property>
-                   <property>accelerations/a-pilot-z-ft_sec2</property>
-                </atan2>
-                <value>57.2957795131</value>
-             </product>
-             <!--<value>-180</value>
-           </sum>-->
         </function>
 
 <!--                 End of pre-calculations                   -->

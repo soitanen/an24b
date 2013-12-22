@@ -91,10 +91,10 @@
 <animation>
   <type>rotate</type>
   <object-name>skid_ball</object-name>
-  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
-  <factor>3.333</factor>
-  <max-deg>15.0</max-deg>
-  <min-deg>-15.0</min-deg>
+  <property>/fdm/jsbsim/instrumentation/slip-skid-indicator/slip-skid-deg</property>
+  <factor>1</factor>
+  <max-deg>20.0</max-deg>
+  <min-deg>-20.0</min-deg>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
