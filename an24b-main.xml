@@ -86,7 +86,16 @@
 	  <setting>0.7895</setting>
 	  <setting>1.0</setting>
   </flaps>
- </sim>
+
+  <instrumentation>
+    <path>Aircraft/an24b/Systems/instrumentation.xml</path>
+  </instrumentation>
+
+  <systems>
+    <path>Aircraft/an24b/Systems/systems.xml</path>
+  </systems>
+
+</sim>
 
 
  <engines>
@@ -99,7 +108,7 @@
  </engines>
 
 <input>
-   <keyboard>
+ <keyboard>
      <key n="258">
        <name>F2</name>
        <desc>Prop pitch lock</desc>
@@ -146,12 +155,55 @@
         <step>0.02</step>
       </binding>
     </key>
-   </keyboard>
+
+      <key n="91">
+        <name>[</name>
+        <desc>Decrease flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var flaps_min = 0;
+            setprop("/controls/flight/flaps", flaps_min);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>
+              var flaps_current = getprop("/surface-positions/flap-pos-norm");
+              setprop("/controls/flight/flaps", flaps_current);
+            </script>
+          </binding>
+        </mod-up>
+      </key>
+
+      <key n="93">
+        <name>]</name>
+        <desc>Increase flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var flaps_max = 1;
+            setprop("/controls/flight/flaps", flaps_max);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>
+              var flaps_current = getprop("/surface-positions/flap-pos-norm");
+              setprop("/controls/flight/flaps", flaps_current);
+            </script>
+          </binding>
+        </mod-up>
+      </key>
+
+  </keyboard>
 </input>
 
 <controls>
     <gear>
-	<steering>45.0</steering>
+	<steering>10.0</steering>
         <nose-wheel-steering type="bool">true</nose-wheel-steering>
     </gear>
 </controls>
@@ -159,7 +211,7 @@
 <fdm>
 <jsbsim>
     <gear>
-	<steering>45.0</steering>
+	<steering>10.0</steering>
         <nose-wheel-steering type="bool">true</nose-wheel-steering>
     </gear>
     <fcs>
@@ -197,7 +249,7 @@
 
 <an24>
   <gear>
-    <steer_mode>0</steer_mode>
+    <steer_mode>2</steer_mode>
   </gear>
   <instrumentation>
     <idle-lock>
@@ -209,17 +261,54 @@
     </prop-lock>
   </instrumentation>
 </an24>
+
 <instrumentation>
+  <heading-indicator-dg>
+    <serviceable type="bool">true</serviceable>
+  </heading-indicator-dg>
+  <heading-indicator-fg>
+    <serviceable type="bool">true</serviceable>
+  </heading-indicator-fg>
   <marker-beacon>
     <audio-btn type="bool" >false</audio-btn>
     <volume type="double" >0.0</volume>
   </marker-beacon>
+  <radar-altimeter>
+    <update-interval-sec type="double">0.1</update-interval-sec>
+    <serviceable type="bool">true</serviceable>
+    <antenna>
+      <x-offset-m type="double">0</x-offset-m>
+      <y-offset-m type="double">0</y-offset-m>
+      <z-offset-m type="double">1.05</z-offset-m>
+    </antenna>
+  </radar-altimeter>
 </instrumentation>
 
+<systems>
+  <pitot n="1">
+    <serviceable type="bool">true</serviceable>
+  </pitot>
+  <pitot n="2">
+    <serviceable type="bool">true</serviceable>
+  </pitot>
+  <static n="1">
+    <serviceable type="bool">true</serviceable>
+  </static>
+  <static n="2">
+    <serviceable type="bool">true</serviceable>
+  </static>
+  <static n="3">
+    <serviceable type="bool">true</serviceable>
+  </static>
+</systems>
+
 <nasal>
-	<friction>
-	  <file>Aircraft/an24b/Nasal/friction.nas</file>
-	 </friction>
+  <friction>
+    <file>Aircraft/an24b/Nasal/friction.nas</file>
+  </friction>
+  <help>
+    <file>Aircraft/an24b/Nasal/help.nas</file>
+  </help>
 </nasal>
 
 <payload>

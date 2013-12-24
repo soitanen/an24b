@@ -14,7 +14,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd", 1.0, 0.1 );
+        interpolate("an24/instrumentation/agd", 5.0, 0.1 );
       </script>
     </binding>
   </action>
