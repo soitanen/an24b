@@ -142,21 +142,15 @@
 <animation>
   <type>pick</type>
   <object-name>hs</object-name>
-  <visible>false</visible><!--
+  <visible>false</visible>
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-assign</command>
-      <property>tu154/instrumentation/uap-12/accelerate-max</property>
-      <value>-1.0</value>
+      <command>nasal</command>
+      <script>help.mass_info();</script>
     </binding>
-    <binding>
-      <command>property-assign</command>
-      <property>tu154/instrumentation/uap-12/accelerate-min</property>
-      <value>-1.0</value>
-    </binding>
-  </action>-->
+  </action>
 </animation>
 
 

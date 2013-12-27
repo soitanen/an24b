@@ -33,6 +33,16 @@ var flaps = func {
 
 setlistener( "/surface-positions/flap-pos-norm", flaps, 0, 0 );
 
+var mass_info = func {
+   var mass_lbs = getprop("/fdm/jsbsim/inertia/weight-lbs");
+   var cax = getprop("/fdm/jsbsim/aero/function/CAX");
+   var fuel_kg = getprop("/consumables/fuel/total-fuel-kg");
+
+   var mass_kg = mass_lbs * 0.45359237;
+
+   help_win.write(sprintf("Total mass: %.0f kg, CAX: %.1f%%, Total fuel: %.0f kg", mass_kg, cax, fuel_kg) );
+}
+
 var messenger = func{
 help_win.write(arg[0]);
 }

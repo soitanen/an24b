@@ -1,38 +1,61 @@
-<?xml version="1.0"?>
-<!--
-    #############################################################################
-    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,   	#
-    #	2d & 3d instruments, animations, systems and over.		   	#
-    #    	yurik@megasignal.com					   	#
-    #############################################################################	  
-    -->
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Air speed indicator
-3D instrument for Tu-154 -->
 <PropertyList>
- <path>kus730_1100.ac</path>
-<!-- Internal instruments lighting -->
-<animation>
-  <type>material</type>
-  <object-name>text</object-name>
-  <object-name>long_needle</object-name>
-  <object-name>short_needle</object-name>
+  
+  <path>kus730_1100.ac</path>
+  
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>long_needle</object-name>
+    <object-name>short_needle</object-name>
+    <object-name>cache</object-name>
+    
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>glass</object-name>
+  </effect>
+  
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>long_needle</object-name>
+    <object-name>short_needle</object-name>
+    <object-name>cache</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
      <blue>1.0</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
-</animation>
-
+  </animation>
   
-<!--Needles-->
-<animation>
+  <animation>
     <type>rotate</type>
     <object-name>short_needle</object-name>
     <property>instrumentation/airspeed-indicator/true-speed-kt</property>
     <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	180.0</dep></entry>
+      <entry><ind>	199.0</ind>	<dep>	180.0</dep></entry>
       <entry><ind>	215.98</ind>	<dep>	196.0</dep></entry>
       <entry><ind>	269.98</ind>	<dep>	244.0</dep></entry>
       <entry><ind>	323.97</ind>	<dep>	292.0</dep></entry>
@@ -40,13 +63,13 @@
       <entry><ind>	593.95</ind>	<dep>	527.0</dep></entry>
     </interpolation>
     <axis>
-      <x>-1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
-</animation>
+  </animation>
 
-<animation>
+  <animation>
   <type>rotate</type>
   <object-name>long_needle</object-name>
   <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
@@ -58,12 +81,27 @@
     <entry><ind>	323.97</ind>	<dep>	274.0</dep></entry>
     <entry><ind>	404.96</ind>	<dep>	340.0</dep></entry>
   </interpolation>
-  <axis>
-    <x>-1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
-</animation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>cache</object-name>
+    <condition>
+      <less-than>
+        <property>fdm/jsbsim/velocities/vt-fps</property>
+        <value>399.9999</value>
+      </less-than>
+    </condition>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
 
 </PropertyList>
