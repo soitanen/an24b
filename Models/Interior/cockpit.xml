@@ -528,6 +528,18 @@
 <!-- *************************************** -->
 
 <model>
+  <name>ARK</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/rk/rk.xml</path>
+  <offsets>
+    <x-m>2.088</x-m>
+    <y-m>-0.25672</y-m>
+    <z-m>0.931</z-m>
+  </offsets>
+</model>
+
+<!-- *************************************** -->
+
+<model>
   <name>UPRT-2</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/UPRT-2_mp/uprt.xml</path>
   <offsets>

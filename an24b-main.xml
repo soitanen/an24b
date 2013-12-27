@@ -263,6 +263,9 @@
 </an24>
 
 <instrumentation>
+  <adf n="1">
+    <serviceable type="bool">true</serviceable>
+  </adf>
   <heading-indicator-dg>
     <serviceable type="bool">true</serviceable>
   </heading-indicator-dg>
