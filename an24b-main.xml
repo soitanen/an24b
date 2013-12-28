@@ -17,6 +17,7 @@
   </sound>
 
   <view n="0">
+   <name>Captain View</name>
    <internal archive="y">true</internal>
    <config>
    <x-offset-m archive="y">-0.48</x-offset-m>
@@ -25,6 +26,33 @@
    <pitch-offset-deg type="double">-11.0</pitch-offset-deg>
    <default-field-of-view-deg type="double">64.0</default-field-of-view-deg>
    </config>
+  </view>
+  <view n="101">
+    <name>Copilot View</name>
+    <!--<enabled type="bool">true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >0.48</x-offset-m>
+      <y-offset-m type="double" >1.28</y-offset-m>
+      <z-offset-m type="double" >-5.7</z-offset-m>
+      <pitch-offset-deg type="double">-11.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">64.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
   </view>
 
   <help>
@@ -198,6 +226,23 @@
         </mod-up>
       </key>
 
+    <key n="49">
+      <name>1</name>
+      <desc>Captain view</desc>
+      <binding>
+        <command>nasal</command>
+        <script>view.forceView(0);</script>
+      </binding>
+    </key>
+    <key n="50">
+      <name>2</name>
+      <desc>Copilot view</desc>
+      <binding>
+        <command>nasal</command>
+        <script>view.forceView(1);</script>
+      </binding>
+    </key>
+
   </keyboard>
 </input>
 
@@ -319,6 +364,9 @@
   <instruments>
     <file>Aircraft/an24b/Nasal/instruments.nas</file>
   </instruments>
+  <view>
+    <file>Aircraft/an24b/Nasal/view.nas</file>
+  </view>
 </nasal>
 
 <payload>
