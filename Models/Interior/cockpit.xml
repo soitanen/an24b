@@ -232,7 +232,7 @@
 
 <model>
   <name>EUP-53MK-500</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/EUP-53MK-500_lp/eup-53mk.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/eup/eup-l.xml</path> <!-- <path>Aircraft/an24b/Models/Interior/Instruments/EUP-53MK-500_lp/eup-53mk.xml</path> -->
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.5977</y-m>

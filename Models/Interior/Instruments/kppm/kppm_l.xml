@@ -41,8 +41,8 @@
 	<object-name>needle</object-name>
         <expression>
           <dif>
-	    <property>instrumentation/nav/radials/selected-deg</property>
-            <property>/orientation/heading-magnetic-deg</property>
+	    <property>/orientation/heading-magnetic-deg</property>
+            <property>/instrumentation/kppm[0]/scale-offset</property>
           </dif>
         </expression>
 	<axis>
@@ -55,7 +55,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>scale</object-name>
-	<property>/orientation/heading-magnetic-deg</property>
+	<property>/instrumentation/kppm[0]/scale-offset</property>
 	<axis>
 		<x>1</x>
 		<y>0</y>
@@ -120,7 +120,7 @@
 <animation>
   <type>rotate</type>
   <object-name>knob</object-name>
-  <property>instrumentation/nav/radials/selected-deg</property>  
+  <property>/instrumentation/kppm[0]/scale-offset</property>  
   <factor>5</factor>
   <center>
     <x-m>0.0</x-m>
@@ -142,16 +142,12 @@
     <button>3</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-adjust</command>
-      <property>instrumentation/nav/radials/selected-deg</property>
-      <step>1</step>
-    </binding>
-    <binding>
       <command>nasal</command>
       <script>
-	var radial=getprop("instrumentation/nav/radials/selected-deg");
+	var radial=getprop("/instrumentation/kppm[0]/scale-offset");
+	radial = radial + 1;
         var normalised = geo.normdeg(radial);
-	setprop("instrumentation/nav/radials/selected-deg", normalised);
+	setprop("/instrumentation/kppm[0]/scale-offset", normalised);
       </script>
     </binding>
   </action>
@@ -164,16 +160,12 @@
     <button>4</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-adjust</command>
-      <property>instrumentation/nav/radials/selected-deg</property>
-      <step>-1</step>
-    </binding>
-    <binding>
       <command>nasal</command>
       <script>
-	var radial=getprop("instrumentation/nav/radials/selected-deg");
+	var radial=getprop("/instrumentation/kppm[0]/scale-offset");
+	radial = radial - 1;
         var normalised = geo.normdeg(radial);
-	setprop("instrumentation/nav/radials/selected-deg", normalised);
+	setprop("/instrumentation/kppm[0]/scale-offset", normalised);
       </script>
     </binding>
   </action>

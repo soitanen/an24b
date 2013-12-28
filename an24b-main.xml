@@ -259,6 +259,7 @@
       <prop-lock-left type="bool">false</prop-lock-left>
       <prop-lock-right type="bool">false</prop-lock-right>
     </prop-lock>
+    <eup type="double">0</eup>
   </instrumentation>
 </an24>
 
@@ -272,6 +273,9 @@
   <heading-indicator-fg>
     <serviceable type="bool">true</serviceable>
   </heading-indicator-fg>
+  <kppm n="0">
+    <scale-offset type="double">0</scale-offset>
+  </kppm>
   <marker-beacon>
     <audio-btn type="bool" >false</audio-btn>
     <volume type="double" >0.0</volume>
@@ -312,6 +316,9 @@
   <help>
     <file>Aircraft/an24b/Nasal/help.nas</file>
   </help>
+  <instruments>
+    <file>Aircraft/an24b/Nasal/instruments.nas</file>
+  </instruments>
 </nasal>
 
 <payload>
