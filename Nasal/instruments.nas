@@ -1,8 +1,12 @@
 # Before anything else change random seed.
 srand();
 
-var kppm_0_start_offset = 360*rand();
+
+# Creating random offsets on left and right KPPM
+
+var kppm_0_start_offset = int(360*rand());
 setprop("/instrumentation/kppm[0]/scale-offset", kppm_0_start_offset);
+
 
 #save sound volume and deny sound for startup
 
