@@ -5,13 +5,15 @@
 
 <animation>
   <type>material</type>
+<!--
   <condition>
-    <property>yak-40/switches/board_right</property>
+    <property>yak-40/switches/board_left</property>
     <greater-than>
       <property>yak-40/systems/electrical/buses/bus27/volts</property>
       <value>16.0</value>
     </greater-than>
   </condition>
+-->
   <object-name>back</object-name>
   <object-name>back_0</object-name>
   <object-name>back_1</object-name>
@@ -26,31 +28,25 @@
   <object-name>knob</object-name>
   <object-name>needle</object-name>
   <object-name>scale</object-name>
-  <emission>
-    <red-prop>yak-40/light/panel-r/red</red-prop>
-    <green-prop>yak-40/light/panel-r/green</green-prop>
-    <blue-prop>yak-40/light/panel-r/blue</blue-prop>
-    <factor-prop>yak-40/instrumentation/lights/board_right</factor-prop>
-  </emission>
-</animation>
-
-<animation>
-	<type>material</type>
-	<object-name>Plane.059</object-name>
-	<emission>
-		<red>0.2</red>
-		<green>0.2</green>
-		<blue>0.2</blue>
-		<factor-prop>/controls/switches/map-lights</factor-prop>
-	</emission>
+   <emission>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
 </animation>
 
 <animation>
 	<type>rotate</type>
 	<object-name>needle</object-name>
-	<property>yak-40/instrumentation/kppm[1]/needle</property>
+        <expression>
+          <dif>
+	    <property>/instrumentation/gik-1/indicated-heading</property>
+            <property>/instrumentation/kppm[1]/scale-offset</property>
+          </dif>
+        </expression>
 	<axis>
-		<x>1</x>
+		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
 	</axis>
@@ -59,7 +55,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>scale</object-name>
-	<property>/orientation/heading-magnetic-deg</property>
+	<property>/instrumentation/kppm[1]/scale-offset</property>
 	<axis>
 		<x>1</x>
 		<y>0</y>
@@ -70,7 +66,10 @@
 <animation>
 	<type>translate</type>
 	<object-name>hs_needle</object-name>
-	<property>instrumentation/nav[1]/heading-needle-deflection</property>
+	<condition>
+		<property>instrumentation/nav/nav-loc</property>
+	</condition>
+	<property>instrumentation/nav/heading-needle-deflection</property>
 	<interpolation>
 		<entry><ind>-3.5</ind><dep>-0.019</dep></entry>
 		<entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -86,7 +85,7 @@
 <animation>
 	<type>translate</type>
 	<object-name>gs_needle</object-name>
-	<property>instrumentation/nav[1]/gs-needle-deflection</property>
+	<property>instrumentation/nav/gs-needle-deflection</property>
 	<interpolation>
 		<!--<entry><ind>-9999.0</ind><dep>-0.0213</dep></entry>-->
 		<entry><ind>-3.5</ind><dep>-0.019</dep></entry>
@@ -116,7 +115,7 @@
     <object-name>hs_blenker</object-name>
     <condition>
 		<not>
-			<property>instrumentation/nav/in-range</property>
+			<property>instrumentation/nav/nav-loc</property>
 		</not>
     </condition>
 </animation>
@@ -124,7 +123,7 @@
 <animation>
   <type>rotate</type>
   <object-name>knob</object-name>
-  <property>yak-40/instrumentation/kppm[1]/kurs</property>  
+  <property>/instrumentation/kppm[1]/scale-offset</property>  
   <factor>5</factor>
   <center>
     <x-m>0.0</x-m>
@@ -146,9 +145,13 @@
     <button>3</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-adjust</command>
-      <property>yak-40/instrumentation/kppm[1]/kurs</property>
-      <step>1</step>
+      <command>nasal</command>
+      <script>
+	var radial=getprop("/instrumentation/kppm[1]/scale-offset");
+	radial = radial + 1;
+        var normalised = geo.normdeg(radial);
+	setprop("/instrumentation/kppm[1]/scale-offset", normalised);
+      </script>
     </binding>
   </action>
 </animation>
@@ -160,9 +163,13 @@
     <button>4</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-adjust</command>
-      <property>yak-40/instrumentation/kppm[1]/kurs</property>
-      <step>-1</step>
+      <command>nasal</command>
+      <script>
+	var radial=getprop("/instrumentation/kppm[1]/scale-offset");
+	radial = radial - 1;
+        var normalised = geo.normdeg(radial);
+	setprop("/instrumentation/kppm[1]/scale-offset", normalised);
+      </script>
     </binding>
   </action>
 </animation>
