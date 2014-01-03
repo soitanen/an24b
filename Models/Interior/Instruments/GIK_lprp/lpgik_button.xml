@@ -2,4 +2,26 @@
 <!-- Fast align button for GIK-1 compass -->
 <PropertyList>
  <path>gik_button.ac</path>
+
+<animation>
+	<type>pick</type>
+	<object-name>disk</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-assign</command>
+			<property>instrumentation/gik-1/correction-speed-degsec</property>
+			<value>12</value>
+		</binding>
+		<mod-up>
+		<binding>
+			<command>property-assign</command>
+			<property>instrumentation/gik-1/correction-speed-degsec</property>
+			<value>0.05</value>
+		</binding>
+		</mod-up>
+	</action>
+</animation>
 </PropertyList>
