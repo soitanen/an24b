@@ -24,7 +24,7 @@
 var help_win = screen.window.new( 0, 0, 1, 3 );
 help_win.fg = [0,1,1,1];
 
-
+# Printing flaps position when in transit
 var flaps = func {
    var flaps_pos_deg = getprop("/fdm/jsbsim/fcs/flap-pos-deg");
    if(  flaps_pos_deg == nil ) flaps_pos_deg = 0.0;
@@ -32,6 +32,19 @@ var flaps = func {
 }
 
 setlistener( "/surface-positions/flap-pos-norm", flaps, 0, 0 );
+
+# Printing idle lock position when changing
+var idle_lock = func {
+   var idle_lock_pos = getprop("/fdm/jsbsim/fcs/throttle/idle-lock-pos");
+   if(  idle_lock_pos == nil ) idle_lock_pos = 0.12;
+   if ( idle_lock_pos < 0.12) idle_lock_pos = 0.12;
+   if ( idle_lock_pos > 0.22) idle_lock_pos = 0.22;
+   setprop("/fdm/jsbsim/fcs/throttle/idle-lock-pos", idle_lock_pos); 
+   help_win.write(sprintf("Idle lock: %.0f degrees UPRT", idle_lock_pos*100) );
+}
+
+setlistener( "/fdm/jsbsim/fcs/throttle/idle-lock-pos", idle_lock, 0, 0 );
+
 
 var mass_info = func {
    var mass_lbs = getprop("/fdm/jsbsim/inertia/weight-lbs");

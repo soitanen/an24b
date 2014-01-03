@@ -9,7 +9,7 @@
 
     <channel name="Throttle">
 
-      <switch>
+      <!--<switch>
         <default value="fcs/throttle/idle-lock-pos"/>
         <test value="0.12">
           fcs/throttle/idle-lock-pos LT 0.12
@@ -18,7 +18,7 @@
           fcs/throttle/idle-lock-pos GT 0.22
         </test>
         <output>fcs/throttle/idle-lock-pos</output>
-      </switch>
+      </switch>-->
 
   <switch name="fcs/throttle/min-thr-pos[0]">
    <default value="0"/>
