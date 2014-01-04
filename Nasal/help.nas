@@ -45,15 +45,18 @@ var idle_lock = func {
 
 setlistener( "/fdm/jsbsim/fcs/throttle/idle-lock-pos", idle_lock, 0, 0 );
 
-
+# Help string with masses and speeds
 var mass_info = func {
    var mass_lbs = getprop("/fdm/jsbsim/inertia/weight-lbs");
    var cax = getprop("/fdm/jsbsim/aero/function/CAX");
    var fuel_kg = getprop("/consumables/fuel/total-fuel-kg");
+   var flaps_pos_deg = getprop("/fdm/jsbsim/fcs/flap-pos-deg");
 
    var mass_kg = mass_lbs * 0.45359237;
 
-   help_win.write(sprintf("Total mass: %.0f kg, CAX: %.1f%%, Total fuel: %.0f kg", mass_kg, cax, fuel_kg) );
+   var vrotate = 5.5 * mass_kg / 1000 - 1.5 * flaps_pos_deg + 117;
+
+   help_win.write(sprintf("Total mass: %.0f kg, CAX: %.1f%%, Total fuel: %.0f kg, Vr: %.0f km/h", mass_kg, cax, fuel_kg, vrotate) );
 }
 
 var messenger = func{
