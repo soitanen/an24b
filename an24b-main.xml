@@ -68,9 +68,22 @@
    	   <key>
 	    <name>-</name>
 	    <desc>Decrease Idle Lock value</desc>
-	   </key>   	   <key>
+	   </key>
+   	   <key>
 	    <name>=</name>
 	    <desc>Increase Idle Lock value</desc>
+	   </key>
+   	   <key>
+	    <name> </name>
+	    <desc> </desc>
+	   </key>
+   	   <key>
+	    <name>Vref for 19 t and more</name>
+	    <desc>210 km/h (flaps 38)</desc>
+	   </key>
+   	   <key>
+	    <name>Vref for less than 19 t</name>
+	    <desc>200 km/h (flaps 38)</desc>
 	   </key>
   </help>
 
