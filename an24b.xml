@@ -1477,6 +1477,28 @@ Models        </description>
                     <value>0.004</value>
                 </product>
             </function>
+            <function name="aero/moment/Yaw_roll_rate">
+                <description>Yaw moment due to roll rate</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>metrics/bw-ft</property>
+                    <property>aero/bi2vel</property>
+                    <property>velocities/p-aero-rad_sec</property>
+                    <value>-1</value> <!-- remains for possibility to sign change -->
+                    <table>
+                      <independentVar lookup="row">aero/alpha-wing-rad</independentVar>
+                      <independentVar lookup="column">fcs/flap-pos-deg</independentVar>
+                      <tableData>
+                               0       38
+                      0        0.05   -0.02
+                      0.056    0.00   -0.07
+                      0.112   -0.03   -0.10
+                      0.209   -0.07   -0.14
+                    </tableData>
+                    </table>
+                </product>
+            </function>
             <function name="aero/moment/Yaw_anti_side">
                 <description>Yaw moment to match my from book</description>
                 <product>
