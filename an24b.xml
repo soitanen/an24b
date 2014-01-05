@@ -868,22 +868,22 @@ Models        </description>
 0.03490659	0.304181	0.264104	0.264104	0.688807	1.37338
 0.05235988	0.411746	0.35231		0.35231		0.797637	1.48178
 0.06981317	0.515116	0.439643	0.439643	0.906849	1.58847
-0.08726646	0.618008	0.526976	0.526976	1.01367	1.68901
-0.10471976	0.711172	0.614309	0.614309	1.11783	1.78954
-0.12217305	0.804336	0.701642	0.701642	1.22161	1.89008
-0.13962634	0.889681	0.789492	0.789492	1.3193	1.98426
-0.15707963	0.964795	0.877895	0.877895	1.41699	2.07217
-0.17453293	1.02289	0.966116	0.966116	1.51113	2.16045
-0.19198622	1.07382	1.05146	1.05146	1.60474	2.24933
-0.20943951	1.10754	1.13607	1.13607	1.68765	2.32932
-0.2268928	1.12338	1.2123	1.2123	1.76424	2.39788
-0.2443461	1.07692	1.28478	1.28478	1.83275	2.45259
-0.26179939	1.01575	1.35417	1.35417	1.89319	2.49714
-0.27925268	0.986436	1.4207	1.4207	1.94253	2.51038
-0.29670597	0.974535	1.48364	1.48364	1.9808	2.50333
-0.31415927	0.962634	1.52374	1.52374	1.99619	2.4897
-0.33161256	0.95708	1.52946	1.52946	1.9826	2.47608
-0.34906585	0.952507	1.48065	1.48065	1.96631	2.46245           
+0.08726646	0.618008	0.526976	0.526976	1.01367		1.68901
+0.10471976	0.711172	0.614309	0.614309	1.11783		1.78954
+0.12217305	0.804336	0.701642	0.701642	1.22161		1.89008
+0.13962634	0.889681	0.789492	0.789492	1.3193		1.98426
+0.15707963	0.964795	0.877895	0.877895	1.41699		2.07217
+0.17453293	1.02289		0.966116	0.966116	1.51113		2.16045
+0.19198622	1.07382		1.05146		1.05146		1.60474		2.24933
+0.20943951	1.10754		1.13607		1.13607		1.68765		2.32932
+0.2268928	1.12338		1.2123		1.2123		1.76424		2.39788
+0.2443461	1.07692		1.28478		1.28478		1.83275		2.45259
+0.26179939	1.01575		1.35417		1.35417		1.89319		2.49714
+0.27925268	0.986436	1.4207		1.4207		1.94253		2.51038
+0.29670597	0.974535	1.48364		1.48364		1.9808		2.50333
+0.31415927	0.962634	1.52374		1.52374		1.99619		2.4897
+0.33161256	0.95708		1.52946		1.52946		1.9826		2.47608
+0.34906585	0.952507	1.48065		1.48065		1.96631		2.46245           
                 </tableData>
             </table>
         </function>
@@ -1261,6 +1261,16 @@ Models        </description>
                     <property>metrics/bw-ft</property>
                     <property>aero/beta-rad</property>
                     <value>-0.0722</value>
+                    <!-- stall and spin (1), not implemented yet -->
+                    <!--
+                    <table> 
+                      <independentVar lookup="row">aero/alpha-wing-rad</independentVar>
+                      <tableData>
+                        0.31     1
+                        0.34    50
+                      </tableData>
+                  </table>
+                  -->
                 </product>
             </function>
             <function name="aero/moment/Roll_damp">
@@ -1271,7 +1281,7 @@ Models        </description>
                     <property>metrics/bw-ft</property>
                     <property>aero/bi2vel</property>
                     <property>velocities/p-aero-rad_sec</property>
-                    <value>-0.4</value>
+                    <value>-0.5</value>
                 </product>
             </function>
             <function name="aero/moment/Roll_yaw">
@@ -1282,7 +1292,30 @@ Models        </description>
                     <property>metrics/bw-ft</property>
                     <property>aero/bi2vel</property>
                     <property>velocities/r-aero-rad_sec</property>
-                    <value>0.15</value>
+                    <value>1</value> <!-- remains for possibility to sign change -->
+                    <table>
+                      <independentVar lookup="row">aero/alpha-wing-rad</independentVar>
+                      <independentVar lookup="column">fcs/flap-pos-deg</independentVar>
+                      <tableData>
+                               0      38
+                      0        0.07   0.33
+                      0.087    0.15   0.47
+                      0.175    0.21   0.52
+                      0.227    0.23   0.51
+                    </tableData>
+                    </table>
+                    <!-- stall and spin (2), not implemented yet -->
+                    <!--
+                    <table>
+                      <independentVar lookup="row">aero/alpha-wing-rad</independentVar>
+                      <independentVar lookup="column">velocities/r-aero-rad_sec</independentVar>
+                      <tableData>
+                               -0.15  -0.1   0    0.1   0.15
+                      0.31     1      1     1    1     1
+                      0.32     50     20    1    20    50
+                    </tableData>
+                  </table>
+                  -->
                 </product>
             </function>
             <function name="aero/moment/Roll_aileron_left">
@@ -1319,7 +1352,7 @@ Models        </description>
                 <description>Reduce roll moment due to engines</description>
                 <product>
                     <property>moments/l-prop-lbsft</property>
-                    <value>-0.75</value> <!-- Idea - reduce moment according to gear ratio (-0.9175) -->
+                    <value>-0.85</value> <!-- Idea - reduce moment according to gear ratio (-0.9175), but it seems to small -->
                 </product>
             </function>
         </axis>
