@@ -835,49 +835,7 @@ Models        </description>
                     </table>
                 </function>
         </aero_ref_pt_shift_x>
-        <function name="aero/function/yt0">
-            <difference>
-                <value>1.467</value>
-                <product>
-                    <property>inertia/cg-z-in</property>
-                    <value>0.0254</value>
-                </product>
-                <product>
-                    <value>0.0524</value>
-                    <difference>
-                        <product>
-                            <property>inertia/cg-x-in</property>
-                            <value>0.0254</value>
-                        </product>
-                        <value>8.866</value>
-                    </difference>
-                </product>
-            </difference>
-        </function>
-        <function name="aero/function/xt0">
-            <sum>
-                <difference>
-                    <product>
-                        <property>inertia/cg-x-in</property>
-                        <value>0.0254</value>
-                    </product>
-                    <value>8.866</value>
-                </difference>
-                <product>
-                    <value>0.0524</value>
-                    <property>aero/function/yt0</property>
-                </product>
-            </sum>
-        </function>
-        <function name="aero/function/CAX">
-            <product>
-                <quotient>
-                    <property>aero/function/xt0</property>
-                    <value>2.813</value>
-                </quotient>
-                <value>100</value>
-            </product>
-        </function>
+
         <function name="aero/function/cmf">
             <description>Mach and flaps parameter</description>
             <sum>

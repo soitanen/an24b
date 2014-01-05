@@ -48,9 +48,14 @@ setlistener( "/fdm/jsbsim/fcs/throttle/idle-lock-pos", idle_lock, 0, 0 );
 # Help string with masses and speeds
 var mass_info = func {
    var mass_lbs = getprop("/fdm/jsbsim/inertia/weight-lbs");
-   var cax = getprop("/fdm/jsbsim/aero/function/CAX");
    var fuel_kg = getprop("/consumables/fuel/total-fuel-kg");
    var flaps_pos_deg = getprop("/fdm/jsbsim/fcs/flap-pos-deg");
+   var cg_z_m = getprop("/fdm/jsbsim/inertia/cg-z-in") * 0.0254;
+   var cg_x_m = getprop("/fdm/jsbsim/inertia/cg-x-in") * 0.0254;
+
+   var yt0 = 1.467 - cg_z_m - 0.0524 * (cg_x_m - 8.866);
+   var xt0 = cg_x_m - 8.866 + 0.0524 * yt0;
+   var cax = xt0 * 100 / 2.813;
 
    var mass_kg = mass_lbs * 0.45359237;
 
