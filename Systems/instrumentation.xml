@@ -105,6 +105,7 @@ file, these values will be used (they are hardcoded).
   <radar-altimeter>
     <name>radar-altimeter</name>
     <number>0</number>
+    <update-interval-sec>0.1</update-interval-sec>
   </radar-altimeter>
 
   <slip-skid-ball>

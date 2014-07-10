@@ -339,7 +339,6 @@
     <volume type="double" >0.0</volume>
   </marker-beacon>
   <radar-altimeter>
-    <update-interval-sec type="double">0.1</update-interval-sec>
     <serviceable type="bool">true</serviceable>
     <antenna>
       <x-offset-m type="double">0</x-offset-m>

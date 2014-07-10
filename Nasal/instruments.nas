@@ -1,4 +1,4 @@
-# Before anything else change random seed.
+## Before anything else change random seed.
 srand();
 
 
