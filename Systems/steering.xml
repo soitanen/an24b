@@ -5,8 +5,6 @@
 -->
 <system name="NoseWheelSteering">
 
-  <property>gear/steering</property>
-  <property>gear/nose-wheel-steering</property>
   <property>fcs/tiller-cmd-norm</property>
   <property value="1">fcs/realism/tiller-enabled</property>
   <property value="0.0083333333333333">fcs/steering/sim-time-deltat</property>

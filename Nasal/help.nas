@@ -53,6 +53,7 @@ var mass_info = func {
    var flaps_pos_deg = getprop("/fdm/jsbsim/fcs/flap-pos-deg");
    var cg_z_m = getprop("/fdm/jsbsim/inertia/cg-z-in") * 0.0254;
    var cg_x_m = getprop("/fdm/jsbsim/inertia/cg-x-in") * 0.0254;
+   var nose_gear_pos = getprop("/gear/gear[0]/wow");
 
    var yt0 = 1.467 - cg_z_m - 0.0524 * (cg_x_m - 8.866);
    var xt0 = cg_x_m - 8.866 + 0.0524 * yt0;
@@ -61,8 +62,17 @@ var mass_info = func {
    var mass_kg = mass_lbs * 0.45359237;
 
    var vrotate = 5.5 * mass_kg / 1000 - 1.5 * flaps_pos_deg + 117;
+   if (mass_kg > 19000) {
+      vref = 210;
+   } else {
+      vref = 200;
+   }
 
-   help_win.write(sprintf("Total mass: %.0f kg, CAX: %.1f%%, Total fuel: %.0f kg, Vr: %.0f km/h", mass_kg, cax, fuel_kg, vrotate) );
+   if (nose_gear_pos) {
+      help_win.write(sprintf("Total mass: %.0f kg, CAX: %.1f%%, Total fuel: %.0f kg, Vr: %.0f km/h", mass_kg, cax, fuel_kg, vrotate) );
+   } else {
+      help_win.write(sprintf("Total mass: %.0f kg, CAX: %.1f%%, Total fuel: %.0f kg, Vref: %.0f km/h", mass_kg, cax, fuel_kg, vref) );
+   }
 }
 
 var messenger = func{
