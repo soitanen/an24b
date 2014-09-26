@@ -143,6 +143,10 @@
     <path>Aircraft/an24b/Systems/systems.xml</path>
   </systems>
 
+   <startup>
+     <splash-texture>Aircraft/an24b/an-24b.png</splash-texture>
+   </startup>
+
 </sim>
 
 
