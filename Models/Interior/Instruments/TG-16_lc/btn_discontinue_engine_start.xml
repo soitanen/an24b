@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<!-- template for "discontinue start" btn -->
+
+<PropertyList>
+ <path>../../shared/switches/spring_load_btn01.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>press_me</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/autobrake/engaged</property>
+      <value type="int">1</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+      <property>autopilot/autobrake/engaged</property>
+        <value type="int">0</value>
+      </binding>
+    </mod-up>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>autopilot/autobrake/engaged</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation>
+
+</PropertyList>
+

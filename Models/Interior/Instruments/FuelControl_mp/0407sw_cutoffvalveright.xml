@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<!-- Cutoff valve right open(0)/off(1)/closed(2) -->
+
+<PropertyList>
+ <path>../../shared/switches/switch03.ac</path>
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/FuelControl/cutoffeng1", 0.0, 0.1 );
+        setprop("controls/engines/engine[1]/cutoff", 0.0 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_middle</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/FuelControl/cutoffeng1", 1.0, 0.1 );
+        setprop("controls/engines/engine[1]/cutoff", 0.0 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/FuelControl/cutoffeng1", 2.0, 0.1 );
+        setprop("controls/engines/engine[1]/cutoff", 1.0 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/FuelControl/cutoffeng1</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>35.0</dep></entry>
+    <entry><ind>2.0</ind>	<dep>-35.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+ 
+
+</PropertyList>

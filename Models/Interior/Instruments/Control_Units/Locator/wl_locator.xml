@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!-- Locator -->
+
+<PropertyList>
+ <path>../../../shared/lamps/warninglamp02.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../../shared/lamps/warninglamp02orangeplain.png</texture>
+</animation>
+
+<!--
+<animation>
+ <type>select</type>
+ <condition>
+   <equals>
+    <property>instrumentation/marker-beacon/inner</property>
+    <value>true</value>
+   </equals>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+-->
+
+</PropertyList>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!-- Fuel flow to right engine -->
+
+<PropertyList>
+ <path>../../shared/lamps/warninglamp03.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../shared/lamps/warninglamp03green.png</texture>
+</animation>
+
+<animation>
+ <type>select</type>
+ <condition>
+   <greater-than>
+    <property>fdm/jsbsim/propulsion/engine[1]/fuel-flow-rate-pps</property>
+    <!-- reasonable value needed -->
+    <value>0.1</value>
+   </greater-than>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

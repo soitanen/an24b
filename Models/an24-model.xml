@@ -25,6 +25,7 @@
 
 <model>
     <name>cockpit</name>
+    <usage>interior</usage>
     <path>Aircraft/an24b/Models/Interior/cockpit.xml</path>
     <offsets>
       <x-m>0.0</x-m>
@@ -228,7 +229,7 @@
   <object-name>propL</object-name>
   <type>spin</type>
   <property>fdm/jsbsim/propulsion/engine/propeller-rpm</property>
-  <factor>1</factor>
+  <factor>0.1</factor>
   <center>
    <x-m>0.0</x-m>
    <y-m>-3.9090</y-m>
@@ -245,7 +246,7 @@
   <object-name>propR</object-name>
   <type>spin</type>
   <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
-  <factor>1</factor>
+  <factor>0.1</factor>
   <center>
    <x-m>0.0</x-m>
    <y-m>3.9090</y-m>
@@ -310,7 +311,105 @@
   </axis>
 </animation>
 
-<!-- Nosewheel spin animation -->
+<!-- GEAR -->
+
+<!-- Front Gear -->
+
+<!-- lower/retract -->
+<animation>
+  <type>rotate</type>
+  <object-name>frontwheels</object-name>
+  <object-name>damper_strut_front</object-name>
+  <object-name>damper_strut2_front</object-name>
+  <object-name>connect_rod</object-name>
+  <object-name>lever_centering</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>112</factor>
+  <offset-deg>248.0</offset-deg>
+  <center>
+    <x-m>2.27</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.6</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- damping -->
+<animation>
+  <type>rotate</type>
+  <object-name>frontwheels</object-name>
+  <object-name>damper_strut_front</object-name>
+  <object-name>connect_rod</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+  <factor>30</factor>
+  <offset-deg>0.0</offset-deg>
+  <center>
+    <x-m>2.0337</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-1.0681</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- steering -->
+<animation>
+  <type>rotate</type>
+  <object-name>frontwheels</object-name>
+  <object-name>damper_strut_front</object-name>
+  <object-name>damper_strut2_front</object-name>
+  <object-name>connect_rod</object-name>
+  <object-name>lever_centering</object-name>
+  <property>gear/gear[0]/steering-norm</property>
+  <factor>45</factor>
+  <axis>   
+   <x1-m>2.241</x1-m>
+   <y1-m>0.0</y1-m>
+   <z1-m>-0.8251</z1-m>
+   <x2-m>2.2259</x2-m>
+   <y2-m>0.0</y2-m>
+   <z2-m>-0.9995</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>geardoorL1</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>-90</factor>
+  <axis>   
+   <x1-m>1.1472</x1-m>
+   <y1-m>-0.4504</y1-m>
+   <z1-m>-0.5207</z1-m>
+   <x2-m>1.842</x2-m>
+   <y2-m>-0.4504</y2-m>
+   <z2-m>-0.6338</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>geardoorR1</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>90</factor>
+  <axis>   
+   <x1-m>1.1472</x1-m>
+   <y1-m>0.4504</y1-m>
+   <z1-m>-0.5207</z1-m>
+   <x2-m>1.842</x2-m>
+   <y2-m>0.4504</y2-m>
+   <z2-m>-0.6338</z2-m>
+  </axis>
+</animation>
+
+<!-- Frontwheels spin animation -->
 <animation>
   <type>spin</type>
   <object-name>frontwheels</object-name>
@@ -333,5 +432,113 @@
     <z>0.0</z>
   </axis>
 </animation>
+
+<!-- Main Gear -->
+
+<!-- lower/retract -->
+<animation>
+  <type>rotate</type>
+  <object-name>mainwheels_left</object-name>
+  <object-name>mainwheels_right</object-name>
+  <object-name>damper_strut_main</object-name>
+  <object-name>folding_strut_30deg</object-name>
+  <object-name>top_link</object-name>
+  <object-name>bottom_link</object-name>
+  <object-name>cardan_joint</object-name>
+  <object-name>hose</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>110</factor>
+  <offset-deg>250.0</offset-deg>
+  <center>
+    <x-m>10.3</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.42</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- damping -->
+
+<animation>
+  <type>translate</type>
+  <object-name>mainwheels_left</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <factor>-0.3048</factor>
+  <axis>   
+   <x1-m>10.2373</x1-m>
+   <y1-m>0</y1-m>
+   <z1-m>1.0602</z1-m>
+   <x2-m>10.2587</x2-m>
+   <y2-m>0</y2-m>
+   <z2-m>-0.6931</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>mainwheels_right</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>-0.3048</factor>
+  <axis>   
+   <x1-m>10.2373</x1-m>
+   <y1-m>0</y1-m>
+   <z1-m>1.0602</z1-m>
+   <x2-m>10.2587</x2-m>
+   <y2-m>0</y2-m>
+   <z2-m>-0.6931</z2-m>
+  </axis>
+</animation>
+
+<!-- Mainwheels spin animation -->
+<animation>
+  <type>spin</type>
+  <object-name>mainwheels_left</object-name>
+  <condition>
+    <greater-than>
+      <property>gear/gear[1]/position-norm</property>
+      <value>0.8</value>
+    </greater-than>
+  </condition>
+  <property>gear/gear[1]/rollspeed-ms</property>
+  <factor>25.4</factor>
+  <center>
+    <x-m>10.1301</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-1.5431</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>mainwheels_right</object-name>
+  <condition>
+    <greater-than>
+      <property>gear/gear[2]/position-norm</property>
+      <value>0.8</value>
+    </greater-than>
+  </condition>
+  <property>gear/gear[2]/rollspeed-ms</property>
+  <factor>25.4</factor>
+  <center>
+    <x-m>10.1301</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-1.5431</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
 
 </PropertyList>

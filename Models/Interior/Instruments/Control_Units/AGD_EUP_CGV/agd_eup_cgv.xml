@@ -34,4 +34,9 @@
   </offsets>
 </model>
 
+<model>
+ <path>placard.xml</path>
+</model>
+
+
 </PropertyList>

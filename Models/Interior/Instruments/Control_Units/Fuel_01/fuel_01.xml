@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!-- 3 lamps at top right of middle panel:
+     - low on fuel
+     - failure of L/R fuel filter-->
+
+<PropertyList>
+
+<model>
+ <path>wl_01_low_fuel.xml</path>
+  <offsets>
+    <x-m>2.09232</x-m>
+    <y-m>0.1985</y-m>
+    <z-m>1.0739</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_02_fuel_filter_failure_left.xml</path>
+  <offsets>
+    <x-m>2.09232</x-m>
+    <y-m>0.1869</y-m>
+    <z-m>1.0493</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_03_fuel_filter_failure_right.xml</path>
+  <offsets>
+    <x-m>2.09232</x-m>
+    <y-m>0.2111</y-m>
+    <z-m>1.0493</z-m>
+  </offsets>
+</model>
+
+</PropertyList>

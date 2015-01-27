@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+
+<!-- TG-16 -->
+
+<PropertyList>
+ <path>tg-16.ac</path>
+
+<model>
+ <path>wl.xml</path>
+  <offsets>
+    <x-m>0.065</x-m>
+    <y-m>-0.05</y-m>
+    <z-m>0.0</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+
+<model>
+ <path>sw_contr240_360_left.xml</path>
+  <offsets>
+    <x-m>0.0921</x-m>
+    <y-m>-0.0165</y-m>
+    <z-m>0.0</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_contr240_360_right.xml</path>
+  <offsets>
+    <x-m>-0.0805</x-m>
+    <y-m>-0.0165</y-m>
+    <z-m>0.0</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_prt-24_left.xml</path>
+  <offsets>
+    <x-m>0.0557</x-m>
+    <y-m>-0.0165</y-m>
+    <z-m>0.0</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_prt-24_right.xml</path>
+  <offsets>
+    <x-m>-0.0425</x-m>
+    <y-m>-0.0165</y-m>
+    <z-m>0.0</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_ground_inair_.xml</path>
+  <offsets>
+    <x-m>0.038</x-m>
+    <y-m>-0.0637</y-m>
+    <z-m>0.02</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_covered_01.xml</path>
+  <offsets>
+    <x-m>0.02</x-m>
+    <y-m>0.031</y-m>
+    <z-m>0.0158</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_covered_02.xml</path>
+  <offsets>
+    <x-m>-0.02</x-m>
+    <y-m>0.031</y-m>
+    <z-m>0.0158</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_discontinue_APU_start.xml</path>
+  <offsets>
+    <x-m>-0.0774</x-m>
+    <y-m>0.0646</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_discontinue_engine_start.xml</path>
+  <offsets>
+    <x-m>-0.0774</x-m>
+    <y-m>-0.071</y-m>
+    <z-m>-0.015</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_start.xml</path>
+  <offsets>
+    <x-m>0.089</x-m>
+    <y-m>-0.069</y-m>
+    <z-m>0</z-m>
+  </offsets>
+</model>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">TG-16</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.044</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>xy-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.18</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.010 </z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </text>
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+
+</PropertyList>

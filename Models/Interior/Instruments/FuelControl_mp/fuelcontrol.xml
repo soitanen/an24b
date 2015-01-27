@@ -1,6 +1,7 @@
 <PropertyList>
 
-<!-- Fuel control panel -->
+<!-- Fuel control panel, from top to bottom rows (01xx-05xx) and left to right (xx01-xx07);
+functionality not to be taken too seriously atm! -->
 
   <path>fuelcontrol.ac</path>
 
@@ -24,7 +25,7 @@
 <!-- ************ Top row *********** -->
 
 <model>
- <path>wl_leftenginefeed.xml</path>
+ <path>0101wl_fuelflowleft.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>-0.06</y-m>
@@ -33,7 +34,7 @@
 </model>
 
 <model>
- <path>wl_crossfeed.xml</path>
+ <path>0102wl_annularvalve.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>0.0</y-m>
@@ -42,7 +43,7 @@
 </model>
 
 <model>
- <path>wl_rightenginefeed.xml</path>
+ <path>0103wl_fuelflowright.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>0.06</y-m>
@@ -53,7 +54,7 @@
 <!-- ************* 2nd row ************ -->
 
 <model>
- <path>wl_pumpleft.xml</path>
+ <path>0201wl_pump_group1left.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>-0.0393</y-m>
@@ -62,7 +63,7 @@
 </model>
 
 <model>
- <path>wl_groupleft.xml</path>
+ <path>0202wl_pump_group2frontleft.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>-0.018</y-m>
@@ -71,7 +72,7 @@
 </model>
 
 <model>
- <path>wl_groupright.xml</path>
+ <path>0203wl_pump_group2frontright.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>0.018</y-m>
@@ -80,7 +81,7 @@
 </model>
 
 <model>
- <path>wl_pumpright.xml</path>
+ <path>0204wl_pump_group1right.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>0.0393</y-m>
@@ -91,7 +92,7 @@
 <!-- ************* 3rd row ************ -->
 
 <model>
- <path>wl_pumpfireleft.xml</path>
+ <path>0301wl_cutoffvalveleft.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>-0.06095</y-m>
@@ -100,25 +101,25 @@
 </model>
 
 <model>
- <path>wl_pumpbackleft.xml</path>
+ <path>0302wl_pump_group2rearleft.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
-    <y-m>-0.0214</y-m>
+    <y-m>-0.01855</y-m>
     <z-m>0.038</z-m>
   </offsets>
 </model>
 
 <model>
- <path>wl_pumpbackright.xml</path>
+ <path>0303wl_pump_group2rearright.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
-    <y-m>0.0214</y-m>
+    <y-m>0.01855</y-m>
     <z-m>0.038</z-m>
   </offsets>
 </model>
 
 <model>
- <path>wl_pumpfireright.xml</path>
+ <path>0304wl_cutoffvalveright.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>0.06095</y-m>
@@ -126,10 +127,10 @@
   </offsets>
 </model>
 
-<!-- ************* 4th row ************ -->
+<!-- ************* 4th row Switches l to r ************ -->
 
 <model>
- <path>sw_leftvalve.xml</path>
+ <path>0401sw_cutoffvalveleft.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.05876</y-m>
@@ -138,7 +139,7 @@
 </model>
 
 <model>
- <path>sw_leftvalveauto.xml</path>
+ <path>0402sw_pump_group1left.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.03866</y-m>
@@ -147,7 +148,7 @@
 </model>
 
 <model>
- <path>sw_leftrearvalve.xml</path>
+ <path>0403sw_pumps_group2left.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.01855</y-m>
@@ -156,7 +157,7 @@
 </model>
 
 <model>
- <path>sw_annularvalve.xml</path>
+ <path>0404sw_annularvalve.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>0.0</y-m>
@@ -165,7 +166,7 @@
 </model>
 
 <model>
- <path>sw_rightrearvalve.xml</path>
+ <path>0405sw_pumps_group2right.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>0.01855</y-m>
@@ -174,7 +175,7 @@
 </model>
 
 <model>
- <path>sw_rightvalveauto.xml</path>
+ <path>0406sw_pump_group1right.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>0.0386</y-m>
@@ -183,7 +184,7 @@
 </model>
 
 <model>
- <path>sw_rightvalve.xml</path>
+ <path>0407sw_cutoffvalveright.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>0.05876</y-m>
@@ -194,7 +195,7 @@
 <!-- ************* 5th row ************ -->
 
 <model>
- <path>wl_flakesinengineleft.xml</path>
+ <path>0501wl_fireinengineleft.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>-0.06095</y-m>
@@ -203,7 +204,7 @@
 </model>
 
 <model>
- <path>wl_flakesinengineright.xml</path>
+ <path>0502wl_fireinengineright.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>0.06095</y-m>

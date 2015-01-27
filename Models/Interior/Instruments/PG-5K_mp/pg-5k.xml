@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- PG-5k fuel indicator selector -->
+
+<PropertyList>
+
+ <path>pg-5k.ac</path>
+
+<!--Needles
+
+  <animation>
+     <type>knob</type>
+     <object-name>selector</object-name>
+      <value>0.0</value>
+      <center>
+       <x-m>0.0</x-m>
+       <y-m>0.0</y-m>
+       <z-m>0.0</z-m>
+      </center>
+      <axis>
+       <x>-1.0</x>
+       <y>0.0</y>
+       <z>0.0</z>
+      </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/standby-frequency-mhz</property>
+                <factor>1</factor>
+                <min>0</min>
+                <max>3</max>                
+                <wrap>true</wrap>
+            </binding>
+        </action>
+</animation>
+-->
+</PropertyList>

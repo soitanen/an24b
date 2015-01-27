@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<!-- Pilots' control for AP -->
+
+<PropertyList>
+ <path>ap-28.ac</path>
+
+<model>
+  <path>wl01.xml</path>
+  <offsets>
+    <x-m>-0.0391</x-m>
+    <y-m>-0.0277</y-m>
+    <z-m>-0.025</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>wl02.xml</path>
+  <offsets>
+    <x-m>-0.0391</x-m>
+    <y-m>0.0277</y-m>
+    <z-m>-0.025</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>wl03.xml</path>
+  <offsets>
+    <x-m>0.155</x-m>
+    <y-m>-0.0904</y-m>
+    <z-m>-0.09</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>wl04.xml</path>
+  <offsets>
+    <x-m>0.155</x-m>
+    <y-m>-0.0492</y-m>
+    <z-m>-0.09</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>wl05.xml</path>
+  <offsets>
+    <x-m>0.155</x-m>
+    <y-m>0.0492</y-m>
+    <z-m>-0.09</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+</PropertyList>

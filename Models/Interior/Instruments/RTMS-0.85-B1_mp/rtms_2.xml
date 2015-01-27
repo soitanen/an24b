@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- RTMS-0.85-B1, engine 2 fuel flow-->
+<!-- RTMS-0.85-B1, right engine fuel flow-->
 
 <PropertyList>
  <path>rtms.ac</path>
@@ -36,5 +36,154 @@
     <z>0.0</z>
   </axis>
 </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig1</object-name>
+  <property>fdm/jsbsim/propulsion/engine[1]/fuel-used-lbs</property>
+  <!-- 360deg/22.05lbs(10kg) -->
+  <factor>16.329325</factor>
+  <center>
+    <x-m>-0.0173</x-m>
+    <y-m>0</y-m>
+    <z-m>-0.0161</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig10</object-name>
+  <expression>
+    <table>
+      <mod>
+        <property>fdm/jsbsim/propulsion/engine[1]/fuel-used-lbs</property>
+        <value>220.46226</value>
+      </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	20</ind>	<dep>	0</dep></entry>
+      <entry><ind>	22.04</ind>	<dep>	36</dep></entry>
+      <entry><ind>	42</ind>	<dep>	36</dep></entry>
+      <entry><ind>	44.09</ind>	<dep>	72</dep></entry>
+      <entry><ind>	64</ind>	<dep>	72</dep></entry>
+      <entry><ind>	66.13</ind>	<dep>	108</dep></entry>
+      <entry><ind>	86</ind>	<dep>	108</dep></entry>
+      <entry><ind>	88.19</ind>	<dep>	144</dep></entry>
+      <entry><ind>	108</ind>	<dep>	144</dep></entry>
+      <entry><ind>	110.23</ind>	<dep>	180</dep></entry>
+      <entry><ind>	130</ind>	<dep>	180</dep></entry>
+      <entry><ind>	132.28</ind>	<dep>	216</dep></entry>
+      <entry><ind>	152</ind>	<dep>	216</dep></entry>
+      <entry><ind>	154.33</ind>	<dep>	252</dep></entry>
+      <entry><ind>	174</ind>	<dep>	252</dep></entry>
+      <entry><ind>	176.37</ind>	<dep>	288</dep></entry>
+      <entry><ind>	196</ind>	<dep>	288</dep></entry>
+      <entry><ind>	198.41</ind>	<dep>	324</dep></entry>
+      <entry><ind>	218</ind>	<dep>	324</dep></entry>
+      <entry><ind>	220.4</ind>	<dep>	359.9</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0173</x-m>
+    <y-m>0</y-m>
+    <z-m>-0.0161</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig100</object-name>
+  <expression>
+    <table>
+      <mod>
+        <property>fdm/jsbsim/propulsion/engine[1]/fuel-used-lbs</property>
+        <value>2204.6226</value>
+      </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	218</ind>	<dep>	0</dep></entry>
+      <entry><ind>	220.46</ind>	<dep>	36</dep></entry>
+      <entry><ind>	438</ind>	<dep>	36</dep></entry>
+      <entry><ind>	440.9</ind>	<dep>	72</dep></entry>
+      <entry><ind>	660</ind>	<dep>	72</dep></entry>
+      <entry><ind>	661.3</ind>	<dep>	108</dep></entry>
+      <entry><ind>	880</ind>	<dep>	108</dep></entry>
+      <entry><ind>	881.9</ind>	<dep>	144</dep></entry>
+      <entry><ind>	1100</ind>	<dep>	144</dep></entry>
+      <entry><ind>	1102.3</ind>	<dep>	180</dep></entry>
+      <entry><ind>	1321</ind>	<dep>	180</dep></entry>
+      <entry><ind>	1322.8</ind>	<dep>	216</dep></entry>
+      <entry><ind>	1541</ind>	<dep>	216</dep></entry>
+      <entry><ind>	1543.3</ind>	<dep>	252</dep></entry>
+      <entry><ind>	1762</ind>	<dep>	252</dep></entry>
+      <entry><ind>	1763.7</ind>	<dep>	288</dep></entry>
+      <entry><ind>	1982</ind>	<dep>	288</dep></entry>
+      <entry><ind>	1984.1</ind>	<dep>	324</dep></entry>
+      <entry><ind>	2202</ind>	<dep>	324</dep></entry>
+      <entry><ind>	2204</ind>	<dep>	359.9</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0173</x-m>
+    <y-m>0</y-m>
+    <z-m>-0.0161</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">RTMS fuelflow</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
 
 </PropertyList>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!-- Tank group 1 pump ECN-14 (main) left set to auto or manual -->
+
+<PropertyList>
+ <path>../../shared/lamps/warninglamp02.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../shared/lamps/warninglamp02green.png</texture>
+</animation>
+
+<animation>
+ <type>select</type>
+ <condition>
+   <not>
+   <equals>
+    <property>an24/FuelControl/group1leftpump</property>
+    <value>0.0</value>
+   </equals>
+   </not>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

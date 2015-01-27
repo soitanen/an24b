@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<!-- Pilot's radio altimeter -->
+
+<PropertyList>
+ <path>uv-5m.ac</path>
+
+<!-- Radio altimeter (RV-UM) -->
+
+ <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <object-name>needle</object-name>
+   <object-name>cover</object-name>
+  <object-name>pointer</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>flag</object-name>
+   <emission>
+     <red>0.5</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>/instrumentation/radar-altimeter/radar-altitude-ft</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>    1.4</dep></entry>
+    <entry><ind>      328.0</ind>	<dep>  152.0</dep></entry>
+    <entry><ind>      656.2</ind>	<dep>  181.5</dep></entry>
+    <entry><ind>     2460.6</ind>	<dep>  311.5</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+</PropertyList>

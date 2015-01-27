@@ -30,7 +30,7 @@
    <x-offset-m archive="y">-0.48</x-offset-m>
    <y-offset-m archive="y">1.28</y-offset-m>
    <z-offset-m archive="y">-5.7</z-offset-m>
-   <pitch-offset-deg type="double">-11.0</pitch-offset-deg>
+   <pitch-offset-deg type="double">-14.0</pitch-offset-deg>
    <default-field-of-view-deg type="double">64.0</default-field-of-view-deg>
    </config>
   </view>
@@ -277,6 +277,35 @@
     </gear>
 </controls>
 
+<consumables>
+    <fuel>
+      <tank n="0">
+        <name>AUX2 LH</name>
+        <unusable-gal_us>5.0</unusable-gal_us>
+      </tank>
+      <tank n="1">
+      <name>AUX1 LH</name>
+        <unusable-gal_us>5.0</unusable-gal_us>
+      </tank>
+      <tank n="2">
+      <name>MAIN LH</name>
+        <unusable-gal_us>5.0</unusable-gal_us>
+      </tank>
+      <tank n="3">
+      <name>Main RH</name>
+        <unusable-gal_us>5.0</unusable-gal_us>
+      </tank>
+      <tank n="4">
+        <name>AUX1 RH</name>
+        <unusable-gal_us>5.0</unusable-gal_us>
+      </tank>
+      <tank n="5">
+        <name>AUX2 RH</name>
+        <unusable-gal_us>5.0</unusable-gal_us>
+      </tank>
+    </fuel>
+</consumables>
+
 <fdm>
   <jsbsim>  
     <gear>
@@ -509,4 +538,7 @@
    <max-lb type="double">1255.0</max-lb>
   </weight>
  </payload>
+
+
+
 </PropertyList>

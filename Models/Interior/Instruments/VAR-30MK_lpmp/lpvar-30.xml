@@ -8,6 +8,7 @@
  <animation>
    <type>material</type>
    <object-name>housing</object-name>
+   <object-name>needle</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
@@ -18,8 +19,31 @@
 
 <!--Needles-->
 <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <interpolation>
+  	<entry><ind>	5708.66</ind>	<dep>	177.0</dep></entry>
+	<entry><ind>	3937.0</ind>	<dep>	142.0</dep></entry>
+	<entry><ind>	1968.5</ind>	<dep>	83.0</dep></entry>
+	<entry><ind>	984.25</ind>	<dep>	44.0</dep></entry>
+	<entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+        <entry><ind>	-984.25</ind>	<dep>	-44.0</dep></entry>
+        <entry><ind>	-1968.5</ind>	<dep>	-83.0</dep></entry>
+        <entry><ind>	-3937.0</ind>	<dep>	-142.0</dep></entry>
+        <entry><ind>	-5708.66</ind>	<dep>	-177.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+<!--
+<animation>
   <type>rotate</type>
-  <object-name>long_needle</object-name>
+  <object-name>needle</object-name>
   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
   <factor>-0.093</factor>
   <min>-180</min>
@@ -30,4 +54,6 @@
     <z>0.0</z>
   </axis>
 </animation>
+-->
+
 </PropertyList>

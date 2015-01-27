@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff			 	  	#
+    #    	yurik@megasignal.com					   	#
+    #    	Jul 2007						   	#
+    #############################################################################	  
+    -->
+
+<!-- UAP-12 from AUASP (AOA & n & stall warning gauge)
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>uap-12.ac</path>
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>a_txt</object-name>
+  <object-name>n_txt</object-name>
+  <object-name>a_needle</object-name>
+  <object-name>n_needle</object-name>
+  <object-name>n_max</object-name>
+  <object-name>n_min</object-name>
+  <object-name>sector</object-name>
+  <object-name>n_blank</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+</animation>
+
+<!-- External instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>center</object-name>
+  <object-name>corner</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+</animation>
+
+
+<!--Warning lamp-->
+<animation>
+  <type>material</type>
+  <object-name>lamp</object-name>
+  <emission>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>tu154/systems/electrical/checking-lamps/lamps-power</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>lamp</object-name>
+  <condition>
+    <or>
+  	<property>tu154/instrumentation/uap-12/warn</property>
+        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+    </or>
+  </condition>
+</animation>
+
+
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>a_needle</object-name>
+    <property>fdm/jsbsim/aero/alpha-wing-rad</property>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	0.0524</ind>	<dep>	37.0</dep></entry>
+      <entry><ind>	0.1047</ind>	<dep>	72.0</dep></entry>
+      <entry><ind>	0.157</ind>	<dep>	107.0</dep></entry>
+      <entry><ind>	0.209</ind>	<dep>	142.0</dep></entry>
+      <entry><ind>	0.262</ind>	<dep>	180.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>sector</object-name>
+  <property>fdm/jsbsim/fcs/aero/auasp-limit</property>
+  <interpolation>
+    <entry><ind>	15.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	12.0</ind>	<dep>	37.0</dep></entry>
+    <entry><ind>	9.0</ind>	<dep>	72.0</dep></entry>
+    <entry><ind>	6.0</ind>	<dep>	107.0</dep></entry>
+    <entry><ind>	3.0</ind>	<dep>	142.0</dep></entry>
+    <entry><ind>	0.0</ind>	<dep>	180.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>n_needle</object-name>
+  <property>fdm/jsbsim/accelerations/n-pilot-z-norm</property>
+  <interpolation>
+    <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
+    <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>
+    <entry><ind>	-1.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	-2.0</ind>	<dep>	-45.0</dep></entry>
+    <entry><ind>	-3.0</ind>	<dep>	-90.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>n_max</object-name>
+  <condition>
+    <property>tu154/instrumentation/uap-12/powered</property>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>n_min</object-name>
+  <condition>
+    <property>tu154/instrumentation/uap-12/powered</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>hs</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>help.mass_info();</script>
+    </binding>
+  </action>
+</animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">UAP-12</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>
