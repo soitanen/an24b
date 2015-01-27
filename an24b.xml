@@ -443,62 +443,93 @@ Models        </description>
                 </orient>
             </thruster>
         </engine>
+
         <tank type="FUEL">
             <location unit="M">
-                <x> 9.654 </x>
+                <x> 9.65 </x>
                 <y> -1.4 </y>
-                <z> 1.415 </z>
+                <z> 1.523 </z>
             </location>
+            <drain_location unit="M">
+                <x> 9.696</x>
+                <y> -1.4 </y>
+                <z> 1.207 </z>
+            </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
             <priority>2</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
-                <x> 9.654 </x>
+                <x> 9.65 </x>
                 <y> -3 </y>
-                <z> 1.415 </z>
+                <z> 1.523 </z>
             </location>
+            <drain_location unit="M">
+                <x> 9.696</x>
+                <y> -3 </y>
+                <z> 1.207 </z>
+            </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
             <priority>2</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
-                <x> 9.838 </x>
+                <x> 9.84 </x>
                 <y> -7.45 </y>
-                <z> 1.474 </z>
+                <z> 1.466 </z>
             </location>
+            <drain_location unit="M">
+                <x> 9.84</x>
+                <y> -7.45 </y>
+                <z> 1.22 </z>
+            </drain_location>
             <capacity unit="KG">1425</capacity>
             <contents unit="KG">390</contents>
             <priority>1</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
-                <x> 9.838 </x>
+                <x> 9.84 </x>
                 <y> 7.45 </y>
-                <z> 1.474 </z>
+                <z> 1.466 </z>
             </location>
+            <drain_location unit="M">
+                <x> 9.84</x>
+                <y> 7.45 </y>
+                <z> 1.22 </z>
+            </drain_location>
             <capacity unit="KG">1425</capacity>
             <contents unit="KG">390</contents>
             <priority>1</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
-                <x> 9.654 </x>
+                <x> 9.65 </x>
                 <y> 3 </y>
-                <z> 1.415 </z>
+                <z> 1.523 </z>
             </location>
+            <drain_location unit="M">
+                <x> 9.696</x>
+                <y> 3 </y>
+                <z> 1.207 </z>
+            </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
             <priority>2</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
-                <x> 9.654 </x>
+                <x> 9.65 </x>
                 <y> 1.4 </y>
-                <z> 1.415 </z>
+                <z> 1.523 </z>
             </location>
+            <drain_location unit="M">
+                <x> 9.696</x>
+                <y> 1.4 </y>
+                <z> 1.207 </z>
+            </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
             <priority>2</priority>
@@ -1474,19 +1505,6 @@ Models        </description>
                       0.209   -0.07   -0.14
                     </tableData>
                     </table>
-                </product>
-            </function>
-            <function name="aero/moment/Yaw_anti_side">
-                <description>Yaw moment to match my from book</description>
-                <product>
-                    <sum>                    
-                       <property>aero/function/aero-ref-shift</property>
-                       <value>-0.25</value>
-                    </sum>
-                    <property>metrics/cbarw-ft</property>
-                    <sum>
-                       <property>aero/force/Side_beta</property>
-                    </sum>
                 </product>
             </function>
         </axis>
