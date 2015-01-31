@@ -141,6 +141,9 @@
 
   <systems>
     <path>Aircraft/an24b/Systems/systems.xml</path>
+    <autopilot>
+      <path>Aircraft/an24b/Systems/ap-28l1.xml</path>
+    </autopilot>
   </systems>
 
    <startup>
@@ -271,10 +274,10 @@
 </input>
 
 <controls>
-    <gear>
-	<steering>10.0</steering>
-        <nose-wheel-steering type="bool">true</nose-wheel-steering>
-    </gear>
+  <gear>
+    <steering>10.0</steering>
+    <nose-wheel-steering type="bool">true</nose-wheel-steering>
+  </gear>
 </controls>
 
 <consumables>
@@ -309,7 +312,7 @@
 <fdm>
   <jsbsim>  
     <gear>
-	<steering>10.0</steering>
+     <steering>10.0</steering>
         <nose-wheel-steering type="bool">true</nose-wheel-steering>
     </gear>
     <fcs>
@@ -353,6 +356,40 @@
  </gear>
 
 <an24>
+  <ap-28l1>
+    <coefficients>
+      <roll-angle type="double">0.52</roll-angle>
+      <roll-rate type="double">0.33</roll-rate>
+    </coefficients>
+    <lamps>
+      <ready type="bool">false</ready>
+      <on type="bool">false</on>
+      <kv type="bool">false</kv>
+      <pull type="bool">false</pull>
+      <push type="bool">false</push>
+    </lamps>
+    <switches>
+      <roll-mode type="int">1</roll-mode>
+      <roll-control type="double">0</roll-control>
+      <up-down-l type="int">0</up-down-l>
+      <up-down-r type="int">0</up-down-r>
+      <autotrim type="bool">false</autotrim>
+      <power type="bool">false</power>
+      <pitch type="bool">false</pitch>
+    </switches>
+    <buttons>
+      <turn-on type="bool">false</turn-on>
+      <horizon type="bool">false</horizon>
+      <kv type="bool">false</kv>      
+    </buttons>
+    <internal>
+      <powered type="bool">false</powered>
+      <engaged type="bool">false</engaged>
+      <roll-stab type="bool">false</roll-stab>
+      <target-bank type="double">0</target-bank>
+      <roll-error-deg type="double">0</roll-error-deg>
+    </internal>
+  </ap-28l1>
   <gear>
     <steer_mode>2</steer_mode>
   </gear>

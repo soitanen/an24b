@@ -27,11 +27,6 @@
     <name>cockpit</name>
     <usage>interior</usage>
     <path>Aircraft/an24b/Models/Interior/cockpit.xml</path>
-    <offsets>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </offsets>
     <nopreview/>
 </model>
 

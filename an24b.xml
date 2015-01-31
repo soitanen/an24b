@@ -1112,8 +1112,8 @@ Models        </description>
                 </tableData>
             </table>
         </function>
-        <function name="aero/function/K">
-		<quotient>                    
+        <function name="aero/function/K"> <!-- aerodynamic quality or Lift to Drag ratio -->
+            <quotient>                    
                   <sum>
                     <property>aero/force/Lift_alpha</property>
                     <property>aero/force/Lift_elevator</property>
@@ -1128,7 +1128,7 @@ Models        </description>
                     <property>aero/force/Drag_elevator</property>
                     <property>aero/force/Drag_ground</property>
                   </sum>
-		</quotient>
+		    </quotient>
         </function>
 
 <!--                 End of pre-calculations                   -->
@@ -1146,10 +1146,11 @@ Models        </description>
             <function name="aero/force/Lift_elevator">
                 <description>Lift due to Elevator Deflection</description>
                 <product>
-                    <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
-                    <property>fcs/elevator-pos-rad</property>
-                    <value>0.2</value>
+                    <quotient>
+                        <property>aero/moment/Pitch_elevator</property>
+                        <property>metrics/lh-ft</property>
+                    </quotient>
+                    <value>-1</value>
                 </product>
             </function>
             <function name="aero/force/Lift_alpha_ground">
