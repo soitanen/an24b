@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- UPDB, Radiocompass-->
+<!-- UPDB, -->
 
 <PropertyList>
  <path>updb-2.ac</path>
@@ -17,29 +17,6 @@
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
-
-<!--Needles-->
-<animation>
-    <object-name>needle1</object-name>
-    <type>rotate</type>
-    <property>/instrumentation/adf/indicated-bearing-deg</property>
-    <axis>
-      <x>-1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-</animation>
-
-<animation>
-    <object-name>needle2</object-name>
-    <type>rotate</type>
-    <property>/instrumentation/adf[1]/indicated-bearing-deg</property>
-    <axis>
-      <x>-1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-</animation>
 
 <!-- TEXT OSG -->
 

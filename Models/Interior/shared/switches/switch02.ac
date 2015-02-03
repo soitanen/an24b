@@ -1,9 +1,64 @@
 AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 128  trans 0
+MATERIAL "ac3dmat5" rgb 1 1 0  amb 1 1 0  emis 0 0 0  spec 0.5 0.5 0.5  shi 128  trans 0
 OBJECT world
-kids 2
+kids 5
 OBJECT poly
-name "sphere"
+name "clickspot_up"
+loc 0.00751224 0 0
+crease 180.000000
+numvert 4
+0.0021459 0.0221034 -0.00915507
+0.0021459 0.00736778 -0.00915507
+0.0021459 0.00736778 0.00915507
+0.0021459 0.0221034 0.00915507
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+3 0 1
+2 0 0.666667
+1 1 0.666667
+0 1 1
+kids 0
+OBJECT poly
+name "clickspot_middle"
+loc 0.00751224 0 0
+crease 180.000000
+numvert 4
+0.0021459 0.00736778 -0.00915507
+0.0021459 -0.00736778 -0.00915507
+0.0021459 -0.00736778 0.00915507
+0.0021459 0.00736778 0.00915507
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+3 0 0.666667
+2 0 0.333333
+1 1 0.333333
+0 1 0.666667
+kids 0
+OBJECT poly
+name "clickspot_down"
+loc 0.00751224 0 0
+crease 180.000000
+numvert 4
+0.0021459 -0.00736778 -0.00915507
+0.0021459 -0.0221034 -0.00915507
+0.0021459 -0.0221034 0.00915507
+0.0021459 -0.00736778 0.00915507
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+3 0 0.333333
+2 0 0
+1 1 0
+0 1 0.333333
+kids 0
+OBJECT poly
+name "lever"
 loc 0.016014 0 0
 crease 45.000000
 numvert 131
