@@ -1,15 +1,31 @@
 <?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
 
-<!-- EUP-53MK-500, Turn Coordinator -->
-
+<!-- Electrical turn indicator EUP
+3D instrument for Tu-154 -->
 <PropertyList>
  <path>eup.ac</path>
-
 <!-- Internal instruments lighting -->
 <animation>
   <type>material</type>
-  <object-name>housing</object-name>
+  <!--<condition>
+    <property>yak-40/switches/board_left</property>
+    <greater-than>
+      <property>yak-40/systems/electrical/buses/bus27/volts</property>
+      <value>16.0</value>
+    </greater-than>
+  </condition>-->
+  <object-name>back</object-name>
   <object-name>ball</object-name>
+  <object-name>base</object-name>
+  <object-name>bezel</object-name>
+  <object-name>bezel.001</object-name>
   <object-name>needle</object-name>
    <emission>
      <red>1.0</red>
