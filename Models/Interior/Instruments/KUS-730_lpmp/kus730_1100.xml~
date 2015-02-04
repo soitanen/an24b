@@ -4,44 +4,13 @@
   
   <path>kus730_1100.ac</path>
   
-  <animation>
-    <object-name>fond</object-name>
-    <object-name>face</object-name>
-    <object-name>long_needle</object-name>
-    <object-name>short_needle</object-name>
-    <object-name>cache</object-name>
-    
-    <object-name>glass</object-name>
-  </animation>
-  
-  <animation>
-    <type>noshadow</type>
-    <object-name>glass</object-name>
-  </animation>
-  
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>glass</object-name>
-  </animation>
-  
-  <!-- working for Rembrandt -->
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
-    <object-name>glass</object-name>
-  </effect>
-  
+ 
   <!-- Internal instruments lighting -->
   <animation>
     <type>material</type>
-    <object-name>face</object-name>
+    <object-name>housing</object-name>
     <object-name>long_needle</object-name>
     <object-name>short_needle</object-name>
-    <object-name>cache</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
@@ -88,22 +57,6 @@
     </axis>
   </animation>
 
-  <animation>
-    <type>select</type>
-    <object-name>cache</object-name>
-    <condition>
-      <less-than>
-        <property>fdm/jsbsim/velocities/vt-fps</property>
-        <value>399.9999</value>
-      </less-than>
-    </condition>
-    <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
 <!-- TEXT OSG -->
 
   <animation>
@@ -117,7 +70,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">us IAS Ind</text>
+    <text type="string">KUS IAS Ind</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>

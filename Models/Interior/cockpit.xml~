@@ -313,7 +313,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/kus730_1100.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/us/kus730_1100.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.6907</y-m>
@@ -522,7 +522,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/kus730_1100.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/us/kus730_1100.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.2669</y-m>
@@ -638,7 +638,7 @@
 
 <model>
   <name>ARK</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/UPDB-2_mp/updb-2.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_mp/ark-11.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.25672</y-m>
