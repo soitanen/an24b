@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+
+<!--
+	This is implementation of AP-28L1 autopilot
+	installed on AN-24B
+-->
+
+<PropertyList>
+
+	<filter> <!-- target bank calculation -->
+		<type>gain</type>
+		<gain>1</gain>
+		<input>
+			<condition>
+				<property>/an24/ap-28l1/internal/horizon-mode</property>
+			</condition>
+			<value>0</value>
+		</input>
+		<input>/an24/ap-28l1/buttons/roll-control</input>
+		<output>/an24/ap-28l1/internal/target-bank</output>
+	</filter>
+
+	<filter> <!-- bank error -->
+		<type>gain</type>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<property>/an24/ap-28l1/internal/powered</property>
+			</condition>
+		</enable>	
+		<input>/an24/ap-28l1/internal/target-bank</input>
+		<reference>/instrumentation/agd-1/indicated-roll-deg</reference>
+		<output>/an24/ap-28l1/internal/roll-error-deg</output>
+	</filter>
+
+	<filter> <!-- heading error -->
+		<type>gain</type>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<property>/an24/ap-28l1/internal/powered</property>
+			</condition>
+		</enable>	
+		<input>/instrumentation/zk2/heading-bug</input>
+		<reference>/instrumentation/gpk-52/indicated-heading-deg</reference>
+		<output>/an24/ap-28l1/coefficients/heading-error-deg</output>
+		<period>
+			<min>-180</min>
+			<max>180</max>
+		</period>
+		<min>-2.7</min>
+		<max>2.7</max>
+	</filter>
+
+	<filter> <!-- aileron steering machine -->
+		<type>gain</type>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>/an24/ap-28l1/internal/powered</property>
+					<property>/an24/ap-28l1/internal/engaged</property>
+					<equals>
+						<property>/an24/ap-28l1/internal/roll-mode</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>	
+		<input>
+			<expression>
+				<product>
+					<difference>
+						<product>
+							<property>/an24/ap-28l1/internal/roll-error-deg</property>
+							<property>/an24/ap-28l1/coefficients/roll-angle</property>
+						</product>
+						<product>
+							<property>/orientation/roll-rate-degps</property>
+							<property>/an24/ap-28l1/coefficients/roll-rate</property>
+						</product>
+					</difference>
+					<value>0.041666667</value>
+				</product>
+			</expression>
+		</input>
+		<output>/controls/flight/aileron</output>
+	</filter>
+
+	<filter> <!-- aileron steering machine heading error -->
+		<type>gain</type>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>/an24/ap-28l1/internal/powered</property>
+					<property>/an24/ap-28l1/internal/engaged</property>
+					<equals>
+						<property>/an24/ap-28l1/internal/roll-mode</property>
+						<value>1</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>	
+		<input>
+			<expression>
+				<product>
+					<sum>
+						<difference>
+							<product>
+								<property>/an24/ap-28l1/internal/roll-error-deg</property>
+								<property>/an24/ap-28l1/coefficients/roll-angle</property>
+							</product>
+							<product>
+								<property>/orientation/roll-rate-degps</property>
+								<property>/an24/ap-28l1/coefficients/roll-rate</property>
+							</product>
+						</difference>
+						<product>
+							<property>/an24/ap-28l1/coefficients/heading-error-deg</property>
+							<property>/an24/ap-28l1/coefficients/heading-error</property>
+						</product>
+					</sum>
+					<value>0.041666667</value>
+				</product>
+			</expression>
+		</input>
+		<output>/controls/flight/aileron</output>
+	</filter>
+
+<!-- ********************************************************
+	 ************* LOGIC SECTION ****************************
+	 ******************************************************** -->
+
+	<logic>
+		<input>
+			<and>
+				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/instrumentation/agd</property>
+				<greater-than>
+					<property>/sim/time/elapsed-sec</property>
+					<property>/an24/ap-28l1/internal/power-on-time</property>
+				</greater-than>
+				<not><property>/an24/ap-28l1/internal/engaged</property></not>
+			</and>
+		</input>
+		<output>/an24/ap-28l1/internal/armed</output>
+	</logic>
+
+	<filter> <!-- select roll mode to due switches and horizon mode -->
+		<type>gain</type>
+		<gain>1</gain>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<value>0</value>
+					</equals>
+				</or>
+			</condition>
+			<value>0</value>
+		</input>
+		<input>
+			<condition>
+				<and>
+					<equals>
+						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<value>-1</value>
+					</equals>
+					<not><property>/an24/ap-28l1/internal/horizon-mode</property></not>
+				</and>
+			</condition>
+			<value>1</value>
+		</input>
+		<output>/an24/ap-28l1/internal/roll-mode</output>
+	</filter>
+	
+</PropertyList>

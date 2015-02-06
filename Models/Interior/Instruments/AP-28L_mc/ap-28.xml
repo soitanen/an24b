@@ -72,14 +72,13 @@
  <animation>
    <type>knob</type>
    <object-name>rollknob</object-name>
-     <value>0.0</value>
     <action>
      <binding>
       <command>property-adjust</command>
       <property>an24/ap-28l1/buttons/roll-control</property>
       <factor>1</factor>
-      <min>-55</min>
-      <max>55</max>                
+      <min>-24</min>
+      <max>24</max>                
       <wrap>false</wrap>
      </binding>
     </action>
@@ -89,11 +88,12 @@
   <object-name>rollknob</object-name>
   <type>rotate</type>
    <property>an24/ap-28l1/buttons/roll-control</property>
-   <factor>2</factor>
+   <factor>4</factor>
+   <offset-deg>30</offset-deg>
    <axis>
     <x>0</x>
     <y>0</y>
-    <z>1</z>
+    <z>-1</z>
    </axis>
  </animation>
 
@@ -182,8 +182,12 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-toggle</command>
-      <property>an24/ap-28l1/buttons/turn-on</property>
+      <command>nasal</command>
+      <script>
+        instruments.engage_ap();
+        interpolate("an24/ap-28l1/buttons/turn-on", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ap-28l1/buttons/turn-on", 0.0, 0.1 );},0.1);
+      </script>
     </binding>
   </action>
 </animation>

@@ -51,7 +51,7 @@ file, these values will be used (they are hardcoded).
   </altimeter>
 
   <attitude-indicator>
-    <name>attitude-indicator</name>
+    <name>agd-1</name>
     <number>0</number>
     <suction>/an24/instrumentation/agd</suction>
   </attitude-indicator>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Roll-mode GIK(1)/GPK(0)/ZK(-1) ? -->
+<!-- Roll-mode GIK(1)/GPK(0)/ZK(-1) -->
 
 <PropertyList>
  <path>../../shared/switches/switch02.ac</path>

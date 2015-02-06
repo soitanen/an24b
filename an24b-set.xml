@@ -357,9 +357,16 @@
 
 <an24>
   <ap-28l1>
-    <coefficients>
+    <coefficients> <!-- coefficients are taken from book An-24. Technical description.-->
       <roll-angle type="double">0.52</roll-angle>
       <roll-rate type="double">0.33</roll-rate>
+      <pitch-angle type="double">0.96</pitch-angle>
+      <pitch-rate type="double">0.57</pitch-rate>
+      <pitch-altitude type="double">0.61</pitch-altitude> <!-- degree elevator to mm of water -->
+      <yaw-angle type="double">1.02</yaw-angle>
+      <yaw-rate type="double">1.5</yaw-rate>
+      <heading-error type="double">2.6</heading-error> <!-- degree aileron to heading error -->
+      <heading-error-deg type="double">0</heading-error-deg>
     </coefficients>
     <lamps>
       <ready type="bool">false</ready>
@@ -378,14 +385,17 @@
       <pitch type="bool">false</pitch>
     </switches>
     <buttons>
-      <turn-on type="bool">false</turn-on>
-      <horizon type="bool">false</horizon>
-      <kv type="bool">false</kv>      
+      <turn-on type="double">0</turn-on>
+      <horizon type="double">0</horizon>
+      <kv type="double">0</kv>      
     </buttons>
     <internal>
       <powered type="bool">false</powered>
+      <power-on-time type="double">0</power-on-time>
       <engaged type="bool">false</engaged>
-      <roll-stab type="bool">false</roll-stab>
+      <armed type="bool">false</armed>
+      <roll-mode type="int">0</roll-mode> <!-- 0-stabilization, 1-razvorot -->
+      <horizon-mode type="bool">false</horizon-mode>
       <target-bank type="double">0</target-bank>
       <roll-error-deg type="double">0</roll-error-deg>
     </internal>
@@ -430,6 +440,9 @@
       <z-offset-m type="double">1.05</z-offset-m>
     </antenna>
   </radar-altimeter>
+  <zk2>
+    <heading-bug type="double">0</heading-bug>
+  </zk2>
 </instrumentation>
 
 <systems>
@@ -459,6 +472,8 @@
   </help>
   <instruments>
     <file>Aircraft/an24b/Nasal/instruments.nas</file>
+    <file>Aircraft/an24b/Nasal/gpk-52.nas</file>
+    <file>Aircraft/an24b/Nasal/ap-28l1.nas</file>
   </instruments>
   <view>
     <file>Aircraft/an24b/Nasal/view.nas</file>

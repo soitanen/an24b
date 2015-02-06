@@ -32,7 +32,12 @@
     <type>rotate</type>
     <object-name>needle_1</object-name>
     <object-name>needle_2</object-name>
-    <property>instrumentation/gik-1/indicated-heading</property>
+    <expression>
+      <dif>
+        <property>instrumentation/gpk-52/indicated-heading-deg</property>
+        <property>instrumentation/zk2/heading-bug</property>
+      </dif>
+    </expression>
     <axis>
       <x>-1.0</x>
       <y>0.0</y>
@@ -42,24 +47,40 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>index</object-name>
-  <property>instrumentation/gik-1/indicated-heading</property>
+  <object-name>compass</object-name>
+  <property>instrumentation/zk2/heading-bug</property>
   <axis>
-    <x>-1.0</x>
+    <x>1.0</x>
     <y>0.0</y>
     <z>0.0</z>
   </axis>
 </animation>
-<!--
-<animation>
-  <type>rotate</type>
-  <object-name>needle_2</object-name>
-  <property>fdm/jsbsim/instrumentation/nvu/drift-angle</property>
-  <axis>
-    <x>-1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
-</animation>
--->
+
+ <animation>
+   <type>knob</type>
+   <object-name>knob</object-name>
+   <property>instrumentation/zk2/heading-bug</property>
+   <factor>5</factor>
+   <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <center>
+    <x-m>0</x-m>
+    <y-m>-0.025737045</y-m>
+    <z-m>-0.03216055</z-m>
+   </center>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/zk2/heading-bug</property>
+      <factor>1</factor>
+      <min>0</min>
+      <max>359</max>                
+      <wrap>true</wrap>
+     </binding>
+    </action>
+ </animation>
+
 </PropertyList>

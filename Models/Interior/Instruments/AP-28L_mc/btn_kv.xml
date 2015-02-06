@@ -13,8 +13,11 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-toggle</command>
-      <property>an24/ap-28l1/buttons/kv</property>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ap-28l1/buttons/kv", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ap-28l1/buttons/kv", 0.0, 0.1 );},0.1);
+      </script>
     </binding>
   </action>
 </animation>

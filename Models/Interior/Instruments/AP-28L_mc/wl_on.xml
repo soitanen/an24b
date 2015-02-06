@@ -15,16 +15,7 @@
 <animation>
  <type>select</type>
  <condition>
-   <and>
-   <equals>
-    <property>an24/ap-28l1/buttons/turn-on</property>
-    <value>true</value>
-   </equals>
-   <equals>
-    <property>an24/ap-28l1/switches/power</property>
-    <value>true</value>
-   </equals>
-   </and>
+    <property>an24/ap-28l1/internal/engaged</property>
   </condition>
  <object-name>lampon</object-name>
 </animation>
