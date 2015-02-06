@@ -376,13 +376,13 @@
       <push type="bool">false</push>
     </lamps>
     <switches>
-      <roll-mode type="int">1</roll-mode>
+      <roll-mode type="double">1</roll-mode>
       <roll-control type="double">0</roll-control>
-      <up-down-l type="int">0</up-down-l>
-      <up-down-r type="int">0</up-down-r>
-      <autotrim type="bool">false</autotrim>
-      <power type="bool">false</power>
-      <pitch type="bool">false</pitch>
+      <up-down-l type="double">0</up-down-l>
+      <up-down-r type="double">0</up-down-r>
+      <autotrim type="double">0</autotrim>
+      <power type="double">0</power>
+      <pitch type="double">1</pitch>
     </switches>
     <buttons>
       <turn-on type="double">0</turn-on>
@@ -397,7 +397,10 @@
       <roll-mode type="int">0</roll-mode> <!-- 0-stabilization, 1-razvorot -->
       <horizon-mode type="bool">false</horizon-mode>
       <target-bank type="double">0</target-bank>
+      <target-pitch type="double">0</target-pitch>
+      <pitch-error-deg type="double">0</pitch-error-deg>
       <roll-error-deg type="double">0</roll-error-deg>
+      <elevator-autotrim-feel type="bool">false</elevator-autotrim-feel>
     </internal>
   </ap-28l1>
   <gear>

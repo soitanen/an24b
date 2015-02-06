@@ -10,13 +10,21 @@
   <visible>false</visible>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/ap-28l1/switches/up-down-r", 1.0, 0.1 );
       </script>
     </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ap-28l1/switches/up-down-r", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -32,13 +40,21 @@
   <visible>false</visible>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ap-28l1/switches/up-down-r", -1, 0.1 );
+      </script>
+    </binding>
+    <mod-up>
+      <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/ap-28l1/switches/up-down-r", 0.0, 0.1 );
       </script>
     </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -47,7 +63,7 @@
    <object-name>lever</object-name>
    <property>an24/ap-28l1/switches/up-down-r</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
   </interpolation>
   <axis>

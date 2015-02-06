@@ -58,8 +58,8 @@
    <object-name>lever</object-name>
    <property>an24/ap-28l1/switches/roll-mode</property>
   <interpolation>
-    <entry><ind>1.0</ind>	<dep>-5.0</dep></entry>
-    <entry><ind>-1.0</ind>	<dep>-50.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>25.0</dep></entry>
+    <entry><ind>-1.0</ind>	<dep>-25.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
