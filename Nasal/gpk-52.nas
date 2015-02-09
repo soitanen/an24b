@@ -1,7 +1,5 @@
-props.globals.initNode("instrumentation/gpk-52/heading-bug-deg", 0);
-props.globals.initNode("instrumentation/gpk-52/heading-bug-error-deg", 0);
 props.globals.initNode("instrumentation/gpk-52/indicated-heading-deg", 0);
-props.globals.initNode("instrumentation/gpk-52/lat-nut", 0);
+props.globals.initNode("instrumentation/gpk-52/lat-nut", int(getprop("position/latitude-deg")));
 props.globals.initNode("instrumentation/gpk-52/earth-err", 0.0);
 props.globals.initNode("instrumentation/gpk-52/lat-nut-corr", 0.0);
 props.globals.initNode("instrumentation/gpk-52/transport-wander", 0.0);
@@ -9,7 +7,7 @@ props.globals.initNode("instrumentation/gpk-52/transport-wander", 0.0);
 srand();
 var hdg_stop = int(rand() * 360);
 var init_true_heading = getprop("orientation/heading-deg");
-props.globals.initNode("instrumentation/gpk-52/offset-deg", (hdg_stop - getprop("orientation/heading-deg")));
+props.globals.initNode("instrumentation/gpk-52/offset-deg", (hdg_stop - int(getprop("orientation/heading-deg"))));
 
 
 var gyro = func {
@@ -33,16 +31,7 @@ var gyro = func {
     } else {
         setprop("instrumentation/gpk-52/indicated-heading-deg", (init_true_heading + offset));
    }
-    
-    var hdg_bug = getprop("instrumentation/gpk-52/heading-bug-deg");
-    var hdg_error = hdg_bug - hdg;
-    if (hdg_error > 180) {
-        hdg_error = hdg_error - 360;
-    }
-    if (hdg_error < -180) {
-        hdg_error = hdg_error + 360;
-    }
-    setprop("instrumentation/gpk-52/custom-heading-bug-error-deg",hdg_error);
+
     settimer(gyro, 0);
 }
 

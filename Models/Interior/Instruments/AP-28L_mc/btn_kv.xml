@@ -17,6 +17,7 @@
       <script>
         interpolate("an24/ap-28l1/buttons/kv", 1.0, 0.1 );
         settimer(func {interpolate("an24/ap-28l1/buttons/kv", 0.0, 0.1 );},0.1);
+        instruments.engage_kv_mode();
       </script>
     </binding>
   </action>

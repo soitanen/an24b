@@ -362,11 +362,13 @@
       <roll-rate type="double">0.33</roll-rate>
       <pitch-angle type="double">0.96</pitch-angle>
       <pitch-rate type="double">0.57</pitch-rate>
-      <pitch-altitude type="double">0.61</pitch-altitude> <!-- degree elevator to mm of water -->
+      <pitch-roll-compensate type="double">0.1</pitch-roll-compensate> <!-- compensate when roll -->
+      <pitch-altitude type="double">0.061</pitch-altitude> <!-- degree elevator to mm of water. Original was 0.61, but this is too sharp -->
       <yaw-angle type="double">1.02</yaw-angle>
       <yaw-rate type="double">1.5</yaw-rate>
-      <heading-error type="double">2.6</heading-error> <!-- degree aileron to heading error -->
+      <heading-error type="double">0.8</heading-error> <!-- degree aileron to heading error. Original value=2.6 -->
       <heading-error-deg type="double">0</heading-error-deg>
+      <yaw-rate-t-constant type="double">0.4</yaw-rate-t-constant>
     </coefficients>
     <lamps>
       <ready type="bool">false</ready>
@@ -376,11 +378,11 @@
       <push type="bool">false</push>
     </lamps>
     <switches>
-      <roll-mode type="double">1</roll-mode>
+      <roll-mode type="double">0</roll-mode>
       <roll-control type="double">0</roll-control>
       <up-down-l type="double">0</up-down-l>
       <up-down-r type="double">0</up-down-r>
-      <autotrim type="double">0</autotrim>
+      <autotrim type="double">1</autotrim>
       <power type="double">0</power>
       <pitch type="double">1</pitch>
     </switches>
@@ -394,13 +396,19 @@
       <power-on-time type="double">0</power-on-time>
       <engaged type="bool">false</engaged>
       <armed type="bool">false</armed>
-      <roll-mode type="int">0</roll-mode> <!-- 0-stabilization, 1-razvorot -->
+      <roll-mode type="int">0</roll-mode> <!-- 0=stabilization, 1=razvorot -->
+      <yaw-mode type="int">0</yaw-mode> <!-- 0=yaw damper, 1=gpk-52, 2=gik-1 -->
       <horizon-mode type="bool">false</horizon-mode>
+      <kv type="bool">false</kv>
       <target-bank type="double">0</target-bank>
       <target-pitch type="double">0</target-pitch>
+      <target-heading-gpk-52 type="double">0</target-heading-gpk-52>
+      <target-heading-gik-1 type="double">0</target-heading-gik-1>
+      <target-pressure-inhg type="double">0</target-pressure-inhg>
       <pitch-error-deg type="double">0</pitch-error-deg>
       <roll-error-deg type="double">0</roll-error-deg>
       <elevator-autotrim-feel type="bool">false</elevator-autotrim-feel>
+      <elevator-alt-correction type="double">0</elevator-alt-correction>
     </internal>
   </ap-28l1>
   <gear>
