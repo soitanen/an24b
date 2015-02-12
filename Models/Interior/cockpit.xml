@@ -906,6 +906,28 @@
 
 
 <!--************************** RIGHT CONSOLE ***************************-->
+
+<model>
+  <name>GPK-52</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/GPK-52AP_rc/gpk-52.xml</path>
+  <offsets>
+    <x-m>2.5814</x-m>
+    <y-m>0.86</y-m>
+    <z-m>0.461</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>GPK-52 Control</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/GPK-52AP_rc/gpk-52ctrl.xml</path>
+  <offsets>
+    <x-m>2.74</x-m>
+    <y-m>0.985</y-m>
+    <z-m>0.75</z-m>
+    <heading-deg>5</heading-deg>
+  </offsets>
+</model>
+
 <model>
   <name>SPU-7</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnav/rcspu-7.xml</path>
