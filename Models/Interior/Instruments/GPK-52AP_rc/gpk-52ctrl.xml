@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+
+<!-- GPK-52 Control Unit -->
+
+<PropertyList>
+ <path>gpk-52ctrl.ac</path>
+
+<!--
+ <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <object-name>needle_1</object-name>
+   <object-name>needle_2</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+-->
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("instrumentation/gpk-52/on", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("instrumentation/gpk-52/on", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>on_off_lever</object-name>
+  <property>instrumentation/gpk-52/on</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep> 15.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>-15.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>-0.0035</x1-m>
+    <y1-m>-0.0044</y1-m>
+    <z1-m>0.0217</z1-m>
+    <x2-m>0.0035</x2-m>
+    <y2-m>-0.0044</y2-m>
+    <z2-m>0.0217</z2-m>
+  </axis>
+ </animation>
+
+
+ <animation>
+   <type>knob</type>
+   <object-name>latknob</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/gpk-52/lat-nut</property>
+      <factor>1</factor>
+      <min>0</min>
+      <max>90</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>latknob</object-name>
+  <property>instrumentation/gpk-52/lat-nut</property>
+  <interpolation>
+    <entry><ind> 0.0</ind>	<dep>  0.0</dep></entry>
+    <entry><ind>20.0</ind>	<dep>100.0</dep></entry>
+    <entry><ind>38.0</ind>	<dep>180.0</dep></entry>
+    <entry><ind>50.0</ind>	<dep>222.0</dep></entry>
+    <entry><ind>60.0</ind>	<dep>252.0</dep></entry>
+    <entry><ind>80.0</ind>	<dep>280.0</dep></entry>
+    <entry><ind>90.0</ind>	<dep>286.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>0.0372</x1-m>
+    <y1-m>0.0277</y1-m>
+    <z1-m>0.0</z1-m>
+    <x2-m>0.0372</x2-m>
+    <y2-m>-0.0277</y2-m>
+    <z2-m>0.0</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>l_r_knob</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/gpk-52/lat-nut</property>
+      <factor>1</factor>
+      <min>-90</min>
+      <max>90</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>l_r_knob</object-name>
+  <property>instrumentation/gpk-52/lat-nut</property>
+  <factor>1</factor>
+  <axis>
+    <x1-m>-0.0342</x1-m>
+    <y1-m>0.05</y1-m>
+    <z1-m>0.0028</z1-m>
+    <x2-m>-0.0342</x2-m>
+    <y2-m>-0.05</y2-m>
+    <z2-m>0.0028</z2-m>
+  </axis>
+ </animation>
+
+
+
+<!-- TEXT OSG 
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">GPK-52 gyro compass</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+-->
+
+</PropertyList>
