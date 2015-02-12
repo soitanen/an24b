@@ -128,8 +128,8 @@
 <animation>
   <type>rotate</type>
   <object-name>l_r_knob</object-name>
-  <property>instrumentation/gpk-52/lat-nut</property>
-  <factor>1</factor>
+  <property>instrumentation/gpk-52/left-right-slew</property>
+  <factor>-30</factor>
   <axis>
     <x1-m>-0.0342</x1-m>
     <y1-m>0.05</y1-m>

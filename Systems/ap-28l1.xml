@@ -809,5 +809,28 @@
 		</input>
 		<output>/an24/ap-28l1/lamps/push</output>
 	</logic>
+
+	<filter> <!-- integrator for GPK-52 -->
+		<type>gain</type>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<property>/instrumentation/gpk-52/on</property>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<sum>
+					<property>instrumentation/gpk-52/offset-deg</property>
+					<product>
+						<property>instrumentation/gpk-52/left-right-slew</property>
+						<value>5</value>
+						<property>/fdm/jsbsim/simulation/dt</property>
+					</product>
+				</sum>
+			</expression>
+		</input>
+		<output>instrumentation/gpk-52/offset-deg</output>
+	</filter>
 	
 </PropertyList>

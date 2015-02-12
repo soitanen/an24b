@@ -3,6 +3,8 @@ props.globals.initNode("instrumentation/gpk-52/lat-nut", int(getprop("position/l
 props.globals.initNode("instrumentation/gpk-52/earth-err", 0.0);
 props.globals.initNode("instrumentation/gpk-52/lat-nut-corr", 0.0);
 props.globals.initNode("instrumentation/gpk-52/transport-wander", 0.0);
+props.globals.initNode("instrumentation/gpk-52/left-right-slew", 0.0);
+props.globals.initNode("instrumentation/gpk-52/on", 1);
 
 srand();
 var hdg_stop = int(rand() * 360);
