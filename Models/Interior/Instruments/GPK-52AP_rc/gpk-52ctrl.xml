@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- GPK-52 Control Unit -->
+<!-- GPK-52 compass system Control Unit -->
 
 <PropertyList>
  <path>gpk-52ctrl.ac</path>
@@ -19,6 +19,8 @@
    </emission>
  </animation>
 -->
+
+<!-- ON/OFF switch -->
 
  <animation>
   <type>pick</type>
@@ -71,6 +73,7 @@
   </axis>
  </animation>
 
+<!-- latitude selector knob-->
 
  <animation>
    <type>knob</type>
@@ -110,25 +113,64 @@
   </axis>
  </animation>
 
+<!-- left-right slew knob-->
+
  <animation>
-   <type>knob</type>
-   <object-name>l_r_knob</object-name>
-    <action>
-     <binding>
-      <command>property-adjust</command>
-      <property>instrumentation/gpk-52/lat-nut</property>
-      <factor>1</factor>
-      <min>-90</min>
-      <max>90</max>                
-      <wrap>false</wrap>
-     </binding>
-    </action>
+  <type>pick</type>
+  <object-name>clickspot_left</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("instrumentation/gpk-52/left-right-slew", -1.0, 1.2 );
+        interpolate("instrumentation/gpk-52/switches/l_r_knob", -1.0, 0.1 );
+      </script>
+    </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("instrumentation/gpk-52/left-right-slew", 0.0, 1.2 );
+        interpolate("instrumentation/gpk-52/switches/l_r_knob", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
  </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_right</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("instrumentation/gpk-52/left-right-slew", 1.0, 1.2 );
+        interpolate("instrumentation/gpk-52/switches/l_r_knob", 1.0, 0.1 );
+      </script>
+    </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("instrumentation/gpk-52/left-right-slew", 0.0, 1.2 );
+        interpolate("instrumentation/gpk-52/switches/l_r_knob", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+</animation>
 
 <animation>
   <type>rotate</type>
   <object-name>l_r_knob</object-name>
-  <property>instrumentation/gpk-52/left-right-slew</property>
+  <property>instrumentation/gpk-52/switches/l_r_knob</property>
   <factor>-30</factor>
   <axis>
     <x1-m>-0.0342</x1-m>
@@ -141,8 +183,7 @@
  </animation>
 
 
-
-<!-- TEXT OSG 
+<!-- TEXT OSG -->
 
   <animation>
     <type>select</type>
@@ -155,12 +196,12 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">GPK-52 gyro compass</text>
+    <text type="string">GPK-52 Control Unit</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
     <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
+    <axis-alignment>xz-plane</axis-alignment>
     <max-height>0.06</max-height>
     <max-width>0.05</max-width>
     <font-resolution>
@@ -169,20 +210,19 @@
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
-      <x-m>  0.005 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.000 </z-m>
+      <x-m> 0.00</x-m>
+      <y-m>-0.01</y-m>
+      <z-m>-0.02</z-m>
     </offsets>
   </text>
   <animation>
     <type>material</type>
     <object-name>textosg</object-name>
     <emission>
-      <red>   1.0 </red>
-      <green> 1.0 </green>
-      <blue>  1.0 </blue>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>1.0</blue>
     </emission>
   </animation>
--->
 
 </PropertyList>
