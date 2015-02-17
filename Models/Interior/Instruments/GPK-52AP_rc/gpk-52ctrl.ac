@@ -3,7 +3,43 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 128  trans
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 128  trans 0
 MATERIAL "ac3dmat5" rgb 1 1 0  amb 1 1 0  emis 0 0 0  spec 0.5 0.5 0.5  shi 128  trans 0
 OBJECT world
-kids 8
+kids 10
+OBJECT poly
+name "clickspot_right"
+loc -0.00732988 -0.163199 0.0083868
+crease 180.000000
+numvert 4
+-0.00439205 0.194539 0
+-0.00439205 0.151491 0
+-0.0258377 0.151491 0
+-0.0258377 0.194539 0
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+3 0 1
+2 0 0.666667
+1 1 0.666667
+0 1 1
+kids 0
+OBJECT poly
+name "clickspot_left"
+loc -0.0311816 -0.114551 0.0083868
+crease 180.000000
+numvert 4
+-0.00439204 0.145891 0
+-0.00439204 0.102843 0
+-0.0258377 0.102843 0
+-0.0258377 0.145891 0
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+3 0 0.333333
+2 0 0
+1 1 0
+0 1 0.333333
+kids 0
 OBJECT poly
 name "object"
 loc -0.042942 0.0577596 -0.0170784

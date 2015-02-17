@@ -578,9 +578,21 @@
   </offsets>
 </model>
 
-
 <!-- *************************************** -->
 
+<model>
+  <name>RPSN_Bock4P</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4p.xml</path>
+  <offsets>
+    <x-m>1.9</x-m>
+    <y-m>0.0</y-m>
+    <z-m>1.18</z-m>
+    <pitch-deg>-10</pitch-deg>
+  </offsets>
+</model>
+
+
+<!-- *************************************** -->
 
 <model>
   <name>RTMS-0.85-B1</name>
