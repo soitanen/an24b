@@ -303,7 +303,7 @@
   <condition>
     <less-than>
       <property>gear/gear[1]/position-norm</property>
-      <value>0.9</value>
+      <value>0.99</value>
     </less-than>
   </condition>
   <mode>once</mode>
@@ -315,7 +315,7 @@
   <condition>
     <greater-than>
       <property>gear/gear[1]/position-norm</property>
-      <value>0.1</value>
+      <value>0.01</value>
     </greater-than>
   </condition>
   <mode>once</mode>
@@ -404,13 +404,12 @@
   <stall>
    <name>stall</name>
    <mode>looped</mode>
-   <path>Sounds/stall.wav</path>
+   <path>Aircraft/an24b/Sound/Systems/vibrator.wav</path>
    <condition>
     <and>
-     <property>/sim/alarms/stall-warning</property>
      <greater-than>
-       <property>/velocities/airspeed-kt</property>
-       <value>10</value>
+       <property>/fdm/jsbsim/aero/alpha-wing-rad</property>
+       <value>0.21</value>
      </greater-than>
      <not>
        <property>/gear/gear[0]/wow</property>
@@ -421,7 +420,7 @@
     <!-- <property>/sim/current-view/internal</property> -->
    </condition>
    <volume>
-    <property>/sim/alarms/stall-warning</property>
+    <value>1</value>
     <max>1.0</max>
    </volume>
    <reference-dist>10.0</reference-dist>
