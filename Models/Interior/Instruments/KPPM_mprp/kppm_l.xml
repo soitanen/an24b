@@ -69,11 +69,11 @@
 	<condition>
 		<property>instrumentation/nav/nav-loc</property>
 	</condition>
-	<property>instrumentation/nav/heading-needle-deflection</property>
+	<property>instrumentation/nav/heading-needle-deflection-norm</property>
 	<interpolation>
-		<entry><ind>-3.5</ind><dep>-0.019</dep></entry>
+		<entry><ind>-1</ind><dep>-0.019</dep></entry>
 		<entry><ind>0.0</ind><dep>0.0</dep></entry>
-		<entry><ind>3.5</ind><dep>0.019</dep></entry>
+		<entry><ind>1</ind><dep>0.019</dep></entry>
 	</interpolation>
 	<axis>
 		<x>0.0</x>
@@ -121,7 +121,7 @@
 </animation>
 
 <animation>
-  <type>rotate</type>
+  <type>knob</type>
   <object-name>knob</object-name>
   <property>/instrumentation/kppm[0]/scale-offset</property>  
   <factor>5</factor>
@@ -135,43 +135,16 @@
     <y>0.0</y>
     <z>0.0</z>
   </axis>
-</animation>
-<!--Mouse wheel-->
-<animation>
-  <type>pick</type>
-  <object-name>knob</object-name>
-  <visible>true</visible>
-  <action>
-    <button>3</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-	var radial=getprop("/instrumentation/kppm[0]/scale-offset");
-	radial = radial + 1;
-        var normalised = geo.normdeg(radial);
-	setprop("/instrumentation/kppm[0]/scale-offset", normalised);
-      </script>
-    </binding>
-  </action>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>knob</object-name>
-  <visible>true</visible>
-  <action>
-    <button>4</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-	var radial=getprop("/instrumentation/kppm[0]/scale-offset");
-	radial = radial - 1;
-        var normalised = geo.normdeg(radial);
-	setprop("/instrumentation/kppm[0]/scale-offset", normalised);
-      </script>
-    </binding>
-  </action>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/kppm[0]/scale-offset</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>360</max>                
+        <wrap>true</wrap>
+      </binding>
+    </action>
 </animation>
 
 <!-- Text OSG -->

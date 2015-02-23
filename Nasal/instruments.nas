@@ -57,3 +57,10 @@ var vol = getprop("/sim/sound/volume");
 	  setprop("an24/volume", vol);  
 	  setprop("/sim/sound/volume", 0.0);
 print("PNK started");
+
+#set parking brake after simulator start-up
+
+var parkBrakeSet = func {
+	setprop("/controls/gear/brake-parking", 1);
+}
+setlistener("/sim/signals/fdm-initialized", parkBrakeSet);
