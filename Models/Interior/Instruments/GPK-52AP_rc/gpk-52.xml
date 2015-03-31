@@ -21,6 +21,7 @@
   <object-name>compface</object-name>
   <property>instrumentation/gpk-52/indicated-heading-deg</property>
   <factor>1</factor>
+  <offset-deg>-90</offset-deg>
   <axis>
     <x>0.0</x>
     <y>0.0</y>

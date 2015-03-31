@@ -401,7 +401,7 @@ Models        </description>
             <feed>2</feed>
             <feed>1</feed>
             <feed>0</feed>
-            <thruster file="prop_4-smv-4-tuned">
+            <thruster file="prop_av72">
                 <sense>-1</sense>
                 <location unit="M">
                     <x> 5.94 </x>
@@ -429,7 +429,7 @@ Models        </description>
             <feed>3</feed>
             <feed>4</feed>
             <feed>5</feed>
-            <thruster file="prop_4-smv-4-tuned">
+            <thruster file="prop_av72">
                 <sense>-1</sense>
               <location unit="M">
                     <x> 5.94 </x>

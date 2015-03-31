@@ -69,7 +69,7 @@
 	    <desc>Release Idle Lock (press for release)</desc>
 	   </key>
    	   <key>
-	    <name>F2</name>
+	    <name>Del</name>
 	    <desc>Toggles Propeller Pitch Lock (UPOR VINTA)</desc>
 	   </key>
    	   <key>
@@ -92,6 +92,16 @@
 	    <name>Vref for less than 19 t</name>
 	    <desc>200 km/h (flaps 38)</desc>
 	   </key>
+    <text>
+Quick start guide:
+- turn on 3 switches to the bottom-left of captains yoke
+labeled AGD, EUP and CGV
+- press and hold big round button near yoke until heading indicator move
+(this is quick alignment of magnetic compass)
+- switch to co-pilot's view (key 2), turn your head to the right and
+alight GPK-52 with correct magnetic heading
+- use flaps 15 for takeoff or 5 in case of long and solid runway
+    </text>
   </help>
 
   <menubar>
@@ -164,8 +174,8 @@
 
 <input>
  <keyboard>
-     <key n="258">
-       <name>F2</name>
+     <key n="127">
+       <name>Delete</name>
        <desc>Prop pitch lock</desc>
        <binding>
          <command>property-toggle</command>

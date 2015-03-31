@@ -32,8 +32,8 @@ itt_delay [-] time constant for ITT change
   <maxpower unit="HP">         2550.0   </maxpower>
   <psfc unit="LBS/HR/HP">         0.632 </psfc>
   <n1idle_max_delay>              1     </n1idle_max_delay>
-  <maxstartingtime>              20     </maxstartingtime>
-  <startern1>                    20     </startern1>
+  <maxstartingtime>               0     </maxstartingtime>
+  <startern1>                    90     </startern1>
   <ielumaxtorque unit="FT*LB">    0     </ielumaxtorque>
   <itt_delay>                     0.05  </itt_delay>
   <betarangeend>                 64     </betarangeend>
