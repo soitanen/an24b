@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 
-<!-- AGD ON -->
+<!-- 2PP-250; RV-UM switch, left panel -->
 
 <PropertyList>
- <path>../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/switch03.ac</path>
+
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -14,17 +15,17 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/fuelcontrol/annularvalve", 1.0, 0.1 );
+        interpolate("instrumentation/radar-altimeter/serviceable", 1.0, 0.1 );
       </script>
     </binding>
   </action>
-</animation>
+ </animation>
 
  <animation>
   <object-name>clickspot_middle</object-name>
   <type>pick</type>
   <visible>false</visible>
-</animation>
+ </animation>
 
  <animation>
   <type>pick</type>
@@ -36,19 +37,19 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/fuelcontrol/annularvalve", 0.0, 0.1 );
+        interpolate("instrumentation/radar-altimeter/serviceable", 0.0, 0.1 );
       </script>
     </binding>
   </action>
-</animation>
+ </animation>
 
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/fuelcontrol/annularvalve</property>
+   <property>instrumentation/radar-altimeter/serviceable</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -56,6 +57,5 @@
     <z>0.0</z>
   </axis>
  </animation>
- 
 
 </PropertyList>

@@ -6,7 +6,7 @@
  <path>tg-16.ac</path>
 
 <model>
- <path>wl.xml</path>
+ <path>wl_apd-27.xml</path>
   <offsets>
     <x-m>0.065</x-m>
     <y-m>-0.05</y-m>
@@ -61,7 +61,7 @@
 </model>
 
 <model>
- <path>sw_ground_inair_.xml</path>
+ <path>sw_ai-24_ground_inair_.xml</path>
   <offsets>
     <x-m>0.038</x-m>
     <y-m>-0.0637</y-m>
@@ -70,34 +70,17 @@
 </model>
 
 <model>
- <path>sw_covered_01.xml</path>
+ <path>cvr_tg-16_prepare.xml</path>
   <offsets>
-    <x-m>0.02</x-m>
-    <y-m>0.031</y-m>
-    <z-m>0.0158</z-m>
+    <x-m>0.0557</x-m>
+    <y-m>0.03</y-m>
+    <z-m>0.019</z-m>
   </offsets>
 </model>
 
-<model>
- <path>sw_covered_02.xml</path>
-  <offsets>
-    <x-m>-0.02</x-m>
-    <y-m>0.031</y-m>
-    <z-m>0.0158</z-m>
-  </offsets>
-</model>
 
 <model>
- <path>btn_discontinue_APU_start.xml</path>
-  <offsets>
-    <x-m>-0.0774</x-m>
-    <y-m>0.0646</y-m>
-    <z-m>-0.008</z-m>
-  </offsets>
-</model>
-
-<model>
- <path>btn_discontinue_engine_start.xml</path>
+ <path>btn_ai-24_discontinue_start.xml</path>
   <offsets>
     <x-m>-0.0774</x-m>
     <y-m>-0.071</y-m>
@@ -106,13 +89,63 @@
 </model>
 
 <model>
- <path>btn_start.xml</path>
+ <path>btn_ai-24_start.xml</path>
   <offsets>
     <x-m>0.089</x-m>
     <y-m>-0.069</y-m>
     <z-m>0</z-m>
   </offsets>
 </model>
+
+<model>
+ <path>sw_tg-16_prepare.xml</path>
+  <offsets>
+    <x-m>0.0557</x-m>
+    <y-m>0.0522</y-m>
+    <z-m>0.0065</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_tg-16_cold_start.xml</path>
+  <offsets>
+    <x-m>0.0219</x-m>
+    <y-m>0.0522</y-m>
+    <z-m>0.0065</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_tg-16_start.xml</path>
+  <offsets>
+    <x-m>-0.025</x-m>
+    <y-m>0.052</y-m>
+    <z-m>0.008</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_tg-16-discontinue_start.xml</path>
+  <offsets>
+    <x-m>-0.0774</x-m>
+    <y-m>0.0617</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_tg-16-discontinue_start.xml</path>
+  <offsets>
+    <x-m>-0.0774</x-m>
+    <y-m>0.0617</y-m>
+    <z-m>-0.008</z-m>
+  </offsets>
+</model>
+
 
 <!-- TEXT OSG -->
 

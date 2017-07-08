@@ -3,13 +3,13 @@
 <!-- Total fuel below 580kg warning-->
 
 <PropertyList>
- <path>../../../shared/lamps/warninglamp03.ac</path>
+ <path>../../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/warninglamp03orangeplain.png</texture>
+ <texture>../../../shared/lamps/sltsnorangeplain.png</texture>
 </animation>
 
 <animation>

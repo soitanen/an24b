@@ -1058,12 +1058,6 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/RV-UM/rv-um.xml</path>
 </model>
 
-
-<model>
-  <name>locator</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Locator/locator.xml</path>
-</model>
-
 <model>
   <name>marker</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Marker/marker.xml</path>
@@ -1090,6 +1084,11 @@
 </model>
 
 <model>
+  <name>anti_ice</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Anti_Ice/window_heat_low_intense.xml</path>
+</model>
+
+<model>
   <name>bottommp</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Bottom_mp/bottom_mp.xml</path>
 </model>
@@ -1102,6 +1101,16 @@
 <model>
   <name>above_AGD</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Above_AGD/above_agd.xml</path>
+</model>
+
+<model>
+  <name>emerg_pressure-relief</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Pressure/pressure.xml</path>
+</model>
+
+<model>
+  <name>bank-pitch_fix</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Bank-Pitch/bank-pitch.xml</path>
 </model>
 
 </PropertyList>

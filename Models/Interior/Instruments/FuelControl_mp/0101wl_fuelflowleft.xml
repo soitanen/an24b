@@ -3,13 +3,13 @@
 <!-- Fuel flow to left engine -->
 
 <PropertyList>
- <path>../../shared/lamps/warninglamp03.ac</path>
+ <path>../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../shared/lamps/warninglamp03green.png</texture>
+ <texture>../../shared/lamps/sltsngreen.png</texture>
 </animation>
 
 <animation>

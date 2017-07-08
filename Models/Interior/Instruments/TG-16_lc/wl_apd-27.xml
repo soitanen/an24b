@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 
-<!-- Nosewheel steering by handle ON -->
+<!-- Fuel transfer to right engine -->
 
 <PropertyList>
- <path>../../../shared/lamps/warninglamp03.ac</path>
+ <path>../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/warninglamp03bluegreenplain.png</texture>
+ <texture>../../shared/lamps/sltsnwhite.png</texture>
 </animation>
 
 <animation>
  <type>select</type>
  <condition>
-   <equals>
-    <property>an24/lights/instrlights</property>
-    <value>1</value>
-   </equals>
+   <greater-than>
+    <property>an24/APD-27/cold-warm-proc-run</property>
+    <value>0</value>
+   </greater-than>
   </condition>
  <object-name>lampon</object-name>
 </animation>

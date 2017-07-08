@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 
-<!-- 2PP-250; RV-UM switch, left panel -->
+<!-- Cold start of TG-16 switch -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../shared/switches/switch03.ac</path>
+
+<!--
 
  <animation>
   <type>pick</type>
@@ -15,7 +17,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("instrumentation/radar-altimeter/serviceable", 1.0, 0.1 );
+        interpolate("controls/electric/engine[2]/generator", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -37,7 +39,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("instrumentation/radar-altimeter/serviceable", 0.0, 0.1 );
+        interpolate("controls/electric/engine[2]/generator", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -46,16 +48,19 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>instrumentation/radar-altimeter/serviceable</property>
+   <property>controls/electric/engine[2]/generator</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-35.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>35.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
-    <y>-1.0</y>
+    <y>1.0</y>
     <z>0.0</z>
   </axis>
  </animation>
 
+-->
+
 </PropertyList>
+

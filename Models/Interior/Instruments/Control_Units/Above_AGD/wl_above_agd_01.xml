@@ -3,13 +3,13 @@
 <!-- One of 3 lamps above left AGD -->
 
 <PropertyList>
- <path>../../../shared/lamps/warninglamp03.ac</path>
+ <path>../../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/warninglamp03bluegreenplain.png</texture>
+ <texture>../../../shared/lamps/sltsnbluegreenplain.png</texture>
 </animation>
 
 <animation>

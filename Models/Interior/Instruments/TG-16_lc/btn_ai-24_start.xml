@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
-<!-- template for start btn -->
+<!-- template for "discontinue start" btn -->
 
 <PropertyList>
- <path>../../shared/switches/spring_load_btn02.ac</path>
+ <path>../../shared/switches/spring_load_btn01.ac</path>
 
-<animation>
+<!--animation>
   <type>pick</type>
   <object-name>press_me</object-name>
   <visible>true</visible>
@@ -25,7 +25,7 @@
       </binding>
     </mod-up>
   </action>
-</animation>
+</animation-->
 
 <animation>
   <type>translate</type>

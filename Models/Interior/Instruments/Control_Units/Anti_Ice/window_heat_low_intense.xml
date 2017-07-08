@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<!-- Window heating switches (low and intensive mode) -->
+
+<PropertyList>
+
+<model>
+ <path>sw_low-left.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.114</x-m>
+    <y-m>-0.7865</y-m>
+    <z-m>0.662</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_intense-left.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.114</x-m>
+    <y-m>-0.8121</y-m>
+    <z-m>0.662</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_low-right.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.14</x-m>
+    <y-m>0.7216</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_intense-right.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.14</x-m>
+    <y-m>0.7494</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+</PropertyList>

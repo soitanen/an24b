@@ -34,7 +34,7 @@ functionality not to be taken too seriously atm! -->
 </model>
 
 <model>
- <path>0102wl_annularvalve.xml</path>
+ <path>0102wl_crossfeed.xml</path>
   <offsets>
     <x-m>-0.002</x-m>
     <y-m>0.0</y-m>
@@ -157,7 +157,7 @@ functionality not to be taken too seriously atm! -->
 </model>
 
 <model>
- <path>0404sw_annularvalve.xml</path>
+ <path>0404sw_crossfeed.xml</path>
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>0.0</y-m>

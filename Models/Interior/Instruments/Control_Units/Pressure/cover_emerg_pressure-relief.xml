@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 
-<!-- template for covered "glavn." sw -->
+<!-- Emergency pressure-relief -->
 
 <PropertyList>
- <path>../../shared/switches/covered_switch01.ac</path>
+ <path>../../../shared/switches/covered_switch01.ac</path>
+<!-- Cover -->
 
 <animation>
   <type>pick</type>
@@ -15,11 +16,11 @@
     <binding>
       <command>nasal</command>
       <script>
-        if( getprop("an24/animations/switches/TG-16/sw02" ) == 1.0 ){
-        interpolate("an24/animations/switches/TG-16/sw02", 0.0, 0.2 );
+        if( getprop("instrumentation/Pressure/cvr_press-relief" ) == 1.0 ){
+        interpolate("instrumentation/Pressure/cvr_press-relief", 0.0, 0.2 );
         }
         else {
-        interpolate("an24/animations/switches/TG-16/sw02", 1.0, 0.2 );
+        interpolate("instrumentation/Pressure/cvr_press-relief", 1.0, 0.2 );
         }
       </script>
     </binding>
@@ -29,14 +30,14 @@
  <animation>
    <type>rotate</type>
    <object-name>cover</object-name>
-   <property>an24/animations/switches/TG-16/sw02</property>
-   <factor>80</factor>
+   <property>instrumentation/Pressure/cvr_press-relief</property>
+   <factor>140</factor>
   <axis>
     <x>1</x>
     <y>0</y>
     <z>0</z>
   </axis>
  </animation>
+ 
 
 </PropertyList>
-
