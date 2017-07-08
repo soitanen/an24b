@@ -1050,6 +1050,17 @@
   </offsets>
 </model>
 
+<model>
+  <name>ARK-11</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_rcnavoh/ohark-11.xml</path>
+  <offsets>
+    <x-m>2.43</x-m>
+    <y-m>-0.2</y-m>
+    <z-m>1.39</z-m>
+    <pitch-deg>-189</pitch-deg>
+  </offsets>
+</model>
+
 <!-- ******************************** lamps and switches *********************************** -->
 
 <model>

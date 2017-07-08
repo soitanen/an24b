@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+
+<!-- ARK-11, remote panel of the ARK-P (ADF) system  -->
+
+<PropertyList>
+ <path>ark-11.ac</path>
+
+<!-- Mode selector OFF-Compass1-Sense-Compass2-Frame -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>mode_handle</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/an24/ark-11/mode</property>
+      <factor>1</factor>
+      <min>0</min>
+      <max>4</max>                
+      <wrap>false</wrap>
+     </binding>
+     <binding>
+      <command>nasal</command>
+      <script>
+         if( getprop("an24/ark-11/mode" ) > 0.0 ){
+         setprop("instrumentation/adf/ident-audible", 1.0);
+         }
+         else {
+         setprop("instrumentation/adf/ident-audible", 0.0);
+         }
+      </script>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>mode_handle</object-name>
+  <type>rotate</type>
+   <property>/an24/ark-11/mode</property>
+   <factor>40</factor>
+  <center>
+   <x-m>-0.0749</x-m>
+   <y-m>-0.0958</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+ </animation>
+
+<!-- Volume control -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>vol_general</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/an24/ark-11/oh_volume-norm</property>
+      <factor>0.05</factor>
+      <min>0</min>
+      <max>1</max>                
+      <wrap>false</wrap>
+     </binding>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/adf/volume-norm</property>
+      <factor>-0.05</factor>
+      <min>0</min>
+      <max>1</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>vol_general</object-name>
+  <type>rotate</type>
+   <property>/an24/ark-11/oh_volume-norm</property>
+   <factor>400</factor>
+  <center>
+   <x-m>0.0703</x-m>
+   <y-m>-0.0124</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+ </animation>
+
+
+<!-- Fixed Frequency buttons 1-9 / "P" button for smooth tuning mode-->
+
+<animation>
+  <type>pick</type>
+  <object-name>freqp</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ark-11/fixfreqanim", 1.0, 0.2, 0.0, 0.2 );
+        setprop("an24/ark-11/fixfreq", 0 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix1</object-name>
+  <property>an24/ark-11/fixfreqanim</property>
+  <factor>0.001</factor>
+  <condition>
+   <equals>
+    <property>an24/ark-11/fixfreq</property>
+    <value>1</value>
+   </equals>
+  </condition>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <object-name>fix1</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ark-11/fixfreqanim", 1.0, 0.2, 0.0, 0.2 );
+        setprop("an24/ark-11/fixfreq", 1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix1</object-name>
+  <property>an24/ark-11/fixfreqanim</property>
+  <factor>0.001</factor>
+  <condition>
+   <equals>
+    <property>an24/ark-11/fixfreq</property>
+    <value>1</value>
+   </equals>
+  </condition>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ark-11/fixfreqanim", 1.0, 0.2 );
+        setprop("an24/ark-11/fixfreq", 2 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix2</object-name>
+  <property>an24/ark-11/fixfreqanim</property>
+  <factor>0.001</factor>
+  <condition>
+   <equals>
+    <property>an24/ark-11/fixfreq</property>
+    <value>2</value>
+   </equals>
+  </condition>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix3</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ark-11/fixfreqanim", 1.0, 0.2, 0.0, 0.2 );
+        setprop("an24/ark-11/fixfreq", 3 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix3</object-name>
+  <property>an24/ark-11/fixfreqanim</property>
+  <factor>0.001</factor>
+  <condition>
+   <equals>
+    <property>an24/ark-11/fixfreq</property>
+    <value>3</value>
+   </equals>
+  </condition>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix4</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ark-11/fixfreqanim", 1.0, 0.2, 0.0, 0.2 );
+        setprop("an24/ark-11/fixfreq", 4 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix4</object-name>
+  <property>an24/ark-11/fixfreqanim</property>
+  <factor>0.001</factor>
+  <condition>
+   <equals>
+    <property>an24/ark-11/fixfreq</property>
+    <value>4</value>
+   </equals>
+  </condition>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<!-- Sub-band handle -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>subband_handle</object-name>
+    <action>
+    <binding>
+     <command>property-cycle</command>
+      <property>/an24/ark-11/sub-band-khz</property>
+      <value type="string">0</value>
+      <value type="string">120</value>
+      <value type="string">280</value>
+      <value type="string">420</value>
+      <value type="string">580</value>
+      <value type="string">720</value>
+      <value type="string">880</value>
+      <value type="string">1020</value>
+      <value type="string">1180</value>
+      <wrap>false</wrap>
+      </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>subband_handle</object-name>
+  <type>rotate</type>
+   <property>/an24/ark-11/sub-band-khz</property>
+    <interpolation>
+     <entry>
+      <ind>0.0</ind> <dep>0.0</dep>
+     </entry>
+     <entry>
+      <ind>120.0</ind> <dep>40.0</dep>
+     </entry>
+     <entry>
+      <ind>280.0</ind> <dep>80.0.0</dep>
+     </entry>
+     <entry>
+      <ind>420.0</ind> <dep>120.0</dep>
+     </entry>
+     <entry>
+      <ind>580.0</ind> <dep>160.0</dep>
+     </entry>
+     <entry>
+      <ind>720.0</ind> <dep>200.0</dep>
+     </entry>
+     <entry>
+      <ind>880.0</ind> <dep>240.0</dep>
+     </entry>
+     <entry>
+      <ind>1020.0</ind> <dep>280.0</dep>
+     </entry>
+     <entry>
+      <ind>1180.0</ind> <dep>320.0</dep>
+     </entry>
+    </interpolation>             
+  <center>
+   <x-m>0.0452</x-m>
+   <y-m>-0.068</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>subband_lock</object-name>
+  <type>rotate</type>
+   <property>/an24/ark-11/sub-band-khz</property>
+    <interpolation>
+     <entry>
+      <ind>0.0</ind> <dep>0.0</dep>
+     </entry>
+     <entry>
+      <ind>120.0</ind> <dep>40.0</dep>
+     </entry>
+     <entry>
+      <ind>280.0</ind> <dep>80.0.0</dep>
+     </entry>
+     <entry>
+      <ind>420.0</ind> <dep>120.0</dep>
+     </entry>
+     <entry>
+      <ind>580.0</ind> <dep>160.0</dep>
+     </entry>
+     <entry>
+      <ind>720.0</ind> <dep>200.0</dep>
+     </entry>
+     <entry>
+      <ind>880.0</ind> <dep>240.0</dep>
+     </entry>
+     <entry>
+      <ind>1020.0</ind> <dep>280.0</dep>
+     </entry>
+     <entry>
+      <ind>1180.0</ind> <dep>320.0</dep>
+     </entry>
+    </interpolation>             
+  <center>
+   <x-m>0.0452</x-m>
+   <y-m>-0.068</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+ </animation>
+
+
+<!--
+    <interpolation>
+     <entry>
+      <ind>0.0</ind> <dep>0.0</dep>
+     </entry>
+     <entry>
+      <ind>1.0</ind> <dep>120.0</dep>
+     </entry>
+     <entry>
+      <ind>2.0</ind> <dep>280.0</dep>
+     </entry>
+     <entry>
+      <ind>3.0</ind> <dep>420.0</dep>
+     </entry>
+     <entry>
+      <ind>4.0</ind> <dep>580.0</dep>
+     </entry>
+     <entry>
+      <ind>5.0</ind> <dep>720.0</dep>
+     </entry>
+    </interpolation>             
+
+
+ 
+     Text OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">ARK-11 ADF</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>
