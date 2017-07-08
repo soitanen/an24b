@@ -12,6 +12,43 @@
     </offsets>
 
 <animation>
+  <name>exterior</name>
+  <object-name>fuselage</object-name>
+  <object-name>carcodoor</object-name>
+  <object-name>geardoorL2</object-name>
+  <object-name>geardoorR2</object-name>
+  <object-name>geardoorL3</object-name>
+  <object-name>geardoorR3</object-name>
+  <object-name>geardoorL1</object-name>
+  <object-name>geardoorL1</object-name>
+  <!--object-name>wings</object-name-->
+  <object-name>vtail</object-name>
+  <object-name>htail</object-name>
+  <object-name>mainwheels_left</object-name>
+  <object-name>mainwheels_right</object-name>
+  <object-name>folding_strut_30deg</object-name>
+  <object-name>cardan_joint</object-name>
+  <object-name>damper_strut_main</object-name>
+  <object-name>folding_strut_30deg</object-name>
+  <object-name>top_link</object-name>
+  <object-name>bottom_link</object-name>
+  <object-name>hose</object-name>
+  <object-name>frontwheels</object-name>
+  <object-name>folding_strut_30deg</object-name>
+  <object-name>damper_strut_front</object-name>
+  <object-name>damper_strut2_front</object-name>
+  <object-name>lever_centering</object-name>
+  <object-name>pitot1</object-name>
+  <object-name>pitot2</object-name>
+  <object-name>flapinnerL</object-name>
+  <object-name>flapinnerR</object-name>
+  <object-name>flapcenterL</object-name>
+  <object-name>flapcenterR</object-name>
+  <object-name>aileronL</object-name>
+  <object-name>aileronR</object-name>
+ </animation>
+
+<animation>
   <type>select</type>
   <object-name>exterior</object-name>
   <condition>

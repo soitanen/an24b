@@ -3,16 +3,6 @@
 <PropertyList>
  <path>cockpit.ac</path>
 
-<animation>
-  <type>select</type>
-  <object-name>exterior</object-name>
-  <condition>
-    <not>
-    	<property>/sim/current-view/internal</property>
-    </not>
-  </condition>
-</animation>
-
 <!--Cockpit animations-->
 
 <!--Yoke-->
@@ -625,7 +615,7 @@
 <!-- *************************************** -->
 
 <model>
-  <name>RPSN_Bock4P</name>
+  <name>RPSN_Block4P</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4p.xml</path>
   <offsets>
     <x-m>1.9</x-m>
@@ -923,11 +913,11 @@
 <!--************************** left console ***************************-->
 <model>
   <name>SPU-7</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnav/lcspu-7.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/lcspu-7.xml</path>
   <offsets>
     <x-m>2.5086</x-m>
-    <y-m>-0.96</y-m>
-    <z-m>0.69</z-m>
+    <y-m>-0.98</y-m>
+    <z-m>0.7</z-m>
     <heading-deg>84</heading-deg>
   </offsets>
 </model>
@@ -1009,12 +999,12 @@
 
 <model>
   <name>SPU-7</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnav/rcspu-7.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/rcspu-7.xml</path>
   <offsets>
-    <x-m>2.22</x-m>
-    <y-m>0.92</y-m>
-    <z-m>0.632</z-m>
-    <heading-deg>-90</heading-deg>
+    <x-m>2.266</x-m>
+    <y-m>0.935</y-m>
+    <z-m>0.64</z-m>
+    <heading-deg>-84</heading-deg>
   </offsets>
 </model>
 

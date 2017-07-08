@@ -1,0 +1,1241 @@
+<PropertyList>
+
+<!-- safety fuse panel, from top to bottom rows (01xx-07xx) and left to right (xx01-xx18);
+functionality not to be taken too seriously atm! -->
+
+  <path>circuitbreakerpanel.ac</path>
+<!--
+ <animation>
+  <type>material</type>
+  <object-name>background</object-name>
+  <condition>
+   <equals>
+    <property>an24/lights/instrlights</property>
+    <value>1.0</value>
+   </equals>
+  </condition>
+  <emission>
+   <red>1.0</red>
+   <green>0.5</green>
+   <blue>0.5</blue>
+   <factor-prop>an24/lights/instrlights</factor-prop>
+  </emission>
+ </animation>
+-->
+<!-- ************ 01st row *********** -->
+
+<model>
+ <path>0101sw.xml</path>
+  <offsets>
+    <x-m>-0.2026</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0102sw.xml</path>
+  <offsets>
+    <x-m>-0.182</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0103sw.xml</path>
+  <offsets>
+    <x-m>-0.161</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0104sw.xml</path>
+  <offsets>
+    <x-m>-0.14</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0105sw.xml</path>
+  <offsets>
+    <x-m>-0.119</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0106sw.xml</path>
+  <offsets>
+    <x-m>-0.0977</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0107sw.xml</path>
+  <offsets>
+    <x-m>-0.0768</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0108sw.xml</path>
+  <offsets>
+    <x-m>-0.0558</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0109sw.xml</path>
+  <offsets>
+    <x-m>-0.0348</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0110sw.xml</path>
+  <offsets>
+    <x-m>-0.0138</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0111sw.xml</path>
+  <offsets>
+    <x-m>0.0072</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0112sw.xml</path>
+  <offsets>
+    <x-m>0.028</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0113sw.xml</path>
+  <offsets>
+    <x-m>0.049</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0114sw.xml</path>
+  <offsets>
+    <x-m>0.07</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0115sw.xml</path>
+  <offsets>
+    <x-m>0.0911</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0116sw.xml</path>
+  <offsets>
+    <x-m>0.112</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0117sw.xml</path>
+  <offsets>
+    <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+
+<!-- ************* 02nd row ************ -->
+
+<model>
+ <path>0201sw.xml</path>
+  <offsets>
+    <x-m>-0.2026</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0202sw.xml</path>
+  <offsets>
+    <x-m>-0.182</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0203sw.xml</path>
+  <offsets>
+    <x-m>-0.161</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0204sw.xml</path>
+  <offsets>
+    <x-m>-0.14</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0205sw.xml</path>
+  <offsets>
+    <x-m>-0.119</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0206sw.xml</path>
+  <offsets>
+    <x-m>-0.0977</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0207sw.xml</path>
+  <offsets>
+    <x-m>-0.0768</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0208sw.xml</path>
+  <offsets>
+    <x-m>-0.0558</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0209sw.xml</path>
+  <offsets>
+    <x-m>-0.0348</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0210sw.xml</path>
+  <offsets>
+    <x-m>-0.0138</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0211sw.xml</path>
+  <offsets>
+    <x-m>0.0072</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0212sw.xml</path>
+  <offsets>
+    <x-m>0.028</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0213sw.xml</path>
+  <offsets>
+    <x-m>0.049</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0214sw.xml</path>
+  <offsets>
+    <x-m>0.07</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0215sw.xml</path>
+  <offsets>
+    <x-m>0.0911</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0216sw.xml</path>
+  <offsets>
+    <x-m>0.112</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0217sw.xml</path>
+  <offsets>
+    <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<!-- ************* 03rd row ************ -->
+
+<model>
+ <path>0301sw.xml</path>
+  <offsets>
+    <x-m>-0.2026</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0302sw.xml</path>
+  <offsets>
+    <x-m>-0.182</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0303sw.xml</path>
+  <offsets>
+    <x-m>-0.161</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0304sw.xml</path>
+  <offsets>
+    <x-m>-0.14</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0305sw.xml</path>
+  <offsets>
+    <x-m>-0.119</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0306sw.xml</path>
+  <offsets>
+    <x-m>-0.0977</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0307sw.xml</path>
+  <offsets>
+    <x-m>-0.0768</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0308sw.xml</path>
+  <offsets>
+    <x-m>-0.0558</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0309sw.xml</path>
+  <offsets>
+    <x-m>-0.0348</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0310sw.xml</path>
+  <offsets>
+    <x-m>-0.0138</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0311sw.xml</path>
+  <offsets>
+    <x-m>0.0072</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0312sw.xml</path>
+  <offsets>
+    <x-m>0.028</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0313sw.xml</path>
+  <offsets>
+    <x-m>0.049</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0314sw.xml</path>
+  <offsets>
+    <x-m>0.07</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0315sw.xml</path>
+  <offsets>
+    <x-m>0.0911</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0316sw.xml</path>
+  <offsets>
+    <x-m>0.112</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0317sw.xml</path>
+  <offsets>
+    <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<!-- ************* 04th row ************ -->
+
+<model>
+ <path>0401sw.xml</path>
+  <offsets>
+    <x-m>-0.2026</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0402sw.xml</path>
+  <offsets>
+    <x-m>-0.182</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0403sw.xml</path>
+  <offsets>
+    <x-m>-0.161</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0404sw.xml</path>
+  <offsets>
+    <x-m>-0.14</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0405sw.xml</path>
+  <offsets>
+    <x-m>-0.119</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0406sw.xml</path>
+  <offsets>
+    <x-m>-0.0977</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0407sw.xml</path>
+  <offsets>
+    <x-m>-0.0768</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0408sw.xml</path>
+  <offsets>
+    <x-m>-0.0558</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0409sw.xml</path>
+  <offsets>
+    <x-m>-0.0348</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0410sw.xml</path>
+  <offsets>
+    <x-m>-0.0138</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0411sw.xml</path>
+  <offsets>
+    <x-m>0.0072</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0412sw.xml</path>
+  <offsets>
+    <x-m>0.028</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0413sw.xml</path>
+  <offsets>
+    <x-m>0.049</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0414sw.xml</path>
+  <offsets>
+    <x-m>0.07</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0415sw.xml</path>
+  <offsets>
+    <x-m>0.0911</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0416sw.xml</path>
+  <offsets>
+    <x-m>0.112</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0417sw.xml</path>
+  <offsets>
+    <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<!-- ************* 05th row ************ -->
+
+<model>
+ <path>0501sw.xml</path>
+  <offsets>
+    <x-m>-0.2026</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0502sw.xml</path>
+  <offsets>
+    <x-m>-0.182</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0503sw.xml</path>
+  <offsets>
+    <x-m>-0.161</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0504sw.xml</path>
+  <offsets>
+    <x-m>-0.14</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0505sw.xml</path>
+  <offsets>
+    <x-m>-0.119</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0506sw.xml</path>
+  <offsets>
+    <x-m>-0.0977</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0507sw.xml</path>
+  <offsets>
+    <x-m>-0.0768</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0508sw.xml</path>
+  <offsets>
+    <x-m>-0.0558</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0509sw.xml</path>
+  <offsets>
+    <x-m>-0.0348</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0510sw.xml</path>
+  <offsets>
+    <x-m>-0.0138</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0511sw.xml</path>
+  <offsets>
+    <x-m>0.0072</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0512sw.xml</path>
+  <offsets>
+    <x-m>0.028</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0513sw.xml</path>
+  <offsets>
+    <x-m>0.049</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0514sw.xml</path>
+  <offsets>
+    <x-m>0.07</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0515sw.xml</path>
+  <offsets>
+    <x-m>0.0911</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0516sw.xml</path>
+  <offsets>
+    <x-m>0.112</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0517sw.xml</path>
+  <offsets>
+    <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0518sw.xml</path>
+  <offsets>
+    <x-m>0.154</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1321</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<!-- ************* 06th row ************ -->
+
+<model>
+ <path>0601sw.xml</path>
+  <offsets>
+    <x-m>-0.2026</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0602sw.xml</path>
+  <offsets>
+    <x-m>-0.182</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0603sw.xml</path>
+  <offsets>
+    <x-m>-0.161</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0604sw.xml</path>
+  <offsets>
+    <x-m>-0.14</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0605sw.xml</path>
+  <offsets>
+    <x-m>-0.119</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0606sw.xml</path>
+  <offsets>
+    <x-m>-0.0977</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0607sw.xml</path>
+  <offsets>
+    <x-m>-0.0768</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0608sw.xml</path>
+  <offsets>
+    <x-m>-0.0558</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0609sw.xml</path>
+  <offsets>
+    <x-m>-0.0348</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0610sw.xml</path>
+  <offsets>
+    <x-m>-0.0138</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0611sw.xml</path>
+  <offsets>
+    <x-m>0.0072</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0612sw.xml</path>
+  <offsets>
+    <x-m>0.028</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0613sw.xml</path>
+  <offsets>
+    <x-m>0.049</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0614sw.xml</path>
+  <offsets>
+    <x-m>0.07</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0615sw.xml</path>
+  <offsets>
+    <x-m>0.0911</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0616sw.xml</path>
+  <offsets>
+    <x-m>0.112</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0617sw.xml</path>
+  <offsets>
+    <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<!-- ************* 07th row ************ -->
+
+<model>
+ <path>0701sw.xml</path>
+  <offsets>
+    <x-m>-0.2026</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0702sw.xml</path>
+  <offsets>
+    <x-m>-0.182</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0703sw.xml</path>
+  <offsets>
+    <x-m>-0.161</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0704sw.xml</path>
+  <offsets>
+    <x-m>-0.14</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0705sw.xml</path>
+  <offsets>
+    <x-m>-0.119</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0706sw.xml</path>
+  <offsets>
+    <x-m>-0.0977</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0707sw.xml</path>
+  <offsets>
+    <x-m>-0.0768</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0708sw.xml</path>
+  <offsets>
+    <x-m>-0.0558</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0709sw.xml</path>
+  <offsets>
+    <x-m>-0.0348</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0710sw.xml</path>
+  <offsets>
+    <x-m>-0.0138</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0711sw.xml</path>
+  <offsets>
+    <x-m>0.0072</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0712sw.xml</path>
+  <offsets>
+    <x-m>0.028</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0713sw.xml</path>
+  <offsets>
+    <x-m>0.049</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0714sw.xml</path>
+  <offsets>
+    <x-m>0.07</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0715sw.xml</path>
+  <offsets>
+    <x-m>0.0911</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0716sw.xml</path>
+  <offsets>
+    <x-m>0.112</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0717sw.xml</path>
+  <offsets>
+    <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+
+</PropertyList>

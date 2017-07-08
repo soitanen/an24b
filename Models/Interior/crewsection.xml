@@ -3,6 +3,44 @@
 <PropertyList>
  <path>crewsection.ac</path>
 
+<animation>
+  <type>pick</type>
+  <object-name>cockpitdoor</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/animations/cockpitdoor" ) == 1.0 ){
+        interpolate("an24/animations/cockpitdoor", 0.0, 1.0 );
+        }
+        else {
+        interpolate("an24/animations/cockpitdoor", 1.0, 1.0 );
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>cockpitdoor</object-name>
+  <property>an24/animations/cockpitdoor</property>
+  <factor>80.0</factor>
+  <center>
+    <x-m>3.9792</x-m>
+    <y-m>-0.2841</y-m>
+    <z-m>1.2262</z-m>    
+  </center>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>    
+  </axis>
+</animation>
+
 <model>
   <name>RPSN-2</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4sh.xml</path>
@@ -16,12 +54,46 @@
 
 <model>
   <name>SPU-7</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnav/navspu-7.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/navspu-7.xml</path>
   <offsets>
     <x-m>3.77</x-m>
     <y-m>-0.76</y-m>
     <z-m>1.01</z-m>
     <heading-deg>175</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>SPU-7</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/engspu-7.xml</path>
+  <offsets>
+    <x-m>3.88</x-m>
+    <y-m>0.889</y-m>
+    <z-m>0.65</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+
+<model>
+  <name>115_36VAC_Panel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/115_36VAC_panel_eng/115_36vac.xml</path>
+  <offsets>
+    <x-m>3.757</x-m>
+    <y-m>1.063</y-m>
+    <z-m>0.616</z-m>
+    <heading-deg>232</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>CircuitBreakerPanel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/CircuitBreakerPanel_eng/circuitbreakerpanel.xml</path>
+  <offsets>
+    <x-m>3.25</x-m>
+    <y-m>0.9</y-m>
+    <z-m>1.1</z-m>
+    <roll-deg>35</roll-deg>
   </offsets>
 </model>
 
