@@ -1,0 +1,151 @@
+<PropertyList>
+
+<!-- Overhead panel with warning and signaling lights, extinguishing and feathering options in case of engine fire/failure -->
+
+  <path>fireandfeather.ac</path>
+<!--
+ <animation>
+  <type>material</type>
+  <object-name>background</object-name>
+  <condition>
+   <equals>
+    <property>an24/lights/instrlights</property>
+    <value>1.0</value>
+   </equals>
+  </condition>
+  <emission>
+   <red>1.0</red>
+   <green>0.5</green>
+   <blue>0.5</blue>
+   <factor-prop>an24/lights/instrlights</factor-prop>
+  </emission>
+ </animation>
+-->
+
+<!-- ************ Top row *********** -->
+
+<model>
+ <path>wl0101.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.038</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0102.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0582</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+
+<model>
+ <path>wl0103.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0785</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0104.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.098</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0105.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.12</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0106.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.14</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0107.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.161</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0108.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.182</y-m>
+    <z-m>0.026</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<!-- ************ 2nd row *********** -->
+
+<model>
+ <path>wl0201.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.038</y-m>
+    <z-m>0.049</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+
+<model>
+ <path>wl0202.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0582</y-m>
+    <z-m>0.049</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0203.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0785</y-m>
+    <z-m>0.049</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0204.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.098</y-m>
+    <z-m>0.049</z-m>
+    <pitch-deg>180</pitch-deg>
+  </offsets>
+</model>
+
+</PropertyList>

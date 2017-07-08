@@ -287,7 +287,8 @@
   </axis>
 </animation>
 
-<!--Controls-->
+<!--
+
 <animation>
   <type>rotate</type>
   <object-name>Knob</object-name>
@@ -304,7 +305,7 @@
     <z>0.0</z>
   </axis>
 </animation>
-<!--Mouse wheel-->
+
 <animation>
   <type>pick</type>
   <object-name>Knob</object-name>
@@ -337,5 +338,7 @@
     </binding>
   </action>
 </animation>
+
+-->
 
 </PropertyList>

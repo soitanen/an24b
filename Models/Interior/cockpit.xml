@@ -981,6 +981,19 @@
   </offsets>
 </model>
 
+<!--********************************************-->
+
+<model>
+  <name>FireandFeather</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/FireandFeatherPanel_oh/fireandfeather.xml</path>
+  <offsets>
+    <x-m>2.14</x-m>
+    <y-m>0.0</y-m>
+    <z-m>1.34</z-m>
+    <pitch-deg>-110</pitch-deg>
+  </offsets>
+</model>
+
 <!-- ******************************** lamps and switches *********************************** -->
 
 <model>
