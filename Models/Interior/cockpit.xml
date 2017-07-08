@@ -362,7 +362,7 @@
 
 <model>
   <name>Achs-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-2_lpmp/mpachs-2.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-2_mprc/mpachs-2.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.2223</y-m>
@@ -573,19 +573,6 @@
     <z-m>1.0485</z-m>
   </offsets>
 </model>
-
-<!-- *************************************** -->
-
-<model>
-  <name>manometer</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/manometer/mano.xml</path>
-  <offsets>
-    <x-m>2.092</x-m>
-    <y-m>-0.3851</y-m>
-    <z-m>0.8405</z-m>
-  </offsets>
-</model>
-
 
 <!-- *************************************** -->
 
@@ -925,25 +912,25 @@
 <!--********************************************-->
 
 <model>
-  <name>manometer</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/manometer/mano.xml</path>
-  <offsets>
-    <x-m>2.7445</x-m>
-    <y-m>-0.9898</y-m>
-    <z-m>0.5423</z-m>
-    <heading-deg>84</heading-deg>
-  </offsets>
-</model>
-
-<!--********************************************-->
-
-<model>
   <name>tct</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/TCT_lc/tct.xml</path>
   <offsets>
     <x-m>2.375</x-m>
     <y-m>-0.958</y-m>
     <z-m>0.5389</z-m>
+    <heading-deg>84</heading-deg>
+  </offsets>
+</model>
+
+<!-- *************************************** -->
+
+<model>
+  <name>UIZ-3-TG-16</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/UIx-xxx_mplc/lc_uiz-3.xml</path>
+  <offsets>
+    <x-m>2.7153</x-m>
+    <y-m>-0.9907</y-m>
+    <z-m>0.5524</z-m>
     <heading-deg>84</heading-deg>
   </offsets>
 </model>
@@ -1007,6 +994,18 @@
     <heading-deg>-84</heading-deg>
   </offsets>
 </model>
+
+<model>
+  <name>Achs-2</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-2_mprc/rcachs-2.xml</path>
+  <offsets>
+    <x-m>2.5517</x-m>
+    <y-m>0.972</y-m>
+    <z-m>0.700</z-m>
+    <heading-deg>-84</heading-deg>
+  </offsets>
+</model>
+
 
 <!--************************** OVERHEAD ***************************-->
 

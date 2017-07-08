@@ -1,25 +1,56 @@
 <?xml version="1.0"?>
 
-<!-- Hydro system pressure indicator by Yurik V. Nikiforoff -->
+<!-- Achs-2, clock right console-->
 
 <PropertyList>
+ <path>achs-2.ac</path>
 
- <path>mano.ac</path>
+<animation>
+  <type>rotate</type>
+  <object-name>hour_needle</object-name>
+  <property>/instrumentation/clock/indicated-min</property>
+  <factor>-0.5</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>hour_needle</object-name>
+  <property>/instrumentation/clock/local-hour</property>
+  <factor>-30.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>min_needle</object-name>
+  <property>/instrumentation/clock/indicated-sec</property>
+  <factor>-0.1</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>sec_needle</object-name>
+  <property>/instrumentation/clock/indicated-sec</property>
+  <factor>-6.0</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 
- <animation>
-  <type>material</type>
-  <object-name>base</object-name>
-  <object-name>needle</object-name>
-  <object-name>face</object-name>
-   <emission>
-     <red>1.0</red>
-     <green>1.0</green>
-     <blue>1.0</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
-   </emission>
- </animation>
-
-<!-- Text OSG -->
+<!-- TEXT OSG -->
 
   <animation>
     <type>select</type>
@@ -32,7 +63,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">mano meter</text>
+    <text type="string">Achs-2 Clock</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
@@ -51,6 +82,7 @@
       <z-m>  0.000 </z-m>
     </offsets>
   </text>
+
   <animation>
     <type>material</type>
     <object-name>textosg</object-name>
@@ -60,27 +92,5 @@
       <blue>  1.0 </blue>
     </emission>
   </animation>
- 
-<!--Needles
-<animation>
-    <type>rotate</type>
-    <object-name>needle</object-name>
-   <property>fdm/jsbsim/hs/hs1-pressure</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	-65.0</dep></entry>
-      <entry><ind>	120.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	240.0</ind>	<dep>	65.0</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>-0.00172</z-m>
-  </center>
-    <axis>
-      <x>-1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-</animation>
--->
+
 </PropertyList>
