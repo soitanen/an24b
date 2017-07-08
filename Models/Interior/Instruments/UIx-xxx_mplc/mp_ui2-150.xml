@@ -1,16 +1,14 @@
 <?xml version="1.0"?>
 
-<!-- EMI-3RTI, APU oil pressure and temperature
-and fuel pressure indicator -->
+<!-- UI2-150 of 2DIM-150; brake pressure -->
 
 <PropertyList>
- <path>emi-3rti_6cm.ac</path>
+ <path>ui2-150.ac</path>
 
  <animation>
    <type>material</type>
-   <object-name>pressure_1</object-name>
-   <object-name>pressure_2</object-name>
-   <object-name>temperature</object-name>
+   <object-name>left_needle</object-name>
+   <object-name>left_needle</object-name>
    <object-name>housing</object-name>
    <emission>
      <red>1.0</red>

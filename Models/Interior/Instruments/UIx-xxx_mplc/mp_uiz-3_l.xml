@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<!-- UIZ-3, indicator of EMI-3RTI, fuel pressure in front of the injectors, oil pressure and oil temperature at the engine inlet -->
+
+<PropertyList>
+ <path>uiz-3_7cm.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>oil_press_needle</object-name>
+   <object-name>fuel_press_needle</object-name>
+   <object-name>oil_temp_needle</object-name>
+   <object-name>housing</object-name>
+   <object-name>pressure_1</object-name>
+   <object-name>pressure_2</object-name>
+   <object-name>temperature</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>an24/lights/instrlights</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>oil_press_needle</object-name>
+  <property>engines/engine[0]/oil-pressure-psi</property>
+   <factor>1.0546</factor>
+   <offset-deg>-60</offset-deg>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>-0.019</y-m>
+    <z-m>-0.012</z-m>
+   </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>oil_temp_needle</object-name>
+  <property>engines/engine[0]/oil-temperature-degf</property>
+  <interpolation>
+    <entry><ind>	-58.0</ind>	<dep> -65.0</dep></entry>
+    <entry><ind>        32.0</ind>	<dep> -36.0</dep></entry>
+    <entry><ind>       122.0</ind>	<dep>  0.0</dep></entry>
+    <entry><ind>       212.0</ind>	<dep> 38.0</dep></entry>
+    <entry><ind>       302.0</ind>	<dep> 63.0</dep></entry>
+  </interpolation>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.019</y-m>
+    <z-m>-0.012</z-m>
+   </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">UZI-3 oil/fuel Ind</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>

@@ -1,47 +1,25 @@
 <?xml version="1.0"?>
 
-<!-- EMI-3RTI, left engine oil pressure and temperature
-and fuel pressure indicator -->
+<!-- UI1-240 of 2DIM-240, Pressure in the main and emergency system; Hydro system pressure indicator by Yurik V. Nikiforoff -->
 
 <PropertyList>
- <path>emi-3rti_7cm.ac</path>
+
+ <path>ui1-240.ac</path>
 
  <animation>
-   <type>material</type>
-   <object-name>oil_pressure_needle</object-name>
-   <object-name>pressure_1_needle</object-name>
-   <object-name>temperature_needle</object-name>
-   <object-name>housing</object-name>
-   <object-name>pressure_1</object-name>
-   <object-name>pressure_2</object-name>
-   <object-name>temperature</object-name>
+  <type>material</type>
+  <object-name>base</object-name>
+  <object-name>needle</object-name>
+  <object-name>face</object-name>
    <emission>
      <red>1.0</red>
-     <green>0.3</green>
-     <blue>0.3</blue>
+     <green>1.0</green>
+     <blue>1.0</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>oil_pressure_needle</object-name>
-  <property>engines/engine[0]/oil-pressure-psi</property>
-   <factor>1.0546</factor>
-   <offset-deg>-60</offset-deg>
-   <center>
-    <x-m>0.0</x-m>
-    <y-m>-0.019</y-m>
-    <z-m>-0.012</z-m>
-   </center>
-  <axis>
-    <x>1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
- </animation>
-
-<!-- TEXT OSG -->
+<!-- Text OSG -->
 
   <animation>
     <type>select</type>
@@ -54,7 +32,7 @@ and fuel pressure indicator -->
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">EMI-3RTI fuel ind</text>
+    <text type="string">UI1-240 Hydro Brake Press.</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
@@ -82,5 +60,27 @@ and fuel pressure indicator -->
       <blue>  1.0 </blue>
     </emission>
   </animation>
-
+ 
+<!--Needles
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+   <property>fdm/jsbsim/hs/hs1-pressure</property>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-65.0</dep></entry>
+      <entry><ind>	120.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	240.0</ind>	<dep>	65.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.00172</z-m>
+  </center>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+-->
 </PropertyList>
