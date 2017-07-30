@@ -3,7 +3,7 @@
 <!-- EUP ON -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/sw2vg-15b.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -47,8 +47,8 @@
    <object-name>lever</object-name>
    <property>an24/instrumentation/eup</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>

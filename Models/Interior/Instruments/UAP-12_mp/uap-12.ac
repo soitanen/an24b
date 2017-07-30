@@ -38,7 +38,7 @@ refs 4
 3 0.050095 0.798566
 kids 0
 OBJECT poly
-name "disk"
+name "n_sector"
 loc -0.00841736 0.0022765 0.123214
 texture "uap-12.png"
 crease 45.000000
@@ -167,7 +167,7 @@ refs 3
 5 0.0531829 0.858682
 kids 0
 OBJECT poly
-name "disk"
+name "housing"
 loc -0.00983103 0.0022765 0.123214
 texture "uap-12.png"
 crease 45.000000

@@ -11,17 +11,17 @@
 3D instrument for Tu-154 -->
 <PropertyList>
  <path>uap-12.ac</path>
+
 <!-- Internal instruments lighting -->
 <animation>
   <type>material</type>
-  <object-name>a_txt</object-name>
-  <object-name>n_txt</object-name>
   <object-name>a_needle</object-name>
   <object-name>n_needle</object-name>
   <object-name>n_max</object-name>
   <object-name>n_min</object-name>
+  <object-name>housing</object-name>
   <object-name>sector</object-name>
-  <object-name>n_blank</object-name>
+  <object-name>n_sector</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>

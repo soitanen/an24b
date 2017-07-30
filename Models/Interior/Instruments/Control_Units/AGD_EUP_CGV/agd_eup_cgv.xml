@@ -8,9 +8,9 @@
  <path>sw_agd.xml</path>
   <offsets>
     <pitch-deg>-25</pitch-deg>
-    <x-m>2.118</x-m>
-    <y-m>-0.74206</y-m>
-    <z-m>0.662</z-m>
+    <x-m>2.125</x-m>
+    <y-m>-0.7421</y-m>
+    <z-m>0.668</z-m>
   </offsets>
 </model>
 
@@ -18,9 +18,9 @@
  <path>sw_eup.xml</path>
   <offsets>
     <pitch-deg>-25</pitch-deg>
-    <x-m>2.114</x-m>
+    <x-m>2.125</x-m>
     <y-m>-0.71648</y-m>
-    <z-m>0.662</z-m>
+    <z-m>0.668</z-m>
   </offsets>
 </model>
 
@@ -28,9 +28,9 @@
  <path>sw_cgv.xml</path>
   <offsets>
     <pitch-deg>-25</pitch-deg>
-    <x-m>2.114</x-m>
+    <x-m>2.125</x-m>
     <y-m>-0.69063</y-m>
-    <z-m>0.662</z-m>
+    <z-m>0.668</z-m>
   </offsets>
 </model>
 
