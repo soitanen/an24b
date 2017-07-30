@@ -85,7 +85,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">EUP-53 Vario</text>
+    <text type="string">EUP-53 Turn Coordinator</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>

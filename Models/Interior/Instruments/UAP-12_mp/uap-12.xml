@@ -44,7 +44,7 @@
 </animation>
 
 
-<!--Warning lamp-->
+<!--Warning lamp
 <animation>
   <type>material</type>
   <object-name>lamp</object-name>
@@ -67,6 +67,7 @@
   </condition>
 </animation>
 
+-->
 
 <!--Needles-->
 <animation>
@@ -125,6 +126,43 @@
 </animation>
 
 <animation>
+  <type>rotate</type>
+  <object-name>n_max</object-name>
+  <property>an24/instrumentation/uap-12/accelerate-max</property>
+  <interpolation>
+    <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
+    <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>
+    <entry><ind>	-1.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	-2.0</ind>	<dep>	-45.0</dep></entry>
+    <entry><ind>	-3.0</ind>	<dep>	-90.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>n_min</object-name>
+  <property>an24/instrumentation/uap-12/accelerate-min</property>
+  <interpolation>
+    <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
+    <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>
+    <entry><ind>	-1.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	-2.0</ind>	<dep>	-45.0</dep></entry>
+    <entry><ind>	-3.0</ind>	<dep>	-90.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!--
+<animation>
   <type>select</type>
   <object-name>n_max</object-name>
   <condition>
@@ -138,10 +176,10 @@
     <property>tu154/instrumentation/uap-12/powered</property>
   </condition>
 </animation>
-
+-->
 <animation>
   <type>pick</type>
-  <object-name>hs</object-name>
+  <object-name>helpmass</object-name>
   <visible>false</visible>
   <action>
     <button>0</button>
@@ -152,6 +190,8 @@
     </binding>
   </action>
 </animation>
+
+
 
 <!-- TEXT OSG -->
 
@@ -166,7 +206,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">UAP-12</text>
+    <text type="string">UAP-12 AoA/G-Meter</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
