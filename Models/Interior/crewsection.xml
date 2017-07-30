@@ -45,7 +45,7 @@
   <name>RPSN-2</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4sh.xml</path>
   <offsets>
-    <x-m>3.1</x-m>
+    <x-m>3.25</x-m>
     <y-m>-0.86</y-m>
     <z-m>0.9</z-m>
     <roll-deg>35</roll-deg>
@@ -56,7 +56,7 @@
   <name>SPU-7</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/navspu-7.xml</path>
   <offsets>
-    <x-m>3.77</x-m>
+    <x-m>3.93</x-m>
     <y-m>-0.76</y-m>
     <z-m>1.01</z-m>
     <heading-deg>175</heading-deg>

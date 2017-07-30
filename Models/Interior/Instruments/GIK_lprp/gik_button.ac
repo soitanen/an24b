@@ -1,8 +1,7 @@
 AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "mat_1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
-kids 2
+kids 1
 OBJECT poly
 name "disk"
 loc 0.00386896 -1.0978e-07 7.79983e-09
@@ -1139,25 +1138,4 @@ refs 3
 11 0.3695 0.548399
 144 0.503148 0.512593
 4 0.383325 0.581772
-kids 0
-OBJECT poly
-name "comp_base_uv"
-loc 0.00328601 4.12464e-05 4.17233e-05
-data 8
-Mesh.013
-texture "compass_1_uv.png"
-crease 80.000000
-numvert 4
--0.0071445 -0.014381 -0.0147984
--0.0071445 -0.014381 0.0148106
--0.0071125 0.014139 0.0148106
--0.0071125 0.014139 -0.0147984
-numsurf 1
-SURF 0x0
-mat 1
-refs 4
-1 0 0
-0 1 0
-3 1 1
-2 0 1
 kids 0

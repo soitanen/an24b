@@ -5,9 +5,10 @@
 
  <animation>
    <type>material</type>
-   <object-name>housing</object-name>
-   <object-name>needle</object-name>
-   <object-name>compass</object-name>
+   <object-name>adf_housing</object-name>
+   <object-name>adf_needle_1</object-name>
+   <object-name>adf_needle_1</object-name>
+   <object-name>adf_compass</object-name>
    <emission>
      <red>1.0</red>
      <green>0.3</green>
@@ -19,7 +20,7 @@
 <!--Needle-->
 <animation>
     <type>rotate</type>
-    <object-name>needle</object-name>
+    <object-name>adf_needle_1</object-name>
     <property>instrumentation/adf/indicated-bearing-deg</property>
     <factor>-1.0</factor>
     <axis>

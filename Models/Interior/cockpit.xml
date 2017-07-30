@@ -70,6 +70,16 @@
 
 <!--Front seats-->
 
+<model>
+  <name>Seats</name>
+  <path>Aircraft/an24b/Models/Interior/seats.ac</path>
+  <offsets>
+    <x-m>2.78</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.3777</z-m>
+  </offsets>
+</model>
+
 <animation>
   <type>pick</type>
   <object-name>armrest</object-name>
@@ -97,57 +107,9 @@
   <property>an24/animations/armrest</property>
   <factor>80.0</factor>
   <center>
-    <x-m>2.9062</x-m>
-    <y-m>0.5939</y-m>
-    <z-m>0.6851</z-m>    
-  </center>
-  <axis>
-    <x>0</x>
-    <y>-1</y>
-    <z>0</z>    
-  </axis>
-</animation>
-
-
-<!--Gustlock-->
-<animation>
- <type>select</type>
- <condition>
-   <equals>
-    <property>an24/animations/gustlock</property>
-    <value>1</value>
-   </equals>
-  </condition>
- <object-name>gustlock</object-name>
-</animation>
-
-<animation>
-  <type>pick</type>
-  <object-name>gustlock</object-name>
-  <visible>true</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-toggle</command>
-      <property>an24/animations/gustlock</property>
-       <value>0</value>
-       <value>1</value>
-    </binding>
-  </action>
-</animation>
-
-<!--Trimwheel-->
-<animation>
-  <type>rotate</type>
-  <object-name>trimwheel</object-name>
-  <property>/controls/flight/elevator-trim</property>
-  <factor>360.0</factor>
-  <offset-deg>0.0</offset-deg>
-  <center>
-    <x-m>2.26298</x-m>
+    <x-m>0.1258</x-m>
     <y-m>0.0</y-m>
-    <z-m>0.59665</z-m>
+    <z-m>0.3076</z-m>    
   </center>
   <axis>
     <x>0</x>
@@ -184,9 +146,9 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>3.12607</x-m>
+    <x-m>0.3454</x-m>
     <y-m>0.0</y-m>
-    <z-m>0.11897</z-m>    
+    <z-m>-0.2587</z-m>    
   </center>
   <axis>
     <x>0</x>
@@ -201,9 +163,9 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>3.12607</x-m>
+    <x-m>0.3454</x-m>
     <y-m>0.0</y-m>
-    <z-m>0.11897</z-m>    
+    <z-m>-0.2587</z-m>
   </center>
   <axis>
     <x>0</x>
@@ -218,9 +180,9 @@
   <property>an24/animations/centerseat</property>
   <factor>100.0</factor>
   <center>
-    <x-m>2.957</x-m>
+    <x-m>0.1668</x-m>
     <y-m>0.0</y-m>
-    <z-m>-0.2</z-m>    
+    <z-m>-0.612</z-m>    
   </center>
   <axis>
     <x>0</x>
@@ -230,36 +192,24 @@
 </animation>
 
 
-<!--Windows-->
+<!--Trimwheel-->
 <animation>
-  <type>pick</type>
-  <object-name>windowL</object-name>
-  <visible>true</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-toggle</command>
-      <property>an24/animations/windowL</property>
-       <value>0</value>
-       <value>1</value>
-    </binding>
-  </action>
-</animation>
-
-<animation>
-  <type>translate</type>
-  <object-name>windowL</object-name>
-  <property>an24/animations/windowL</property>
-  <factor>0.8</factor>
+  <type>rotate</type>
+  <object-name>trimwheel</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <factor>2000.0</factor>
+  <offset-deg>0.0</offset-deg>
+  <center>
+    <x-m>2.3025</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.6194</z-m>
+  </center>
   <axis>
-    <x>1</x>
-    <y>0</y>
+    <x>0</x>
+    <y>-1</y>
     <z>0</z>    
   </axis>
 </animation>
-
-
 
 <!-- INSTRUMENTS -->
 
@@ -683,7 +633,7 @@
 
 <model>
   <name>ZK-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mp/ush.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mprp/mp_ush.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.3441</y-m>
@@ -897,6 +847,26 @@
   </offsets>
 </model>
 
+<model>
+  <name>ZK-2</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mprp/rp_ush.xml</path>
+  <offsets>
+    <x-m>2.096</x-m>
+    <y-m>0.6</y-m>
+    <z-m>0.9</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>InstrLightClamp</name>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <offsets>
+    <x-m>2.096</x-m>
+    <y-m>0.6</y-m>
+    <z-m>0.9</z-m>
+  </offsets>
+</model>
+
 <!--************************** left console ***************************-->
 <model>
   <name>SPU-7</name>
@@ -1056,7 +1026,7 @@
   <offsets>
     <x-m>2.43</x-m>
     <y-m>-0.2</y-m>
-    <z-m>1.39</z-m>
+    <z-m>1.37</z-m>
     <pitch-deg>-189</pitch-deg>
   </offsets>
 </model>

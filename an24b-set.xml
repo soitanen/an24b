@@ -62,6 +62,62 @@
     </config>
   </view>
 
+  <view n="102">
+    <name>Engineer View</name>
+    <!--<enabled type="bool">true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >0.62</x-offset-m>
+      <y-offset-m type="double" >0.76</y-offset-m>
+      <z-offset-m type="double" >-5.22</z-offset-m>
+      <pitch-offset-deg type="double">-5.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">84.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">180</front-direction-deg>
+      <front-left-direction-deg type="double">225</front-left-direction-deg>
+      <left-direction-deg type="double">270</left-direction-deg>
+      <back-left-direction-deg type="double">315</back-left-direction-deg>
+      <back-direction-deg type="double">0</back-direction-deg>
+      <back-right-direction-deg type="double">45</back-right-direction-deg>
+      <right-direction-deg type="double">90</right-direction-deg>
+      <front-right-direction-deg type="double">135</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="103">
+    <name>Navigator View</name>
+    <!--<enabled type="bool">true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >-0.37</x-offset-m>
+      <y-offset-m type="double" >1.21</y-offset-m>
+      <z-offset-m type="double" >-5.0</z-offset-m>
+      <pitch-offset-deg type="double">0.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">84.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">180</front-direction-deg>
+      <front-left-direction-deg type="double">225</front-left-direction-deg>
+      <left-direction-deg type="double">270</left-direction-deg>
+      <back-left-direction-deg type="double">315</back-left-direction-deg>
+      <back-direction-deg type="double">0</back-direction-deg>
+      <back-right-direction-deg type="double">45</back-right-direction-deg>
+      <right-direction-deg type="double">90</right-direction-deg>
+      <front-right-direction-deg type="double">135</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
   <help>
    <title>An-24B</title>
    	   <key>
@@ -267,6 +323,23 @@
       <binding>
         <command>nasal</command>
         <script>view.forceView(1);</script>
+      </binding>
+    </key>
+
+    <key n="51">
+      <name>3</name>
+      <desc>Engineer view</desc>
+      <binding>
+        <command>nasal</command>
+        <script>view.forceView(2);</script>
+      </binding>
+    </key>
+    <key n="52">
+      <name>4</name>
+      <desc>Navigator view</desc>
+      <binding>
+        <command>nasal</command>
+        <script>view.forceView(3);</script>
       </binding>
     </key>
 
@@ -601,7 +674,5 @@
    <max-lb type="double">1255.0</max-lb>
   </weight>
  </payload>
-
-
 
 </PropertyList>
