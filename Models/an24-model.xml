@@ -21,7 +21,7 @@
   <object-name>geardoorR3</object-name>
   <object-name>geardoorL1</object-name>
   <object-name>geardoorL1</object-name>
-  <!--object-name>wings</object-name-->
+  <object-name>wings</object-name>
   <object-name>vtail</object-name>
   <object-name>htail</object-name>
   <object-name>mainwheels_left</object-name>
@@ -571,6 +571,5 @@
     <z>0.0</z>
   </axis>
 </animation>
-
 
 </PropertyList>

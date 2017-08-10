@@ -8,7 +8,7 @@
  <animation>
    <type>material</type>
    <object-name>left_needle</object-name>
-   <object-name>left_needle</object-name>
+   <object-name>right_needle</object-name>
    <object-name>housing</object-name>
    <emission>
      <red>1.0</red>

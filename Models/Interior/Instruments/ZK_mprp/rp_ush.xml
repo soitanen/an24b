@@ -15,7 +15,7 @@
 <animation>
   <type>material</type>
   <object-name>index</object-name>
-  <object-name>compass</object-name>
+  <object-name>zk_compass</object-name>
   <object-name>zk_needle</object-name>
    <emission>
      <red>1.0</red>
@@ -45,7 +45,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>compass</object-name>
+  <object-name>zk_compass</object-name>
   <property>instrumentation/zk2/heading-bug</property>
   <axis>
     <x>1.0</x>
@@ -56,7 +56,7 @@
 
  <animation>
    <type>knob</type>
-   <object-name>knob</object-name>
+   <object-name>zk_knob</object-name>
    <property>instrumentation/zk2/heading-bug</property>
    <factor>5</factor>
    <axis>

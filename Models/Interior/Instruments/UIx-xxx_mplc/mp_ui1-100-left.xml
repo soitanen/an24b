@@ -8,15 +8,32 @@
 
  <animation>
   <type>material</type>
-  <object-name>base</object-name>
+  <object-name>housing</object-name>
   <object-name>needle</object-name>
-  <object-name>face</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
      <blue>1.0</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>torque_needle</object-name>
+  <property>engines/engine[0]/thruster/torque</property>
+   <factor>1.0546</factor>
+   <offset-deg>-60</offset-deg>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>-0.019</y-m>
+    <z-m>-0.012</z-m>
+   </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
  </animation>
 
 <!-- Text OSG -->

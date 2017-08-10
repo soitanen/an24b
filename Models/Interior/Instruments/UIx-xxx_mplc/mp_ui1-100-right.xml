@@ -8,9 +8,8 @@
 
  <animation>
   <type>material</type>
-  <object-name>base</object-name>
+  <object-name>housing</object-name>
   <object-name>needle</object-name>
-  <object-name>face</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
