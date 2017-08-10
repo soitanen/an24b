@@ -1020,13 +1020,15 @@
   </offsets>
 </model>
 
+<!--********************************************-->
+
 <model>
   <name>ARK-11</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_rcnavoh/ohark-11.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/ohark-11.xml</path>
   <offsets>
-    <x-m>2.43</x-m>
+    <x-m>2.47</x-m>
     <y-m>-0.2</y-m>
-    <z-m>1.37</z-m>
+    <z-m>1.378</z-m>
     <pitch-deg>-189</pitch-deg>
   </offsets>
 </model>

@@ -64,3 +64,18 @@ var parkBrakeSet = func {
 	setprop("/controls/gear/brake-parking", 1);
 }
 setlistener("/sim/signals/fdm-initialized", parkBrakeSet);
+
+# ARK Summing up frequencies
+setprop("/an24/ark-11/sub-band-khz", 120.0);
+setprop("/an24/ark-11/fine-khz", 0.0);
+
+var addfreqs = func {
+ var subband = getprop("an24/ark-11/sub-band-khz");
+ var finetune = getprop("an24/ark-11/fine-khz");
+ var finalfreq = finetune + subband ;
+ setprop("an24/ark-11/final-freq", finalfreq);
+ setprop("instrumentation/adf/frequencies/selected-khz", finalfreq);
+}
+
+ setlistener("an24/ark-11/sub-band-khz", addfreqs);
+ setlistener("an24/ark-11/fine-khz", addfreqs);
