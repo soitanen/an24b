@@ -4,31 +4,14 @@
 functionality not to be taken too seriously atm! -->
 
   <path>circuitbreakerpanel.ac</path>
-<!--
- <animation>
-  <type>material</type>
-  <object-name>background</object-name>
-  <condition>
-   <equals>
-    <property>an24/lights/instrlights</property>
-    <value>1.0</value>
-   </equals>
-  </condition>
-  <emission>
-   <red>1.0</red>
-   <green>0.5</green>
-   <blue>0.5</blue>
-   <factor-prop>an24/lights/instrlights</factor-prop>
-  </emission>
- </animation>
--->
+
 <!-- ************ 01st row *********** -->
 
 <model>
  <path>0101sw.xml</path>
   <offsets>
     <x-m>-0.2026</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -38,7 +21,7 @@ functionality not to be taken too seriously atm! -->
  <path>0102sw.xml</path>
   <offsets>
     <x-m>-0.182</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -48,7 +31,7 @@ functionality not to be taken too seriously atm! -->
  <path>0103sw.xml</path>
   <offsets>
     <x-m>-0.161</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -58,7 +41,7 @@ functionality not to be taken too seriously atm! -->
  <path>0104sw.xml</path>
   <offsets>
     <x-m>-0.14</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -68,7 +51,7 @@ functionality not to be taken too seriously atm! -->
  <path>0105sw.xml</path>
   <offsets>
     <x-m>-0.119</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -78,7 +61,7 @@ functionality not to be taken too seriously atm! -->
  <path>0106sw.xml</path>
   <offsets>
     <x-m>-0.0977</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -88,7 +71,7 @@ functionality not to be taken too seriously atm! -->
  <path>0107sw.xml</path>
   <offsets>
     <x-m>-0.0768</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -108,7 +91,7 @@ functionality not to be taken too seriously atm! -->
  <path>0109sw.xml</path>
   <offsets>
     <x-m>-0.0348</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -118,7 +101,7 @@ functionality not to be taken too seriously atm! -->
  <path>0110sw.xml</path>
   <offsets>
     <x-m>-0.0138</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -128,7 +111,7 @@ functionality not to be taken too seriously atm! -->
  <path>0111sw.xml</path>
   <offsets>
     <x-m>0.0072</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -138,7 +121,7 @@ functionality not to be taken too seriously atm! -->
  <path>0112sw.xml</path>
   <offsets>
     <x-m>0.028</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.148</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -194,6 +177,15 @@ functionality not to be taken too seriously atm! -->
   </offsets>
 </model>
 
+<model>
+ <path>0118sw.xml</path>
+  <offsets>
+    <x-m>0.154</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.148</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
 
 <!-- ************* 02nd row ************ -->
 
@@ -221,7 +213,7 @@ functionality not to be taken too seriously atm! -->
  <path>0203sw.xml</path>
   <offsets>
     <x-m>-0.161</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0887</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -231,7 +223,7 @@ functionality not to be taken too seriously atm! -->
  <path>0204sw.xml</path>
   <offsets>
     <x-m>-0.14</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0887</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -241,7 +233,7 @@ functionality not to be taken too seriously atm! -->
  <path>0205sw.xml</path>
   <offsets>
     <x-m>-0.119</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0887</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -321,7 +313,7 @@ functionality not to be taken too seriously atm! -->
  <path>0213sw.xml</path>
   <offsets>
     <x-m>0.049</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0887</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -341,7 +333,7 @@ functionality not to be taken too seriously atm! -->
  <path>0215sw.xml</path>
   <offsets>
     <x-m>0.0911</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0887</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -361,6 +353,16 @@ functionality not to be taken too seriously atm! -->
  <path>0217sw.xml</path>
   <offsets>
     <x-m>0.133</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>0.0887</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0218sw.xml</path>
+  <offsets>
+    <x-m>0.154</x-m>
     <y-m>-0.031</y-m>
     <z-m>0.0887</z-m>
     <heading-deg>-90</heading-deg>
@@ -393,7 +395,7 @@ functionality not to be taken too seriously atm! -->
  <path>0303sw.xml</path>
   <offsets>
     <x-m>-0.161</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -413,7 +415,7 @@ functionality not to be taken too seriously atm! -->
  <path>0305sw.xml</path>
   <offsets>
     <x-m>-0.119</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -423,13 +425,13 @@ functionality not to be taken too seriously atm! -->
  <path>0306sw.xml</path>
   <offsets>
     <x-m>-0.0977</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
 </model>
 
-<model>
+<!--model>
  <path>0307sw.xml</path>
   <offsets>
     <x-m>-0.0768</x-m>
@@ -437,7 +439,7 @@ functionality not to be taken too seriously atm! -->
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
  <path>0308sw.xml</path>
@@ -459,7 +461,7 @@ functionality not to be taken too seriously atm! -->
   </offsets>
 </model>
 
-<model>
+<!--model>
  <path>0310sw.xml</path>
   <offsets>
     <x-m>-0.0138</x-m>
@@ -467,9 +469,9 @@ functionality not to be taken too seriously atm! -->
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
-<model>
+<!--model>
  <path>0311sw.xml</path>
   <offsets>
     <x-m>0.0072</x-m>
@@ -477,13 +479,13 @@ functionality not to be taken too seriously atm! -->
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
  <path>0312sw.xml</path>
   <offsets>
     <x-m>0.028</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -493,7 +495,7 @@ functionality not to be taken too seriously atm! -->
  <path>0313sw.xml</path>
   <offsets>
     <x-m>0.049</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -503,7 +505,7 @@ functionality not to be taken too seriously atm! -->
  <path>0314sw.xml</path>
   <offsets>
     <x-m>0.07</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -533,6 +535,16 @@ functionality not to be taken too seriously atm! -->
  <path>0317sw.xml</path>
   <offsets>
     <x-m>0.133</x-m>
+    <y-m>-0.02</y-m>
+    <z-m>0.0248</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0318sw.xml</path>
+  <offsets>
+    <x-m>0.154</x-m>
     <y-m>-0.031</y-m>
     <z-m>0.0248</z-m>
     <heading-deg>-90</heading-deg>
@@ -555,7 +567,7 @@ functionality not to be taken too seriously atm! -->
  <path>0402sw.xml</path>
   <offsets>
     <x-m>-0.182</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.0697</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -565,7 +577,7 @@ functionality not to be taken too seriously atm! -->
  <path>0403sw.xml</path>
   <offsets>
     <x-m>-0.161</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.0697</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -575,13 +587,13 @@ functionality not to be taken too seriously atm! -->
  <path>0404sw.xml</path>
   <offsets>
     <x-m>-0.14</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.0697</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
 </model>
 
-<model>
+<!--model>
  <path>0405sw.xml</path>
   <offsets>
     <x-m>-0.119</x-m>
@@ -589,7 +601,7 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.0697</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
  <path>0406sw.xml</path>
@@ -605,7 +617,7 @@ functionality not to be taken too seriously atm! -->
  <path>0407sw.xml</path>
   <offsets>
     <x-m>-0.0768</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.0697</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -615,7 +627,7 @@ functionality not to be taken too seriously atm! -->
  <path>0408sw.xml</path>
   <offsets>
     <x-m>-0.0558</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.0697</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -625,7 +637,7 @@ functionality not to be taken too seriously atm! -->
  <path>0409sw.xml</path>
   <offsets>
     <x-m>-0.0348</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.0697</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -711,9 +723,19 @@ functionality not to be taken too seriously atm! -->
   </offsets>
 </model>
 
+<model>
+ <path>0418sw.xml</path>
+  <offsets>
+    <x-m>0.154</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.0697</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
 <!-- ************* 05th row ************ -->
 
-<model>
+<!--model>
  <path>0501sw.xml</path>
   <offsets>
     <x-m>-0.2026</x-m>
@@ -721,9 +743,9 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.1321</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
-<model>
+<!--model>
  <path>0502sw.xml</path>
   <offsets>
     <x-m>-0.182</x-m>
@@ -731,9 +753,9 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.1321</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
-<model>
+<!--model>
  <path>0503sw.xml</path>
   <offsets>
     <x-m>-0.161</x-m>
@@ -741,19 +763,19 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.1321</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
  <path>0504sw.xml</path>
   <offsets>
     <x-m>-0.14</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.1321</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
 </model>
 
-<model>
+<!--model>
  <path>0505sw.xml</path>
   <offsets>
     <x-m>-0.119</x-m>
@@ -761,7 +783,7 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.1321</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
  <path>0506sw.xml</path>
@@ -867,7 +889,7 @@ functionality not to be taken too seriously atm! -->
  <path>0516sw.xml</path>
   <offsets>
     <x-m>0.112</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.1321</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -887,7 +909,7 @@ functionality not to be taken too seriously atm! -->
  <path>0518sw.xml</path>
   <offsets>
     <x-m>0.154</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.1321</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -895,7 +917,7 @@ functionality not to be taken too seriously atm! -->
 
 <!-- ************* 06th row ************ -->
 
-<model>
+<!--model>
  <path>0601sw.xml</path>
   <offsets>
     <x-m>-0.2026</x-m>
@@ -903,7 +925,7 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.1895</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
  <path>0602sw.xml</path>
@@ -945,7 +967,7 @@ functionality not to be taken too seriously atm! -->
   </offsets>
 </model>
 
-<model>
+<!--model>
  <path>0606sw.xml</path>
   <offsets>
     <x-m>-0.0977</x-m>
@@ -953,9 +975,9 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.1895</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
-<model>
+<!--model>
  <path>0607sw.xml</path>
   <offsets>
     <x-m>-0.0768</x-m>
@@ -963,7 +985,7 @@ functionality not to be taken too seriously atm! -->
     <z-m>-0.1895</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
  <path>0608sw.xml</path>
@@ -1019,7 +1041,7 @@ functionality not to be taken too seriously atm! -->
  <path>0613sw.xml</path>
   <offsets>
     <x-m>0.049</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.1895</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -1059,7 +1081,17 @@ functionality not to be taken too seriously atm! -->
  <path>0617sw.xml</path>
   <offsets>
     <x-m>0.133</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
+    <z-m>-0.1895</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>0618sw.xml</path>
+  <offsets>
+    <x-m>0.154</x-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.1895</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -1121,7 +1153,7 @@ functionality not to be taken too seriously atm! -->
  <path>0706sw.xml</path>
   <offsets>
     <x-m>-0.0977</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.2523</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -1191,7 +1223,7 @@ functionality not to be taken too seriously atm! -->
  <path>0713sw.xml</path>
   <offsets>
     <x-m>0.049</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.2523</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -1231,11 +1263,20 @@ functionality not to be taken too seriously atm! -->
  <path>0717sw.xml</path>
   <offsets>
     <x-m>0.133</x-m>
-    <y-m>-0.031</y-m>
+    <y-m>-0.02</y-m>
     <z-m>-0.2523</z-m>
     <heading-deg>-90</heading-deg>
   </offsets>
 </model>
 
+<model>
+ <path>0718sw.xml</path>
+  <offsets>
+    <x-m>0.154</x-m>
+    <y-m>-0.031</y-m>
+    <z-m>-0.2523</z-m>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
 
 </PropertyList>

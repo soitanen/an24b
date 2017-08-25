@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Safety fuse panel switch-->
+<!-- AZS-5; Rudder trim-->
 
 <PropertyList>
- <path>../../shared/switches/switch03.ac</path>
+ <path>../../shared/switches/azs.ac</path>
  
  <animation>
   <type>pick</type>
@@ -15,17 +15,11 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/group1rightpump", 1.0, 0.1 );
+        interpolate("an24/AZS/sw0302", 1.0, 0.1 );
       </script>
     </binding>
   </action>
  </animation>
-
-<animation>
-  <type>pick</type>
-  <object-name>clickspot_middle</object-name>
-  <visible>false</visible>
-</animation>
 
 <animation>
   <type>pick</type>
@@ -37,20 +31,19 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/group1rightpump", -1.0, 0.1 );
+        interpolate("an24/AZS/sw0302", -1.0, 0.1 );
       </script>
     </binding>
   </action>
 </animation>
 
-<!--
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/FuelControl/group1rightpump</property>
+   <property>an24/AZS/sw0302</property>
   <interpolation>
-    <entry><ind>-1.0</ind>	<dep>-35.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>35.0</dep></entry>
+    <entry><ind>-1.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -58,6 +51,5 @@
     <z>0.0</z>
   </axis>
  </animation>
--->
 
 </PropertyList>

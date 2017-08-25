@@ -555,13 +555,12 @@
   <name>RPSN_Block4P</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4p.xml</path>
   <offsets>
-    <x-m>1.9</x-m>
+    <x-m>1.93</x-m>
     <y-m>0.0</y-m>
-    <z-m>1.18</z-m>
+    <z-m>1.22</z-m>
     <pitch-deg>-10</pitch-deg>
   </offsets>
 </model>
-
 
 <!-- *************************************** -->
 
