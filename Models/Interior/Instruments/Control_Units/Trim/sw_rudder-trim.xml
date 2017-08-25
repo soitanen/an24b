@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<!-- Rudder trim switch on middle console -->
+
+<PropertyList>
+ <path>../../../shared/switches/sw2vg-15b.ac</path>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>
+	controls.rudderTrim(1);
+	interpolate("an24/animations/switches/rudder-trim", 1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+	interpolate("an24/animations/switches/rudder-trim", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+</animation>
+
+ <animation>
+  <object-name>clickspot_middle</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>
+	controls.rudderTrim(-1);
+	interpolate("an24/animations/switches/rudder-trim", -1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+	interpolate("an24/animations/switches/rudder-trim", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/animations/switches/rudder-trim</property>
+  <interpolation>
+    <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

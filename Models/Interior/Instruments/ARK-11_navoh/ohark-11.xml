@@ -281,10 +281,27 @@
   <object-name>smooth_adj_handle</object-name>
   <type>rotate</type>
    <property>/an24/ark-11/fine-khz</property>
-  <factor>45</factor>
+  <factor>2</factor>
   <center>
    <x-m>-0.0752</x-m>
    <y-m>0.0684</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>fine_freq_disk</object-name>
+  <type>rotate</type>
+   <property>/an24/ark-11/fine-khz</property>
+  <factor>2</factor>
+  <center>
+   <x-m>-0.0505</x-m>
+   <y-m>-0.005</y-m>
    <z-m>0.0</z-m>
   </center>
   <axis>

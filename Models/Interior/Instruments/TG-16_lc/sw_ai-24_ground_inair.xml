@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<!-- "ground/in air" sw -->
+
+<PropertyList>
+ <path>../../shared/switches/sw2vg-15b.ac</path>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        setprop("an24/APD-27/ground-air", 1.0 );
+        interpolate("an24/Start-Panel/ground-air_sw_anim", 1.0, 0.2 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <object-name>clickspot_middle</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        setprop("an24/APD-27/ground-air", 0.0 );
+        interpolate("an24/Start-Panel/ground-air_sw_anim", 0.0, 0.2 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/Start-Panel/ground-air_sw_anim</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+

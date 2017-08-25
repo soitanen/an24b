@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<!-- "ground/in air" sw -->
+
+<PropertyList>
+ <path>../../shared/switches/covered_switch01.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>cover</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/Start-Panel/ground-air_cvr_anim" ) == 1.0 ){
+        interpolate("an24/Start-Panel/ground-air_cvr_anim", 0.0, 0.2 );
+        }
+        else {
+        interpolate("an24/Start-Panel/ground-air_cvr_anim", 1.0, 0.2 );
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>cover</object-name>
+   <property>an24/Start-Panel/ground-air_cvr_anim</property>
+   <factor>80</factor>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+

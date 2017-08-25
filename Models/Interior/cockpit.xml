@@ -555,13 +555,12 @@
   <name>RPSN_Block4P</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4p.xml</path>
   <offsets>
-    <x-m>1.9</x-m>
+    <x-m>1.93</x-m>
     <y-m>0.0</y-m>
-    <z-m>1.18</z-m>
+    <z-m>1.22</z-m>
     <pitch-deg>-10</pitch-deg>
   </offsets>
 </model>
-
 
 <!-- *************************************** -->
 
@@ -620,7 +619,7 @@
 <!-- *************************************** -->
 
 <model>
-  <name>ARK</name>
+  <name>UPDB-2</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/UPDB-2_mp/updb-2.xml</path>
   <offsets>
     <x-m>2.088</x-m>
@@ -918,6 +917,7 @@
 </model>
 
 <!--************************** MIDDLE CONSOLE ***************************-->
+
 <model>
   <name>AP-28L</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/AP-28L_mc/ap-28.xml</path>
@@ -927,9 +927,6 @@
     <z-m>0.63</z-m>
   </offsets>
 </model>
-
-
-
 
 <!--************************** RIGHT CONSOLE ***************************-->
 
@@ -975,7 +972,6 @@
     <heading-deg>-84</heading-deg>
   </offsets>
 </model>
-
 
 <!--************************** OVERHEAD ***************************-->
 
@@ -1093,6 +1089,11 @@
 <model>
   <name>bank-pitch_fix</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Bank-Pitch/bank-pitch.xml</path>
+</model>
+
+<model>
+  <name>aileron_rudder_trim</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Trim/aileron-rudder-trim.xml</path>
 </model>
 
 </PropertyList>

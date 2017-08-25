@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Fuel transfer to right engine -->
+<!-- Lamp "APD-27 working" -->
 
 <PropertyList>
  <path>../../shared/lamps/sltsn.ac</path>
@@ -16,8 +16,8 @@
  <type>select</type>
  <condition>
    <greater-than>
-    <property>an24/APD-27/cold-warm-proc-run</property>
-    <value>0</value>
+    <property>an24/APD-27/timer</property>
+    <value>0.5</value>
    </greater-than>
   </condition>
  <object-name>lampon</object-name>

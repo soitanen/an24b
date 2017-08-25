@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!-- Aileron and rudder trim switches on middle console -->
+
+<PropertyList>
+
+<model>
+ <path>sw_aileron-trim.xml</path>
+  <offsets>
+    <x-m>2.5220</x-m>
+    <y-m>-0.1267</y-m>
+    <z-m>0.5985</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_rudder-trim.xml</path>
+  <offsets>
+    <x-m>2.5545</x-m>
+    <y-m>-0.1267</y-m>
+    <z-m>0.5985</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+</PropertyList>
