@@ -4,6 +4,7 @@
 
   <path>circuitbreakerpanel.ac</path>
 
+<<<<<<< HEAD
 <animation>
   <type>pick</type>
   <object-name>all_on01</object-name>
@@ -224,6 +225,8 @@
   </action>
 </animation>
 
+=======
+>>>>>>> 2a949d9f155b802ea8e4f24b29d733e9ec950e1a
 <!-- ************ 01st row *********** -->
 
 <model>
