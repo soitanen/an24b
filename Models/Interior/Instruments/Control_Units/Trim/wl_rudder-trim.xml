@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!-- "Rudder trim neutral" lamp -->
+
+<PropertyList>
+ <path>../../../shared/lamps/sltsn.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../../shared/lamps/sltsngreen.png</texture>
+</animation>
+
+<animation>
+ <type>select</type>
+  <condition>
+   <and>
+   <greater-than>
+    <property>controls/flight/rudder-trim</property>
+    <value>-0.001</value>
+   </greater-than>
+   <less-than>
+    <property>controls/flight/rudder-trim</property>
+    <value>0.001</value>
+   </less-than>
+   </and>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

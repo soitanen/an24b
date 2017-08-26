@@ -13,9 +13,20 @@
     <button>0</button>
     <repeatable>true</repeatable>
   <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0302</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
    <command>nasal</command>
    <script>
 	controls.rudderTrim(1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
 	interpolate("an24/animations/switches/rudder-trim", 1.0, 0.1 );
    </script>
   </binding>
@@ -44,9 +55,20 @@
     <button>0</button>
     <repeatable>true</repeatable>
   <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0302</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
    <command>nasal</command>
    <script>
 	controls.rudderTrim(-1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
 	interpolate("an24/animations/switches/rudder-trim", -1.0, 0.1 );
    </script>
   </binding>

@@ -27,9 +27,9 @@
 <model>
  <path>sw_low-right.xml</path>
   <offsets>
-    <pitch-deg>-25</pitch-deg>
+    <pitch-deg>-20</pitch-deg>
     <x-m>2.14</x-m>
-    <y-m>0.7216</y-m>
+    <y-m>0.6362</y-m>
     <z-m>0.675</z-m>
   </offsets>
 </model>
@@ -37,9 +37,9 @@
 <model>
  <path>sw_intense-right.xml</path>
   <offsets>
-    <pitch-deg>-25</pitch-deg>
+    <pitch-deg>-20</pitch-deg>
     <x-m>2.14</x-m>
-    <y-m>0.7494</y-m>
+    <y-m>0.6564</y-m>
     <z-m>0.675</z-m>
   </offsets>
 </model>

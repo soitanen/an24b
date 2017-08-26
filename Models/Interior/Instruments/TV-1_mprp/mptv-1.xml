@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- TV-1, FO's -->
+<!-- TV-1, PAX cabin air temp (now OAT) -->
 
 <PropertyList>
  <path>tv-1.ac</path>
@@ -15,6 +15,22 @@
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle_pax_cabin_temp</object-name>
+  <property>/environment/temperature-degc</property>
+  <interpolation>
+    <entry><ind>-60.0</ind><dep>-90.0</dep></entry>
+    <entry><ind>0.0</ind><dep>10.0</dep></entry>
+    <entry><ind>70.0</ind><dep>100.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 
 <!-- TEXT OSG -->
 

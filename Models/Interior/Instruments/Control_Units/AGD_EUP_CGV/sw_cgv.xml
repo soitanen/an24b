@@ -12,6 +12,18 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0603</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/cgv", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/instrumentation/cgv", 1.0, 0.1 );
@@ -33,6 +45,12 @@
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/cgv", 0.0, 0.1 );
+      </script>
+    </binding>
     <binding>
       <command>nasal</command>
       <script>

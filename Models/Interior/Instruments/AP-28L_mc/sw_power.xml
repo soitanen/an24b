@@ -12,15 +12,21 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0602</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+      <command>property-assign</command>
+      <property>an24/ap-28l1/internal/powered</property>
+      <value>1</value>
+    </binding>
+    <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/ap-28l1/switches/power", 1.0, 0.1 );
       </script>
-    </binding>
-    <binding>
-      <command>property-assign</command>
-      <property>an24/ap-28l1/internal/powered</property>
-      <value>1</value>
     </binding>
   </action>
 </animation>

@@ -782,6 +782,15 @@
   </offsets>
 </model>
 
+<model>
+  <name>TV-1</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/TV-1_mprp/mptv-1.xml</path>
+  <offsets>
+    <x-m>2.088</x-m>
+    <y-m>0.3489</y-m>
+    <z-m>0.8719</z-m>
+  </offsets>
+</model>
 
 <!--************************** RIGHT PANEL ***************************-->
 
@@ -838,7 +847,7 @@
 
 <model>
   <name>TV-1</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/TV-1_rp/tv-1.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/TV-1_mprp/rptv-1.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>0.644</y-m>
