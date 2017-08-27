@@ -10,9 +10,9 @@
 <model>
   <path>wl_ready.xml</path>
   <offsets>
-    <x-m>-0.0391</x-m>
-    <y-m>-0.0277</y-m>
-    <z-m>-0.025</z-m>
+    <x-m>-0.0352</x-m>
+    <y-m>-0.0249</y-m>
+    <z-m>-0.0196</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
 </model>
@@ -20,9 +20,9 @@
 <model>
   <path>wl_on.xml</path>
   <offsets>
-    <x-m>-0.0391</x-m>
-    <y-m>0.0277</y-m>
-    <z-m>-0.025</z-m>
+    <x-m>-0.0352</x-m>
+    <y-m>0.0249</y-m>
+    <z-m>-0.0196</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
 </model>
@@ -30,8 +30,8 @@
 <model>
   <path>wl_push.xml</path>
   <offsets>
-    <x-m>0.155</x-m>
-    <y-m>-0.0904</y-m>
+    <x-m>0.1395</x-m>
+    <y-m>-0.0813</y-m>
     <z-m>-0.09</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
@@ -40,8 +40,8 @@
 <model>
   <path>wl_pull.xml</path>
   <offsets>
-    <x-m>0.155</x-m>
-    <y-m>-0.0492</y-m>
+    <x-m>0.1395</x-m>
+    <y-m>-0.0443</y-m>
     <z-m>-0.09</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
@@ -50,8 +50,8 @@
 <model>
   <path>wl_kv.xml</path>
   <offsets>
-    <x-m>0.155</x-m>
-    <y-m>0.0492</y-m>
+    <x-m>0.1395</x-m>
+    <y-m>0.0443</y-m>
     <z-m>-0.09</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
@@ -62,8 +62,8 @@
 <model>
   <path>sw_up-down-l.xml</path>
   <offsets>
-    <x-m>0.0037</x-m>
-    <y-m>-0.0693</y-m>
+    <x-m>0.0032</x-m>
+    <y-m>-0.0623</y-m>
     <z-m>-0.0478</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
@@ -116,8 +116,8 @@
 <model>
   <path>sw_up-down-r.xml</path>
   <offsets>
-    <x-m>0.0037</x-m>
-    <y-m>0.0693</y-m>
+    <x-m>0.0032</x-m>
+    <y-m>0.0623</y-m>
     <z-m>-0.0478</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
@@ -126,9 +126,9 @@
 <model>
   <path>sw_autotrim.xml</path>
   <offsets>
-    <x-m>0.0932</x-m>
-    <y-m>-0.0925</y-m>
-    <z-m>-0.054</z-m>
+    <x-m>0.084</x-m>
+    <y-m>-0.0833</y-m>
+    <z-m>-0.055</z-m>
     <pitch-deg>-52.5</pitch-deg>
   </offsets>
 </model>
@@ -136,9 +136,9 @@
 <model>
   <path>sw_power.xml</path>
   <offsets>
-    <x-m>0.0932</x-m>
-    <y-m>-0.0488</y-m>
-    <z-m>-0.054</z-m>
+    <x-m>0.084</x-m>
+    <y-m>-0.044</y-m>
+    <z-m>-0.055</z-m>
     <pitch-deg>-52.5</pitch-deg>
   </offsets>
 </model>
@@ -146,9 +146,9 @@
 <model>
   <path>sw_roll-mode.xml</path>
   <offsets>
-    <x-m>0.0932</x-m>
-    <y-m>0.0488</y-m>
-    <z-m>-0.054</z-m>
+    <x-m>0.084</x-m>
+    <y-m>0.044</y-m>
+    <z-m>-0.055</z-m>
     <pitch-deg>-52.5</pitch-deg>
   </offsets>
 </model>
@@ -156,9 +156,9 @@
 <model>
   <path>sw_pitch.xml</path>
   <offsets>
-    <x-m>0.0932</x-m>
-    <y-m>0.0925</y-m>
-    <z-m>-0.054</z-m>
+    <x-m>0.084</x-m>
+    <y-m>0.0833</y-m>
+    <z-m>-0.055</z-m>
     <pitch-deg>-52.5</pitch-deg>
   </offsets>
 </model>
@@ -168,9 +168,9 @@
 <model>
   <path>btn_horizon.xml</path>
   <offsets>
-    <x-m>0.155</x-m>
+    <x-m>0.1395</x-m>
     <y-m>0.0</y-m>
-    <z-m>-0.092</z-m>
+    <z-m>-0.09</z-m>
   </offsets>
 </model>
 
@@ -210,9 +210,9 @@
 <model>
   <path>btn_kv.xml</path>
   <offsets>
-    <x-m>0.155</x-m>
-    <y-m>0.0917</y-m>
-    <z-m>-0.092</z-m>
+    <x-m>0.1395</x-m>
+    <y-m>0.0825</y-m>
+    <z-m>-0.09</z-m>
   </offsets>
 </model>
 

@@ -1,11 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- template for start btn -->
+<!-- Button to start Turbogenerator TG-16 (APU) -->
 
 <PropertyList>
  <path>../../shared/switches/spring_load_btn02.ac</path>
-
-<!--
 
 <animation>
   <type>pick</type>
@@ -15,24 +13,19 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-assign</command>
-      <property>controls/engines/engine[2]/starter</property>
-      <value type="bool">true</value>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Start-Panel/timertg", 30.0, 30.0, 0.0, 3.0 );
+        interpolate("an24/animations/Start-Panel/timertg-btn", 1.0, 0.1, 0.0, 0.1 );
+      </script>
     </binding>
-    <mod-up>
-      <binding>
-        <command>property-assign</command>
-      <property>controls/engines/engine[2]/starter</property>
-        <value type="bool">true</value>
-      </binding>
-    </mod-up>
   </action>
 </animation>
 
 <animation>
   <type>translate</type>
   <object-name>press_me</object-name>
-  <property>autopilot/autobrake/engaged</property>
+  <property>an24/animations/Start-Panel/timertg-btn</property>
   <factor>0.003</factor>
   <axis>
     <x>0</x>
@@ -41,7 +34,4 @@
   </axis>
 </animation>
 
--->
-
 </PropertyList>
-

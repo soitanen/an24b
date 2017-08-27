@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- "ground/in air" sw -->
+<!-- Start of TG-16 switch -->
 
 <PropertyList>
  <path>../../shared/switches/sw2vg-15b.ac</path>
@@ -15,8 +15,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/APD-27/ground-air", 1.0 );
-        interpolate("an24/Start-Panel/ground-air_sw_anim", 1.0, 0.2 );
+        setprop("an24/Start-Panel/tg-start", 1.0 );
+        interpolate("an24/animations/Start-Panel/tg-start_sw", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -38,8 +38,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/APD-27/ground-air", 0.0 );
-        interpolate("an24/Start-Panel/ground-air_sw_anim", 0.0, 0.2 );
+        setprop("an24/Start-Panel/tg-start", 0.0 );
+        interpolate("an24/animations/Start-Panel/tg-start_sw", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -48,14 +48,14 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/Start-Panel/ground-air_sw_anim</property>
+   <property>an24/animations/Start-Panel/tg-start_sw</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>-30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
-    <y>-1.0</y>
+    <y>1.0</y>
     <z>0.0</z>
   </axis>
  </animation>

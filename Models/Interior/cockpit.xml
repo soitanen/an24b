@@ -916,12 +916,13 @@
 <!--********************************************-->
 
 <model>
-  <name>TG-16</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/TG-16_lc/tg-16.xml</path>
+  <name>Engine_start_panel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Engine_start_panel_lc/engine_start_panel.xml</path>
   <offsets>
     <x-m>2.476</x-m>
     <y-m>-0.845</y-m>
-    <z-m>0.46</z-m>
+    <z-m>0.454</z-m>
+    <heading-deg>180</heading-deg>
   </offsets>
 </model>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- template for "discontinue start" btn -->
+<!-- "Discontinue start" btn -->
 
 <PropertyList>
  <path>../../shared/switches/spring_load_btn01.ac</path>
@@ -13,24 +13,19 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-assign</command>
-      <property>autopilot/autobrake/engaged</property>
-      <value type="int">1</value>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Start-Panel/timer", 0.0, 3.0 );
+        interpolate("an24/animations/Start-Panel/discontinue-btn", 1.0, 0.1, 0.0, 0.1 );
+      </script>
     </binding>
-    <mod-up>
-      <binding>
-        <command>property-assign</command>
-      <property>autopilot/autobrake/engaged</property>
-        <value type="int">0</value>
-      </binding>
-    </mod-up>
   </action>
 </animation>
 
 <animation>
   <type>translate</type>
   <object-name>press_me</object-name>
-  <property>autopilot/autobrake/engaged</property>
+  <property>an24/animations/Start-Panel/discontinue-btn</property>
   <factor>0.003</factor>
   <axis>
     <x>0</x>

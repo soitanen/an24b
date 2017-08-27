@@ -32,6 +32,11 @@
    <object-name>cover</object-name>
    <property>instrumentation/Pressure/cvr_press-relief</property>
    <factor>140</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-0.02</y-m>
+    <z-m>0.008</z-m>
+  </center>
   <axis>
     <x>1</x>
     <y>0</y>

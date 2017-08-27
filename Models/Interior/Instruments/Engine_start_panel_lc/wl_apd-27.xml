@@ -16,8 +16,8 @@
  <type>select</type>
  <condition>
    <greater-than>
-    <property>an24/APD-27/timer</property>
-    <value>0.5</value>
+    <property>an24/Start-Panel/timer</property>
+    <value>0.8</value>
    </greater-than>
   </condition>
  <object-name>lampon</object-name>

@@ -1,37 +1,88 @@
 <?xml version="1.0"?>
 
-<!-- TG-16 -->
+<!-- Engine and APU start panel -->
 
 <PropertyList>
- <path>tg-16.ac</path>
+ <path>engine_start_panel.ac</path>
+
+<model>
+ <path>btn_ai-24_start.xml</path>
+  <offsets>
+    <x-m>-0.08</x-m>
+    <y-m>0.065</y-m>
+    <z-m>0.0</z-m>
+  </offsets>
+</model>
 
 <model>
  <path>wl_apd-27.xml</path>
   <offsets>
-    <x-m>0.065</x-m>
-    <y-m>-0.05</y-m>
+    <x-m>-0.073</x-m>
+    <y-m>0.04</y-m>
     <z-m>0.0</z-m>
     <pitch-deg>-90</pitch-deg>
   </offsets>
 </model>
 
-
 <model>
- <path>sw_contr240_360_left.xml</path>
+ <path>sw_ai-24_ground_inair.xml</path>
   <offsets>
-    <x-m>0.0921</x-m>
-    <y-m>-0.0165</y-m>
-    <z-m>0.0</z-m>
+    <x-m>-0.035</x-m>
+    <y-m>0.045</y-m>
+    <z-m>-0.0005</z-m>
     <pitch-deg>-90</pitch-deg>
     <heading-deg>-90</heading-deg>
   </offsets>
 </model>
 
 <model>
- <path>sw_contr240_360_right.xml</path>
+ <path>cvr_ai-24_ground_inair.xml</path>
   <offsets>
-    <x-m>-0.0805</x-m>
-    <y-m>-0.0165</y-m>
+    <x-m>-0.035</x-m>
+    <y-m>0.045</y-m>
+    <z-m>0.0008</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_ai-24_left-right.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.045</y-m>
+    <z-m>-0.0005</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_ai-24_cold-start.xml</path>
+  <offsets>
+    <x-m>0.04</x-m>
+    <y-m>0.045</y-m>
+    <z-m>-0.0005</z-m>
+    <pitch-deg>-90</pitch-deg>
+    <heading-deg>-90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_ai-24_discontinue_start.xml</path>
+  <offsets>
+    <x-m>0.08</x-m>
+    <y-m>0.065</y-m>
+    <z-m>-0.015</z-m>
+  </offsets>
+</model>
+
+<!-- 2nd row -->
+
+<model>
+ <path>sw_contr240_360_left.xml</path>
+  <offsets>
+    <x-m>0.0863</x-m>
+    <y-m>0.0</y-m>
     <z-m>0.0</z-m>
     <pitch-deg>-90</pitch-deg>
     <heading-deg>-90</heading-deg>
@@ -41,8 +92,8 @@
 <model>
  <path>sw_prt-24_left.xml</path>
   <offsets>
-    <x-m>0.0557</x-m>
-    <y-m>-0.0165</y-m>
+    <x-m>-0.05</x-m>
+    <y-m>0.0</y-m>
     <z-m>0.0</z-m>
     <pitch-deg>-90</pitch-deg>
     <heading-deg>-90</heading-deg>
@@ -52,8 +103,8 @@
 <model>
  <path>sw_prt-24_right.xml</path>
   <offsets>
-    <x-m>-0.0425</x-m>
-    <y-m>-0.0165</y-m>
+    <x-m>0.05</x-m>
+    <y-m>0.0</y-m>
     <z-m>0.0</z-m>
     <pitch-deg>-90</pitch-deg>
     <heading-deg>-90</heading-deg>
@@ -61,31 +112,24 @@
 </model>
 
 <model>
- <path>sw_ai-24_ground_inair.xml</path>
+ <path>sw_contr240_360_right.xml</path>
   <offsets>
-    <x-m>0.038</x-m>
-    <y-m>-0.045</y-m>
-    <z-m>-0.001</z-m>
+    <x-m>-0.0863</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
     <pitch-deg>-90</pitch-deg>
     <heading-deg>-90</heading-deg>
   </offsets>
 </model>
 
-<model>
- <path>cvr_ai-24_ground_inair.xml</path>
-  <offsets>
-    <x-m>0.038</x-m>
-    <y-m>-0.065</y-m>
-    <z-m>0.008</z-m>
-  </offsets>
-</model>
+<!-- 3rd row -->
 
 <model>
- <path>sw_ai-24_left-right.xml</path>
+ <path>sw_tg-16_prepare.xml</path>
   <offsets>
-    <x-m>0.006</x-m>
-    <y-m>-0.0617</y-m>
-    <z-m>-0.0005</z-m>
+    <x-m>-0.052</x-m>
+    <y-m>-0.0522</y-m>
+    <z-m>0.0065</z-m>
     <pitch-deg>-90</pitch-deg>
     <heading-deg>-90</heading-deg>
   </offsets>
@@ -94,47 +138,18 @@
 <model>
  <path>cvr_tg-16_prepare.xml</path>
   <offsets>
-    <x-m>0.0557</x-m>
-    <y-m>0.03</y-m>
-    <z-m>0.019</z-m>
-  </offsets>
-</model>
-
-
-<model>
- <path>btn_ai-24_discontinue_start.xml</path>
-  <offsets>
-    <x-m>-0.0774</x-m>
-    <y-m>-0.071</y-m>
-    <z-m>-0.015</z-m>
-  </offsets>
-</model>
-
-<model>
- <path>btn_ai-24_start.xml</path>
-  <offsets>
-    <x-m>0.089</x-m>
-    <y-m>-0.069</y-m>
-    <z-m>0</z-m>
-  </offsets>
-</model>
-
-<model>
- <path>sw_tg-16_prepare.xml</path>
-  <offsets>
-    <x-m>0.0557</x-m>
-    <y-m>0.0522</y-m>
-    <z-m>0.0065</z-m>
-    <pitch-deg>-90</pitch-deg>
-    <heading-deg>-90</heading-deg>
+    <x-m>-0.052</x-m>
+    <y-m>-0.0522</y-m>
+    <z-m>0.008</z-m>
+    <heading-deg>180</heading-deg>
   </offsets>
 </model>
 
 <model>
  <path>sw_tg-16_cold_start.xml</path>
   <offsets>
-    <x-m>0.0219</x-m>
-    <y-m>0.0522</y-m>
+    <x-m>-0.026</x-m>
+    <y-m>-0.0522</y-m>
     <z-m>0.0065</z-m>
     <pitch-deg>-90</pitch-deg>
     <heading-deg>-90</heading-deg>
@@ -144,8 +159,8 @@
 <model>
  <path>btn_tg-16_start.xml</path>
   <offsets>
-    <x-m>-0.025</x-m>
-    <y-m>0.052</y-m>
+    <x-m>0.003</x-m>
+    <y-m>-0.0522</y-m>
     <z-m>0.008</z-m>
   </offsets>
 </model>
@@ -153,21 +168,11 @@
 <model>
  <path>btn_tg-16-discontinue_start.xml</path>
   <offsets>
-    <x-m>-0.0774</x-m>
-    <y-m>0.0617</y-m>
+    <x-m>0.07</x-m>
+    <y-m>-0.06</y-m>
     <z-m>-0.008</z-m>
   </offsets>
 </model>
-
-<model>
- <path>btn_tg-16-discontinue_start.xml</path>
-  <offsets>
-    <x-m>-0.0774</x-m>
-    <y-m>0.0617</y-m>
-    <z-m>-0.008</z-m>
-  </offsets>
-</model>
-
 
 <!-- TEXT OSG -->
 
@@ -182,7 +187,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">TG-16</text>
+    <text type="string">Engine and APU start panel</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.044</character-size>
@@ -199,7 +204,6 @@
       <x-m>  0.000 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.010 </z-m>
-      <heading-deg>180</heading-deg>
     </offsets>
   </text>
   <animation>
