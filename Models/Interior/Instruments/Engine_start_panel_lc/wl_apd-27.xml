@@ -16,7 +16,7 @@
  <type>select</type>
  <condition>
    <greater-than>
-    <property>an24/Start-Panel/timer</property>
+    <property>an24/Start-Panel/timerapd</property>
     <value>0.8</value>
    </greater-than>
   </condition>

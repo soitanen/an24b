@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 
-<!-- Thermometer TCT-2 -->
-<PropertyList>
+<!-- TE-40, Tachometer of shaft (?,assumed 40.000rpm=100%) of turbogenerator TG-16-->
 
- <path>tct-2.ac</path>
+<PropertyList>
+ <path>te-40.ac</path>
 
  <animation>
    <type>material</type>
-   <object-name>face</object-name>
-   <object-name>oil_needle_1</object-name>
-   <object-name>oil_needle_2</object-name>
+   <object-name>tachneedle</object-name>
+   <object-name>tachface</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
@@ -18,42 +17,17 @@
    </emission>
  </animation>
 
-  
-<!--Needles-->
-<animation>
-    <type>rotate</type>
-    <object-name>oil_needle_1</object-name>
-    <property>/fdm/jsbsim/propulsion/engine[0]/cht-degc</property>
-    <interpolation>
-      <entry><ind> 0.0 </ind><dep> -2.0 </dep></entry>
-      <entry><ind> 300.0 </ind><dep> -115.0</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.022</y-m>
-      <z-m>-0.0014</z-m>
-    </center>
-    <axis>
-      <x>1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-</animation>
 <animation>
   <type>rotate</type>
-  <object-name>oil_needle_2</object-name>
-  <property>/fdm/jsbsim/propulsion/engine[0]/cht-degc</property>
-  <interpolation>
-    <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
-    <entry><ind> 300.0 </ind><dep> 105.0</dep></entry>
-  </interpolation>
-  <center>
-    <x-m>0.0</x-m>
-    <y-m>-0.022</y-m>
-    <z-m>-0.0014</z-m>
-  </center>
+  <object-name>tachneedle</object-name>
+  <property>engines/engine[2]/n2</property>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	20.0</dep></entry>
+      <entry><ind>	37.5</ind>	<dep>	20.0</dep></entry>
+      <entry><ind>	100.00</ind>	<dep>	353.33</dep></entry>
+    </interpolation>
   <axis>
-    <x>1.0</x>
+    <x>-1.0</x>
     <y>0.0</y>
     <z>0.0</z>
   </axis>
@@ -72,7 +46,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">TCT</text>
+    <text type="string">TE-4M TG-16 RPM</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>

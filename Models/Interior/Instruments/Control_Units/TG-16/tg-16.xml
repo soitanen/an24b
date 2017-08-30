@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!-- Switches and lamps of engine start panel, left console -->
+
+<PropertyList>
+
+<model>
+ <path>wl_tg-started.xml</path>
+  <offsets>
+    <x-m>2.605</x-m>
+    <y-m>-0.982</y-m>
+    <z-m>0.595</z-m>
+    <heading-deg>84</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_tg-starting.xml</path>
+  <offsets>
+    <x-m>2.63</x-m>
+    <y-m>-0.984</y-m>
+    <z-m>0.595</z-m>
+    <heading-deg>84</heading-deg>
+  </offsets>
+</model>
+
+</PropertyList>

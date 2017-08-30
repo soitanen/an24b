@@ -890,7 +890,7 @@
 <!--********************************************-->
 
 <model>
-  <name>tct</name>
+  <name>TCT</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/TCT_lc/tct.xml</path>
   <offsets>
     <x-m>2.375</x-m>
@@ -907,6 +907,29 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/UIx-xxx_mplc/lc_uiz-3.xml</path>
   <offsets>
     <x-m>2.7153</x-m>
+    <y-m>-1.0</y-m>
+    <z-m>0.5524</z-m>
+    <heading-deg>84</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>TV-1_TG-16</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/TV-1_mprp/lp_tv-1.xml</path>
+  <offsets>
+    <x-m>2.6383</x-m>
+    <y-m>-0.989</y-m>
+    <z-m>0.5367</z-m>
+    <heading-deg>84</heading-deg>
+  </offsets>
+</model>
+
+
+<model>
+  <name>TE-4M</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/TE-40M_lc/te-40.xml</path>
+  <offsets>
+    <x-m>2.545</x-m>
     <y-m>-0.9907</y-m>
     <z-m>0.5524</z-m>
     <heading-deg>84</heading-deg>
@@ -1104,6 +1127,11 @@
 <model>
   <name>aileron_rudder_trim</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Trim/aileron-rudder-trim.xml</path>
+</model>
+
+<model>
+  <name>TG-16-start</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/TG-16/tg-16.xml</path>
 </model>
 
 </PropertyList>

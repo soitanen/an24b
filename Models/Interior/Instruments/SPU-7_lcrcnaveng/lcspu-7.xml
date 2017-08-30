@@ -61,7 +61,7 @@
       <property>/an24/spu-7/lc_vol_listen</property>
       <factor>-0.05</factor>
       <min>0</min>
-      <max>1</max>                
+      <max>1</max>
       <wrap>false</wrap>
      </binding>
     </action>
@@ -95,7 +95,7 @@
       <property>/an24/spu-7/lc_vol_general</property>
       <factor>-0.05</factor>
       <min>0</min>
-      <max>1</max>                
+      <max>1</max>
       <wrap>false</wrap>
      </binding>
     </action>

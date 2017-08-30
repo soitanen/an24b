@@ -443,6 +443,31 @@ Models        </description>
                 </orient>
             </thruster>
         </engine>
+        <engine file="gtd-16">
+          <location unit="M">
+                <x> 5.94 </x>
+                <y> 3.95 </y>
+                <z> 1.185 </z>
+          </location>
+          <orient unit="DEG">
+            <roll> 0 </roll>
+            <pitch> 0 </pitch>
+            <yaw> 0 </yaw>
+          </orient>
+          <feed>0</feed>
+          <thruster file="direct">
+            <location unit="M">
+                <x> 5.94 </x>
+                <y> 3.95 </y>
+                <z> 1.185 </z>
+            </location>
+            <orient unit="DEG">
+              <roll> 0 </roll>
+              <pitch> 0 </pitch>
+              <yaw> 90 </yaw>
+            </orient>
+          </thruster>
+        </engine>
 
         <tank type="FUEL">
             <location unit="M">
@@ -781,6 +806,7 @@ Models        </description>
     <system file="prop-governor"/>
     <system file="steering"/>
     <system file="skid-slip-ball"/>
+    <system file="gtd-16"/>
 
        <external_reactions>
     

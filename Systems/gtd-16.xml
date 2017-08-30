@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<system name="Engines">
+
+  <channel name="GTD-16">
+    <switch name="propulsion/engine[2]/thr">
+      <default value="0.0"/>
+      <test value="0.98">
+        propulsion/engine[2]/n2 > 22.0
+      </test>
+      <output>fcs/throttle-pos-norm[2]</output>
+    </switch>
+  </channel>
+  
+</system>

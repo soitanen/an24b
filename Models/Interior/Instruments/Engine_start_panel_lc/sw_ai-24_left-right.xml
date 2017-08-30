@@ -15,7 +15,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/Start-Panel/left-right", 1.0 );
+        setprop("an24/Start-Panel/left-right", 0.0 );
+        interpolate("an24/Start-Panel/timerapd", 0.0, 1.0 );
         interpolate("an24/animations/Start-Panel/left-right_sw", 1.0, 0.1 );
       </script>
     </binding>
@@ -38,7 +39,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/Start-Panel/left-right", 0.0 );
+        setprop("an24/Start-Panel/left-right", 1.0 );
+        interpolate("an24/Start-Panel/timerapd", 0.0, 1.0 );
         interpolate("an24/animations/Start-Panel/left-right_sw", 0.0, 0.1 );
       </script>
     </binding>

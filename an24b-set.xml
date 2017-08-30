@@ -562,6 +562,9 @@
   <view>
     <file>Aircraft/an24b/Nasal/view.nas</file>
   </view>
+  <engines>
+    <file>Aircraft/an24b/Nasal/enginestart.nas</file>
+  </engines>
 </nasal>
 
 <payload>

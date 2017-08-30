@@ -13,9 +13,20 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+     <condition>
+     <greater-than>
+      <property>engines/engine[2]/n1</property>
+      <value>90</value>
+     </greater-than>
+     </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/Start-Panel/timerapd", 30.0, 30.0 );
+        interpolate("an24/Start-Panel/timerapd", 30.0, 30.0, 0.0, 3.0 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
         interpolate("an24/animations/Start-Panel/startai24-btn", 1.0, 0.1, 0.0, 0.1 );
       </script>
     </binding>

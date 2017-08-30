@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Button to start Turbogenerator TG-16 (APU) -->
+<!-- Button to start gasturbine GTD-16 of turbogenerator TG-16 (APU) -->
 
 <PropertyList>
  <path>../../shared/switches/spring_load_btn02.ac</path>
@@ -13,10 +13,24 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+     <condition>
+     <equals>
+      <property>an24/AZS/sw0218</property>
+      <value>1.0</value>
+     </equals>
+     </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/Start-Panel/timertg", 30.0, 30.0, 0.0, 3.0 );
-        interpolate("an24/animations/Start-Panel/timertg-btn", 1.0, 0.1, 0.0, 0.1 );
+	setprop("/fdm/jsbsim/propulsion/cutoff_cmd", 0.0);
+        setprop("/controls/engines/engine[2]/cutoff", 1.0);
+        setprop("an24/Start-Panel/discontinuestarttg", 0.0 );
+        setprop("controls/engines/engine[2]/starter", 1.0 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/animations/Start-Panel/starttg-btn", 1.0, 0.1, 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -25,7 +39,7 @@
 <animation>
   <type>translate</type>
   <object-name>press_me</object-name>
-  <property>an24/animations/Start-Panel/timertg-btn</property>
+  <property>an24/animations/Start-Panel/starttg-btn</property>
   <factor>0.003</factor>
   <axis>
     <x>0</x>
