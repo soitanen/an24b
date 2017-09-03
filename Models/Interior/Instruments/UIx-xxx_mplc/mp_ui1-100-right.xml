@@ -60,26 +60,4 @@
     </emission>
   </animation>
  
-<!--Needles
-<animation>
-    <type>rotate</type>
-    <object-name>needle</object-name>
-   <property>fdm/jsbsim/hs/hs1-pressure</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	-65.0</dep></entry>
-      <entry><ind>	120.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	240.0</ind>	<dep>	65.0</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>-0.00172</z-m>
-  </center>
-    <axis>
-      <x>-1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-</animation>
--->
 </PropertyList>

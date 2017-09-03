@@ -5,6 +5,60 @@
 
 <!--Cockpit animations-->
 
+ <animation>
+   <type>slider</type>
+   <object-name>gardinenstange</object-name>
+   <visible>true</visible>
+  <drag-direction>vertical</drag-direction>
+   <action>
+     <binding>
+       <command>property-adjust</command>
+       <property>an24/animations/gardine</property>
+       <factor>0.08</factor>
+       <min>0</min>
+       <max>1.0</max>
+       <wrap>false</wrap>
+     </binding>
+   </action>
+ </animation>
+
+<animation>
+  <type>scale</type>
+  <object-name>gardine</object-name>
+  <property>an24/animations/gardine</property>
+   <center>
+   <x-m>2.065</x-m>
+   <y-m>0.0</y-m>
+   <z-m>1.3317</z-m>
+  </center>
+  <x-min>1.0</x-min>
+  <y-min>1.0</y-min>
+  <z-min>0.1</z-min>
+  <x-factor>1.0</x-factor>
+  <y-factor>1.0</y-factor>
+  <z-factor>8.0</z-factor>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>gardinenstange</object-name>
+  <property>an24/animations/gardine</property>
+  <factor>200.0</factor>
+  <offset-deg>25</offset-deg>
+  <center>
+    <x-m>2.0568</x-m>
+    <y-m>-0.4788</y-m>
+    <z-m>1.3319</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>    
+  </axis>
+ </animation>
+
+
+
 <!--Yoke-->
 <animation>
   <type>rotate</type>
@@ -234,6 +288,7 @@
     <x-m>2.104</x-m>
     <y-m>-0.529</y-m>
     <z-m>0.928</z-m>
+    <pitch-deg>90</pitch-deg>
   </offsets>
 </model>
 
@@ -822,6 +877,7 @@
     <x-m>2.104</x-m>
     <y-m>0.53</y-m>
     <z-m>0.925</z-m>
+    <pitch-deg>90</pitch-deg>
   </offsets>
 </model>
 
@@ -967,9 +1023,9 @@
   <name>GPK-52</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/GPK-52AP_rc/gpk-52.xml</path>
   <offsets>
-    <x-m>2.5814</x-m>
-    <y-m>0.86</y-m>
-    <z-m>0.461</z-m>
+    <x-m>2.5792</x-m>
+    <y-m>0.9116</y-m>
+    <z-m>0.451</z-m>
   </offsets>
 </model>
 
@@ -977,10 +1033,10 @@
   <name>GPK-52 Control</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/GPK-52AP_rc/gpk-52ctrl.xml</path>
   <offsets>
-    <x-m>2.74</x-m>
-    <y-m>0.985</y-m>
-    <z-m>0.75</z-m>
-    <heading-deg>5</heading-deg>
+    <x-m>2.7</x-m>
+    <y-m>1.03</y-m>
+    <z-m>0.7</z-m>
+    <heading-deg>10</heading-deg>
   </offsets>
 </model>
 
@@ -988,10 +1044,10 @@
   <name>SPU-7</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/rcspu-7.xml</path>
   <offsets>
-    <x-m>2.266</x-m>
-    <y-m>0.935</y-m>
-    <z-m>0.64</z-m>
-    <heading-deg>-84</heading-deg>
+    <x-m>2.187</x-m>
+    <y-m>0.942</y-m>
+    <z-m>0.646</z-m>
+    <heading-deg>-80</heading-deg>
   </offsets>
 </model>
 
@@ -999,10 +1055,10 @@
   <name>Achs-2</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-2_mprc/rcachs-2.xml</path>
   <offsets>
-    <x-m>2.5517</x-m>
-    <y-m>0.972</y-m>
-    <z-m>0.700</z-m>
-    <heading-deg>-84</heading-deg>
+    <x-m>2.488</x-m>
+    <y-m>1.002</y-m>
+    <z-m>0.707</z-m>
+    <heading-deg>-80</heading-deg>
   </offsets>
 </model>
 

@@ -62989,7 +62989,7 @@ refs 4
 kids 0
 OBJECT poly
 name "light_plate"
-loc -0.0960054 0.0129682 -0.0751825
+loc -0.0960054 0.0125979 -0.0751825
 texture "ark-11.png"
 crease 45.000000
 numvert 22

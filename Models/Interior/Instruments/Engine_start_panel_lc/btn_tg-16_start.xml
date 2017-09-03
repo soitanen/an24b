@@ -3,7 +3,7 @@
 <!-- Button to start gasturbine GTD-16 of turbogenerator TG-16 (APU) -->
 
 <PropertyList>
- <path>../../shared/switches/spring_load_btn02.ac</path>
+ <path>../../shared/switches/205k.ac</path>
 
 <animation>
   <type>pick</type>
@@ -30,9 +30,17 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/Start-Panel/starttg-btn", 1.0, 0.1, 0.0, 0.1 );
+        interpolate("an24/animations/Start-Panel/starttg-btn", 1.0, 0.1 );
       </script>
     </binding>
+   <mod-up>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/animations/Start-Panel/starttg-btn", 0.0, 0.1 );
+      </script>
+    </binding>
+   </mod-up>
   </action>
 </animation>
 

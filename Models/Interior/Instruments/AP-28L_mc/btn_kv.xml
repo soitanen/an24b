@@ -3,7 +3,7 @@
 <!-- AP horizon button -->
 
 <PropertyList>
- <path>../../shared/switches/spring_load_btn02.ac</path>
+ <path>../../shared/switches/5k.ac</path>
 
 <animation>
   <type>pick</type>

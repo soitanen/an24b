@@ -3,7 +3,7 @@
 <!-- Button to start engine start sequence of APD-27 -->
 
 <PropertyList>
- <path>../../shared/switches/spring_load_btn02.ac</path>
+ <path>../../shared/switches/205k.ac</path>
 
 <animation>
   <type>pick</type>
@@ -27,9 +27,17 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/Start-Panel/startai24-btn", 1.0, 0.1, 0.0, 0.1 );
+        interpolate("an24/animations/Start-Panel/startai24-btn", 1.0, 0.1 );
       </script>
     </binding>
+      <mod-up>
+	<binding>
+	<command>nasal</command>
+	<script>
+	interpolate("an24/animations/Start-Panel/startai24-btn", 0.0, 0.1 );
+	</script>
+	</binding>
+      </mod-up>
   </action>
 </animation>
 
@@ -37,7 +45,7 @@
   <type>translate</type>
   <object-name>press_me</object-name>
   <property>an24/animations/Start-Panel/startai24-btn</property>
-  <factor>0.003</factor>
+  <factor>0.005</factor>
   <axis>
     <x>0</x>
     <y>0</y>
