@@ -55,9 +55,9 @@
    <z-m>0.0</z-m>
   </center>
   <axis>
-    <x>0.0</x>
-    <y>0.0</y>
-    <z>-1.0</z>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-1.0</z-m>
   </axis>
  </animation>
 

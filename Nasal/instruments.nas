@@ -79,3 +79,18 @@ var addfreqs = func {
 
  setlistener("an24/ark-11/sub-band-khz", addfreqs);
  setlistener("an24/ark-11/fine-khz", addfreqs);
+
+# AChS stopwatch
+var stopwatch = func {
+        var startbtn = getprop("an24/AChS/start-btn");
+	if ( startbtn = 1) {
+        var flighttime = getprop("sim/time/elapsed-sec") - getprop("an24/AChS/begin");
+	setprop("an24/AChS/flighttime", int(flighttime));
+        settimer(stopwatch, 0.4);
+	}
+	else {
+	setprop("an24/AChS/flighttime", 0);
+	}
+}
+
+ setlistener("an24/AChS/start-btn", stopwatch);

@@ -548,7 +548,7 @@ refs 3
 24 0.0266336 0.950927
 kids 0
 OBJECT poly
-name "disk"
+name "housing"
 loc 0.000836888 -0.000251442 0.000235468
 texture "2ppt1-4.png"
 crease 45.000000

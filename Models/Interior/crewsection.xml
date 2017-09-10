@@ -74,7 +74,6 @@
   </offsets>
 </model>
 
-
 <model>
   <name>115_36VAC_Panel</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/115_36VAC_panel_eng/115_36vac.xml</path>
@@ -94,6 +93,17 @@
     <y-m>0.86</y-m>
     <z-m>1.1</z-m>
     <roll-deg>38</roll-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>AChS-1</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/navachs-1.xml</path>
+  <offsets>
+    <x-m>3.8803</x-m>
+    <y-m>-0.887</y-m>
+    <z-m>0.8906</z-m>
+    <heading-deg>90</heading-deg>
   </offsets>
 </model>
 

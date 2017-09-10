@@ -366,10 +366,10 @@
 <!-- ************************** MIDDLE PANEL *************************** -->
 
 <model>
-  <name>Achs-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-2_mprc/mpachs-2.xml</path>
+  <name>Achs-1</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/mpachs-1.xml</path>
   <offsets>
-    <x-m>2.088</x-m>
+    <x-m>2.094</x-m>
     <y-m>-0.2223</y-m>
     <z-m>0.8376</z-m>
   </offsets>
@@ -1052,11 +1052,11 @@
 </model>
 
 <model>
-  <name>Achs-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-2_mprc/rcachs-2.xml</path>
+  <name>Achs-1</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/rcachs-1.xml</path>
   <offsets>
     <x-m>2.488</x-m>
-    <y-m>1.002</y-m>
+    <y-m>1.0</y-m>
     <z-m>0.707</z-m>
     <heading-deg>-80</heading-deg>
   </offsets>
@@ -1100,8 +1100,9 @@
   <offsets>
     <x-m>2.14</x-m>
     <y-m>0.0</y-m>
-    <z-m>1.34</z-m>
-    <pitch-deg>-110</pitch-deg>
+    <z-m>1.32</z-m>
+    <roll-deg>0</roll-deg>
+    <pitch-deg>70</pitch-deg>
   </offsets>
 </model>
 

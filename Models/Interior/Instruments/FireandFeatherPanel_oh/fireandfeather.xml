@@ -3,10 +3,10 @@
 <!-- Overhead panel with warning and signaling lights, extinguishing and feathering options in case of engine fire/failure -->
 
   <path>fireandfeather.ac</path>
-<!--
+
  <animation>
   <type>material</type>
-  <object-name>background</object-name>
+  <object-name>lightplate</object-name>
   <condition>
    <equals>
     <property>an24/lights/instrlights</property>
@@ -15,22 +15,237 @@
   </condition>
   <emission>
    <red>1.0</red>
-   <green>0.5</green>
+   <green>0.9</green>
    <blue>0.5</blue>
    <factor-prop>an24/lights/instrlights</factor-prop>
   </emission>
  </animation>
--->
 
-<!-- ************ Top row *********** -->
+<!-- ************ Feathering section *********** -->
+
+<model>
+ <path>sw_autofeatherbyikm_l.xml</path>
+  <offsets>
+    <x-m>-0.009</x-m>
+    <y-m>-0.2707</y-m>
+    <z-m>-0.0333</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_autofeatherbyikm_r.xml</path>
+  <offsets>
+    <x-m>-0.009</x-m>
+    <y-m>-0.2313</y-m>
+    <z-m>-0.0333</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_autofeatherbythrust_l.xml</path>
+  <offsets>
+    <x-m>-0.009</x-m>
+    <y-m>-0.2002</y-m>
+    <z-m>-0.0333</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_autofeatherbythrust_r.xml</path>
+  <offsets>
+    <x-m>-0.009</x-m>
+    <y-m>-0.1757</y-m>
+    <z-m>-0.0333</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_turnable.xml</path>
+  <offsets>
+    <x-m>-0.009</x-m>
+    <y-m>0.2671</y-m>
+    <z-m>-0.0395</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wlfeather01.xml</path>
+  <offsets>
+    <x-m>-0.0137</x-m>
+    <y-m>-0.0939</y-m>
+    <z-m>0.0477</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wlfeather02.xml</path>
+  <offsets>
+    <x-m>-0.0137</x-m>
+    <y-m>-0.0531</y-m>
+    <z-m>0.0477</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wlfeather03.xml</path>
+  <offsets>
+    <x-m>-0.0137</x-m>
+    <y-m>-0.0939</y-m>
+    <z-m>0.0163</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wlfeather04.xml</path>
+  <offsets>
+    <x-m>-0.0137</x-m>
+    <y-m>-0.0531</y-m>
+    <z-m>0.0163</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wlfeather05.xml</path>
+  <offsets>
+    <x-m>-0.0137</x-m>
+    <y-m>-0.0939</y-m>
+    <z-m>-0.015</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wlfeather06.xml</path>
+  <offsets>
+    <x-m>-0.0137</x-m>
+    <y-m>-0.0531</y-m>
+    <z-m>-0.015</z-m>
+  </offsets>
+</model>
+
+<!-- ************ Fire section *********** -->
+
+<model>
+ <path>btn01.xml</path>
+  <offsets>
+    <x-m>-0.0136</x-m>
+    <y-m>0.1317</y-m>
+    <z-m>-0.0483</z-m>
+    <pitch-deg>90</pitch-deg>
+  </offsets>
+</model>
+
+<animation>
+  <type>pick</type>
+  <object-name>cover01</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/animations/FireFeather/cover01" ) == 1.0 ){
+        interpolate("an24/animations/FireFeather/cover01", 0.0, 0.2 );
+        }
+        else {
+        interpolate("an24/animations/FireFeather/cover01", 1.0, 0.2 );
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>cover01</object-name>
+   <property>an24/animations/FireFeather/cover01</property>
+   <factor>80</factor>
+  <center>
+    <x-m>0.0047</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0694</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+ </animation>
+
+<model>
+ <path>btn02.xml</path>
+  <offsets>
+    <x-m>-0.0136</x-m>
+    <y-m>0.1751</y-m>
+    <z-m>-0.0483</z-m>
+    <pitch-deg>90</pitch-deg>
+  </offsets>
+</model>
+
+<animation>
+  <type>pick</type>
+  <object-name>cover02</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/animations/FireFeather/cover02" ) == 1.0 ){
+        interpolate("an24/animations/FireFeather/cover02", 0.0, 0.2 );
+        }
+        else {
+        interpolate("an24/animations/FireFeather/cover02", 1.0, 0.2 );
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>cover02</object-name>
+   <property>an24/animations/FireFeather/cover02</property>
+   <factor>80</factor>
+  <center>
+    <x-m>0.0047</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0694</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+ </animation>
+
+<!-- -->
+
+<model>
+ <path>wl_internal-eng-fire_l.xml</path>
+  <offsets>
+    <x-m>-0.014</x-m>
+    <y-m>0.0185</y-m>
+    <z-m>0.0291</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl_internal-eng-fire_r.xml</path>
+  <offsets>
+    <x-m>-0.014</x-m>
+    <y-m>0.2592</y-m>
+    <z-m>0.0291</z-m>
+  </offsets>
+</model>
 
 <model>
  <path>wl0101.xml</path>
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.038</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 
@@ -39,8 +254,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.0582</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 
@@ -50,8 +264,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.0785</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 
@@ -60,8 +273,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.098</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 
@@ -70,8 +282,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.12</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 
@@ -80,8 +291,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.14</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 
@@ -90,8 +300,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.161</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 
@@ -100,51 +309,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.182</y-m>
-    <z-m>0.026</z-m>
-    <pitch-deg>180</pitch-deg>
-  </offsets>
-</model>
-
-<!-- ************ 2nd row *********** -->
-
-<model>
- <path>wl0201.xml</path>
-  <offsets>
-    <x-m>0.0</x-m>
-    <y-m>0.038</y-m>
-    <z-m>0.049</z-m>
-    <pitch-deg>180</pitch-deg>
-  </offsets>
-</model>
-
-
-<model>
- <path>wl0202.xml</path>
-  <offsets>
-    <x-m>0.0</x-m>
-    <y-m>0.0582</y-m>
-    <z-m>0.049</z-m>
-    <pitch-deg>180</pitch-deg>
-  </offsets>
-</model>
-
-<model>
- <path>wl0203.xml</path>
-  <offsets>
-    <x-m>0.0</x-m>
-    <y-m>0.0785</y-m>
-    <z-m>0.049</z-m>
-    <pitch-deg>180</pitch-deg>
-  </offsets>
-</model>
-
-<model>
- <path>wl0204.xml</path>
-  <offsets>
-    <x-m>0.0</x-m>
-    <y-m>0.098</y-m>
-    <z-m>0.049</z-m>
-    <pitch-deg>180</pitch-deg>
+    <z-m>-0.026</z-m>
   </offsets>
 </model>
 

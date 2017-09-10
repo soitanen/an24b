@@ -66,8 +66,8 @@
    </axis>
    <center>
     <x-m>0</x-m>
-    <y-m>-0.025737045</y-m>
-    <z-m>-0.03216055</z-m>
+    <y-m>-0.03</y-m>
+    <z-m>-0.0306</z-m>
    </center>
     <action>
      <binding>
