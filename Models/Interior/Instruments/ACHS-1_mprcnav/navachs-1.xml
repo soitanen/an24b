@@ -11,6 +11,9 @@
    <object-name>hour_needle</object-name>
    <object-name>min_needle</object-name>
    <object-name>sec_needle</object-name>
+   <object-name>ft_hour_needle</object-name>
+   <object-name>ft_min_needle</object-name>
+   <object-name>timer_sec_needle</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
@@ -30,7 +33,6 @@
       <command>nasal</command>
       <script>
 	if ( getprop("an24/AChS/start-btn") != 1 ){
-	setprop("an24/AChS/mode", 1.0 );
 	setprop("an24/AChS/begin", getprop("sim/time/elapsed-sec") );
 	setprop("an24/AChS/start-btn", 1 );
 	}
@@ -79,17 +81,6 @@
 </animation>
 
 <animation>
-  <type>select</type>
-  <object-name>hour_needle</object-name>
-<condition>
-   <equals>
-    <property>an24/AChS/start-btn</property>
-    <value>0.0</value>
-   </equals>
-  </condition>
-</animation>
-
-<animation>
   <type>rotate</type>
   <object-name>min_needle</object-name>
   <property>/instrumentation/clock/indicated-sec</property>
@@ -99,17 +90,6 @@
     <y>0.0</y>
     <z>0.0</z>
   </axis>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>min_needle</object-name>
-<condition>
-   <equals>
-    <property>an24/AChS/start-btn</property>
-    <value>0.0</value>
-   </equals>
-  </condition>
 </animation>
 
 <animation>
@@ -123,18 +103,6 @@
     <z>0.0</z>
   </axis>
 </animation>
-
-<animation>
-  <type>select</type>
-  <object-name>sec_needle</object-name>
-<condition>
-   <equals>
-    <property>an24/AChS/start-btn</property>
-    <value>0.0</value>
-   </equals>
-  </condition>
-</animation>
-
 
 <!-- Flighttime -->
 
@@ -143,69 +111,50 @@
   <object-name>ft_hour_needle</object-name>
   <property>an24/AChS/flighttime</property>
   <factor>-0.00833333</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0174</z-m>
+  </center>
   <axis>
     <x>1.0</x>
     <y>0.0</y>
     <z>0.0</z>
   </axis>
 </animation>
-
-<animation>
-  <type>select</type>
-  <object-name>ft_hour_needle</object-name>
-<condition>
-   <equals>
-    <property>an24/AChS/start-btn</property>
-    <value>1.0</value>
-   </equals>
-  </condition>
-</animation>
-
 
 <animation>
   <type>rotate</type>
   <object-name>ft_min_needle</object-name>
   <property>an24/AChS/flighttime</property>
   <factor>-0.1</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0174</z-m>
+  </center>
   <axis>
     <x>1.0</x>
     <y>0.0</y>
     <z>0.0</z>
   </axis>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>ft_min_needle</object-name>
-<condition>
-   <equals>
-    <property>an24/AChS/start-btn</property>
-    <value>1.0</value>
-   </equals>
-  </condition>
 </animation>
 
 <animation>
   <type>rotate</type>
-  <object-name>ft_sec_needle</object-name>
+  <object-name>timer_sec_needle</object-name>
   <property>an24/AChS/flighttime</property>
   <factor>-6.0</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0181</z-m>
+  </center>
   <axis>
     <x>1.0</x>
     <y>0.0</y>
     <z>0.0</z>
   </axis>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>ft_sec_needle</object-name>
-<condition>
-   <equals>
-    <property>an24/AChS/start-btn</property>
-    <value>1.0</value>
-   </equals>
-  </condition>
 </animation>
 
 <!-- Text OSG -->

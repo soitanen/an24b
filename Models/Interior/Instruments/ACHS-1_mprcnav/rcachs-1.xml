@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Achs-1, clock right console-->
+<!-- Achs-1, clock -->
 
 <PropertyList>
  <path>achs-1.ac</path>
@@ -11,6 +11,9 @@
    <object-name>hour_needle</object-name>
    <object-name>min_needle</object-name>
    <object-name>sec_needle</object-name>
+   <object-name>ft_hour_needle</object-name>
+   <object-name>ft_min_needle</object-name>
+   <object-name>timer_sec_needle</object-name>
    <emission>
      <red>1.0</red>
      <green>1.0</green>
@@ -18,6 +21,41 @@
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>left_knob</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+	if ( getprop("an24/AChS/start-btn") != 1 ){
+	setprop("an24/AChS/begin", getprop("sim/time/elapsed-sec") );
+	setprop("an24/AChS/start-btn", 1 );
+	}
+
+	else {
+	setprop("an24/AChS/start-btn", 0 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>left_knob</object-name>
+  <property>an24/AChS/start-btn</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
 
 <animation>
   <type>rotate</type>
@@ -41,6 +79,7 @@
     <z>0.0</z>
   </axis>
 </animation>
+
 <animation>
   <type>rotate</type>
   <object-name>min_needle</object-name>
@@ -52,6 +91,7 @@
     <z>0.0</z>
   </axis>
 </animation>
+
 <animation>
   <type>rotate</type>
   <object-name>sec_needle</object-name>
@@ -64,7 +104,60 @@
   </axis>
 </animation>
 
-<!-- TEXT OSG -->
+<!-- Flighttime -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>ft_hour_needle</object-name>
+  <property>an24/AChS/flighttime</property>
+  <factor>-0.00833333</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0174</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ft_min_needle</object-name>
+  <property>an24/AChS/flighttime</property>
+  <factor>-0.1</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0174</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>timer_sec_needle</object-name>
+  <property>an24/AChS/flighttime</property>
+  <factor>-6.0</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0181</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Text OSG -->
 
   <animation>
     <type>select</type>
@@ -96,7 +189,6 @@
       <z-m>  0.000 </z-m>
     </offsets>
   </text>
-
   <animation>
     <type>material</type>
     <object-name>textosg</object-name>
