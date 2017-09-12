@@ -21,6 +21,11 @@
   </emission>
  </animation>
 
+  <effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>plexi</object-name>
+   </effect>
+
 <!-- ************ Feathering section *********** -->
 
 <model>

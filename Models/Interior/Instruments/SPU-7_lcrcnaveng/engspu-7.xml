@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Engineer's SPU-7, crew/radio communication control -->
+<!-- Engineer (Radio man)'s SPU-7, crew/radio communication control -->
 
 <PropertyList>
   <path>spu-7.ac</path>
@@ -11,10 +11,47 @@
    <emission>
      <red>1.0</red>
      <green>1.0</green>
-     <blue>1.0</blue>
+     <blue>0.7</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
+
+<!-- Emergency call (set all stations listening and their volume up)-->
+
+<animation>
+  <type>pick</type>
+  <object-name>press_me</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/SPU-7/eng_emerg-call" ) == 1.0 ){
+        setprop("an24/SPU-7/eng_emerg-call", 0.0 );
+        }
+        else {
+        setprop("an24/SPU-7/eng_emerg-call", 1.0 );
+        }
+        interpolate("an24/animations/spu_eng-emerg", 1.0, 0.1 );
+        settimer(func {interpolate("an24/animations/spu_eng-emerg", 0.0, 0.1 );},0.1);
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/animations/spu_eng-emerg</property>
+  <factor>0.0016</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
 
 <!-- Source selector, -->
 
@@ -24,8 +61,8 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/spu-7/eng_source</property>
-      <factor>1</factor>
+      <property>/an24/SPU-7/eng_source</property>
+      <factor>-1</factor>
       <min>0</min>
       <max>5</max>                
       <wrap>false</wrap>
@@ -36,7 +73,7 @@
  <animation>
   <object-name>source_select</object-name>
   <type>rotate</type>
-   <property>/an24/spu-7/eng_source</property>
+   <property>/an24/SPU-7/eng_source</property>
    <factor>32</factor>
   <center>
    <x-m>0.0</x-m>
@@ -58,10 +95,10 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/spu-7/eng_vol_listen</property>
+      <property>/an24/SPU-7/eng_vol_listen</property>
       <factor>-0.05</factor>
       <min>0</min>
-      <max>1</max>                
+      <max>1</max>
       <wrap>false</wrap>
      </binding>
     </action>
@@ -70,7 +107,7 @@
  <animation>
   <object-name>vol_listen</object-name>
   <type>rotate</type>
-   <property>/an24/spu-7/eng_vol_listen</property>
+   <property>/an24/SPU-7/eng_vol_listen</property>
    <factor>800</factor>
   <center>
    <x-m>0.0</x-m>
@@ -92,10 +129,10 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/spu-7/eng_vol_general</property>
+      <property>/an24/SPU-7/eng_vol_general</property>
       <factor>-0.05</factor>
       <min>0</min>
-      <max>1</max>                
+      <max>1</max>
       <wrap>false</wrap>
      </binding>
     </action>
@@ -104,7 +141,7 @@
  <animation>
   <object-name>vol_general</object-name>
   <type>rotate</type>
-   <property>/an24/spu-7/eng_vol_general</property>
+   <property>/an24/SPU-7/eng_vol_general</property>
    <factor>800</factor>
   <center>
    <x-m>0.0</x-m>
@@ -126,7 +163,7 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/spu-7/lc_vol_general</property>
+      <property>/an24/SPU-7/lc_vol_general</property>
       <factor>-0.05</factor>
       <min>0</min>
       <max>1</max>                
@@ -138,7 +175,7 @@
  <animation>
   <object-name>vol_general</object-name>
   <type>rotate</type>
-   <property>/an24/spu-7/lc_vol_general</property>
+   <property>/an24/SPU-7/lc_vol_general</property>
    <factor>400</factor>
   <center>
    <x-m>0.0</x-m>

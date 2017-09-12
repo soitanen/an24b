@@ -159,7 +159,7 @@
   <type>rotate</type>
   <object-name>armrest</object-name>
   <property>an24/animations/armrest</property>
-  <factor>80.0</factor>
+  <factor>90.0</factor>
   <center>
     <x-m>0.1258</x-m>
     <y-m>0.0</y-m>

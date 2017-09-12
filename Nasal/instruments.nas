@@ -65,26 +65,42 @@ var parkBrakeSet = func {
 }
 setlistener("/sim/signals/fdm-initialized", parkBrakeSet);
 
-# ARK Summing up frequencies
-setprop("/an24/ark-11/sub-band-khz", 120.0);
-setprop("/an24/ark-11/fine-khz", 0.0);
+# ARK No.1 Summing up frequencies
+setprop("an24/ARK-11/sub-band-khz-1", 120.0);
+setprop("an24/ARK-11/fine-khz-1", 0.0);
 
 var addfreqs = func {
- var subband = getprop("an24/ark-11/sub-band-khz");
- var finetune = getprop("an24/ark-11/fine-khz");
+ var subband = getprop("an24/ARK-11/sub-band-khz-1");
+ var finetune = getprop("an24/ARK-11/fine-khz-1");
  var finalfreq = finetune + subband ;
- setprop("an24/ark-11/final-freq", finalfreq);
- setprop("instrumentation/adf/frequencies/selected-khz", finalfreq);
+ setprop("an24/ARK-11/final-freq-1", finalfreq);
+ setprop("/instrumentation/adf[0]/frequencies/selected-khz", finalfreq);
 }
 
- setlistener("an24/ark-11/sub-band-khz", addfreqs);
- setlistener("an24/ark-11/fine-khz", addfreqs);
+ setlistener("an24/ARK-11/sub-band-khz-1", addfreqs);
+ setlistener("an24/ARK-11/fine-khz-1", addfreqs);
+
+# ARK No.2 Summing up frequencies
+setprop("an24/ARK-11/sub-band-khz-2", 120.0);
+setprop("an24/ARK-11/fine-khz-2", 0.0);
+
+var addfreqs = func {
+ var subband = getprop("an24/ARK-11/sub-band-khz-2");
+ var finetune = getprop("an24/ARK-11/fine-khz-2");
+ var finalfreq = finetune + subband ;
+ setprop("an24/ARK-11/final-freq-2", finalfreq);
+ setprop("/instrumentation/adf[1]/frequencies/selected-khz", finalfreq);
+}
+
+ setlistener("an24/ARK-11/sub-band-khz-2", addfreqs);
+ setlistener("an24/ARK-11/fine-khz-2", addfreqs);
+
 
 # AChS stopwatch
 var stopwatch = func {
         var startbtn = getprop("an24/AChS/start-btn");
 	if ( startbtn = 1) {
-        var flighttime = getprop("sim/time/elapsed-sec") - getprop("an24/AChS/begin");
+        var flighttime = getprop("/sim/time/elapsed-sec") - getprop("an24/AChS/begin");
 	setprop("an24/AChS/flighttime", int(flighttime));
         settimer(stopwatch, 0.4);
 	}

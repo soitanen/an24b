@@ -16,6 +16,7 @@
       <command>nasal</command>
       <script>
         interpolate("an24/AZS/sw0515", 1.0, 0.1 );
+	setprop("/instrumentation/adf[1]/serviceable", 1.0 );
       </script>
     </binding>
   </action>
@@ -32,6 +33,7 @@
       <command>nasal</command>
       <script>
         interpolate("an24/AZS/sw0515", -1.0, 0.1 );
+	setprop("/instrumentation/adf[1]/serviceable", 0.0 );
       </script>
     </binding>
   </action>

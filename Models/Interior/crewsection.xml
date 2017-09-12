@@ -107,4 +107,28 @@
   </offsets>
 </model>
 
+<model>
+  <name>ARK-11</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-1.xml</path>
+  <offsets>
+    <x-m>3.794</x-m>
+    <y-m>-0.805</y-m>
+    <z-m>1.205</z-m>
+    <heading-deg>90</heading-deg>
+    <pitch-deg>130</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>ARK-11</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-2.xml</path>
+  <offsets>
+    <x-m>3.576</x-m>
+    <y-m>-0.805</y-m>
+    <z-m>1.205</z-m>
+    <heading-deg>90</heading-deg>
+    <pitch-deg>130</pitch-deg>
+  </offsets>
+</model>
+
 </PropertyList>

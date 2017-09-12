@@ -10,8 +10,8 @@
    <object-name>housing</object-name>
    <emission>
      <red>1.0</red>
-     <green>0.3</green>
-     <blue>0.3</blue>
+     <green>0.5</green>
+     <blue>0.5</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
