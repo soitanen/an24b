@@ -454,7 +454,9 @@ Models        </description>
             <pitch> 0 </pitch>
             <yaw> 0 </yaw>
           </orient>
-          <feed>0</feed>
+          <feed>3</feed>
+          <feed>4</feed>
+          <feed>5</feed>
           <thruster file="direct">
             <location unit="M">
                 <x> 5.94 </x>
@@ -482,7 +484,7 @@ Models        </description>
             </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>2</priority>
+            <priority>1</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
@@ -497,7 +499,7 @@ Models        </description>
             </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>2</priority>
+            <priority>1</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
@@ -542,7 +544,7 @@ Models        </description>
             </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>2</priority>
+            <priority>1</priority>
         </tank>
         <tank type="FUEL">
             <location unit="M">
@@ -557,8 +559,9 @@ Models        </description>
             </drain_location>
             <capacity unit="KG">275</capacity>
             <contents unit="KG">275</contents>
-            <priority>2</priority>
+            <priority>1</priority>
         </tank>
+
     </propulsion>
 
     <flight_control name="FCS: an24">
@@ -807,6 +810,7 @@ Models        </description>
     <system file="steering"/>
     <system file="skid-slip-ball"/>
     <system file="gtd-16"/>
+    <!--system file="fuel"/-->
 
        <external_reactions>
     

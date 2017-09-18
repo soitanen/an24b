@@ -15,10 +15,16 @@
 <animation>
  <type>select</type>
  <condition>
+  <or>
    <equals>
-    <property>an24/FuelControl/gr2rightpumps</property>
+    <property>/controls/fuel/tank[4]/boost-pump[0]</property>
     <value>1</value>
    </equals>
+   <equals>
+    <property>/controls/fuel/tank[5]/boost-pump[0]</property>
+    <value>1</value>
+   </equals>
+  </or>
   </condition>
  <object-name>lampon</object-name>
 </animation>

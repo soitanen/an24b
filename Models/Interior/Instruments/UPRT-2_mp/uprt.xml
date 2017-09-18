@@ -21,6 +21,10 @@
 <animation>
   <type>rotate</type>
   <object-name>needle_1</object-name>
+  <condition>
+  <property>an24/AZS/sw0204</property>
+  <value>1</value>
+  </condition>
   <property>fdm/jsbsim/fcs/throttle-pos-norm[0]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep> -145.0</dep></entry>
@@ -36,6 +40,10 @@
 <animation>
   <type>rotate</type>
   <object-name>needle_2</object-name>
+  <condition>
+  <property>an24/AZS/sw0205</property>
+  <value>1</value>
+  </condition>
   <property>fdm/jsbsim/fcs/throttle-pos-norm[1]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep> -145.0</dep></entry>

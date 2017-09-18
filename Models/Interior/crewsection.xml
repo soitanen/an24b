@@ -46,9 +46,9 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4sh.xml</path>
   <offsets>
     <x-m>3.25</x-m>
-    <y-m>-0.86</y-m>
-    <z-m>0.9</z-m>
-    <roll-deg>35</roll-deg>
+    <y-m>-0.95</y-m>
+    <z-m>0.81</z-m>
+    <roll-deg>30</roll-deg>
   </offsets>
 </model>
 
@@ -112,8 +112,8 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-1.xml</path>
   <offsets>
     <x-m>3.794</x-m>
-    <y-m>-0.805</y-m>
-    <z-m>1.205</z-m>
+    <y-m>-0.80</y-m>
+    <z-m>1.195</z-m>
     <heading-deg>90</heading-deg>
     <pitch-deg>130</pitch-deg>
   </offsets>
@@ -124,8 +124,8 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-2.xml</path>
   <offsets>
     <x-m>3.576</x-m>
-    <y-m>-0.805</y-m>
-    <z-m>1.205</z-m>
+    <y-m>-0.80</y-m>
+    <z-m>1.195</z-m>
     <heading-deg>90</heading-deg>
     <pitch-deg>130</pitch-deg>
   </offsets>

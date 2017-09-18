@@ -79,6 +79,13 @@
 </model>
 
 <model>
+    <name>windows</name>
+    <usage>interior</usage>
+    <path>Aircraft/an24b/Models/Interior/windows.ac</path>
+    <nopreview/>
+</model>
+
+<model>
     <name>cargosection</name>
     <path>Aircraft/an24b/Models/Interior/cargosection.xml</path>
     <offsets>

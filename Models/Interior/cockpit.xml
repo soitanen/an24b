@@ -182,7 +182,7 @@
   </center>
   <axis>
     <x>0</x>
-    <y>-1</y>
+    <y>1</y>
     <z>0</z>    
   </axis>
 </animation>
@@ -215,7 +215,7 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>0.3454</x-m>
+    <x-m>0.3127</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.2587</z-m>    
   </center>
@@ -232,7 +232,7 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>0.3454</x-m>
+    <x-m>0.3127</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.2587</z-m>
   </center>
@@ -249,7 +249,7 @@
   <property>an24/animations/centerseat</property>
   <factor>100.0</factor>
   <center>
-    <x-m>0.1668</x-m>
+    <x-m>0.134</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.612</z-m>    
   </center>

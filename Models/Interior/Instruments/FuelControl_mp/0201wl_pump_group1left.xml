@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Tank group 1 pump ECN-14 (main) left set to auto or manual -->
+<!-- Tank group 1 pump ECN-14 (main) left "on duty" -->
 
 <PropertyList>
  <path>../../shared/lamps/warninglamp02.ac</path>
@@ -15,12 +15,10 @@
 <animation>
  <type>select</type>
  <condition>
-   <not>
    <equals>
-    <property>an24/FuelControl/group1leftpump</property>
-    <value>0.0</value>
+    <property>/controls/fuel/tank[2]/boost-pump[0]</property>
+    <value>1.0</value>
    </equals>
-   </not>
   </condition>
  <object-name>lampon</object-name>
 </animation>

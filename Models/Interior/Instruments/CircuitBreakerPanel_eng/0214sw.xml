@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- AZS-5; Junction valve -->
+<!-- AZS-5; Junction (cross-feed) valve -->
 
 <PropertyList>
  <path>../../shared/switches/azs.ac</path>
