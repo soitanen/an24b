@@ -14,7 +14,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/annularvalve", 1.0, 0.1 );
+        interpolate("an24/FuelControl/crossfeed", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -36,7 +36,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/annularvalve", 0.0, 0.1 );
+        interpolate("an24/FuelControl/crossfeed", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -45,7 +45,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/FuelControl/annularvalve</property>
+   <property>an24/FuelControl/crossfeed</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>

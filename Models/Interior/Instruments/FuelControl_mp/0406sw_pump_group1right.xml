@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Tank-group 1 pump ETsN-14 (main) right set to auto(1)/off(0)/manual(-1) -->
+<!-- Tank-group 1 pump ECN-14 right set to auto(1)/off(0)/manual(-1) -->
 
 <PropertyList>
  <path>../../shared/switches/switch03.ac</path>
@@ -15,8 +15,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/FuelControl/group1rightpump", 1.0 );
-        interpolate("an24/animations/FuelControl/group1rightpump", 1.0, 0.1 );
+        interpolate("an24/FuelControl/sw0406", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -32,8 +31,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/FuelControl/group1rightpump", 0.0 );
-        interpolate("an24/animations/FuelControl/group1rightpump", 0.0, 0.1 );
+        interpolate("an24/FuelControl/sw0406", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -49,8 +47,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/FuelControl/group1rightpump", -1.0 );
-        interpolate("an24/animations/FuelControl/group1rightpump", -1.0, 0.1 );
+        interpolate("an24/FuelControl/sw0406", -1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -59,7 +56,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/FuelControl/group1rightpump</property>
+   <property>an24/FuelControl/sw0406</property>
   <interpolation>
     <entry><ind>-1.0</ind>	<dep>-35.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>35.0</dep></entry>

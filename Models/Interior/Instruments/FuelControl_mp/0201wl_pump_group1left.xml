@@ -16,7 +16,7 @@
  <type>select</type>
  <condition>
    <equals>
-    <property>/controls/fuel/tank[2]/boost-pump[0]</property>
+    <property>an24/FuelControl/groupondutyl</property>
     <value>1.0</value>
    </equals>
   </condition>

@@ -401,6 +401,9 @@ Models        </description>
             <feed>2</feed>
             <feed>1</feed>
             <feed>0</feed>
+            <feed>3</feed>
+            <feed>4</feed>
+            <feed>5</feed>
             <thruster file="prop_4-smv-4-tuned">
                 <sense>-1</sense>
                 <location unit="M">
@@ -429,6 +432,9 @@ Models        </description>
             <feed>3</feed>
             <feed>4</feed>
             <feed>5</feed>
+            <feed>2</feed>
+            <feed>1</feed>
+            <feed>0</feed>
             <thruster file="prop_4-smv-4-tuned">
                 <sense>-1</sense>
               <location unit="M">
@@ -810,7 +816,6 @@ Models        </description>
     <system file="steering"/>
     <system file="skid-slip-ball"/>
     <system file="gtd-16"/>
-    <!--system file="fuel"/-->
 
        <external_reactions>
     

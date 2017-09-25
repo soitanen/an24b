@@ -16,7 +16,7 @@
 </model>
 
 <model>
- <path>wl_02_fuel_filter_failure_left.xml</path>
+ <path>wl_02_fuel_filter_clogged_left.xml</path>
   <offsets>
     <x-m>2.09232</x-m>
     <y-m>0.1869</y-m>
@@ -25,7 +25,7 @@
 </model>
 
 <model>
- <path>wl_03_fuel_filter_failure_right.xml</path>
+ <path>wl_03_fuel_filter_clogged_right.xml</path>
   <offsets>
     <x-m>2.09232</x-m>
     <y-m>0.2111</y-m>

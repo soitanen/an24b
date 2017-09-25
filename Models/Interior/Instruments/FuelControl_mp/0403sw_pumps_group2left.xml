@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Front and rear pumps of tank-group 2 left on/off -->
+<!-- Front and rear pumps 463 (producing 0.32kg/m2 pressure) of tank-group 2 left on/off -->
 
 <PropertyList>
  <path>../../shared/switches/switch03.ac</path>
@@ -14,7 +14,9 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/gr2leftpumps", 1.0, 0.1 );
+        setprop("an24/FuelControl/lrear463_press", 0.16 );
+        setprop("an24/FuelControl/lfront463_press", 0.16 );
+        interpolate("an24/FuelControl/sw0403", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -36,7 +38,9 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/gr2leftpumps", 0.0, 0.1 );
+        setprop("an24/FuelControl/lrear463_press", 0.0 );
+        setprop("an24/FuelControl/lfront463_press", 0.0 );
+        interpolate("an24/FuelControl/sw0403", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -45,7 +49,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/FuelControl/gr2leftpumps</property>
+   <property>an24/FuelControl/sw0403</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
