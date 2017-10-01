@@ -22,7 +22,7 @@
   <object-name>tachneedle</object-name>
   <property>engines/engine[2]/n2</property>
     <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	20.0</dep></entry>
+      <entry><ind>	0.0</ind>	<dep>	 0.0</dep></entry>
       <entry><ind>	37.5</ind>	<dep>	20.0</dep></entry>
       <entry><ind>	100.00</ind>	<dep>	353.33</dep></entry>
     </interpolation>

@@ -27,7 +27,7 @@
   <object-name>gardine</object-name>
   <property>an24/animations/gardine</property>
    <center>
-   <x-m>2.065</x-m>
+   <x-m>2.055</x-m>
    <y-m>0.0</y-m>
    <z-m>1.3317</z-m>
   </center>
@@ -46,7 +46,7 @@
   <factor>200.0</factor>
   <offset-deg>25</offset-deg>
   <center>
-    <x-m>2.0568</x-m>
+    <x-m>2.0468</x-m>
     <y-m>-0.4788</y-m>
     <z-m>1.3319</z-m>
   </center>
@@ -369,7 +369,7 @@
 <!-- *************************************** -->
 
 <model>
-  <name>VD-10K</name>
+  <name>UVO-15M</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/UVO-15M_lpmp/lpuvo-15m.xml</path>
   <offsets>
     <x-m>2.092</x-m>
@@ -1115,9 +1115,9 @@
   <offsets>
     <x-m>2.16</x-m>
     <y-m>0.0</y-m>
-    <z-m>1.32</z-m>
+    <z-m>1.31</z-m>
     <roll-deg>0</roll-deg>
-    <pitch-deg>70</pitch-deg>
+    <pitch-deg>75</pitch-deg>
   </offsets>
 </model>
 
@@ -1127,10 +1127,34 @@
   <name>ARK-11</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/ohark-11.xml</path>
   <offsets>
-    <x-m>2.5895</x-m>
+    <x-m>2.63</x-m>
     <y-m>-0.1905</y-m>
-    <z-m>1.3848</z-m>
+    <z-m>1.4158</z-m>
     <pitch-deg>-190</pitch-deg>
+  </offsets>
+</model>
+
+<!--********************************************-->
+
+<model>
+  <name>R-802r</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/R-802_oh/r-802r.xml</path>
+  <offsets>
+    <x-m>2.349</x-m>
+    <y-m>0.2236</y-m>
+    <z-m>1.38</z-m>
+    <pitch-deg>77</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>R-802l</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/R-802_oh/r-802l.xml</path>
+  <offsets>
+    <x-m>2.349</x-m>
+    <y-m>-0.2236</y-m>
+    <z-m>1.38</z-m>
+    <pitch-deg>77</pitch-deg>
   </offsets>
 </model>
 

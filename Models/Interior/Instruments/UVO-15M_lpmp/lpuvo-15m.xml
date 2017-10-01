@@ -158,49 +158,27 @@
 </animation>
 
 <animation>
-  <type>rotate</type>
+  <type>knob</type>
   <object-name>knob</object-name>
-  <property>instrumentation/altimeter/setting-hpa</property>  
-  <factor>5</factor>
+  <property>/instrumentation/altimeter/setting-hpa</property>
+  <factor>-5</factor>
   <center>
     <x-m>0.0</x-m>
-    <y-m>0.0</y-m>
-    <z-m>-0.058</z-m>
+    <y-m>0.034</y-m>
+    <z-m>-0.037</z-m>
   </center>
   <axis>
     <x>-1.0</x>
     <y>0.0</y>
     <z>0.0</z>
   </axis>
-</animation>
-
-<animation>
-  <type>pick</type>
-  <object-name>knob</object-name>
-  <visible>true</visible>
-  <action>
-    <button>3</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>instrumentation/altimeter/setting-hpa</property>
-      <step>0.5</step>
-    </binding>
-  </action>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>knob</object-name>
-  <visible>true</visible>
-  <action>
-    <button>4</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>instrumentation/altimeter/setting-hpa</property>
-      <step>-0.5</step>
-    </binding>
-  </action>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <factor>-0.5</factor>
+      </binding>
+    </action>
 </animation>
 
 </PropertyList>

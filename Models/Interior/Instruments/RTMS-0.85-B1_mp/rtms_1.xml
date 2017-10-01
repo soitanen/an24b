@@ -7,9 +7,8 @@
 
  <animation>
    <type>material</type>
-   <object-name>housing</object-name>
+   <object-name>rtms-face</object-name>
    <object-name>needle</object-name>
-   <object-name>cover</object-name>
    <object-name>dig100</object-name>
    <object-name>dig10</object-name>
    <object-name>dig1</object-name>
@@ -40,7 +39,7 @@
 <animation>
   <type>rotate</type>
   <object-name>dig1</object-name>
-  <property>fdm/jsbsim/propulsion/engine[0]/fuel-used-lbs</property>
+  <property>/fdm/jsbsim/propulsion/engine[0]/fuel-used-lbs</property>
   <!-- 360deg/22.05lbs(10kg) -->
   <factor>16.329325</factor>
   <center>

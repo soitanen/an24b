@@ -5,20 +5,10 @@
 
 <animation>
   <type>material</type>
-<!--
-  <condition>
-    <property>yak-40/switches/board_left</property>
-    <greater-than>
-      <property>yak-40/systems/electrical/buses/bus27/volts</property>
-      <value>16.0</value>
-    </greater-than>
-  </condition>
--->
   <object-name>back</object-name>
   <object-name>back_0</object-name>
   <object-name>back_1</object-name>
   <object-name>base</object-name>
-  <object-name>glass</object-name>
   <object-name>gs_blenker</object-name>
   <object-name>gs_blenker.001</object-name>
   <object-name>hs_blenker</object-name>
@@ -124,7 +114,7 @@
   <type>knob</type>
   <object-name>knob</object-name>
   <property>/instrumentation/kppm[0]/scale-offset</property>  
-  <factor>5</factor>
+  <factor>-5</factor>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.02904</y-m>
@@ -139,7 +129,7 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/kppm[0]/scale-offset</property>
-        <factor>1</factor>
+        <factor>-1</factor>
         <min>0</min>
         <max>360</max>                
         <wrap>true</wrap>

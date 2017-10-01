@@ -96,6 +96,43 @@
   </offsets>
 </model>
 
+<!-- Engineer's Panel -->
+
+<model>
+  <name>AF-150</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/AF-150_eng/af-150_l.xml</path>
+  <offsets>
+    <x-m>3.876</x-m>
+    <y-m>0.4263</y-m>
+    <z-m>0.7317</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>AF-150</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/AF-150_eng/af-150_r.xml</path>
+  <offsets>
+    <x-m>3.876</x-m>
+    <y-m>0.3613</y-m>
+    <z-m>0.7317</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>VF-150</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/VF-150_eng/vf-150.xml</path>
+  <offsets>
+    <x-m>3.876</x-m>
+    <y-m>0.5133</y-m>
+    <z-m>0.7317</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<!-- Navigator's Panel -->
+
 <model>
   <name>AChS-1</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/navachs-1.xml</path>
@@ -110,6 +147,18 @@
 <model>
   <name>ARK-11</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-1.xml</path>
+  <offsets>
+    <x-m>3.794</x-m>
+    <y-m>-0.80</y-m>
+    <z-m>1.195</z-m>
+    <heading-deg>90</heading-deg>
+    <pitch-deg>130</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>ARK-11</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-1-text.xml</path>
   <offsets>
     <x-m>3.794</x-m>
     <y-m>-0.80</y-m>

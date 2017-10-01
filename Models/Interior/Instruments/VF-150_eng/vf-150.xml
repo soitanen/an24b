@@ -1,37 +1,39 @@
 <?xml version="1.0"?>
 
-<!-- UI1-100 of DIM-100T -->
+<!-- AF-150, Voltmeter -->
 
 <PropertyList>
-
- <path>ui1-100.ac</path>
+ <path>vf-150.ac</path>
 
  <animation>
-  <type>material</type>
-  <object-name>housing</object-name>
-  <object-name>needle</object-name>
+   <type>material</type>
+   <object-name>back</object-name>
+   <object-name>vf-needle</object-name>
    <emission>
      <red>1.0</red>
-     <green>0.5</green>
-     <blue>0.5</blue>
+     <green>1.0</green>
+     <blue>0.7</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
  </animation>
 
- <animation>
+<!--animation>
   <type>rotate</type>
-  <object-name>needle</object-name>
-  <property>engines/engine[0]/thruster/torque</property>
-   <factor>0.012</factor> <!-- fake value; torque where? --> 
-   <offset-deg>-60</offset-deg>
+  <object-name>needle_1</object-name>
+  <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	46.9</dep></entry>
+    <entry><ind>       1245</ind>	<dep>  360.0</dep></entry>
+    <entry><ind>       1370</ind>	<dep>  391.3</dep></entry>
+  </interpolation>
   <axis>
     <x>-1.0</x>
     <y>0.0</y>
     <z>0.0</z>
   </axis>
- </animation>
+</animation-->
 
-<!-- Text OSG -->
+<!-- TEXT OSG -->
 
   <animation>
     <type>select</type>
@@ -44,7 +46,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">UI1-100 Torque indicator</text>
+    <text type="string">VF-150 Voltmeter</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
@@ -72,5 +74,6 @@
       <blue>  1.0 </blue>
     </emission>
   </animation>
- 
+
+
 </PropertyList>

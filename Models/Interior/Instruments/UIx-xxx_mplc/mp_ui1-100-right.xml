@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- UI1-100 of DIM-100T, Torque indicator by Yurik V. Nikiforoff -->
+<!-- UI1-100 of DIM-100T -->
 
 <PropertyList>
 
@@ -16,6 +16,19 @@
      <blue>0.5</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>engines/engine[1]/thruster/torque</property>
+   <factor>0.012</factor> <!-- fake value; torque where? --> 
+   <offset-deg>-60</offset-deg>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
  </animation>
 
 <!-- Text OSG -->

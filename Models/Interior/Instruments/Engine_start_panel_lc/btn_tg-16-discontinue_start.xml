@@ -18,7 +18,8 @@
         setprop("an24/Start-Panel/discontinuestarttg", 1.0 );
         setprop("controls/engines/engine[2]/starter", 0.0 );
         setprop("controls/engines/engine[2]/cutoff", 1.0 );
-        interpolate("an24/animations/Start-Panel/discontinuestarttg-btn", 1.0, 0.1, 0.0, 0.1 );
+        interpolate("an24/animations/Start-Panel/discontinuestarttg-btn", -1.0, 0.2 );
+        settimer(func {interpolate("an24/animations/Start-Panel/discontinuestarttg-btn", 0.0, 0.1 );},0.2);
       </script>
     </binding>
   </action>

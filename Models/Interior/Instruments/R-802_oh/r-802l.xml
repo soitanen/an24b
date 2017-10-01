@@ -1,37 +1,24 @@
 <?xml version="1.0"?>
 
-<!-- UI1-100 of DIM-100T -->
+<!-- R-802  -->
 
 <PropertyList>
+ <path>r-802r.ac</path>
 
- <path>ui1-100.ac</path>
-
- <animation>
-  <type>material</type>
-  <object-name>housing</object-name>
-  <object-name>needle</object-name>
+ <!--animation>
+   <type>material</type>
+   <object-name>light_plate</object-name>
+   <object-name>fine_freq_disk</object-name>
+   <object-name>subband_disk</object-name>
    <emission>
      <red>1.0</red>
-     <green>0.5</green>
-     <blue>0.5</blue>
+     <green>1.0</green>
+     <blue>0.7</blue>
      <factor-prop>an24/lights/instrlights</factor-prop>
    </emission>
- </animation>
+ </animation-->
 
- <animation>
-  <type>rotate</type>
-  <object-name>needle</object-name>
-  <property>engines/engine[0]/thruster/torque</property>
-   <factor>0.012</factor> <!-- fake value; torque where? --> 
-   <offset-deg>-60</offset-deg>
-  <axis>
-    <x>-1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
- </animation>
-
-<!-- Text OSG -->
+<!-- TEXT OSG -->
 
   <animation>
     <type>select</type>
@@ -44,7 +31,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">UI1-100 Torque indicator</text>
+    <text type="string">R-802 Radio</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
@@ -72,5 +59,6 @@
       <blue>  1.0 </blue>
     </emission>
   </animation>
- 
+
+
 </PropertyList>
