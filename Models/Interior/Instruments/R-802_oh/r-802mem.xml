@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<!-- R-802; Radio frequency memory station -->
+
+<PropertyList>
+ <path>r-802mem.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>lightplate</object-name>
+  <condition>
+   <equals>
+    <property>an24/lights/instrlights</property>
+    <value>1.0</value>
+   </equals>
+  </condition>
+  <emission>
+   <red>1.0</red>
+   <green>0.9</green>
+   <blue>0.5</blue>
+   <factor-prop>an24/lights/instrlights</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>channel_sel</object-name>
+   <property>an24/R-802/channel</property>
+   <factor>-18</factor>
+   <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.05</z-m>
+   </center>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/R-802/channel</property>
+      <factor>-1</factor>
+      <min>1</min>
+      <max>11</max>                
+      <wrap>true</wrap>
+     </binding>
+    </action>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>channels09</object-name>
+  <property>an24/R-802/channel</property>
+  <factor>36.0</factor>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0177</z-m>
+   </center>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <object-name>memscrew</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/R-802/memscrew", 1.0, 0.1 );
+        settimer(func {interpolate("an24/R-802/memscrew", 0.0, 0.1 );},0.1);
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>memscrew</object-name>
+  <property>an24/R-802/memscrew</property>
+  <factor>0.0016</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <!--action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/R-802/sw0403", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action-->
+</animation>
+
+ <animation>
+  <object-name>clickspot_middle</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <!--action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/R-802/sw0403", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action-->
+</animation>
+
+ <!--animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/FuelControl/sw0403</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation-->
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">R-802 Radio</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>

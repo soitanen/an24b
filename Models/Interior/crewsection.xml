@@ -156,7 +156,7 @@
   </offsets>
 </model>
 
-<model>
+<!--model>
   <name>ARK-11</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-1-text.xml</path>
   <offsets>
@@ -166,7 +166,7 @@
     <heading-deg>90</heading-deg>
     <pitch-deg>130</pitch-deg>
   </offsets>
-</model>
+</model-->
 
 <model>
   <name>ARK-11</name>

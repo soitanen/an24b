@@ -1137,24 +1137,24 @@
 <!--********************************************-->
 
 <model>
-  <name>R-802r</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/R-802_oh/r-802r.xml</path>
+  <name>R-802sel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/R-802_oh/r-802sel.xml</path>
   <offsets>
     <x-m>2.349</x-m>
     <y-m>0.2236</y-m>
-    <z-m>1.38</z-m>
-    <pitch-deg>77</pitch-deg>
+    <z-m>1.37</z-m>
+    <pitch-deg>66</pitch-deg>
   </offsets>
 </model>
 
 <model>
-  <name>R-802l</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/R-802_oh/r-802l.xml</path>
+  <name>R-802mem</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/R-802_oh/r-802mem.xml</path>
   <offsets>
     <x-m>2.349</x-m>
     <y-m>-0.2236</y-m>
-    <z-m>1.38</z-m>
-    <pitch-deg>77</pitch-deg>
+    <z-m>1.37</z-m>
+    <pitch-deg>66</pitch-deg>
   </offsets>
 </model>
 

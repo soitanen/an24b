@@ -65,7 +65,7 @@ var parkBrakeSet = func {
 }
 setlistener("/sim/signals/fdm-initialized", parkBrakeSet);
 
-# ARK No.1 Summing up frequencies
+#  ARK No.1 Summing up frequencies
 setprop("an24/ARK-11/sub-band-khz-1", 120.0);
 setprop("an24/ARK-11/fine-khz-1", 0.0);
 
@@ -80,7 +80,7 @@ var addfreqs = func {
  setlistener("an24/ARK-11/sub-band-khz-1", addfreqs);
  setlistener("an24/ARK-11/fine-khz-1", addfreqs);
 
-# ARK No.2 Summing up frequencies
+#  ARK No.2 Summing up frequencies
 setprop("an24/ARK-11/sub-band-khz-2", 120.0);
 setprop("an24/ARK-11/fine-khz-2", 0.0);
 
@@ -95,8 +95,73 @@ var addfreqs = func {
  setlistener("an24/ARK-11/sub-band-khz-2", addfreqs);
  setlistener("an24/ARK-11/fine-khz-2", addfreqs);
 
+#  R-802 Summing up frequencies
+setprop("an24/R-802/dial100", 100.0);
+setprop("an24/R-802/dial10", 0.0);
+setprop("an24/R-802/dial1", 0.0);
+setprop("/instrumentation/comm[0]/frequencies/selected-mhz", 100.0 );
+setprop("/instrumentation/comm[1]/frequencies/selected-mhz", 100.0 );
 
-# AChS stopwatch
+var add802freqs = func {
+ var freq100 = getprop("an24/R-802/dial100");
+ var freq10 = getprop("an24/R-802/dial10");
+ var freq1 = getprop("an24/R-802/dial1");
+ var final802freq = freq100 + freq10 + freq1 / 10 ;
+ setprop("an24/R-802/finalfreq", final802freq);
+ setprop("/instrumentation/comm[1]/frequencies/selected-mhz", final802freq);
+}
+
+ setlistener("an24/R-802/dial100", add802freqs);
+ setlistener("an24/R-802/dial10", add802freqs);
+ setlistener("an24/R-802/dial1", add802freqs);
+
+#  R-802 Store frequencies
+setprop("an24/R-802/memory/num[1]", 100.0);
+setprop("an24/R-802/memory/num[2]", 100.0);
+setprop("an24/R-802/memory/num[3]", 100.0);
+setprop("an24/R-802/memory/num[4]", 100.0);
+setprop("an24/R-802/memory/num[5]", 100.0);
+setprop("an24/R-802/memory/num[6]", 100.0);
+setprop("an24/R-802/memory/num[7]", 100.0);
+setprop("an24/R-802/memory/num[8]", 100.0);
+setprop("an24/R-802/memory/num[9]", 100.0);
+setprop("an24/R-802/memory/num[10]", 100.0);
+setprop("an24/R-802/finalfreq", 100.0);
+setprop("an24/R-802/channel", 1.0);
+var freqmem = func {
+var channel = getprop("an24/R-802/channel");
+var curfreq = getprop("an24/R-802/finalfreq");
+setprop("an24/R-802/memory/num[" ~ channel ~ "]", curfreq);
+setprop("/instrumentation/comm[0]/frequencies/selected-mhz", curfreq );
+}
+
+ setlistener("an24/R-802/memscrew", freqmem);
+
+#  R-802 Remember frequencies
+var freqremem = func {
+var channel = getprop("an24/R-802/channel");
+var storedfreq = getprop("an24/R-802/memory/num[" ~ channel ~ "]");
+interpolate("an24/R-802/dial100", sprintf("%.2s", storedfreq) * 10, 0.2 );
+interpolate("an24/R-802/dial10", int(storedfreq) - sprintf("%.2s", storedfreq) * 10, 0.4 );
+interpolate("an24/R-802/dial1", (storedfreq - int(storedfreq)) * 10, 0.6 );
+setprop("an24/R-802/finalfreq", storedfreq);
+setprop("/instrumentation/comm[1]/frequencies/selected-mhz", storedfreq);
+}
+
+ setlistener("an24/R-802/rememscrew", freqremem);
+
+#  R-802 Choose Channel
+var freqchoice = func {
+var channel = getprop("an24/R-802/channel");
+var storedfreq = getprop("an24/R-802/memory/num[" ~ channel ~ "]");
+setprop("/instrumentation/comm[0]/frequencies/selected-mhz", storedfreq );
+}
+
+ setlistener("an24/R-802/channel", freqchoice);
+ setlistener("an24/R-802/rememscrew", freqchoice);
+
+
+#  AChS stopwatch
 var stopwatch = func {
         var startbtn = getprop("an24/AChS/start-btn");
 	if ( startbtn = 1) {

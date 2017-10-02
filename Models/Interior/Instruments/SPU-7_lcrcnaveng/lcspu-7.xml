@@ -58,10 +58,22 @@
  <animation>
    <type>knob</type>
    <object-name>source_select</object-name>
+   <property>an24/SPU-7/lc_source</property>
+   <factor>32</factor>
+   <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0027</z-m>
+   </center>
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/SPU-7/lc_source</property>
+      <property>an24/SPU-7/lc_source</property>
       <factor>-1</factor>
       <min>0</min>
       <max>5</max>                
@@ -70,43 +82,11 @@
     </action>
  </animation>
 
- <animation>
-  <object-name>source_select</object-name>
-  <type>rotate</type>
-   <property>/an24/SPU-7/lc_source</property>
-   <factor>32</factor>
-  <center>
-   <x-m>0.0</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.0027</z-m>
-  </center>
-  <axis>
-    <x>-1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
- </animation>
-
 <!-- "Listen" volume -->
 
  <animation>
    <type>knob</type>
    <object-name>vol_listen</object-name>
-    <action>
-     <binding>
-      <command>property-adjust</command>
-      <property>/an24/SPU-7/lc_vol_listen</property>
-      <factor>-0.05</factor>
-      <min>0</min>
-      <max>1</max>
-      <wrap>false</wrap>
-     </binding>
-    </action>
- </animation>
-
- <animation>
-  <object-name>vol_listen</object-name>
-  <type>rotate</type>
    <property>/an24/SPU-7/lc_vol_listen</property>
    <factor>800</factor>
   <center>
@@ -119,17 +99,10 @@
     <y>0.0</y>
     <z>0.0</z>
   </axis>
- </animation>
-
-<!-- "General" volume -->
-
- <animation>
-   <type>knob</type>
-   <object-name>vol_general</object-name>
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/SPU-7/lc_vol_general</property>
+      <property>/an24/SPU-7/lc_vol_listen</property>
       <factor>-0.05</factor>
       <min>0</min>
       <max>1</max>
@@ -138,9 +111,11 @@
     </action>
  </animation>
 
+<!-- "General" volume -->
+
  <animation>
-  <object-name>vol_general</object-name>
-  <type>rotate</type>
+   <type>knob</type>
+   <object-name>vol_general</object-name>
    <property>/an24/SPU-7/lc_vol_general</property>
    <factor>800</factor>
   <center>
@@ -153,6 +128,16 @@
     <y>0.0</y>
     <z>0.0</z>
   </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/an24/SPU-7/lc_vol_general</property>
+      <factor>-0.05</factor>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+     </binding>
+    </action>
  </animation>
 
 <!-- Network selector
