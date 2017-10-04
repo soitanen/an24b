@@ -87,7 +87,7 @@
  <animation>
    <type>knob</type>
    <object-name>vol_listen</object-name>
-   <property>/an24/SPU-7/lc_vol_listen</property>
+   <property>an24/SPU-7/lc_vol_listen</property>
    <factor>800</factor>
   <center>
    <x-m>0.0</x-m>
@@ -102,7 +102,7 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/SPU-7/lc_vol_listen</property>
+      <property>an24/SPU-7/lc_vol_listen</property>
       <factor>-0.05</factor>
       <min>0</min>
       <max>1</max>
@@ -116,7 +116,7 @@
  <animation>
    <type>knob</type>
    <object-name>vol_general</object-name>
-   <property>/an24/SPU-7/lc_vol_general</property>
+   <property>an24/SPU-7/lc_vol_general</property>
    <factor>800</factor>
   <center>
    <x-m>0.0</x-m>
@@ -131,7 +131,7 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/SPU-7/lc_vol_general</property>
+      <property>an24/SPU-7/lc_vol_general</property>
       <factor>-0.05</factor>
       <min>0</min>
       <max>1</max>

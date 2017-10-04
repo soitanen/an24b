@@ -35,6 +35,16 @@ file, these values will be used (they are hardcoded).
     <number>1</number>
   </adf>
 
+  <adf>
+    <name>adf</name>
+    <number>2</number>
+  </adf>
+
+  <adf>
+    <name>adf</name>
+    <number>2</number>
+  </adf>
+
   <airspeed-indicator>
     <name>airspeed-indicator</name>
     <number>0</number>

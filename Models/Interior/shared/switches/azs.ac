@@ -14,7 +14,7 @@ numvert 5
 -9.31323e-10 0.0264302 -0.00940697
 -9.31323e-10 0 -0.00940697
 numsurf 1
-SURF 0x30
+SURF 0x10
 mat 1
 refs 5
 4 1 0.625
@@ -34,7 +34,7 @@ numvert 5
 0 0 0
 -9.31323e-10 0 -0.00940697
 numsurf 1
-SURF 0x30
+SURF 0x10
 mat 1
 refs 5
 4 1 0.625

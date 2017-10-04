@@ -250,6 +250,71 @@
        </mod-up>
       </key>
 
+     <key n="60">
+       <name>less-than</name>
+       <desc>Overhead View</desc>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/goal-heading-offset-deg</property>
+          <value>360</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/goal-pitch-offset-deg</property>
+          <value>89.8</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/field-of-view</property>
+          <value>90</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/x-offset-m</property>
+          <value>-0.11217</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/y-offset-m</property>
+          <value>0.954385</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/z-offset-m</property>
+          <value>-6.0119247</value>
+       </binding>
+       <binding>
+        <command>nasal</command>
+        <script>
+	setprop("/sim/current-view/heading-offset-deg2", getprop("/sim/current-view/heading-offset-deg") );
+	setprop("/sim/current-view/pitch-offset-deg2", getprop("/sim/current-view/pitch-offset-deg") );
+	setprop("/sim/current-view/field-of-view2", getprop("/sim/current-view/field-of-view") );
+	</script>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>nasal</command>
+        <script>
+	if (getprop("/sim/current-view/view-number") > 7 ) {
+	var viewnr = getprop("/sim/current-view/view-number") + 93 ;
+	}
+	else {
+	var viewnr = getprop("/sim/current-view/view-number");
+	}
+	var offsetx = getprop("/sim/view[" ~ viewnr ~ "]/config/x-offset-m");
+	var offsety = getprop("/sim/view[" ~ viewnr ~ "]/config/y-offset-m");
+	var offsetz = getprop("/sim/view[" ~ viewnr ~ "]/config/z-offset-m");
+	setprop("/sim/current-view/x-offset-m", offsetx);
+	setprop("/sim/current-view/y-offset-m", offsety);
+	setprop("/sim/current-view/z-offset-m", offsetz);
+	setprop("/sim/current-view/heading-offset-deg", getprop("/sim/current-view/heading-offset-deg2") );
+	setprop("/sim/current-view/pitch-offset-deg", getprop("/sim/current-view/pitch-offset-deg2") );
+	setprop("/sim/current-view/field-of-view", getprop("/sim/current-view/field-of-view2") );
+	</script>
+       </binding>
+       </mod-up>
+      </key>
+
       <key n="45">
       <name>minus</name>
       <binding>

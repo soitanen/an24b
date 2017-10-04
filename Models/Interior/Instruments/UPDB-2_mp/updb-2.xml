@@ -31,11 +31,33 @@
 </animation>
 
 <animation>
+    <object-name>needle1</object-name>
+    <type>rotate</type>
+    <property>an24/ARK-11/frame-offset-1</property>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
     <object-name>needle2</object-name>
     <type>rotate</type>
     <property>/instrumentation/adf[1]/indicated-bearing-deg</property>
     <axis>
       <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
+    <object-name>needle2</object-name>
+    <type>rotate</type>
+    <property>an24/ARK-11/frame-offset-2</property>
+    <axis>
+      <x>1.0</x>
       <y>0.0</y>
       <z>0.0</z>
     </axis>
