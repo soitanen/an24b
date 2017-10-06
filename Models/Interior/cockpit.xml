@@ -176,7 +176,7 @@
   <property>an24/animations/armrest</property>
   <factor>90.0</factor>
   <center>
-    <x-m>0.1258</x-m>
+    <x-m>0.2817</x-m>
     <y-m>0.0</y-m>
     <z-m>0.3076</z-m>    
   </center>
@@ -215,7 +215,7 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>0.3127</x-m>
+    <x-m>0.3827</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.2587</z-m>    
   </center>
@@ -232,7 +232,7 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>0.3127</x-m>
+    <x-m>0.3827</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.2587</z-m>
   </center>
@@ -249,7 +249,7 @@
   <property>an24/animations/centerseat</property>
   <factor>100.0</factor>
   <center>
-    <x-m>0.134</x-m>
+    <x-m>0.204</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.612</z-m>    
   </center>

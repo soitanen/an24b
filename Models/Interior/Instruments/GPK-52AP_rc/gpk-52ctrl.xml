@@ -215,14 +215,5 @@
       <z-m>-0.02</z-m>
     </offsets>
   </text>
-  <animation>
-    <type>material</type>
-    <object-name>textosg</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>1.0</green>
-      <blue>1.0</blue>
-    </emission>
-  </animation>
 
 </PropertyList>

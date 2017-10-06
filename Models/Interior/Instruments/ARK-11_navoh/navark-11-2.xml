@@ -5,8 +5,43 @@
 <PropertyList>
  <path>ark-11.ac</path>
 
+<!--canvas>
+  <texture>
+    <size n="0" type="int">256</size>
+    <size n="1" type="int">256</size>
+    <view n="0" type="int">768</view>
+    <view n="1" type="int">1024</view>
+    <mipmapping type="bool">false</mipmapping>
+    <coverage-samples type="int">0</coverage-samples>
+    <color-samples type="int">0</color-samples>
+    <color-background>
+      <red type="float">0</red>
+      <green type="float">0.02</green>
+      <blue type="float">0</blue>
+      <alpha type="float">1</alpha>
+    </color-background>
+    <group>
+      <text>
+        <text type="string">TEST MESSAGE</text>
+        <font type="string">helvetica_bold.txf</font>
+        <character-size type="float">40</character-size>
+        <tf>
+          <tx>18</tx>
+          <ty>50</ty>
+        </tf>
+      </text>
+    </group>
+    <placement>>
+      <texture type="string">canvstations.png</texture>
+    </placement>
+  </texture>
+</canvas-->
+
  <animation>
    <type>pick</type>
+  <object-name>canvstations1</object-name>
+  <object-name>clickspot_right</object-name>
+  <object-name>clickspot_left</object-name>
   <object-name>clickspot_tlf</object-name>
   <object-name>clickspot_tlg</object-name>
   <object-name>clickspot_narrow</object-name>
@@ -465,7 +500,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix1sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix1ff"), 2.4 );
-	}	
+	}
+	stations.textst12.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix1sb") + getprop("an24/ARK-11/mem2/fix1ff")));
+	stations.textid12.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -501,7 +538,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix2sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix2ff"), 2.4 );
-	}	
+	}
+	stations.textst22.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix2sb") + getprop("an24/ARK-11/mem2/fix2ff")));
+	stations.textid22.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -537,7 +576,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix3sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix3ff"), 2.4 );
-	}	
+	}
+	stations.textst32.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix3sb") + getprop("an24/ARK-11/mem2/fix3ff")));
+	stations.textid32.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -573,7 +614,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix4sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix4ff"), 2.4 );
-	}	
+	}
+	stations.textst42.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix4sb") + getprop("an24/ARK-11/mem2/fix4ff")));
+	stations.textid42.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -609,7 +652,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix5sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix5ff"), 2.4 );
-	}	
+	}
+	stations.textst52.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix5sb") + getprop("an24/ARK-11/mem2/fix5ff")));
+	stations.textid52.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -645,7 +690,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix6sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix6ff"), 2.4 );
-	}	
+	}
+	stations.textst62.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix6sb") + getprop("an24/ARK-11/mem2/fix6ff")));
+	stations.textid62.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -681,7 +728,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix7sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix7ff"), 2.4 );
-	}	
+	}
+	stations.textst72.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix7sb") + getprop("an24/ARK-11/mem2/fix7ff")));
+	stations.textid72.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -717,7 +766,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix8sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix8ff"), 2.4 );
-	}	
+	}
+	stations.textst82.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix8sb") + getprop("an24/ARK-11/mem2/fix8ff")));
+	stations.textid82.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -753,7 +804,9 @@
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix9sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix9ff"), 2.4 );
-	}	
+	}
+	stations.textst92.setText(sprintf("%.1f", getprop("an24/ARK-11/mem2/fix9sb") + getprop("an24/ARK-11/mem2/fix9ff")));
+	stations.textid92.setText(getprop("instrumentation/adf[1]/ident"));
       </script>
     </binding>
   </action>
@@ -772,6 +825,38 @@
 </animation>
 
 <!-- Text OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>desc</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>desc</name>
+    <type type="string">literal</type>
+    <text type="string">ARK-11 No.2 Control Panel</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.044</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>xy-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.18</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.025 </z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+  </text>
 
   <text>
     <name>textosg</name>
