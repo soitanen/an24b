@@ -54,7 +54,6 @@
   </action>
  </animation>
 
-
  <animation>
   <type>rotate</type>
   <object-name>on_off_lever</object-name>
@@ -181,7 +180,6 @@
     <z2-m>0.0028</z2-m>
   </axis>
  </animation>
-
 
 <!-- TEXT OSG -->
 

@@ -334,8 +334,8 @@
 <!-- *************************************** -->
 
 <model>
-  <name>RV-UM</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/RV-UM_lp/uv-5m.xml</path>
+  <name>UV-5M</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/UV-5M_lp/uv-5m.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.5978</y-m>
@@ -1155,6 +1155,19 @@
     <y-m>-0.2236</y-m>
     <z-m>1.37</z-m>
     <pitch-deg>66</pitch-deg>
+  </offsets>
+</model>
+
+<!--********************************************-->
+
+<model>
+  <name>SO-63</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SOM-64_oh/so-63.xml</path>
+  <offsets>
+    <x-m>2.96</x-m>
+    <y-m>-0.42</y-m>
+    <z-m>1.475</z-m>
+    <pitch-deg>80</pitch-deg>
   </offsets>
 </model>
 

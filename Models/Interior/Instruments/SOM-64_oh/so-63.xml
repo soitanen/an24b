@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+
+<!-- SO-63, control unit of transponder system SOM-64 -->
+
+<PropertyList>
+ <path>so-63.ac</path>
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk1</object-name>
+    <property>/instrumentation/transponder/inputs/digit[3]</property>
+   <factor>-30</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-0.0388</y-m>
+   <z-m>-0.0343</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[3]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk2</object-name>
+    <property>/instrumentation/transponder/inputs/digit[2]</property>
+   <factor>-32</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-0.0124</y-m>
+   <z-m>-0.0364</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[2]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk3</object-name>
+    <property>/instrumentation/transponder/inputs/digit[1]</property>
+   <factor>-30</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0151</y-m>
+   <z-m>-0.0376</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[1]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk4</object-name>
+    <property>/instrumentation/transponder/inputs/digit[0]</property>
+   <factor>-32</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0413</y-m>
+   <z-m>-0.0326</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[0]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>xponder_mode</object-name>
+    <property>/instrumentation/transponder/inputs/knob-mode</property>
+   <factor>-31</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0118</y-m>
+   <z-m>-0.0115</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/knob-mode</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>3</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">SO-63 Trans- ponder</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.02 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>

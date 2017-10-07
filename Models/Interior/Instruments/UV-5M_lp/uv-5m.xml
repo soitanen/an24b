@@ -48,7 +48,6 @@
   </axis>
 </animation>
 
-
  <animation>
    <type>knob</type>
    <object-name>alt-select</object-name>
@@ -56,7 +55,7 @@
      <binding>
       <command>property-adjust</command>
       <property>/instrumentation/radar-altimeter/pointer-anim</property>
-      <factor>0.0125</factor> 
+      <factor>-0.0125</factor> 
       <min>0</min>
       <max>1</max>                
       <wrap>false</wrap>
@@ -124,15 +123,5 @@
       <z-m>  0.000 </z-m>
     </offsets>
   </text>
-  <animation>
-    <type>material</type>
-    <object-name>textosg</object-name>
-    <emission>
-      <red>   1.0 </red>
-      <green> 1.0 </green>
-      <blue>  1.0 </blue>
-    </emission>
-  </animation>
-
 
 </PropertyList>
