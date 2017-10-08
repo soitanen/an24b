@@ -4051,7 +4051,7 @@ name "spu-7"
 loc -0.106043 -0.0132878 -0.00804824
 kids 1
 OBJECT poly
-name "source_select"
+name "r-802mem_volume"
 loc 0.123229 0.0235845 0.0328753
 crease 45.000000
 numvert 223

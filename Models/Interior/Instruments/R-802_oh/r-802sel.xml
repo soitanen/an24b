@@ -184,6 +184,34 @@
 </animation>
 
  <animation>
+   <type>knob</type>
+   <object-name>r-802sel_volume</object-name>
+   <property>/instrumentation/comm[1]/volume</property>
+   <factor>-90</factor>
+   <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0127</y-m>
+    <z-m>0.0282</z-m>
+   </center>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/comm[1]/volume</property>
+      <!--property>an24/R-802/volume-2</property-->
+      <factor>-0.05</factor>
+      <min>0</min>
+      <max>1</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
   <visible>false</visible>
