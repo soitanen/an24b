@@ -5,43 +5,9 @@
 <PropertyList>
  <path>ark-11.ac</path>
 
-<!--canvas>
-  <texture>
-    <size n="0" type="int">256</size>
-    <size n="1" type="int">256</size>
-    <view n="0" type="int">768</view>
-    <view n="1" type="int">1024</view>
-    <mipmapping type="bool">false</mipmapping>
-    <coverage-samples type="int">0</coverage-samples>
-    <color-samples type="int">0</color-samples>
-    <color-background>
-      <red type="float">0</red>
-      <green type="float">0.02</green>
-      <blue type="float">0</blue>
-      <alpha type="float">1</alpha>
-    </color-background>
-    <group>
-      <text>
-        <text type="string">TEST MESSAGE</text>
-        <font type="string">helvetica_bold.txf</font>
-        <character-size type="float">40</character-size>
-        <tf>
-          <tx>18</tx>
-          <ty>50</ty>
-        </tf>
-      </text>
-    </group>
-    <placement>>
-      <texture type="string">canvstations.png</texture>
-    </placement>
-  </texture>
-</canvas-->
-
  <animation>
    <type>pick</type>
   <object-name>canvstations1</object-name>
-  <object-name>clickspot_right</object-name>
-  <object-name>clickspot_left</object-name>
   <object-name>clickspot_tlf</object-name>
   <object-name>clickspot_tlg</object-name>
   <object-name>clickspot_narrow</object-name>

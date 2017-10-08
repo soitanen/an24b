@@ -42,7 +42,7 @@ file, these values will be used (they are hardcoded).
 
   <adf>
     <name>adf</name>
-    <number>2</number>
+    <number>3</number>
   </adf>
 
   <airspeed-indicator>

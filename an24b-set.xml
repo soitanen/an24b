@@ -98,7 +98,7 @@
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >-0.44</x-offset-m>
-      <y-offset-m type="double" >1.23</y-offset-m>
+      <y-offset-m type="double" >1.16</y-offset-m>
       <z-offset-m type="double" >-4.72</z-offset-m>
       <pitch-offset-deg type="double">0.0</pitch-offset-deg>
       <from-model-idx type="int">0</from-model-idx>
@@ -254,6 +254,14 @@
        <name>less-than</name>
        <desc>Overhead View</desc>
        <binding>
+        <command>nasal</command>
+        <script>
+	setprop("/sim/current-view/heading-offset-deg2", getprop("/sim/current-view/heading-offset-deg") );
+	setprop("/sim/current-view/pitch-offset-deg2", getprop("/sim/current-view/pitch-offset-deg") );
+	setprop("/sim/current-view/field-of-view2", getprop("/sim/current-view/field-of-view") );
+	</script>
+       </binding>
+       <binding>
           <command>property-assign</command>
           <property>/sim/current-view/goal-heading-offset-deg</property>
           <value>360</value>
@@ -282,14 +290,6 @@
           <command>property-assign</command>
           <property>/sim/current-view/z-offset-m</property>
           <value>-6.0119247</value>
-       </binding>
-       <binding>
-        <command>nasal</command>
-        <script>
-	setprop("/sim/current-view/heading-offset-deg2", getprop("/sim/current-view/heading-offset-deg") );
-	setprop("/sim/current-view/pitch-offset-deg2", getprop("/sim/current-view/pitch-offset-deg") );
-	setprop("/sim/current-view/field-of-view2", getprop("/sim/current-view/field-of-view") );
-	</script>
        </binding>
        <mod-up>
        <binding>

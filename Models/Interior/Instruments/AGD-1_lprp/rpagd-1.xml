@@ -13,9 +13,9 @@
    <object-name>bull_tube</object-name>
    <emission>
      <red>1.0</red>
-     <green>1.0</green>
-     <blue>1.0</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.5</green>
+     <blue>0.5</blue>
+     <factor-prop>/controls/lighting/panel-r_red</factor-prop>
    </emission>
  </animation>
 
@@ -28,10 +28,10 @@
    <object-name>Cylinder.005</object-name>
    <object-name>arretir</object-name>
    <emission>
-     <red>0.6</red>
-     <green>0.6</green>
-     <blue>0.6</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>/controls/lighting/panel-r_red</factor-prop>
    </emission>
  </animation>
   

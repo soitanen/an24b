@@ -13,9 +13,9 @@
    <object-name>cover</object-name>
    <emission>
      <red>1.0</red>
-     <green>0.3</green>
-     <blue>0.3</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.4</green>
+     <blue>0.4</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
    </emission>
  </animation>
 

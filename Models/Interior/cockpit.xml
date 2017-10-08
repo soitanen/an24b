@@ -323,7 +323,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/kus730_1100.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/lpkus730_1100.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.6907</y-m>
@@ -576,7 +576,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/kus730_1100.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/mpkus730_1100.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.2669</y-m>
@@ -977,27 +977,27 @@
   <name>UIZ-3-TG-16</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/UIx-xxx_mplc/lc_uiz-3.xml</path>
   <offsets>
-    <x-m>2.7153</x-m>
+    <x-m>2.7168</x-m>
     <y-m>-1.0</y-m>
-    <z-m>0.5524</z-m>
+    <z-m>0.543</z-m>
     <heading-deg>84</heading-deg>
   </offsets>
 </model>
 
 <model>
   <name>TV-1_TG-16</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/TV-1_mprp/lp_tv-1.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/TV-1_mprp/lc_tv-1.xml</path>
   <offsets>
-    <x-m>2.6383</x-m>
-    <y-m>-0.989</y-m>
-    <z-m>0.5367</z-m>
+    <x-m>2.6365</x-m>
+    <y-m>-0.991</y-m>
+    <z-m>0.536</z-m>
     <heading-deg>84</heading-deg>
   </offsets>
 </model>
 
 
 <model>
-  <name>TE-4M</name>
+  <name>TE-40M</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/TE-40M_lc/te-40.xml</path>
   <offsets>
     <x-m>2.545</x-m>

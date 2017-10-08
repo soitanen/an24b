@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- cabin pressure indicator -->
+<!-- Cabin altitude indicator -->
 
 <PropertyList>
  <path>uvpd.ac</path>
@@ -12,11 +12,21 @@
    <object-name>needle_2</object-name>
    <emission>
      <red>1.0</red>
-     <green>0.3</green>
-     <blue>0.3</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.4</green>
+     <blue>0.4</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
    </emission>
  </animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
 
   <text>
     <name>textosg</name>
@@ -39,7 +49,6 @@
       <y-m>  0.000 </y-m>
       <z-m>  0.000 </z-m>
     </offsets>
-
   </text>
 
 </PropertyList>

@@ -184,7 +184,8 @@ var voloutput1 = func {
 	setprop("/instrumentation/adf[2]/volume-norm", volume_knob * signalstrength);
 	}
 	else {
-	setprop("/instrumentation/adf[1]/volume-norm", volume_knob );
+	setprop("/instrumentation/adf[0]/volume-norm", volume_knob );
+	setprop("/instrumentation/adf[2]/volume-norm", volume_knob );
 	}
 }
 
@@ -243,6 +244,7 @@ var voloutput2 = func {
 	}
 	else {
 	setprop("/instrumentation/adf[1]/volume-norm", volume_knob );
+	setprop("/instrumentation/adf[3]/volume-norm", volume_knob );
 	}
 }
 
@@ -251,6 +253,8 @@ var voloutput2 = func {
  setlistener("/instrumentation/adf[1]/indicated-bearing-deg", voloutput2);
  setlistener("/instrumentation/adf[3]/indicated-bearing-deg", voloutput2);
 
+
+##  R-802 Stuff
 #  R-802 Summing up frequencies
 setprop("an24/R-802/dial100", 100.0);
 setprop("an24/R-802/dial10", 0.0);
@@ -316,12 +320,13 @@ setprop("/instrumentation/comm[0]/frequencies/selected-mhz", storedfreq );
  setlistener("an24/R-802/channel", freqchoice);
  setlistener("an24/R-802/rememscrew", freqchoice);
 
-#  SPU-7 comm
 
+##  SPU-7 comm
 var volspu = getprop("an24/SPU-7/lc_vol_general");
 var volradio = getprop("an24/SPU-7/lc_vol_listen");
 
-#  AChS stopwatch
+
+##  AChS stopwatch
 var stopwatch = func {
         var startbtn = getprop("an24/AChS/start-btn");
 	if ( startbtn = 1) {

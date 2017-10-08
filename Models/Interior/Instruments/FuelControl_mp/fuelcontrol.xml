@@ -15,8 +15,8 @@
   </condition>
   <emission>
    <red>1.0</red>
-   <green>0.5</green>
-   <blue>0.5</blue>
+   <green>0.1</green>
+   <blue>0.1</blue>
    <factor-prop>an24/lights/instrlights</factor-prop>
   </emission>
  </animation>
