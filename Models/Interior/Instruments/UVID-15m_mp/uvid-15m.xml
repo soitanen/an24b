@@ -24,9 +24,9 @@
   <object-name>dig_p_hund</object-name>
    <emission>
      <red>0.8</red>
-     <green>0.8</green>
-     <blue>0.8</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.4</green>
+     <blue>0.4</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
    </emission>
  </animation>
 

@@ -35,6 +35,9 @@
 <animation>
   <type>rotate</type>
   <object-name>needle</object-name>
+ <condition>
+    <property>/instrumentation/radar-altimeter/sw-on</property>
+ </condition>
   <property>/instrumentation/radar-altimeter/radar-altitude-ft</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>    0.0</dep></entry>
@@ -82,7 +85,7 @@
 <animation>
   <type>translate</type>
   <object-name>flag</object-name>
-  <property>/instrumentation/radar-altimeter/serviceable</property>
+  <property>/instrumentation/radar-altimeter/sw-on</property>
   <factor>0.01</factor>
   <axis>
     <x>0.0</x>
