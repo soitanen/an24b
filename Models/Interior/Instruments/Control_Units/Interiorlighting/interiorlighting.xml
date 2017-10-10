@@ -70,4 +70,26 @@
   </offsets>
 </model>
 
+<!-- knobs on overhead panel -->
+
+<model>
+ <path>knob_overhead_instr.xml</path>
+  <offsets>
+    <pitch-deg>80</pitch-deg>
+    <x-m>2.6</x-m>
+    <y-m>-0.06</y-m>
+    <z-m>1.405</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>knob_overhead_panel.xml</path>
+  <offsets>
+    <pitch-deg>80</pitch-deg>
+    <x-m>2.66</x-m>
+    <y-m>-0.06</y-m>
+    <z-m>1.415</z-m>
+  </offsets>
+</model>
+
 </PropertyList>

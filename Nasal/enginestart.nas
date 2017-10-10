@@ -22,14 +22,9 @@ var lengreng = getprop("an24/Start-Panel/left-right");
 var gtseq = func {
 var gtn2 = getprop("engines/engine[2]/n2");
 	if (gtn2 > 18.0) {
-
 	setprop("/fdm/jsbsim/propulsion/cutoff_cmd", 0.0);
 	setprop("/controls/engines/engine[2]/cutoff", 0.0);
 	}
-#
-#	else {
-#	setprop("controls/engines/engine[2]/cutoff", 1.0);
-#	}
 }
 
 setlistener("engines/engine[2]/n2", gtseq);

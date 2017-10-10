@@ -8,17 +8,12 @@
  <animation>
   <type>material</type>
   <object-name>lightplate</object-name>
-  <condition>
-   <equals>
-    <property>an24/lights/instrlights</property>
-    <value>1.0</value>
-   </equals>
-  </condition>
+  <object-name>channels09</object-name>
   <emission>
    <red>1.0</red>
-   <green>0.9</green>
+   <green>0.7</green>
    <blue>0.5</blue>
-   <factor-prop>an24/lights/instrlights</factor-prop>
+   <factor-prop>/controls/lighting/overhead_instr</factor-prop>
   </emission>
  </animation>
 

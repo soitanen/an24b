@@ -26,7 +26,21 @@
      <red>1.0</red>
      <green>1.0</green>
      <blue>0.4</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>freqtable</object-name>
+   <object-name>canvstations1</object-name>
+   <object-name>canvstations2</object-name>
+   <object-name>rangetable</object-name>
+   <emission>
+     <red>0.25</red>
+     <green>0.2</green>
+     <blue>0.1</blue>
+     <factor-prop>/controls/lighting/overhead_panel</factor-prop>
    </emission>
  </animation>
 

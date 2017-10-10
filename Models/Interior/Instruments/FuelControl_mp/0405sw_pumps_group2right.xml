@@ -14,9 +14,20 @@
     <binding>
       <command>nasal</command>
       <script>
+        interpolate("an24/FuelControl/sw0405", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+     <condition>
+     <equals>
+      <property>an24/AZS/sw0115</property>
+      <value>1.0</value>
+     </equals>
+     </condition>
+      <command>nasal</command>
+      <script>
         setprop("an24/FuelControl/rrear463_press", 0.16 );
         setprop("an24/FuelControl/rfront463_press", 0.16 );
-        interpolate("an24/FuelControl/sw0405", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -60,6 +71,5 @@
     <z>0.0</z>
   </axis>
  </animation>
- 
 
 </PropertyList>

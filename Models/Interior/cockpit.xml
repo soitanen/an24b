@@ -1175,7 +1175,7 @@
 
 <model>
   <name>radio_alt</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/RV-UM/rv-um.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/UV-5M/uv-5m.xml</path>
 </model>
 
 <model>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- UPRT, -->
+<!-- Below left panel -->
 
 <PropertyList>
  <path>placard.ac</path>
@@ -10,9 +10,9 @@
    <object-name>placard</object-name>
    <emission>
      <red>1.0</red>
-     <green>1.0</green>
-     <blue>0.9</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.4</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/panel-l_red</factor-prop>
    </emission>
  </animation>
 
