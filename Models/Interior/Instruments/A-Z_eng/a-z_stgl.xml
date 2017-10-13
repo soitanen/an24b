@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 
-<!-- AF-150, Voltmeter -->
+<!-- A-Z, left STG-18 Amperemeter -->
 
 <PropertyList>
- <path>vf-150.ac</path>
+ <path>a-z.ac</path>
 
  <animation>
    <type>material</type>
-   <object-name>back</object-name>
-   <object-name>vf-needle</object-name>
+   <object-name>housing</object-name>
+   <object-name>needle</object-name>
    <emission>
      <red>1.0</red>
-     <green>1.0</green>
+     <green>0.7</green>
      <blue>0.7</blue>
      <factor-prop>/controls/lighting/panel-elec_red</factor-prop>
    </emission>
@@ -46,7 +46,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">VF-150 Voltmeter</text>
+    <text type="string">A-Z Amperemeter</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
@@ -65,14 +65,5 @@
       <z-m>  0.000 </z-m>
     </offsets>
   </text>
-  <animation>
-    <type>material</type>
-    <object-name>textosg</object-name>
-    <emission>
-      <red>   1.0 </red>
-      <green> 1.0 </green>
-      <blue>  1.0 </blue>
-    </emission>
-  </animation>
 
 </PropertyList>
