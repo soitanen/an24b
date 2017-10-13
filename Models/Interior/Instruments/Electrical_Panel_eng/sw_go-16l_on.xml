@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 
-<!-- Instruments' background, clamp and bolt-on lamps -->
+<!-- Include APU generator -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../shared/switches/ppng-15k.ac</path>
+
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -14,17 +15,27 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("/controls/lighting/main-emerg", 1.0, 0.1 );
+        interpolate("an24/Electrical_Panel/sw_pt-1000", 1.0, 0.1 );
       </script>
     </binding>
   </action>
-</animation>
+ </animation>
 
  <animation>
-  <object-name>clickspot_middle</object-name>
   <type>pick</type>
+  <object-name>clickspot_middle</object-name>
   <visible>false</visible>
-</animation>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Electrical_Panel/sw_pt-1000", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
 
  <animation>
   <type>pick</type>
@@ -36,19 +47,19 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("/controls/lighting/main-emerg", 0.0, 0.1 );
+        interpolate("an24/Electrical_Panel/sw_pt-1000", -1.0, 0.1 );
       </script>
     </binding>
   </action>
-</animation>
+ </animation>
 
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>/controls/lighting/main-emerg</property>
+   <property>an24/Electrical_Panel/sw_pt-1000</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
+    <entry><ind>-1.0</ind>	<dep>-20.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -56,6 +67,4 @@
     <z>0.0</z>
   </axis>
  </animation>
- 
-
 </PropertyList>

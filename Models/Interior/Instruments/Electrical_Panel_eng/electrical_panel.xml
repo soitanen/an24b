@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- Panel lighting -->
+
+<model>
+ <path>knob_panel-lighting.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.876</x-m>
+    <y-m>0.57</y-m>
+    <z-m>0.83</z-m>
+  </offsets>
+</model>
+
+<!-- PT-1000 main/off/reserve -->
+
+<model>
+ <path>sw_pt-1000.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.876</x-m>
+    <y-m>0.3612</y-m>
+    <z-m>0.8332</z-m>
+  </offsets>
+</model>
+
+<!-- Warning lamp PT-1000 reserve on (i.e. main is defect) -->
+
+<model>
+ <path>wl_pt1000working.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.876</x-m>
+    <y-m>0.38</y-m>
+    <z-m>0.792</z-m>
+  </offsets>
+</model>
+
+<!-- P0-750 on / off/ AUX -->
+
+<model>
+ <path>sw_po-750_ground-start.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.878</x-m>
+    <y-m>0.4698</y-m>
+    <z-m>0.73</z-m>
+  </offsets>
+</model>
+
+<!-- GO-16 Voltage regulation -->
+
+<model>
+ <path>knob_go-16l_voltage_reg.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.865</x-m>
+    <y-m>0.5882</y-m>
+    <z-m>0.6612</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>knob_go-16r_voltage_reg.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.866</x-m>
+    <y-m>0.5397</y-m>
+    <z-m>0.6612</z-m>
+  </offsets>
+</model>
+
+<!-- Signal lamps AR-1/2 working -->
+
+<model>
+ <path>sl_ar-1_working.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.876</x-m>
+    <y-m>0.5162</y-m>
+    <z-m>0.6095</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sl_ar-2_working.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.876</x-m>
+    <y-m>0.4558</y-m>
+    <z-m>0.6095</z-m>
+  </offsets>
+</model>
+
+<!-- AC Voltage indication source select -->
+
+<model>
+ <path>knob_ac-volt-sel.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.868</x-m>
+    <y-m>0.49</y-m>
+    <z-m>0.665</z-m>
+  </offsets>
+</model>
+
+<!-- DC Voltage indication source select -->
+
+<model>
+ <path>knob_dc-volt-sel.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.868</x-m>
+    <y-m>0.37</y-m>
+    <z-m>0.51</z-m>
+  </offsets>
+</model>
+
+<!-- Include AC-Generators GO-16 -->
+
+<model>
+ <path>sw_go-16l_on.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.878</x-m>
+    <y-m>0.4324</y-m>
+    <z-m>0.6627</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_go-16r_on.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.878</x-m>
+    <y-m>0.4096</y-m>
+    <z-m>0.6627</z-m>
+  </offsets>
+</model>
+
+<!-- Include DC-Generators STG-18 -->
+
+<model>
+ <path>sw_connect_stg-18l.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.878</x-m>
+    <y-m>0.5997</y-m>
+    <z-m>0.4234</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_connect_stg-18r.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.878</x-m>
+    <y-m>0.5806</y-m>
+    <z-m>0.4234</z-m>
+  </offsets>
+</model>
+
+<!-- Include Generator GS-24A -->
+
+<model>
+ <path>sw_connect_gs-24.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.878</x-m>
+    <y-m>0.5446</y-m>
+    <z-m>0.4234</z-m>
+  </offsets>
+</model>
+
+<!-- Boardnet main switch -->
+
+<model>
+ <path>sw_aerodrome_onboard.xml</path>
+  <offsets>
+    <heading-deg>180</heading-deg>
+    <x-m>3.878</x-m>
+    <y-m>0.5049</y-m>
+    <z-m>0.4234</z-m>
+  </offsets>
+</model>
+
+</PropertyList>

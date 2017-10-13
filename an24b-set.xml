@@ -636,6 +636,9 @@
   <stations>
     <file>Aircraft/an24b/Nasal/stations.nas</file>
   </stations>
+  <electrical>
+    <file>Aircraft/an24b/Nasal/electrical.nas</file>
+  </electrical>
 </nasal>
 
 <payload>
