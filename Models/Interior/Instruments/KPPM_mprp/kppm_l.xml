@@ -56,7 +56,14 @@
 <animation>
 	<type>translate</type>
 	<object-name>hs_needle</object-name>
+<<<<<<< HEAD
 	<property>/instrumentation/nav/heading-needle-deflection-norm</property>
+=======
+	<condition>
+		<property>/instrumentation/nav[0]/nav-loc</property>
+	</condition>
+	<property>/instrumentation/nav[0]/heading-needle-deflection-norm</property>
+>>>>>>> eb167a1c302581994de0ab52a55ea00b686ed5c8
 	<interpolation>
 		<entry><ind>-1</ind><dep>-0.019</dep></entry>
 		<entry><ind>0.0</ind><dep>0.0</dep></entry>
