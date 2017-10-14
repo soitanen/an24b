@@ -5,6 +5,15 @@
 
 <!--Cockpit animations-->
 
+  <effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>foil</object-name>
+   </effect>
+  <effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>screenfoil</object-name>
+   </effect>
+
  <animation>
    <type>slider</type>
    <object-name>gardinenstange</object-name>

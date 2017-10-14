@@ -12,7 +12,7 @@
      <red>0.4</red>
      <green>0.4</green>
      <blue>0.2</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <factor-prop>/controls/lighting/overhead_instr</factor-prop>
    </emission>
  </animation>
 
