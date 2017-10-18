@@ -57,17 +57,21 @@ setlistener("an24/FuelControl/lrear463_press", ondutyl);
 setlistener("an24/FuelControl/lfront463_press", ondutyl);
 
 var cutoffl = func {
-	if ( getprop("an24/FuelControl/groupondutyl") == 0.0 and getprop("an24/FuelControl/crossfeed") == 0.0 ) {
+	if ( (getprop("an24/FuelControl/groupondutyl") == 0.0 or (getprop("/consumables/fuel/tank[0]/level-kg") + getprop("/consumables/fuel/tank[1]/level-kg") == 0.0 and getprop("an24/FuelControl/groupondutyl") == 2.0) or (getprop("/consumables/fuel/tank[2]/level-kg") == 0.0 and getprop("an24/FuelControl/groupondutyl") == 1.0)) and getprop("an24/FuelControl/crossfeed") == 0.0 ) {
 	setprop("an24/FuelControl/cutoff-l-by-fs", 1.0);
 	setprop("/controls/engines/engine[0]/cutoff", 1.0 );
 	}
 	else if ( getprop("an24/FuelControl/cutoff-l-by-sw") == 0.0 ) {
 	setprop("/controls/engines/engine[0]/cutoff", 0.0 );
+	setprop("an24/FuelControl/cutoff-l-by-fs", 0.0);
 	}
 }
 setlistener("an24/FuelControl/groupondutyl", cutoffl);
 setlistener("an24/FuelControl/crossfeed", cutoffl);
 setlistener("an24/FuelControl/cutoff-l-by-sw", cutoffl);
+setlistener("/consumables/fuel/tank[0]/level-kg", cutoffl);
+setlistener("/consumables/fuel/tank[1]/level-kg", cutoffl);
+setlistener("/consumables/fuel/tank[2]/level-kg", cutoffl);
 
 var ondutyr = func {
 	var rauxpress = getprop("an24/FuelControl/rrear463_press") + getprop("an24/FuelControl/rfront463_press");
@@ -96,17 +100,21 @@ setlistener("an24/FuelControl/rrear463_press", ondutyr);
 setlistener("an24/FuelControl/rfront463_press", ondutyr);
 
 var cutoffr = func {
-	if ( getprop("an24/FuelControl/groupondutyr") == 0.0 and getprop("an24/FuelControl/crossfeed") == 0.0 ) {
+	if ( (getprop("an24/FuelControl/groupondutyr") == 0.0 or (getprop("/consumables/fuel/tank[4]/level-kg") + getprop("/consumables/fuel/tank[5]/level-kg") == 0.0 and getprop("an24/FuelControl/groupondutyr") == 2.0) or (getprop("/consumables/fuel/tank[3]/level-kg") == 0.0 and getprop("an24/FuelControl/groupondutyr") == 1.0)) and getprop("an24/FuelControl/crossfeed") == 0.0 ) {
 	setprop("an24/FuelControl/cutoff-r-by-fs", 1.0);
 	setprop("/controls/engines/engine[1]/cutoff", 1.0 );
 	}
 	else if ( getprop("an24/FuelControl/cutoff-r-by-sw") == 0.0 ) {
 	setprop("/controls/engines/engine[1]/cutoff", 0.0 );
+	setprop("an24/FuelControl/cutoff-r-by-fs", 0.0);
 	}
 }
 setlistener("an24/FuelControl/groupondutyr", cutoffr);
 setlistener("an24/FuelControl/crossfeed", cutoffr);
 setlistener("an24/FuelControl/cutoff-r-by-sw", cutoffr);
+setlistener("/consumables/fuel/tank[3]/level-kg", cutoffr);
+setlistener("/consumables/fuel/tank[4]/level-kg", cutoffr);
+setlistener("/consumables/fuel/tank[5]/level-kg", cutoffr);
 
 # Equalizing left tanks
 var giveandgetl = func {

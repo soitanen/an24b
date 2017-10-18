@@ -18,19 +18,13 @@
    </emission>
  </animation>
 
-<!-- AUX2 L/R -->
+<!-- Needles -->
 
 <animation>
   <object-name>needle_L</object-name>
   <type>rotate</type>
-  <condition>
-   <equals>
-    <property>/an24/fuel-selector</property>
-    <value>1</value>
-   </equals>
-  </condition>
-  <property>consumables/fuel/tank[0]/level-kg</property>
-  <factor>-0.1875</factor>
+  <property>an24/PG5and2PPT1/indicatedl</property>
+  <factor>-0.1875</factor> <!-- inner scale, outer scale-factor by nasal -->
   <offset-deg>60</offset-deg>
   <center>
    <x-m>0</x-m>
@@ -47,14 +41,8 @@
 <animation>
   <object-name>needle_R</object-name>
   <type>rotate</type>
-  <condition>
-   <equals>
-    <property>/an24/fuel-selector</property>
-    <value>1</value>
-   </equals>
-  </condition>
-  <property>consumables/fuel/tank[5]/level-kg</property>
-  <factor>-0.1875</factor>
+  <property>an24/PG5and2PPT1/indicatedr</property>
+  <factor>-0.1875</factor> <!-- inner scale, outer scale-factor by nasal -->
   <offset-deg>60</offset-deg>
   <center>
    <x-m>0</x-m>

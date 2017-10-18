@@ -341,3 +341,29 @@ var stopwatch = func {
 }
 
  setlistener("an24/AChS/start-btn", stopwatch);
+
+
+# 2PPT1-4 Fuel Level Indicator
+var fuelind = func {
+	if ( getprop("an24/PG5and2PPT1/selected-ind") == 1.0 ) {
+        var indicatedl = (getprop("/consumables/fuel/tank[0]/level-kg") + getprop("/consumables/fuel/tank[1]/level-kg") + getprop("/consumables/fuel/tank[2]/level-kg")) * 2 / 3;
+        var indicatedr = (getprop("/consumables/fuel/tank[3]/level-kg") + getprop("/consumables/fuel/tank[4]/level-kg") + getprop("/consumables/fuel/tank[5]/level-kg")) * 2 / 3;
+	}
+	else if ( getprop("an24/PG5and2PPT1/selected-ind") == 2.0 ) {
+        var indicatedl = getprop("/consumables/fuel/tank[0]/level-kg") + getprop("/consumables/fuel/tank[1]/level-kg");
+        var indicatedr = getprop("/consumables/fuel/tank[4]/level-kg") + getprop("/consumables/fuel/tank[5]/level-kg");
+	}
+	else if ( getprop("an24/PG5and2PPT1/selected-ind") == 3.0 ) {
+        var indicatedl = getprop("/consumables/fuel/tank[2]/level-kg");
+        var indicatedr = getprop("/consumables/fuel/tank[3]/level-kg");
+	}
+	else {
+        var indicatedl = 0.0;
+        var indicatedr = 0.0;
+	}
+	interpolate("an24/PG5and2PPT1/indicatedl", indicatedl, 0.8 );
+	interpolate("an24/PG5and2PPT1/indicatedr", indicatedr, 0.8 );
+	settimer(fuelind, 23);
+}
+
+ setlistener("an24/PG5and2PPT1/selected-ind", fuelind);

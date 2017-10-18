@@ -1,37 +1,44 @@
 <?xml version="1.0"?>
 
-<!-- PG-5k fuel indicator selector -->
+<!-- PG-5k selector for fuel indicator 2PPT1-4 -->
 
 <PropertyList>
 
  <path>pg-5k.ac</path>
 
-<!--Needles
+<!-- Knob -->
 
   <animation>
-     <type>knob</type>
-     <object-name>selector</object-name>
-      <value>0.0</value>
-      <center>
-       <x-m>0.0</x-m>
-       <y-m>0.0</y-m>
-       <z-m>0.0</z-m>
-      </center>
-      <axis>
-       <x>-1.0</x>
-       <y>0.0</y>
-       <z>0.0</z>
-      </axis>
-        <action>
-            <binding>
-                <command>property-adjust</command>
-                <property>/instrumentation/nav[0]/standby-frequency-mhz</property>
-                <factor>1</factor>
-                <min>0</min>
-                <max>3</max>                
-                <wrap>true</wrap>
-            </binding>
-        </action>
-</animation>
--->
+   <type>knob</type>
+   <object-name>selector</object-name>
+   <property>an24/PG5and2PPT1/selected-ind</property>
+    <factor>-25.0</factor>
+    <center>
+     <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.0</z-m>
+    </center>
+    <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+    </axis>
+     <action>
+      <binding>
+       <command>property-adjust</command>
+        <property>an24/PG5and2PPT1/selected-ind</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>3</max>                
+        <wrap>false</wrap>
+     </binding>
+     <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/PG5and2PPT1/ind_level", 0.0, 0.2, getprop("/consumables/fuel/total-fuel-kg"), 0.4 );
+      </script>
+     </binding>
+    </action>
+  </animation>
+
 </PropertyList>

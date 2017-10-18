@@ -77,6 +77,87 @@
 </model>
 
 <model>
+  <name>AChS-1</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/navachs-1.xml</path>
+  <offsets>
+    <x-m>3.8803</x-m>
+    <y-m>-0.887</y-m>
+    <z-m>0.8906</z-m>
+    <heading-deg>90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>ARK-11</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-1.xml</path>
+  <offsets>
+    <x-m>3.794</x-m>
+    <y-m>-0.80</y-m>
+    <z-m>1.195</z-m>
+    <heading-deg>90</heading-deg>
+    <pitch-deg>130</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>ARK-11</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-2.xml</path>
+  <offsets>
+    <x-m>3.576</x-m>
+    <y-m>-0.80</y-m>
+    <z-m>1.195</z-m>
+    <heading-deg>90</heading-deg>
+    <pitch-deg>130</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>KM-8</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/KM-8_nav/km-8.xml</path>
+  <offsets>
+    <x-m>3.8803</x-m>
+    <y-m>-0.877</y-m>
+    <z-m>0.9769</z-m>
+    <heading-deg>90</heading-deg>
+  </offsets>
+</model>
+
+<!-- Radio Operator's/ Engineer's Panel -->
+
+<model>
+  <name>SPU-7</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/engspu-7.xml</path>
+  <offsets>
+    <x-m>3.88</x-m>
+    <y-m>0.881</y-m>
+    <z-m>0.65</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>115_36VAC_Panel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/115_36VAC_panel_eng/115_36vac.xml</path>
+  <offsets>
+    <x-m>3.757</x-m>
+    <y-m>1.063</y-m>
+    <z-m>0.616</z-m>
+    <heading-deg>232</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>CircuitBreakerPanel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/CircuitBreakerPanel_eng/circuitbreakerpanel.xml</path>
+  <offsets>
+    <x-m>3.31</x-m>
+    <y-m>0.86</y-m>
+    <z-m>1.1</z-m>
+    <roll-deg>38</roll-deg>
+  </offsets>
+</model>
+
+<model>
   <name>AF-150</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/AF-150_eng/af-150_l.xml</path>
   <offsets>
@@ -143,76 +224,8 @@
 </model>
 
 <model>
-  <name>V-selector</name>
+  <name>ElectricalPanel</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Electrical_Panel_eng/electrical_panel.xml</path>
-</model>
-
-<model>
-  <name>AChS-1</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/navachs-1.xml</path>
-  <offsets>
-    <x-m>3.8803</x-m>
-    <y-m>-0.887</y-m>
-    <z-m>0.8906</z-m>
-    <heading-deg>90</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>ARK-11</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-1.xml</path>
-  <offsets>
-    <x-m>3.794</x-m>
-    <y-m>-0.80</y-m>
-    <z-m>1.195</z-m>
-    <heading-deg>90</heading-deg>
-    <pitch-deg>130</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>ARK-11</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/navark-11-2.xml</path>
-  <offsets>
-    <x-m>3.576</x-m>
-    <y-m>-0.80</y-m>
-    <z-m>1.195</z-m>
-    <heading-deg>90</heading-deg>
-    <pitch-deg>130</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>SPU-7</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/engspu-7.xml</path>
-  <offsets>
-    <x-m>3.88</x-m>
-    <y-m>0.881</y-m>
-    <z-m>0.65</z-m>
-    <heading-deg>180</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>115_36VAC_Panel</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/115_36VAC_panel_eng/115_36vac.xml</path>
-  <offsets>
-    <x-m>3.757</x-m>
-    <y-m>1.063</y-m>
-    <z-m>0.616</z-m>
-    <heading-deg>232</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>CircuitBreakerPanel</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/CircuitBreakerPanel_eng/circuitbreakerpanel.xml</path>
-  <offsets>
-    <x-m>3.31</x-m>
-    <y-m>0.86</y-m>
-    <z-m>1.1</z-m>
-    <roll-deg>38</roll-deg>
-  </offsets>
 </model>
 
 </PropertyList>

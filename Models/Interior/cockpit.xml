@@ -1143,6 +1143,17 @@
   </offsets>
 </model>
 
+<model>
+  <name>ARK-Indicator</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/ohark-ind.xml</path>
+  <offsets>
+    <x-m>2.7724</x-m>
+    <y-m>-0.2336</y-m>
+    <z-m>1.4366</z-m>
+    <pitch-deg>80</pitch-deg>
+  </offsets>
+</model>
+
 <!--********************************************-->
 
 <model>
