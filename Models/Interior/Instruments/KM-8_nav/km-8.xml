@@ -5,18 +5,18 @@
 <PropertyList>
  <path>km-8.ac</path>
 
- <!--animation>
+ <animation>
    <type>material</type>
    <object-name>km_face</object-name>
    <object-name>needle_1</object-name>
    <object-name>needle_2</object-name>
    <emission>
      <red>1.0</red>
-     <green>0.4</green>
-     <blue>0.4</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.5</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/console-l_red</factor-prop>
    </emission>
- </animation-->
+ </animation>
 
  <!--animation>
    <type>km_knob</type>

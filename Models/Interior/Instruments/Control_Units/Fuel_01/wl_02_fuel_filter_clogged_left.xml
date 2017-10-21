@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Failure of left fuel filter-->
+<!-- Left fuel filter clogged -->
 
 <PropertyList>
  <path>../../../shared/lamps/sltsn.ac</path>
@@ -11,6 +11,13 @@
  <object-name>lampon</object-name>
  <texture>../../../shared/lamps/sltsnredplain.png</texture>
 </animation>
+
+ <animation>
+  <object-name>lampon</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+</animation>
+
 
 <!--animation>
  <type>select</type>
