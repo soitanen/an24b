@@ -36,7 +36,6 @@
   </view>
   <view n="101">
     <name>Copilot View</name>
-    <!--<enabled type="bool">true</enabled>-->
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
@@ -73,7 +72,6 @@
       <y-offset-m type="double" >0.84</y-offset-m>
       <z-offset-m type="double" >-5.06</z-offset-m>
       <pitch-offset-deg type="double">-5.0</pitch-offset-deg>
-      <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
       <default-field-of-view-deg type="double">84.0</default-field-of-view-deg>
       <default-pitch-deg type="double">0</default-pitch-deg>
@@ -92,7 +90,6 @@
 
   <view n="103">
     <name>Navigator View</name>
-    <!--<enabled type="bool">true</enabled>-->
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
@@ -137,6 +134,14 @@
 	    <desc>Increase Idle Lock value</desc>
 	   </key>
    	   <key>
+	    <name>less-than</name>
+	    <desc>Quick Overhead View</desc>
+	   </key>
+   	   <key>
+	    <name>d</name>
+	    <desc>(Dis-)Connect AP</desc>
+	   </key>
+   	   <key>
 	    <name> </name>
 	    <desc> </desc>
 	   </key>
@@ -178,7 +183,6 @@
       </menu>
     </default>
   </menubar>
-
 
   <flaps>
 	  <setting>0.0</setting>
@@ -263,11 +267,6 @@
        </binding>
        <binding>
           <command>property-assign</command>
-          <property>/sim/current-view/goal-heading-offset-deg</property>
-          <value>360</value>
-       </binding>
-       <binding>
-          <command>property-assign</command>
           <property>/sim/current-view/goal-pitch-offset-deg</property>
           <value>89.8</value>
        </binding>
@@ -323,6 +322,7 @@
         <step>-0.02</step>
       </binding>
     </key>
+
     <key n="61">
       <name>equal</name>
       <binding>
@@ -373,6 +373,25 @@
           </binding>
         </mod-up>
       </key>
+
+      <key n="100">
+      <name>d</name>
+      <desc>AP (DIS-)CONNECT</desc>
+      <repeatable>false</repeatable>
+       <binding>
+       <command>nasal</command>
+        <script>
+         if( getprop("an24/ap-28l1/internal/engaged" ) == 0.0 ){
+         instruments.engage_ap();
+         }
+         else {
+         setprop("an24/ap-28l1/internal/kv", 0.0 );
+         setprop("an24/ap-28l1/internal/horizon-mode", 0.0 );
+         setprop("an24/ap-28l1/internal/engaged", 0.0 );
+         }	
+        </script>
+       </binding>
+    </key>
 
     <key n="49">
       <name>1</name>

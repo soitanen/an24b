@@ -479,7 +479,7 @@
 	if (navaid != nil) {
 	stations.textid1.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst1.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra1.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra1.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid1.setText("");
@@ -524,7 +524,7 @@
 	if (navaid != nil) {
 	stations.textid2.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst2.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra2.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra2.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid2.setText("");
@@ -569,7 +569,7 @@
 	if (navaid != nil) {
 	stations.textid3.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst3.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra3.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra3.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid3.setText("");
@@ -614,7 +614,7 @@
 	if (navaid != nil) {
 	stations.textid4.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst4.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra4.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra4.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid4.setText("");
@@ -659,7 +659,7 @@
 	if (navaid != nil) {
 	stations.textid5.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst5.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra5.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra5.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid5.setText("");
@@ -704,7 +704,7 @@
 	if (navaid != nil) {
 	stations.textid6.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst6.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra6.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra6.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid6.setText("");
@@ -749,7 +749,7 @@
 	if (navaid != nil) {
 	stations.textid7.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst7.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra7.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra7.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid7.setText("");
@@ -794,7 +794,7 @@
 	if (navaid != nil) {
 	stations.textid8.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst8.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra8.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra8.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid8.setText("");
@@ -839,7 +839,7 @@
 	if (navaid != nil) {
 	stations.textid9.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst9.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra9.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra9.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid9.setText("");

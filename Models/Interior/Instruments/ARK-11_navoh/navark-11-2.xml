@@ -479,7 +479,7 @@
 	if (navaid != nil) {
 	stations.textid12.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst12.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
-	stations.textra12.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra12.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid12.setText("");
@@ -523,8 +523,8 @@
 	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[1]/frequencies/selected-khz") / 10 );
 	if (navaid != nil) {
 	stations.textid22.setText(sprintf("%.5s\n", navaid.name ));
-	stations.textst22.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra22.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textst22.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra22.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid22.setText("");
@@ -569,7 +569,7 @@
 	if (navaid != nil) {
 	stations.textid32.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst32.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
-	stations.textra32.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra32.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid32.setText("");
@@ -614,7 +614,7 @@
 	if (navaid != nil) {
 	stations.textid42.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst42.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
-	stations.textra42.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra42.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid42.setText("");
@@ -659,7 +659,7 @@
 	if (navaid != nil) {
 	stations.textid52.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst52.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
-	stations.textra52.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra52.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid52.setText("");
@@ -703,8 +703,8 @@
 	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[1]/frequencies/selected-khz") / 10 );
 	if (navaid != nil) {
 	stations.textid62.setText(sprintf("%.5s\n", navaid.name ));
-	stations.textst62.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra62.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textst62.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra62.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid62.setText("");
@@ -749,7 +749,7 @@
 	if (navaid != nil) {
 	stations.textid72.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst72.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
-	stations.textra72.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra72.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid72.setText("");
@@ -793,8 +793,8 @@
 	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[1]/frequencies/selected-khz") / 10 );
 	if (navaid != nil) {
 	stations.textid82.setText(sprintf("%.5s\n", navaid.name ));
-	stations.textst82.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
-	stations.textra82.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textst82.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra82.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid82.setText("");
@@ -839,7 +839,7 @@
 	if (navaid != nil) {
 	stations.textid92.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst92.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
-	stations.textra92.setText(sprintf( navaid.range_nm * 1.85 ));
+	stations.textra92.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
 	}
 	else {
 	stations.textid92.setText("");

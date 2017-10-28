@@ -136,6 +136,17 @@
 </model>
 
 <model>
+  <name>US-8K</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_eng/us-8k.xml</path>
+  <offsets>
+    <x-m>3.888</x-m>
+    <y-m>0.847</y-m>
+    <z-m>0.463</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<model>
   <name>115_36VAC_Panel</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/115_36VAC_panel_eng/115_36vac.xml</path>
   <offsets>

@@ -21,7 +21,7 @@
   <object-name>geardoorR3</object-name>
   <object-name>geardoorL1</object-name>
   <object-name>geardoorL1</object-name>
-  <object-name>wings</object-name>
+  <!--object-name>wings</object-name-->
   <object-name>vtail</object-name>
   <object-name>htail</object-name>
   <object-name>mainwheels_left</object-name>
@@ -81,7 +81,7 @@
 <model>
     <name>windows</name>
     <usage>interior</usage>
-    <path>Aircraft/an24b/Models/Interior/windows.ac</path>
+    <path>Aircraft/an24b/Models/Interior/windows.xml</path>
     <nopreview/>
 </model>
 
@@ -106,7 +106,6 @@
     </offsets>
     <nopreview/>
 </model>
-
 
 <!--****************************** Control surfaces **************************************-->
 <!--Ailerons-->
