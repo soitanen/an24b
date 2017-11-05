@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- 3 lamps at top right of middle panel:
+<!-- 3 lamps at top right of middle panel, TG-16 cutoff-valve on horizontal left console:
      - low on fuel
      - failure of L/R fuel filter-->
 
@@ -30,6 +30,16 @@
     <x-m>2.09232</x-m>
     <y-m>0.2111</y-m>
     <z-m>1.0493</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_tg-16_cutoff.xml</path>
+  <offsets>
+    <x-m>2.7814</x-m>
+    <y-m>-1.004</y-m>
+    <z-m>0.5728</z-m>
+    <heading-deg>84</heading-deg>
   </offsets>
 </model>
 

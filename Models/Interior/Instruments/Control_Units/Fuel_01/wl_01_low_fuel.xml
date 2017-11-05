@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Total fuel below 580kg warning-->
+<!-- Total fuel below 580kg warning (respectively less than 300kg in either AUX-tank) -->
 
 <PropertyList>
  <path>../../../shared/lamps/sltsn.ac</path>

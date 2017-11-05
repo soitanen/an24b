@@ -6,26 +6,28 @@ setprop("an24/FuelControl/rmainecn_press", 0.0);
 setprop("an24/FuelControl/rrear463_press", 0.0);
 setprop("an24/FuelControl/rfront463_press", 0.0);
 
+# Main pump ecn left is on or off if...
+
 var autol = func {
-	if ( ( getprop("an24/FuelControl/sw0402") == 0.0 or getprop("an24/AZS/sw0113") != 1.0 ) or ( getprop("an24/FuelControl/sw0402") == 1.0 and ( getprop("an24/FuelControl/lrear463_press") > 0.12 and getprop("/consumables/fuel/tank[0]/level-kg") + getprop("/consumables/fuel/tank[1]/level-kg") > 450.0 or getprop("/consumables/fuel/tank[2]/level-kg") < 0.1 ) ) ) {
+	if ( ( getprop("an24/FuelControl/sw0402") == 0.0 or getprop("an24/AZS/sw0113") != 1.0 ) or ( getprop("an24/FuelControl/sw0402") == 1.0 and ( getprop("an24/FuelControl/lrear463_press") > 0.12 and getprop("/consumables/fuel/tank[0]/level-kg") + getprop("/consumables/fuel/tank[1]/level-kg") > 450.0 or getprop("/consumables/fuel/tank[2]/level-kg") < 0.2 ) ) ) {
 	setprop("an24/FuelControl/lmainecn_press", 0.0 );
 	}
 	else {
 	setprop("an24/FuelControl/lmainecn_press", 0.6 );
 	}
- settimer(autol, 0.1);
+ settimer(autol, 1.0);
 }
 
 setlistener("sim/signals/fdm-initialized", autol);
 
 var autor = func {
-	if ( ( getprop("an24/FuelControl/sw0406") == 0.0 or getprop("an24/AZS/sw0116") != 1.0 ) or ( getprop("an24/FuelControl/sw0406") == 1.0 and ( getprop("an24/FuelControl/rrear463_press") > 0.12 and getprop("/consumables/fuel/tank[4]/level-kg") + getprop("/consumables/fuel/tank[5]/level-kg") > 450.0 or getprop("/consumables/fuel/tank[3]/level-kg") < 0.1 ) ) ) {
+	if ( ( getprop("an24/FuelControl/sw0406") == 0.0 or getprop("an24/AZS/sw0116") != 1.0 ) or ( getprop("an24/FuelControl/sw0406") == 1.0 and ( getprop("an24/FuelControl/rrear463_press") > 0.12 and getprop("/consumables/fuel/tank[4]/level-kg") + getprop("/consumables/fuel/tank[5]/level-kg") > 450.0 or getprop("/consumables/fuel/tank[3]/level-kg") < 0.2 ) ) ) {
 	setprop("an24/FuelControl/rmainecn_press", 0.0 );
 	}
 	else {
 	setprop("an24/FuelControl/rmainecn_press", 0.6 );
 	}
- settimer(autor, 0.1);
+ settimer(autor, 1.0);
 }
 
 setlistener("sim/signals/fdm-initialized", autor);

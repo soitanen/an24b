@@ -475,7 +475,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix1sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix1ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid1.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst1.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -520,7 +520,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix2sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix2ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid2.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst2.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -528,7 +528,7 @@
 	}
 	else {
 	stations.textid2.setText("");
-	stations.textra2.setText("");	
+	stations.textra2.setText("");
 	}}
 	else {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix2sb"), 2.0 );
@@ -565,7 +565,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix3sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix3ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid3.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst3.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -573,11 +573,11 @@
 	}
 	else {
 	stations.textid3.setText("");
-	stations.textra3.setText("");	
+	stations.textra3.setText("");
 	}}
 	else {
-	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix3sb"), 2.0 );
-	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix3ff"), 2.4 );
+	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix2sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix2ff"), 2.4 );
 	}
       </script>
     </binding>
@@ -610,7 +610,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix4sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix4ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid4.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst4.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -655,7 +655,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix5sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix5ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid5.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst5.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -700,7 +700,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix6sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix6ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid6.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst6.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -745,7 +745,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix7sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix7ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid7.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst7.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -790,7 +790,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix8sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix8ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid8.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst8.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
@@ -835,7 +835,7 @@
 	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix9sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix9ff", getprop("an24/ARK-11/fine-khz-1") );
-	var navaid = findNavaidByFrequency( getprop("/instrumentation/adf[0]/frequencies/selected-khz") / 10 );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
 	if (navaid != nil) {
 	stations.textid9.setText(sprintf("%.5s\n", navaid.name ));
 	stations.textst9.setText(sprintf("%.1f", getprop("/instrumentation/adf[0]/frequencies/selected-khz")));
