@@ -159,7 +159,6 @@ kids 0
 OBJECT poly
 name "gear_lever_base"
 loc -1.57726e-11 0.0011505 -0.000173655
-texture "/home/adrian/Programme/Aircraft/an24b/Models/Interior/cockpit.png"
 crease 45.000000
 numvert 148
 -0.0189142 0.00653684 0.01092
