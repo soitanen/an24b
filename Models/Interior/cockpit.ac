@@ -20,7 +20,7 @@ MATERIAL "ac3dmat8" rgb 0 0 0  amb 0.4 0.4 0.4  emis 0 0 0  spec 0 0 0  shi 128 
 MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.753 0.722 0.737  emis 0 0 0  spec 1 1 1  shi 128  trans 0
 OBJECT world
-kids 141
+kids 140
 OBJECT poly
 name "screenfoil"
 loc 2.49726 1.3246 0
@@ -35,36 +35,20 @@ numvert 8
 -0.161115 0.0160279 0.606281
 0.161115 0.0160279 0.606281
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 9
 refs 4
 0 0.229041 0.671425
 1 0.181989 0.671425
 2 0.181989 0.680275
 3 0.229041 0.680275
-SURF 0x30
+SURF 0x10
 mat 9
 refs 4
 4 0.229041 0.680275
 5 0.181989 0.680275
 6 0.181989 0.671425
 7 0.229041 0.671425
-kids 0
-OBJECT poly
-name "rect"
-loc 2.56008 0.44998 -1.05353
-crease 45.000000
-numvert 3
-0.412087 -0.338858 -0.294862
-0.47332 -0.338858 -0.233628
-0.412087 -0.338858 -0.233628
-numsurf 1
-SURF 0x30
-mat 0
-refs 3
-2 0 0
-1 1 0
-0 0 1
 kids 0
 OBJECT poly
 name "KI-13.bezel1"
