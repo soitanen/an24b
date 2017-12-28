@@ -13,17 +13,10 @@
     <button>0</button>
     <repeatable>false</repeatable>
   <binding>
-    <condition>
-     <equals>
-    	<property>an24/animations/gear-lever-lock</property>
-     <value>1</value>
-     </equals>
-    </condition>
    <command>nasal</command>
    <script>
 	controls.gearDown(-1);
-	interpolate("an24/animations/gear-lever", 1.0, 0.1 );
-	settimer(func {interpolate("an24/animations/gear-lever", 0.0, 0.1 );},0.1);
+	interpolate("an24/animations/gear-lever", 1.0, 0.4 );
    </script>
   </binding>
   </action>
@@ -37,17 +30,10 @@
     <button>0</button>
     <repeatable>false</repeatable>
   <binding>
-    <condition>
-     <equals>
-    	<property>an24/animations/gear-lever-lock</property>
-     <value>-1</value>
-     </equals>
-    </condition>
    <command>nasal</command>
    <script>
 	controls.gearDown(1);
-	interpolate("an24/animations/gear-lever", -1.0, 0.1 );
-	settimer(func {interpolate("an24/animations/gear-lever", 0.0, 0.1 );},0.1);
+	interpolate("an24/animations/gear-lever", -1.0, 0.4 );
    </script>
   </binding>
   </action>

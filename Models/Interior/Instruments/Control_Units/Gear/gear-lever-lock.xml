@@ -6,57 +6,9 @@
  <path>gear-lever-lock.ac</path>
 
  <animation>
-  <type>pick</type>
-  <object-name>click_gear_lock_up</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/animations/gear-lever-lock", 1.0, 0.3 );
-      </script>
-    </binding>
-  </action>
- </animation>
-
- <animation>
-  <type>pick</type>
-  <object-name>click_gear_lock_neutral</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/animations/gear-lever-lock", 0.0, 0.3 );
-      </script>
-    </binding>
-  </action>
- </animation>
-
- <animation>
-  <type>pick</type>
-  <object-name>click_gear_lock_down</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/animations/gear-lever-lock", -1.0, 0.3 );
-      </script>
-    </binding>
-  </action>
- </animation>
-
- <animation>
    <type>rotate</type>
    <object-name>gear-lever-lock</object-name>
-   <property>an24/animations/gear-lever-lock</property>
+   <property>an24/animations/gear-lever</property>
     <factor>90</factor>
   <axis>
     <x>0.0</x>
