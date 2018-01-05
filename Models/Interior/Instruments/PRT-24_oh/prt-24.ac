@@ -1,7 +1,7 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.502 0.502 0.502  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 128  trans 0
 OBJECT world
-kids 3
+kids 2
 OBJECT poly
 name "prt_face"
 loc 0.0413547 -0.00243339 -5.21541e-08
@@ -771,23 +771,6 @@ refs 3
 76 1 1
 26 0.958288 0.99186
 69 1 0.99186
-kids 0
-OBJECT poly
-name "object"
-loc 0.0380119 0.00155951 -0.0107369
-texture "prt-24.png"
-crease 45.000000
-numvert 3
--0.0028157 -0.0389275 0.0107369
--0.0028157 -0.0389275 -0.0469391
--0.0028157 -0.0389275 0.0684128
-numsurf 1
-SURF 0x10
-mat 0
-refs 3
-2 0.927804 0.0170752
-1 0.0721962 0.0170752
-0 0.5 0.0170752
 kids 0
 OBJECT poly
 name "prt_housing"

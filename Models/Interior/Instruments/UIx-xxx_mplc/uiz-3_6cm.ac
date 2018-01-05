@@ -2,7 +2,7 @@ AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 128  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 OBJECT world
-kids 4
+kids 7
 OBJECT poly
 name "pressure_2_needle"
 loc -0.00989079 -0.00912498 0.0252868
@@ -75,13 +75,43 @@ refs 3
 7 0 0
 6 0 0
 kids 0
-OBJECT group
-name "group"
-loc -12.9488 0.758471 0.388376
-kids 4
+OBJECT poly
+name "pressure_1_needle"
+loc -0.00984749 -0.00233707 0
+crease 30.000000
+numvert 7
+0.0076646 0.0239519 0
+0.0076646 0.0226253 0.000393443
+0.0076646 0.0226253 -0.000393443
+0.00766464 0.00425751 -0.00078693
+0.00766464 0.00425751 0.00078693
+0.00766464 0.0193765 0.00078693
+0.00766464 0.0193765 -0.00078693
+numsurf 3
+SURF 0x10
+mat 0
+refs 3
+2 0 0
+0 0 0
+1 0 0
+SURF 0x10
+mat 0
+refs 4
+6 0 0
+2 0 0
+1 0 0
+5 0 0
+SURF 0x10
+mat 0
+refs 4
+5 0 0
+4 1 0
+3 1 1
+6 0 1
+kids 0
 OBJECT poly
 name "pressure_1"
-loc 12.9475 -0.754111 -0.388376
+loc -0.00129986 0.00436002 0
 texture "uiz-3.png"
 crease 45.000000
 numvert 17
@@ -202,7 +232,7 @@ refs 3
 kids 0
 OBJECT poly
 name "pressure_2"
-loc 12.9475 -0.767596 -0.374289
+loc -0.00129986 -0.00912499 0.014087
 texture "uiz-3.png"
 crease 45.000000
 numvert 17
@@ -323,7 +353,7 @@ refs 3
 kids 0
 OBJECT poly
 name "housing"
-loc 12.1958 -0.773934 -0.430166
+loc -0.753 -0.015463 -0.04179
 texture "uiz-3.png"
 crease 45.000000
 numvert 53
@@ -864,7 +894,7 @@ refs 3
 kids 0
 OBJECT poly
 name "temperature"
-loc 12.9475 -0.767596 -0.402194
+loc -0.00129986 -0.00912499 -0.013818
 texture "uiz-3.png"
 crease 45.000000
 numvert 17
@@ -982,38 +1012,4 @@ refs 3
 16 0.031579 0.909655
 0 0.00615558 0.909655
 15 0.00809082 0.899926
-kids 0
-OBJECT poly
-name "pressure_1_needle"
-loc -0.00984749 -0.00233707 0
-crease 30.000000
-numvert 7
-0.0076646 0.0239519 0
-0.0076646 0.0226253 0.000393443
-0.0076646 0.0226253 -0.000393443
-0.00766464 0.00425751 -0.00078693
-0.00766464 0.00425751 0.00078693
-0.00766464 0.0193765 0.00078693
-0.00766464 0.0193765 -0.00078693
-numsurf 3
-SURF 0x10
-mat 0
-refs 3
-2 0 0
-0 0 0
-1 0 0
-SURF 0x10
-mat 0
-refs 4
-6 0 0
-2 0 0
-1 0 0
-5 0 0
-SURF 0x10
-mat 0
-refs 4
-5 0 0
-4 1 0
-3 1 1
-6 0 1
 kids 0
