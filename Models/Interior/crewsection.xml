@@ -190,7 +190,7 @@
   <name>CircuitBreakerPanel</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/CircuitBreakerPanel_eng/circuitbreakerpanel.xml</path>
   <offsets>
-    <x-m>3.31</x-m>
+    <x-m>3.29</x-m>
     <y-m>0.86</y-m>
     <z-m>1.1</z-m>
     <roll-deg>38</roll-deg>

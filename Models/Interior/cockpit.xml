@@ -1263,4 +1263,9 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/TG-16/tg-16.xml</path>
 </model>
 
+<model>
+  <name>signal_horn</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/signal_horn/signal_horn.xml</path>
+</model>
+
 </PropertyList>
