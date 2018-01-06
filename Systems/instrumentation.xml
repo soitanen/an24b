@@ -63,13 +63,7 @@ file, these values will be used (they are hardcoded).
   <attitude-indicator>
     <name>agd-1</name>
     <number>0</number>
-    <suction>/an24/instrumentation/agd_l</suction>
-  </attitude-indicator>
-
-  <attitude-indicator>
-    <name>agd-1</name>
-    <number>1</number>
-    <suction>/an24/instrumentation/agd_r</suction>
+    <suction>/an24/instrumentation/agd</suction>
   </attitude-indicator>
 
   <clock>
