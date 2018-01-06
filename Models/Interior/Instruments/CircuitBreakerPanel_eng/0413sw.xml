@@ -32,6 +32,8 @@
       <command>nasal</command>
       <script>
         interpolate("an24/AZS/sw0413", -1.0, 0.1 );
+        interpolate("an24/instrumentation/window_heating-left-intense", -1.0, 0.1 );
+        interpolate("an24/instrumentation/window_heating-left-low", -1.0, 0.1 );
       </script>
     </binding>
   </action>

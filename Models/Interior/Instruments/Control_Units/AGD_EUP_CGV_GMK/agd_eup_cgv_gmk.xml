@@ -5,7 +5,7 @@
 <PropertyList>
 
 <model>
- <path>sw_agd.xml</path>
+ <path>sw_agd_left.xml</path>
   <offsets>
     <pitch-deg>-25</pitch-deg>
     <x-m>2.125</x-m>
@@ -38,5 +38,26 @@
  <path>placard.xml</path>
 </model>
 
+<!-- Right panel -->
+
+<model>
+ <path>sw_gmk.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.6564</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_agd_right.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.6362</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
 
 </PropertyList>

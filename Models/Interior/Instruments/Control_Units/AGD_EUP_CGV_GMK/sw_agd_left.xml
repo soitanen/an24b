@@ -20,13 +20,13 @@
     </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd", 5.0, 0.1 );
+        interpolate("an24/instrumentation/agd_l", 5.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/switches/agd", 1.0, 0.1 );
+        interpolate("an24/animations/switches/agd_l", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -48,13 +48,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd", 0.0, 0.1 );
+        interpolate("an24/instrumentation/agd_l", 0.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/switches/agd", 0.0, 0.1 );
+        interpolate("an24/animations/switches/agd_l", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -63,7 +63,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/switches/agd</property>
+   <property>an24/animations/switches/agd_l</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>

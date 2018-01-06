@@ -13,13 +13,24 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0317</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        setprop("controls/gear/nose-wheel-steering", 1.0 );
+        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
+      </script>
+    </binding>
+    <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/gear/steer_mode", 0.0, 0.1 );
         setprop("controls/gear/steering", 45.0 );
-        setprop("controls/gear/nose-wheel-steering", 1.0 );
         setprop("fdm/jsbsim/gear/steering", 45.0 );
-        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
       </script>
     </binding>
   </action>
@@ -51,13 +62,24 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0317</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        setprop("controls/gear/nose-wheel-steering", 1.0 );
+        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
+      </script>
+    </binding>
+    <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/gear/steer_mode", 2.0, 0.1 );
         setprop("controls/gear/steering", 10.0 );
-        setprop("controls/gear/nose-wheel-steering", 1.0 );
         setprop("fdm/jsbsim/gear/steering", 10.0 );
-        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
       </script>
     </binding>
   </action>

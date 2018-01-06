@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- AZR-6; Nose-wheel steering -->
+<!-- Prop anti-ice ON -->
 
 <PropertyList>
- <path>../../shared/switches/azr.ac</path>
- 
+ <path>../../../shared/switches/sw2vg-15b.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -15,11 +14,11 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AZS/sw0317", 1.0, 0.1 );
+        interpolate("an24/instrumentation/prop-heat", 1.0, 0.1 );
       </script>
     </binding>
   </action>
- </animation>
+</animation>
 
 <animation>
   <type>pick</type>
@@ -31,9 +30,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AZS/sw0317", -1.0, 0.1 );
-        setprop("controls/gear/nose-wheel-steering", 0.0 );
-        setprop("fdm/jsbsim/gear/nose-wheel-steering", 0.0 );
+        interpolate("an24/instrumentation/prop-heat", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -42,10 +39,10 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/AZS/sw0317</property>
+   <property>an24/instrumentation/prop-heat</property>
   <interpolation>
-    <entry><ind>-1.0</ind>	<dep>-26.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>26.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -53,5 +50,6 @@
     <z>0.0</z>
   </axis>
  </animation>
+ 
 
 </PropertyList>

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
-<!-- AZS-2; Right window heat -->
+<!-- Window anti-ice intense heat ON -->
 
 <PropertyList>
- <path>../../shared/switches/azs.ac</path>
- 
- <animation>
+ <path>../../../shared/switches/vng-15.ac</path>
+
+<animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
   <visible>false</visible>
@@ -13,13 +13,25 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0413</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/AZS/sw0414", 1.0, 0.1 );
+        interpolate("an24/instrumentation/window_heating-left-intense", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_window_heating-left-intense", 1.0, 0.1 );
       </script>
     </binding>
   </action>
- </animation>
+</animation>
 
 <animation>
   <type>pick</type>
@@ -31,9 +43,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AZS/sw0414", -1.0, 0.1 );
-        interpolate("an24/instrumentation/window_heating-right-intense", -1.0, 0.1 );
-        interpolate("an24/instrumentation/window_heating-right-low", -1.0, 0.1 );
+        interpolate("an24/instrumentation/window_heating-left-intense", 0.0, 0.1 );
+        interpolate("an24/instrumentation/sw_window_heating-left-intense", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -42,9 +53,9 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/AZS/sw0414</property>
+   <property>an24/instrumentation/sw_window_heating-left-intense</property>
   <interpolation>
-    <entry><ind>-1.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
   </interpolation>
   <axis>

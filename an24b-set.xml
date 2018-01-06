@@ -228,10 +228,22 @@
        <name>F2</name>
        <desc>Prop pitch lock</desc>
        <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0203</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
          <command>property-toggle</command>
          <property>/an24/instrumentation/prop-lock/prop-lock-left</property>
        </binding>
        <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0203</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
          <command>property-toggle</command>
          <property>/an24/instrumentation/prop-lock/prop-lock-right</property>
        </binding>

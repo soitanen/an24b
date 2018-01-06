@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Window anti-ice low heat ON -->
+<!-- Wing and engine inlet anti-ice ON -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/vng-15.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -14,19 +14,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/window_heating-left-low", 1.0, 0.1 );
+        interpolate("an24/instrumentation/wing_engine-inlet", 1.0, 0.1 );
       </script>
     </binding>
   </action>
 </animation>
 
- <animation>
-  <object-name>clickspot_middle</object-name>
-  <type>pick</type>
-  <visible>false</visible>
-</animation>
-
- <animation>
+<animation>
   <type>pick</type>
   <object-name>clickspot_down</object-name>
   <visible>false</visible>
@@ -36,7 +30,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/window_heating-left-low", 0.0, 0.1 );
+        interpolate("an24/instrumentation/wing_engine-inlet", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -45,7 +39,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/instrumentation/window_heating-left-low</property>
+   <property>an24/instrumentation/wing_engine-inlet</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
@@ -56,6 +50,5 @@
     <z>0.0</z>
   </axis>
  </animation>
- 
 
 </PropertyList>

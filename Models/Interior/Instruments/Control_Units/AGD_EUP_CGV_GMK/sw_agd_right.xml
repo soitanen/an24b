@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Window anti-ice low heat ON -->
+<!-- AGD ON -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/sw2vg-15b.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -12,9 +12,21 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0703</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/window_heating-right-low", 1.0, 0.1 );
+        interpolate("an24/instrumentation/agd_r", 5.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/animations/switches/agd_r", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -36,7 +48,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/window_heating-right-low", 0.0, 0.1 );
+        interpolate("an24/instrumentation/agd_r", 0.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/animations/switches/agd_r", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -45,10 +63,10 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/instrumentation/window_heating-right-low</property>
+   <property>an24/animations/switches/agd_r</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>

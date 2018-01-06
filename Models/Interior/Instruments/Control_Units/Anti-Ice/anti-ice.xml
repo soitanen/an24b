@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<!-- Window heating switches (low and intensive mode) -->
+
+<PropertyList>
+
+<!-- Left panel -->
+
+<model>
+ <path>sw_left-window-intense.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.122</x-m>
+    <y-m>-0.8121</y-m>
+    <z-m>0.666</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_left-window-low.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.123</x-m>
+    <y-m>-0.7865</y-m>
+    <z-m>0.667</z-m>
+  </offsets>
+</model>
+
+<!-- Right panel -->
+
+<model>
+ <path>sw_right-window-low.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.6924</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_right-window-intense.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.7136</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_wing-inlet-heat.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.7435</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_inlet-guide-vane_left.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.7781</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_inlet-guide-vane_right.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.7997</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_prop-heat.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.133</x-m>
+    <y-m>0.8395</y-m>
+    <z-m>0.672</z-m>
+  </offsets>
+</model>
+
+</PropertyList>

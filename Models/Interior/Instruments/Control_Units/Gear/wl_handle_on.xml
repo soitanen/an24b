@@ -14,11 +14,17 @@
 
 <animation>
  <type>select</type>
- <condition> <!-- Add AZS #5 in future -->
+ <condition>
+  <and>
    <equals>
-    <property>an24/gear/steer_mode</property>
-    <value>0</value>
+    <property>controls/gear/nose-wheel-steering</property>
+    <value>1.0</value>
    </equals>
+   <equals>
+    <property>controls/gear/steering</property>
+    <value>45.0</value>
+   </equals>
+  </and>
   </condition>
  <object-name>lampon</object-name>
 </animation>
