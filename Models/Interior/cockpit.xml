@@ -632,7 +632,7 @@
 
 <model>
   <name>RPSN_Block4P</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4p.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnavoh/block4p.xml</path>
   <offsets>
     <x-m>1.93</x-m>
     <y-m>0.0</y-m>
@@ -1188,6 +1188,17 @@
     <y-m>-0.42</y-m>
     <z-m>1.475</z-m>
     <pitch-deg>80</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>RPSN_ctrl</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnavoh/controlpanel.xml</path>
+  <offsets>
+    <x-m>2.3607</x-m>
+    <y-m>0.0</y-m>
+    <z-m>1.375</z-m>
+    <pitch-deg>77</pitch-deg>
   </offsets>
 </model>
 

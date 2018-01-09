@@ -61,7 +61,7 @@
 
 <model>
   <name>RPSN-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnav/block4sh.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/RPSN_mpnavoh/block4sh.xml</path>
   <offsets>
     <x-m>3.25</x-m>
     <y-m>-0.95</y-m>

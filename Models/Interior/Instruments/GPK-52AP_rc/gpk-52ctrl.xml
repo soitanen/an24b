@@ -76,7 +76,8 @@
 
  <animation>
    <type>knob</type>
-   <object-name>latknob</object-name>
+   <object-name>lat_disk</object-name>
+   <object-name>lat_handle</object-name>
     <action>
      <binding>
       <command>property-adjust</command>
@@ -91,7 +92,9 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>latknob</object-name>
+  <object-name>lat_handle</object-name>
+  <object-name>lat_lock</object-name>
+  <object-name>lat_disk</object-name>
   <property>instrumentation/gpk-52/lat-nut</property>
   <interpolation>
     <entry><ind> 0.0</ind>	<dep>  0.0</dep></entry>

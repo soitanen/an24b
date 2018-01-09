@@ -576,8 +576,8 @@
 	stations.textra3.setText("");
 	}}
 	else {
-	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix2sb"), 2.0 );
-	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix2ff"), 2.4 );
+	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix3sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix3ff"), 2.4 );
 	}
       </script>
     </binding>
