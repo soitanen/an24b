@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!-- Device ON -->
+
+<PropertyList>
+ <path>../../shared/lamps/sltsn.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../shared/lamps/sltsnredplain.png</texture>
+</animation>
+
+<animation>
+  <type>scale</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+  <x-offset>1.0</x-offset>
+  <y-offset>0.5</y-offset>
+  <z-offset>0.5</z-offset>
+ </animation>
+
+<animation>
+ <type>select</type>
+ <condition>
+   <equals>
+    <property>an24/US-8K/console-choice</property>
+    <value>1.0</value>
+   </equals>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

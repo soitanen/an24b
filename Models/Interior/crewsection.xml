@@ -166,11 +166,22 @@
 
 <model>
   <name>US-8K</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_eng/us-8k.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_rceng/us-8k.xml</path>
   <offsets>
     <x-m>3.888</x-m>
     <y-m>0.847</y-m>
     <z-m>0.463</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>R-836</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/R-836_rceng/eng_r-836.xml</path>
+  <offsets>
+    <x-m>3.8792</x-m>
+    <y-m>0.7341</y-m>
+    <z-m>0.6616</z-m>
     <heading-deg>180</heading-deg>
   </offsets>
 </model>

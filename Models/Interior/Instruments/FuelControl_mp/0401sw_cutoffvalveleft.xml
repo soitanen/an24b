@@ -4,6 +4,7 @@
 
 <PropertyList>
  <path>../../shared/switches/switch03.ac</path>
+
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -34,13 +35,13 @@
       </script>
     </binding>
   </action>
-</animation>
+ </animation>
 
  <animation>
   <type>pick</type>
   <object-name>clickspot_middle</object-name>
   <visible>false</visible>
-</animation>
+ </animation>
 
  <animation>
   <type>pick</type>

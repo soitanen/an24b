@@ -12,7 +12,7 @@
  <texture>../../shared/lamps/warninglamp02orangeplain.png</texture>
 </animation>
 
-<animation>
+<!--animation>
  <type>select</type>
  <condition>
    <equals>
@@ -21,6 +21,6 @@
    </equals>
   </condition>
  <object-name>lampon</object-name>
-</animation>
+</animation-->
 
 </PropertyList>

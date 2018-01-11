@@ -1060,7 +1060,7 @@
     <x-m>2.7</x-m>
     <y-m>1.03</y-m>
     <z-m>0.7</z-m>
-    <heading-deg>10</heading-deg>
+    <heading-deg>10.5</heading-deg>
   </offsets>
 </model>
 
@@ -1070,8 +1070,8 @@
   <offsets>
     <x-m>2.187</x-m>
     <y-m>0.942</y-m>
-    <z-m>0.646</z-m>
-    <heading-deg>-80</heading-deg>
+    <z-m>0.651</z-m>
+    <heading-deg>-79.5</heading-deg>
   </offsets>
 </model>
 
@@ -1082,7 +1082,29 @@
     <x-m>2.488</x-m>
     <y-m>0.996</y-m>
     <z-m>0.707</z-m>
-    <heading-deg>-80</heading-deg>
+    <heading-deg>-79.5</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>R-836</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/R-836_rceng/rc_r-836.xml</path>
+  <offsets>
+    <x-m>2.5013</x-m>
+    <y-m>1.0017</y-m>
+    <z-m>0.5879</z-m>
+    <heading-deg>-79.5</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>US-8k</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_rceng/us-8k.xml</path>
+  <offsets>
+    <x-m>2.3338</x-m>
+    <y-m>0.966</y-m>
+    <z-m>0.6259</z-m>
+    <heading-deg>-79.5</heading-deg>
   </offsets>
 </model>
 

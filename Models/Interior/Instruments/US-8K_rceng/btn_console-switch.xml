@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<!-- Fast align button for GIK-1 compass -->
+
+<PropertyList>
+ <path>../../shared/switches/5k.ac</path>
+
+<animation>
+<type>pick</type>
+<object-name>press_me</object-name>
+<visible>true</visible>
+ <action>
+ <button>0</button>
+ <repeatable>false</repeatable>
+  <binding>
+   <command>property-toggle</command>
+   <property>an24/US-8K/console-choice</property>
+   </binding>
+  <binding>
+   <command>nasal</command>
+    <script>
+	interpolate("an24/US-8K/btn_cnsl-choice", 1.0, 0.1 );
+	settimer(func {interpolate("an24/US-8K/btn_cnsl-choice", 0.0, 0.1 );},0.1);
+    </script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/US-8K/btn_cnsl-choice</property>
+  <factor>0.005</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation>
+
+</PropertyList>
