@@ -2,40 +2,43 @@
  
 <PropertyList>
 
- <fx>
+<fx>
  
-  <crank>
-   <name>engstart</name>
-   <path>Sounds/engstart.wav</path>
-   <property>/engines/engine/cranking</property>
-   <volume>
-    <offset>0.4</offset>
-   </volume>
-  </crank>
-
-  <crank>
-   <name>crank</name>
-   <mode>looped</mode>
-   <path>Sounds/cranking.wav</path>
+  <ai-24>
+   <name>Left engine starter internal</name>
+   <mode>once</mode>
+   <path>Aircraft/an24b/Sound/Engine/AI-24_Starter.wav</path>
    <condition>
-    <property>/engines/engine/cranking</property>
-    <not>
-     <property>/engines/engine/running</property>
-    </not>
+    <property>controls/engines/engine[0]/starter</property>
    </condition>
+  <position>
+    <x>5.94</x>
+    <y>3.95</y>
+    <z>1.185</z>
+  </position>
    <volume>
-    <offset>0.5</offset>
+    <property>sim/current-view/internal</property>
+    <factor>0.3</factor>
    </volume>
-  </crank>
+  </ai-24>
 
-  <crank>
-   <name>cough</name>
-   <path>Sounds/coughing.wav</path>
-   <property>/engines/engine/running</property>
+  <ai-24>
+   <name>Right engine starter internal</name>
+   <mode>once</mode>
+   <path>Aircraft/an24b/Sound/Engine/AI-24_Starter.wav</path>
+   <condition>
+    <property>controls/engines/engine[1]/starter</property>
+   </condition>
+  <position>
+    <x>5.94</x>
+    <y>-3.95</y>
+    <z>1.185</z>
+  </position>
    <volume>
-    <offset>0.3</offset>
+    <property>sim/current-view/internal</property>
+    <factor>0.3</factor>
    </volume>
-  </crank>
+  </ai-24>
 
 <!-- Engine internal sound -->
 <!-- Left engine -->
@@ -61,9 +64,9 @@
     <offset>0.0</offset>
    </pitch>
   <position>
-    <x> 5.94 </x>
-    <y> 3.95 </y>
-    <z> 1.185 </z>
+    <x>5.94</x>
+    <y>3.95</y>
+    <z>1.185</z>
   </position>
   </propeller>
 <!-- Negative thrust sound -->

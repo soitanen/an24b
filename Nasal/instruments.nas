@@ -104,6 +104,8 @@ setprop("an24/ARK-11/mem2/fix6ff", 0.0);
 setprop("an24/ARK-11/mem2/fix7ff", 0.0);
 setprop("an24/ARK-11/mem2/fix8ff", 0.0);
 setprop("an24/ARK-11/mem2/fix9ff", 0.0);
+setprop("an24/ARK-11/signal-1", 0.0);
+setprop("an24/ARK-11/signal-2", 0.0);
 
 #  ARK No. 1 Summing up frequencies
 setprop("an24/ARK-11/sub-band-khz-1", 120.0);
@@ -140,6 +142,7 @@ var addfreqs2 = func {
 #  adf[2] serves as background reference
 setprop("an24/ARK-11/mode-1", 0.0 );
 setprop("an24/ARK-11/volumeknob-1", 0.0 );
+setprop("an24/ARK-11/vol-1", 0.0 );
 setprop("/instrumentation/adf[0]/mode", "off" );
 setprop("/instrumentation/adf[0]/indicated-bearing-deg", 180.0 );
 setprop("/instrumentation/adf[0]/ident-audible", "true" );
@@ -177,28 +180,28 @@ var adf3mode = func {
 
  setlistener("an24/ARK-11/mode-1", adf3mode);
 
-var voloutput1 = func {
+var arkoutput1 = func {
 	var volume_knob = getprop("an24/ARK-11/volumeknob-1");
-	if ( getprop("an24/ARK-11/mode-1") == 3.0 ) {
 	var signalstrength = abs(math.cos( 0.017453 * ( 90 + getprop("/instrumentation/adf[2]/indicated-bearing-deg") - getprop("/instrumentation/adf[0]/indicated-bearing-deg") ) ) );
-	setprop("an24/ARK-11/signal1", signalstrength ); #debug only
-	setprop("/instrumentation/adf[2]/volume-norm", volume_knob * signalstrength);
+	setprop("an24/ARK-11/signal-1", signalstrength );
+	if ( getprop("an24/ARK-11/mode-1") == 3.0 ) {
+	setprop("an24/ARK-11/vol-1", signalstrength );
 	}
 	else {
-	setprop("/instrumentation/adf[0]/volume-norm", volume_knob );
-	setprop("/instrumentation/adf[2]/volume-norm", volume_knob );
+	setprop("an24/ARK-11/vol-1", volume_knob );
 	}
 }
 
- setlistener("an24/ARK-11/volumeknob-1", voloutput1);
- setlistener("an24/ARK-11/mode-1", voloutput1);
- setlistener("/instrumentation/adf[0]/indicated-bearing-deg", voloutput1);
- setlistener("/instrumentation/adf[2]/indicated-bearing-deg", voloutput1);
+ setlistener("an24/ARK-11/volumeknob-1", arkoutput1);
+ setlistener("an24/ARK-11/mode-1", arkoutput1);
+ setlistener("/instrumentation/adf[0]/indicated-bearing-deg", arkoutput1);
+ setlistener("/instrumentation/adf[2]/indicated-bearing-deg", arkoutput1);
 
 #  ARK No. 2 output volume (lowest is best-> antenna at 90° (indication 0°) to source, least interference)
 #  adf[3] serves as background reference
 setprop("an24/ARK-11/mode-2", 0.0 );
 setprop("an24/ARK-11/volumeknob-2", 0.0 );
+setprop("an24/ARK-11/vol-2", 0.0 );
 setprop("/instrumentation/adf[1]/mode", "off" );
 setprop("/instrumentation/adf[1]/indicated-bearing-deg", 180.0 );
 setprop("/instrumentation/adf[1]/ident-audible", "true" );
@@ -236,26 +239,27 @@ var adf4mode = func {
 
  setlistener("an24/ARK-11/mode-2", adf4mode);
 
-var voloutput2 = func {
+var arkoutput2 = func {
 	var volume_knob = getprop("an24/ARK-11/volumeknob-2");
-	if ( getprop("an24/ARK-11/mode-2") == 3.0 ) {
 	var signalstrength = abs(math.cos( 0.017453 * ( 90 + getprop("/instrumentation/adf[3]/indicated-bearing-deg") - getprop("/instrumentation/adf[1]/indicated-bearing-deg") ) ) );
-	setprop("an24/ARK-11/signal2", signalstrength ); #debug only
-	setprop("/instrumentation/adf[3]/volume-norm", volume_knob * signalstrength);
+	setprop("an24/ARK-11/signal-2", signalstrength );
+	if ( getprop("an24/ARK-11/mode-2") == 3.0 ) {
+	setprop("an24/ARK-11/vol-2", signalstrength );
 	}
 	else {
-	setprop("/instrumentation/adf[1]/volume-norm", volume_knob );
-	setprop("/instrumentation/adf[3]/volume-norm", volume_knob );
+	setprop("an24/ARK-11/vol-2", volume_knob );
 	}
 }
 
- setlistener("an24/ARK-11/volumeknob-2", voloutput2);
- setlistener("an24/ARK-11/mode-2", voloutput2);
- setlistener("/instrumentation/adf[1]/indicated-bearing-deg", voloutput2);
- setlistener("/instrumentation/adf[3]/indicated-bearing-deg", voloutput2);
+ setlistener("an24/ARK-11/volumeknob-2", arkoutput2);
+ setlistener("an24/ARK-11/mode-2", arkoutput2);
+ setlistener("/instrumentation/adf[1]/indicated-bearing-deg", arkoutput2);
+ setlistener("/instrumentation/adf[3]/indicated-bearing-deg", arkoutput2);
 
 
 ##  R-802 Stuff
+setprop("an24/R-802/volume-1", 0.0);
+setprop("an24/R-802/volume-2", 0.0);
 #  R-802 Summing up frequencies
 setprop("an24/R-802/dial100", 100.0);
 setprop("an24/R-802/dial10", 0.0);
@@ -289,6 +293,7 @@ setprop("an24/R-802/memory/num[9]", 100.0);
 setprop("an24/R-802/memory/num[10]", 100.0);
 setprop("an24/R-802/finalfreq", 100.0);
 setprop("an24/R-802/channel", 1.0);
+
 var freqmem = func {
 var channel = getprop("an24/R-802/channel");
 var curfreq = getprop("an24/R-802/finalfreq");
@@ -323,9 +328,139 @@ setprop("/instrumentation/comm[0]/frequencies/selected-mhz", storedfreq );
 
 
 ##  SPU-7 comm
-var volspu = getprop("an24/SPU-7/lc_vol_general");
-var volradio = getprop("an24/SPU-7/lc_vol_listen");
+setprop("an24/SPU-7/lc_source", 0.0);
+setprop("an24/SPU-7/rc_source", 0.0);
+setprop("an24/SPU-7/eng_source", 0.0);
+setprop("an24/SPU-7/nav_source", 0.0);
+setprop("an24/SPU-7/listen_viewnr0", 0.0);
+setprop("an24/SPU-7/listen_viewnr8", 0.0);
+setprop("an24/SPU-7/listen_viewnr9", 0.0);
+setprop("an24/SPU-7/listen_viewnr10", 0.0);
+setprop("an24/SPU-7/general_viewnr0", 0.0);
+setprop("an24/SPU-7/general_viewnr8", 0.0);
+setprop("an24/SPU-7/general_viewnr9", 0.0);
+setprop("an24/SPU-7/general_viewnr10", 0.0);
 
+var r8021audible = func {
+	var viewnr = getprop("/sim/current-view/view-number");
+	if ( (getprop("an24/SPU-7/lc_source") == 0.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 0.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 0.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 0.0 and viewnr == 10 ) ) {
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-1");
+	if( listenvol == nil ) listenvol = 0.0 ;
+	setprop("/instrumentation/comm[0]/volume", listenvol );
+	}
+	else {
+	setprop("/instrumentation/comm[0]/volume", 0.0 );
+	}
+}
+
+ setlistener("/sim/current-view/view-number", r8021audible);
+ setlistener("an24/R-802/volume-1", r8021audible);
+ setlistener("an24/SPU-7/listen_viewnr0", r8021audible);
+ setlistener("an24/SPU-7/listen_viewnr8", r8021audible);
+ setlistener("an24/SPU-7/listen_viewnr9", r8021audible);
+ setlistener("an24/SPU-7/listen_viewnr10", r8021audible);
+ setlistener("an24/SPU-7/lc_source", r8021audible);
+ setlistener("an24/SPU-7/rc_source", r8021audible);
+ setlistener("an24/SPU-7/eng_source", r8021audible);
+ setlistener("an24/SPU-7/nav_source", r8021audible);
+
+var r8022audible = func {
+	var viewnr = getprop("/sim/current-view/view-number");
+	if ( (getprop("an24/SPU-7/lc_source") == 3.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 3.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 3.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 3.0 and viewnr == 10 ) ) {
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-1");
+#	if( listenvol == nil ) listenvol = 0.0 ;
+	setprop("/instrumentation/comm[1]/volume", listenvol );
+	}
+	else {
+	setprop("/instrumentation/comm[1]/volume", 0.0 );
+	}
+}
+
+ setlistener("/sim/current-view/view-number", r8022audible);
+ setlistener("an24/R-802/volume-2", r8022audible);
+ setlistener("an24/SPU-7/listen_viewnr0", r8022audible);
+ setlistener("an24/SPU-7/listen_viewnr8", r8022audible);
+ setlistener("an24/SPU-7/listen_viewnr9", r8022audible);
+ setlistener("an24/SPU-7/listen_viewnr10", r8022audible);
+ setlistener("an24/SPU-7/lc_source", r8022audible);
+ setlistener("an24/SPU-7/rc_source", r8022audible);
+ setlistener("an24/SPU-7/eng_source", r8022audible);
+ setlistener("an24/SPU-7/nav_source", r8022audible);
+
+var r8361audible = func {
+	var viewnr = getprop("/sim/current-view/view-number");
+	if ( (getprop("an24/SPU-7/lc_source") == 3.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 3.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 3.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 3.0 and viewnr == 10 ) ) {
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-1");
+	if( listenvol == nil ) listenvol = 0.0 ;
+	setprop("/instrumentation/comm[1]/volume", listenvol );
+	}
+	else {
+	setprop("/instrumentation/comm[1]/volume", 0.0 );
+	}
+}
+
+ setlistener("/sim/current-view/view-number", r8361audible);
+ setlistener("an24/R-802/volume-2", r8361audible);
+ setlistener("an24/SPU-7/listen_viewnr0", r8361audible);
+ setlistener("an24/SPU-7/listen_viewnr8", r8361audible);
+ setlistener("an24/SPU-7/listen_viewnr9", r8361audible);
+ setlistener("an24/SPU-7/listen_viewnr10", r8361audible);
+ setlistener("an24/SPU-7/lc_source", r8361audible);
+ setlistener("an24/SPU-7/rc_source", r8361audible);
+ setlistener("an24/SPU-7/eng_source", r8361audible);
+ setlistener("an24/SPU-7/nav_source", r8361audible);
+
+var ark1audible = func {
+	var viewnr = getprop("/sim/current-view/view-number");
+	if ( (getprop("an24/SPU-7/lc_source") == 4.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 4.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 4.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 4.0 and viewnr == 10 ) ) {
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/ARK-11/vol-1") ;
+#	if( listenvol == nil ) listenvol = 0 ;
+	setprop("/instrumentation/adf[0]/volume-norm", listenvol );
+	setprop("/instrumentation/adf[2]/volume-norm", listenvol );
+	}
+	else {
+	setprop("/instrumentation/adf[0]/volume-norm", 0.0 );
+	setprop("/instrumentation/adf[2]/volume-norm", 0.0 );
+	}
+}
+
+ setlistener("/sim/current-view/view-number", ark1audible);
+ setlistener("an24/ARK-11/vol-1", ark1audible);
+# setlistener("an24/ARK-11/volumeknob-1", ark1audible);
+ setlistener("an24/SPU-7/listen_viewnr0", ark1audible);
+ setlistener("an24/SPU-7/listen_viewnr8", ark1audible);
+ setlistener("an24/SPU-7/listen_viewnr9", ark1audible);
+ setlistener("an24/SPU-7/listen_viewnr10", ark1audible);
+ setlistener("an24/SPU-7/lc_source", ark1audible);
+ setlistener("an24/SPU-7/rc_source", ark1audible);
+ setlistener("an24/SPU-7/eng_source", ark1audible);
+ setlistener("an24/SPU-7/nav_source", ark1audible);
+
+var ark2audible = func {
+	var viewnr = getprop("/sim/current-view/view-number");
+	if ( (getprop("an24/SPU-7/lc_source") == 5.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 5.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 5.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 5.0 and viewnr == 10 ) ) {
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/ARK-11/vol-2") ;
+	if( listenvol == nil ) listenvol = 0 ;
+	setprop("/instrumentation/adf[1]/volume-norm", listenvol );
+	setprop("/instrumentation/adf[3]/volume-norm", listenvol );
+	}
+	else {
+	setprop("/instrumentation/adf[1]/volume-norm", 0.0 );
+	setprop("/instrumentation/adf[3]/volume-norm", 0.0 );
+	}
+}
+
+ setlistener("/sim/current-view/view-number", ark2audible);
+ setlistener("an24/ARK-11/vol-2", ark2audible);
+# setlistener("an24/ARK-11/volumeknob-2", ark2audible);
+ setlistener("an24/SPU-7/listen_viewnr0", ark2audible);
+ setlistener("an24/SPU-7/listen_viewnr8", ark2audible);
+ setlistener("an24/SPU-7/listen_viewnr9", ark2audible);
+ setlistener("an24/SPU-7/listen_viewnr10", ark2audible);
+ setlistener("an24/SPU-7/lc_source", ark2audible);
+ setlistener("an24/SPU-7/rc_source", ark2audible);
+ setlistener("an24/SPU-7/eng_source", ark2audible);
+ setlistener("an24/SPU-7/nav_source", ark2audible);
 
 ##  AChS stopwatch
 var stopwatch = func {

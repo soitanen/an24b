@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Pilot's SPU-7, crew/radio communication control -->
+<!-- Navigator's SPU-7, crew/radio communication subscriber unit -->
 
 <PropertyList>
   <path>spu-7.ac</path>
@@ -87,7 +87,7 @@
  <animation>
    <type>knob</type>
    <object-name>vol_listen</object-name>
-   <property>/an24/SPU-7/nav_vol_listen</property>
+   <property>an24/SPU-7/listen_viewnr10</property>
    <factor>800</factor>
   <center>
    <x-m>0.0</x-m>
@@ -102,8 +102,8 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/SPU-7/nav_vol_listen</property>
-      <factor>-0.05</factor>
+      <property>an24/SPU-7/listen_viewnr10</property>
+      <factor>-0.1</factor>
       <min>0</min>
       <max>1</max>
       <wrap>false</wrap>
@@ -116,7 +116,7 @@
  <animation>
    <type>knob</type>
    <object-name>vol_general</object-name>
-   <property>/an24/SPU-7/nav_vol_general</property>
+   <property>an24/SPU-7/general_viewnr10</property>
    <factor>800</factor>
   <center>
    <x-m>0.0</x-m>
@@ -131,8 +131,8 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/SPU-7/nav_vol_general</property>
-      <factor>-0.05</factor>
+      <property>an24/SPU-7/general_viewnr10</property>
+      <factor>-0.1</factor>
       <min>0</min>
       <max>1</max>
       <wrap>false</wrap>
@@ -148,7 +148,7 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/an24/SPU-7/lc_vol_general</property>
+      <property>an24/SPU-7/lc_vol_general</property>
       <factor>-0.05</factor>
       <min>0</min>
       <max>1</max>                
@@ -160,7 +160,7 @@
  <animation>
   <object-name>vol_general</object-name>
   <type>rotate</type>
-   <property>/an24/SPU-7/lc_vol_general</property>
+   <property>an24/SPU-7/lc_vol_general</property>
    <factor>400</factor>
   <center>
    <x-m>0.0</x-m>

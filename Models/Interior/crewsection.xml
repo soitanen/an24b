@@ -74,7 +74,7 @@
   <name>SPU-7</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/navspu-7.xml</path>
   <offsets>
-    <x-m>3.93</x-m>
+    <x-m>3.92</x-m>
     <y-m>-0.6</y-m>
     <z-m>1.1</z-m>
     <heading-deg>175</heading-deg>

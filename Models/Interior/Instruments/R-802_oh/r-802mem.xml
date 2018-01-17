@@ -93,7 +93,7 @@
  <animation>
    <type>knob</type>
    <object-name>r-802mem_volume</object-name>
-   <property>/instrumentation/comm[0]/volume</property>
+   <property>an24/R-802/volume-1</property>
    <factor>-90</factor>
    <axis>
     <x>1</x>
@@ -108,9 +108,8 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/volume</property>
-      <!--property>an24/R-802/volume-1</property-->
-      <factor>-0.05</factor>
+      <property>an24/R-802/volume-1</property>
+      <factor>-0.1</factor>
       <min>0</min>
       <max>1</max>                
       <wrap>false</wrap>
