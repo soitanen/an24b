@@ -27,14 +27,14 @@
   <binding>
    <command>nasal</command>
    <script>
-	interpolate("an24/animations/switches/aileron-trim", 1.0, 0.1 );
+	interpolate("an24/animations/sw_aileron-trim", 1.0, 0.1 );
    </script>
   </binding>
     <mod-up>
       <binding>
       <command>nasal</command>
       <script>
-	interpolate("an24/animations/switches/aileron-trim", 0.0, 0.1 );
+	interpolate("an24/animations/sw_aileron-trim", 0.0, 0.1 );
       </script>
     </binding>
     </mod-up>
@@ -69,14 +69,14 @@
   <binding>
    <command>nasal</command>
    <script>
-	interpolate("an24/animations/switches/aileron-trim", -1.0, 0.1 );
+	interpolate("an24/animations/sw_aileron-trim", -1.0, 0.1 );
    </script>
   </binding>
     <mod-up>
       <binding>
       <command>nasal</command>
       <script>
-	interpolate("an24/animations/switches/aileron-trim", 0.0, 0.1 );
+	interpolate("an24/animations/sw_aileron-trim", 0.0, 0.1 );
       </script>
     </binding>
     </mod-up>
@@ -86,7 +86,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/switches/aileron-trim</property>
+   <property>an24/animations/sw_aileron-trim</property>
   <interpolation>
     <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>

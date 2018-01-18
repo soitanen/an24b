@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Autotrim ON/OFF -->
+<!-- Pitch up/down -->
 
 <PropertyList>
  <path>../../shared/switches/switch02.ac</path>
@@ -14,15 +14,15 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/ap-28l1/switches/up-down-l", 1.0, 0.1 );
-        setprop("/an24/ap-28l1/internal/kv", 0);
+        interpolate("an24/AP-28l1/switches/up-down-l", 1.0, 0.1 );
+        setprop("/an24/AP-28l1/internal/kv", 0);
       </script>
     </binding>
     <mod-up>
       <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/ap-28l1/switches/up-down-l", 0.0, 0.1 );
+        interpolate("an24/AP-28l1/switches/up-down-l", 0.0, 0.1 );
       </script>
     </binding>
     </mod-up>
@@ -45,8 +45,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/ap-28l1/switches/up-down-l", -1, 0.1 );
-        setprop("/an24/ap-28l1/internal/kv", 0);
+        interpolate("an24/AP-28l1/switches/up-down-l", -1, 0.1 );
+        setprop("/an24/AP-28l1/internal/kv", 0);
       </script>
     </binding>
     <mod-up>
@@ -63,7 +63,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/ap-28l1/switches/up-down-l</property>
+   <property>an24/AP-28l1/switches/up-down-l</property>
   <interpolation>
     <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
@@ -75,5 +75,4 @@
   </axis>
  </animation>
  
-
 </PropertyList>

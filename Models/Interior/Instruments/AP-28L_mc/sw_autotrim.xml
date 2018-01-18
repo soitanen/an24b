@@ -14,7 +14,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/ap-28l1/switches/autotrim", 1.0, 0.1 );
+        interpolate("an24/AP-28l1/switches/autotrim", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -36,7 +36,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/ap-28l1/switches/autotrim", 0.0, 0.1 );
+        interpolate("an24/AP-28l1/switches/autotrim", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -45,7 +45,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/ap-28l1/switches/autotrim</property>
+   <property>an24/AP-28l1/switches/autotrim</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-25.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>25.0</dep></entry>
@@ -57,5 +57,4 @@
   </axis>
  </animation>
  
-
 </PropertyList>

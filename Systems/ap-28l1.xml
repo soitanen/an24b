@@ -18,12 +18,12 @@
 		<gain>1</gain>
 		<input>
 			<condition>
-				<property>/an24/ap-28l1/internal/horizon-mode</property>
+				<property>/an24/AP-28l1/internal/horizon-mode</property>
 			</condition>
 			<value>0</value>
 		</input>
-		<input>/an24/ap-28l1/switches/roll-control</input>
-		<output>/an24/ap-28l1/internal/target-bank</output>
+		<input>/an24/AP-28l1/switches/roll-control</input>
+		<output>/an24/AP-28l1/internal/target-bank</output>
 	</filter>
 
 	<filter> <!-- bank error -->
@@ -31,12 +31,12 @@
 		<gain>1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
-		<input>/an24/ap-28l1/internal/target-bank</input>
+		<input>/an24/AP-28l1/internal/target-bank</input>
 		<reference>/instrumentation/agd-1/indicated-roll-deg</reference>
-		<output>/an24/ap-28l1/internal/roll-error-deg</output>
+		<output>/an24/AP-28l1/internal/roll-error-deg</output>
 	</filter>
 
 	<filter> <!-- heading error in ZK mode -->
@@ -44,12 +44,12 @@
 		<gain>1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
 		<input>/instrumentation/zk2/heading-bug</input>
 		<reference>/instrumentation/gpk-52/indicated-heading-deg</reference>
-		<output>/an24/ap-28l1/coefficients/heading-error-deg</output>
+		<output>/an24/AP-28l1/coefficients/heading-error-deg</output>
 		<period>
 			<min>-180</min>
 			<max>180</max>
@@ -63,12 +63,12 @@
 		<gain>-1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
-		<input>/an24/ap-28l1/internal/target-heading-gpk-52</input>
+		<input>/an24/AP-28l1/internal/target-heading-gpk-52</input>
 		<reference>/instrumentation/gpk-52/indicated-heading-deg</reference>
-		<output>/an24/ap-28l1/internal/heading-error-gpk-52</output>
+		<output>/an24/AP-28l1/internal/heading-error-gpk-52</output>
 		<period>
 			<min>-180</min>
 			<max>180</max>
@@ -80,12 +80,12 @@
 		<gain>-1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
-		<input>/an24/ap-28l1/internal/target-heading-gik-1</input>
+		<input>/an24/AP-28l1/internal/target-heading-gik-1</input>
 		<reference>/instrumentation/gik-1/indicated-heading</reference>
-		<output>/an24/ap-28l1/internal/heading-error-gik-1</output>
+		<output>/an24/AP-28l1/internal/heading-error-gik-1</output>
 		<period>
 			<min>-180</min>
 			<max>180</max>
@@ -99,12 +99,12 @@
 		<gain>1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
 		<input>/instrumentation/agd-1/indicated-pitch-deg</input>
-		<reference>/an24/ap-28l1/internal/target-pitch</reference>
-		<output>/an24/ap-28l1/internal/pitch-error-deg</output>
+		<reference>/an24/AP-28l1/internal/target-pitch</reference>
+		<output>/an24/AP-28l1/internal/pitch-error-deg</output>
 	</filter>
 
 	<filter> <!-- altitude error in mm of water -->
@@ -112,12 +112,12 @@
 		<gain>345.324166512</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
 		<input>/systems/static/pressure-inhg</input>
-		<reference>/an24/ap-28l1/internal/target-pressure-inhg</reference>
-		<output>/an24/ap-28l1/internal/altitude-error-mm</output>
+		<reference>/an24/AP-28l1/internal/target-pressure-inhg</reference>
+		<output>/an24/AP-28l1/internal/altitude-error-mm</output>
 	</filter>
 
 <!-- ********************************************************
@@ -130,10 +130,10 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
 					<equals>
-						<property>/an24/ap-28l1/internal/roll-mode</property>
+						<property>/an24/AP-28l1/internal/roll-mode</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -144,12 +144,12 @@
 				<product>
 					<difference>
 						<product>
-							<property>/an24/ap-28l1/internal/roll-error-deg</property>
-							<property>/an24/ap-28l1/coefficients/roll-angle</property>
+							<property>/an24/AP-28l1/internal/roll-error-deg</property>
+							<property>/an24/AP-28l1/coefficients/roll-angle</property>
 						</product>
 						<product>
 							<property>/orientation/roll-rate-degps</property>
-							<property>/an24/ap-28l1/coefficients/roll-rate</property>
+							<property>/an24/AP-28l1/coefficients/roll-rate</property>
 						</product>
 					</difference>
 					<value>0.041666667</value>
@@ -165,10 +165,10 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
 					<equals>
-						<property>/an24/ap-28l1/internal/roll-mode</property>
+						<property>/an24/AP-28l1/internal/roll-mode</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -180,17 +180,17 @@
 					<sum>
 						<difference>
 							<product>
-								<property>/an24/ap-28l1/internal/roll-error-deg</property>
-								<property>/an24/ap-28l1/coefficients/roll-angle</property>
+								<property>/an24/AP-28l1/internal/roll-error-deg</property>
+								<property>/an24/AP-28l1/coefficients/roll-angle</property>
 							</product>
 							<product>
 								<property>/orientation/roll-rate-degps</property>
-								<property>/an24/ap-28l1/coefficients/roll-rate</property>
+								<property>/an24/AP-28l1/coefficients/roll-rate</property>
 							</product>
 						</difference>
 						<product>
-							<property>/an24/ap-28l1/coefficients/heading-error-deg</property>
-							<property>/an24/ap-28l1/coefficients/heading-error</property>
+							<property>/an24/AP-28l1/coefficients/heading-error-deg</property>
+							<property>/an24/AP-28l1/coefficients/heading-error</property>
 						</product>
 					</sum>
 					<value>0.041666667</value>
@@ -210,10 +210,10 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
 					<equals>
-						<property>/an24/ap-28l1/switches/pitch</property>
+						<property>/an24/AP-28l1/switches/pitch</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -221,12 +221,12 @@
 		</enable>	
 		<input>
 			<condition>
-				<property>/an24/ap-28l1/internal/kv</property>
+				<property>/an24/AP-28l1/internal/kv</property>
 			</condition>
 			<expression>
 				<product>
-					<property>/an24/ap-28l1/internal/altitude-error-mm</property>
-					<property>/an24/ap-28l1/coefficients/pitch-altitude</property>
+					<property>/an24/AP-28l1/internal/altitude-error-mm</property>
+					<property>/an24/AP-28l1/coefficients/pitch-altitude</property>
 					<value>-1</value>
 				</product>
 			</expression>
@@ -234,7 +234,7 @@
 		<input>
 			<value>0</value>
 		</input>
-		<output>/an24/ap-28l1/internal/elevator-alt-correction</output>
+		<output>/an24/AP-28l1/internal/elevator-alt-correction</output>
 	</filter>
 
 	<filter> <!-- elevator steering machine -->
@@ -243,10 +243,10 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
 					<equals>
-						<property>/an24/ap-28l1/switches/pitch</property>
+						<property>/an24/AP-28l1/switches/pitch</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -257,18 +257,18 @@
 				<product>
 					<sum>
 						<product>
-							<property>/an24/ap-28l1/internal/pitch-error-deg</property>
-							<property>/an24/ap-28l1/coefficients/pitch-angle</property>
+							<property>/an24/AP-28l1/internal/pitch-error-deg</property>
+							<property>/an24/AP-28l1/coefficients/pitch-angle</property>
 						</product>
 						<product>
 							<property>/orientation/pitch-rate-degps</property>
-							<property>/an24/ap-28l1/coefficients/pitch-rate</property>
+							<property>/an24/AP-28l1/coefficients/pitch-rate</property>
 						</product>
 						<product>
 							<abs><property>/instrumentation/agd-1/indicated-roll-deg</property></abs>
-							<property>/an24/ap-28l1/coefficients/pitch-roll-compensate</property>
+							<property>/an24/AP-28l1/coefficients/pitch-roll-compensate</property>
 						</product>
-						<property>/an24/ap-28l1/internal/elevator-alt-correction</property>
+						<property>/an24/AP-28l1/internal/elevator-alt-correction</property>
 					</sum>
 					<value>0.0333333</value>
 				</product>
@@ -283,11 +283,11 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
-					<property>/an24/ap-28l1/switches/autotrim</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/switches/autotrim</property>
 					<equals>
-						<property>/an24/ap-28l1/switches/pitch</property>
+						<property>/an24/AP-28l1/switches/pitch</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -305,7 +305,7 @@
 				</less-than>
 			</or>
 		</input>
-		<output>/an24/ap-28l1/internal/elevator-cmd-gr02</output>
+		<output>/an24/AP-28l1/internal/elevator-cmd-gr02</output>
 	</logic>
 
 	<filter>
@@ -318,18 +318,18 @@
 				</product>
 			</expression>
 		</samples>
-		<input>/an24/ap-28l1/internal/elevator-cmd-gr02</input>
-		<output>/an24/ap-28l1/internal/elevator-avg-3sec</output> <!-- average for 3 seconds -->
+		<input>/an24/AP-28l1/internal/elevator-cmd-gr02</input>
+		<output>/an24/AP-28l1/internal/elevator-avg-3sec</output> <!-- average for 3 seconds -->
 	</filter>
 
 	<logic>
 		<input>
 			<greater-than>
-				<property>/an24/ap-28l1/internal/elevator-avg-3sec</property>
+				<property>/an24/AP-28l1/internal/elevator-avg-3sec</property>
 				<value>0.99</value>
 			</greater-than>
 		</input>
-		<output>/an24/ap-28l1/internal/elevator-autotrim-feel</output>
+		<output>/an24/AP-28l1/internal/elevator-autotrim-feel</output>
 	</logic>
 
 	<filter> <!-- autotrim control -->
@@ -338,12 +338,12 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
-					<property>/an24/ap-28l1/switches/autotrim</property>
-					<property>/an24/ap-28l1/internal/elevator-autotrim-feel</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/switches/autotrim</property>
+					<property>/an24/AP-28l1/internal/elevator-autotrim-feel</property>
 					<equals>
-						<property>/an24/ap-28l1/switches/pitch</property>
+						<property>/an24/AP-28l1/switches/pitch</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -389,22 +389,22 @@
 		<gain>-1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
 		<input>
 			<expression>
 				<product>
-					<property>/an24/ap-28l1/coefficients/yaw-rate</property>
+					<property>/an24/AP-28l1/coefficients/yaw-rate</property>
 					<div>
 						<product>
-							<property>/an24/ap-28l1/coefficients/yaw-rate-t-constant</property>
-							<property>/an24/ap-28l1/internal/yaw-accel-der</property>
+							<property>/an24/AP-28l1/coefficients/yaw-rate-t-constant</property>
+							<property>/an24/AP-28l1/internal/yaw-accel-der</property>
 						</product>
 						<sum>
 							<product>
-								<property>/an24/ap-28l1/coefficients/yaw-rate-t-constant</property>
-								<property>/an24/ap-28l1/internal/yaw-accel-der</property>
+								<property>/an24/AP-28l1/coefficients/yaw-rate-t-constant</property>
+								<property>/an24/AP-28l1/internal/yaw-accel-der</property>
 							</product>
 							<value>1</value>
 						</sum>
@@ -413,7 +413,7 @@
 				</product>
 			</expression>
 		</input>
-		<output>/an24/ap-28l1/internal/rudder-yaw-damper</output>
+		<output>/an24/AP-28l1/internal/rudder-yaw-damper</output>
 		<min>-3</min>
 		<max>3</max>
 	</filter>
@@ -423,25 +423,25 @@
 		<gain>-1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
 		<input>
 			<condition>
 				<equals>
-					<property>/an24/ap-28l1/internal/yaw-mode</property>
+					<property>/an24/AP-28l1/internal/yaw-mode</property>
 					<value>1</value>
 				</equals>
 			</condition>
 			<expression>
 				<product>
-					<property>/an24/ap-28l1/coefficients/yaw-angle</property>
-					<property>/an24/ap-28l1/internal/heading-error-gpk-52</property>
+					<property>/an24/AP-28l1/coefficients/yaw-angle</property>
+					<property>/an24/AP-28l1/internal/heading-error-gpk-52</property>
 				</product>
 			</expression>
 		</input>
 		<input>0</input>
-		<output>/an24/ap-28l1/internal/rudder-gpk-52</output>
+		<output>/an24/AP-28l1/internal/rudder-gpk-52</output>
 	</filter>
 
 	<filter> <!-- GIK-1 module -->
@@ -449,25 +449,25 @@
 		<gain>-1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
 		<input>
 			<condition>
 				<equals>
-					<property>/an24/ap-28l1/internal/yaw-mode</property>
+					<property>/an24/AP-28l1/internal/yaw-mode</property>
 					<value>2</value>
 				</equals>
 			</condition>
 			<expression>
 				<product>
-					<property>/an24/ap-28l1/coefficients/yaw-angle</property>
-					<property>/an24/ap-28l1/internal/heading-error-gik-1</property>
+					<property>/an24/AP-28l1/coefficients/yaw-angle</property>
+					<property>/an24/AP-28l1/internal/heading-error-gik-1</property>
 				</product>
 			</expression>
 		</input>
 		<input>0</input>
-		<output>/an24/ap-28l1/internal/rudder-gik-1</output>
+		<output>/an24/AP-28l1/internal/rudder-gik-1</output>
 	</filter>
 
 	<filter> <!-- GIK-1 integrator module -->
@@ -476,18 +476,18 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/powered</property>
 					<equals>
-						<property>/an24/ap-28l1/internal/yaw-mode</property>
+						<property>/an24/AP-28l1/internal/yaw-mode</property>
 						<value>2</value>
 					</equals>
 					<or>
 						<greater-than>
-							<property>/an24/ap-28l1/internal/heading-error-gik-1</property>
+							<property>/an24/AP-28l1/internal/heading-error-gik-1</property>
 							<value>0.7</value>
 						</greater-than>
 						<less-than>
-							<property>/an24/ap-28l1/internal/heading-error-gik-1</property>
+							<property>/an24/AP-28l1/internal/heading-error-gik-1</property>
 							<value>-0.7</value>
 						</less-than>
 					</or>
@@ -497,11 +497,11 @@
 		<input>
 			<expression>
 				<difference>
-					<property>/an24/ap-28l1/internal/rudder-gik-1-integrator</property>
+					<property>/an24/AP-28l1/internal/rudder-gik-1-integrator</property>
 					<product>
 						<div>
-							<abs><property>/an24/ap-28l1/internal/heading-error-gik-1</property></abs>
-							<property>/an24/ap-28l1/internal/heading-error-gik-1</property>
+							<abs><property>/an24/AP-28l1/internal/heading-error-gik-1</property></abs>
+							<property>/an24/AP-28l1/internal/heading-error-gik-1</property>
 						</div>
 						<value>1</value>
 						<property>/fdm/jsbsim/simulation/dt</property>
@@ -509,7 +509,7 @@
 				</difference>
 			</expression>
 		</input>
-		<output>/an24/ap-28l1/internal/rudder-gik-1-integrator</output>
+		<output>/an24/AP-28l1/internal/rudder-gik-1-integrator</output>
 	</filter>
 
 	 <filter> <!-- rudder steering machine -->
@@ -518,8 +518,8 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
 				</and>
 			</condition>
 		</enable>	
@@ -527,10 +527,10 @@
 			<expression>
 				<product>
 					<sum>
-						<property>/an24/ap-28l1/internal/rudder-yaw-damper</property>
-						<property>/an24/ap-28l1/internal/rudder-gpk-52</property>
-						<property>/an24/ap-28l1/internal/rudder-gik-1</property>
-						<property>/an24/ap-28l1/internal/rudder-gik-1-integrator</property>
+						<property>/an24/AP-28l1/internal/rudder-yaw-damper</property>
+						<property>/an24/AP-28l1/internal/rudder-gpk-52</property>
+						<property>/an24/AP-28l1/internal/rudder-gik-1</property>
+						<property>/an24/AP-28l1/internal/rudder-gik-1-integrator</property>
 					</sum>
 					<value>0.04</value>
 				</product>
@@ -546,27 +546,27 @@
 	<logic> <!-- armed mode logic (lamp) -->
 		<input>
 			<and>
-				<property>/an24/ap-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/powered</property>
 				<property>/an24/instrumentation/agd</property>
 				<greater-than>
 					<property>/sim/time/elapsed-sec</property>
-					<property>/an24/ap-28l1/internal/power-on-time</property>
+					<property>/an24/AP-28l1/internal/power-on-time</property>
 				</greater-than>
-				<not><property>/an24/ap-28l1/internal/engaged</property></not>
+				<not><property>/an24/AP-28l1/internal/engaged</property></not>
 			</and>
 		</input>
-		<output>/an24/ap-28l1/internal/armed</output>
+		<output>/an24/AP-28l1/internal/armed</output>
 	</logic>
 
 	<logic> <!-- KV mode logic (lamp) -->
 		<input>
 			<and>
-				<property>/an24/ap-28l1/internal/powered</property>
-				<property>/an24/ap-28l1/internal/engaged</property>
-				<property>/an24/ap-28l1/internal/kv</property>
+				<property>/an24/AP-28l1/internal/powered</property>
+				<property>/an24/AP-28l1/internal/engaged</property>
+				<property>/an24/AP-28l1/internal/kv</property>
 			</and>
 		</input>
-		<output>/an24/ap-28l1/lamps/kv</output>
+		<output>/an24/AP-28l1/lamps/kv</output>
 	</logic>
 
 	<filter> <!-- select roll mode to due switches and horizon mode -->
@@ -576,11 +576,11 @@
 			<condition>
 				<or>
 					<equals>
-						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<property>/an24/AP-28l1/switches/roll-mode</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<property>/an24/AP-28l1/switches/roll-mode</property>
 						<value>0</value>
 					</equals>
 				</or>
@@ -591,15 +591,15 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<property>/an24/AP-28l1/switches/roll-mode</property>
 						<value>-1</value>
 					</equals>
-					<not><property>/an24/ap-28l1/internal/horizon-mode</property></not>
+					<not><property>/an24/AP-28l1/internal/horizon-mode</property></not>
 				</and>
 			</condition>
 			<value>1</value>
 		</input>
-		<output>/an24/ap-28l1/internal/roll-mode</output>
+		<output>/an24/AP-28l1/internal/roll-mode</output>
 	</filter>
 
 	<filter> <!-- pitch control from control stand -->
@@ -607,23 +607,23 @@
 		<gain>1</gain>
 		<enable>
 			<condition>
-				<not><property>/an24/ap-28l1/internal/horizon-mode</property></not>
+				<not><property>/an24/AP-28l1/internal/horizon-mode</property></not>
 			</condition>
 		</enable>
 		<input>
 			<condition>
 				<not>
 					<equals>
-						<property>an24/ap-28l1/switches/up-down-r</property>
+						<property>an24/AP-28l1/switches/up-down-r</property>
 						<value>0</value>
 					</equals>
 				</not>
 			</condition>
 			<expression>
 				<difference>
-					<property>/an24/ap-28l1/internal/target-pitch</property>
+					<property>/an24/AP-28l1/internal/target-pitch</property>
 					<product>
-						<property>an24/ap-28l1/switches/up-down-r</property>
+						<property>an24/AP-28l1/switches/up-down-r</property>
 						<value>0.7</value>
 						<property>/fdm/jsbsim/simulation/dt</property>
 					</product>
@@ -633,16 +633,16 @@
 		<input>
 			<expression>
 				<difference>
-					<property>/an24/ap-28l1/internal/target-pitch</property>
+					<property>/an24/AP-28l1/internal/target-pitch</property>
 					<product>
-						<property>an24/ap-28l1/switches/up-down-l</property>
+						<property>an24/AP-28l1/switches/up-down-l</property>
 						<value>0.7</value>
 						<property>/fdm/jsbsim/simulation/dt</property>
 					</product>
 				</difference>
 			</expression>
 		</input>
-		<output>/an24/ap-28l1/internal/target-pitch</output>
+		<output>/an24/AP-28l1/internal/target-pitch</output>
 	</filter>
 
 	<filter> <!-- adjust target pitch in KV mode to smooth transition into pitch control mode -->
@@ -650,22 +650,22 @@
 		<gain>1</gain>
 		<enable>
 			<condition>
-				<property>/an24/ap-28l1/internal/kv</property>
+				<property>/an24/AP-28l1/internal/kv</property>
 			</condition>
 		</enable>
 		<input>
 			<expression>
 				<sum>
-					<property>/an24/ap-28l1/internal/target-pitch</property>
+					<property>/an24/AP-28l1/internal/target-pitch</property>
 					<product>
-						<property>/an24/ap-28l1/internal/pitch-error-deg</property>
+						<property>/an24/AP-28l1/internal/pitch-error-deg</property>
 						<value>0.1</value>
 						<property>/fdm/jsbsim/simulation/dt</property>
 					</product>
 				</sum>
 			</expression>
 		</input>
-		<output>/an24/ap-28l1/internal/target-pitch</output>
+		<output>/an24/AP-28l1/internal/target-pitch</output>
 	</filter>
 
 	<!-- calculate derivate for yaw rate -->
@@ -673,19 +673,19 @@
 		<seconds>1</seconds>
 		<filter-gain>0</filter-gain>
 		<input>orientation/yaw-rate-degps</input>
-		<output>/an24/ap-28l1/internal/yaw-rate-1sec</output>
+		<output>/an24/AP-28l1/internal/yaw-rate-1sec</output>
 	</predict-simple>
 
 	<filter>
 		<type>gain</type>
 		<input>
-			<property>/an24/ap-28l1/internal/yaw-rate-1sec</property>
+			<property>/an24/AP-28l1/internal/yaw-rate-1sec</property>
 			<offset>
 				<property>orientation/yaw-rate-degps</property>
 				<scale>-1.0</scale>
 			</offset>
 		</input>
-		<output>/an24/ap-28l1/internal/yaw-accel-degps2</output>
+		<output>/an24/AP-28l1/internal/yaw-accel-degps2</output>
 		<gain>1.0</gain>
 	</filter>
 
@@ -704,12 +704,12 @@
 		<input>
 			<expression>
 				<div>
-					<property>/an24/ap-28l1/internal/yaw-accel-degps2</property>
+					<property>/an24/AP-28l1/internal/yaw-accel-degps2</property>
 					<property>/orientation/yaw-rate-degps</property>
 				</div>
 			</expression>
 		</input>
-		<output>/an24/ap-28l1/internal/yaw-accel-der</output>
+		<output>/an24/AP-28l1/internal/yaw-accel-der</output>
 	</filter>
 
 	<filter> <!-- select yaw mode to due switches and horizon mode -->
@@ -718,23 +718,23 @@
 		<input>
 			<condition>
 				<or>
-					<property>/an24/ap-28l1/internal/horizon-mode</property>
+					<property>/an24/AP-28l1/internal/horizon-mode</property>
 					<and>
 						<not>
 							<equals>
-								<property>/an24/ap-28l1/switches/roll-control</property>
+								<property>/an24/AP-28l1/switches/roll-control</property>
 								<value>0</value>
 							</equals>
 						</not>
 						<not>
 							<equals>
-								<property>/an24/ap-28l1/switches/roll-mode</property>
+								<property>/an24/AP-28l1/switches/roll-mode</property>
 								<value>-1</value>
 							</equals>
 						</not>
 					</and>
 					<equals>
-						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<property>/an24/AP-28l1/switches/roll-mode</property>
 						<value>-1</value>
 					</equals>
 				</or>
@@ -745,14 +745,14 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/an24/ap-28l1/switches/roll-mode</property>
+						<property>/an24/AP-28l1/switches/roll-mode</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/an24/ap-28l1/switches/roll-control</property>
+						<property>/an24/AP-28l1/switches/roll-control</property>
 						<value>0</value>
 					</equals>
-					<not><property>/an24/ap-28l1/internal/horizon-mode</property></not>
+					<not><property>/an24/AP-28l1/internal/horizon-mode</property></not>
 				</and>
 			</condition>
 			<value>1</value>
@@ -760,7 +760,7 @@
 		<input>
 			<value>2</value>
 		</input>
-		<output>/an24/ap-28l1/internal/yaw-mode</output>
+		<output>/an24/AP-28l1/internal/yaw-mode</output>
 	</filter>
 
 	<!-- logic for pull-push lamps -->
@@ -768,11 +768,11 @@
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
-					<property>/an24/ap-28l1/switches/autotrim</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/switches/autotrim</property>
 					<equals>
-						<property>/an24/ap-28l1/switches/pitch</property>
+						<property>/an24/AP-28l1/switches/pitch</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -784,18 +784,18 @@
 				<value>-0.01</value>
 			</less-than>
 		</input>
-		<output>/an24/ap-28l1/lamps/pull</output>
+		<output>/an24/AP-28l1/lamps/pull</output>
 	</logic>
 
 	<logic>
 		<enable>
 			<condition>
 				<and>
-					<property>/an24/ap-28l1/internal/powered</property>
-					<property>/an24/ap-28l1/internal/engaged</property>
-					<property>/an24/ap-28l1/switches/autotrim</property>
+					<property>/an24/AP-28l1/internal/powered</property>
+					<property>/an24/AP-28l1/internal/engaged</property>
+					<property>/an24/AP-28l1/switches/autotrim</property>
 					<equals>
-						<property>/an24/ap-28l1/switches/pitch</property>
+						<property>/an24/AP-28l1/switches/pitch</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -807,7 +807,7 @@
 				<value>0.01</value>
 			</greater-than>
 		</input>
-		<output>/an24/ap-28l1/lamps/push</output>
+		<output>/an24/AP-28l1/lamps/push</output>
 	</logic>
 
 	<filter> <!-- integrator for GPK-52 -->

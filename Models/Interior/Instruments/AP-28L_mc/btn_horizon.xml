@@ -16,7 +16,7 @@
       <command>nasal</command>
       <script>
         instruments.engage_horizon_mode();
-        interpolate("an24/ap-28l1/buttons/horizon", 1.0, 0.1 );
+        interpolate("an24/AP-28l1/buttons/horizon", 1.0, 0.1 );
         settimer(func {interpolate("an24/ap-28l1/buttons/horizon", 0.0, 0.1 );},0.1);
       </script>
     </binding>
@@ -26,7 +26,7 @@
 <animation>
   <type>translate</type>
   <object-name>press_me</object-name>
-  <property>an24/ap-28l1/buttons/horizon</property>
+  <property>an24/AP-28l1/buttons/horizon</property>
   <factor>0.003</factor>
   <axis>
     <x>0</x>
@@ -36,4 +36,3 @@
 </animation>
 
 </PropertyList>
-

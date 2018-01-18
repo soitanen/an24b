@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Prop anti-ice ON -->
+<!-- Air bleed from left/right engine for wing and tail nose heating (book "FZH", pp. 125/126, change 5) -->
 
 <PropertyList>
- <path>../../../shared/switches/sw2vg-15b.ac</path>
+ <path>../../../shared/switches/vng-15.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -14,7 +14,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/prop-heat", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/wing-tail-nose_bleed", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -30,7 +30,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/prop-heat", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/wing-tail-nose_bleed", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -39,7 +39,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/instrumentation/prop-heat</property>
+   <property>an24/Anti-Ice/wing-tail-nose_bleed</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
@@ -50,6 +50,5 @@
     <z>0.0</z>
   </axis>
  </animation>
- 
 
 </PropertyList>

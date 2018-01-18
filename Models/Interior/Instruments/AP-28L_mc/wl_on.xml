@@ -15,7 +15,7 @@
 <animation>
  <type>select</type>
  <condition>
-    <property>an24/ap-28l1/internal/engaged</property>
+    <property>an24/AP-28l1/internal/engaged</property>
   </condition>
  <object-name>lampon</object-name>
 </animation>

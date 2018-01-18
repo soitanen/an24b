@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 
-<!-- back left corner, AP push -->
+<!-- Electric heating of prop hub/blades left active (book "FZH", pp. 125/126, change 5) -->
 
 <PropertyList>
- <path>../../shared/lamps/warninglamp02.ac</path>
+ <path>../../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../shared/lamps/warninglamp02orangeplain.png</texture>
+ <texture>../../../shared/lamps/sltsngreen.png</texture>
 </animation>
 
 <animation>
  <type>select</type>
  <condition>
    <equals>
-    <property>an24/AP-28l1/lamps/push</property>
+    <property>an24/Anti-Ice/prop-heat</property>
     <value>1.0</value>
    </equals>
   </condition>

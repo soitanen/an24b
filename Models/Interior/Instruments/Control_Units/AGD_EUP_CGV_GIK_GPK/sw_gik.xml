@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- AGD ON -->
+<!-- GPK ON -->
 
 <PropertyList>
  <path>../../../shared/switches/sw2vg-15b.ac</path>
@@ -12,21 +12,21 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-    <condition>
+    <!--condition>
      <equals>
     	<property>an24/AZS/sw0703</property>
      <value>1.0</value>
      </equals>
-    </condition>
+    </condition-->
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd_r", 5.0, 0.1 );
+        interpolate("an24/instrumentation/gik", 1.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/switches/agd_r", 1.0, 0.1 );
+        interpolate("an24/instrumentation/sw_gik", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -48,13 +48,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd_r", 0.0, 0.1 );
+        interpolate("an24/instrumentation/gik", 0.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/switches/agd_r", 0.0, 0.1 );
+        interpolate("an24/instrumentation/sw_gik", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -63,7 +63,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/switches/agd_r</property>
+   <property>an24/instrumentation/sw_gik</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>

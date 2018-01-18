@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 
-<!-- EUP ON -->
+<!-- Window anti-ice low heat ON -->
 
 <PropertyList>
- <path>../../../shared/switches/sw2vg-15b.ac</path>
- <animation>
+ <path>../../../shared/switches/vng-15.ac</path>
+
+<animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
   <visible>false</visible>
@@ -12,33 +13,27 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-    <condition>
-     <equals>
-    	<property>an24/AZS/sw0605</property>
-     <value>1.0</value>
-     </equals>
-    </condition>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0414</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/eup", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/window_heating-right-intense", 1.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/switches/eup", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/sw04_window_heating-right-intense", 1.0, 0.1 );
       </script>
     </binding>
   </action>
 </animation>
 
- <animation>
-  <object-name>clickspot_middle</object-name>
-  <type>pick</type>
-  <visible>false</visible>
-</animation>
-
- <animation>
+<animation>
   <type>pick</type>
   <object-name>clickspot_down</object-name>
   <visible>false</visible>
@@ -48,13 +43,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/eup", 0.0, 0.1 );
-      </script>
-    </binding>
-    <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/animations/switches/eup", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/window_heating-right-intense", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/sw04_window_heating-right-intense", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -63,10 +53,10 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/switches/eup</property>
+   <property>an24/Anti-Ice/sw04_window_heating-right-intense</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -74,6 +64,5 @@
     <z>0.0</z>
   </axis>
  </animation>
- 
 
 </PropertyList>

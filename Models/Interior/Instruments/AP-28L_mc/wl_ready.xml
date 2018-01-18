@@ -16,7 +16,7 @@
  <type>select</type>
  <condition>
    <equals>
-    <property>an24/ap-28l1/internal/armed</property>
+    <property>an24/AP-28l1/internal/armed</property>
     <value>1</value>
    </equals>
   </condition>

@@ -27,14 +27,14 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/Start-Panel/startai24-btn", 1.0, 0.1 );
+        interpolate("an24/Start-Panel/startai24-btn", 1.0, 0.1 );
       </script>
     </binding>
       <mod-up>
 	<binding>
 	<command>nasal</command>
 	<script>
-	interpolate("an24/animations/Start-Panel/startai24-btn", 0.0, 0.1 );
+	interpolate("an24/Start-Panel/startai24-btn", 0.0, 0.1 );
 	</script>
 	</binding>
       </mod-up>
@@ -44,7 +44,7 @@
 <animation>
   <type>translate</type>
   <object-name>press_me</object-name>
-  <property>an24/animations/Start-Panel/startai24-btn</property>
+  <property>an24/Start-Panel/startai24-btn</property>
   <factor>0.005</factor>
   <axis>
     <x>0</x>

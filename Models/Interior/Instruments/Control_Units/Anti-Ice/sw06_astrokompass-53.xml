@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 
-<!-- Wing and engine inlet anti-ice ON -->
+<!-- Engine inlet guide vane -->
 
 <PropertyList>
  <path>../../../shared/switches/vng-15.ac</path>
+
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -12,9 +13,21 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+        <!--condition>
+         <equals>
+         <property>an24/AZS/sw0415</property>
+         <value>1.0</value>
+         </equals>
+        </condition-->
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/wing_engine-inlet", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/astrokompass-53", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Anti-Ice/sw06_astrokompass-53", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -30,7 +43,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/wing_engine-inlet", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/astrokompass-53", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/sw06_astrokompass-53", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -39,7 +53,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/instrumentation/wing_engine-inlet</property>
+   <property>an24/Anti-Ice/sw06_astrokompass-53</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>

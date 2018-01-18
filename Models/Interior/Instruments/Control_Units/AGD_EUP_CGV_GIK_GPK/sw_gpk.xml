@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Roll-mode GIK(1)/GPK(0)/ZK(-1) -->
+<!-- GPK ON -->
 
 <PropertyList>
- <path>../../shared/switches/switch02.ac</path>
- 
+ <path>../../../shared/switches/sw2vg-15b.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -13,29 +12,31 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+    <!--condition>
+     <equals>
+    	<property>an24/AZS/sw0703</property>
+     <value>1.0</value>
+     </equals>
+    </condition-->
       <command>nasal</command>
       <script>
-        interpolate("an24/AP-28l1/switches/roll-mode", 1.0, 0.1 );
+        interpolate("an24/instrumentation/gpk", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_gpk", 1.0, 0.1 );
       </script>
     </binding>
   </action>
 </animation>
 
  <animation>
-  <type>pick</type>
   <object-name>clickspot_middle</object-name>
+  <type>pick</type>
   <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/AP-28l1/switches/roll-mode", 0.0, 0.1 );
-      </script>
-    </binding>
-  </action>
- </animation>
+</animation>
 
  <animation>
   <type>pick</type>
@@ -47,7 +48,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AP-28l1/switches/roll-mode", -1.0, 0.1 );
+        interpolate("an24/instrumentation/gpk", 0.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_gpk", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -56,10 +63,10 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/AP-28l1/switches/roll-mode</property>
+   <property>an24/instrumentation/sw_gpk</property>
   <interpolation>
-    <entry><ind>1.0</ind>	<dep>25.0</dep></entry>
-    <entry><ind>-1.0</ind>	<dep>-25.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -67,5 +74,6 @@
     <z>0.0</z>
   </axis>
  </animation>
+ 
 
 </PropertyList>

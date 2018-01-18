@@ -114,7 +114,7 @@
 <animation>
   <type>rotate</type>
   <object-name>n_max</object-name>
-  <property>an24/instrumentation/uap-12/accelerate-max</property>
+  <property>an24/UAP-12/accelerate-max</property>
   <interpolation>
     <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
     <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>
@@ -132,7 +132,7 @@
 <animation>
   <type>rotate</type>
   <object-name>n_min</object-name>
-  <property>an24/instrumentation/uap-12/accelerate-min</property>
+  <property>an24/UAP-12/accelerate-min</property>
   <interpolation>
     <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
     <entry><ind>	0.0</ind>	<dep>	44.0</dep></entry>

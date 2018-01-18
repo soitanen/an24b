@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Window heating switches (low and intensive mode) -->
+<!-- Anti-Ice switches/lamps -->
 
 <PropertyList>
 
@@ -29,47 +29,101 @@
 <!-- Right panel -->
 
 <model>
- <path>sw_right-window-low.xml</path>
+ <path>sl01_wing-tail-nose_bleed-from-l-eng.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.75</y-m>
+    <z-m>0.78</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sl02_inlet-guide-vane_bleed-valve-l.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.775</y-m>
+    <z-m>0.78</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sl03_prop-hub-blade-l.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.8</y-m>
+    <z-m>0.78</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sl04_prop-hub-blade-r.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.825</y-m>
+    <z-m>0.78</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sl05_inlet-guide-vane_bleed-valve-r.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.85</y-m>
+    <z-m>0.78</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sl06_wing-tail-nose_bleed-from-r-eng.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.875</y-m>
+    <z-m>0.78</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw01a_anti-ice-control.xml</path>
+  <offsets>
+    <roll-deg>-90</roll-deg>
+    <x-m>2.122</x-m>
+    <y-m>0.8072</y-m>
+    <z-m>0.7173</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw01_right-window-low.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.138</x-m>
-    <y-m>0.6924</y-m>
+    <y-m>0.6362</y-m>
     <z-m>0.675</z-m>
   </offsets>
 </model>
 
 <model>
- <path>sw_right-window-intense.xml</path>
+ <path>sw02_right-window-intense.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.138</x-m>
-    <y-m>0.7136</y-m>
+    <y-m>0.6564</y-m>
     <z-m>0.675</z-m>
   </offsets>
 </model>
 
 <model>
- <path>sw_wing-inlet-heat.xml</path>
+ <path>sw06_astrokompass-53.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.138</x-m>
-    <y-m>0.7435</y-m>
+    <y-m>0.778</y-m>
     <z-m>0.675</z-m>
   </offsets>
 </model>
 
 <model>
- <path>sw_inlet-guide-vane_left.xml</path>
-  <offsets>
-    <pitch-deg>-20</pitch-deg>
-    <x-m>2.138</x-m>
-    <y-m>0.7781</y-m>
-    <z-m>0.675</z-m>
-  </offsets>
-</model>
-
-<model>
- <path>sw_inlet-guide-vane_right.xml</path>
+ <path>sw07_wing-tail-nose.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.138</x-m>
@@ -79,7 +133,7 @@
 </model>
 
 <model>
- <path>sw_prop-heat.xml</path>
+ <path>sw08_prop-heat.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.133</x-m>

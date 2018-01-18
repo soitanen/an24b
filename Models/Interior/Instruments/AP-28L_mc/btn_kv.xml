@@ -15,8 +15,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/ap-28l1/buttons/kv", 1.0, 0.1 );
-        settimer(func {interpolate("an24/ap-28l1/buttons/kv", 0.0, 0.1 );},0.1);
+        interpolate("an24/AP-28l1/buttons/kv", 1.0, 0.1 );
+        settimer(func {interpolate("an24/AP-28l1/buttons/kv", 0.0, 0.1 );},0.1);
         instruments.engage_kv_mode();
       </script>
     </binding>
@@ -26,7 +26,7 @@
 <animation>
   <type>translate</type>
   <object-name>press_me</object-name>
-  <property>an24/ap-28l1/buttons/kv</property>
+  <property>an24/AP-28l1/buttons/kv</property>
   <factor>0.003</factor>
   <axis>
     <x>0</x>
@@ -36,4 +36,3 @@
 </animation>
 
 </PropertyList>
-

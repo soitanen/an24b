@@ -20,7 +20,7 @@
         setprop("fdm/jsbsim/propulsion/tank[5]/priority", 1.0 );
         setprop("an24/Start-Panel/tg-starter-on", 1.0 );
         setprop("controls/electric/engine[2]/generator", 1.0 );
-        interpolate("an24/animations/Start-Panel/tg-starter-on_sw", 1.0, 0.1 );
+        interpolate("an24/Start-Panel/tg-starter-on_sw", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -47,7 +47,7 @@
         setprop("fdm/jsbsim/propulsion/tank[5]/priority", 0.0 );
         setprop("an24/Start-Panel/tg-starter-on", 0.0 );
         setprop("controls/electric/engine[2]/generator", 0.0 );
-        interpolate("an24/animations/Start-Panel/tg-starter-on_sw", 0.0, 0.1 );
+        interpolate("an24/Start-Panel/tg-starter-on_sw", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -56,7 +56,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/Start-Panel/tg-starter-on_sw</property>
+   <property>an24/Start-Panel/tg-starter-on_sw</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>-30.0</dep></entry>
@@ -69,4 +69,3 @@
  </animation>
 
 </PropertyList>
-

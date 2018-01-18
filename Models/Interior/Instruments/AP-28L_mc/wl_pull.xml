@@ -16,7 +16,7 @@
  <type>select</type>
  <condition>
    <equals>
-    <property>an24/ap-28l1/lamps/pull</property>
+    <property>an24/AP-28l1/lamps/pull</property>
     <value>1.0</value>
    </equals>
   </condition>

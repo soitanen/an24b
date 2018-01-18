@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Engine inlet guide vane -->
+<!-- EUP ON -->
 
 <PropertyList>
- <path>../../../shared/switches/vng-15.ac</path>
-
+ <path>../../../shared/switches/sw2vg-15b.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -13,27 +12,33 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-        <condition>
-         <equals>
-         <property>an24/AZS/sw0415</property>
-         <value>1.0</value>
-         </equals>
-        </condition>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0605</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/guide-vane-heat_l", 1.0, 0.1 );
+        interpolate("an24/instrumentation/eup", 1.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/sw_guide-vane-heat_l", 1.0, 0.1 );
+        interpolate("an24/instrumentation/sw_eup", 1.0, 0.1 );
       </script>
     </binding>
   </action>
 </animation>
 
-<animation>
+ <animation>
+  <object-name>clickspot_middle</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+</animation>
+
+ <animation>
   <type>pick</type>
   <object-name>clickspot_down</object-name>
   <visible>false</visible>
@@ -43,8 +48,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/guide-vane-heat_l", 0.0, 0.1 );
-        interpolate("an24/instrumentation/sw_guide-vane-heat_l", 0.0, 0.1 );
+        interpolate("an24/instrumentation/eup", 0.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_eup", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -53,10 +63,10 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/instrumentation/sw_guide-vane-heat_l</property>
+   <property>an24/instrumentation/sw_eup</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -64,5 +74,6 @@
     <z>0.0</z>
   </axis>
  </animation>
+ 
 
 </PropertyList>

@@ -16,7 +16,7 @@
       <command>nasal</command>
       <script>
         setprop("an24/Start-Panel/prt-24_r", 1.0 );
-        interpolate("an24/animations/Start-Panel/prt-24_r_sw", 1.0, 0.1 );
+        interpolate("an24/Start-Panel/prt-24_r_sw", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -39,7 +39,7 @@
       <command>nasal</command>
       <script>
         setprop("an24/Start-Panel/prt-24_r", 0.0 );
-        interpolate("an24/animations/Start-Panel/prt-24_r_sw", 0.0, 0.1 );
+        interpolate("an24/Start-Panel/prt-24_r_sw", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -48,7 +48,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/Start-Panel/prt-24_r_sw</property>
+   <property>an24/Start-Panel/prt-24_r_sw</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-25.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>25.0</dep></entry>

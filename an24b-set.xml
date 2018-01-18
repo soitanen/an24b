@@ -393,13 +393,13 @@
        <binding>
        <command>nasal</command>
         <script>
-         if( getprop("an24/ap-28l1/internal/engaged" ) == 0.0 ){
+         if( getprop("an24/AP-28l1/internal/engaged" ) == 0.0 ){
          instruments.engage_ap();
          }
          else {
-         setprop("an24/ap-28l1/internal/kv", 0.0 );
-         setprop("an24/ap-28l1/internal/horizon-mode", 0.0 );
-         setprop("an24/ap-28l1/internal/engaged", 0.0 );
+         setprop("an24/AP-28l1/internal/kv", 0.0 );
+         setprop("an24/AP-28l1/internal/horizon-mode", 0.0 );
+         setprop("an24/AP-28l1/internal/engaged", 0.0 );
          }	
         </script>
        </binding>
@@ -525,7 +525,7 @@
  </gear>
 
 <an24>
-  <ap-28l1>
+  <AP-28l1>
     <coefficients> <!-- coefficients are taken from book An-24. Technical description.-->
       <roll-angle type="double">0.52</roll-angle>
       <roll-rate type="double">0.33</roll-rate>
@@ -579,7 +579,7 @@
       <elevator-autotrim-feel type="bool">false</elevator-autotrim-feel>
       <elevator-alt-correction type="double">0</elevator-alt-correction>
     </internal>
-  </ap-28l1>
+  </AP-28l1>
   <gear>
     <steer_mode>2</steer_mode>
   </gear>

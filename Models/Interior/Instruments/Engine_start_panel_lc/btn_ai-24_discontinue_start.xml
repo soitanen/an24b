@@ -21,6 +21,7 @@
         setprop("controls/engines/engine[0]/starter", 0.0 );}
         else {setprop("controls/engines/engine[1]/cutoff", 1.0 );
 	setprop("controls/engines/engine[1]/starter", 0.0 );}
+        settimer(func {interpolate("an24/Start-Panel/discontinuestart_ai-24_btn", 0.0, 0.1 );},0.2);
       </script>
     </binding>
   </action>
@@ -29,7 +30,7 @@
 <animation>
   <type>translate</type>
   <object-name>press_me</object-name>
-  <property>an24/animations/Start-Panel/discontinue-btn</property>
+  <property>an24/Start-Panel/discontinuestart_ai-24_btn</property>
   <factor>0.003</factor>
   <axis>
     <x>0</x>
@@ -39,4 +40,3 @@
 </animation>
 
 </PropertyList>
-
