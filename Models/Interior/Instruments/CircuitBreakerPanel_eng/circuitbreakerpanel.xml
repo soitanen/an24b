@@ -1,6 +1,6 @@
 <PropertyList>
 
-<!-- safety fuse panel, from top to bottom rows (01xx-07xx) and left to right (xx01-xx18) -->
+<!-- Circuit breaker panel, from top to bottom rows (01xx-07xx) and left to right (xx01-xx18) -->
 
   <path>circuitbreakerpanel.ac</path>
 
