@@ -141,6 +141,17 @@
 </model>
 
 <model>
+  <name>ARK-USH</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ARK-11_navoh/nav_ark-ush.xml</path>
+  <offsets>
+    <x-m>3.691</x-m>
+    <y-m>-0.887</y-m>
+    <z-m>1.0012</z-m>
+    <heading-deg>90</heading-deg>
+  </offsets>
+</model>
+
+<model>
   <name>KM-8</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/KM-8_nav/km-8.xml</path>
   <offsets>
@@ -166,7 +177,7 @@
 
 <model>
   <name>US-8K</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_rceng/us-8k.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_rceng/eng_us-8k.xml</path>
   <offsets>
     <x-m>3.888</x-m>
     <y-m>0.847</y-m>
@@ -206,6 +217,11 @@
     <z-m>1.1</z-m>
     <roll-deg>38</roll-deg>
   </offsets>
+</model>
+
+<model>
+  <name>ElectricalPanel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Electrical_Panel_eng/electrical_panel.xml</path>
 </model>
 
 <model>
@@ -272,11 +288,6 @@
     <z-m>0.5632</z-m>
     <heading-deg>180</heading-deg>
   </offsets>
-</model>
-
-<model>
-  <name>ElectricalPanel</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Electrical_Panel_eng/electrical_panel.xml</path>
 </model>
 
 </PropertyList>

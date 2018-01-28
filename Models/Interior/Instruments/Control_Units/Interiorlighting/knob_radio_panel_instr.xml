@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!-- Radio panel instruments red lighting lamps -->
+
+<PropertyList>
+ <path>../../../shared/switches/rsks-50.ac</path>
+
+ <animation>
+   <type>knob</type>
+   <object-name>rsks-50</object-name>
+   <property>/controls/lighting/radio_panel_instr</property>
+   <factor>-80</factor>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/controls/lighting/radio_panel_instr</property>
+      <factor>-0.05</factor>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+</PropertyList>

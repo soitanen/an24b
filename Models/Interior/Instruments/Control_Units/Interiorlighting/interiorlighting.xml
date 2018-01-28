@@ -92,4 +92,26 @@
   </offsets>
 </model>
 
+<!-- knobs on radio panel -->
+
+<model>
+ <path>knob_radio_panel_instr.xml</path>
+  <offsets>
+    <pitch-deg>180</pitch-deg>
+    <x-m>3.87</x-m>
+    <y-m>0.83</y-m>
+    <z-m>0.77</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>knob_radio_panel.xml</path>
+  <offsets>
+    <pitch-deg>180</pitch-deg>
+    <x-m>3.87</x-m>
+    <y-m>0.90</y-m>
+    <z-m>0.77</z-m>
+  </offsets>
+</model>
+
 </PropertyList>

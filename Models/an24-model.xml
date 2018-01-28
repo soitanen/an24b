@@ -70,20 +70,15 @@
 <model>
     <name>crewsection</name>
     <path>Aircraft/an24b/Models/Interior/crewsection.xml</path>
-    <offsets>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </offsets>
     <nopreview/>
 </model>
 
-<model>
+<!--model>
     <name>windows</name>
     <usage>interior</usage>
     <path>Aircraft/an24b/Models/Interior/windows.xml</path>
     <nopreview/>
-</model>
+</model-->
 
 <model>
     <name>cargosection</name>

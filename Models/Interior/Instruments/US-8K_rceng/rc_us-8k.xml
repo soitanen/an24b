@@ -29,7 +29,7 @@
      <red>1.0</red>
      <green>1.0</green>
      <blue>0.7</blue>
-     <factor-prop>/controls/lighting/panel-elec_red</factor-prop>
+     <factor-prop>/controls/lighting/console-r_red</factor-prop>
    </emission>
  </animation>
 

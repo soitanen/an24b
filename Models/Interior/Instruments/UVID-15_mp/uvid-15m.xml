@@ -121,7 +121,6 @@
 <animation>
   <type>rotate</type>
   <object-name>dig_a_ths</object-name>
-  <property>instrumentation/altimeter/indicated-wheels_ths_m</property>
   <expression>
     <table>
       <mod>
@@ -169,7 +168,6 @@
 <animation>
   <type>rotate</type>
   <object-name>dig_a_decths</object-name>
-  <property>instrumentation/altimeter/indicated-wheels_decths_m</property>
   <expression>
     <table>
       <mod>
@@ -219,7 +217,7 @@
 <animation>
   <type>rotate</type>
   <object-name>dig_p_ones</object-name>
-  <property>instrumentation/altimeter/setting-hpa</property>
+  <property>/instrumentation/altimeter/setting-hpa</property>
   <factor>27.0088845014</factor>
   <center>
     <x-m>-0.0158</x-m>
@@ -240,7 +238,7 @@
     <table>
       <mod>
         <product>
-          <property>instrumentation/altimeter/setting-hpa</property>
+          <property>/instrumentation/altimeter/setting-hpa</property>
           <value>0.7500616827</value>
         </product>
         <value>100</value>
@@ -287,7 +285,7 @@
     <table>
       <mod>
         <product>
-          <property>instrumentation/altimeter/setting-hpa</property>
+          <property>/instrumentation/altimeter/setting-hpa</property>
           <value>0.7500616827</value>
         </product>
         <value>1000</value>

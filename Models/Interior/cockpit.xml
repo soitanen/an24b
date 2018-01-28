@@ -754,8 +754,8 @@
 <!-- *************************************** -->
 
 <model>
-  <name>UVID-15m</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/UVID-15m_mp/uvid-15m.xml</path>
+  <name>UVID-15</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/UVID-15_mp/uvid-15f.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.3542</y-m>
@@ -1080,7 +1080,7 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/rcachs-1.xml</path>
   <offsets>
     <x-m>2.488</x-m>
-    <y-m>0.996</y-m>
+    <y-m>0.998</y-m>
     <z-m>0.707</z-m>
     <heading-deg>-79.5</heading-deg>
   </offsets>
@@ -1099,7 +1099,7 @@
 
 <model>
   <name>US-8k</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_rceng/us-8k.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_rceng/rc_us-8k.xml</path>
   <offsets>
     <x-m>2.3338</x-m>
     <y-m>0.966</y-m>
@@ -1209,6 +1209,17 @@
     <x-m>2.96</x-m>
     <y-m>-0.42</y-m>
     <z-m>1.475</z-m>
+    <pitch-deg>80</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>M-50</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/SP-50_oh/m-50.xml</path>
+  <offsets>
+    <x-m>2.9625</x-m>
+    <y-m>-0.0938</y-m>
+    <z-m>1.4651</z-m>
     <pitch-deg>80</pitch-deg>
   </offsets>
 </model>
