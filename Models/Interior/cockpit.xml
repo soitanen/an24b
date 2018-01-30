@@ -623,8 +623,8 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/PPS-2MVK_mp/pps.xml</path>
   <offsets>
     <x-m>2.1</x-m>
-    <y-m>-0.2275</y-m>
-    <z-m>0.76</z-m>
+    <y-m>-0.24</y-m>
+    <z-m>0.745</z-m>
   </offsets>
 </model>
 

@@ -1,9 +1,73 @@
 <?xml version="1.0"?>
 
-<!-- SO-63, control unit of transponder system SOM-64 -->
+<!-- M-50, control unit of SP-50 landing system -->
 
 <PropertyList>
  <path>m-50.ac</path>
+
+<!-- Channel select -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>m-50_channel</object-name>
+   <property>an24/SP-50/course_freq-mhz</property>
+    <interpolation>
+     <entry>
+      <ind>108.3</ind> <dep>30.0</dep>
+     </entry>
+     <entry>
+      <ind>108.7</ind> <dep>90.0</dep>
+     </entry>
+     <entry>
+      <ind>109.1</ind> <dep>150.0</dep>
+     </entry>
+     <entry>
+      <ind>109.5</ind> <dep>210.0</dep>
+     </entry>
+     <entry>
+      <ind>109.9</ind> <dep>270.0</dep>
+     </entry>
+     <entry>
+      <ind>110.3</ind> <dep>330.0</dep>
+     </entry>
+    </interpolation>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0121</y-m>
+   <z-m>0.0068</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <!-- doesn't work as in FG-wiki action>
+    <binding>
+     <command>property-cycle</command>
+      <property>an24/SP-50/gs_freq-mhz</property>
+      <value type="double">332.6</value>
+      <value type="double">332.6</value>
+      <value type="double">333.8</value>
+      <value type="double">333.8</value>
+      <value type="double">335.0</value>
+      <value type="double">335.0</value>
+      <wrap>true</wrap>
+    </binding>
+    </action-->
+    <action>
+    <binding>
+     <command>property-cycle</command>
+      <property>an24/SP-50/course_freq-mhz</property>
+      <value type="double">108.3</value>
+      <value type="double">108.7</value>
+      <value type="double">109.1</value>
+      <value type="double">109.5</value>
+      <value type="double">109.9</value>
+      <value type="double">110.3</value>
+      <wrap>true</wrap>
+     </binding>
+    </action>
+ </animation>
 
 <!-- TEXT OSG -->
 

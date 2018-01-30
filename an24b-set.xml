@@ -593,6 +593,9 @@
     </prop-lock>
     <eup type="double">0</eup>
   </instrumentation>
+  <PPS>
+   <lighting-save>0</lighting-save>
+  </PPS>
 </an24>
 
 <instrumentation>
