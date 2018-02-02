@@ -142,6 +142,22 @@
 	    <desc>(Dis-)Connect AP</desc>
 	   </key>
    	   <key>
+	    <name>1</name>
+	    <desc>Pilot View</desc>
+	   </key>
+   	   <key>
+	    <name>2</name>
+	    <desc>F/O View</desc>
+	   </key>
+   	   <key>
+	    <name>3</name>
+	    <desc>Engineer/Radio Op View</desc>
+	   </key>
+   	   <key>
+	    <name>4</name>
+	    <desc>Navigator View</desc>
+	   </key>
+   	   <key>
 	    <name> </name>
 	    <desc> </desc>
 	   </key>
@@ -596,6 +612,10 @@
   <PPS>
    <lighting-save>0</lighting-save>
   </PPS>
+  <SP-50>
+   <course_freq-mhz>110.3</course_freq-mhz>
+   <channel>6</channel>
+  </SP-50>
 </an24>
 
 <instrumentation>

@@ -75,6 +75,15 @@ var mass_info = func {
    }
 }
 
+# Printing SP-50 channel/frequency
+var sp_50 = func {
+   var sp_freq = getprop("an24/SP-50/course_freq-mhz");
+   help_win.write(sprintf("Frequency: %.2f MHz", sp_freq) );
+}
+
+setlistener( "an24/SP-50/course_freq-mhz", sp_50 );
+
+
 var messenger = func{
 help_win.write(arg[0]);
 }

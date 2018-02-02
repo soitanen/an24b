@@ -462,21 +462,49 @@ var ark2audible = func {
  setlistener("an24/SPU-7/eng_source", ark2audible);
  setlistener("an24/SPU-7/nav_source", ark2audible);
 
-##  AChS stopwatch
-var stopwatch = func {
-        var startbtn = getprop("an24/AChS/start-btn");
-	if ( startbtn = 1) {
-        var flighttime = getprop("/sim/time/elapsed-sec") - getprop("an24/AChS/begin");
-	setprop("an24/AChS/flighttime", int(flighttime));
-        settimer(stopwatch, 0.4);
+##  AChS
+setprop("an24/AChS/l-press-anim", 0 );
+
+#  AChS Stopwatch
+setprop("an24/AChS/stopwatch", 0 );
+setprop("an24/AChS/r-turn", 1 );
+setprop("an24/AChS/r-mode", 0 );
+
+var stopwatch = maketimer(1, func(){
+	var speedup = getprop("/sim/speed-up");
+	var sw_time = getprop("an24/AChS/stopwatch");
+	var sw_time = sw_time + speedup ;
+	setprop("an24/AChS/stopwatch", int(sw_time));
+});
+
+# AChS Flighttime
+setprop("an24/AChS/flighttime", 0 );
+setprop("an24/AChS/l-mode", 0 );
+
+var flitetimer = maketimer(1, func(){
+	var speedup = getprop("/sim/speed-up");
+	var fl_time = getprop("an24/AChS/flighttime");
+	var fl_time = fl_time + speedup ;
+	setprop("an24/AChS/flighttime", int(fl_time));
+});
+
+# AChS wind-up mechanism
+setprop("an24/AChS/wind_up", 10 );
+
+var wtimer = maketimer(10, func(){
+	var speedup = getprop("/sim/speed-up");
+	var windup = getprop("an24/AChS/wind_up");
+	if ( getprop("an24/AChS/wind_up") > 0 ) {
+	var windup = windup - speedup ;
+	setprop("an24/AChS/wind_up", int(windup));
+	setprop("an24/AChS/running", 1 );
 	}
 	else {
-	setprop("an24/AChS/flighttime", 0);
+	setprop("an24/AChS/running", 0 );
+#	wtimer.stop();
 	}
-}
-
- setlistener("an24/AChS/start-btn", stopwatch);
-
+});
+wtimer.start();
 
 # 2PPT1-4 Fuel Level Indicator
 var fuelind = func {
@@ -502,3 +530,16 @@ var fuelind = func {
 }
 
  setlistener("an24/PG5and2PPT1/selected-ind", fuelind);
+
+# SP-50 channel/frequency
+var sp_chan2freq = func {
+   if( getprop("an24/SP-50/channel") == 1) setprop("an24/SP-50/course_freq-mhz", 108.3);
+   if( getprop("an24/SP-50/channel") == 2) setprop("an24/SP-50/course_freq-mhz", 108.7);
+   if( getprop("an24/SP-50/channel") == 3) setprop("an24/SP-50/course_freq-mhz", 109.1);
+   if( getprop("an24/SP-50/channel") == 4) setprop("an24/SP-50/course_freq-mhz", 109.5);
+   if( getprop("an24/SP-50/channel") == 5) setprop("an24/SP-50/course_freq-mhz", 109.9);
+   if( getprop("an24/SP-50/channel") == 6) setprop("an24/SP-50/course_freq-mhz", 110.3);
+}
+
+setlistener( "an24/SP-50/channel", sp_chan2freq );
+
