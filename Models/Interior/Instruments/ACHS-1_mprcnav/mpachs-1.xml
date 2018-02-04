@@ -36,7 +36,7 @@
   <animation>
     <type>knob</type>
     <object-name>left_knob</object-name>
-    <property>an24/AChS/wind_up</property>
+    <property>an24/AChS/mp_l-knob-anim</property>
     <factor>20</factor>
      <center>
       <x-m>0.0</x-m>
@@ -49,11 +49,15 @@
       <z>0</z>
      </axis>
       <action>
+       <binding>
+        <command>property-adjust</command>
+        <property>an24/AChS/mp_l-knob-anim</property>
+       </binding>
 <!-- Pulled out: Clock time adjust -->
        <binding>
         <condition>
          <equals>
-          <property>an24/AChS/l-press-anim</property>
+          <property>an24/AChS/mp_l-press-anim</property>
           <value>1.0</value>
          </equals>
         </condition>
@@ -66,17 +70,17 @@
         <condition>
         <and>
          <equals>
-          <property>an24/AChS/l-press-anim</property>
+          <property>an24/AChS/mp_l-press-anim</property>
           <value>1.0</value>
          </equals>
          <equals>
-          <property>an24/AChS/l-mode</property>
+          <property>an24/AChS/mp_l-mode</property>
           <value>-1</value>
          </equals>
         </and>
         </condition>
         <command>property-adjust</command>
-        <property>an24/AChS/ft-offset</property>
+        <property>an24/AChS/mp_ft-offset</property>
           <factor>-60</factor>
         </binding>
        </action>
@@ -85,12 +89,12 @@
        <binding>
         <condition>
          <equals>
-         <property>an24/AChS/l-press-anim</property>
+         <property>an24/AChS/mp_l-press-anim</property>
          <value>0.0</value> <!-- Neutral position -->
          </equals>
         </condition>
         <command>property-adjust</command>
-        <property>an24/AChS/wind_up</property>
+        <property>an24/AChS/mp_wind_up</property>
           <step>120</step>
           <min>0</min>
           <max>2590</max> <!-- 3 days in sec/10 -->
@@ -100,14 +104,14 @@
        <binding>
         <condition>
          <equals>
-         <property>an24/AChS/l-press-anim</property>
+         <property>an24/AChS/mp_l-press-anim</property>
          <value>0.0</value> <!-- Neutral position -->
          </equals>
         </condition>
         <command>nasal</command>
-        <property>an24/AChS/wind_up</property>
+        <property>an24/AChS/mp_wind_up</property>
         <script>
-	instruments.wtimer.start();
+	instruments.mp_wtimer.start();
         </script>
         </binding>
       </increase>
@@ -118,13 +122,18 @@
 <animation>
   <type>pick</type>
   <object-name>l-press</object-name>
-  <visible>false</visible>
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-cycle</command>
-      <property>an24/AChS/l-mode</property>
+      <property>an24/AChS/mp_l-mode</property>
+        <condition>
+         <equals>
+          <property>an24/AChS/mp_l-press-anim</property>
+          <value>0</value>
+         </equals>
+        </condition>
       <value>-1</value> <!-- red -> Stopped -->
       <value>0</value> <!-- red/white -> Reset -->
       <value>1</value> <!-- white -> Running -->
@@ -135,18 +144,18 @@
         <condition>
          <and>
          <equals>
-          <property>an24/AChS/l-press-anim</property>
-          <value>0</value>
+          <property>an24/AChS/mp_running</property>
+          <value>1</value>
          </equals>
          <equals>
-          <property>an24/AChS/l-mode</property>
+          <property>an24/AChS/mp_l-mode</property>
           <value>1</value>
          </equals>
          </and>
         </condition>
         <command>nasal</command>
         <script>
-	instruments.flitetimer.start();
+	instruments.mp_flitetimer.start();
         </script>
         </binding>
 <!-- Stop Flighttimer -->
@@ -154,18 +163,18 @@
         <condition>
          <and>
          <equals>
-          <property>an24/AChS/l-press-anim</property>
+          <property>an24/AChS/mp_l-press-anim</property>
           <value>0</value>
          </equals>
          <equals>
-          <property>an24/AChS/l-mode</property>
+          <property>an24/AChS/mp_l-mode</property>
           <value>-1</value>
          </equals>
          </and>
         </condition>
         <command>nasal</command>
         <script>
-	instruments.flitetimer.stop();
+	instruments.mp_flitetimer.stop();
         </script>
         </binding>
 
@@ -173,17 +182,17 @@
         <condition>
          <and>
          <equals>
-          <property>an24/AChS/l-press-anim</property>
+          <property>an24/AChS/mp_l-press-anim</property>
           <value>0</value>
          </equals>
          <equals>
-          <property>an24/AChS/l-mode</property>
+          <property>an24/AChS/mp_l-mode</property>
           <value>0</value>
          </equals>
          </and>
         </condition>
         <command>property-assign</command>
-          <property>an24/AChS/flighttime</property>
+          <property>an24/AChS/mp_flighttime</property>
           <value>0</value>
         </binding>
 
@@ -191,25 +200,25 @@
         <condition>
          <and>
          <equals>
-          <property>an24/AChS/l-press-anim</property>
+          <property>an24/AChS/mp_l-press-anim</property>
           <value>0</value>
          </equals>
          <equals>
-          <property>an24/AChS/l-mode</property>
+          <property>an24/AChS/mp_l-mode</property>
           <value>0</value>
          </equals>
          </and>
         </condition>
         <command>property-assign</command>
-          <property>an24/AChS/ft-offset</property>
+          <property>an24/AChS/mp_ft-offset</property>
           <value>0</value>
         </binding>
 
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AChS/l-press-anim", -1.0, 0.1 );
-        settimer(func {interpolate("an24/AChS/l-press-anim", 0.0, 0.1 );},0.1);
+        interpolate("an24/AChS/mp_l-press-anim", -1.0, 0.1 );
+        settimer(func {interpolate("an24/AChS/mp_l-press-anim", 0.0, 0.1 );},0.1);
       </script>
     </binding>
   </action>
@@ -218,7 +227,7 @@
 <animation>
   <type>translate</type>
   <object-name>mode_ind_flag</object-name>
-  <property>an24/AChS/l-mode</property>
+  <property>an24/AChS/mp_l-mode</property>
   <factor>0.003</factor>
   <axis>
     <x>0</x>
@@ -232,13 +241,12 @@
 <animation>
   <type>pick</type>
   <object-name>l-press</object-name>
-  <visible>false</visible>
   <action>
     <button>1</button>
     <repeatable>false</repeatable>
        <binding>
         <command>property-cycle</command>
-        <property>an24/AChS/l-press-anim</property>
+        <property>an24/AChS/mp_l-press-anim</property>
           <value>0</value>
           <value>1</value>
           <wrap>true</wrap>
@@ -250,7 +258,7 @@
   <type>translate</type>
   <object-name>l-press</object-name>
   <object-name>left_knob</object-name>
-  <property>an24/AChS/l-press-anim</property>
+  <property>an24/AChS/mp_l-press-anim</property>
   <factor>0.003</factor>
   <axis>
     <x>1</x>
@@ -269,7 +277,7 @@
  <animation>
     <type>knob</type>
     <object-name>right_knob</object-name>
-    <property>an24/AChS/r-turn</property>
+    <property>an24/AChS/mp_r-turn</property>
     <factor>20</factor>
      <center>
       <x-m>0.0</x-m>
@@ -284,7 +292,7 @@
       <action>
        <binding>
         <command>property-adjust</command>
-        <property>an24/AChS/r-turn</property>
+        <property>an24/AChS/mp_r-turn</property>
           <min>0</min>
           <max>1</max>
           <wrap>false</wrap>
@@ -295,31 +303,35 @@
         <condition>
          <and>
          <equals>
-          <property>an24/AChS/r-turn</property>
+          <property>an24/AChS/mp_running</property>
+          <value>1.0</value>
+         </equals>
+         <equals>
+          <property>an24/AChS/mp_r-turn</property>
           <value>1</value>
          </equals>
          <equals>
-          <property>an24/AChS/r-mode</property>
+          <property>an24/AChS/mp_r-mode</property>
           <value>1</value>
          </equals>
          </and>
         </condition>
         <command>nasal</command>
         <script>
-	instruments.stopwatch.start();
+	instruments.mp_stopwatch.start();
         </script>
         </binding>
 
        <binding>
         <condition>
          <equals>
-          <property>an24/AChS/r-turn</property>
+          <property>an24/AChS/mp_r-turn</property>
           <value>0</value>
          </equals>
         </condition>
         <command>nasal</command>
         <script>
-	instruments.stopwatch.stop();
+	instruments.mp_stopwatch.stop();
         </script>
         </binding>
       </action>
@@ -329,13 +341,12 @@
 <animation>
   <type>pick</type>
   <object-name>r-press</object-name>
-  <visible>false</visible>
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-cycle</command>
-      <property>an24/AChS/r-mode</property>
+      <property>an24/AChS/mp_r-mode</property>
       <!--value type="int">0</value--> <!-- Stopped -->
       <value type="int">1</value> <!-- Start -->
       <value type="int">2</value> <!-- Stop -->
@@ -347,51 +358,55 @@
         <condition>
          <and>
          <equals>
-          <property>an24/AChS/r-mode</property>
+          <property>an24/AChS/mp_running</property>
+          <value>1.0</value>
+         </equals>
+         <equals>
+          <property>an24/AChS/mp_r-mode</property>
           <value>1</value>
          </equals>
          <equals>
-          <property>an24/AChS/r-turn</property>
+          <property>an24/AChS/mp_r-turn</property>
           <value>1</value>
          </equals>
          </and>
         </condition>
         <command>nasal</command>
         <script>
-	instruments.stopwatch.start();
+	instruments.mp_stopwatch.start();
         </script>
     </binding>
 
     <binding>
         <condition>
          <equals>
-          <property>an24/AChS/r-mode</property>
+          <property>an24/AChS/mp_r-mode</property>
           <value>2</value>
          </equals>
         </condition>
         <command>nasal</command>
         <script>
-	instruments.stopwatch.stop();
+	instruments.mp_stopwatch.stop();
         </script>
     </binding>
 
     <binding>
         <condition>
          <equals>
-          <property>an24/AChS/r-mode</property>
+          <property>an24/AChS/mp_r-mode</property>
           <value>3</value>
          </equals>
         </condition>
         <command>property-assign</command>
-         <property>an24/AChS/stopwatch</property>
+         <property>an24/AChS/mp_stopwatch</property>
          <value>0</value>
     </binding>
 
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AChS/r-press-anim", -1.0, 0.1 );
-        settimer(func {interpolate("an24/AChS/r-press-anim", 0.0, 0.1 );},0.1);
+        interpolate("an24/AChS/mp_r-press-anim", -1.0, 0.1 );
+        settimer(func {interpolate("an24/AChS/mp_r-press-anim", 0.0, 0.1 );},0.1);
       </script>
     </binding>
   </action>
@@ -401,7 +416,7 @@
   <type>translate</type>
   <object-name>r-press</object-name>
   <object-name>right_knob</object-name>
-  <property>an24/AChS/r-press-anim</property>
+  <property>an24/AChS/mp_r-press-anim</property>
   <factor>0.003</factor>
   <axis>
     <x>1</x>
@@ -416,6 +431,12 @@
   <type>rotate</type>
   <object-name>hour_needle</object-name>
   <property>/instrumentation/clock/indicated-min</property>
+    <condition>
+      <equals>
+       <property>an24/AChS/mp_running</property>
+       <value>1.0</value>
+       </equals>
+    </condition>
   <factor>-0.5</factor>
   <axis>
     <x>1.0</x>
@@ -423,10 +444,17 @@
     <z>0.0</z>
   </axis>
 </animation>
+
 <animation>
   <type>rotate</type>
   <object-name>hour_needle</object-name>
   <property>/instrumentation/clock/indicated-hour</property>
+    <condition>
+      <equals>
+       <property>an24/AChS/mp_running</property>
+       <value>1.0</value>
+       </equals>
+    </condition>
   <factor>-30.0</factor>
   <axis>
     <x>1.0</x>
@@ -439,6 +467,12 @@
   <type>rotate</type>
   <object-name>min_needle</object-name>
   <property>/instrumentation/clock/indicated-sec</property>
+    <condition>
+      <equals>
+       <property>an24/AChS/mp_running</property>
+       <value>1.0</value>
+       </equals>
+    </condition>
   <factor>-0.1</factor>
   <axis>
     <x>1.0</x>
@@ -450,7 +484,13 @@
 <animation>
   <type>spin</type>
   <object-name>sec_needle</object-name>
-  <property>an24/AChS/r-turn</property>
+  <property>an24/AChS/mp_r-turn</property>
+    <condition>
+      <equals>
+       <property>an24/AChS/mp_running</property>
+       <value>1.0</value>
+       </equals>
+    </condition>
   <axis>
     <x>-1.0</x>
     <y>0.0</y>
@@ -463,7 +503,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ft_hour_needle</object-name>
-  <property>an24/AChS/flighttime</property>
+  <property>an24/AChS/mp_flighttime</property>
   <factor>-0.00833333</factor>
   <center>
     <x-m>0.0</x-m>
@@ -480,7 +520,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ft_hour_needle</object-name>
-   <property>an24/AChS/ft-offset</property>
+   <property>an24/AChS/mp_ft-offset</property>
   <factor>-0.00833333</factor>
   <center>
     <x-m>0.0</x-m>
@@ -497,7 +537,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ft_min_needle</object-name>
-  <property>an24/AChS/flighttime</property>
+  <property>an24/AChS/mp_flighttime</property>
   <factor>-0.1</factor>
   <center>
     <x-m>0.0</x-m>
@@ -514,7 +554,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ft_min_needle</object-name>
-   <property>an24/AChS/ft-offset</property>
+   <property>an24/AChS/mp_ft-offset</property>
   <factor>-0.1</factor>
   <center>
     <x-m>0.0</x-m>
@@ -533,7 +573,7 @@
 <animation>
   <type>rotate</type>
   <object-name>timer_sec_needle</object-name>
-  <property>an24/AChS/stopwatch</property>
+  <property>an24/AChS/mp_stopwatch</property>
   <factor>6.0</factor>
   <center>
     <x-m>0.0</x-m>

@@ -152,6 +152,39 @@
 </model>
 
 <model>
+  <name>ZK</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mprpnav/nav_ush.xml</path>
+  <offsets>
+    <x-m>3.7966</x-m>
+    <y-m>-0.894</y-m>
+    <z-m>0.8905</z-m>
+    <heading-deg>90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>KUS-730-1100</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmpnav/navkus730_1100.xml</path>
+  <offsets>
+    <x-m>3.5735</x-m>
+    <y-m>-0.89</y-m>
+    <z-m>0.8466</z-m>
+    <heading-deg>90</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>UVO-15M</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/UVO-15M_lpmpnav/navuvo-15m.xml</path>
+  <offsets>
+    <x-m>3.5738</x-m>
+    <y-m>-0.892</y-m>
+    <z-m>0.9404</z-m>
+    <heading-deg>90</heading-deg>
+  </offsets>
+</model>
+
+<model>
   <name>KM-8</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/KM-8_nav/km-8.xml</path>
   <offsets>

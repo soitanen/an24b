@@ -463,48 +463,140 @@ var ark2audible = func {
  setlistener("an24/SPU-7/nav_source", ark2audible);
 
 ##  AChS
-setprop("an24/AChS/l-press-anim", 0 );
+setprop("an24/AChS/mp_l-press-anim", 0 );
+setprop("an24/AChS/rc_l-press-anim", 0 );
+setprop("an24/AChS/nav_l-press-anim", 0 );
 
-#  AChS Stopwatch
-setprop("an24/AChS/stopwatch", 0 );
-setprop("an24/AChS/r-turn", 1 );
-setprop("an24/AChS/r-mode", 0 );
+#  Middle panel AChS Stopwatch
+setprop("an24/AChS/mp_stopwatch", 0 );
+setprop("an24/AChS/mp_r-turn", 1 );
+setprop("an24/AChS/mp_r-mode", 0 );
 
-var stopwatch = maketimer(1, func(){
+var mp_stopwatch = maketimer(1, func(){
 	var speedup = getprop("/sim/speed-up");
-	var sw_time = getprop("an24/AChS/stopwatch");
+	var sw_time = getprop("an24/AChS/mp_stopwatch");
 	var sw_time = sw_time + speedup ;
-	setprop("an24/AChS/stopwatch", int(sw_time));
+	setprop("an24/AChS/mp_stopwatch", int(sw_time));
 });
 
-# AChS Flighttime
-setprop("an24/AChS/flighttime", 0 );
-setprop("an24/AChS/l-mode", 0 );
+# Middle panel AChS Flighttime
+setprop("an24/AChS/mp_flighttime", 0 );
+setprop("an24/AChS/mp_l-mode", 0 );
 
-var flitetimer = maketimer(1, func(){
+var mp_flitetimer = maketimer(1, func(){
 	var speedup = getprop("/sim/speed-up");
-	var fl_time = getprop("an24/AChS/flighttime");
+	var fl_time = getprop("an24/AChS/mp_flighttime");
 	var fl_time = fl_time + speedup ;
-	setprop("an24/AChS/flighttime", int(fl_time));
+	setprop("an24/AChS/mp_flighttime", int(fl_time));
 });
 
-# AChS wind-up mechanism
-setprop("an24/AChS/wind_up", 10 );
+# Middle panel AChS wind-up/freeze mechanism; "running" 0 means not winded up, "serviceable" 0 clock frozen (not heated, not implemented yet)
+setprop("an24/AChS/mp_wind_up", 100 );
 
-var wtimer = maketimer(10, func(){
+var mp_wtimer = maketimer(10, func(){
 	var speedup = getprop("/sim/speed-up");
-	var windup = getprop("an24/AChS/wind_up");
-	if ( getprop("an24/AChS/wind_up") > 0 ) {
+	var windup = getprop("an24/AChS/mp_wind_up");
+	if ( getprop("an24/AChS/mp_wind_up") > 0 and getprop("/instrumentation/clock/serviceable") == 1 ) {
 	var windup = windup - speedup ;
-	setprop("an24/AChS/wind_up", int(windup));
-	setprop("an24/AChS/running", 1 );
+	setprop("an24/AChS/mp_wind_up", int(windup));
+	setprop("an24/AChS/mp_running", 1 );
 	}
 	else {
-	setprop("an24/AChS/running", 0 );
-#	wtimer.stop();
+	setprop("an24/AChS/mp_running", 0 );
+	mp_wtimer.stop();
+	mp_stopwatch.stop();
+	mp_flitetimer.stop();
 	}
 });
-wtimer.start();
+mp_wtimer.start();
+
+#  Right console AChS Stopwatch
+setprop("/instrumentation/clock[1]/serviceable", 1 );
+setprop("an24/AChS/rc_stopwatch", 0 );
+setprop("an24/AChS/rc_r-turn", 1 );
+setprop("an24/AChS/rc_r-mode", 0 );
+
+var rc_stopwatch = maketimer(1, func(){
+	var speedup = getprop("/sim/speed-up");
+	var sw_time = getprop("an24/AChS/rc_stopwatch");
+	var sw_time = sw_time + speedup ;
+	setprop("an24/AChS/rc_stopwatch", int(sw_time));
+});
+
+# Right console AChS Flighttime
+setprop("an24/AChS/rc_flighttime", 0 );
+setprop("an24/AChS/rc_l-mode", 0 );
+
+var rc_flitetimer = maketimer(1, func(){
+	var speedup = getprop("/sim/speed-up");
+	var fl_time = getprop("an24/AChS/rc_flighttime");
+	var fl_time = fl_time + speedup ;
+	setprop("an24/AChS/rc_flighttime", int(fl_time));
+});
+
+# Right console AChS wind-up/freeze mechanism; "running" 0 means not winded up, "serviceable" 0 clock frozen (not heated, not implemented yet)
+setprop("an24/AChS/rc_wind_up", 100 );
+
+var rc_wtimer = maketimer(10, func(){
+	var speedup = getprop("/sim/speed-up");
+	var windup = getprop("an24/AChS/rc_wind_up");
+	if ( getprop("an24/AChS/rc_wind_up") > 0 and getprop("/instrumentation/clock[1]/serviceable") == 1 ) {
+	var windup = windup - speedup ;
+	setprop("an24/AChS/rc_wind_up", int(windup));
+	setprop("an24/AChS/rc_running", 1 );
+	}
+	else {
+	setprop("an24/AChS/rc_running", 0 );
+	rc_wtimer.stop();
+	rc_stopwatch.stop();
+	rc_flitetimer.stop();
+	}
+});
+rc_wtimer.start();
+
+#  Navigator's AChS Stopwatch
+setprop("/instrumentation/clock[2]/serviceable", 1 );
+setprop("an24/AChS/nav_stopwatch", 0 );
+setprop("an24/AChS/nav_r-turn", 1 );
+setprop("an24/AChS/nav_r-mode", 0 );
+
+var nav_stopwatch = maketimer(1, func(){
+	var speedup = getprop("/sim/speed-up");
+	var sw_time = getprop("an24/AChS/nav_stopwatch");
+	var sw_time = sw_time + speedup ;
+	setprop("an24/AChS/nav_stopwatch", int(sw_time));
+});
+
+# Navigator's AChS Flighttime
+setprop("an24/AChS/nav_flighttime", 0 );
+setprop("an24/AChS/nav_l-mode", 0 );
+
+var nav_flitetimer = maketimer(1, func(){
+	var speedup = getprop("/sim/speed-up");
+	var fl_time = getprop("an24/AChS/nav_flighttime");
+	var fl_time = fl_time + speedup ;
+	setprop("an24/AChS/nav_flighttime", int(fl_time));
+});
+
+# Navigator's AChS wind-up/freeze mechanism; "running" 0 means not winded up, "serviceable" 0 clock frozen (not heated, not implemented yet)
+setprop("an24/AChS/nav_wind_up", 100 );
+
+var nav_wtimer = maketimer(10, func(){
+	var speedup = getprop("/sim/speed-up");
+	var windup = getprop("an24/AChS/nav_wind_up");
+	if ( getprop("an24/AChS/nav_wind_up") > 0 and getprop("/instrumentation/clock[2]/serviceable") == 1 ) {
+	var windup = windup - speedup ;
+	setprop("an24/AChS/nav_wind_up", int(windup));
+	setprop("an24/AChS/nav_running", 1 );
+	}
+	else {
+	setprop("an24/AChS/nav_running", 0 );
+	nav_wtimer.stop();
+	nav_stopwatch.stop();
+	nav_flitetimer.stop();
+	}
+});
+nav_wtimer.start();
 
 # 2PPT1-4 Fuel Level Indicator
 var fuelind = func {
@@ -542,4 +634,3 @@ var sp_chan2freq = func {
 }
 
 setlistener( "an24/SP-50/channel", sp_chan2freq );
-

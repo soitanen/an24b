@@ -11,10 +11,10 @@
    <object-name>needle_1</object-name>
    <object-name>needle_2</object-name>
    <emission>
-     <red>1.0</red>
-     <green>0.5</green>
-     <blue>0.3</blue>
-     <factor-prop>/controls/lighting/console-l_red</factor-prop>
+     <red>0.1</red>
+     <green>0.02</green>
+     <blue>0.02</blue>
+   <factor-prop>/controls/lighting/nav_panel_instr_red</factor-prop>
    </emission>
  </animation>
 

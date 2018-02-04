@@ -7,14 +7,25 @@
 
  <animation>
    <type>material</type>
-   <object-name>ush-face</object-name>
-   <object-name>ush-inner</object-name>
-   <object-name>ush-middle</object-name>
+   <object-name>ush_inner</object-name>
+   <object-name>ush_middle</object-name>
+   <object-name>ush_outer</object-name>
    <emission>
      <red>1.0</red>
      <green>0.7</green>
      <blue>0.4</blue>
-   <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+   <factor-prop>/controls/lighting/nav_panel_instr_red</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>ush-face</object-name>
+   <emission>
+     <red>0.1</red>
+     <green>0.02</green>
+     <blue>0.02</blue>
+   <factor-prop>/controls/lighting/nav_panel_instr_red</factor-prop>
    </emission>
  </animation>
 

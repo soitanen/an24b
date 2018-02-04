@@ -332,7 +332,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/lpkus730_1100.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmpnav/lpkus730_1100.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.6907</y-m>
@@ -379,7 +379,7 @@
 
 <model>
   <name>UVO-15M</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/UVO-15M_lpmp/lpuvo-15m.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/UVO-15M_lpmpnav/lpuvo-15m.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.5978</y-m>
@@ -585,7 +585,7 @@
 
 <model>
   <name>KUS-730-1100</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmp/mpkus730_1100.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/KUS-730_lpmpnav/mpkus730_1100.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.2669</y-m>
@@ -711,7 +711,7 @@
 
 <model>
   <name>ZK-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mprp/mp_ush.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mprpnav/mp_ush.xml</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.3441</y-m>
@@ -937,7 +937,7 @@
 
 <model>
   <name>ZK-2</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mprp/rp_ush.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/ZK_mprpnav/rp_ush.xml</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>0.6</y-m>

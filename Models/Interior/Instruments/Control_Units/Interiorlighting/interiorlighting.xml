@@ -114,4 +114,26 @@
   </offsets>
 </model>
 
+<!-- knobs on nav panel -->
+
+<model>
+ <path>knob_nav_panel_instr_red.xml</path>
+  <offsets>
+    <heading-deg>90</heading-deg>
+    <x-m>3.6</x-m>
+    <y-m>-0.895</y-m>
+    <z-m>0.736</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>knob_nav_panel_red.xml</path>
+  <offsets>
+    <heading-deg>90</heading-deg>
+    <x-m>3.835</x-m>
+    <y-m>-0.895</y-m>
+    <z-m>0.736</z-m>
+  </offsets>
+</model>
+
 </PropertyList>
