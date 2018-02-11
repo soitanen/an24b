@@ -491,7 +491,7 @@ var mp_flitetimer = maketimer(1, func(){
 });
 
 # Middle panel AChS wind-up/freeze mechanism; "running" 0 means not winded up, "serviceable" 0 clock frozen (not heated, not implemented yet)
-setprop("an24/AChS/mp_wind_up", 100 );
+setprop("an24/AChS/mp_wind_up", 1000 );
 
 var mp_wtimer = maketimer(10, func(){
 	var speedup = getprop("/sim/speed-up");
@@ -535,7 +535,7 @@ var rc_flitetimer = maketimer(1, func(){
 });
 
 # Right console AChS wind-up/freeze mechanism; "running" 0 means not winded up, "serviceable" 0 clock frozen (not heated, not implemented yet)
-setprop("an24/AChS/rc_wind_up", 100 );
+setprop("an24/AChS/rc_wind_up", 1000 );
 
 var rc_wtimer = maketimer(10, func(){
 	var speedup = getprop("/sim/speed-up");
@@ -579,7 +579,7 @@ var nav_flitetimer = maketimer(1, func(){
 });
 
 # Navigator's AChS wind-up/freeze mechanism; "running" 0 means not winded up, "serviceable" 0 clock frozen (not heated, not implemented yet)
-setprop("an24/AChS/nav_wind_up", 100 );
+setprop("an24/AChS/nav_wind_up", 1000 );
 
 var nav_wtimer = maketimer(10, func(){
 	var speedup = getprop("/sim/speed-up");

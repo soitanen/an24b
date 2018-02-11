@@ -40,16 +40,6 @@
 
 <!-- Right panel -->
 
-<model>
- <path>sw_gik.xml</path>
-  <offsets>
-    <pitch-deg>-20</pitch-deg>
-    <x-m>2.138</x-m>
-    <y-m>0.6924</y-m>
-    <z-m>0.675</z-m>
-  </offsets>
-</model>
-
 <!--model>
  <path>sw_gmk.xml</path>
   <offsets>
@@ -65,27 +55,27 @@
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.138</x-m>
-    <y-m>0.7136</y-m>
+    <y-m>0.637</y-m>
     <z-m>0.675</z-m>
   </offsets>
 </model>
 
-<!--model>
- <path>sw_agd_right.xml</path>
+<model>
+ <path>sw_gik.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.138</x-m>
-    <y-m>0.6362</y-m>
+    <y-m>0.6568</y-m>
     <z-m>0.675</z-m>
   </offsets>
-</model-->
+</model>
 
 <model>
  <path>sw_gpk.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
     <x-m>2.138</x-m>
-    <y-m>0.7333</y-m>
+    <y-m>0.6736</y-m>
     <z-m>0.675</z-m>
   </offsets>
 </model>

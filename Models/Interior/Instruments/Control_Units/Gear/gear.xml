@@ -65,6 +65,17 @@
   </offsets>
 </model>
 
+<!-- Tiller (steering wheel) -->
+
+<model>
+ <path>steering-wheel.xml</path>
+  <offsets>
+    <x-m>2.69</x-m>
+    <y-m>-0.87</y-m>
+    <z-m>0.5226</z-m>
+  </offsets>
+</model>
+
 <!-- Brakes - Anti-Skid -->
 
 <model>

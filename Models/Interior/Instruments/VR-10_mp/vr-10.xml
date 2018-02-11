@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 
+<!-- VR-10 Variometer, indicates cabin pressure altitude change -->
+
 <PropertyList>
  <path>vr-10.ac</path>
 

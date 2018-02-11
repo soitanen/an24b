@@ -347,7 +347,6 @@
     <binding>
       <command>property-cycle</command>
       <property>an24/AChS/mp_r-mode</property>
-      <!--value type="int">0</value--> <!-- Stopped -->
       <value type="int">1</value> <!-- Start -->
       <value type="int">2</value> <!-- Stop -->
       <value type="int">3</value> <!-- Reset -->

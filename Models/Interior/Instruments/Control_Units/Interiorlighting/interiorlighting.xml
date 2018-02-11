@@ -54,8 +54,8 @@
  <path>knob_r_panel_red.xml</path>
   <offsets>
     <pitch-deg>-90</pitch-deg>
-    <x-m>2.37</x-m>
-    <y-m>0.89</y-m>
+    <x-m>2.42</x-m>
+    <y-m>0.905</y-m>
     <z-m>0.49</z-m>
   </offsets>
 </model>
@@ -64,8 +64,8 @@
  <path>knob_r_console_red.xml</path>
   <offsets>
     <pitch-deg>-90</pitch-deg>
-    <x-m>2.37</x-m>
-    <y-m>0.935</y-m>
+    <x-m>2.41</x-m>
+    <y-m>0.955</y-m>
     <z-m>0.49</z-m>
   </offsets>
 </model>
