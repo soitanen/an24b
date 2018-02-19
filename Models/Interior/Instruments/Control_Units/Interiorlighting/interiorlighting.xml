@@ -21,9 +21,9 @@
 <model>
  <path>knob_l_panel_red.xml</path>
   <offsets>
-  <heading-deg>84</heading-deg>
-    <x-m>2.43</x-m>
-    <y-m>-0.964</y-m>
+  <heading-deg>82</heading-deg>
+    <x-m>2.37</x-m>
+    <y-m>-0.965</y-m>
     <z-m>0.75</z-m>
   </offsets>
 </model>
@@ -31,9 +31,9 @@
 <model>
  <path>knob_m_panel_red.xml</path>
   <offsets>
-  <heading-deg>83</heading-deg>
-    <x-m>2.39</x-m>
-    <y-m>-0.961</y-m>
+  <heading-deg>82</heading-deg>
+    <x-m>2.32</x-m>
+    <y-m>-0.958</y-m>
     <z-m>0.75</z-m>
   </offsets>
 </model>
@@ -41,9 +41,9 @@
 <model>
  <path>knob_l_console_red.xml</path>
   <offsets>
-  <heading-deg>83</heading-deg>
-    <x-m>2.35</x-m>
-    <y-m>-0.958</y-m>
+  <heading-deg>82</heading-deg>
+    <x-m>2.27</x-m>
+    <y-m>-0.95</y-m>
     <z-m>0.75</z-m>
   </offsets>
 </model>

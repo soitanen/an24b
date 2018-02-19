@@ -70,9 +70,9 @@
 <model>
  <path>steering-wheel.xml</path>
   <offsets>
-    <x-m>2.69</x-m>
+    <x-m>2.6</x-m>
     <y-m>-0.87</y-m>
-    <z-m>0.5226</z-m>
+    <z-m>0.538</z-m>
   </offsets>
 </model>
 

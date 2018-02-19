@@ -185,7 +185,7 @@
   <property>an24/animations/armrest</property>
   <factor>90.0</factor>
   <center>
-    <x-m>0.2817</x-m>
+    <x-m>0.1817</x-m>
     <y-m>0.0</y-m>
     <z-m>0.3076</z-m>    
   </center>
@@ -224,7 +224,7 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>0.3827</x-m>
+    <x-m>0.3027</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.2587</z-m>    
   </center>
@@ -241,7 +241,7 @@
   <property>an24/animations/centerseat</property>
   <factor>183.0</factor>
   <center>
-    <x-m>0.3827</x-m>
+    <x-m>0.3027</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.2587</z-m>
   </center>
@@ -258,7 +258,7 @@
   <property>an24/animations/centerseat</property>
   <factor>100.0</factor>
   <center>
-    <x-m>0.204</x-m>
+    <x-m>0.124</x-m>
     <y-m>0.0</y-m>
     <z-m>-0.612</z-m>    
   </center>
@@ -960,10 +960,10 @@
   <name>SPU-7</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/lcspu-7.xml</path>
   <offsets>
-    <x-m>2.5086</x-m>
+    <x-m>2.463</x-m>
     <y-m>-0.98</y-m>
-    <z-m>0.7</z-m>
-    <heading-deg>84</heading-deg>
+    <z-m>0.719</z-m>
+    <heading-deg>82</heading-deg>
   </offsets>
 </model>
 
@@ -973,10 +973,10 @@
   <name>TCT</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/TCT_lc/tct.xml</path>
   <offsets>
-    <x-m>2.375</x-m>
-    <y-m>-0.958</y-m>
-    <z-m>0.5389</z-m>
-    <heading-deg>84</heading-deg>
+    <x-m>2.2945</x-m>
+    <y-m>-0.95</y-m>
+    <z-m>0.5712</z-m>
+    <heading-deg>82</heading-deg>
   </offsets>
 </model>
 
@@ -986,10 +986,10 @@
   <name>UIZ-3-TG-16</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/UIx-xxx_mplc/lc_uiz-3.xml</path>
   <offsets>
-    <x-m>2.7168</x-m>
+    <x-m>2.6123</x-m>
     <y-m>-1.0</y-m>
-    <z-m>0.543</z-m>
-    <heading-deg>84</heading-deg>
+    <z-m>0.5776</z-m>
+    <heading-deg>82</heading-deg>
   </offsets>
 </model>
 
@@ -997,10 +997,10 @@
   <name>TV-1_TG-16</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/TV-1_mprp/lc_tv-1.xml</path>
   <offsets>
-    <x-m>2.6365</x-m>
-    <y-m>-0.991</y-m>
-    <z-m>0.536</z-m>
-    <heading-deg>84</heading-deg>
+    <x-m>2.544</x-m>
+    <y-m>-0.99</y-m>
+    <z-m>0.5457</z-m>
+    <heading-deg>82</heading-deg>
   </offsets>
 </model>
 
@@ -1009,10 +1009,10 @@
   <name>TE-40M</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/TE-40M_lc/te-40.xml</path>
   <offsets>
-    <x-m>2.545</x-m>
-    <y-m>-0.9907</y-m>
-    <z-m>0.5524</z-m>
-    <heading-deg>84</heading-deg>
+    <x-m>2.47</x-m>
+    <y-m>-0.985</y-m>
+    <z-m>0.575</z-m>
+    <heading-deg>82</heading-deg>
   </offsets>
 </model>
 
@@ -1022,10 +1022,10 @@
   <name>Engine_start_panel</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Engine_start_panel_lc/engine_start_panel.xml</path>
   <offsets>
-    <x-m>2.52</x-m>
-    <y-m>-0.845</y-m>
-    <z-m>0.454</z-m>
-    <heading-deg>180</heading-deg>
+    <x-m>2.44</x-m>
+    <y-m>-0.83</y-m>
+    <z-m>0.472</z-m>
+    <heading-deg>176</heading-deg>
   </offsets>
 </model>
 
@@ -1047,9 +1047,9 @@
   <name>GPK-52</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/GPK-52AP_rc/gpk-52.xml</path>
   <offsets>
-    <x-m>2.5722</x-m>
-    <y-m>0.926</y-m>
-    <z-m>0.451</z-m>
+    <x-m>2.5618</x-m>
+    <y-m>0.9189</y-m>
+    <z-m>0.478</z-m>
   </offsets>
 </model>
 
@@ -1068,9 +1068,9 @@
   <name>SPU-7</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/SPU-7_lcrcnaveng/rcspu-7.xml</path>
   <offsets>
-    <x-m>2.187</x-m>
-    <y-m>0.932</y-m>
-    <z-m>0.651</z-m>
+    <x-m>2.179</x-m>
+    <y-m>0.928</y-m>
+    <z-m>0.666</z-m>
     <heading-deg>-79.5</heading-deg>
   </offsets>
 </model>
@@ -1079,9 +1079,9 @@
   <name>Achs-1</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/ACHS-1_mprcnav/rcachs-1.xml</path>
   <offsets>
-    <x-m>2.488</x-m>
-    <y-m>0.988</y-m>
-    <z-m>0.707</z-m>
+    <x-m>2.475</x-m>
+    <y-m>0.984</y-m>
+    <z-m>0.7253</z-m>
     <heading-deg>-79.5</heading-deg>
   </offsets>
 </model>
@@ -1090,9 +1090,9 @@
   <name>R-836</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/R-836_rceng/rc_r-836.xml</path>
   <offsets>
-    <x-m>2.5013</x-m>
-    <y-m>0.9917</y-m>
-    <z-m>0.5879</z-m>
+    <x-m>2.487</x-m>
+    <y-m>0.99</y-m>
+    <z-m>0.6051</z-m>
     <heading-deg>-79.5</heading-deg>
   </offsets>
 </model>
@@ -1101,9 +1101,9 @@
   <name>US-8k</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/US-8K_rceng/rc_us-8k.xml</path>
   <offsets>
-    <x-m>2.3338</x-m>
-    <y-m>0.956</y-m>
-    <z-m>0.6259</z-m>
+    <x-m>2.324</x-m>
+    <y-m>0.95</y-m>
+    <z-m>0.642</z-m>
     <heading-deg>-79.5</heading-deg>
   </offsets>
 </model>

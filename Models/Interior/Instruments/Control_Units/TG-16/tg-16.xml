@@ -7,20 +7,20 @@
 <model>
  <path>wl_tg-started.xml</path>
   <offsets>
-    <x-m>2.605</x-m>
-    <y-m>-0.982</y-m>
-    <z-m>0.595</z-m>
-    <heading-deg>84</heading-deg>
+    <x-m>2.54</x-m>
+    <y-m>-0.984</y-m>
+    <z-m>0.618</z-m>
+    <heading-deg>82</heading-deg>
   </offsets>
 </model>
 
 <model>
  <path>wl_tg-starting.xml</path>
   <offsets>
-    <x-m>2.63</x-m>
-    <y-m>-0.984</y-m>
-    <z-m>0.595</z-m>
-    <heading-deg>84</heading-deg>
+    <x-m>2.57</x-m>
+    <y-m>-0.988</y-m>
+    <z-m>0.618</z-m>
+    <heading-deg>82</heading-deg>
   </offsets>
 </model>
 

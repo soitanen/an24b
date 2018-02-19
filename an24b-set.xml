@@ -29,9 +29,9 @@
    <config>
    <x-offset-m archive="y">-0.48</x-offset-m>
    <y-offset-m archive="y">1.26</y-offset-m>
-   <z-offset-m archive="y">-5.5</z-offset-m>
+   <z-offset-m archive="y">-5.6</z-offset-m>
    <pitch-offset-deg type="double">-13.0</pitch-offset-deg>
-   <default-field-of-view-deg type="double">72.0</default-field-of-view-deg>
+   <default-field-of-view-deg type="double">74.0</default-field-of-view-deg>
    </config>
   </view>
   <view n="101">
@@ -596,9 +596,11 @@
       <elevator-alt-correction type="double">0</elevator-alt-correction>
     </internal>
   </AP-28l1>
+
   <gear>
     <steer_mode>2</steer_mode>
   </gear>
+
   <instrumentation>
     <idle-lock>
       <idle-lock>0</idle-lock>
@@ -613,8 +615,8 @@
    <lighting-save>0</lighting-save>
   </PPS>
   <SP-50>
-   <course_freq-mhz>110.3</course_freq-mhz>
-   <channel>6</channel>
+   <course_freq-mhz type="double">110.3</course_freq-mhz>
+   <channel type="int">6</channel>
   </SP-50>
 </an24>
 
@@ -643,6 +645,11 @@
       <z-offset-m type="double">1.05</z-offset-m>
     </antenna>
   </radar-altimeter>
+  <transponder>
+   <inputs>
+    <knob-mode type="int">0</knob-mode>
+   </inputs>
+  </transponder>
   <zk2>
     <heading-bug type="double">0</heading-bug>
   </zk2>
