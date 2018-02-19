@@ -53,7 +53,7 @@
       <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/ap-28l1/switches/up-down-l", 0.0, 0.1 );
+        interpolate("an24/AP-28l1/switches/up-down-l", 0.0, 0.1 );
       </script>
     </binding>
     </mod-up>
