@@ -5,7 +5,7 @@ kids 1
 OBJECT poly
 name "lightplate"
 loc 0.000486374 -0.000176966 0
-texture "anti-ice.png"
+texture "rp_lightplate.png"
 crease 45.000000
 numvert 112
 6.53267e-05 -0.000708342 0.0440385

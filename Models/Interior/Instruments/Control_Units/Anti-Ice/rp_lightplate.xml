@@ -3,7 +3,7 @@
 <!-- Lightplate on lower right panel -->
 
 <PropertyList>
- <path>lightplate.ac</path>
+ <path>rp_lightplate.ac</path>
 
  <animation>
    <type>material</type>

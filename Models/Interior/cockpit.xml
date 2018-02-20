@@ -1108,6 +1108,19 @@
   </offsets>
 </model>
 
+<!-- *************************************** -->
+
+<model>
+  <name>Pitot-Heat_Air-Cond</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Pitot-Heat_Air-Cond_rc/rc_pitot-heat_air-cond.xml</path>
+  <offsets>
+    <heading-deg>10.5</heading-deg>
+    <x-m>2.270</x-m>
+    <y-m>0.8741</y-m>
+    <z-m>0.5486</z-m>
+  </offsets>
+</model>
+
 <!--************************** OVERHEAD ***************************-->
 
 <model>
@@ -1235,81 +1248,81 @@
   </offsets>
 </model>
 
-<!-- ******************************** lamps and switches *********************************** -->
+<!--****************** Everything in "Contol_Units" *****************-->
 
 <model>
-  <name>radio_alt</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/UV-5M/uv-5m.xml</path>
-</model>
-
-<model>
-  <name>marker</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Marker/marker.xml</path>
-</model>
-
-<model>
-  <name>gear</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Gear/gear.xml</path>
-</model>
-
-<model>
-  <name>proppitch</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Proppitch/proppitch.xml</path>
-</model>
-
-<model>
-  <name>interiorlighting</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Interiorlighting/interiorlighting.xml</path>
-</model>
-
-<model>
-  <name>agd_eup_cgv</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/AGD_EUP_CGV_GIK_GPK/agd_eup_cgv_gik_gpk.xml</path>
-</model>
-
-<model>
-  <name>anti_ice</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Anti-Ice/anti-ice.xml</path>
-</model>
-
-<model>
-  <name>bottommp</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Bottom_mp/bottom_mp.xml</path>
-</model>
-
-<model>
-  <name>fuel</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Fuel_01/fuel_01.xml</path>
-</model>
-
-<model>
-  <name>above_AGD</name>
+  <name>Above_AGD</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Above_AGD/above_agd.xml</path>
 </model>
 
 <model>
-  <name>emerg_pressure-relief</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Pressure/pressure.xml</path>
+  <name>AGD_EUP_CGV_GIK_GPK</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/AGD_EUP_CGV_GIK_GPK/agd_eup_cgv_gik_gpk.xml</path>
 </model>
 
 <model>
-  <name>bank-pitch_fix</name>
+  <name>Anti-Ice</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Anti-Ice/lprp_anti-ice.xml</path>
+</model>
+
+<model>
+  <name>Bank-Pitch</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Bank-Pitch/bank-pitch.xml</path>
 </model>
 
 <model>
-  <name>aileron_rudder_trim</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Trim/aileron-rudder-trim.xml</path>
+  <name>Bottom_mp</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Bottom_mp/bottom_mp.xml</path>
 </model>
 
 <model>
-  <name>TG-16-start</name>
+  <name>Fuel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Fuel/fuel.xml</path>
+</model>
+
+<model>
+  <name>Gear</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Gear/gear.xml</path>
+</model>
+
+<model>
+  <name>Interiorlighting</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Interiorlighting/interiorlighting.xml</path>
+</model>
+
+<model>
+  <name>Marker</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Marker/marker.xml</path>
+</model>
+
+<model>
+  <name>Pressure</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Pressure/pressure.xml</path>
+</model>
+
+<model>
+  <name>Proppitch</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Proppitch/proppitch.xml</path>
+</model>
+
+<model>
+  <name>Signal-Horn</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Signal-Horn/signal_horn.xml</path>
+</model>
+
+<model>
+  <name>TG-16</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/TG-16/tg-16.xml</path>
 </model>
 
 <model>
-  <name>signal_horn</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/signal_horn/signal_horn.xml</path>
+  <name>Trim</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Trim/aileron-rudder-trim.xml</path>
+</model>
+
+<model>
+  <name>UV-5M</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/UV-5M/uv-5m.xml</path>
 </model>
 
 </PropertyList>

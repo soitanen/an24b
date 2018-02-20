@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
-<!-- Window anti-ice low heat ON -->
+<!-- Window anti-ice intense heat ON -->
 
 <PropertyList>
  <path>../../../shared/switches/vng-15.ac</path>
 
- <animation>
+<animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
   <visible>false</visible>
@@ -21,19 +21,19 @@
         </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/window_heating-left-low", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/window_heating-left-intense", 1.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/sw_window_heating-left-low", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/sw_window_heating-left-intense", 1.0, 0.1 );
       </script>
     </binding>
   </action>
 </animation>
 
- <animation>
+<animation>
   <type>pick</type>
   <object-name>clickspot_down</object-name>
   <visible>false</visible>
@@ -43,8 +43,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/window_heating-left-low", 0.0, 0.1 );
-        interpolate("an24/instrumentation/sw_window_heating-left-low", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/window_heating-left-intense", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/sw_window_heating-left-intense", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -53,7 +53,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/instrumentation/sw_window_heating-left-low</property>
+   <property>an24/Anti-Ice/sw_window_heating-left-intense</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
@@ -64,6 +64,5 @@
     <z>0.0</z>
   </axis>
  </animation>
- 
 
 </PropertyList>

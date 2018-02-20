@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 
-<!-- Signal light of heating of static pitot S5 -->
+<!-- Signal light of heating of static pitot S6 -->
 
 <PropertyList>
- <path>../../../shared/lamps/warninglamp02.ac</path>
+ <path>../../shared/lamps/warninglamp02.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/warninglamp02greenplain.png</texture>
+ <texture>../../shared/lamps/warninglamp02greenplain.png</texture>
 </animation>
 
 <!--animation>
