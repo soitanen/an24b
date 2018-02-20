@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- AZS-10; Heating for pressure sensor, switch I, left pilot -->
+<!-- AZS-10; Heating for left pilot's pressure sensors -->
 
 <PropertyList>
  <path>../../shared/switches/azs.ac</path>
@@ -32,6 +32,7 @@
       <command>nasal</command>
       <script>
         interpolate("an24/AZS/sw0411", -1.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S1S5A1", 0.0, 0.1 );
       </script>
     </binding>
   </action>
