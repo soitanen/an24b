@@ -13,12 +13,12 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-        <!--condition>
+        <condition>
          <equals>
-         <property>an24/AZS/sw0413</property>
+         <property>an24/AZS/sw0410</property>
          <value>1.0</value>
          </equals>
-        </condition-->
+        </condition>
       <command>nasal</command>
       <script>
         interpolate("an24/Anti-Ice/pitot_S3A2", 1.0, 0.1 );

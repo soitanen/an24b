@@ -49,15 +49,27 @@
   </offsets>
 </model>
 
+<model>
+ <path>rc_sw09_S3S4S7.xml</path>
+  <offsets>
+    <pitch-deg>-60</pitch-deg>
+    <x-m>-0.0974</x-m>
+    <y-m>0.01294</y-m>
+    <z-m>0.024</z-m>
+  </offsets>
+</model>
+
+<!-- Lamps -->
+
 <!-- Bottom row, left to right, static pitots -->
 
 <model>
  <path>rc_sl01_static1.xml</path>
   <offsets>
     <pitch-deg>-90</pitch-deg>
-    <x-m>0.03</x-m>
-    <y-m>-0.05</y-m>
-    <z-m>-0.039</z-m>
+    <x-m>0.033</x-m>
+    <y-m>-0.052</y-m>
+    <z-m>-0.045</z-m>
   </offsets>
 </model>
 
@@ -65,9 +77,9 @@
  <path>rc_sl02_static5.xml</path>
   <offsets>
     <pitch-deg>-90</pitch-deg>
-    <x-m>0.03</x-m>
-    <y-m>-0.028</y-m>
-    <z-m>-0.039</z-m>
+    <x-m>0.033</x-m>
+    <y-m>-0.03</y-m>
+    <z-m>-0.045</z-m>
   </offsets>
 </model>
 
@@ -75,9 +87,9 @@
  <path>rc_sl03_static3.xml</path>
   <offsets>
     <pitch-deg>-90</pitch-deg>
-    <x-m>0.03</x-m>
+    <x-m>0.033</x-m>
     <y-m>0.0</y-m>
-    <z-m>-0.039</z-m>
+    <z-m>-0.045</z-m>
   </offsets>
 </model>
 
@@ -85,9 +97,9 @@
  <path>rc_sl04_static2.xml</path>
   <offsets>
     <pitch-deg>-90</pitch-deg>
-    <x-m>0.03</x-m>
-    <y-m>0.028</y-m>
-    <z-m>-0.039</z-m>
+    <x-m>0.033</x-m>
+    <y-m>0.03</y-m>
+    <z-m>-0.045</z-m>
   </offsets>
 </model>
 
@@ -95,9 +107,9 @@
  <path>rc_sl05_static6.xml</path>
   <offsets>
     <pitch-deg>-90</pitch-deg>
-    <x-m>0.03</x-m>
-    <y-m>0.05</y-m>
-    <z-m>-0.039</z-m>
+    <x-m>0.033</x-m>
+    <y-m>0.052</y-m>
+    <z-m>-0.045</z-m>
   </offsets>
 </model>
 
@@ -107,9 +119,9 @@
  <path>rc_sl06_dynamic1.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
-    <x-m>-0.04</x-m>
+    <x-m>-0.043</x-m>
     <y-m>-0.039</y-m>
-    <z-m>-0.005</z-m>
+    <z-m>-0.006</z-m>
   </offsets>
 </model>
 
@@ -117,9 +129,9 @@
  <path>rc_sl07_dynamic2.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
-    <x-m>-0.04</x-m>
+    <x-m>-0.043</x-m>
     <y-m>0.0</y-m>
-    <z-m>-0.005</z-m>
+    <z-m>-0.006</z-m>
   </offsets>
 </model>
 
@@ -127,9 +139,9 @@
  <path>rc_sl08_dynamic3.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
-    <x-m>-0.04</x-m>
+    <x-m>-0.043</x-m>
     <y-m>0.039</y-m>
-    <z-m>-0.005</z-m>
+    <z-m>-0.006</z-m>
   </offsets>
 </model>
 
