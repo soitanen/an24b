@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Switch for heating of pitots S2, S6 and A3 (F/O's KUS-730 ASI, VAR-30 variometer, UVID-15/UVO-15 altimeter, UVPD-15 differential pressure) -->
+<!-- Switch for heating of pitots S4 and S7 (KV-11 altitude correction of autopilot AP-28 and system SDU) -->
 
 <PropertyList>
  <path>../../shared/switches/ppng-15k.ac</path>
@@ -15,19 +15,31 @@
     <binding>
         <condition>
          <equals>
-         <property>an24/AZS/sw0412</property>
+         <property>an24/AZS/sw0410</property>
          <value>1.0</value>
          </equals>
         </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/pitot_S2S6A3", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S4S7", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0410</property>
+         <value>0.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Anti-Ice/pitot_S4S7", 0.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/sw_pitot_S2S6A3", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/sw_pitot_S4S7", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -43,8 +55,8 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/pitot_S2S6A3", 0.0, 0.1 );
-        interpolate("an24/Anti-Ice/sw_pitot_S2S6A3", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S4S7", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/sw_pitot_S4S7", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -58,10 +70,33 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0410</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/pitot_S2S6A3", -1.0, 0.1 );
-        interpolate("an24/Anti-Ice/sw_pitot_S2S6A3", -1.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S4S7", -1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0410</property>
+         <value>0.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Anti-Ice/pitot_S4S7", 0.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Anti-Ice/sw_pitot_S4S7", -1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -70,7 +105,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/Anti-Ice/sw_pitot_S2S6A3</property>
+   <property>an24/Anti-Ice/sw_pitot_S4S7</property>
   <interpolation>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
     <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>

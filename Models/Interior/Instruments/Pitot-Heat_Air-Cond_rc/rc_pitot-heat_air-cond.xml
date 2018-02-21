@@ -50,7 +50,7 @@
 </model>
 
 <model>
- <path>rc_sw09_S3S4S7.xml</path>
+ <path>rc_sw09_S4S7.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
     <x-m>-0.0974</x-m>
