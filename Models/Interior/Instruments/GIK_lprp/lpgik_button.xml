@@ -12,7 +12,7 @@
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-assign</command>
-			<property>instrumentation/gik-1/correction-speed-degsec</property>
+			<property>/instrumentation/gik-1/correction-speed-degsec</property>
 			<value>12</value>
 		</binding>
 		<binding>
@@ -24,7 +24,7 @@
 		<mod-up>
 		<binding>
 			<command>property-assign</command>
-			<property>instrumentation/gik-1/correction-speed-degsec</property>
+			<property>/instrumentation/gik-1/correction-speed-degsec</property>
 			<value>0.05</value>
 		</binding>
 		<binding>

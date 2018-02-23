@@ -158,6 +158,10 @@
 	    <desc>Navigator View</desc>
 	   </key>
    	   <key>
+	    <name>s</name>
+	    <desc>Autostart</desc>
+	   </key>
+   	   <key>
 	    <name> </name>
 	    <desc> </desc>
 	   </key>
@@ -240,6 +244,16 @@
 
 <input>
  <keyboard>
+
+<key n="115"> <!-- s -->
+    <name>autostart</name>
+    <desc>Autostart</desc>
+       <binding>
+        <command>nasal</command>
+        <script>autostart.startup();</script>
+       </binding>
+     </key>
+
      <key n="258">
        <name>F2</name>
        <desc>Prop pitch lock</desc>
@@ -686,6 +700,9 @@
 </systems>
 
 <nasal>
+  <autostart>
+    <file>Aircraft/an24b/Nasal/autostart.nas</file>
+  </autostart>
   <friction>
     <file>Aircraft/an24b/Nasal/friction.nas</file>
   </friction>

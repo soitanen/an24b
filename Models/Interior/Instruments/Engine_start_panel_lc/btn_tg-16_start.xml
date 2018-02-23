@@ -28,22 +28,22 @@
         setprop("/fdm/jsbsim/propulsion/tank[3]/priority", 0.0 );
         }-->
 	setprop("/fdm/jsbsim/propulsion/cutoff_cmd", 0.0);
-        setprop("/controls/engines/engine[2]/cutoff", 1.0);
-        setprop("an24/Start-Panel/discontinuestarttg", 0.0 );
-        setprop("/controls/engines/engine[2]/starter", 1.0 );
+	setprop("/controls/engines/engine[2]/cutoff", 1.0);
+	setprop("an24/Start-Panel/discontinuestarttg", 0.0 );
+	setprop("/controls/engines/engine[2]/starter", 1.0 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/Start-Panel/starttg-btn", 1.0, 0.1 );
+	interpolate("an24/Start-Panel/starttg-btn", 1.0, 0.1 );
       </script>
     </binding>
    <mod-up>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/Start-Panel/starttg-btn", 0.0, 0.1 );
+	interpolate("an24/Start-Panel/starttg-btn", 0.0, 0.1 );
       </script>
     </binding>
    </mod-up>
