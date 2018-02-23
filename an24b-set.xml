@@ -611,13 +611,16 @@
     </prop-lock>
     <eup type="double">0</eup>
   </instrumentation>
+
   <PPS>
    <lighting-save>0</lighting-save>
   </PPS>
+
   <SP-50>
    <course_freq-mhz type="double">110.3</course_freq-mhz>
    <channel type="int">6</channel>
   </SP-50>
+
 </an24>
 
 <instrumentation>
@@ -669,6 +672,15 @@
     <serviceable type="bool">true</serviceable>
   </static>
   <static n="3">
+    <serviceable type="bool">true</serviceable>
+  </static>
+  <static n="4">
+    <serviceable type="bool">true</serviceable>
+  </static>
+  <static n="5">
+    <serviceable type="bool">true</serviceable>
+  </static>
+  <static n="6">
     <serviceable type="bool">true</serviceable>
   </static>
 </systems>

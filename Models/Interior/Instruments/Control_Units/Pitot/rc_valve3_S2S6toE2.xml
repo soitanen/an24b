@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!-- Lever to swap static ports from  S2/S6 to Emergency port 2 in radar chamber -->
+
+<PropertyList>
+ <path>../../../shared/pressure-valve.ac</path>
+
+ <animation>
+   <type>knob</type>
+   <object-name>valvelever</object-name>
+   <object-name>valvescrew</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/Pressure/pitotvalve3</property>
+      <factor>0.2</factor>
+      <min>-1</min>
+      <max>1</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>valvelever</object-name>
+  <type>rotate</type>
+   <property>an24/Pressure/pitotvalve3</property>
+   <factor>30</factor>
+   <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+   </axis>
+ </animation>
+
+</PropertyList>

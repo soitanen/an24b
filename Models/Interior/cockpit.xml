@@ -622,9 +622,9 @@
   <name>PPS-2MVK</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/PPS-2MVK_mp/pps.xml</path>
   <offsets>
-    <x-m>2.1</x-m>
-    <y-m>-0.24</y-m>
-    <z-m>0.745</z-m>
+    <x-m>2.095</x-m>
+    <y-m>-0.305</y-m>
+    <z-m>0.751</z-m>
   </offsets>
 </model>
 
@@ -1293,6 +1293,11 @@
 <model>
   <name>Marker</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Marker/marker.xml</path>
+</model>
+
+<model>
+  <name>PitotLever</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Pitot/pitot.xml</path>
 </model>
 
 <model>

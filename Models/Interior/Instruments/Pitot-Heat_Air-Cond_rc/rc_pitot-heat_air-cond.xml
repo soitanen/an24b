@@ -20,7 +20,77 @@
 <!-- Switches -->
 
 <model>
- <path>rc_sw06_S1S5A1.xml</path>
+ <path>rc_sw01_cabintemp_auto.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>0.1015</x-m>
+    <y-m>0.0082</y-m>
+    <z-m>-0.043</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sw02_cabintemp_hotcold_manualL.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>0.1015</x-m>
+    <y-m>0.0293</y-m>
+    <z-m>-0.043</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sw03_cabintemp_hotcold_manualR.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>0.1015</x-m>
+    <y-m>0.0496</y-m>
+    <z-m>-0.043</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sw04_aircondLsystem.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>0.067</x-m>
+    <y-m>-0.0423</y-m>
+    <z-m>-0.043</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sw05_aircondRsystem.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>0.067</x-m>
+    <y-m>-0.0136</y-m>
+    <z-m>-0.043</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sw06_aircond_airsupply.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>0.067</x-m>
+    <y-m>0.0156</y-m>
+    <z-m>-0.043</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sw07_TG-16heating.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>0.067</x-m>
+    <y-m>0.0454</y-m>
+    <z-m>-0.043</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sw08_S1S5A1.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
     <x-m>-0.0148</x-m>
@@ -30,7 +100,7 @@
 </model>
 
 <model>
- <path>rc_sw07_S3A2.xml</path>
+ <path>rc_sw09_S3A2.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
     <x-m>-0.0148</x-m>
@@ -40,7 +110,7 @@
 </model>
 
 <model>
- <path>rc_sw08_S2S6A3.xml</path>
+ <path>rc_sw10_S2S6A3.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
     <x-m>-0.0148</x-m>
@@ -50,7 +120,7 @@
 </model>
 
 <model>
- <path>rc_sw09_S4S7.xml</path>
+ <path>rc_sw11_S4S7.xml</path>
   <offsets>
     <pitch-deg>-60</pitch-deg>
     <x-m>-0.0974</x-m>

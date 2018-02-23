@@ -14,7 +14,7 @@ Some 3D instruments were taken from Tu-154B-2 by Yurik and Yak-40 by Specter.
 QUICK STARTUP-GUIDE (to be improved (with pictures (and such (like, as pdf))))
 
 - On AZS(circuit-breaker)-Panel (big panel with MANY switches at right side of crewsection):
-  - Close ALL circuit-breakers (best by clicking the "all-on"-clickspots to the right of each row; attention, clickspots hard to see)
+  - Close ALL circuit-breakers (best by clicking the "all-on"-clickspots to the right of each row)
 
 - On Fuel-Control-Panel (extra-panel on pilots' middle panel):
   - Turn on all switches at the bottom, except middle one (cross-feed, optional)
