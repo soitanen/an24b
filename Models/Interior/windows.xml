@@ -1,7 +1,126 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-<!--
- <path>cargosection.ac</path>
--->
+
+ <path>windows.ac</path>
+
+<!--effect>
+ <inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>Lwindow_ice</object-name>
+  <object-name>Cwindow_ice</object-name>
+  <object-name>Rwindow_ice</object-name>
+</effect-->
+
+<!--animation>
+  <type>translate</type>
+  <object-name>ice-layer</object-name>
+  <property>an24/Anti-Ice/elements/windowL_cm</property>
+  <factor>0.25</factor>
+  <offset-deg>0.0</offset-deg>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.98</z>    
+  </axis>
+</animation-->
+
+<animation>
+  <object-name>Lwindow_ice</object-name>
+  <type>select</type>
+  <condition>
+   <greater-than>
+    <property>an24/Anti-Ice/elements/windowL_cm</property>
+    <value>0.0</value>
+   </greater-than>
+  </condition>
+</animation>
+
+
+<animation>
+  <type>blend</type>
+  <object-name>Lwindow_ice</object-name>
+  <property>an24/Anti-Ice/elements/windowL_cm</property>
+    <interpolation>
+     <entry>
+      <ind>1.5</ind> <dep>0.0</dep>
+     </entry>
+     <entry>
+      <ind>0.0</ind> <dep>1.0</dep>
+     </entry>
+    </interpolation>
+  <!--min>0.0</min>
+  <max>1.0</max-->
+</animation>
+
+ <animation>
+  <object-name>Cwindow_ice</object-name>
+  <type>select</type>
+  <condition>
+   <greater-than>
+    <property>an24/Anti-Ice/elements/windowC_cm</property>
+    <value>0.0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>blend</type>
+  <object-name>Cwindow_ice</object-name>
+  <property>an24/Anti-Ice/elements/windowC_cm</property>
+    <interpolation>
+     <entry>
+      <ind>1.5</ind> <dep>0.0</dep>
+     </entry>
+     <entry>
+      <ind>0.0</ind> <dep>1.0</dep>
+     </entry>
+    </interpolation>
+  <!--min>0.0</min>
+  <max>1.0</max-->
+</animation>
+
+ <animation>
+  <object-name>Rwindow_ice</object-name>
+  <type>select</type>
+  <condition>
+   <greater-than>
+    <property>an24/Anti-Ice/elements/windowR_cm</property>
+    <value>0.0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>blend</type>
+  <object-name>Rwindow_ice</object-name>
+  <property>an24/Anti-Ice/elements/windowR_cm</property>
+    <interpolation>
+     <entry>
+      <ind>1.5</ind> <dep>0.0</dep>
+     </entry>
+     <entry>
+      <ind>0.0</ind> <dep>1.0</dep>
+     </entry>
+    </interpolation>
+  <!--min>0.0</min>
+  <max>1.0</max-->
+</animation>
+
+<!--animation>
+  <type>scale</type>
+  <object-name>ice-layer</object-name>
+  <property>an24/animations/gardine</property>
+   <center>
+   <x-m>2.055</x-m>
+   <y-m>0.0</y-m>
+   <z-m>1.3317</z-m>
+  </center>
+  <x-min>1.0</x-min>
+  <y-min>1.0</y-min>
+  <z-min>0.1</z-min>
+  <x-factor>1.0</x-factor>
+  <y-factor>1.0</y-factor>
+  <z-factor>8.0</z-factor>
+ </animation-->
+
 </PropertyList>

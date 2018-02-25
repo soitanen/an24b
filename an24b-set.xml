@@ -703,32 +703,35 @@
   <autostart>
     <file>Aircraft/an24b/Nasal/autostart.nas</file>
   </autostart>
+  <electrical>
+    <file>Aircraft/an24b/Nasal/electrical.nas</file>
+  </electrical>
+  <engines>
+    <file>Aircraft/an24b/Nasal/enginestart.nas</file>
+  </engines>
   <friction>
     <file>Aircraft/an24b/Nasal/friction.nas</file>
   </friction>
+  <fuel>
+    <file>Aircraft/an24b/Nasal/fuel.nas</file>
+  </fuel>
   <help>
     <file>Aircraft/an24b/Nasal/help.nas</file>
   </help>
+  <icing>
+    <file>Aircraft/an24b/Nasal/icing.nas</file>
+  </icing>
   <instruments>
     <file>Aircraft/an24b/Nasal/instruments.nas</file>
     <file>Aircraft/an24b/Nasal/gpk-52.nas</file>
     <file>Aircraft/an24b/Nasal/ap-28l1.nas</file>
   </instruments>
-  <view>
-    <file>Aircraft/an24b/Nasal/view.nas</file>
-  </view>
-  <engines>
-    <file>Aircraft/an24b/Nasal/enginestart.nas</file>
-  </engines>
-  <fuel>
-    <file>Aircraft/an24b/Nasal/fuel.nas</file>
-  </fuel>
   <stations>
     <file>Aircraft/an24b/Nasal/stations.nas</file>
   </stations>
-  <electrical>
-    <file>Aircraft/an24b/Nasal/electrical.nas</file>
-  </electrical>
+  <view>
+    <file>Aircraft/an24b/Nasal/view.nas</file>
+  </view>
 </nasal>
 
 <payload>

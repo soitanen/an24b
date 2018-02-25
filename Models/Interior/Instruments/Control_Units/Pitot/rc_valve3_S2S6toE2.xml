@@ -7,7 +7,6 @@
 
  <animation>
    <type>knob</type>
-   <object-name>valvelever</object-name>
    <object-name>valvescrew</object-name>
     <action>
      <binding>
