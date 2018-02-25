@@ -17,6 +17,57 @@
       <max>1</max>                
       <wrap>false</wrap>
      </binding>
+
+<!-- S2 active -->
+     <binding>
+      <condition>
+       <greater-than>
+	<property>an24/Pressure/pitotvalve3</property>
+	<value>0.9</value>
+       </greater-than>
+      </condition>
+      <command>property-assign</command>
+      <property>/systems/static[1]/serviceable</property>
+	<value>1.0</value>
+     </binding>
+
+     <binding>
+      <condition>
+       <less-than>
+	<property>an24/Pressure/pitotvalve3</property>
+	<value>0.9</value>
+       </less-than>
+      </condition>
+      <command>property-assign</command>
+      <property>/systems/static[1]/serviceable</property>
+	<value>0.0</value>
+     </binding>
+
+<!-- E1 active -->
+     <binding>
+      <condition>
+       <less-than>
+	<property>an24/Pressure/pitotvalve3</property>
+	<value>0.1</value>
+       </less-than>
+      </condition>
+      <command>property-assign</command>
+      <property>/systems/static[8]/serviceable</property>
+	<value>1.0</value>
+     </binding>
+
+     <binding>
+      <condition>
+       <greater-than>
+	<property>an24/Pressure/pitotvalve3</property>
+	<value>0.1</value>
+       </greater-than>
+      </condition>
+      <command>property-assign</command>
+      <property>/systems/static[8]/serviceable</property>
+	<value>0.0</value>
+     </binding>
+
     </action>
  </animation>
 

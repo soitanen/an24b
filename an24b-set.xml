@@ -612,18 +612,24 @@
   </AP-28l1>
 
   <gear>
-    <steer_mode>2</steer_mode>
+    <steer_mode>2.0</steer_mode>
   </gear>
+
+  <Pressure>
+    <pitotvalve1>1.0</pitotvalve1>
+    <pitotvalve2>1.0</pitotvalve2>
+    <pitotvalve3>1.0</pitotvalve3>
+  </Pressure>
 
   <instrumentation>
     <idle-lock>
-      <idle-lock>0</idle-lock>
+      <idle-lock>0.0</idle-lock>
     </idle-lock>
     <prop-lock>
       <prop-lock-left type="bool">false</prop-lock-left>
       <prop-lock-right type="bool">false</prop-lock-right>
     </prop-lock>
-    <eup type="double">0</eup>
+    <eup type="double">0.0</eup>
   </instrumentation>
 
   <PPS>
@@ -695,6 +701,13 @@
     <serviceable type="bool">true</serviceable>
   </static>
   <static n="6">
+    <serviceable type="bool">true</serviceable>
+  </static>
+<!-- emergency ports in radar chamber -->
+  <static n="7">
+    <serviceable type="bool">true</serviceable>
+  </static>
+  <static n="8">
     <serviceable type="bool">true</serviceable>
   </static>
 </systems>
