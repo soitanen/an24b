@@ -21,7 +21,7 @@
 <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/vertical-speed-indicator[0]/indicated-speed-fpm</property>
     <interpolation>
   	<entry><ind>	5708.66</ind>	<dep>	177.0</dep></entry>
 	<entry><ind>	3937.0</ind>	<dep>	142.0</dep></entry>

@@ -21,11 +21,12 @@
    </emission>
  </animation>
 
-<!--Needles-->
+<!-- Needles -->
+
 <animation>
   <type>rotate</type>
   <object-name>long_needle</object-name>
-  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <property>instrumentation/altimeter[0]/indicated-altitude-ft</property>
   <factor>-0.109728</factor>
   <axis>
     <x>1.0</x>
@@ -33,10 +34,11 @@
     <z>0.0</z>
   </axis>
 </animation>
+
 <animation>
   <type>rotate</type>
   <object-name>short_needle</object-name>
-  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <property>instrumentation/altimeter[0]/indicated-altitude-ft</property>
   <factor>-0.0109728</factor>
   <axis>
     <x>1.0</x>
@@ -45,11 +47,13 @@
   </axis>
 </animation>
 
+
+
 <!--Pressure digits-->
 <animation>
   <type>rotate</type>
   <object-name>dig_p_ones</object-name>
-  <property>instrumentation/altimeter/setting-hpa</property>
+  <property>instrumentation/altimeter[0]/setting-hpa</property>
   <factor>27.0088845014</factor>
   <center>
     <x-m>-0.0153</x-m>
@@ -70,7 +74,7 @@
     <table>
       <mod>
         <product>
-          <property>instrumentation/altimeter/setting-hpa</property>
+          <property>instrumentation/altimeter[0]/setting-hpa</property>
           <value>0.7500616827</value>
         </product>
         <value>100</value>
@@ -117,7 +121,7 @@
     <table>
       <mod>
         <product>
-          <property>instrumentation/altimeter/setting-hpa</property>
+          <property>instrumentation/altimeter[0]/setting-hpa</property>
           <value>0.7500616827</value>
         </product>
         <value>1000</value>
@@ -160,7 +164,7 @@
 <animation>
   <type>knob</type>
   <object-name>knob</object-name>
-  <property>/instrumentation/altimeter/setting-hpa</property>
+  <property>/instrumentation/altimeter[0]/setting-hpa</property>
   <factor>-5</factor>
   <center>
     <x-m>0.0</x-m>
@@ -175,7 +179,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/altimeter/setting-hpa</property>
+        <property>/instrumentation/altimeter[0]/setting-hpa</property>
         <factor>-0.5</factor>
       </binding>
     </action>

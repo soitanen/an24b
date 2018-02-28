@@ -16,6 +16,7 @@
       <command>nasal</command>
       <script>
         interpolate("an24/AZS/sw0411", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S1S5A1", getprop("an24/Anti-Ice/sw_pitot_S1S5A1"), 0.1 );
       </script>
     </binding>
   </action>

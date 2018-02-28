@@ -23,10 +23,12 @@
    </emission>
 </animation>
 
+<!-- Needles -->
+
 <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
     <factor>0.36</factor>
     <axis>
       <x>-1.0</x>
@@ -40,7 +42,7 @@
 <animation>
   <type>rotate</type>
   <object-name>dig_a_dec</object-name>
-  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
   <factor>3.6</factor>
   <center>
     <x-m>-0.0222</x-m>
@@ -59,7 +61,7 @@
   <expression>
     <table>
       <mod>
-        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
         <value>1000</value>
       </mod>
       <entry><ind>	  0</ind>	<dep>	0</dep></entry>
@@ -103,7 +105,7 @@
   <expression>
     <table>
       <mod>
-        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
         <value>10000</value>
       </mod>
       <entry><ind>	   0</ind>	<dep>	0</dep></entry>
@@ -147,7 +149,7 @@
   <expression>
     <table>
       <mod>
-        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
         <value>100000</value>
       </mod>
       <entry><ind>	    0</ind>	<dep>	0</dep></entry>

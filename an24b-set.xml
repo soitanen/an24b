@@ -554,6 +554,54 @@
     </gear>
  </gear>
 
+
+<instrumentation>
+  <adf n="1">
+    <serviceable type="bool">true</serviceable>
+  </adf>
+  <altimeter n="1">
+    <serviceable type="bool">true</serviceable>
+  </altimeter>
+  <heading-indicator-dg>
+    <serviceable type="bool">true</serviceable>
+  </heading-indicator-dg>
+  <heading-indicator-fg>
+    <serviceable type="bool">true</serviceable>
+  </heading-indicator-fg>
+  <!--<kppm n="0">
+    <scale-offset type="double">0</scale-offset>
+  </kppm>-->
+  <marker-beacon>
+    <audio-btn type="bool" >false</audio-btn>
+    <volume type="double" >0.0</volume>
+  </marker-beacon>
+  <radar-altimeter>
+    <serviceable type="bool">true</serviceable>
+    <antenna>
+      <x-offset-m type="double">0</x-offset-m>
+      <y-offset-m type="double">0</y-offset-m>
+      <z-offset-m type="double">1.05</z-offset-m>
+    </antenna>
+  </radar-altimeter>
+  <transponder>
+   <inputs>
+    <knob-mode type="int">0</knob-mode>
+   </inputs>
+  </transponder>
+  <zk2>
+    <heading-bug type="double">0</heading-bug>
+  </zk2>
+</instrumentation>
+
+<systems>
+ <static n="7">
+  <serviceable>1</serviceable>
+ </static>
+ <static n="8">
+  <serviceable>1</serviceable>
+ </static>
+</systems>
+
 <an24>
   <AP-28l1>
     <coefficients> <!-- coefficients are taken from book An-24. Technical description.-->
@@ -643,75 +691,6 @@
 
 </an24>
 
-<instrumentation>
-  <adf n="1">
-    <serviceable type="bool">true</serviceable>
-  </adf>
-  <heading-indicator-dg>
-    <serviceable type="bool">true</serviceable>
-  </heading-indicator-dg>
-  <heading-indicator-fg>
-    <serviceable type="bool">true</serviceable>
-  </heading-indicator-fg>
-  <!--<kppm n="0">
-    <scale-offset type="double">0</scale-offset>
-  </kppm>-->
-  <marker-beacon>
-    <audio-btn type="bool" >false</audio-btn>
-    <volume type="double" >0.0</volume>
-  </marker-beacon>
-  <radar-altimeter>
-    <serviceable type="bool">true</serviceable>
-    <antenna>
-      <x-offset-m type="double">0</x-offset-m>
-      <y-offset-m type="double">0</y-offset-m>
-      <z-offset-m type="double">1.05</z-offset-m>
-    </antenna>
-  </radar-altimeter>
-  <transponder>
-   <inputs>
-    <knob-mode type="int">0</knob-mode>
-   </inputs>
-  </transponder>
-  <zk2>
-    <heading-bug type="double">0</heading-bug>
-  </zk2>
-</instrumentation>
-
-<systems>
-  <pitot n="1">
-    <serviceable type="bool">true</serviceable>
-  </pitot>
-  <pitot n="2">
-    <serviceable type="bool">true</serviceable>
-  </pitot>
-  <static n="1">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="2">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="3">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="4">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="5">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="6">
-    <serviceable type="bool">true</serviceable>
-  </static>
-<!-- emergency ports in radar chamber -->
-  <static n="7">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="8">
-    <serviceable type="bool">true</serviceable>
-  </static>
-</systems>
-
 <nasal>
   <autostart>
     <file>Aircraft/an24b/Nasal/autostart.nas</file>
@@ -739,6 +718,9 @@
     <file>Aircraft/an24b/Nasal/gpk-52.nas</file>
     <file>Aircraft/an24b/Nasal/ap-28l1.nas</file>
   </instruments>
+  <pitotstatic>
+    <file>Aircraft/an24b/Nasal/pitotstatic.nas</file>
+  </pitotstatic>
   <stations>
     <file>Aircraft/an24b/Nasal/stations.nas</file>
   </stations>

@@ -25,18 +25,6 @@
       </script>
     </binding>
     <binding>
-        <condition>
-         <equals>
-         <property>an24/AZS/sw0412</property>
-         <value>0.0</value>
-         </equals>
-        </condition>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/Anti-Ice/pitot_S2S6A3", 0.0, 0.1 );
-      </script>
-    </binding>
-    <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/Anti-Ice/sw_pitot_S2S6A3", 1.0, 0.1 );
@@ -79,18 +67,6 @@
       <command>nasal</command>
       <script>
         interpolate("an24/Anti-Ice/pitot_S2S6A3", -1.0, 0.1 );
-      </script>
-    </binding>
-    <binding>
-        <condition>
-         <equals>
-         <property>an24/AZS/sw0412</property>
-         <value>0.0</value>
-         </equals>
-        </condition>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/Anti-Ice/pitot_S2S6A3", 0.0, 0.1 );
       </script>
     </binding>
     <binding>

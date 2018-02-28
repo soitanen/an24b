@@ -18,7 +18,7 @@
       <wrap>false</wrap>
      </binding>
 
-<!-- S2 active -->
+<!-- S2 and S6 selected or not (atm only S2 is regarded) -->
      <binding>
       <condition>
        <greater-than>
@@ -26,9 +26,10 @@
 	<value>0.9</value>
        </greater-than>
       </condition>
-      <command>property-assign</command>
-      <property>/systems/static[1]/serviceable</property>
-	<value>1.0</value>
+      <command>nasal</command>
+      <script>
+	pitotstatic.staticswap_S2selected.start();
+      </script>
      </binding>
 
      <binding>
@@ -38,12 +39,13 @@
 	<value>0.9</value>
        </less-than>
       </condition>
-      <command>property-assign</command>
-      <property>/systems/static[1]/serviceable</property>
-	<value>0.0</value>
+      <command>nasal</command>
+      <script>
+	pitotstatic.staticswap_S2selected.stop();
+      </script>
      </binding>
 
-<!-- E1 active -->
+<!-- E2 selected or not -->
      <binding>
       <condition>
        <less-than>
@@ -51,9 +53,10 @@
 	<value>0.1</value>
        </less-than>
       </condition>
-      <command>property-assign</command>
-      <property>/systems/static[8]/serviceable</property>
-	<value>1.0</value>
+      <command>nasal</command>
+      <script>
+	pitotstatic.staticswap_E2selected.start();
+      </script>
      </binding>
 
      <binding>
@@ -63,11 +66,11 @@
 	<value>0.1</value>
        </greater-than>
       </condition>
-      <command>property-assign</command>
-      <property>/systems/static[8]/serviceable</property>
-	<value>0.0</value>
+      <command>nasal</command>
+      <script>
+	pitotstatic.staticswap_E2selected.stop();
+      </script>
      </binding>
-
     </action>
  </animation>
 

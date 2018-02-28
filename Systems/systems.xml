@@ -23,28 +23,103 @@
     <number>2</number>
   </pitot>
 
+<!-- Fake pitot for internal reasons (receive input from selected pitots) -->
+
+  <pitot>
+    <name>pitot</name>
+    <number>3</number>
+  </pitot>
+
   <static>
     <name>static</name>
     <number>0</number>
-    <tau>1</tau>
+    <tau>0.1</tau>
+    <type>1</type>
+    <error-factor>0.3</error-factor>
   </static>
 
   <static>
     <name>static</name>
     <number>1</number>
-    <tau>1</tau>
+    <tau>0.1</tau>
+    <type>1</type>
+    <error-factor>0.3</error-factor>
   </static>
 
   <static>
     <name>static</name>
     <number>2</number>
-    <tau>1</tau>
+    <tau>0.1</tau>
+    <type>1</type>
+    <error-factor>0.3</error-factor>
   </static>
 
   <static>
     <name>static</name>
     <number>3</number>
-    <tau>1</tau>
+    <tau>0.1</tau>
+    <type>1</type>
+    <error-factor>0.3</error-factor>
+  </static>
+
+  <static>
+    <name>static</name>
+    <number>4</number>
+    <tau>0.1</tau>
+    <type>1</type>
+    <error-factor>0.3</error-factor>
+  </static>
+
+  <static>
+    <name>static</name>
+    <number>5</number>
+    <tau>0.1</tau>
+    <type>1</type>
+    <error-factor>0.3</error-factor>
+  </static>
+
+  <static>
+    <name>static</name>
+    <number>6</number>
+    <tau>0.1</tau>
+    <type>1</type>
+    <error-factor>0.3</error-factor>
+  </static>
+
+<!-- Emergency static ports in radar nose -->
+
+  <static>
+    <name>static</name>
+    <number>7</number>
+    <tau>0.1</tau>
+    <type>0</type>
+    <error-factor>0.6</error-factor>
+  </static>
+
+  <static>
+    <name>static</name>
+    <number>8</number>
+    <tau>0.1</tau>
+    <type>0</type>
+    <error-factor>0.6</error-factor>
+  </static>
+
+<!-- Fake static ports for internal reasons (receive input from selected ports) -->
+
+  <static>
+    <name>static</name>
+    <number>9</number>
+    <tau>0.1</tau>
+    <type>0</type>
+    <error-factor>0.1</error-factor>
+  </static>
+
+  <static>
+    <name>static</name>
+    <number>10</number>
+    <tau>0.1</tau>
+    <type>0</type>
+    <error-factor>0.1</error-factor>
   </static>
 
 </PropertyList>

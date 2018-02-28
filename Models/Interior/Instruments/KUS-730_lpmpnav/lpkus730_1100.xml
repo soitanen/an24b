@@ -22,7 +22,7 @@
   <animation>
     <type>rotate</type>
     <object-name>short_needle</object-name>
-    <property>instrumentation/airspeed-indicator/true-speed-kt</property>
+    <property>/instrumentation/airspeed-indicator[0]/true-speed-kt</property>
     <interpolation>
       <entry><ind>	199.0</ind>	<dep>	180.0</dep></entry>
       <entry><ind>	215.98</ind>	<dep>	196.0</dep></entry>
@@ -41,7 +41,7 @@
   <animation>
   <type>rotate</type>
   <object-name>long_needle</object-name>
-  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+  <property>instrumentation/airspeed-indicator[0]/indicated-speed-kt</property>
   <interpolation>
     <entry><ind>	27.0</ind>	<dep>	5.0</dep></entry>
     <entry><ind>	54.0</ind>	<dep>	23.0</dep></entry>

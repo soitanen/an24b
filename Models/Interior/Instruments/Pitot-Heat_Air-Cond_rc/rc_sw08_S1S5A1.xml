@@ -21,19 +21,7 @@
         </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/pitot_S1S5A1", 1.0, 0.1 );
-      </script>
-    </binding>
-    <binding>
-        <condition>
-         <equals>
-         <property>an24/AZS/sw0411</property>
-         <value>0.0</value>
-         </equals>
-        </condition>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/Anti-Ice/pitot_S1S5A1", 0.0, 0.1 );
+	interpolate("an24/Anti-Ice/pitot_S1S5A1", 1.0, 0.1 );
       </script>
     </binding>
     <binding>
@@ -55,7 +43,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/pitot_S1S5A1", 0.0, 0.1 );
+	interpolate("an24/Anti-Ice/pitot_S1S5A1", 0.0, 0.1 );
         interpolate("an24/Anti-Ice/sw_pitot_S1S5A1", 0.0, 0.1 );
       </script>
     </binding>
@@ -78,19 +66,7 @@
         </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/pitot_S1S5A1", -1.0, 0.1 );
-      </script>
-    </binding>
-    <binding>
-        <condition>
-         <equals>
-         <property>an24/AZS/sw0411</property>
-         <value>0.0</value>
-         </equals>
-        </condition>
-      <command>nasal</command>
-      <script>
-        interpolate("an24/Anti-Ice/pitot_S1S5A1", 0.0, 0.1 );
+	interpolate("an24/Anti-Ice/pitot_S1S5A1", -1.0, 0.1 );
       </script>
     </binding>
     <binding>

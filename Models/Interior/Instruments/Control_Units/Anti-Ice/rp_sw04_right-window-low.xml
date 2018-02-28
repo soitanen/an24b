@@ -21,7 +21,7 @@
         </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/Anti-Ice/window_heating-right-low", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/window_heating-right-low", 0.25, 0.1 );
       </script>
     </binding>
     <binding>
