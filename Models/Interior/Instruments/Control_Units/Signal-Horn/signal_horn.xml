@@ -7,9 +7,9 @@
 <model>
  <path>btn_horn.xml</path>
   <offsets>
-    <x-m>2.45</x-m>
+    <x-m>2.425</x-m>
     <y-m>0.986</y-m>
-    <z-m>0.76</z-m>
+    <z-m>0.764</z-m>
     <pitch-deg>90</pitch-deg>
     <heading-deg>280.5</heading-deg>
   </offsets>
@@ -18,9 +18,9 @@
 <model>
  <path>btn_signal.xml</path>
   <offsets>
-    <x-m>2.524</x-m>
+    <x-m>2.52</x-m>
     <y-m>1.0</y-m>
-    <z-m>0.76</z-m>
+    <z-m>0.764</z-m>
     <pitch-deg>90</pitch-deg>
     <heading-deg>280.5</heading-deg>
   </offsets>

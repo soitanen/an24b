@@ -267,6 +267,14 @@
       <command>property-adjust</command>
       <property>an24/ARK-11/frame-offset-1</property>
        <condition>
+        <equals>
+         <property>an24/AZS/sw0512</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0513</property>
+         <value>1.0</value>
+        </equals>
         <or>
         <equals>
          <property>an24/ARK-11/mode-1</property>
@@ -288,10 +296,20 @@
       <command>property-adjust</command>
       <property>an24/ARK-11/frame-offset-1</property>
        <condition>
+        <and>
         <equals>
          <property>an24/ARK-11/mode-1</property>
          <value>2</value>
         </equals>
+        <equals>
+         <property>an24/AZS/sw0512</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0513</property>
+         <value>1.0</value>
+        </equals>
+        </and>
        </condition>
       <step>1</step>
       <min>-180</min>
@@ -303,10 +321,20 @@
       <command>property-adjust</command>
       <property>/instrumentation/adf[0]/indicated-bearing-deg</property>
        <condition>
+        <and>
         <equals>
          <property>an24/ARK-11/mode-1</property>
          <value>3</value>
         </equals>
+        <equals>
+         <property>an24/AZS/sw0512</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0513</property>
+         <value>1.0</value>
+        </equals>
+        </and>
        </condition>
       <step>-1</step>
       <!--min>-180</min>
@@ -343,6 +371,14 @@
       <command>property-adjust</command>
       <property>an24/ARK-11/frame-offset-1</property>
        <condition>
+        <equals>
+         <property>an24/AZS/sw0512</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0513</property>
+         <value>1.0</value>
+        </equals>
         <or>
         <equals>
          <property>an24/ARK-11/mode-1</property>
@@ -364,10 +400,20 @@
       <command>property-adjust</command>
       <property>an24/ARK-11/frame-offset-1</property>
        <condition>
+        <and>
         <equals>
          <property>an24/ARK-11/mode-1</property>
          <value>2</value>
         </equals>
+        <equals>
+         <property>an24/AZS/sw0512</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0513</property>
+         <value>1.0</value>
+        </equals>
+        </and>
        </condition>
       <step>-1</step>
       <min>-180</min>
@@ -379,10 +425,20 @@
       <command>property-adjust</command>
       <property>/instrumentation/adf[0]/indicated-bearing-deg</property>
        <condition>
+        <and>
         <equals>
          <property>an24/ARK-11/mode-1</property>
          <value>3</value>
         </equals>
+        <equals>
+         <property>an24/AZS/sw0512</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0513</property>
+         <value>1.0</value>
+        </equals>
+        </and>
        </condition>
       <step>1</step>
       <min>-180</min>
@@ -438,7 +494,7 @@
     <binding>
       <command>nasal</command>
       <script>
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/mem1/fixp", 0.0, 0.1 );
 	}
 	else {
@@ -472,7 +528,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix1", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix1", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix1sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix1ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -485,7 +541,7 @@
 	stations.textid1.setText("");
 	stations.textra1.setText("");
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix1sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix1ff"), 2.4 );
 	}
@@ -517,7 +573,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix2", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix2", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix2sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix2ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -530,7 +586,7 @@
 	stations.textid2.setText("");
 	stations.textra2.setText("");
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix2sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix2ff"), 2.4 );
 	}
@@ -562,7 +618,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix3", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix3", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix3sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix3ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -575,7 +631,7 @@
 	stations.textid3.setText("");
 	stations.textra3.setText("");
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix3sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix3ff"), 2.4 );
 	}
@@ -607,7 +663,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix4", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix4", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix4sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix4ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -620,7 +676,7 @@
 	stations.textid4.setText("");
 	stations.textra4.setText("");	
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix4sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix4ff"), 2.4 );
 	}
@@ -652,7 +708,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix5", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix5", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix5sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix5ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -665,7 +721,7 @@
 	stations.textid5.setText("");
 	stations.textra5.setText("");	
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix5sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix5ff"), 2.4 );
 	}
@@ -697,7 +753,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix6", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix6", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix6sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix6ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -710,7 +766,7 @@
 	stations.textid6.setText("");
 	stations.textra6.setText("");	
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix6sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix6ff"), 2.4 );
 	}
@@ -742,7 +798,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix7", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix7", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix7sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix7ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -755,7 +811,7 @@
 	stations.textid7.setText("");
 	stations.textra7.setText("");	
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix7sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix7ff"), 2.4 );
 	}
@@ -787,7 +843,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix8", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix8", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix8sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix8ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -800,7 +856,7 @@
 	stations.textid8.setText("");
 	stations.textra8.setText("");
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix8sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix8ff"), 2.4 );
 	}
@@ -832,7 +888,7 @@
       <script>
         interpolate("an24/ARK-11/mem1/animfix9", 1.0, 0.1 );
         settimer(func {interpolate("an24/ARK-11/mem1/animfix9", 0.0, 0.1 );},0.1);
-	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 ) {
+	if ( getprop("an24/ARK-11/mem1/fixp") == 1.0 and getprop("an24/AZS/sw0512") == 1.0 ) {
 	setprop("an24/ARK-11/mem1/fix9sb", getprop("an24/ARK-11/sub-band-khz-1") );
 	setprop("an24/ARK-11/mem1/fix9ff", getprop("an24/ARK-11/fine-khz-1") );
 	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[0]/frequencies/selected-khz") );
@@ -845,7 +901,7 @@
 	stations.textid9.setText("");
 	stations.textra9.setText("");	
 	}}
-	else {
+	else if ( getprop("an24/AZS/sw0512") == 1.0 ) {
 	interpolate("an24/ARK-11/sub-band-khz-1", getprop("an24/ARK-11/mem1/fix9sb"), 2.0 );
 	interpolate("an24/ARK-11/fine-khz-1", getprop("an24/ARK-11/mem1/fix9ff"), 2.4 );
 	}

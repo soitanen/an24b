@@ -119,12 +119,12 @@
      <binding>
       <command>property-adjust</command>
       <property>an24/US-8K/ant-tune</property>
-       <!--condition>
+       <condition>
         <equals>
-         <property>an24/US-8K/...</property>
-         <value>1</value>
+        <property>an24/AZS/sw0510</property>
+        <value>1.0</value>
         </equals>
-       </condition-->
+       </condition>
       <step>4</step>
       <min>0</min>
       <max>100</max>
@@ -157,12 +157,12 @@
      <binding>
       <command>property-adjust</command>
       <property>an24/US-8K/ant-tune</property>
-       <!--condition>
+       <condition>
         <equals>
-         <property>an24/US-8K/...</property>
-         <value>1</value>
+        <property>an24/AZS/sw0510</property>
+        <value>1.0</value>
         </equals>
-       </condition-->
+       </condition>
       <step>-4</step>
       <min>0</min>
       <max>100</max>

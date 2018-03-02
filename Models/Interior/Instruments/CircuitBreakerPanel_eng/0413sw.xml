@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- AZS-2; Right window heat -->
+<!-- AZS-2; Left window heat -->
 
 <PropertyList>
  <path>../../shared/switches/azs.ac</path>
@@ -31,7 +31,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AZS/sw0413", -1.0, 0.1 );
+        interpolate("an24/AZS/sw0413", 0.0, 0.1 );
         interpolate("an24/instrumentation/window_heating-left-intense", 0.0, 0.1 );
         interpolate("an24/instrumentation/window_heating-left-low", 0.0, 0.1 );
       </script>
@@ -44,7 +44,7 @@
    <object-name>lever</object-name>
    <property>an24/AZS/sw0413</property>
   <interpolation>
-    <entry><ind>-1.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
   </interpolation>
   <axis>

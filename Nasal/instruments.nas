@@ -341,10 +341,11 @@ setprop("an24/SPU-7/general_viewnr8", 0.0);
 setprop("an24/SPU-7/general_viewnr9", 0.0);
 setprop("an24/SPU-7/general_viewnr10", 0.0);
 
+setprop("an24/AZS/sw0509", -1.0);
 var r8021audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 0.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 0.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 0.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 0.0 and viewnr == 10 ) ) {
-	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-1");
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-1") * getprop("an24/AZS/sw0509") ;
 	if( listenvol == nil ) listenvol = 0.0 ;
 	setprop("/instrumentation/comm[0]/volume", listenvol );
 	}
@@ -364,10 +365,11 @@ var r8021audible = func {
  setlistener("an24/SPU-7/eng_source", r8021audible);
  setlistener("an24/SPU-7/nav_source", r8021audible);
 
+setprop("an24/AZS/sw0508", -1.0);
 var r8022audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 3.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 3.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 3.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 3.0 and viewnr == 10 ) ) {
-	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-1");
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-2") * getprop("an24/AZS/sw0508") ;
 #	if( listenvol == nil ) listenvol = 0.0 ;
 	setprop("/instrumentation/comm[1]/volume", listenvol );
 	}
@@ -387,34 +389,34 @@ var r8022audible = func {
  setlistener("an24/SPU-7/eng_source", r8022audible);
  setlistener("an24/SPU-7/nav_source", r8022audible);
 
-var r8361audible = func {
-	var viewnr = getprop("/sim/current-view/view-number");
-	if ( (getprop("an24/SPU-7/lc_source") == 3.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 3.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 3.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 3.0 and viewnr == 10 ) ) {
-	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-802/volume-1");
-	if( listenvol == nil ) listenvol = 0.0 ;
-	setprop("/instrumentation/comm[1]/volume", listenvol );
-	}
-	else {
-	setprop("/instrumentation/comm[1]/volume", 0.0 );
-	}
-}
+#var r8361audible = func {
+#	var viewnr = getprop("/sim/current-view/view-number");
+#	if ( (getprop("an24/SPU-7/lc_source") == 3.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 3.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 3.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 3.0 and viewnr == 10 ) ) {
+#	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/R-836/eng_volume");
+#	if( listenvol == nil ) listenvol = 0.0 ;
+#	setprop("/instrumentation/comm[1]/volume", listenvol );
+#	}
+#	else {
+#	setprop("/instrumentation/comm[1]/volume", 0.0 );
+#	}
+#}
 
- setlistener("/sim/current-view/view-number", r8361audible);
- setlistener("an24/R-802/volume-2", r8361audible);
- setlistener("an24/SPU-7/listen_viewnr0", r8361audible);
- setlistener("an24/SPU-7/listen_viewnr8", r8361audible);
- setlistener("an24/SPU-7/listen_viewnr9", r8361audible);
- setlistener("an24/SPU-7/listen_viewnr10", r8361audible);
- setlistener("an24/SPU-7/lc_source", r8361audible);
- setlistener("an24/SPU-7/rc_source", r8361audible);
- setlistener("an24/SPU-7/eng_source", r8361audible);
- setlistener("an24/SPU-7/nav_source", r8361audible);
+# setlistener("/sim/current-view/view-number", r8361audible);
+# setlistener("an24/R-836/eng_volume", r8361audible);
+# setlistener("an24/SPU-7/listen_viewnr0", r8361audible);
+# setlistener("an24/SPU-7/listen_viewnr8", r8361audible);
+# setlistener("an24/SPU-7/listen_viewnr9", r8361audible);
+# setlistener("an24/SPU-7/listen_viewnr10", r8361audible);
+# setlistener("an24/SPU-7/lc_source", r8361audible);
+# setlistener("an24/SPU-7/rc_source", r8361audible);
+# setlistener("an24/SPU-7/eng_source", r8361audible);
+# setlistener("an24/SPU-7/nav_source", r8361audible);
 
 var ark1audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 4.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 4.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 4.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 4.0 and viewnr == 10 ) ) {
-	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/ARK-11/vol-1") ;
-#	if( listenvol == nil ) listenvol = 0 ;
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/ARK-11/vol-1") * getprop("an24/AZS/sw0512") * getprop("an24/AZS/sw0513") ;
+	if( listenvol == nil ) listenvol = 0 ;
 	setprop("/instrumentation/adf[0]/volume-norm", listenvol );
 	setprop("/instrumentation/adf[2]/volume-norm", listenvol );
 	}
@@ -439,7 +441,7 @@ var ark1audible = func {
 var ark2audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 5.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 5.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 5.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 5.0 and viewnr == 10 ) ) {
-	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/ARK-11/vol-2") ;
+	var listenvol = getprop("an24/SPU-7/listen_viewnr" ~ viewnr ~ "") * getprop("an24/ARK-11/vol-2") * getprop("an24/AZS/sw0514") * getprop("an24/AZS/sw0515") ;
 	if( listenvol == nil ) listenvol = 0 ;
 	setprop("/instrumentation/adf[1]/volume-norm", listenvol );
 	setprop("/instrumentation/adf[3]/volume-norm", listenvol );
@@ -624,6 +626,8 @@ var fuelind = func {
  setlistener("an24/PG5and2PPT1/selected-ind", fuelind);
 
 # SP-50 channel/frequency
+setprop("an24/SP-50/channel", 1 );
+
 var sp_chan2freq = func {
    if( getprop("an24/SP-50/channel") == 1) setprop("an24/SP-50/course_freq-mhz", 108.3);
    if( getprop("an24/SP-50/channel") == 2) setprop("an24/SP-50/course_freq-mhz", 108.7);

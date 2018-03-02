@@ -31,7 +31,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AZS/sw0414", -1.0, 0.1 );
+        interpolate("an24/AZS/sw0414", 0.0, 0.1 );
         interpolate("an24/Anti-Ice/window_heating-right-intense", 0.0, 0.1 );
         interpolate("an24/Anti-Ice/window_heating-right-low", 0.0, 0.1 );
       </script>
@@ -44,7 +44,7 @@
    <object-name>lever</object-name>
    <property>an24/AZS/sw0414</property>
   <interpolation>
-    <entry><ind>-1.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
   </interpolation>
   <axis>

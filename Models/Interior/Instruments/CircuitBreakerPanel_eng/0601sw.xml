@@ -31,7 +31,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/AZS/sw0601", -1.0, 0.1 );
+        interpolate("an24/AZS/sw0601", 0.0, 0.1 );
       </script>
     </binding>
   </action>
