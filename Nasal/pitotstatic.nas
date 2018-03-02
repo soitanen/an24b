@@ -2,6 +2,7 @@
 # S8 and S9 are emergency/reserve ports, which are not exposed to failure yet
 # static[9,10] and pitot[3] serve as fake "input receivers" only
 # stop() and start() is made by lever position in an24/Models/Interior/Control_Units/Pitot/xy.xml
+# UVPD 
 
 ### left instruments ###
 var pitotswap_A1selected = maketimer(0.01, func(){

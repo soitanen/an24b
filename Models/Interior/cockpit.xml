@@ -1309,7 +1309,7 @@
 
 <model>
   <name>PitotLever</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Pitot/pitot.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/PitotStatic/pitotstatic.xml</path>
 </model>
 
 <model>

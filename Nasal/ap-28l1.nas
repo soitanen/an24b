@@ -32,7 +32,7 @@ var engage_horizon_mode = func {
 
 var engage_kv_mode = func {
 	setprop("/an24/AP-28l1/internal/kv", 1);
-	setprop("/an24/AP-28l1/internal/target-pressure-inhg", getprop("/systems/static/pressure-inhg"));
+	setprop("/an24/AP-28l1/internal/target-pressure-inhg", getprop("/systems/static[0]/pressure-inhg"));
 }
 
 var headings_write = func {

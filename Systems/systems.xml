@@ -23,7 +23,7 @@
     <number>2</number>
   </pitot>
 
-<!-- Fake pitot for internal reasons (receive input from selected pitots) -->
+<!-- Fake pitot for internal reasons (receives input from selected pitots) -->
 
   <pitot>
     <name>pitot</name>
