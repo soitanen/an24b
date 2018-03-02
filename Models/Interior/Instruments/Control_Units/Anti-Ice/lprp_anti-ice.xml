@@ -38,8 +38,40 @@
   </offsets>
 </model>
 
+
+<!-- 3 Ice signalisation lamps, red -->
+
 <model>
- <path>rp_sl01_wing-tail-nose_bleed-from-l-eng.xml</path>
+ <path>rp_sl01_airframe-icing.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.737</y-m>
+    <z-m>0.79</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl02_l-engine-icing.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.758</y-m>
+    <z-m>0.79</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl03_r-engine-icing.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.779</y-m>
+    <z-m>0.79</z-m>
+  </offsets>
+</model>
+
+<!-- 6 Heating signalisation lamps, green -->
+
+<model>
+ <path>rp_sl04_wing-tail-nose_bleed-from-l-eng.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>0.771</y-m>
@@ -48,7 +80,7 @@
 </model>
 
 <model>
- <path>rp_sl02_inlet-guide-vane_bleed-valve-l.xml</path>
+ <path>rp_sl05_inlet-guide-vane_bleed-valve-l.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>0.792</y-m>
@@ -57,7 +89,7 @@
 </model>
 
 <model>
- <path>rp_sl03_prop-hub-blade-l.xml</path>
+ <path>rp_sl06_prop-hub-blade-l.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>0.813</y-m>
@@ -66,7 +98,7 @@
 </model>
 
 <model>
- <path>rp_sl04_prop-hub-blade-r.xml</path>
+ <path>rp_sl07_prop-hub-blade-r.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>0.834</y-m>
@@ -75,7 +107,7 @@
 </model>
 
 <model>
- <path>rp_sl05_inlet-guide-vane_bleed-valve-r.xml</path>
+ <path>rp_sl08_inlet-guide-vane_bleed-valve-r.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>0.856</y-m>
@@ -84,13 +116,15 @@
 </model>
 
 <model>
- <path>rp_sl06_wing-tail-nose_bleed-from-r-eng.xml</path>
+ <path>rp_sl09_wing-tail-nose_bleed-from-r-eng.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>0.877</y-m>
     <z-m>0.765</z-m>
   </offsets>
 </model>
+
+<!-- switches on tilted part of panel -->
 
 <model>
  <path>rp_sw01a_anti-ice-control.xml</path>
