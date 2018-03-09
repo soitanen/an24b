@@ -1,17 +1,9 @@
 <?xml version="1.0"?>
-<!--
-    #############################################################################
-    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
-    #	2d & 3d instruments, animations, systems and over.		   	#
-    #    	yurik@megasignal.com					   	#
-    #############################################################################	  
-    -->
 
-<!-- Heading indicator USH
-3D instrument for Tu-154 -->
+<!-- Heading indicator -->
 <PropertyList>
  <path>ush.ac</path>
-<!-- Internal instruments lighting -->
+
 <animation>
   <type>material</type>
   <object-name>index</object-name>
@@ -21,7 +13,7 @@
      <red>1.0</red>
      <green>0.4</green>
      <blue>0.4</blue>
-     <factor-prop>/controls/lighting/nav_panel_instr_red</factor-prop>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
    </emission>
 </animation>
 

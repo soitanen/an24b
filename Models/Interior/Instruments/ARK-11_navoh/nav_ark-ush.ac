@@ -8575,7 +8575,7 @@ refs 3
 11 0.0669873 0.25
 kids 0
 OBJECT poly
-name "dev-ind"
+name "km-ind"
 loc 0.000760887 -0.00145462 0.0789529
 crease 45.000000
 numvert 5

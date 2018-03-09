@@ -18,6 +18,17 @@
    </emission>
  </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>needle_1</object-name>
+  <property>/instrumentation/gik-1/indicated-heading</property>
+   <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
  <!--animation>
    <type>km_knob</type>
    <object-name>vol_general</object-name>

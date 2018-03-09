@@ -59,7 +59,7 @@
  <animation>
    <type>knob</type>
    <object-name>compass_knob</object-name>
-   <property>an24/ARK-11/ush_inner</property>
+   <property>an24/ARK-11/km-corr</property>
   <factor>2</factor>
   <center>
    <x-m>-0.0073</x-m>
@@ -74,25 +74,41 @@
     <action>
      <binding>
       <command>property-adjust</command>
-      <property>an24/ARK-11/ush_inner</property>
-      <factor>-1.0</factor>
-      <min>0</min>
-      <max>360</max>                
-      <wrap>true</wrap>
+      <property>an24/ARK-11/km-corr</property>
+      <factor>1.0</factor>
+      <min>-50</min>
+      <max>50</max>                
+      <wrap>false</wrap>
      </binding>
     </action>
  </animation>
 
 <animation>
     <type>rotate</type>
-    <object-name>ush_inner</object-name>
-    <property>an24/ARK-11/ush_inner</property>
-    <factor>-1.0</factor>
+    <object-name>km-ind</object-name>
+    <property>an24/ARK-11/km-corr</property>
+    <factor>1.0</factor>
     <axis>
       <x>1.0</x>
       <y>0.0</y>
       <z>0.0</z>
     </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>ush_inner</object-name>
+     <expression>
+      <dif>
+      <property>/instrumentation/gik-1/indicated-heading</property>
+      <property>an24/ARK-11/km-corr</property>
+      </dif>
+     </expression>
+     <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+     </axis>
 </animation>
 
 <!-- Text OSG -->

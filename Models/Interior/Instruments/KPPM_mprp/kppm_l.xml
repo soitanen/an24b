@@ -30,27 +30,27 @@
 	<type>rotate</type>
 	<object-name>needle</object-name>
         <expression>
-          <dif>
-	    <property>/instrumentation/gik-1/indicated-heading</property>
-            <property>/instrumentation/kppm[0]/scale-offset</property>
-          </dif>
+        <dif>
+         <property>/instrumentation/gik-1/indicated-heading</property>
+         <property>/instrumentation/kppm[0]/scale-offset</property>
+        </dif>
         </expression>
 	<axis>
-		<x>-1</x>
-		<y>0</y>
-		<z>0</z>
-	</axis>
+	 <x>-1</x>
+	 <y>0</y>
+	 <z>0</z>
+	 </axis>
 </animation>
 
 <animation>
-	<type>rotate</type>
-	<object-name>scale</object-name>
-	<property>/instrumentation/kppm[0]/scale-offset</property>
-	<axis>
-		<x>1</x>
-		<y>0</y>
-		<z>0</z>
-	</axis>
+  <type>rotate</type>
+  <object-name>scale</object-name>
+  <property>/instrumentation/kppm[0]/scale-offset</property>
+   <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
 </animation>
 
 <animation>
@@ -91,9 +91,9 @@
     <type>select</type>
     <object-name>gs_blenker</object-name>
     <condition>
-		<not>
-			<property>/instrumentation/nav/has-gs</property>
-		</not>
+	<not>
+	<property>/instrumentation/nav/has-gs</property>
+	</not>
     </condition>
 </animation>
 
