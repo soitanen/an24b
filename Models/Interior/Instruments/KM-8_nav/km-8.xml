@@ -8,8 +8,8 @@
  <animation>
    <type>material</type>
    <object-name>km_face</object-name>
-   <object-name>needle_1</object-name>
-   <object-name>needle_2</object-name>
+   <!--object-name>needle_1</object-name>
+   <object-name>needle_2</object-name-->
    <emission>
      <red>0.1</red>
      <green>0.02</green>

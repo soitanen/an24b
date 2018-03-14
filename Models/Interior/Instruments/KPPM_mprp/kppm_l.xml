@@ -27,19 +27,19 @@
 </animation>
 
 <animation>
-	<type>rotate</type>
-	<object-name>needle</object-name>
-        <expression>
-        <dif>
-         <property>/instrumentation/gik-1/indicated-heading</property>
-         <property>/instrumentation/kppm[0]/scale-offset</property>
-        </dif>
-        </expression>
-	<axis>
-	 <x>-1</x>
-	 <y>0</y>
-	 <z>0</z>
-	 </axis>
+ <type>rotate</type>
+ <object-name>needle</object-name>
+  <expression>
+  <dif>
+   <property>/instrumentation/gik-1/indicated-heading</property>
+   <property>/instrumentation/kppm[0]/scale-offset</property>
+  </dif>
+  </expression>
+ <axis>
+  <x>-1</x>
+  <y>0</y>
+  <z>0</z>
+ </axis>
 </animation>
 
 <animation>

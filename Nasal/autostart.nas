@@ -265,10 +265,14 @@ var startup = func {
 
 		settimer( func{
 		setprop("an24/FuelControl/sw0403", 1.0 );
+		setprop("an24/FuelControl/lrear463_press", 0.16 );
+		setprop("an24/FuelControl/lfront463_press", 0.16 );
 		}, t); t += 0.2;
 
 		settimer( func{
 		setprop("an24/FuelControl/sw0405", 1.0 );
+		setprop("an24/FuelControl/rrear463_press", 0.16 );
+		setprop("an24/FuelControl/rfront463_press", 0.16 );
 		}, t); t += 0.3;
 
 		settimer( func{
