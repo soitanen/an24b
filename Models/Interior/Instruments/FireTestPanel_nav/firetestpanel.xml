@@ -18,9 +18,9 @@
 <model>
  <path>sw_group-select.xml</path>
   <offsets>
-    <x-m>0.04</x-m>
-    <y-m>-0.0222</y-m>
-    <z-m>0.0293</z-m>
+    <x-m>0.037</x-m>
+    <y-m>-0.0282</y-m>
+    <z-m>0.0315</z-m>
   </offsets>
 </model>
 
@@ -28,8 +28,8 @@
  <path>btn_push-to-test.xml</path>
   <offsets>
     <x-m>0.033</x-m>
-    <y-m>0.0452</y-m>
-    <z-m>0.034</z-m>
+    <y-m>0.0451</y-m>
+    <z-m>0.0338</z-m>
     <pitch-deg>90</pitch-deg>
   </offsets>
 </model>
