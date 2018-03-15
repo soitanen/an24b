@@ -134,12 +134,13 @@
   </offsets>
 </model>
 
+<!-- Left engine fire extinguishers -->
 <model>
  <path>btn01.xml</path>
   <offsets>
     <x-m>-0.0136</x-m>
-    <y-m>0.1317</y-m>
-    <z-m>-0.0483</z-m>
+    <y-m>0.0467</y-m>
+    <z-m>-0.054</z-m>
     <pitch-deg>90</pitch-deg>
   </offsets>
 </model>
@@ -182,12 +183,13 @@
   </axis>
  </animation>
 
+<!-- Right engine fire extinguishers -->
 <model>
  <path>btn02.xml</path>
   <offsets>
     <x-m>-0.0136</x-m>
-    <y-m>0.1751</y-m>
-    <z-m>-0.0483</z-m>
+    <y-m>0.0902</y-m>
+    <z-m>-0.054</z-m>
     <pitch-deg>90</pitch-deg>
   </offsets>
 </model>
@@ -229,6 +231,56 @@
     <z>0</z>
   </axis>
  </animation>
+
+<!-- Surfaces and nacelles fire extinguishers, second group -->
+<model>
+ <path>btn03.xml</path>
+  <offsets>
+    <x-m>-0.0136</x-m>
+    <y-m>0.218</y-m>
+    <z-m>-0.054</z-m>
+    <pitch-deg>90</pitch-deg>
+  </offsets>
+</model>
+
+<animation>
+  <type>pick</type>
+  <object-name>cover03</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/animations/FireFeather/cover03" ) == 1.0 ){
+        interpolate("an24/animations/FireFeather/cover03", 0.0, 0.2 );
+        }
+        else {
+        interpolate("an24/animations/FireFeather/cover03", 1.0, 0.2 );
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>cover03</object-name>
+   <property>an24/animations/FireFeather/cover03</property>
+   <factor>80</factor>
+  <center>
+    <x-m>0.0047</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0694</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+ </animation>
+
 
 <!-- -->
 
