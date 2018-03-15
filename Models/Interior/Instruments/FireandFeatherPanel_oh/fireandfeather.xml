@@ -312,4 +312,22 @@
   </offsets>
 </model>
 
+<model>
+ <path>wl0109.xml</path>
+  <offsets>
+    <x-m>-0.014</x-m>
+    <y-m>0.203</y-m>
+    <z-m>-0.026</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>wl0110.xml</path>
+  <offsets>
+    <x-m>-0.014</x-m>
+    <y-m>0.224</y-m>
+    <z-m>-0.026</z-m>
+  </offsets>
+</model>
+
 </PropertyList>
