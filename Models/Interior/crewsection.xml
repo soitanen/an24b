@@ -195,6 +195,19 @@
   </offsets>
 </model>
 
+<model>
+  <name>FireTestPanel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/FireTestPanel_nav/firetestpanel.xml</path>
+  <offsets>
+    <x-m>3.26</x-m>
+    <y-m>-0.71</y-m>
+    <z-m>1.42</z-m>
+    <heading-deg>86</heading-deg>
+    <roll-deg>0</roll-deg>
+    <pitch-deg>52</pitch-deg>
+  </offsets>
+</model>
+
 <!-- Radio Operator's/ Engineer's Panel -->
 
 <model>

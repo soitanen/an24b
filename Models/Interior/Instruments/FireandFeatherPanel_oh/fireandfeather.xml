@@ -59,15 +59,6 @@
 </model>
 
 <model>
- <path>sw_turnable.xml</path>
-  <offsets>
-    <x-m>-0.009</x-m>
-    <y-m>0.2671</y-m>
-    <z-m>-0.0395</z-m>
-  </offsets>
-</model>
-
-<model>
  <path>wlfeather01.xml</path>
   <offsets>
     <x-m>-0.0137</x-m>
@@ -122,6 +113,26 @@
 </model>
 
 <!-- ************ Fire section *********** -->
+
+ <animation>
+  <type>material</type>
+  <object-name>fire_l-wing</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+   <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+  </emission>
+ </animation>
+
+<model>
+ <path>sw_main.xml</path>
+  <offsets>
+    <x-m>-0.009</x-m>
+    <y-m>0.2671</y-m>
+    <z-m>-0.0395</z-m>
+  </offsets>
+</model>
 
 <model>
  <path>btn01.xml</path>
@@ -240,7 +251,7 @@
 </model>
 
 <model>
- <path>wl0101.xml</path>
+ <path>wl_exting_01.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.038</y-m>
@@ -249,7 +260,7 @@
 </model>
 
 <model>
- <path>wl0102.xml</path>
+ <path>wl_exting_02.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.0582</y-m>
@@ -259,7 +270,7 @@
 
 
 <model>
- <path>wl0103.xml</path>
+ <path>wl_exting_03.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.0785</y-m>
@@ -268,7 +279,7 @@
 </model>
 
 <model>
- <path>wl0104.xml</path>
+ <path>wl_exting_04.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.098</y-m>
@@ -277,7 +288,7 @@
 </model>
 
 <model>
- <path>wl0105.xml</path>
+ <path>wl_exting_05.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.12</y-m>
@@ -286,7 +297,7 @@
 </model>
 
 <model>
- <path>wl0106.xml</path>
+ <path>wl_exting_06.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.14</y-m>
@@ -295,7 +306,7 @@
 </model>
 
 <model>
- <path>wl0107.xml</path>
+ <path>wl_exting_07.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.161</y-m>
@@ -304,7 +315,7 @@
 </model>
 
 <model>
- <path>wl0108.xml</path>
+ <path>wl_exting_08.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.182</y-m>
@@ -313,7 +324,7 @@
 </model>
 
 <model>
- <path>wl0109.xml</path>
+ <path>wl_exting_09.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.203</y-m>
@@ -322,7 +333,7 @@
 </model>
 
 <model>
- <path>wl0110.xml</path>
+ <path>wl_exting_10.xml</path>
   <offsets>
     <x-m>-0.014</x-m>
     <y-m>0.224</y-m>

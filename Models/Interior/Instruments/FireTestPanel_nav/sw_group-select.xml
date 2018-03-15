@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!-- Switch to select group -->
+
+<PropertyList>
+ <path>../../shared/switches/11p1n.ac</path>
+
+ <animation>
+   <type>knob</type>
+   <object-name>11p1n</object-name>
+   <property>an24/FireTest/selection</property>
+   <factor>30</factor>
+   <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <!--center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0027</z-m>
+   </center-->
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/FireTest/selection</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>12</max>                
+      <wrap>true</wrap>
+     </binding>
+    </action>
+ </animation>
+</PropertyList>

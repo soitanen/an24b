@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!--  -->
+<!-- Warning lamp indicating fire in left engine -->
 
 <PropertyList>
  <path>../../shared/lamps/warninglamp02.ac</path>
@@ -15,8 +15,18 @@
 <animation>
  <type>select</type>
  <condition>
+   <or>
    <equals>
-    <property>an24/lights/instrlights</property>
+    <property>an24/FireTest/selection</property>
+    <value>2</value>
+   </equals>
+   <equals>
+    <property>an24/FireTest/selection</property>
+    <value>3</value>
+   </equals>
+   </or>
+   <equals>
+    <property>an24/FireTest/push-to-test</property>
     <value>1</value>
    </equals>
   </condition>

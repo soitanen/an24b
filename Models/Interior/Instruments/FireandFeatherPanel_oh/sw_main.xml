@@ -15,13 +15,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FireFeather/turn-switch", 1.0, 0.1 );
+        interpolate("an24/FireFeather/main", 1.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/FireFeather/turn-switch", 1.0, 0.1 );
+        interpolate("an24/FireFeather/sw_main", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -37,13 +37,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FireFeather/turn-switch", 0.0, 0.1 );
+        interpolate("an24/FireFeather/main", 0.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/FireFeather/turn-switch", 0.0, 0.1 );
+        interpolate("an24/FireFeather/sw_main", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -59,13 +59,13 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FireFeather/turn-switch", -1.0, 0.1 );
+        interpolate("an24/FireFeather/main", -1.0, 0.1 );
       </script>
     </binding>
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/animations/FireFeather/turn-switch", -1.0, 0.1 );
+        interpolate("an24/FireFeather/sw_main", -1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -74,7 +74,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/animations/FireFeather/turn-switch</property>
+   <property>an24/FireFeather/sw_main</property>
   <interpolation>
     <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
