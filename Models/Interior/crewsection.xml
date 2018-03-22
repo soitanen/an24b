@@ -255,6 +255,17 @@
 </model>
 
 <model>
+  <name>Electrical_Panel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Electrical_Panel_eng/electrical_panel.xml</path>
+  <offsets>
+    <x-m>3.874</x-m>
+    <y-m>0.4698</y-m>
+    <z-m>0.6201</z-m>
+    <heading-deg>180</heading-deg>
+  </offsets>
+</model>
+
+<model>
   <name>CircuitBreakerPanel</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/CircuitBreakerPanel_eng/circuitbreakerpanel.xml</path>
   <offsets>
@@ -262,77 +273,6 @@
     <y-m>0.86</y-m>
     <z-m>1.1</z-m>
     <roll-deg>38</roll-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>ElectricalPanel</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Electrical_Panel_eng/electrical_panel.xml</path>
-</model>
-
-<model>
-  <name>AF-150</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/AF-150_eng/af-150_l.xml</path>
-  <offsets>
-    <x-m>3.876</x-m>
-    <y-m>0.4263</y-m>
-    <z-m>0.7317</z-m>
-    <heading-deg>180</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>AF-150</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/AF-150_eng/af-150_r.xml</path>
-  <offsets>
-    <x-m>3.876</x-m>
-    <y-m>0.3613</y-m>
-    <z-m>0.7317</z-m>
-    <heading-deg>180</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>VF-150</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/VF-150_eng/vf-150.xml</path>
-  <offsets>
-    <x-m>3.876</x-m>
-    <y-m>0.5133</y-m>
-    <z-m>0.7317</z-m>
-    <heading-deg>180</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>A-Z</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/A-Z_eng/a-z_stgl.xml</path>
-  <offsets>
-    <x-m>3.88</x-m>
-    <y-m>0.5887</y-m>
-    <z-m>0.5632</z-m>
-    <heading-deg>180</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>A-Z</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/A-Z_eng/a-z_stgl.xml</path>
-  <offsets>
-    <x-m>3.88</x-m>
-    <y-m>0.5314</y-m>
-    <z-m>0.5632</z-m>
-    <heading-deg>180</heading-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>A-Z</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/A-Z_eng/a-z_stgl.xml</path>
-  <offsets>
-    <x-m>3.88</x-m>
-    <y-m>0.4742</y-m>
-    <z-m>0.5632</z-m>
-    <heading-deg>180</heading-deg>
   </offsets>
 </model>
 

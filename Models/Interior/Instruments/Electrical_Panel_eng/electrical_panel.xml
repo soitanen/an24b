@@ -1,16 +1,27 @@
 <?xml version="1.0"?>
 
 <PropertyList>
+ <path>electrical_panel.ac</path>
 
 <!-- Panel lighting -->
 
 <model>
  <path>knob_panel-lighting.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.876</x-m>
-    <y-m>0.57</y-m>
-    <z-m>0.83</z-m>
+    <x-m>0.004</x-m>
+    <y-m>-0.11</y-m>
+    <z-m>0.21</z-m>
+  </offsets>
+</model>
+
+<!-- VP-46 Voltmeter -->
+
+<model>
+ <path>../VP-46_eng/vp-46.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.024</y-m>
+    <z-m>0.191</z-m>
   </offsets>
 </model>
 
@@ -19,10 +30,9 @@
 <model>
  <path>sw_pt-1000.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.876</x-m>
-    <y-m>0.3612</y-m>
-    <z-m>0.8332</z-m>
+    <x-m>-0.005</x-m>
+    <y-m>0.1086</y-m>
+    <z-m>0.213</z-m>
   </offsets>
 </model>
 
@@ -31,10 +41,31 @@
 <model>
  <path>wl_pt1000working.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.876</x-m>
-    <y-m>0.38</y-m>
-    <z-m>0.792</z-m>
+    <x-m>0.0</x-m>
+    <y-m>0.0903</y-m>
+    <z-m>0.172</z-m>
+  </offsets>
+</model>
+
+<!-- GF-400 Hertzmeter (fake atm!) -->
+
+<model>
+ <path>../VF-150_eng/vf-150.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.1085</y-m>
+    <z-m>0.1116</z-m>
+  </offsets>
+</model>
+
+<!-- VF-150 Voltmeter -->
+
+<model>
+ <path>../VF-150_eng/vf-150.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.0435</y-m>
+    <z-m>0.1116</z-m>
   </offsets>
 </model>
 
@@ -43,10 +74,29 @@
 <model>
  <path>sw_po-750_ground-start.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.878</x-m>
-    <y-m>0.4698</y-m>
-    <z-m>0.73</z-m>
+    <x-m>-0.004</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.11</z-m>
+  </offsets>
+</model>
+
+<!-- AF-150 Voltmeter -->
+
+<model>
+ <path>../AF-150_eng/af-150_l.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0435</y-m>
+    <z-m>0.1116</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>../AF-150_eng/af-150_r.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.1085</y-m>
+    <z-m>0.1116</z-m>
   </offsets>
 </model>
 
@@ -55,20 +105,18 @@
 <model>
  <path>knob_go-16l_voltage_reg.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.865</x-m>
-    <y-m>0.5882</y-m>
-    <z-m>0.6612</z-m>
+    <x-m>0.0</x-m>
+    <y-m>-0.1184</y-m>
+    <z-m>0.041</z-m>
   </offsets>
 </model>
 
 <model>
  <path>knob_go-16r_voltage_reg.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.866</x-m>
-    <y-m>0.5397</y-m>
-    <z-m>0.6612</z-m>
+    <x-m>0.0</x-m>
+    <y-m>-0.07</y-m>
+    <z-m>0.041</z-m>
   </offsets>
 </model>
 
@@ -77,20 +125,69 @@
 <model>
  <path>sl_ar-1_working.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.876</x-m>
-    <y-m>0.5162</y-m>
-    <z-m>0.6095</z-m>
+    <x-m>0.0</x-m>
+    <y-m>-0.0464</y-m>
+    <z-m>-0.0106</z-m>
   </offsets>
 </model>
 
 <model>
  <path>sl_ar-2_working.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.876</x-m>
-    <y-m>0.4558</y-m>
-    <z-m>0.6095</z-m>
+    <x-m>0.0</x-m>
+    <y-m>0.014</y-m>
+    <z-m>-0.0106</z-m>
+  </offsets>
+</model>
+
+<!-- A-Z Amperemeter STG L and R and GS-24 -->
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.1189</y-m>
+    <z-m>-0.0569</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.0616</y-m>
+    <z-m>-0.0569</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.0044</y-m>
+    <z-m>-0.0569</z-m>
+  </offsets>
+</model>
+
+<!-- A-2 Amperemeter accumulator-->
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.0529</y-m>
+    <z-m>-0.0569</z-m>
+  </offsets>
+</model>
+
+<!-- V-1 Voltmeter -->
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.1102</y-m>
+    <z-m>-0.0569</z-m>
   </offsets>
 </model>
 
@@ -99,10 +196,9 @@
 <model>
  <path>knob_ac-volt-sel.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.868</x-m>
-    <y-m>0.49</y-m>
-    <z-m>0.665</z-m>
+    <x-m>0.0</x-m>
+    <y-m>-0.015</y-m>
+    <z-m>0.041</z-m>
   </offsets>
 </model>
 
@@ -111,10 +207,9 @@
 <model>
  <path>knob_dc-volt-sel.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.868</x-m>
-    <y-m>0.37</y-m>
-    <z-m>0.51</z-m>
+    <x-m>0.0</x-m>
+    <y-m>0.12</y-m>
+    <z-m>-0.13</z-m>
   </offsets>
 </model>
 
@@ -123,20 +218,18 @@
 <model>
  <path>sw_go-16l_on.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.878</x-m>
-    <y-m>0.4324</y-m>
-    <z-m>0.6627</z-m>
+    <x-m>-0.002</x-m>
+    <y-m>0.0374</y-m>
+    <z-m>0.0426</z-m>
   </offsets>
 </model>
 
 <model>
  <path>sw_go-16r_on.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.878</x-m>
-    <y-m>0.4096</y-m>
-    <z-m>0.6627</z-m>
+    <x-m>-0.002</x-m>
+    <y-m>0.06</y-m>
+    <z-m>0.0426</z-m>
   </offsets>
 </model>
 
@@ -145,20 +238,18 @@
 <model>
  <path>sw_connect_stg-18l.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.878</x-m>
-    <y-m>0.5997</y-m>
-    <z-m>0.4234</z-m>
+    <x-m>-0.005</x-m>
+    <y-m>-0.13</y-m>
+    <z-m>-0.1966</z-m>
   </offsets>
 </model>
 
 <model>
  <path>sw_connect_stg-18r.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.878</x-m>
-    <y-m>0.5806</y-m>
-    <z-m>0.4234</z-m>
+    <x-m>-0.005</x-m>
+    <y-m>-0.111</y-m>
+    <z-m>-0.1966</z-m>
   </offsets>
 </model>
 
@@ -167,10 +258,9 @@
 <model>
  <path>sw_connect_gs-24.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.878</x-m>
-    <y-m>0.5446</y-m>
-    <z-m>0.4234</z-m>
+    <x-m>-0.005</x-m>
+    <y-m>-0.075</y-m>
+    <z-m>-0.1966</z-m>
   </offsets>
 </model>
 
@@ -179,10 +269,9 @@
 <model>
  <path>sw_aerodrome_onboard.xml</path>
   <offsets>
-    <heading-deg>180</heading-deg>
-    <x-m>3.878</x-m>
-    <y-m>0.5049</y-m>
-    <z-m>0.4234</z-m>
+    <x-m>-0.005</x-m>
+    <y-m>-0.035</y-m>
+    <z-m>-0.1966</z-m>
   </offsets>
 </model>
 

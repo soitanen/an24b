@@ -1,6 +1,6 @@
 # sources
-setprop("an24/Electrics/Gen_18TMOl_DC_V", 27.0 );
-setprop("an24/Electrics/Gen_18TMOr_DC_V", 27.0 );
+setprop("an24/Electrics/Gen_18TMOl_DC_V", 0.0 );
+setprop("an24/Electrics/Gen_18TMOr_DC_V", 0.0 );
 setprop("an24/Electrics/Gen_GO16l_AC_V", 0.0 );
 setprop("an24/Electrics/Gen_GO16r_AC_V", 0.0 );
 setprop("an24/Electrics/Batt_12SAMa_DC_V", 27.0 );
@@ -10,9 +10,9 @@ setprop("an24/Electrics/AUX_ShRAP500b_DC_V", 0.0 );
 setprop("an24/Electrics/AUX_ShRAP200_AC_V", 0.0 ); # 115V AC AUX
 
 # in between
-setprop("an24/Electrical_Panel/kn_rn-600l", 0.0 ); #voltage regulator 115 +-10V
+setprop("an24/Electrical_Panel/kn_rn-600l", 0.0 ); #knob voltage regulator 115 +-10V
 setprop("an24/Electrical_Panel/kn_rn-600r", 0.0 );
-setprop("an24/Electrical_Panel/kn_stgl", 0.0 ); #voltage regulator 36V +-?V
+setprop("an24/Electrical_Panel/kn_stgl", 0.0 ); #knob voltage regulator 36V +-?V
 setprop("an24/Electrical_Panel/kn_stgr", 0.0 );
 setprop("an24/Electrical_Panel/sw_on_outboard", 0.0 ); # Main switch outboard aux -1, off 0, onboard 1
 setprop("an24/Electrical_Panel/sw_pt-1000", 0.0 ); # Converter 27V DC -> 36V AC, 1 = main (auto), 0 = both off, -1 = reserve 
@@ -31,6 +31,22 @@ setprop("an24/Electrics/BUS_115V_AC_Hz", 0.0 );
 setprop("an24/Electrics/BUS_36V_AC_V", 0.0 );
 setprop("an24/Electrics/BUS_36V_AC_Hz", 0.0 );
 setprop("an24/Electrics/BUS_EMERGBAR_DC_V", 0.0 );
+
+
+## Battery discharge
+var batta_discharge = maketimer(20, func(){
+	var speedup = getprop("/sim/speed-up");
+	var voltage = getprop("an24/Electrics/Batt_12SAMa_DC_V");
+	var charging = getprop("an24/Electrics/Batt_12SAMa_DC_V");
+	if ( voltage > 0 ) {
+	var voltage = voltage - (speedup * 0.001);
+	setprop("an24/Electrics/Batt_12SAMa_DC_V", voltage);
+	}
+	else {
+	batta_discharge.stop();
+	}
+});
+batta_discharge.start();
 
 var bus_36V_AC_V = func {
 	if ( getprop("an24/Electrical_Panel/sw_pt-1000") != 0.0 and (getprop("an24/Electrics/PT-1000main") == 1.0 or getprop("an24/Electrics/PT-1000reserve") == 1.0 ) ) {

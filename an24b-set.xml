@@ -245,8 +245,8 @@
 <input>
  <keyboard>
 
-<key n="115"> <!-- s -->
-    <name>autostart</name>
+<key n="115">
+    <name>s</name>
     <desc>Autostart</desc>
        <binding>
         <command>nasal</command>

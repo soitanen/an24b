@@ -2,11 +2,11 @@
 
 <PropertyList>
 
-  <electrical>
+  <!--electrical>
     <name>electrical</name>
     <number>0</number>
     <path>Aircraft/Generic/generic-electrical.xml</path>
-  </electrical>
+  </electrical-->
 
   <pitot>
     <name>pitot</name>
