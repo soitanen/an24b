@@ -32,7 +32,7 @@
   <expression>
   <dif>
    <property>/instrumentation/gik-1/indicated-heading</property>
-   <property>/instrumentation/kppm[0]/scale-offset</property>
+   <property>/instrumentation/kppm/scale-offset</property>
   </dif>
   </expression>
  <axis>
@@ -45,7 +45,7 @@
 <animation>
   <type>rotate</type>
   <object-name>scale</object-name>
-  <property>/instrumentation/kppm[0]/scale-offset</property>
+  <property>/instrumentation/kppm/scale-offset</property>
    <axis>
     <x>1</x>
     <y>0</y>
@@ -56,7 +56,7 @@
 <animation>
 	<type>translate</type>
 	<object-name>hs_needle</object-name>
-	<property>/instrumentation/nav[0]/heading-needle-deflection-norm</property>
+	<property>/instrumentation/nav/heading-needle-deflection-norm</property>
 	<interpolation>
 		<entry><ind>-1</ind><dep>-0.019</dep></entry>
 		<entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -110,7 +110,7 @@
 <animation>
   <type>knob</type>
   <object-name>knob</object-name>
-  <property>/instrumentation/kppm[0]/scale-offset</property>  
+  <property>/instrumentation/kppm/scale-offset</property>  
   <factor>-5</factor>
   <center>
     <x-m>0.0</x-m>
@@ -125,7 +125,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/nav[0]/radials/selected-deg</property>
+        <property>/instrumentation/nav/radials/selected-deg</property>
         <factor>-1</factor>
         <min>0</min>
         <max>360</max>                
@@ -133,7 +133,7 @@
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/kppm[0]/scale-offset</property>
+        <property>/instrumentation/kppm/scale-offset</property>
         <factor>-1</factor>
         <min>0</min>
         <max>360</max>                

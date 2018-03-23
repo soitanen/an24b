@@ -287,6 +287,7 @@ var startup = func {
 		settimer( func{
 		setprop("an24/FuelControl/sw0407", 1.0 );
 		setprop("an24/FuelControl/cutoff-r-by-sw", 0.0 );
+		setprop("an24/FuelControl/TG-16_cutoff", 0.0 );
 		}, t); t += 0.2;
 
 # Engine Start

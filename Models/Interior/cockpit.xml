@@ -399,6 +399,18 @@
   </offsets>
 </model>
 
+<!-- *************************************** -->
+
+<model>
+  <name>UV-1</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/UV-1_lp/uv-1.xml</path>
+  <offsets>
+    <x-m>2.096</x-m>
+    <y-m>-0.6975</y-m>
+    <z-m>0.785</z-m>
+  </offsets>
+</model>
+
 <!-- ************************** MIDDLE PANEL *************************** -->
 
 <model>
