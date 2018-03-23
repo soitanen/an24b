@@ -16,7 +16,7 @@
       <command>nasal</command>
       <script>
         if( getprop("an24/Start-Panel/ground-air_cvr" ) == 1.0 ){
-        interpolate("an24/animations/Start-Panel/ground-air_cvr", 0.0, 0.2 );
+        interpolate("an24/Start-Panel/ground-air_cvr", 0.0, 0.2 );
         }
         else {
         interpolate("an24/Start-Panel/ground-air_cvr", 1.0, 0.2 );

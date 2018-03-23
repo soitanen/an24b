@@ -559,6 +559,9 @@
   <adf n="1">
     <serviceable type="bool">true</serviceable>
   </adf>
+  <airspeed-indicator n="1">
+    <serviceable type="bool">true</serviceable>
+  </airspeed-indicator>
   <altimeter n="1">
     <serviceable type="bool">true</serviceable>
   </altimeter>
