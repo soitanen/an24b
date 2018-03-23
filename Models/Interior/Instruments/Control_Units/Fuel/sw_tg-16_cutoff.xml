@@ -15,7 +15,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/TG-16_cutoff", 1.0, 0.2 );
+        interpolate("an24/FuelControl/TG-16_cutoff", 0.0, 0.2 );
       </script>
     </binding>
   </action>
@@ -37,7 +37,9 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/FuelControl/TG-16_cutoff", 0.0, 0.2 );
+        interpolate("an24/FuelControl/TG-16_cutoff", 1.0, 0.2 );
+        setprop("controls/engines/engine[2]/starter", 0.0 );
+        setprop("controls/engines/engine[2]/cutoff", 1.0 );
       </script>
     </binding>
   </action>
@@ -48,8 +50,8 @@
    <object-name>lever</object-name>
    <property>an24/FuelControl/TG-16_cutoff</property>
   <interpolation>
-    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
-    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>0.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>-30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>

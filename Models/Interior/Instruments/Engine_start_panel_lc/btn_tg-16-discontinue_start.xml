@@ -15,7 +15,6 @@
     <binding>
       <command>nasal</command>
       <script>
-        setprop("an24/Start-Panel/discontinuestarttg", 1.0 );
         setprop("controls/engines/engine[2]/starter", 0.0 );
         setprop("controls/engines/engine[2]/cutoff", 1.0 );
         interpolate("an24/Start-Panel/discontinuestarttg-btn", -1.0, 0.2 );

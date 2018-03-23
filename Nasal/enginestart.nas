@@ -1,8 +1,9 @@
 #engine start stuff
 #gtn1/n2 is nx GasTurbine GTD-16
 setprop("an24/Start-Panel/timerapd", 0.0);
-setprop("an24/Start-Panel/discontinuestarttg", 0.0);
+# setprop("an24/Start-Panel/discontinuestarttg", 0.0);
 setprop("an24/Start-Panel/left-right", 1.0);
+setprop("an24/FuelControl/TG-16_cutoff", 1.0);
 
 var apdseq = func {
 var apd = getprop("an24/Start-Panel/timerapd");
@@ -19,13 +20,14 @@ var lengreng = getprop("an24/Start-Panel/left-right");
 	}
 }
 
+setlistener("engines/engine[2]/n1", apdseq);
+
 var gtseq = func {
 var gtn2 = getprop("engines/engine[2]/n2");
-	if (gtn2 > 18.0) {
+	if (gtn2 > 18.0 and getprop("an24/FuelControl/TG-16_cutoff") == 0.0 ) {
 	setprop("/fdm/jsbsim/propulsion/cutoff_cmd", 0.0);
 	setprop("/controls/engines/engine[2]/cutoff", 0.0);
 	}
 }
 
 setlistener("engines/engine[2]/n2", gtseq);
-setlistener("engines/engine[2]/n1", apdseq);

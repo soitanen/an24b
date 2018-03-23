@@ -19,13 +19,16 @@ QUICK STARTUP-GUIDE (to be improved (with pictures (and such (like, as pdf))))
 - On Fuel-Control-Panel (extra-panel on pilots' middle panel):
   - Turn on all switches at the bottom, except middle one (cross-feed, optional)
 
+- On Left Horizontal Panel:
+  - Turn up cut-off switch next to green and red lamp
+
 - On Engine-Start-Panel (sunk panel on pilot's left console):
   - Press lower black/white button (wait for TG-16 APU start, indicated by green lamp and tachometer)
-  - Put 2nd switch in top row up to position "lev" (left) and press upper black/white button (AI-24 engine start)
+  - Put 2nd switch in top row up to position "lev" (left) and press upper left black/white button (AI-24 engine start)
     - left engine should spool up and start
   - Put 2nd switch in top row down to position "prav" (right) and press upper black/white button (AI-24 engine start)
     - guess what's supposed to happen
-  - Press lower red/grey button once, APU stops
+  - Press lower right red/grey button once, APU stops
 
 - Below pilot's left panel:
   - Put on switches "AGD", "EUP", "CGV" (number 4,5,6 in this row); watch AGD (AI) go up

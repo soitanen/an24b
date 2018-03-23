@@ -463,6 +463,9 @@ Models        </description>
           <feed>3</feed>
           <feed>4</feed>
           <feed>5</feed>
+          <feed>0</feed>
+          <feed>1</feed>
+          <feed>2</feed>
           <thruster file="direct">
             <location unit="M">
                 <x> 5.94 </x>
