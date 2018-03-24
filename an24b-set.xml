@@ -701,9 +701,9 @@
   <autostart>
     <file>Aircraft/an24b/Nasal/autostart.nas</file>
   </autostart>
-  <electrical>
+  <!--electrical>
     <file>Aircraft/an24b/Nasal/electrical.nas</file>
-  </electrical>
+  </electrical-->
   <engines>
     <file>Aircraft/an24b/Nasal/enginestart.nas</file>
   </engines>
