@@ -207,9 +207,10 @@
 <model>
  <path>knob_dc-volt-sel.xml</path>
   <offsets>
-    <x-m>0.0</x-m>
-    <y-m>0.12</y-m>
-    <z-m>-0.13</z-m>
+    <x-m>0.002</x-m>
+    <y-m>0.114</y-m>
+    <z-m>-0.129</z-m>
+    <roll-deg>150</roll-deg>
   </offsets>
 </model>
 

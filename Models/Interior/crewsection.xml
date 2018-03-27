@@ -216,7 +216,7 @@
   <offsets>
     <x-m>3.88</x-m>
     <y-m>0.881</y-m>
-    <z-m>0.65</z-m>
+    <z-m>0.63</z-m>
     <heading-deg>180</heading-deg>
   </offsets>
 </model>
@@ -227,7 +227,7 @@
   <offsets>
     <x-m>3.888</x-m>
     <y-m>0.847</y-m>
-    <z-m>0.463</z-m>
+    <z-m>0.443</z-m>
     <heading-deg>180</heading-deg>
   </offsets>
 </model>
@@ -238,7 +238,7 @@
   <offsets>
     <x-m>3.8792</x-m>
     <y-m>0.7341</y-m>
-    <z-m>0.6616</z-m>
+    <z-m>0.6416</z-m>
     <heading-deg>180</heading-deg>
   </offsets>
 </model>
@@ -260,7 +260,7 @@
   <offsets>
     <x-m>3.874</x-m>
     <y-m>0.4698</y-m>
-    <z-m>0.6201</z-m>
+    <z-m>0.60</z-m>
     <heading-deg>180</heading-deg>
   </offsets>
 </model>
