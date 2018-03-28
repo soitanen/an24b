@@ -341,7 +341,7 @@ setprop("an24/SPU-7/general_viewnr8", 0.0);
 setprop("an24/SPU-7/general_viewnr9", 0.0);
 setprop("an24/SPU-7/general_viewnr10", 0.0);
 
-setprop("an24/AZS/sw0509", -1.0);
+setprop("an24/AZS/sw0509", 0.0);
 var r8021audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 0.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 0.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 0.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 0.0 and viewnr == 10 ) ) {
@@ -365,7 +365,7 @@ var r8021audible = func {
  setlistener("an24/SPU-7/eng_source", r8021audible);
  setlistener("an24/SPU-7/nav_source", r8021audible);
 
-setprop("an24/AZS/sw0508", -1.0);
+setprop("an24/AZS/sw0508", 0.0);
 var r8022audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 3.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 3.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 3.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 3.0 and viewnr == 10 ) ) {
@@ -412,6 +412,7 @@ var r8022audible = func {
 # setlistener("an24/SPU-7/eng_source", r8361audible);
 # setlistener("an24/SPU-7/nav_source", r8361audible);
 
+setprop("an24/AZS/sw0512", 0.0);
 var ark1audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 4.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 4.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 4.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 4.0 and viewnr == 10 ) ) {
@@ -438,6 +439,7 @@ var ark1audible = func {
  setlistener("an24/SPU-7/eng_source", ark1audible);
  setlistener("an24/SPU-7/nav_source", ark1audible);
 
+setprop("an24/AZS/sw0514", 0.0);
 var ark2audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 5.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 5.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 5.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 5.0 and viewnr == 10 ) ) {

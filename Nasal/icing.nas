@@ -48,6 +48,7 @@ var Cwindow_icing = func {
 
 ## Pitots
 
+setprop("an24/Anti-Ice/sw_pitot_S1S5A1", -1.0 );
 setprop("an24/Anti-Ice/pitot_S1S5A1", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S1S5A1_cm", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S1S5A1_cmpermin", 0.0 );
@@ -74,6 +75,7 @@ var pitots1s5a1_icing = maketimer(10, func() {
 
 pitots1s5a1_icing.start();
 
+setprop("an24/Anti-Ice/sw_pitot_S3A2", -1.0 );
 setprop("an24/Anti-Ice/pitot_S3A2", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S3A2_cm", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S3A2_cmpermin", 0.0 );
@@ -98,6 +100,7 @@ var pitots3a2_icing = maketimer(10, func() {
 
 pitots3a2_icing.start();
 
+setprop("an24/Anti-Ice/sw_pitot_S2S6A3", -1.0 );
 setprop("an24/Anti-Ice/pitot_S2S6A3", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S2S6A3_cm", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S2S6A3_cmpermin", 0.0 );
@@ -124,6 +127,7 @@ var pitots2s6a3_icing = maketimer(10, func() {
 
 pitots2s6a3_icing.start();
 
+setprop("an24/Anti-Ice/sw_pitot_S4S7", -1.0 );
 setprop("an24/Anti-Ice/pitot_S4S7", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S4S7_cm", 0.0 );
 setprop("an24/Anti-Ice/elements/pitot_S4S7_cmpermin", 0.0 );
