@@ -14,6 +14,84 @@
   </offsets>
 </model>
 
+ <animation>
+   <type>material</type>
+   <object-name>lightplate</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.5</green>
+     <blue>0.5</blue>
+     <factor-prop>/controls/lighting/panel-elec_red</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>ar1_light</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>ar1_light</object-name>
+   <diffuse>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+   </diffuse>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>ar1_light</object-name>
+   <ambient>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+   </ambient>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>ar1_light</object-name>
+   <specular>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+   </specular>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>ar2_light</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.1</green>
+     <blue>0.1</blue>
+     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>gs24_light</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.1</green>
+     <blue>0.1</blue>
+     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+   </emission>
+ </animation>
+
+
 <!-- VP-46 Voltmeter -->
 
 <model>
@@ -120,14 +198,23 @@
   </offsets>
 </model>
 
-<!-- Signal lamps AR-1/2 working -->
+<!-- Signal lamps GS-24 and AR-1/2 working -->
+
+<model>
+ <path>sl_gs24_working.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.107</y-m>
+    <z-m>-0.0156</z-m>
+  </offsets>
+</model>
 
 <model>
  <path>sl_ar-1_working.xml</path>
   <offsets>
     <x-m>0.0</x-m>
     <y-m>-0.0464</y-m>
-    <z-m>-0.0106</z-m>
+    <z-m>-0.0156</z-m>
   </offsets>
 </model>
 
@@ -136,7 +223,7 @@
   <offsets>
     <x-m>0.0</x-m>
     <y-m>0.014</y-m>
-    <z-m>-0.0106</z-m>
+    <z-m>-0.0156</z-m>
   </offsets>
 </model>
 
@@ -147,7 +234,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.1189</y-m>
-    <z-m>-0.0569</z-m>
+    <z-m>-0.0669</z-m>
   </offsets>
 </model>
 
@@ -156,7 +243,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.0616</y-m>
-    <z-m>-0.0569</z-m>
+    <z-m>-0.0669</z-m>
   </offsets>
 </model>
 
@@ -165,7 +252,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.0044</y-m>
-    <z-m>-0.0569</z-m>
+    <z-m>-0.0669</z-m>
   </offsets>
 </model>
 
@@ -176,7 +263,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>0.0529</y-m>
-    <z-m>-0.0569</z-m>
+    <z-m>-0.0669</z-m>
   </offsets>
 </model>
 
@@ -187,7 +274,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>0.1102</y-m>
-    <z-m>-0.0569</z-m>
+    <z-m>-0.0669</z-m>
   </offsets>
 </model>
 
@@ -208,8 +295,8 @@
  <path>knob_dc-volt-sel.xml</path>
   <offsets>
     <x-m>0.002</x-m>
-    <y-m>0.114</y-m>
-    <z-m>-0.129</z-m>
+    <y-m>0.108</y-m>
+    <z-m>-0.132</z-m>
     <roll-deg>150</roll-deg>
   </offsets>
 </model>
@@ -241,7 +328,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.13</y-m>
-    <z-m>-0.1966</z-m>
+    <z-m>-0.2066</z-m>
   </offsets>
 </model>
 
@@ -250,7 +337,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.111</y-m>
-    <z-m>-0.1966</z-m>
+    <z-m>-0.2066</z-m>
   </offsets>
 </model>
 
@@ -261,7 +348,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.075</y-m>
-    <z-m>-0.1966</z-m>
+    <z-m>-0.2066</z-m>
   </offsets>
 </model>
 
@@ -272,7 +359,7 @@
   <offsets>
     <x-m>-0.005</x-m>
     <y-m>-0.035</y-m>
-    <z-m>-0.1966</z-m>
+    <z-m>-0.2066</z-m>
   </offsets>
 </model>
 

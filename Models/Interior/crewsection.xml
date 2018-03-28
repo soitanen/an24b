@@ -3,17 +3,6 @@
 <PropertyList>
  <path>crewsection.ac</path>
 
- <animation>
-   <type>material</type>
-   <object-name>lightplate</object-name>
-   <emission>
-     <red>1.0</red>
-     <green>0.5</green>
-     <blue>0.5</blue>
-     <factor-prop>/controls/lighting/panel-elec_red</factor-prop>
-   </emission>
- </animation>
-
   <effect>
 	<inherits-from>Effects/model-transparent</inherits-from>
 	<object-name>foil</object-name>
@@ -260,7 +249,7 @@
   <offsets>
     <x-m>3.874</x-m>
     <y-m>0.4698</y-m>
-    <z-m>0.60</z-m>
+    <z-m>0.61</z-m>
     <heading-deg>180</heading-deg>
   </offsets>
 </model>

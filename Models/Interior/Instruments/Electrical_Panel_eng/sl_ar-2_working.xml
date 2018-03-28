@@ -16,7 +16,7 @@
  <type>select</type>
  <condition>
    <equals>
-    <property>an24/Electrics/PT-1000main</property>
+    <property>an24/Electrical_Panel/sw_pt-1000</property>
     <value>0.0</value>
    </equals>
   </condition>
