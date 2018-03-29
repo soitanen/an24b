@@ -3,7 +3,7 @@
 <!-- Aileron trim switch on middle console -->
 
 <PropertyList>
- <path>../../../shared/switches/sw2vg-15b.ac</path>
+ <path>../../../shared/switches/png-15k.ac</path>
 
  <animation>
   <type>pick</type>
@@ -39,12 +39,6 @@
     </binding>
     </mod-up>
   </action>
-</animation>
-
- <animation>
-  <object-name>clickspot_middle</object-name>
-  <type>pick</type>
-  <visible>false</visible>
 </animation>
 
  <animation>

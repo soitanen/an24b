@@ -3,7 +3,7 @@
 <!-- Start of TG-16 switch -->
 
 <PropertyList>
- <path>../../shared/switches/sw2vg-15b.ac</path>
+ <path>../../shared/switches/good-for-all.ac</path>
 
  <animation>
   <type>pick</type>

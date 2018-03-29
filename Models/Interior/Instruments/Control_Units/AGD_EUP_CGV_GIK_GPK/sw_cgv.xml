@@ -3,7 +3,7 @@
 <!-- CGV ON -->
 
 <PropertyList>
- <path>../../../shared/switches/sw2vg-15b.ac</path>
+ <path>../../../shared/switches/vg-15k.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -30,12 +30,6 @@
       </script>
     </binding>
   </action>
-</animation>
-
- <animation>
-  <object-name>clickspot_middle</object-name>
-  <type>pick</type>
-  <visible>false</visible>
 </animation>
 
  <animation>

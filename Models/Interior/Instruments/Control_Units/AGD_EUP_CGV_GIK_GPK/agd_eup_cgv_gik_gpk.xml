@@ -54,9 +54,9 @@
  <path>sw_agd_right.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
-    <x-m>2.138</x-m>
+    <x-m>2.142</x-m>
     <y-m>0.637</y-m>
-    <z-m>0.675</z-m>
+    <z-m>0.677</z-m>
   </offsets>
 </model>
 
@@ -64,9 +64,9 @@
  <path>sw_gik.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
-    <x-m>2.138</x-m>
+    <x-m>2.142</x-m>
     <y-m>0.6568</y-m>
-    <z-m>0.675</z-m>
+    <z-m>0.677</z-m>
   </offsets>
 </model>
 
@@ -74,9 +74,9 @@
  <path>sw_gpk.xml</path>
   <offsets>
     <pitch-deg>-20</pitch-deg>
-    <x-m>2.138</x-m>
+    <x-m>2.142</x-m>
     <y-m>0.6736</y-m>
-    <z-m>0.675</z-m>
+    <z-m>0.677</z-m>
   </offsets>
 </model>
 
