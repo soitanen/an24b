@@ -643,8 +643,8 @@
 <!-- *************************************** -->
 
 <model>
-  <name>PPS-2MVK</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/PPS-2MVK_mp/pps.xml</path>
+  <name>PPS-2VMK</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/PPS-2VMK_mp/pps.xml</path>
   <offsets>
     <x-m>2.095</x-m>
     <y-m>-0.305</y-m>

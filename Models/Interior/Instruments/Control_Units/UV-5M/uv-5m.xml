@@ -14,11 +14,20 @@
 </model>
 
 <model>
- <path>wl_uv-5m.xml</path>
+ <path>lp_wl_uv-5m.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>-0.756</y-m>
     <z-m>0.9</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_wl_uv-5m.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.69</y-m>
+    <z-m>1.0</z-m>
   </offsets>
 </model>
 
