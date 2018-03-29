@@ -3,7 +3,7 @@
 <!-- Window anti-ice intense heat ON -->
 
 <PropertyList>
- <path>../../../shared/switches/vng-15.ac</path>
+ <path>../../../shared/switches/2vng-15.ac</path>
 
 <animation>
   <type>pick</type>
