@@ -686,10 +686,6 @@
     <eup type="double">0.0</eup>
   </instrumentation>
 
-  <PPS>
-   <lighting-save>0</lighting-save>
-  </PPS>
-
   <SP-50>
    <course_freq-mhz type="double">110.3</course_freq-mhz>
    <channel type="int">6</channel>

@@ -296,6 +296,7 @@
     <binding>
       <command>nasal</command>
       <script>
+	if( getprop("an24/PPS/lighting-save") == nil ) setprop("an24/PPS/lighting-save", 0 );
         interpolate("an24/PPS/lighting", 1.0, 0.1 );
         interpolate("an24/PPS/light-test-knob", 1.0, 0.1 );
       </script>
