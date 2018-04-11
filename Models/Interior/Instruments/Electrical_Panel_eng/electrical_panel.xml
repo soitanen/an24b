@@ -25,70 +25,99 @@
    </emission>
  </animation>
 
- <animation>
-   <type>material</type>
-   <object-name>ar1_light</object-name>
-   <emission>
-     <red>1.0</red>
-     <green>0.0</green>
-     <blue>0.0</blue>
-     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
-   </emission>
- </animation>
+
 
  <animation>
    <type>material</type>
    <object-name>ar1_light</object-name>
+    <condition>
+    <equals>
+    <property>an24/Electrical_Panel/sw_pt-1000</property>
+    <value>1.0</value>
+    </equals>
+    </condition>
    <diffuse>
      <red>1.0</red>
      <green>0.0</green>
      <blue>0.0</blue>
-     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
    </diffuse>
- </animation>
-
- <animation>
-   <type>material</type>
-   <object-name>ar1_light</object-name>
    <ambient>
      <red>1.0</red>
-     <green>0.0</green>
-     <blue>0.0</blue>
-     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+     <green>0.3</green>
+     <blue>0.3</blue>
    </ambient>
- </animation>
-
- <animation>
-   <type>material</type>
-   <object-name>ar1_light</object-name>
-   <specular>
+   <emission>
      <red>1.0</red>
      <green>0.0</green>
      <blue>0.0</blue>
-     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+   </emission>
+   <specular>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
    </specular>
  </animation>
 
  <animation>
    <type>material</type>
    <object-name>ar2_light</object-name>
+    <condition>
+    <equals>
+    <property>an24/Electrical_Panel/sw_pt-1000</property>
+    <value>1.0</value>
+    </equals>
+    </condition>
+   <diffuse>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </diffuse>
+   <ambient>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </ambient>
    <emission>
      <red>1.0</red>
-     <green>0.1</green>
-     <blue>0.1</blue>
-     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+     <green>0.0</green>
+     <blue>0.0</blue>
    </emission>
+   <specular>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </specular>
  </animation>
 
  <animation>
    <type>material</type>
    <object-name>gs24_light</object-name>
+    <condition>
+    <equals>
+    <property>an24/Electrical_Panel/sw_pt-1000</property>
+    <value>1.0</value>
+    </equals>
+    </condition>
+   <diffuse>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </diffuse>
+   <ambient>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </ambient>
    <emission>
      <red>1.0</red>
-     <green>0.1</green>
-     <blue>0.1</blue>
-     <factor-prop>an24/Electrical_Panel/sw_pt-1000</factor-prop>
+     <green>0.0</green>
+     <blue>0.0</blue>
    </emission>
+   <specular>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </specular>
  </animation>
 
 
@@ -198,16 +227,7 @@
   </offsets>
 </model>
 
-<!-- Signal lamps GS-24 and AR-1/2 working -->
-
-<model>
- <path>sl_gs24_working.xml</path>
-  <offsets>
-    <x-m>0.0</x-m>
-    <y-m>-0.107</y-m>
-    <z-m>-0.0156</z-m>
-  </offsets>
-</model>
+<!-- Signal lamps AR-1/2 working -->
 
 <model>
  <path>sl_ar-1_working.xml</path>

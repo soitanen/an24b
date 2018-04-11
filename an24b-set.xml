@@ -11,7 +11,7 @@
   <author>Michael Soitanen (FDM), Adrian (3D)</author>
 
   <model>
-   <path>Aircraft/an24b/Models/an24-model.xml</path>
+   <path>Aircraft/an24b/Models/An-24B.xml</path>
   </model>
 
   <status>alpha</status>
