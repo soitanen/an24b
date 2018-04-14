@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- M-50, control unit of SP-50 landing system -->
+<!-- M-50, control unit (channel/frequency select) of SP-50 landing system -->
 
 <PropertyList>
  <path>m-50.ac</path>
@@ -53,7 +53,9 @@
       <value type="double">1</value>
       <wrap>true</wrap>
     </binding>
-    <!--binding>
+    </action>
+    <!--bindings not working as advertised... so nasal
+    <binding>
      <command>property-cycle</command>
       <property>an24/SP-50/course_freq-mhz</property>
       <value type="double">110.3</value>
@@ -63,8 +65,8 @@
       <value type="double">108.7</value>
       <value type="double">108.3</value>
       <wrap>true</wrap>
-     </binding-->
-    <!--binding not working as advertised...>
+     </binding>
+
      <command>property-cycle</command>
       <property>an24/SP-50/gs_freq-mhz</property>
       <value type="double">332.6</value>
@@ -75,14 +77,13 @@
       <value type="double">335.0</value>
       <wrap>true</wrap>
     </binding-->
-    </action>
  </animation>
 
  <animation>
    <type>knob</type>
    <object-name>m-50_cheat</object-name>
    <visible>false</visible>
-   <property>an24/SP-50/course_freq-mhz</property>
+   <property>/instrumentation/nav/frequencies/selected-mhz</property>
   <center>
    <x-m>0.0</x-m>
    <y-m>0.0316</y-m>
@@ -96,7 +97,7 @@
     <action>
     <binding>
      <command>property-adjust</command>
-      <property>an24/SP-50/course_freq-mhz</property>
+      <property>/instrumentation/nav/frequencies/selected-mhz</property>
       <factor>-0.05</factor>
       <min>108.1</min>
       <max>111.95</max>                

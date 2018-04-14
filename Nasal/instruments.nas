@@ -631,12 +631,12 @@ var fuelind = func {
 setprop("an24/SP-50/channel", 1 );
 
 var sp_chan2freq = func {
-   if( getprop("an24/SP-50/channel") == 1) setprop("an24/SP-50/course_freq-mhz", 108.3);
-   if( getprop("an24/SP-50/channel") == 2) setprop("an24/SP-50/course_freq-mhz", 108.7);
-   if( getprop("an24/SP-50/channel") == 3) setprop("an24/SP-50/course_freq-mhz", 109.1);
-   if( getprop("an24/SP-50/channel") == 4) setprop("an24/SP-50/course_freq-mhz", 109.5);
-   if( getprop("an24/SP-50/channel") == 5) setprop("an24/SP-50/course_freq-mhz", 109.9);
-   if( getprop("an24/SP-50/channel") == 6) setprop("an24/SP-50/course_freq-mhz", 110.3);
+   if( getprop("an24/SP-50/channel") == 1) setprop("/instrumentation/nav/frequencies/selected-mhz", 108.3);
+   if( getprop("an24/SP-50/channel") == 2) setprop("/instrumentation/nav/frequencies/selected-mhz", 108.7);
+   if( getprop("an24/SP-50/channel") == 3) setprop("/instrumentation/nav/frequencies/selected-mhz", 109.1);
+   if( getprop("an24/SP-50/channel") == 4) setprop("/instrumentation/nav/frequencies/selected-mhz", 109.5);
+   if( getprop("an24/SP-50/channel") == 5) setprop("/instrumentation/nav/frequencies/selected-mhz", 109.9);
+   if( getprop("an24/SP-50/channel") == 6) setprop("/instrumentation/nav/frequencies/selected-mhz", 110.3);
 }
 
 setlistener( "an24/SP-50/channel", sp_chan2freq );
