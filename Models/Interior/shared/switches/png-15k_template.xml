@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Template -->
+<!-- Template/example -->
 
 <PropertyList>
  <path>../../../shared/switches/png-15k.ac</path>
@@ -11,29 +11,35 @@
   <visible>false</visible>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-        <condition><!-- optional -->
-         <equals>
-         <property>an24/AZS/swxxyy</property>
-         <value>1.0</value>
-         </equals>
-        </condition>
+    <repeatable>true</repeatable>
+  <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/swXXYY</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+	controls.aileronTrim(1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
+	interpolate("foo/bar/sw_value_to_be_changed", 1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
       <command>nasal</command>
       <script>
-        interpolate("foo/bar/prop_to_be_changed", 1.0, 0.4 );
+	interpolate("foo/bar/sw_value_to_be_changed", 0.0, 0.1 );
       </script>
     </binding>
-<!-- animation (spring load), begin with sw_ -->
-    <binding>
-      <command>nasal</command>
-      <script>
-	interpolate("foo/bar/sw_prop_to_be_changed", 1.0, 0.2 );
-	settimer(func {interpolate("foo/bar/sw_prop_to_be_changed", 0.0, 0.1 );},0.2);
-      </script>
-    </binding>
+    </mod-up>
   </action>
- </animation>
+</animation>
 
  <animation>
   <type>pick</type>
@@ -41,36 +47,43 @@
   <visible>false</visible>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-        <condition><!-- optional -->
-         <equals>
-         <property>an24/AZS/swxxyy</property>
-         <value>1.0</value>
-         </equals>
-        </condition>
+    <repeatable>true</repeatable>
+  <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/swXXYY</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+	controls.aileronTrim(-1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
+	interpolate("foo/bar/sw_value_to_be_changed", -1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
       <command>nasal</command>
       <script>
-        interpolate("foo/bar/prop_to_be_changed", 0.0, 0.4 );
+	interpolate("foo/bar/sw_value_to_be_changed", 0.0, 0.1 );
       </script>
     </binding>
-<!-- animation (spring load), begin with sw_ -->
-    <binding>
-      <command>nasal</command>
-      <script>
-	interpolate("foo/bar/sw_prop_to_be_changed", 0.0, 0.2 );
-	settimer(func {interpolate("foo/bar/sw_prop_to_be_changed", 0.0, 0.1 );},0.2);
-      </script>
-    </binding>
+    </mod-up>
   </action>
- </animation>
+</animation>
+
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>foo/bar/sw_prop_to_be_changed</property>
+   <property>foo/bar/sw_value_to_be_changed</property>
   <interpolation>
-    <entry><ind>1.0</ind>	<dep>26.0</dep></entry>
-    <entry><ind>-1.0</ind>	<dep>-26.0</dep></entry>
+    <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
   </interpolation>
   <axis>
     <x>0.0</x>
@@ -80,4 +93,3 @@
  </animation>
 
 </PropertyList>
-

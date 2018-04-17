@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Emergency pressure-relief -->
+<!-- Emergency pressure-relief switch cover -->
 
 <PropertyList>
- <path>../../../shared/switches/covered_switch01.ac</path>
+ <path>../../../shared/switches/cover_for_switch.ac</path>
 <!-- Cover -->
 
 <animation>

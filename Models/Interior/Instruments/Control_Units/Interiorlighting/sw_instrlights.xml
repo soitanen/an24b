@@ -3,7 +3,7 @@
 <!-- Instruments' background, clamp and bolt-on lamps -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/3ppng-15k.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>

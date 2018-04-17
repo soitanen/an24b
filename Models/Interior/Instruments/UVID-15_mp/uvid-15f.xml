@@ -4,8 +4,18 @@
  <path>uvid-15f.ac</path>
 
  <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <emission>
+     <red>0.8</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
   <type>material</type>
-  <object-name>base</object-name>
   <object-name>dig_a_dec</object-name>
   <object-name>dig_a_hund</object-name>
   <object-name>dig_a_ths</object-name>
@@ -16,9 +26,9 @@
   <object-name>dig_p_ths</object-name>
   <object-name>needle</object-name>
    <emission>
-     <red>0.8</red>
-     <green>0.4</green>
-     <blue>0.4</blue>
+     <red>0.7</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
      <factor-prop>/controls/lighting/panel-m_red</factor-prop>
    </emission>
 </animation>

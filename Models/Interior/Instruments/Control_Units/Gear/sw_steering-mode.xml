@@ -3,7 +3,7 @@
 <!-- Nosewheel steering mode - taxi/ OFF/ t/o+landing -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/2ppng-15k.ac</path>
 
  <animation>
   <type>pick</type>

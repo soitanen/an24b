@@ -3,7 +3,7 @@
 <!-- Cover for"ground/in air" sw -->
 
 <PropertyList>
- <path>../../shared/switches/covered_switch01.ac</path>
+ <path>../../shared/switches/cover_for_switch.ac</path>
 
 <animation>
   <type>pick</type>
