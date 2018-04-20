@@ -106,13 +106,15 @@
     <entry><ind>90.0</ind>	<dep>286.0</dep></entry>
   </interpolation>
   <axis>
-    <x1-m>0.0372</x1-m>
-    <y1-m>0.0277</y1-m>
-    <z1-m>0.0</z1-m>
-    <x2-m>0.0372</x2-m>
-    <y2-m>-0.0277</y2-m>
-    <z2-m>0.0</z2-m>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
   </axis>
+  <center>
+    <x-m>0.0339</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+  </center>
  </animation>
 
 <!-- left-right slew knob-->
@@ -173,14 +175,14 @@
   <type>rotate</type>
   <object-name>l_r_knob</object-name>
   <property>/instrumentation/gpk-52/switches/l_r_knob</property>
-  <factor>-30</factor>
+  <factor>-50</factor>
   <axis>
-    <x1-m>-0.0342</x1-m>
+    <x1-m>-0.0312</x1-m>
     <y1-m>0.05</y1-m>
-    <z1-m>0.0031</z1-m>
-    <x2-m>-0.0342</x2-m>
+    <z1-m>0.0058</z1-m>
+    <x2-m>-0.0312</x2-m>
     <y2-m>-0.05</y2-m>
-    <z2-m>0.0031</z2-m>
+    <z2-m>0.0058</z2-m>
   </axis>
  </animation>
 

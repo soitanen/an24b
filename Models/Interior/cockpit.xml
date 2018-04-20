@@ -322,8 +322,8 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/GIK_lprp/lpgik_button.xml</path>
   <offsets>
     <x-m>2.104</x-m>
-    <y-m>-0.529</y-m>
-    <z-m>0.928</z-m>
+    <y-m>-0.536</y-m>
+    <z-m>0.935</z-m>
     <pitch-deg>90</pitch-deg>
   </offsets>
 </model>
@@ -923,8 +923,8 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/GIK_lprp/rpgik_button.xml</path>
   <offsets>
     <x-m>2.104</x-m>
-    <y-m>0.53</y-m>
-    <z-m>0.925</z-m>
+    <y-m>0.5372</y-m>
+    <z-m>0.9378</z-m>
     <pitch-deg>90</pitch-deg>
   </offsets>
 </model>
@@ -944,8 +944,8 @@
   <path>Aircraft/an24b/Models/Interior/Instruments/TNV-15_rp/tnv-15.xml</path>
   <offsets>
     <x-m>2.096</x-m>
-    <y-m>0.8107</y-m>
-    <z-m>0.8111</z-m>
+    <y-m>0.8111</y-m>
+    <z-m>0.8302</z-m>
   </offsets>
 </model>
 
@@ -1105,7 +1105,7 @@
   <offsets>
     <x-m>2.475</x-m>
     <y-m>0.984</y-m>
-    <z-m>0.7253</z-m>
+    <z-m>0.7153</z-m>
     <heading-deg>-79.5</heading-deg>
   </offsets>
 </model>
@@ -1142,6 +1142,19 @@
     <x-m>2.270</x-m>
     <y-m>0.8741</y-m>
     <z-m>0.5486</z-m>
+  </offsets>
+</model>
+
+<!-- *************************************** -->
+
+<model>
+  <name>TP622-Rocket-Panel</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/TP622_rc/tp622.xml</path>
+  <offsets>
+    <heading-deg>10.5</heading-deg>
+    <x-m>2.681</x-m>
+    <y-m>1.022</y-m>
+    <z-m>0.608</z-m>
   </offsets>
 </model>
 
