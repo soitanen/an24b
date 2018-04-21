@@ -7,22 +7,22 @@
 <model>
  <path>btn_horn.xml</path>
   <offsets>
-    <x-m>2.425</x-m>
-    <y-m>0.986</y-m>
-    <z-m>0.764</z-m>
+    <x-m>2.442</x-m>
+    <y-m>0.980</y-m>
+    <z-m>0.769</z-m>
     <pitch-deg>90</pitch-deg>
-    <heading-deg>280.5</heading-deg>
+    <heading-deg>279.5</heading-deg>
   </offsets>
 </model>
 
 <model>
  <path>btn_signal.xml</path>
   <offsets>
-    <x-m>2.52</x-m>
-    <y-m>1.0</y-m>
-    <z-m>0.764</z-m>
+    <x-m>2.505</x-m>
+    <y-m>0.992</y-m>
+    <z-m>0.769</z-m>
     <pitch-deg>90</pitch-deg>
-    <heading-deg>280.5</heading-deg>
+    <heading-deg>279.5</heading-deg>
   </offsets>
 </model>
 
