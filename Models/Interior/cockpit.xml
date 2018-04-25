@@ -358,7 +358,7 @@
   <name>UV-5M</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/UV-5M_lp/uv-5m.xml</path>
   <offsets>
-    <x-m>2.092</x-m>
+    <x-m>2.096</x-m>
     <y-m>-0.6906</y-m>
     <z-m>0.8683</z-m>
   </offsets>

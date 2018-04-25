@@ -7,7 +7,7 @@
 <model>
  <path>wl_01_doors_open.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
+    <x-m>2.096</x-m>
     <y-m>-0.1835</y-m>
     <z-m>0.737</z-m>
   </offsets>
@@ -16,7 +16,7 @@
 <model>
  <path>wl_02_oxygen.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
+    <x-m>2.096</x-m>
     <y-m>-0.1365</y-m>
     <z-m>0.737</z-m>
   </offsets>
@@ -25,7 +25,7 @@
 <model>
  <path>wl_03_min_oil_left.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
+    <x-m>2.096</x-m>
     <y-m>-0.0965</y-m>
     <z-m>0.737</z-m>
   </offsets>
@@ -34,7 +34,7 @@
 <model>
  <path>wl_04_min_oil_right.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
+    <x-m>2.096</x-m>
     <y-m>-0.0717</y-m>
     <z-m>0.737</z-m>
   </offsets>
@@ -43,8 +43,8 @@
 <model>
  <path>wl_05_STG_failure_left.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
-    <y-m>-0.0255</y-m>
+    <x-m>2.096</x-m>
+    <y-m>-0.03</y-m>
     <z-m>0.737</z-m>
   </offsets>
 </model>
@@ -52,8 +52,8 @@
 <model>
  <path>wl_06_STG_failure_right.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
-    <y-m>0.0</y-m>
+    <x-m>2.096</x-m>
+    <y-m>-0.01</y-m>
     <z-m>0.737</z-m>
   </offsets>
 </model>
@@ -61,8 +61,8 @@
 <model>
  <path>wl_07_emergency_power_27V.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
-    <y-m>0.0336</y-m>
+    <x-m>2.096</x-m>
+    <y-m>0.018</y-m>
     <z-m>0.737</z-m>
   </offsets>
 </model>
@@ -70,7 +70,7 @@
 <model>
  <path>wl_08_GO_failure_left.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
+    <x-m>2.096</x-m>
     <y-m>0.0688</y-m>
     <z-m>0.737</z-m>
   </offsets>
@@ -79,7 +79,7 @@
 <model>
  <path>wl_09_GO_failure_right.xml</path>
   <offsets>
-    <x-m>2.095</x-m>
+    <x-m>2.096</x-m>
     <y-m>0.0936</y-m>
     <z-m>0.737</z-m>
   </offsets>

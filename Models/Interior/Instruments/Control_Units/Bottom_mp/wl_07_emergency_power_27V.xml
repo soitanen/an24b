@@ -9,7 +9,7 @@
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/sltsnredplain.png</texture>
+ <texture>../../../shared/lamps/sltsnred.png</texture>
 </animation>
 
 <animation>

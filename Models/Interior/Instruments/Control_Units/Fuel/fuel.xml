@@ -21,7 +21,7 @@
   <offsets>
     <x-m>2.09232</x-m>
     <y-m>0.1869</y-m>
-    <z-m>1.0493</z-m>
+    <z-m>1.044</z-m>
   </offsets>
 </model>
 
@@ -29,8 +29,8 @@
  <path>wl_03_fuel_filter_clogged_right.xml</path>
   <offsets>
     <x-m>2.09232</x-m>
-    <y-m>0.209</y-m>
-    <z-m>1.0493</z-m>
+    <y-m>0.208</y-m>
+    <z-m>1.044</z-m>
   </offsets>
 </model>
 
