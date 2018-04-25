@@ -1289,7 +1289,7 @@
 
 <model>
   <name>Above_AGD</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Above_AGD/above_agd.xml</path>
+  <path>Aircraft/an24b/Models/Interior/Instruments/Control_Units/Above_AGD/rpsn.xml</path>
 </model>
 
 <model>

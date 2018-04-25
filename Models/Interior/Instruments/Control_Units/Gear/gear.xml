@@ -41,27 +41,27 @@
 <model>
  <path>wl_handle_on.xml</path>
   <offsets>
-    <x-m>2.09972</x-m>
-    <y-m>-0.87</y-m>
-    <z-m>0.71</z-m>
+    <x-m>2.102</x-m>
+    <y-m>-0.885</y-m>
+    <z-m>0.715</z-m>
   </offsets>
 </model>
 
 <model>
  <path>wl_pedals_armed.xml</path>
   <offsets>
-    <x-m>2.09972</x-m>
-    <y-m>-0.84</y-m>
-    <z-m>0.71</z-m>
+    <x-m>2.102</x-m>
+    <y-m>-0.86</y-m>
+    <z-m>0.715</z-m>
   </offsets>
 </model>
 
 <model>
  <path>wl_pedals_on.xml</path>
   <offsets>
-    <x-m>2.09972</x-m>
-    <y-m>-0.81</y-m>
-    <z-m>0.71</z-m>
+    <x-m>2.102</x-m>
+    <y-m>-0.835</y-m>
+    <z-m>0.715</z-m>
   </offsets>
 </model>
 
