@@ -778,6 +778,50 @@
 <!-- *************************************** -->
 
 <model>
+  <name>URVK-18</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/URVK-18_mp/urvk-18_l.xml</path>
+  <offsets>
+    <x-m>2.088</x-m>
+    <y-m>0.3005</y-m>
+    <z-m>0.7826</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>InstrLightClamp</name>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <offsets>
+    <x-m>2.088</x-m>
+    <y-m>0.3005</y-m>
+    <z-m>0.7826</z-m>
+  </offsets>
+</model>
+
+<!-- *************************************** -->
+
+<model>
+  <name>URVK-18</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/URVK-18_mp/urvk-18_r.xml</path>
+  <offsets>
+    <x-m>2.088</x-m>
+    <y-m>0.3871</y-m>
+    <z-m>0.7926</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>InstrLightClamp</name>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <offsets>
+    <x-m>2.088</x-m>
+    <y-m>0.3871</y-m>
+    <z-m>0.7926</z-m>
+  </offsets>
+</model>
+
+<!-- *************************************** -->
+
+<model>
   <name>UVID-15</name>
   <path>Aircraft/an24b/Models/Interior/Instruments/UVID-15_mp/uvid-15f.xml</path>
   <offsets>
