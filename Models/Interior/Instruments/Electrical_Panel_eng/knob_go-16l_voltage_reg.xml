@@ -3,7 +3,7 @@
 <!-- Voltage regulation -->
 
 <PropertyList>
- <path>../../shared/switches/vs-33.ac</path>
+ <path>../../shared/knobs_buttons/vs-33.ac</path>
 
  <animation>
    <type>knob</type>

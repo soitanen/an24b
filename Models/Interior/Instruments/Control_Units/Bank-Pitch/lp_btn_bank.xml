@@ -3,7 +3,7 @@
 <!-- "Fix bank" btn below yoke left -->
 
 <PropertyList>
- <path>../../../shared/switches/5k.ac</path>
+ <path>../../../shared/knobs_buttons/5k.ac</path>
 
  <animation>
 	<type>pick</type>

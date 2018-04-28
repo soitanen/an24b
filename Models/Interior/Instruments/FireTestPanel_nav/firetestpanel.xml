@@ -16,7 +16,7 @@
  </animation-->
 
 <model>
- <path>sw_group-select.xml</path>
+ <path>knob_group-select.xml</path>
   <offsets>
     <x-m>0.037</x-m>
     <y-m>-0.0282</y-m>

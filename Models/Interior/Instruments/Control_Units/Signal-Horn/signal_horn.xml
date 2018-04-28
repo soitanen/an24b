@@ -5,7 +5,7 @@
 <PropertyList>
 
 <model>
- <path>btn_horn.xml</path>
+ <path>rc_btn_horn.xml</path>
   <offsets>
     <x-m>2.442</x-m>
     <y-m>0.980</y-m>
@@ -16,7 +16,7 @@
 </model>
 
 <model>
- <path>btn_signal.xml</path>
+ <path>rc_btn_signal.xml</path>
   <offsets>
     <x-m>2.505</x-m>
     <y-m>0.992</y-m>

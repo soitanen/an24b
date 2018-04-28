@@ -8,7 +8,7 @@
 <PropertyList>
 
 <model>
- <path>wl_01_low_fuel.xml</path>
+ <path>mp_wl_01_low_fuel.xml</path>
   <offsets>
     <x-m>2.09232</x-m>
     <y-m>0.1985</y-m>
@@ -17,7 +17,7 @@
 </model>
 
 <model>
- <path>wl_02_fuel_filter_clogged_left.xml</path>
+ <path>mp_wl_02_fuel_filter_clogged_left.xml</path>
   <offsets>
     <x-m>2.09232</x-m>
     <y-m>0.1869</y-m>
@@ -26,7 +26,7 @@
 </model>
 
 <model>
- <path>wl_03_fuel_filter_clogged_right.xml</path>
+ <path>mp_wl_03_fuel_filter_clogged_right.xml</path>
   <offsets>
     <x-m>2.09232</x-m>
     <y-m>0.208</y-m>
@@ -35,7 +35,7 @@
 </model>
 
 <model>
- <path>sw_tg-16_cutoff.xml</path>
+ <path>lc_sw_tg-16_cutoff.xml</path>
   <offsets>
     <x-m>2.671</x-m>
     <y-m>-1.0073</y-m>
@@ -45,7 +45,7 @@
 </model>
 
 <model>
- <path>wl_tg-16_cutoff_open.xml</path>
+ <path>lc_wl_tg-16_cutoff_open.xml</path>
   <offsets>
     <x-m>2.7</x-m>
     <y-m>-1.007</y-m>
@@ -55,7 +55,7 @@
 </model>
 
 <model>
- <path>wl_tg-16_cutoff_closed.xml</path>
+ <path>lc_wl_tg-16_cutoff_closed.xml</path>
   <offsets>
     <x-m>2.7</x-m>
     <y-m>-1.007</y-m>

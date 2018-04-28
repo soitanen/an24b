@@ -3,7 +3,7 @@
 <!-- Button -->
 
 <PropertyList>
- <path>../../shared/switches/205k.ac</path>
+ <path>../../shared/knobs_buttons/205k.ac</path>
 
 <animation>
   <type>pick</type>

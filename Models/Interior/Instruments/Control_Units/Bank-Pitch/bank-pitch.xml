@@ -5,7 +5,7 @@
 <PropertyList>
 
 <model>
- <path>btn_pitch.xml</path>
+ <path>lp_btn_pitch.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>-0.68</y-m>
@@ -15,7 +15,7 @@
 </model>
 
 <model>
- <path>btn_bank.xml</path>
+ <path>lp_btn_bank.xml</path>
   <offsets>
     <x-m>2.1</x-m>
     <y-m>-0.72</y-m>

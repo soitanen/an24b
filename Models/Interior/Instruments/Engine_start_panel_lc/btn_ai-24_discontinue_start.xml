@@ -3,7 +3,7 @@
 <!-- "Discontinue start" btn -->
 
 <PropertyList>
- <path>../../shared/switches/spring_load_btn01.ac</path>
+ <path>../../shared/knobs_buttons/spring_load_btn01.ac</path>
 
 <animation>
   <type>pick</type>

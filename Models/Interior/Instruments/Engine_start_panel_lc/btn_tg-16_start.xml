@@ -3,7 +3,7 @@
 <!-- Button to start gasturbine GTD-16 of turbogenerator TG-16 (APU) -->
 
 <PropertyList>
- <path>../../shared/switches/205k.ac</path>
+ <path>../../shared/knobs_buttons/205k.ac</path>
 
 <animation>
   <type>pick</type>

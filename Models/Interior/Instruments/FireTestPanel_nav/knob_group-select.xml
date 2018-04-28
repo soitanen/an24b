@@ -3,7 +3,7 @@
 <!-- Switch to select group -->
 
 <PropertyList>
- <path>../../shared/switches/11p1n.ac</path>
+ <path>../../shared/knobs_buttons/11p1n.ac</path>
 
  <animation>
    <type>knob</type>

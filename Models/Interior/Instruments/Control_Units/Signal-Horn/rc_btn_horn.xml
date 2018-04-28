@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- Button for "Intermittent signal control" -->
+<!-- Button for "Siren" (or horn) -->
 
 <PropertyList>
- <path>../../../shared/switches/205k.ac</path>
+ <path>../../../shared/knobs_buttons/205k.ac</path>
 
 <!--animation>
 	<type>pick</type>

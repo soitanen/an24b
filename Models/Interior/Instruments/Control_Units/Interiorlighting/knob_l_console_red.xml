@@ -3,7 +3,7 @@
 <!-- Middle panel red lighting -->
 
 <PropertyList>
- <path>../../../shared/switches/rsks-50.ac</path>
+ <path>../../../shared/knobs_buttons/rsks-50.ac</path>
 
  <animation>
    <type>knob</type>

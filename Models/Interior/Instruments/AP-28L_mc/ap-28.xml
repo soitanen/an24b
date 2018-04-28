@@ -8,7 +8,7 @@
 <!-- Lamps -->
 
 <model>
-  <path>wl_ready.xml</path>
+  <path>sl_ready.xml</path>
   <offsets>
     <x-m>-0.0352</x-m>
     <y-m>-0.0249</y-m>
@@ -18,7 +18,7 @@
 </model>
 
 <model>
-  <path>wl_on.xml</path>
+  <path>sl_on.xml</path>
   <offsets>
     <x-m>-0.0352</x-m>
     <y-m>0.0249</y-m>
@@ -28,7 +28,7 @@
 </model>
 
 <model>
-  <path>wl_push.xml</path>
+  <path>sl_push.xml</path>
   <offsets>
     <x-m>0.1395</x-m>
     <y-m>-0.0813</y-m>
@@ -38,7 +38,7 @@
 </model>
 
 <model>
-  <path>wl_pull.xml</path>
+  <path>sl_pull.xml</path>
   <offsets>
     <x-m>0.1395</x-m>
     <y-m>-0.0443</y-m>
@@ -48,7 +48,7 @@
 </model>
 
 <model>
-  <path>wl_kv.xml</path>
+  <path>sl_kv.xml</path>
   <offsets>
     <x-m>0.1395</x-m>
     <y-m>0.0443</y-m>
@@ -57,7 +57,7 @@
   </offsets>
 </model>
 
-<!-- Switches -->
+<!-- Switches/Knobs -->
 
 <model>
   <path>sw_up-down-l.xml</path>
