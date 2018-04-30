@@ -340,6 +340,16 @@
   </offsets>
 </model>
 
+<model>
+  <name>InstrLightClamp</name>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
+  <offsets>
+    <x-m>2.096</x-m>
+    <y-m>-0.5977</y-m>
+    <z-m>0.8106</z-m>
+  </offsets>
+</model>
+
 <!-- *************************************** -->
 
 <model>
@@ -351,6 +361,17 @@
     <z-m>0.9621</z-m>
   </offsets>
 </model>
+
+<model>
+  <name>InstrLightClamp</name>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
+  <offsets>
+    <x-m>2.096</x-m>
+    <y-m>-0.6907</y-m>
+    <z-m>0.9621</z-m>
+  </offsets>
+</model>
+
 
 <!-- *************************************** -->
 
@@ -379,7 +400,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.5974</y-m>
@@ -395,9 +416,20 @@
   <offsets>
     <x-m>2.096</x-m>
     <y-m>-0.5978</y-m>
-    <z-m>0.90867</z-m>
+    <z-m>0.9086</z-m>
   </offsets>
 </model>
+
+<model>
+  <name>InstrLightClamp</name>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
+  <offsets>
+    <x-m>2.096</x-m>
+    <y-m>-0.5978</y-m>
+    <z-m>0.9086</z-m>
+  </offsets>
+</model>
+
 
 <!-- *************************************** -->
 
@@ -437,7 +469,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.0543</y-m>
@@ -459,7 +491,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.0323</y-m>
@@ -549,7 +581,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.1339</y-m>
@@ -597,7 +629,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.3441</y-m>
@@ -619,7 +651,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.2669</y-m>
@@ -679,7 +711,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.04722</y-m>
@@ -699,7 +731,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.03923</y-m>
@@ -745,7 +777,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.09</x-m>
     <y-m>-0.3441</y-m>
@@ -767,7 +799,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>-0.1407</y-m>
@@ -789,7 +821,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.3005</y-m>
@@ -811,7 +843,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.3871</y-m>
@@ -833,7 +865,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.3542</y-m>
@@ -855,7 +887,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.2124</y-m>
@@ -877,7 +909,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.3542</y-m>
@@ -899,7 +931,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.1269</y-m>
@@ -921,7 +953,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.088</x-m>
     <y-m>0.2668</y-m>
@@ -1015,7 +1047,7 @@
 
 <model>
   <name>InstrLightClamp</name>
-  <path>Aircraft/an24b/Models/Interior/shared/lamps/instrlightclamp.xml</path>
+  <path>Aircraft/an24b/Models/Interior/shared/lamps/s-80.ac</path>
   <offsets>
     <x-m>2.096</x-m>
     <y-m>0.6</y-m>
