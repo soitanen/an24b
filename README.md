@@ -19,8 +19,8 @@ QUICK STARTUP-GUIDE (to be improved (with pictures (and such (like, as pdf))))
 - On Fuel-Control-Panel (extra-panel on pilots' middle panel):
   - Turn on all switches at the bottom, except middle one (cross-feed, optional)
 
-- On Left Horizontal Panel:
-  - Turn up cut-off switch next to green and red lamp
+- On Left Horizontal Console:
+  - Turn up cut-off switch next to green and red lamps
 
 - On Engine-Start-Panel (sunk panel on pilot's left console):
   - Press lower black/white button (wait for TG-16 APU start, indicated by green lamp and tachometer)

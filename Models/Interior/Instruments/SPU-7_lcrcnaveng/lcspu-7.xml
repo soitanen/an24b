@@ -80,6 +80,19 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>spu-source_lc</tooltip-id>
+      <label>Source: %s</label>
+      <property>an24/SPU-7/lc_source</property>
+      <mapping>nasal</mapping>
+      <script>
+        var modes = ['R-802 Comm1', 'US-8K HF/AM', 'R-836 HF/AM', 'R-802 Comm 2', 'ARK I', 'ARK II'];
+        return modes[arg[0]];
+      </script>
+    </binding>
+   </hovered>
  </animation>
 
 <!-- "Listen" volume -->

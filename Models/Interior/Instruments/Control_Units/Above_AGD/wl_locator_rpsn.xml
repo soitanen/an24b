@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- One of 3 lamps above left AGD -->
+<!-- Signal light "Attention, locator" (of RPSN) -->
 
 <PropertyList>
  <path>../../../shared/lamps/sltsn.ac</path>
@@ -9,7 +9,7 @@
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/sltsnbluegreenplain.png</texture>
+ <texture>../../../shared/lamps/sltsnorangeplain.png</texture>
 </animation>
 
  <animation>
