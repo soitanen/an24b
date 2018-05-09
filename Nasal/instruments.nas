@@ -474,7 +474,7 @@ setprop("an24/AChS/nav_l-press-anim", 0 );
 #  Middle panel AChS Stopwatch
 setprop("an24/AChS/mp_stopwatch", 0 );
 setprop("an24/AChS/mp_r-turn", 1 );
-setprop("an24/AChS/mp_r-mode", 0 );
+setprop("an24/AChS/mp_r-mode", 2 );
 
 var mp_stopwatch = maketimer(1, func(){
 	var speedup = getprop("/sim/speed-up");
@@ -518,7 +518,7 @@ mp_wtimer.start();
 setprop("/instrumentation/clock[1]/serviceable", 1 );
 setprop("an24/AChS/rc_stopwatch", 0 );
 setprop("an24/AChS/rc_r-turn", 1 );
-setprop("an24/AChS/rc_r-mode", 0 );
+setprop("an24/AChS/rc_r-mode", 2 );
 
 var rc_stopwatch = maketimer(1, func(){
 	var speedup = getprop("/sim/speed-up");
@@ -562,7 +562,7 @@ rc_wtimer.start();
 setprop("/instrumentation/clock[2]/serviceable", 1 );
 setprop("an24/AChS/nav_stopwatch", 0 );
 setprop("an24/AChS/nav_r-turn", 1 );
-setprop("an24/AChS/nav_r-mode", 0 );
+setprop("an24/AChS/nav_r-mode", 2 );
 
 var nav_stopwatch = maketimer(1, func(){
 	var speedup = getprop("/sim/speed-up");

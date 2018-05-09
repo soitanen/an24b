@@ -222,6 +222,29 @@
       </script>
     </binding>
   </action>
+
+  <hovered>
+    <binding>
+        <condition>
+        <not>
+         <equals>
+          <property>an24/AChS/rc_l-press-anim</property>
+          <value>1</value>
+         </equals>
+        </not>
+        </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>achs_rc1</tooltip-id>
+      <label>Flighttimer %s</label>
+      <property>an24/AChS/rc_l-mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var rc_l_mode = ['resetted', 'running', 'stopped'];
+        return rc_l_mode[arg[0]];
+      </script>
+    </binding>
+  </hovered>
+
 </animation>
 
 <animation>
@@ -312,7 +335,7 @@
          </equals>
          <equals>
           <property>an24/AChS/rc_r-mode</property>
-          <value>1</value>
+          <value>0</value>
          </equals>
          </and>
         </condition>
@@ -347,9 +370,9 @@
     <binding>
       <command>property-cycle</command>
       <property>an24/AChS/rc_r-mode</property>
-      <value type="int">1</value> <!-- Start -->
-      <value type="int">2</value> <!-- Stop -->
-      <value type="int">3</value> <!-- Reset -->
+      <value type="int">0</value> <!-- Start -->
+      <value type="int">1</value> <!-- Stop -->
+      <value type="int">2</value> <!-- Reset -->
       <wrap>true</wrap>
     </binding>
 
@@ -362,7 +385,7 @@
          </equals>
          <equals>
           <property>an24/AChS/rc_r-mode</property>
-          <value>1</value>
+          <value>0</value>
          </equals>
          <equals>
           <property>an24/AChS/rc_r-turn</property>
@@ -380,7 +403,7 @@
         <condition>
          <equals>
           <property>an24/AChS/rc_r-mode</property>
-          <value>2</value>
+          <value>1</value>
          </equals>
         </condition>
         <command>nasal</command>
@@ -393,7 +416,7 @@
         <condition>
          <equals>
           <property>an24/AChS/rc_r-mode</property>
-          <value>3</value>
+          <value>2</value>
          </equals>
         </condition>
         <command>property-assign</command>
@@ -409,6 +432,45 @@
       </script>
     </binding>
   </action>
+
+  <hovered>
+    <binding>
+        <condition>
+         <equals>
+          <property>an24/AChS/rc_r-turn</property>
+          <value>1</value>
+         </equals>
+        </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>rc_achs_stopwatch</tooltip-id>
+      <label>Timer %s</label>
+      <property>an24/AChS/rc_r-mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var rc_stopwatch = ['running', 'stopped', 'resetted'];
+        return rc_stopwatch[arg[0]];
+      </script>
+    </binding>
+
+    <binding>
+        <condition>
+         <equals>
+          <property>an24/AChS/rc_r-turn</property>
+          <value>0</value>
+         </equals>
+        </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>rc_achs_stopwatch2</tooltip-id>
+      <label>Intermediate stop (%s)</label>
+      <property>an24/AChS/rc_r-mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var rc_stopwatch2 = ['running', 'stopped', 'resetted'];
+        return rc_stopwatch2[arg[0]];
+      </script>
+    </binding>
+  </hovered>
+
 </animation>
 
 <animation>
