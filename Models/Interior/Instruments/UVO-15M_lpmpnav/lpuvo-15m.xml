@@ -182,7 +182,20 @@
         <property>/instrumentation/altimeter[0]/setting-hpa</property>
         <factor>-0.5</factor>
       </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/altimeter[1]/setting-hpa</property>
+        <factor>-0.5</factor>
+      </binding>
     </action>
+   <hovered>
+    <binding>
+     <command>set-tooltip</command>
+     <tooltip-id>setting-hpa</tooltip-id>
+     <label>hPa: %4.1f</label>
+     <property>/instrumentation/altimeter[0]/setting-hpa</property>
+   </binding>
+   </hovered>
 </animation>
 
 <!-- TEXT OSG -->

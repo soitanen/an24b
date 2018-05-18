@@ -30,6 +30,9 @@ QUICK STARTUP-GUIDE (to be improved (with pictures (and such (like, as pdf))))
     - guess what's supposed to happen
   - Press lower right red/grey button once, APU stops
 
+- On Left Horizontal Console:
+  - Turn down cut-off switch next to green and red lamps
+
 - Below pilot's left panel:
   - Put on switches "AGD", "EUP", "CGV" (number 4,5,6 in this row); watch AGD (AI) go up
 

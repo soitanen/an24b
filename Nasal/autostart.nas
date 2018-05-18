@@ -353,7 +353,7 @@ var startup = func {
 		}, t); t += 0.5;
 
 		settimer( func{
-		screen.log.write("Power on autopilot AP-28L ", 1, 1, 1);
+		screen.log.write("Power on autopilot AP-28L1", 1, 1, 1);
 		interpolate("an24/AP-28l1/switches/power", 1.0, 0.1 );
 		interpolate("an24/AP-28l1/internal/powered", 1.0, 0.1 );
 		}, t); t += 10.0;
@@ -384,5 +384,8 @@ var startup = func {
 		setprop("controls/engines/engine[2]/cutoff", 1.0 );
 		interpolate("an24/Start-Panel/discontinuestarttg-btn", -1.0, 0.2 );
 		settimer(func {interpolate("an24/Start-Panel/discontinuestarttg-btn", 0.0, 0.1 );},0.2);
+		interpolate("an24/FuelControl/sw_TG-16_cutoff", -1.0, 0.2 );
+		settimer(func {interpolate("an24/FuelControl/sw_TG-16_cutoff", 0.0, 0.1 );},0.2);
+	        interpolate("an24/FuelControl/TG-16_cutoff", 1.0, 0.2 );
 		}, t); t += 0.2;
 };

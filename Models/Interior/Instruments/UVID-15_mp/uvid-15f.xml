@@ -47,7 +47,7 @@
     </axis>
 </animation>
 
-<!-- Digits -->
+<!-- Alt digits -->
 
 <animation>
   <type>rotate</type>
@@ -189,6 +189,154 @@
     <x-m>-0.0222</x-m>
     <y-m>0</y-m>
     <z-m>0.0051</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Pressure digits -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_ths</object-name>
+  <expression>
+    <table>
+     <mod>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+      <value>100.0</value>
+     </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	9.99</ind>	<dep>	0</dep></entry>
+      <entry><ind>	10.0</ind>	<dep>	36</dep></entry>
+      <entry><ind>	19.99</ind>	<dep>	36</dep></entry>
+      <entry><ind>	20.0</ind>	<dep>	72</dep></entry>
+      <entry><ind>	29.99</ind>	<dep>	72</dep></entry>
+      <entry><ind>	30.0</ind>	<dep>	108</dep></entry>
+      <entry><ind>	39.99</ind>	<dep>	108</dep></entry>
+      <entry><ind>	40.0</ind>	<dep>	144</dep></entry>
+      <entry><ind>	49.99</ind>	<dep>	144</dep></entry>
+      <entry><ind>	50.0</ind>	<dep>	180</dep></entry>
+      <entry><ind>	59.99</ind>	<dep>	180</dep></entry>
+      <entry><ind>	60.0</ind>	<dep>	216</dep></entry>
+      <entry><ind>	69.99</ind>	<dep>	216</dep></entry>
+      <entry><ind>	70.0</ind>	<dep>	252</dep></entry>
+      <entry><ind>	79.99</ind>	<dep>	252</dep></entry>
+      <entry><ind>	80.0</ind>	<dep>	288</dep></entry>
+      <entry><ind>	89.99</ind>	<dep>	288</dep></entry>
+      <entry><ind>	90.0</ind>	<dep>	324</dep></entry>
+      <entry><ind>	99.99</ind>	<dep>	324</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_hund</object-name>
+  <expression>
+    <table>
+     <mod>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+      <value>10.0</value>
+     </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	0.99</ind>	<dep>	0</dep></entry>
+      <entry><ind>	1.0</ind>	<dep>	36</dep></entry>
+      <entry><ind>	1.99</ind>	<dep>	36</dep></entry>
+      <entry><ind>	2.0</ind>	<dep>	72</dep></entry>
+      <entry><ind>	2.99</ind>	<dep>	72</dep></entry>
+      <entry><ind>	3.0</ind>	<dep>	108</dep></entry>
+      <entry><ind>	3.99</ind>	<dep>	108</dep></entry>
+      <entry><ind>	4.0</ind>	<dep>	144</dep></entry>
+      <entry><ind>	4.99</ind>	<dep>	144</dep></entry>
+      <entry><ind>	5.0</ind>	<dep>	180</dep></entry>
+      <entry><ind>	5.99</ind>	<dep>	180</dep></entry>
+      <entry><ind>	6.0</ind>	<dep>	216</dep></entry>
+      <entry><ind>	6.99</ind>	<dep>	216</dep></entry>
+      <entry><ind>	7.0</ind>	<dep>	252</dep></entry>
+      <entry><ind>	7.99</ind>	<dep>	252</dep></entry>
+      <entry><ind>	8.0</ind>	<dep>	288</dep></entry>
+      <entry><ind>	8.99</ind>	<dep>	288</dep></entry>
+      <entry><ind>	9.0</ind>	<dep>	324</dep></entry>
+      <entry><ind>	9.99</ind>	<dep>	324</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_dec</object-name>
+  <expression>
+    <table>
+     <mod>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+      <value>1.0</value>
+     </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	0.099</ind>	<dep>	0</dep></entry>
+      <entry><ind>	0.1</ind>	<dep>	36</dep></entry>
+      <entry><ind>	0.199</ind>	<dep>	36</dep></entry>
+      <entry><ind>	0.2</ind>	<dep>	72</dep></entry>
+      <entry><ind>	0.299</ind>	<dep>	72</dep></entry>
+      <entry><ind>	0.3</ind>	<dep>	108</dep></entry>
+      <entry><ind>	0.399</ind>	<dep>	108</dep></entry>
+      <entry><ind>	0.4</ind>	<dep>	144</dep></entry>
+      <entry><ind>	0.499</ind>	<dep>	144</dep></entry>
+      <entry><ind>	0.5</ind>	<dep>	180</dep></entry>
+      <entry><ind>	0.599</ind>	<dep>	180</dep></entry>
+      <entry><ind>	0.6</ind>	<dep>	216</dep></entry>
+      <entry><ind>	0.699</ind>	<dep>	216</dep></entry>
+      <entry><ind>	0.7</ind>	<dep>	252</dep></entry>
+      <entry><ind>	0.799</ind>	<dep>	252</dep></entry>
+      <entry><ind>	0.8</ind>	<dep>	288</dep></entry>
+      <entry><ind>	0.899</ind>	<dep>	288</dep></entry>
+      <entry><ind>	0.9</ind>	<dep>	324</dep></entry>
+      <entry><ind>	0.999</ind>	<dep>	324</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_ones</object-name>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+   <factor>3600</factor>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
   </center>
   <axis>
     <x>0.0</x>
