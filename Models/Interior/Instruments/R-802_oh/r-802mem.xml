@@ -115,6 +115,16 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>r802-1-vol</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/R-802/volume-1</property>
+       </binding>
+     </hovered>
  </animation>
 
  <animation>

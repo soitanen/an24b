@@ -36,12 +36,58 @@
   </axis>
 </animation>
 
+ <animation>
+   <type>knob</type>
+   <object-name>rtms-knob</object-name>
+   <property>an24/RTMS/fuel-offset-l</property>
+   <factor>-10</factor>
+   <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0424</z-m>
+   </center>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/RTMS/fuel-offset-l</property>
+      <factor>-10</factor>
+     </binding>
+    </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>rtms-1</tooltip-id>
+      <label>Scroll Down to Adjust</label>
+    </binding>
+   </hovered>
+ </animation>
+
+<!-- Digits -->
+
 <animation>
   <type>rotate</type>
   <object-name>dig1</object-name>
-  <property>/fdm/jsbsim/propulsion/engine[0]/fuel-used-lbs</property>
-  <!-- 360deg/22.05lbs(10kg) -->
-  <factor>16.329325</factor>
+  <expression>
+    <table>
+      <mod>
+      <abs>
+       <sum>
+        <property>an24/RTMS/fuel-offset-l</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/fuel-used-lbs</property>
+       </sum>
+      </abs>
+        <value>22.0462</value>
+      </mod>
+      <entry><ind>	-22.0462</ind>	<dep>	360</dep></entry>
+      <entry><ind>	0.0</ind>	<dep>	0</dep></entry>
+      <entry><ind>	22.0462</ind>	<dep>	360</dep></entry>
+    </table>
+  </expression>
   <center>
     <x-m>-0.0173</x-m>
     <y-m>0</y-m>
@@ -60,8 +106,13 @@
   <expression>
     <table>
       <mod>
+      <abs>
+      <sum>
+        <property>an24/RTMS/fuel-offset-l</property>
         <property>fdm/jsbsim/propulsion/engine[0]/fuel-used-lbs</property>
-        <value>220.46226</value>
+      </sum>
+      </abs>
+        <value>220.462</value>
       </mod>
       <entry><ind>	0</ind>		<dep>	0</dep></entry>
       <entry><ind>	20</ind>	<dep>	0</dep></entry>
@@ -83,7 +134,6 @@
       <entry><ind>	196</ind>	<dep>	288</dep></entry>
       <entry><ind>	198.41</ind>	<dep>	324</dep></entry>
       <entry><ind>	218</ind>	<dep>	324</dep></entry>
-      <entry><ind>	220.4</ind>	<dep>	359.9</dep></entry>
     </table>
   </expression>
   <center>
@@ -104,8 +154,13 @@
   <expression>
     <table>
       <mod>
+      <abs>
+      <sum>
+        <property>an24/RTMS/fuel-offset-l</property>
         <property>fdm/jsbsim/propulsion/engine[0]/fuel-used-lbs</property>
-        <value>2204.6226</value>
+      </sum>
+      </abs>
+        <value>2204.62</value>
       </mod>
       <entry><ind>	0</ind>		<dep>	0</dep></entry>
       <entry><ind>	218</ind>	<dep>	0</dep></entry>
@@ -126,8 +181,7 @@
       <entry><ind>	1763.7</ind>	<dep>	288</dep></entry>
       <entry><ind>	1982</ind>	<dep>	288</dep></entry>
       <entry><ind>	1984.1</ind>	<dep>	324</dep></entry>
-      <entry><ind>	2202</ind>	<dep>	324</dep></entry>
-      <entry><ind>	2204</ind>	<dep>	359.9</dep></entry>
+      <entry><ind>	2180</ind>	<dep>	324</dep></entry>
     </table>
   </expression>
   <center>
@@ -155,7 +209,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">RTMS fuelflow</text>
+    <text type="string">RTMS Fuel Flow</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>

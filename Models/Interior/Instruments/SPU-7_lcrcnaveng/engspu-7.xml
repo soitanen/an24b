@@ -122,6 +122,16 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>spu-list-vol_eng</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/SPU-7/listen_viewnr9</property>
+       </binding>
+     </hovered>
  </animation>
 
 <!-- "General" volume -->
@@ -151,6 +161,16 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>spu-gen-vol_eng</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/SPU-7/general_viewnr9</property>
+       </binding>
+     </hovered>
  </animation>
 
 <!-- Network selector

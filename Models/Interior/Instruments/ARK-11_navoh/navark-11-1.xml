@@ -115,6 +115,16 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>ark1-vol</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/ARK-11/volumeknob-1</property>
+       </binding>
+     </hovered>
  </animation>
 
 <!-- Subband handle -->

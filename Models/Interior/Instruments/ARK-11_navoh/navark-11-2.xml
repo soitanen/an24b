@@ -76,7 +76,7 @@
    <hovered>
     <binding>
       <command>set-tooltip</command>
-      <tooltip-id>ark1-mode</tooltip-id>
+      <tooltip-id>ark2-mode</tooltip-id>
       <label>%s</label>
       <property>an24/ARK-11/mode-2</property>
       <mapping>nasal</mapping>
@@ -115,6 +115,16 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>ark2-vol</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/ARK-11/volumeknob-2</property>
+       </binding>
+     </hovered>
  </animation>
 
 <!-- Subband handle -->
