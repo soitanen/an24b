@@ -1132,8 +1132,8 @@
 <!--************************** MIDDLE CONSOLE ***************************-->
 
 <model>
-  <name>AP-28L</name>
-  <path>Aircraft/an24b/Models/Interior/Instruments/AP-28L_mc/ap-28.xml</path>
+  <name>AP-28L1</name>
+  <path>Aircraft/an24b/Models/Interior/Instruments/AP-28L1_mc/ap-28.xml</path>
   <offsets>
     <x-m>2.645</x-m>
     <y-m>0.0</y-m>

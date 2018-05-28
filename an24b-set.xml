@@ -245,9 +245,9 @@
 <input>
  <keyboard>
 
-<key n="115">
-    <name>s</name>
-    <desc>Autostart</desc>
+     <key n="115">
+       <name>s</name>
+       <desc>Autostart</desc>
        <binding>
         <command>nasal</command>
         <script>autostart.startup();</script>
@@ -294,6 +294,109 @@
            <value>0</value>
          </binding>            
        </mod-up>
+     </key>
+
+      <key n="45">
+      <name>minus</name>
+      <binding>
+        <command>property-adjust</command>
+        <property>/fdm/jsbsim/fcs/throttle/idle-lock-pos</property>
+        <step>-0.02</step>
+      </binding>
+    </key>
+
+     <key n="61">
+      <name>equal</name>
+      <binding>
+        <command>property-adjust</command>
+        <property>/fdm/jsbsim/fcs/throttle/idle-lock-pos</property>
+        <step>0.02</step>
+      </binding>
+     </key>
+
+     <key n="91">
+        <name>[</name>
+        <desc>Decrease flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var flaps_min = 0;
+            setprop("/controls/flight/flaps", flaps_min);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>
+              var flaps_current = getprop("/surface-positions/flap-pos-norm");
+              setprop("/controls/flight/flaps", flaps_current);
+            </script>
+          </binding>
+        </mod-up>
+     </key>
+
+      <key n="93">
+        <name>]</name>
+        <desc>Increase flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var flaps_max = 1;
+            setprop("/controls/flight/flaps", flaps_max);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>
+              var flaps_current = getprop("/surface-positions/flap-pos-norm");
+              setprop("/controls/flight/flaps", flaps_current);
+            </script>
+          </binding>
+        </mod-up>
+      </key>
+
+<!-- For gear switch animation only -->
+
+     <key n="103">
+      <name>g</name>
+      <binding>
+       <command>nasal</command>
+       <script>
+	controls.gearDown(-1);
+        interpolate("/an24/animations/gear-lever", 1.0, 0.2, 1.0, 5.0, 0.0, 0.2 );
+       </script>
+      </binding>
+     </key>
+
+     <key n="71">
+      <name>G</name>
+      <binding>
+       <command>nasal</command>
+       <script>
+	controls.gearDown(1);
+        interpolate("/an24/animations/gear-lever", -1.0, 0.2, -1.0, 5.0, 0.0, 0.2 );
+       </script>
+      </binding>
+     </key>
+
+      <key n="100">
+      <name>d</name>
+      <desc>AP (DIS-)CONNECT</desc>
+      <repeatable>false</repeatable>
+       <binding>
+       <command>nasal</command>
+        <script>
+         if( getprop("an24/AP-28l1/internal/engaged" ) == 0.0 ){
+         instruments.engage_ap();
+         }
+         else {
+         setprop("an24/AP-28l1/internal/kv", 0.0 );
+         setprop("an24/AP-28l1/internal/horizon-mode", 0.0 );
+         setprop("an24/AP-28l1/internal/engaged", 0.0 );
+         }	
+        </script>
+       </binding>
       </key>
 
      <key n="60">
@@ -355,85 +458,6 @@
        </binding>
        </mod-up>
       </key>
-
-      <key n="45">
-      <name>minus</name>
-      <binding>
-        <command>property-adjust</command>
-        <property>/fdm/jsbsim/fcs/throttle/idle-lock-pos</property>
-        <step>-0.02</step>
-      </binding>
-    </key>
-
-    <key n="61">
-      <name>equal</name>
-      <binding>
-        <command>property-adjust</command>
-        <property>/fdm/jsbsim/fcs/throttle/idle-lock-pos</property>
-        <step>0.02</step>
-      </binding>
-    </key>
-
-      <key n="91">
-        <name>[</name>
-        <desc>Decrease flaps</desc>
-        <binding>
-          <command>nasal</command>
-          <script>
-            var flaps_min = 0;
-            setprop("/controls/flight/flaps", flaps_min);
-          </script>
-        </binding>
-        <mod-up>
-          <binding>
-            <command>nasal</command>
-            <script>
-              var flaps_current = getprop("/surface-positions/flap-pos-norm");
-              setprop("/controls/flight/flaps", flaps_current);
-            </script>
-          </binding>
-        </mod-up>
-      </key>
-
-      <key n="93">
-        <name>]</name>
-        <desc>Increase flaps</desc>
-        <binding>
-          <command>nasal</command>
-          <script>
-            var flaps_max = 1;
-            setprop("/controls/flight/flaps", flaps_max);
-          </script>
-        </binding>
-        <mod-up>
-          <binding>
-            <command>nasal</command>
-            <script>
-              var flaps_current = getprop("/surface-positions/flap-pos-norm");
-              setprop("/controls/flight/flaps", flaps_current);
-            </script>
-          </binding>
-        </mod-up>
-      </key>
-
-      <key n="100">
-      <name>d</name>
-      <desc>AP (DIS-)CONNECT</desc>
-      <repeatable>false</repeatable>
-       <binding>
-       <command>nasal</command>
-        <script>
-         if( getprop("an24/AP-28l1/internal/engaged" ) == 0.0 ){
-         instruments.engage_ap();
-         }
-         else {
-         setprop("an24/AP-28l1/internal/kv", 0.0 );
-         setprop("an24/AP-28l1/internal/horizon-mode", 0.0 );
-         setprop("an24/AP-28l1/internal/engaged", 0.0 );
-         }	
-        </script>
-       </binding>
-    </key>
 
     <key n="49">
       <name>1</name>

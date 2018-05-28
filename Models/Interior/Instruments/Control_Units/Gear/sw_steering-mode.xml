@@ -34,6 +34,19 @@
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>steering-mode</tooltip-id>
+      <label>%s</label>
+      <property>an24/gear/steer_mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var steermode0 = ['TAXI', 'OFF', 'T/O LAND'];
+        return steermode0[arg[0]];
+      </script>
+    </binding>
+   </hovered>
  </animation>
 
  <animation>
@@ -52,6 +65,19 @@
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>steering-mode</tooltip-id>
+      <label>%s</label>
+      <property>an24/gear/steer_mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var steermode1 = ['TAXI', 'OFF', 'T/O LAND'];
+        return steermode1[arg[0]];
+      </script>
+    </binding>
+   </hovered>
  </animation>
 
  <animation>
@@ -83,6 +109,19 @@
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>steering-mode</tooltip-id>
+      <label>%s</label>
+      <property>an24/gear/steer_mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var steermode2 = ['TAXI', 'OFF', 'T/O LAND'];
+        return steermode2[arg[0]];
+      </script>
+    </binding>
+   </hovered>
  </animation>
 
  <animation>

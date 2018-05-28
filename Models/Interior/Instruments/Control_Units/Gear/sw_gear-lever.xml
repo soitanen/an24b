@@ -16,7 +16,7 @@
    <command>nasal</command>
    <script>
 	controls.gearDown(-1);
-	interpolate("an24/animations/gear-lever", 1.0, 0.4 );
+        interpolate("an24/animations/gear-lever", 1.0, 0.2, 1.0, 5.0, 0.0, 0.2 );
    </script>
   </binding>
   </action>
@@ -33,7 +33,7 @@
    <command>nasal</command>
    <script>
 	controls.gearDown(1);
-	interpolate("an24/animations/gear-lever", -1.0, 0.4 );
+        interpolate("an24/animations/gear-lever", -1.0, 0.2, -1.0, 5.0, 0.0, 0.2 );
    </script>
   </binding>
   </action>

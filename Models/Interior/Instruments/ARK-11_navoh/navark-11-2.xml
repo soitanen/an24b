@@ -81,8 +81,8 @@
       <property>an24/ARK-11/mode-2</property>
       <mapping>nasal</mapping>
       <script>
-        var modes = ['OFF', 'Compass I', 'Antenna', 'Frame', 'Compass II'];
-        return modes[arg[0]];
+        var ark2mode = ['OFF', 'Compass I', 'Antenna', 'Frame', 'Compass II'];
+        return ark2mode[arg[0]];
       </script>
     </binding>
    </hovered>
