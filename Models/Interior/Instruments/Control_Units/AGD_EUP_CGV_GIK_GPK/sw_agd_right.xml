@@ -14,13 +14,13 @@
     <binding>
     <condition>
      <equals>
-    	<property>an24/AZS/sw0703</property>
+    	<property>an24/AZS/sw0704</property>
      <value>1.0</value>
      </equals>
     </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd-r", 5.0, 0.1 );
+        setprop("an24/instrumentation/agd-r", 5.0 );
       </script>
     </binding>
     <binding>
@@ -42,12 +42,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd-r", 0.0, 0.1 );
-      </script>
-    </binding>
-    <binding>
-      <command>nasal</command>
-      <script>
+        setprop("an24/instrumentation/agd-r", 0.0 );
         interpolate("an24/instrumentation/sw_agd-r", 0.0, 0.1 );
       </script>
     </binding>

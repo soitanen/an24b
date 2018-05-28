@@ -63,7 +63,13 @@ selected static ports [0,1,7,8] or pitots[0,1]
   <attitude-indicator>
     <name>agd-1</name>
     <number>0</number>
-    <suction>/an24/instrumentation/agd</suction>
+    <suction>/an24/instrumentation/agd-l</suction>
+  </attitude-indicator>
+
+  <attitude-indicator>
+    <name>agd-1</name>
+    <number>1</number>
+    <suction>/an24/instrumentation/agd-r</suction>
   </attitude-indicator>
 
   <clock>

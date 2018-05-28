@@ -27,17 +27,20 @@ QUICK STARTUP-GUIDE (to be improved (with pictures (and such (like, as pdf))))
   - Put 2nd switch in top row up to position "lev" (left) and press upper left black/white button (AI-24 engine start)
     - left engine should spool up and start
   - Put 2nd switch in top row down to position "prav" (right) and press upper black/white button (AI-24 engine start)
-    - guess what's supposed to happen
+    - guess what's supposed to happen!
   - Press lower right red/grey button once, APU stops
 
 - On Left Horizontal Console:
   - Turn down cut-off switch next to green and red lamps
 
 - Below pilot's left panel:
-  - Put on switches "AGD", "EUP", "CGV" (number 4,5,6 in this row); watch AGD (AI) go up
+  - Put on switches "AGD", "EUP", "CGV" (number 4,5,6 in this row); watch left AGD (AI) spin up
+
+- Below F/O's right panel:
+  - Put on switches "AGD", "GIK", "GPK" (number 1,2,3 in this row); watch right AGD (AI) spin up
 
 - On pilot's left panel:
-  - Press little black/white button below AI until indicator of KPPM (ASI) doesn't move anymore
+  - Press little black/white button below AI until indicator of KPPM (HSI) doesn't move anymore
 
 - On F/O's right console:
   - Look out for a big compass rose and a device with two knobs above it
@@ -88,6 +91,25 @@ QUICK IMPORTANT INSTRUMENTS GUIDE
     - Top row switches/knobs: Pitch up/down, Roll angle, Pitch up/down
     - Middle row switches/buttons: switch Autotrim, switch Power ON, big button, switch GIK or OFF or ZK-mode, switch Pitch ON/OFF
       - "GIK": Current course indicated by GIK; "ZK": Heading select by ZK
-    - Lower row buttons/lamps: 2 Lamps Autotrim intervention, Button Wing Level, Lamp/Button Altitude Hold
+    - Lower row buttons/lamps: 2 Lamps Autotrim intervention, Button Wing Level, Lamp and Button Altitude Hold
 * Should be Roll Hold I think?
 
+- Anti-Ice System
+  - On F/O's right console: PPD pitot and static port heating; up position: ON; middle: OFF; down: control
+    - Left switch: Pitot A1 (pilot's KUS-730) and static ports S1 and S5 (pilot's KUS-730, VAR-30 and UVO-15)
+    - Middle switch: Pitot A2 (FDR and emergency pitot for A1) and static port S3 (FDR)
+    - Right switch: Pitot A3 (F/O's KUS-730) and static ports S2 and S6 (F/O's KUS-730, VAR-30 and UVID-15 and UVPD-15)
+    - Upper switch: Static ports S4 and S7 (altitude correction KV-11)
+  - At bottom of F/O's right panel:
+    - From switch 4-8: 2x right window (low and intense); astrocompass*; wing, tail and nose; prop hub and blades
+  - At bottom of pilot's left panel:
+    - From switch 2-3: 2x right window (low and intense)
+* not on this plane!
+
+- Pitot and Static Port Pressure valves
+  - On pilot's left console (two red levers):
+    - Back one: A1 -> A2*
+    - Front one: S1 and S5* -> E1 (emergency port in radar chamber)
+  - On F/O's right console (one red lever):
+    - S2 and S6* -> E2 (emergency port in radar chamber)
+* also see "Anti-Ice System"

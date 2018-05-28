@@ -20,7 +20,7 @@
     </condition>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd", 5.0, 0.1 );
+        setprop("an24/instrumentation/agd-l", 5.0 );
       </script>
     </binding>
     <binding>
@@ -42,12 +42,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/instrumentation/agd", 0.0, 0.1 );
-      </script>
-    </binding>
-    <binding>
-      <command>nasal</command>
-      <script>
+        setprop("an24/instrumentation/agd-l", 0.0 );
         interpolate("an24/instrumentation/sw_agd-l", 0.0, 0.1 );
       </script>
     </binding>

@@ -35,12 +35,10 @@
    </emission>
  </animation>
   
-  <!--Roll-->
-
-  <animation>
+ <animation>
     <type>textranslate</type>
     <object-name>PitchScale</object-name>
-    <property>/orientation/pitch-deg</property>
+    <property>/instrumentation/agd-1[1]/indicated-pitch-deg</property>
     <interpolation>
       <entry><ind>	-80.0</ind>	<dep>	-0.437</dep></entry>
       <entry><ind>	-70.0</ind>	<dep>	-0.383</dep></entry>
@@ -69,15 +67,12 @@
       <z>0</z>
     </axis>
   </animation>
-  
 
 <!--Attitude-->
 <animation>
   <type>rotate</type>
   <object-name>Plane</object-name>
-  <property>/orientation/roll-deg</property>
-  <max-deg>70.0</max-deg>
-  <min-deg>-70.0</min-deg>
+  <property>instrumentation/agd-1[1]/indicated-roll-deg</property>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
@@ -94,9 +89,10 @@
 <animation>
   <type>rotate</type>
   <object-name>skid_ball</object-name>
-  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
-  <max-deg>10.0</max-deg>
-  <min-deg>-10.0</min-deg>
+  <property>/fdm/jsbsim/instrumentation/slip-skid-indicator/slip-skid-deg</property>
+  <factor>1</factor>
+  <max-deg>20.0</max-deg>
+  <min-deg>-20.0</min-deg>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
@@ -108,6 +104,7 @@
     <z>0.0</z>
   </axis>
 </animation>
+
 
 <!-- TEXT OSG -->
 
