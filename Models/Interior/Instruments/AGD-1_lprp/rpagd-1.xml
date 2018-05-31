@@ -38,7 +38,7 @@
  <animation>
     <type>textranslate</type>
     <object-name>PitchScale</object-name>
-    <property>/instrumentation/agd-1[1]/indicated-pitch-deg</property>
+    <property>/instrumentation/agd-r[1]/indicated-pitch-deg</property>
     <interpolation>
       <entry><ind>	-80.0</ind>	<dep>	-0.437</dep></entry>
       <entry><ind>	-70.0</ind>	<dep>	-0.383</dep></entry>
@@ -72,7 +72,7 @@
 <animation>
   <type>rotate</type>
   <object-name>Plane</object-name>
-  <property>instrumentation/agd-1[1]/indicated-roll-deg</property>
+  <property>instrumentation/agd-r[1]/indicated-roll-deg</property>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>

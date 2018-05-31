@@ -15,11 +15,11 @@ var engage_ap = func {
 	if (getprop("/an24/AP-28l1/internal/armed")) {
 		setprop("/an24/AP-28l1/internal/engaged", 1);
 		setprop("/an24/AP-28l1/internal/horizon-mode", 0);
-		setprop("/an24/AP-28l1/internal/target-pitch", getprop("/instrumentation/agd-1/indicated-pitch-deg"));
+		setprop("/an24/AP-28l1/internal/target-pitch", getprop("/instrumentation/agd-l/indicated-pitch-deg"));
 		headings_write();
 	} else {
 		setprop("/an24/AP-28l1/internal/horizon-mode", 0);
-		setprop("/an24/AP-28l1/internal/target-pitch", getprop("/instrumentation/agd-1/indicated-pitch-deg"));
+		setprop("/an24/AP-28l1/internal/target-pitch", getprop("/instrumentation/agd-l/indicated-pitch-deg"));
 		headings_write();
 	}
 }

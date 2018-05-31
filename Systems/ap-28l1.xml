@@ -35,7 +35,7 @@
 			</condition>
 		</enable>	
 		<input>/an24/AP-28l1/internal/target-bank</input>
-		<reference>/instrumentation/agd-1/indicated-roll-deg</reference>
+		<reference>/instrumentation/agd-l/indicated-roll-deg</reference>
 		<output>/an24/AP-28l1/internal/roll-error-deg</output>
 	</filter>
 
@@ -102,7 +102,7 @@
 				<property>/an24/AP-28l1/internal/powered</property>
 			</condition>
 		</enable>	
-		<input>/instrumentation/agd-1/indicated-pitch-deg</input>
+		<input>/instrumentation/agd-l/indicated-pitch-deg</input>
 		<reference>/an24/AP-28l1/internal/target-pitch</reference>
 		<output>/an24/AP-28l1/internal/pitch-error-deg</output>
 	</filter>
@@ -265,7 +265,7 @@
 							<property>/an24/AP-28l1/coefficients/pitch-rate</property>
 						</product>
 						<product>
-							<abs><property>/instrumentation/agd-1/indicated-roll-deg</property></abs>
+							<abs><property>/instrumentation/agd-l/indicated-roll-deg</property></abs>
 							<property>/an24/AP-28l1/coefficients/pitch-roll-compensate</property>
 						</product>
 						<property>/an24/AP-28l1/internal/elevator-alt-correction</property>
@@ -547,7 +547,7 @@
 		<input>
 			<and>
 				<property>/an24/AP-28l1/internal/powered</property>
-				<property>/an24/instrumentation/agd</property>
+				<property>/an24/instrumentation/agd-l</property>
 				<greater-than>
 					<property>/sim/time/elapsed-sec</property>
 					<property>/an24/AP-28l1/internal/power-on-time</property>
