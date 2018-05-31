@@ -152,6 +152,7 @@ selected static ports [0,1,7,8] or pitots[0,1]
   <transponder>
     <name>transponder</name>
     <number>0</number>
+    <!--encoder-path type="string">/instrumentation/altimeter</encoder-path> default is working, so still tagged out-->
   </transponder>
 
   <turn-indicator>

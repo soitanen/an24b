@@ -743,6 +743,7 @@
     <file>Aircraft/an24b/Nasal/instruments.nas</file>
     <file>Aircraft/an24b/Nasal/gpk-52.nas</file>
     <file>Aircraft/an24b/Nasal/ap-28l1.nas</file>
+    <file>Aircraft/an24b/Nasal/radios.nas</file>
   </instruments>
   <pitotstatic>
     <file>Aircraft/an24b/Nasal/pitotstatic.nas</file>

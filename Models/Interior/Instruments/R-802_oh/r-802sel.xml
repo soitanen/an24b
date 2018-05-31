@@ -44,6 +44,14 @@
       <wrap>true</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Freq %3.2fMHz</label>
+         <tooltip-id>r802-2-freq-100</tooltip-id>
+         <property>an24/R-802/finalfreq</property>
+       </binding>
+    </hovered>
  </animation>
 
 <animation>
@@ -88,6 +96,14 @@
       <wrap>true</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Freq %3.2fMHz</label>
+         <tooltip-id>r802-2-freq-10</tooltip-id>
+         <property>an24/R-802/finalfreq</property>
+       </binding>
+    </hovered>
  </animation>
 
 <animation>
@@ -132,6 +148,14 @@
       <wrap>true</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Freq %3.2fMHz</label>
+         <tooltip-id>r802-2-freq-1</tooltip-id>
+         <property>an24/R-802/finalfreq</property>
+       </binding>
+    </hovered>
  </animation>
 
 <animation>
@@ -166,6 +190,15 @@
       </script>
     </binding>
   </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Stored at Slot %3.2fMHz</label>
+         <measure-text>Freq: 999.99</measure-text>
+         <tooltip-id>r802-2-freq</tooltip-id>
+         <property>an24/R-802/finalfreq</property>
+       </binding>
+    </hovered>
 </animation>
 
 <animation>

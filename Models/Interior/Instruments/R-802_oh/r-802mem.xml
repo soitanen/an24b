@@ -42,6 +42,15 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Stored: %3.2fMHz</label>
+         <measure-text>Stored: 999.99MHz</measure-text>
+         <tooltip-id>r802-1-freq</tooltip-id>
+         <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+       </binding>
+    </hovered>
  </animation>
 
 <animation>

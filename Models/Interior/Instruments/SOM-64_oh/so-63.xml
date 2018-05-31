@@ -12,8 +12,8 @@
    <factor>-30</factor>
   <center>
    <x-m>0.0</x-m>
-   <y-m>-0.0388</y-m>
-   <z-m>-0.0343</z-m>
+   <y-m>-0.0442</y-m>
+   <z-m>-0.0328</z-m>
   </center>
   <axis>
     <x>1.0</x>
@@ -30,17 +30,26 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %d</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-1</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
  </animation>
 
  <animation>
    <type>knob</type>
    <object-name>squawk2</object-name>
     <property>/instrumentation/transponder/inputs/digit[2]</property>
-   <factor>-32</factor>
+   <factor>-30</factor>
   <center>
    <x-m>0.0</x-m>
-   <y-m>-0.0124</y-m>
-   <z-m>-0.0364</z-m>
+   <y-m>-0.0149</y-m>
+   <z-m>-0.0355</z-m>
   </center>
   <axis>
     <x>1.0</x>
@@ -57,6 +66,15 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %d</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-2</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
  </animation>
 
  <animation>
@@ -66,8 +84,8 @@
    <factor>-30</factor>
   <center>
    <x-m>0.0</x-m>
-   <y-m>0.0151</y-m>
-   <z-m>-0.0376</z-m>
+   <y-m>0.0147</y-m>
+   <z-m>-0.0350</z-m>
   </center>
   <axis>
     <x>1.0</x>
@@ -84,17 +102,26 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %d</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-3</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
  </animation>
 
  <animation>
    <type>knob</type>
    <object-name>squawk4</object-name>
     <property>/instrumentation/transponder/inputs/digit[0]</property>
-   <factor>-32</factor>
+   <factor>-30</factor>
   <center>
    <x-m>0.0</x-m>
-   <y-m>0.0413</y-m>
-   <z-m>-0.0326</z-m>
+   <y-m>0.0444</y-m>
+   <z-m>-0.0336</z-m>
   </center>
   <axis>
     <x>1.0</x>
@@ -111,17 +138,26 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %d</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-4</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
  </animation>
 
  <animation>
    <type>knob</type>
    <object-name>xponder_mode</object-name>
     <property>/instrumentation/transponder/inputs/knob-mode</property>
-   <factor>-31</factor>
+   <factor>-30</factor>
   <center>
    <x-m>0.0</x-m>
    <y-m>0.0118</y-m>
-   <z-m>-0.0115</z-m>
+   <z-m>-0.0065</z-m>
   </center>
   <axis>
     <x>1.0</x>
@@ -138,6 +174,20 @@
       <wrap>false</wrap>
      </binding>
     </action>
+   <!--hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Transponder Mode %s</label>
+         <property>/instrumentation/transponder/inputs/knob-mode</property>
+         <measure-text>Transponder Mode ALTITUDE</measure-text>
+         <tooltip-id>so-63-mode</tooltip-id>
+         <mapping>nasal</mapping>
+         <script>
+	var xpondmode = ['STANDBY', 'GROUND', 'ON', 'ALTITUDE'];
+	return xpondmode[arg[0]];
+         </script>
+       </binding>
+    </hovered-->
  </animation>
 
 <!-- TEXT OSG -->
