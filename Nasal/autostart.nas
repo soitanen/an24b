@@ -304,7 +304,7 @@ var startup = func {
 
 		settimer( func{
 		screen.log.write("Meanwhile initialize AGD, EUP and CGV...", 1, 1, 1);
-		setprop("an24/instrumentation/agd", 5.0 );
+		setprop("an24/instrumentation/agd-l", 5.0 );
 		setprop("an24/instrumentation/sw_agd-l", 1.0 );
 		setprop("an24/instrumentation/agd-r", 5.0 );
 		setprop("an24/instrumentation/sw_agd-r", 1.0 );
