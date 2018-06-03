@@ -475,6 +475,21 @@
     </volume>
   </marker>
 
+  <!--radio>
+    <name>ark1</name>
+    <path>Sounds/radionoise.wav</path>
+     <condition>
+     <equals>
+      <property>an24/ARK-11/mode-1</property>
+      <value>3.0</value>
+     </equals>
+     </condition>
+    <mode>looped</mode>
+    <volume>
+      <property>/instrumentation/adf[0]/volume-norm</property>
+    </volume>
+  </radio-->
+
 </fx>
  
 </PropertyList>

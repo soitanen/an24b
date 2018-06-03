@@ -67,6 +67,7 @@ var parkBrakeSet = func {
 setlistener("/sim/signals/fdm-initialized", parkBrakeSet);
 
 ##  SPU-7 comm
+#
 setprop("an24/SPU-7/lc_source", 0.0);
 setprop("an24/SPU-7/rc_source", 0.0);
 setprop("an24/SPU-7/eng_source", 0.0);
@@ -152,6 +153,7 @@ var r8022audible = func {
 # setlistener("an24/SPU-7/nav_source", r8361audible);
 
 setprop("an24/AZS/sw0512", 0.0);
+setprop("an24/AZS/sw0513", 0.0);
 var ark1audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 4.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 4.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 4.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 4.0 and viewnr == 10 ) ) {
@@ -168,7 +170,6 @@ var ark1audible = func {
 
  setlistener("/sim/current-view/view-number", ark1audible);
  setlistener("an24/ARK-11/vol-1", ark1audible);
-# setlistener("an24/ARK-11/volumeknob-1", ark1audible);
  setlistener("an24/SPU-7/listen_viewnr0", ark1audible);
  setlistener("an24/SPU-7/listen_viewnr8", ark1audible);
  setlistener("an24/SPU-7/listen_viewnr9", ark1audible);
@@ -179,6 +180,7 @@ var ark1audible = func {
  setlistener("an24/SPU-7/nav_source", ark1audible);
 
 setprop("an24/AZS/sw0514", 0.0);
+setprop("an24/AZS/sw0515", 0.0);
 var ark2audible = func {
 	var viewnr = getprop("/sim/current-view/view-number");
 	if ( (getprop("an24/SPU-7/lc_source") == 5.0 and viewnr == 0 ) or (getprop("an24/SPU-7/rc_source") == 5.0 and viewnr == 8 ) or (getprop("an24/SPU-7/eng_source") == 5.0 and viewnr == 9 ) or (getprop("an24/SPU-7/nav_source") == 5.0 and viewnr == 10 ) ) {
@@ -195,7 +197,6 @@ var ark2audible = func {
 
  setlistener("/sim/current-view/view-number", ark2audible);
  setlistener("an24/ARK-11/vol-2", ark2audible);
-# setlistener("an24/ARK-11/volumeknob-2", ark2audible);
  setlistener("an24/SPU-7/listen_viewnr0", ark2audible);
  setlistener("an24/SPU-7/listen_viewnr8", ark2audible);
  setlistener("an24/SPU-7/listen_viewnr9", ark2audible);
@@ -341,7 +342,10 @@ var nav_wtimer = maketimer(10, func(){
 });
 nav_wtimer.start();
 
-# 2PPT1-4 Fuel Level Indicator
+## 2PPT1-4 Fuel Level Indicator
+#
+
+setprop("an24/PG5and2PPT1/selected-ind", 0.0 );
 var fuelind = func {
 	if ( getprop("an24/PG5and2PPT1/selected-ind") == 1.0 ) {
         var indicatedl = (getprop("/consumables/fuel/tank[0]/level-kg") + getprop("/consumables/fuel/tank[1]/level-kg") + getprop("/consumables/fuel/tank[2]/level-kg")) * 2 / 3;
