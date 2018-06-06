@@ -152,7 +152,8 @@ selected static ports [0,1,7,8] or pitots[0,1]
   <transponder>
     <name>transponder</name>
     <number>0</number>
-    <!--encoder-path type="string">/instrumentation/altimeter</encoder-path> default is working, so still tagged out-->
+    <mode type="int">1</mode> <!-- 0 = Mode A, 1 = Mode C, 2 = Mode S -->
+    <!--encoder-path type="string">/instrumentation/altimeter</encoder-path> default is working (=UVO-15), so still tagged out -->
   </transponder>
 
   <turn-indicator>
