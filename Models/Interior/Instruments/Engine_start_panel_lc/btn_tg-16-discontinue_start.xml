@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<!-- "Discontinue TG-start" btn -->
+
+<PropertyList>
+ <path>../../shared/knobs_buttons/spring_load_btn01.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>press_me</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        setprop("controls/engines/engine[2]/starter", 0.0 );
+        setprop("controls/engines/engine[2]/cutoff", 1.0 );
+        interpolate("an24/Start-Panel/discontinuestarttg-btn", -1.0, 0.2 );
+        settimer(func {interpolate("an24/Start-Panel/discontinuestarttg-btn", 0.0, 0.1 );},0.2);
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/Start-Panel/discontinuestarttg-btn</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+</PropertyList>

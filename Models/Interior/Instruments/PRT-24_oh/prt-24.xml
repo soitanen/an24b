@@ -4,4 +4,16 @@
 
 <PropertyList>
  <path>prt-24.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>prt_face</object-name>
+   <emission>
+     <red>0.4</red>
+     <green>0.4</green>
+     <blue>0.2</blue>
+     <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+   </emission>
+ </animation>
+
 </PropertyList>

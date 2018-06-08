@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!-- UI2-150 of 2DIM-150; brake pressure -->
+
+<PropertyList>
+ <path>ui2-150.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>left_needle</object-name>
+   <object-name>right_needle</object-name>
+   <object-name>housing</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
+   </emission>
+ </animation>
+
+
+</PropertyList>

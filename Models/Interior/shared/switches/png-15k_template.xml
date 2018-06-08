@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<!-- Template/example -->
+
+<PropertyList>
+ <path>../../../shared/switches/png-15k.ac</path>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+  <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/swXXYY</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+	controls.aileronTrim(1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
+	interpolate("foo/bar/sw_value_to_be_changed", 1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+	interpolate("foo/bar/sw_value_to_be_changed", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+  <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/swXXYY</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+	controls.aileronTrim(-1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
+	interpolate("foo/bar/sw_value_to_be_changed", -1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+	interpolate("foo/bar/sw_value_to_be_changed", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>foo/bar/sw_value_to_be_changed</property>
+  <interpolation>
+    <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

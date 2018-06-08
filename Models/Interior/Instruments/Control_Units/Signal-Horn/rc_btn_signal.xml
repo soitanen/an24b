@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<!-- Button for "Intermittent signal control" -->
+
+<PropertyList>
+ <path>../../../shared/knobs_buttons/205k.ac</path>
+
+<!--animation>
+	<type>pick</type>
+	<object-name>press_me</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>nasal</command>
+			<script>
+			interpolate("an24/animations/AP-28L/fix-bank", 1.0, 0.1 );
+			</script>
+		</binding>
+		<mod-up>
+		<binding>
+			<command>nasal</command>
+			<script>
+			interpolate("an24/animations/AP-28L/fix-bank", 0.0, 0.1 );
+			</script>
+		</binding>
+		</mod-up>
+	</action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/animations/AP-28L/fix-bank</property>
+  <factor>0.005</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation-->
+</PropertyList>

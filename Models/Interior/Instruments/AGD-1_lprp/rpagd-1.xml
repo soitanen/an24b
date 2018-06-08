@@ -13,9 +13,9 @@
    <object-name>bull_tube</object-name>
    <emission>
      <red>1.0</red>
-     <green>1.0</green>
-     <blue>1.0</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.5</green>
+     <blue>0.5</blue>
+     <factor-prop>/controls/lighting/panel-r_red</factor-prop>
    </emission>
  </animation>
 
@@ -28,19 +28,17 @@
    <object-name>Cylinder.005</object-name>
    <object-name>arretir</object-name>
    <emission>
-     <red>0.6</red>
-     <green>0.6</green>
-     <blue>0.6</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>/controls/lighting/panel-r_red</factor-prop>
    </emission>
  </animation>
   
-  <!--Roll-->
-
-  <animation>
+ <animation>
     <type>textranslate</type>
     <object-name>PitchScale</object-name>
-    <property>/orientation/pitch-deg</property>
+    <property>/instrumentation/agd-r[1]/indicated-pitch-deg</property>
     <interpolation>
       <entry><ind>	-80.0</ind>	<dep>	-0.437</dep></entry>
       <entry><ind>	-70.0</ind>	<dep>	-0.383</dep></entry>
@@ -69,15 +67,12 @@
       <z>0</z>
     </axis>
   </animation>
-  
 
 <!--Attitude-->
 <animation>
   <type>rotate</type>
   <object-name>Plane</object-name>
-  <property>/orientation/roll-deg</property>
-  <max-deg>70.0</max-deg>
-  <min-deg>-70.0</min-deg>
+  <property>instrumentation/agd-r[1]/indicated-roll-deg</property>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
@@ -94,9 +89,10 @@
 <animation>
   <type>rotate</type>
   <object-name>skid_ball</object-name>
-  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
-  <max-deg>10.0</max-deg>
-  <min-deg>-10.0</min-deg>
+  <property>/fdm/jsbsim/instrumentation/slip-skid-indicator/slip-skid-deg</property>
+  <factor>1</factor>
+  <max-deg>20.0</max-deg>
+  <min-deg>-20.0</min-deg>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
@@ -108,6 +104,7 @@
     <z>0.0</z>
   </axis>
 </animation>
+
 
 <!-- TEXT OSG -->
 
@@ -141,14 +138,5 @@
       <z-m>  0.000 </z-m>
     </offsets>
   </text>
-  <animation>
-    <type>material</type>
-    <object-name>textosg</object-name>
-    <diffuse>
-      <red>   1.0 </red>
-      <green> 0.4 </green>
-      <blue>  0.0 </blue>
-    </diffuse>
-  </animation>
 
 </PropertyList>

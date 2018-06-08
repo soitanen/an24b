@@ -2,24 +2,9 @@
 
 <!--
 **********************************************************************
-generic-instrumentation.xml
-
-Generic instrumentation configuration. This file selects the
-instrumentation modules that should be available.
-
-You can have several instances of the same instrument type.
-The value inside the name tag becomes the node in the property tree.
-If two instruments have the same name you must use the number tag
-to separate them. They become name[number] in the property tree.
-Some instruments have additional configuration tags like static-port
-and pitot-port. The static- and pitot-ports (and any other system that
-an instrument depend on) have to be configured in the systems
-configuration file: generic-systems.xml
-
-The values in this file are the default values. If any configuration
-tags are omitted in an aircraft specific version of this configuration
-file, these values will be used (they are hardcoded).
-
+Specific for AN-24B
+static[9,10] and pitot[3] serve as passive "value receivers" from
+selected static ports [0,1,7,8] or pitots[0,1]
 **********************************************************************
 -->
 
@@ -35,31 +20,82 @@ file, these values will be used (they are hardcoded).
     <number>1</number>
   </adf>
 
+  <adf>
+    <name>adf</name>
+    <number>2</number>
+  </adf>
+
+  <adf>
+    <name>adf</name>
+    <number>3</number>
+  </adf>
+
   <airspeed-indicator>
     <name>airspeed-indicator</name>
     <number>0</number>
-    <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    <total-pressure>/systems/pitot[3]/total-pressure-inhg</total-pressure> <!-- pitot[0] is swapable, need to fake it as [3] -->
+    <static-pressure>/systems/static[9]/pressure-inhg</static-pressure> <!-- static[0] is swapable, need to fake it as [9] -->
+  </airspeed-indicator>
+
+  <airspeed-indicator>
+    <name>airspeed-indicator</name>
+    <number>1</number>
+    <total-pressure>/systems/pitot[2]/total-pressure-inhg</total-pressure> <!-- pitot[2] is anyway unswapable, no need to fake it -->
+    <static-pressure>/systems/static[10]/pressure-inhg</static-pressure> <!-- static port is, so fake it as [10] -->
   </airspeed-indicator>
 
   <altimeter>
     <name>altimeter</name>
     <number>0</number>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    <static-pressure>/systems/static[9]/pressure-inhg</static-pressure>
+    <quantum>0</quantum>
+    <tau>0</tau>
+  </altimeter>
+
+  <altimeter>
+    <name>altimeter</name>
+    <number>1</number>
+    <static-pressure>/systems/static[10]/pressure-inhg</static-pressure>
     <quantum>0</quantum>
     <tau>0</tau>
   </altimeter>
 
   <attitude-indicator>
-    <name>agd-1</name>
+    <name>agd-l</name>
     <number>0</number>
-    <suction>/an24/instrumentation/agd</suction>
+    <suction>/an24/instrumentation/agd-l</suction>
+  </attitude-indicator>
+
+  <attitude-indicator>
+    <name>agd-r</name>
+    <number>1</number>
+    <suction>/an24/instrumentation/agd-r</suction>
   </attitude-indicator>
 
   <clock>
     <name>clock</name>
     <number>0</number>
   </clock>
+
+  <clock>
+    <name>clock</name>
+    <number>1</number>
+  </clock>
+
+  <clock>
+    <name>clock</name>
+    <number>2</number>
+  </clock>
+
+  <comm-radio>
+    <name>comm</name>
+    <number>0</number>>
+  </comm-radio>
+
+ <comm-radio>
+    <name>comm</name>
+    <number>1</number>>
+  </comm-radio>
 
   <dme>
     <name>dme</name>
@@ -114,6 +150,11 @@ file, these values will be used (they are hardcoded).
   </slip-skid-ball>
 
   <transponder>
+    <name>transponder</name>
+    <number>0</number>
+    <mode type="int">1</mode> <!-- 0 = Mode A, 1 = Mode C, 2 = Mode S -->
+    <encoder-path type="string">/instrumentation/altimeter</encoder-path><!--UVO-15 -->
+    <kt70-compatibility type="bool">0</kt70-compatibility>
   </transponder>
 
   <turn-indicator>
@@ -124,10 +165,17 @@ file, these values will be used (they are hardcoded).
   <vertical-speed-indicator>
     <name>vertical-speed-indicator</name>
     <number>0</number>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    <static-pressure>/systems/static[9]/pressure-inhg</static-pressure>
   </vertical-speed-indicator>
 
-  <gps>
+  <vertical-speed-indicator>
+    <name>vertical-speed-indicator</name>
+    <number>1</number>
+    <static-pressure>/systems/static[10]/pressure-inhg</static-pressure>
+  </vertical-speed-indicator>
+
+
+  <!--gps>
     <name>gps</name>
     <number>0</number>
   </gps>
@@ -135,16 +183,6 @@ file, these values will be used (they are hardcoded).
   <radar>
     <name>wxradar</name>
     <number>0</number>
-  </radar>
-
-  <tacan>
-    <name>tacan</name>
-    <number>0</number>
-  </tacan>
-
-  <mk-viii>
-   <name>mk-viii</name>
-   <number>0</number>
-  </mk-viii>
+  </radar-->
 
 </PropertyList>

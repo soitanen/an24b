@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<!-- TG-16 cutoff valve sw -->
+
+<PropertyList>
+ <path>../../../shared/switches/png-15k.ac</path>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0218</property><!--not sure-->
+         <value>1.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/FuelControl/TG-16_cutoff", 0.0, 0.4 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+	interpolate("an24/FuelControl/sw_TG-16_cutoff", 1.0, 0.2 );
+	settimer(func {interpolate("an24/FuelControl/sw_TG-16_cutoff", 0.0, 0.1 );},0.2);
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/FuelControl/TG-16_cutoff", 1.0, 0.2 );
+        setprop("controls/engines/engine[2]/starter", 0.0 );
+        setprop("controls/engines/engine[2]/cutoff", 1.0 );
+	interpolate("an24/FuelControl/sw_TG-16_cutoff", -1.0, 0.2 );
+	settimer(func {interpolate("an24/FuelControl/sw_TG-16_cutoff", 0.0, 0.1 );},0.2);
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/FuelControl/sw_TG-16_cutoff</property>
+  <interpolation>
+    <entry><ind>1.0</ind>	<dep>26.0</dep></entry>
+    <entry><ind>-1.0</ind>	<dep>-26.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+

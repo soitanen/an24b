@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<!-- Button -->
+
+<PropertyList>
+ <path>../../shared/knobs_buttons/205k.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>press_me</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <condition>
+     <equals>
+      <property>an24/animations/FireFeather/cover01</property>
+      <value>1</value>
+     </equals>
+     </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Start-Panel/timerapd", 30.0, 30.0, 0.0, 3.0 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/animations/Start-Panel/startai24-btn", 1.0, 0.1 );
+      </script>
+    </binding>
+      <mod-up>
+	<binding>
+	<command>nasal</command>
+	<script>
+	interpolate("an24/animations/Start-Panel/startai24-btn", 0.0, 0.1 );
+	</script>
+	</binding>
+      </mod-up>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/animations/Start-Panel/startai24-btn</property>
+  <factor>0.005</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation>
+
+</PropertyList>

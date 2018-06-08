@@ -5,6 +5,7 @@ props.globals.initNode("instrumentation/gpk-52/lat-nut-corr", 0.0);
 props.globals.initNode("instrumentation/gpk-52/transport-wander", 0.0);
 props.globals.initNode("instrumentation/gpk-52/left-right-slew", 0.0);
 props.globals.initNode("instrumentation/gpk-52/on", 1);
+setprop("systems/electrical/volts", 27.0); # because removal of generic-electrical.xml
 
 srand();
 var hdg_stop = int(rand() * 360);

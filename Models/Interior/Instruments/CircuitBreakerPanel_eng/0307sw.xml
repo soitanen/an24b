@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!-- AZR-6, no function -->
+
+<PropertyList>
+ <path>../../shared/switches/azr.ac</path>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+ </animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+</animation>
+
+</PropertyList>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!-- front right corner, AP ON and connected -->
+
+<PropertyList>
+ <path>../../shared/lamps/warninglamp02.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../shared/lamps/warninglamp02greenplain.png</texture>
+</animation>
+
+<animation>
+ <type>select</type>
+ <condition>
+    <property>an24/AP-28l1/internal/engaged</property>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

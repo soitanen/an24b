@@ -3,13 +3,13 @@
 <!-- -->
 
 <PropertyList>
- <path>../../../shared/lamps/warninglamp02.ac</path>
+ <path>../../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../../shared/lamps/warninglamp02blue.png</texture>
+ <texture>../../../shared/lamps/sltsnblue.png</texture>
 </animation>
 
 <animation>

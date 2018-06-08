@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<!-- PRT-24 "240/360degC" sw, right engine -->
+
+<PropertyList>
+ <path>../../shared/switches/switch03.ac</path>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        setprop("an24/Start-Panel/prt360-240_r", 360.0 );
+        interpolate("an24/Start-Panel/prt360-240_r_sw", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <object-name>clickspot_middle</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        setprop("an24/Start-Panel/prt360-240_r", 240.0 );
+        interpolate("an24/Start-Panel/prt360-240_r_sw", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/Start-Panel/prt360-240_r_sw</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>-25.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>25.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

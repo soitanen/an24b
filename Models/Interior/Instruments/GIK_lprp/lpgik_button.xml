@@ -1,27 +1,52 @@
 <?xml version="1.0"?>
 <!-- Fast align button for GIK-1 compass -->
 <PropertyList>
- <path>gik_button.ac</path>
+ <path>../../shared/knobs_buttons/5k.ac</path>
 
 <animation>
 	<type>pick</type>
-	<object-name>disk</object-name>
+	<object-name>press_me</object-name>
 	<visible>true</visible>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-assign</command>
-			<property>instrumentation/gik-1/correction-speed-degsec</property>
+			<property>/instrumentation/gik-1/correction-speed-degsec</property>
 			<value>12</value>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			interpolate("an24/animations/gik-btn-l", 1.0, 0.1 );
+			</script>
 		</binding>
 		<mod-up>
 		<binding>
 			<command>property-assign</command>
-			<property>instrumentation/gik-1/correction-speed-degsec</property>
+			<property>/instrumentation/gik-1/correction-speed-degsec</property>
 			<value>0.05</value>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			interpolate("an24/animations/gik-btn-l", 0.0, 0.1 );
+			</script>
 		</binding>
 		</mod-up>
 	</action>
 </animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/animations/gik-btn-l</property>
+  <factor>0.005</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation>
+
 </PropertyList>

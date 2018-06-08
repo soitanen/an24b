@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<!-- Gear lever (switch) on middle console -->
+
+<PropertyList>
+ <path>../../../shared/switches/2ppntk.ac</path>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>
+	controls.gearDown(-1);
+        interpolate("an24/animations/gear-lever", 1.0, 0.2, 1.0, 5.0, 0.0, 0.2 );
+   </script>
+  </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>
+	controls.gearDown(1);
+        interpolate("an24/animations/gear-lever", -1.0, 0.2, -1.0, 5.0, 0.0, 0.2 );
+   </script>
+  </binding>
+  </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/animations/gear-lever</property>
+    <factor>23</factor>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

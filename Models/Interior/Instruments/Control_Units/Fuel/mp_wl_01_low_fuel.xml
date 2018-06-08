@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<!-- Total fuel below 580kg warning (respectively less than 300kg in either AUX-tank) -->
+
+<PropertyList>
+ <path>../../../shared/lamps/sltsn.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../../shared/lamps/sltsnorangeplain.png</texture>
+</animation>
+
+
+<!-- according to official "Flugzeughandbuch" from Interflug -->
+<animation>
+ <type>select</type>
+ <condition>
+  <or>
+   <less-than>
+    <expression>
+    <sum>
+    <property>consumables/fuel/tank[0]/level-kg</property>
+    <property>consumables/fuel/tank[1]/level-kg</property>
+    </sum>
+    </expression>
+    <value>300</value>
+   </less-than>
+   <less-than>
+    <expression>
+    <sum>
+    <property>consumables/fuel/tank[4]/level-kg</property>
+    <property>consumables/fuel/tank[5]/level-kg</property>
+    </sum>
+    </expression>
+    <value>300</value>
+   </less-than>
+  </or>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!-- Signal light "Attention, locator" (of RPSN) -->
+
+<PropertyList>
+ <path>../../../shared/lamps/sltsn.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../../shared/lamps/sltsnorangeplain.png</texture>
+</animation>
+
+ <animation>
+  <object-name>lampon</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+</animation>
+
+</PropertyList>

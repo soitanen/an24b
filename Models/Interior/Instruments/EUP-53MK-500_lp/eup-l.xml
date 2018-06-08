@@ -13,9 +13,9 @@
   <object-name>needle</object-name>
    <emission>
      <red>1.0</red>
-     <green>1.0</green>
-     <blue>1.0</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/panel-l_red</factor-prop>
    </emission>
 </animation>
 
@@ -85,7 +85,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">EUP-53 Vario</text>
+    <text type="string">EUP-53 Turn Coordinator</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
@@ -104,15 +104,5 @@
       <z-m>  0.000 </z-m>
     </offsets>
   </text>
-  <animation>
-    <type>material</type>
-    <object-name>textosg</object-name>
-    <emission>
-      <red>   1.0 </red>
-      <green> 1.0 </green>
-      <blue>  1.0 </blue>
-    </emission>
-  </animation>
-
 
 </PropertyList>

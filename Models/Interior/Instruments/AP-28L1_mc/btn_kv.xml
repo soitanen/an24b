@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<!-- AP horizon button -->
+
+<PropertyList>
+ <path>../../shared/knobs_buttons/5k.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>press_me</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/AP-28l1/buttons/kv", 1.0, 0.1 );
+        settimer(func {interpolate("an24/AP-28l1/buttons/kv", 0.0, 0.1 );},0.1);
+        instruments.engage_kv_mode();
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/AP-28l1/buttons/kv</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation>
+
+</PropertyList>

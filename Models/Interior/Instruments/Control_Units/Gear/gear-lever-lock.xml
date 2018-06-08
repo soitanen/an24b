@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!-- Gear lever lock on middle console -->
+
+<PropertyList>
+ <path>gear-lever-lock.ac</path>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>gear-lever-lock</object-name>
+   <property>an24/animations/gear-lever</property>
+    <factor>90</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

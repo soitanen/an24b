@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+
+<!-- Anti-Ice switches/lamps -->
+
+<PropertyList>
+
+<!-- Left panel, bottom -->
+
+<model>
+ <path>lp_sw_left-window-intense.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.122</x-m>
+    <y-m>-0.8121</y-m>
+    <z-m>0.666</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>lp_sw_left-window-low.xml</path>
+  <offsets>
+    <pitch-deg>-25</pitch-deg>
+    <x-m>2.123</x-m>
+    <y-m>-0.7865</y-m>
+    <z-m>0.667</z-m>
+  </offsets>
+</model>
+
+<!-- Right panel, bottom -->
+
+<model>
+ <path>rp_lightplate.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.1335</x-m>
+    <y-m>0.7525</y-m>
+    <z-m>0.7031</z-m>
+  </offsets>
+</model>
+
+
+<!-- 3 Ice signalisation lamps, red -->
+
+<model>
+ <path>rp_sl01_airframe-icing.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.737</y-m>
+    <z-m>0.79</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl02_l-engine-icing.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.758</y-m>
+    <z-m>0.79</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl03_r-engine-icing.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.779</y-m>
+    <z-m>0.79</z-m>
+  </offsets>
+</model>
+
+<!-- 6 Heating signalisation lamps, green -->
+
+<model>
+ <path>rp_sl04_wing-tail-nose_bleed-from-l-eng.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.771</y-m>
+    <z-m>0.765</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl05_inlet-guide-vane_bleed-valve-l.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.792</y-m>
+    <z-m>0.765</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl06_prop-hub-blade-l.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.813</y-m>
+    <z-m>0.765</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl07_prop-hub-blade-r.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.834</y-m>
+    <z-m>0.765</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl08_inlet-guide-vane_bleed-valve-r.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.856</y-m>
+    <z-m>0.765</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sl09_wing-tail-nose_bleed-from-r-eng.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>0.877</y-m>
+    <z-m>0.765</z-m>
+  </offsets>
+</model>
+
+<!-- switches on tilted part of panel -->
+
+<model>
+ <path>rp_sw01a_anti-ice-control.xml</path>
+  <offsets>
+    <roll-deg>-90</roll-deg>
+    <x-m>2.122</x-m>
+    <y-m>0.8072</y-m>
+    <z-m>0.7173</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sw04_right-window-low.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.7128</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sw05_right-window-intense.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.7322</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sw06_astrokompass-53.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.778</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sw07_wing-tail-nose.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.138</x-m>
+    <y-m>0.8039</y-m>
+    <z-m>0.675</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rp_sw08_prop-heat.xml</path>
+  <offsets>
+    <pitch-deg>-20</pitch-deg>
+    <x-m>2.133</x-m>
+    <y-m>0.8521</y-m>
+    <z-m>0.672</z-m>
+  </offsets>
+</model>
+
+</PropertyList>

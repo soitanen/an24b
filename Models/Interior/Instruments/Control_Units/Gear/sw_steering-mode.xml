@@ -3,7 +3,7 @@
 <!-- Nosewheel steering mode - taxi/ OFF/ t/o+landing -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/2ppng-15k.ac</path>
 
  <animation>
   <type>pick</type>
@@ -13,16 +13,40 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0317</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        setprop("controls/gear/nose-wheel-steering", 1.0 );
+        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
+      </script>
+    </binding>
+    <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/gear/steer_mode", 0.0, 0.1 );
         setprop("controls/gear/steering", 45.0 );
-        setprop("controls/gear/nose-wheel-steering", 1.0 );
         setprop("fdm/jsbsim/gear/steering", 45.0 );
-        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>steering-mode</tooltip-id>
+      <label>%s</label>
+      <property>an24/gear/steer_mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var steermode0 = ['TAXI', 'OFF', 'T/O LAND'];
+        return steermode0[arg[0]];
+      </script>
+    </binding>
+   </hovered>
  </animation>
 
  <animation>
@@ -41,6 +65,19 @@
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>steering-mode</tooltip-id>
+      <label>%s</label>
+      <property>an24/gear/steer_mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var steermode1 = ['TAXI', 'OFF', 'T/O LAND'];
+        return steermode1[arg[0]];
+      </script>
+    </binding>
+   </hovered>
  </animation>
 
  <animation>
@@ -51,16 +88,40 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0317</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        setprop("controls/gear/nose-wheel-steering", 1.0 );
+        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
+      </script>
+    </binding>
+    <binding>
       <command>nasal</command>
       <script>
         interpolate("an24/gear/steer_mode", 2.0, 0.1 );
         setprop("controls/gear/steering", 10.0 );
-        setprop("controls/gear/nose-wheel-steering", 1.0 );
         setprop("fdm/jsbsim/gear/steering", 10.0 );
-        setprop("fdm/jsbsim/gear/nose-wheel-steering", 1.0 );
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>steering-mode</tooltip-id>
+      <label>%s</label>
+      <property>an24/gear/steer_mode</property>
+      <mapping>nasal</mapping>
+      <script>
+        var steermode2 = ['TAXI', 'OFF', 'T/O LAND'];
+        return steermode2[arg[0]];
+      </script>
+    </binding>
+   </hovered>
  </animation>
 
  <animation>
@@ -77,4 +138,5 @@
     <z>0.0</z>
   </axis>
  </animation>
+
 </PropertyList>

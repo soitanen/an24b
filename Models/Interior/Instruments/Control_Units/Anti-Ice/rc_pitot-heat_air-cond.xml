@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+<!-- Pitot heat panel (and Air cond?) -->
+
+<PropertyList>
+
+  <path>rc_pitot-heat_air-cond.ac</path>
+
+ <!--animation>
+  <type>material</type>
+  <object-name>background</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.1</green>
+   <blue>0.1</blue>
+   <factor-prop>/controls/lighting/panel-m_red</factor-prop>
+  </emission>
+ </animation-->
+
+<!-- Bottom row, left to right, static pitots -->
+
+<!--model>
+ <path>rc_sl01_static1.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>2.3119</x-m>
+    <y-m>0.8313</y-m>
+    <z-m>0.5084</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sl02_static5.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>2.3073</x-m>
+    <y-m>0.8547</y-m>
+    <z-m>0.5084</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sl03_static3.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>2.3022</x-m>
+    <y-m>0.8795</y-m>
+    <z-m>0.5084</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sl04_static2.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>2.2969</x-m>
+    <y-m>0.9034</y-m>
+    <z-m>0.5084</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sl05_static6.xml</path>
+  <offsets>
+    <pitch-deg>-90</pitch-deg>
+    <x-m>2.2923</x-m>
+    <y-m>0.9268</y-m>
+    <z-m>0.5084</z-m>
+  </offsets>
+</model-->
+
+<!-- Middle row, left to right, dynamic pitots-->
+
+<!--model>
+ <path>rc_sl06_dynamic1.xml</path>
+  <offsets>
+    <pitch-deg>-60</pitch-deg>
+    <x-m>2.2362</x-m>
+    <y-m>0.8273</y-m>
+    <z-m>0.5472</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sl07_dynamic2.xml</path>
+  <offsets>
+    <pitch-deg>-60</pitch-deg>
+    <x-m>2.2305</x-m>
+    <y-m>0.8654</y-m>
+    <z-m>0.5506</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sl08_dynamic3.xml</path>
+  <offsets>
+    <pitch-deg>-60</pitch-deg>
+    <x-m>2.2252</x-m>
+    <y-m>0.9022</y-m>
+    <z-m>0.5537</z-m>
+  </offsets>
+</model-->
+
+<!-- Top row, left to right, static pitots-->
+
+<!--model>
+ <path>rc_sl09_static4.xml</path>
+  <offsets>
+    <pitch-deg>-60</pitch-deg>
+    <x-m>2.2066</x-m>
+    <y-m>0.8784</y-m>
+    <z-m>0.5645</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>rc_sl10_static7.xml</path>
+  <offsets>
+    <pitch-deg>-60</pitch-deg>
+    <x-m>2.2029</x-m>
+    <y-m>0.9044</y-m>
+    <z-m>0.5666</z-m>
+  </offsets>
+</model-->
+
+</PropertyList>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!-- Voltage indication source select -->
+
+<PropertyList>
+ <path>../../shared/knobs_buttons/11p1n.ac</path>
+
+ <animation>
+   <type>knob</type>
+   <object-name>11p1n</object-name>
+   <property>an24/Electrical_Panel/dc_ind_source</property>
+   <offset>-90</offset>
+   <factor>30</factor>
+   <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+   </center>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/Electrical_Panel/dc_ind_source</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>10</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+</PropertyList>

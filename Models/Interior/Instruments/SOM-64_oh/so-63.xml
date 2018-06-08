@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+
+<!-- SO-63, control unit of transponder system SOM-64 -->
+
+<PropertyList>
+ <path>so-63.ac</path>
+
+<model>
+ <path>sw_xpdr-on.xml</path>
+  <offsets>
+    <x-m>-0.0011</x-m>
+    <y-m>0.0215</y-m>
+    <z-m>0.0342</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_sensitivity.xml</path>
+  <offsets>
+    <x-m>0.0012</x-m>
+    <y-m>-0.0322</y-m>
+    <z-m>-0.0076</z-m>
+  </offsets>
+</model>
+
+ <animation>
+   <type>knob</type>
+   <object-name>xponder_mode</object-name>
+    <property>/instrumentation/transponder/inputs/anim-knob-mode</property>
+   <factor>30</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0118</y-m>
+   <z-m>-0.0065</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/anim-knob-mode</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>3</max>                
+      <wrap>false</wrap>
+     </binding>
+     <binding>
+     <command>nasal</command>
+         <script>
+	var xpdrmodes = ["5", "5", "3", "1"];
+	setprop("/instrumentation/transponder/inputs/knob-mode", xpdrmodes[getprop("/instrumentation/transponder/inputs/anim-knob-mode")] );
+         </script>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>%s</label>
+         <property>/instrumentation/transponder/inputs/anim-knob-mode</property>
+         <tooltip-id>so-63-mode</tooltip-id>
+         <mapping>nasal</mapping>
+         <script>
+	var xpdrttipmode = ['Modes A+C', 'Modes B+C', 'Mode C Only', 'STANDBY'];
+	return xpdrttipmode[arg[0]];
+         </script>
+       </binding>
+    </hovered>
+ </animation>
+
+
+<!-- Test ( "Control" ) button -->
+
+<animation>
+  <type>pick</type>
+  <object-name>btn_test</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <!--condition>
+     <greater-than>
+      <property>engines/engine[2]/n1</property>
+      <value>90</value>
+     </greater-than>
+     </condition-->
+      <command>nasal</command>
+      <script>
+        setprop("/instrumentation/transponder/inputs/knob-mode-save", getprop("/instrumentation/transponder/inputs/knob-mode") );
+	interpolate("/instrumentation/transponder/inputs/anim-test-btn", 1.0, 0.1 );
+        setprop("/instrumentation/transponder/inputs/knob-mode", 2.0 );
+      </script>
+    </binding>
+      <mod-up>
+	<binding>
+	<command>nasal</command>
+	<script>
+        setprop("/instrumentation/transponder/inputs/knob-mode", getprop("/instrumentation/transponder/inputs/knob-mode-save") );
+	interpolate("/instrumentation/transponder/inputs/anim-test-btn", 0.0, 0.1 );
+	</script>
+	</binding>
+      </mod-up>
+  </action>
+</animation>
+
+<animation>
+ <type>select</type>
+ <condition>
+    <property>/instrumentation/transponder/serviceable</property>
+    <property>/instrumentation/transponder/inputs/serviceable</property>
+    <property>/instrumentation/transponder/inputs/anim-test-btn</property>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>btn_test</object-name>
+  <property>/instrumentation/transponder/inputs/anim-test-btn</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- Ident ( "ZNAK" ) button -->
+
+<animation>
+  <type>pick</type>
+  <object-name>btn_ident</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        setprop("/instrumentation/transponder/inputs/ident-btn", 1.0 );
+	interpolate("/instrumentation/transponder/inputs/anim-ident-btn", 1.0, 0.1 );
+      </script>
+    </binding>
+      <mod-up>
+	<binding>
+	<command>nasal</command>
+	<script>
+        setprop("/instrumentation/transponder/inputs/ident-btn", 0.0 );
+	interpolate("/instrumentation/transponder/inputs/anim-ident-btn", 0.0, 0.1 );
+	</script>
+	</binding>
+      </mod-up>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>btn_ident</object-name>
+  <property>/instrumentation/transponder/inputs/anim-ident-btn</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- Squawk digits -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk1</object-name>
+    <property>/instrumentation/transponder/inputs/anim-digit[3]</property>
+   <factor>-30</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-0.0442</y-m>
+   <z-m>-0.0328</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+     <condition>
+     <greater-than>
+      <property>engines/engine[2]/n1</property>
+      <value>90</value>
+     </greater-than>
+     </condition>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[3]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/anim-digit[3]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %4d</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-1</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk2</object-name>
+    <property>/instrumentation/transponder/inputs/anim-digit[2]</property>
+   <factor>-30</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-0.0149</y-m>
+   <z-m>-0.0355</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[2]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %4s</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-2</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk3</object-name>
+    <property>/instrumentation/transponder/inputs/digit[1]</property>
+   <factor>-30</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0147</y-m>
+   <z-m>-0.0350</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[1]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %d</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-3</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
+ </animation>
+
+ <animation>
+   <type>knob</type>
+   <object-name>squawk4</object-name>
+    <property>/instrumentation/transponder/inputs/digit[0]</property>
+   <factor>-30</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0444</y-m>
+   <z-m>-0.0336</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/digit[0]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Squawk %d</label>
+         <measure-text>Squawk 7777</measure-text>
+         <tooltip-id>so-63-4</tooltip-id>
+         <property>/instrumentation/transponder/id-code</property>
+       </binding>
+    </hovered>
+ </animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">SO-63 Trans- ponder</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.02 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>

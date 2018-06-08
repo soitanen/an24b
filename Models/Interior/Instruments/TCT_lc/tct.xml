@@ -7,22 +7,21 @@
 
  <animation>
    <type>material</type>
-   <object-name>housing</object-name>
-   <object-name>needle_l</object-name>
-   <object-name>needle_r</object-name>
+   <object-name>face</object-name>
+   <object-name>oil_needle_1</object-name>
+   <object-name>oil_needle_2</object-name>
    <emission>
      <red>1.0</red>
-     <green>1.0</green>
-     <blue>1.0</blue>
-     <factor-prop>an24/lights/instrlights</factor-prop>
+     <green>0.5</green>
+     <blue>0.5</blue>
+     <factor-prop>/controls/lighting/console-l_red</factor-prop>
    </emission>
  </animation>
 
-  
 <!--Needles-->
 <animation>
     <type>rotate</type>
-    <object-name>needle_r</object-name>
+    <object-name>oil_needle_1</object-name>
     <property>/fdm/jsbsim/propulsion/engine[0]/cht-degc</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep> -2.0 </dep></entry>
@@ -30,8 +29,8 @@
     </interpolation>
     <center>
       <x-m>0.0</x-m>
-      <y-m>0.024</y-m>
-      <z-m>0.0</z-m>
+      <y-m>0.022</y-m>
+      <z-m>-0.0014</z-m>
     </center>
     <axis>
       <x>1.0</x>
@@ -41,7 +40,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>needle_l</object-name>
+  <object-name>oil_needle_2</object-name>
   <property>/fdm/jsbsim/propulsion/engine[0]/cht-degc</property>
   <interpolation>
     <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
@@ -49,8 +48,8 @@
   </interpolation>
   <center>
     <x-m>0.0</x-m>
-    <y-m>-0.027</y-m>
-    <z-m>0.0</z-m>
+    <y-m>-0.022</y-m>
+    <z-m>-0.0014</z-m>
   </center>
   <axis>
     <x>1.0</x>
@@ -91,15 +90,5 @@
       <z-m>  0.000 </z-m>
     </offsets>
   </text>
-  <animation>
-    <type>material</type>
-    <object-name>textosg</object-name>
-    <emission>
-      <red>   1.0 </red>
-      <green> 1.0 </green>
-      <blue>  1.0 </blue>
-    </emission>
-  </animation>
-
 
 </PropertyList>

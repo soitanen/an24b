@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!-- Signal light of heating of static pitot A1 -->
+
+<PropertyList>
+ <path>../../shared/lamps/warninglamp02.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../shared/lamps/warninglamp02greenplain.png</texture>
+</animation>
+
+<animation>
+ <type>select</type>
+ <condition>
+   <or>
+   <equals>
+    <property>an24/Anti-Ice/pitot_S1S5A1</property>
+    <value>-1.0</value>
+   </equals>
+   <greater-than>
+    <property>an24/Anti-Ice/pitot_S1S5A1</property>
+    <value>0.3</value> <!--iced condition-->
+   </greater-than>
+   </or>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

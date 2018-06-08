@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+
+<!-- Pilots' remote control for AP -->
+
+<PropertyList>
+ <path>ap-28.ac</path>
+
+<!-- Lamps -->
+
+<model>
+  <path>sl_ready.xml</path>
+  <offsets>
+    <x-m>-0.0352</x-m>
+    <y-m>-0.0249</y-m>
+    <z-m>-0.0196</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sl_on.xml</path>
+  <offsets>
+    <x-m>-0.0352</x-m>
+    <y-m>0.0249</y-m>
+    <z-m>-0.0196</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sl_push.xml</path>
+  <offsets>
+    <x-m>0.1395</x-m>
+    <y-m>-0.0813</y-m>
+    <z-m>-0.09</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sl_pull.xml</path>
+  <offsets>
+    <x-m>0.1395</x-m>
+    <y-m>-0.0443</y-m>
+    <z-m>-0.09</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sl_kv.xml</path>
+  <offsets>
+    <x-m>0.1395</x-m>
+    <y-m>0.0443</y-m>
+    <z-m>-0.09</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<!-- Switches/Knobs -->
+
+<model>
+  <path>sw_up-down-l.xml</path>
+  <offsets>
+    <x-m>0.0032</x-m>
+    <y-m>-0.0623</y-m>
+    <z-m>-0.0478</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+ <animation>
+   <type>knob</type>
+   <object-name>rollknob</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/AP-28l1/switches/roll-control</property>
+      <factor>1</factor>
+      <min>-24</min>
+      <max>24</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>rollknob</object-name>
+  <type>rotate</type>
+   <property>an24/AP-28l1/switches/roll-control</property>
+   <factor>4</factor>
+   <offset-deg>30</offset-deg>
+   <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+   </axis>
+ </animation>
+
+
+<animation>
+  <type>pick</type>
+  <object-name>rollreset</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>an24/AP-28l1/switches/roll-control</property>
+      <value>0</value>
+    </binding>
+  </action>
+</animation>
+
+<model>
+  <path>sw_up-down-r.xml</path>
+  <offsets>
+    <x-m>0.0032</x-m>
+    <y-m>0.0623</y-m>
+    <z-m>-0.0478</z-m>
+    <pitch-deg>-90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sw_autotrim.xml</path>
+  <offsets>
+    <x-m>0.084</x-m>
+    <y-m>-0.0833</y-m>
+    <z-m>-0.055</z-m>
+    <pitch-deg>-52.5</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sw_power.xml</path>
+  <offsets>
+    <x-m>0.084</x-m>
+    <y-m>-0.044</y-m>
+    <z-m>-0.055</z-m>
+    <pitch-deg>-52.5</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sw_roll-mode.xml</path>
+  <offsets>
+    <x-m>0.084</x-m>
+    <y-m>0.044</y-m>
+    <z-m>-0.055</z-m>
+    <pitch-deg>-52.5</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <path>sw_pitch.xml</path>
+  <offsets>
+    <x-m>0.084</x-m>
+    <y-m>0.0833</y-m>
+    <z-m>-0.055</z-m>
+    <pitch-deg>-52.5</pitch-deg>
+  </offsets>
+</model>
+
+<!-- Buttons -->
+
+<model>
+  <path>btn_horizon.xml</path>
+  <offsets>
+    <x-m>0.137</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.093</z-m>
+  </offsets>
+</model>
+
+<animation>
+  <type>pick</type>
+  <object-name>APknob</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        instruments.engage_ap();
+        interpolate("an24/AP-28l1/buttons/turn-on", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ap-28l1/buttons/turn-on", 0.0, 0.1 );},0.1);
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>APknob</object-name>
+  <property>an24/AP-28l1/buttons/turn-on</property>
+  <factor>0.003</factor>
+  <axis>   
+   <x1-m>0.1034</x1-m>
+   <y1-m>0.0</y1-m>
+   <z1-m>-0.0422</z1-m>
+   <x2-m>0.0987</x2-m>
+   <y2-m>0.0</y2-m>
+   <z2-m>-0.0484</z2-m>
+  </axis>
+</animation>
+
+<model>
+  <path>btn_kv.xml</path>
+  <offsets>
+    <x-m>0.137</x-m>
+    <y-m>0.0825</y-m>
+    <z-m>-0.093</z-m>
+  </offsets>
+</model>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">AP-28L1</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.04</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>xy-plane</axis-alignment>
+    <max-height>0.1</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.090 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  -0.030 </z-m>
+      <heading-deg>90</heading-deg>
+      <roll-deg>30</roll-deg>
+    </offsets>
+  </text>
+
+</PropertyList>

@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>uvid-15f.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>housing</object-name>
+   <emission>
+     <red>0.8</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>dig_a_dec</object-name>
+  <object-name>dig_a_hund</object-name>
+  <object-name>dig_a_ths</object-name>
+  <object-name>dig_a_decths</object-name>
+  <object-name>dig_p_ones</object-name>
+  <object-name>dig_p_dec</object-name>
+  <object-name>dig_p_hund</object-name>
+  <object-name>dig_p_ths</object-name>
+  <object-name>needle</object-name>
+   <emission>
+     <red>0.7</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
+   </emission>
+</animation>
+
+<!-- Needles -->
+
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
+    <factor>0.36</factor>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+<!-- Alt digits -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_a_dec</object-name>
+  <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
+  <factor>3.6</factor>
+  <center>
+    <x-m>-0.0222</x-m>
+    <y-m>0</y-m>
+    <z-m>0.0051</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>dig_a_hund</object-name>
+  <expression>
+    <table>
+      <mod>
+        <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
+        <value>1000</value>
+      </mod>
+      <entry><ind>	  0</ind>	<dep>	0</dep></entry>
+      <entry><ind>	 90</ind>	<dep>	0</dep></entry>
+      <entry><ind>	100</ind>	<dep>	36</dep></entry>
+      <entry><ind>	190</ind>	<dep>	36</dep></entry>
+      <entry><ind>	200</ind>	<dep>	72</dep></entry>
+      <entry><ind>	290</ind>	<dep>	72</dep></entry>
+      <entry><ind>	300</ind>	<dep>	108</dep></entry>
+      <entry><ind>	390</ind>	<dep>	108</dep></entry>
+      <entry><ind>	400</ind>	<dep>	144</dep></entry>
+      <entry><ind>	490</ind>	<dep>	144</dep></entry>
+      <entry><ind>	500</ind>	<dep>	180</dep></entry>
+      <entry><ind>	590</ind>	<dep>	180</dep></entry>
+      <entry><ind>	600</ind>	<dep>	216</dep></entry>
+      <entry><ind>	690</ind>	<dep>	216</dep></entry>
+      <entry><ind>	700</ind>	<dep>	252</dep></entry>
+      <entry><ind>	790</ind>	<dep>	252</dep></entry>
+      <entry><ind>	800</ind>	<dep>	288</dep></entry>
+      <entry><ind>	890</ind>	<dep>	288</dep></entry>
+      <entry><ind>	900</ind>	<dep>	324</dep></entry>
+      <entry><ind>	990</ind>	<dep>	324</dep></entry>
+      <entry><ind>	999</ind>	<dep>	359.9</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0222</x-m>
+    <y-m>0</y-m>
+    <z-m>0.0051</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_a_ths</object-name>
+  <expression>
+    <table>
+      <mod>
+        <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
+        <value>10000</value>
+      </mod>
+      <entry><ind>	   0</ind>	<dep>	0</dep></entry>
+      <entry><ind>	 990</ind>	<dep>	0</dep></entry>
+      <entry><ind>	1000</ind>	<dep>	36</dep></entry>
+      <entry><ind>	1990</ind>	<dep>	36</dep></entry>
+      <entry><ind>	2000</ind>	<dep>	72</dep></entry>
+      <entry><ind>	2990</ind>	<dep>	72</dep></entry>
+      <entry><ind>	3000</ind>	<dep>	108</dep></entry>
+      <entry><ind>	3990</ind>	<dep>	108</dep></entry>
+      <entry><ind>	4000</ind>	<dep>	144</dep></entry>
+      <entry><ind>	4990</ind>	<dep>	144</dep></entry>
+      <entry><ind>	5000</ind>	<dep>	180</dep></entry>
+      <entry><ind>	5990</ind>	<dep>	180</dep></entry>
+      <entry><ind>	6000</ind>	<dep>	216</dep></entry>
+      <entry><ind>	6990</ind>	<dep>	216</dep></entry>
+      <entry><ind>	7000</ind>	<dep>	252</dep></entry>
+      <entry><ind>	7990</ind>	<dep>	252</dep></entry>
+      <entry><ind>	8000</ind>	<dep>	288</dep></entry>
+      <entry><ind>	8990</ind>	<dep>	288</dep></entry>
+      <entry><ind>	9000</ind>	<dep>	324</dep></entry>
+      <entry><ind>	9990</ind>	<dep>	324</dep></entry>
+      <entry><ind>	9999</ind>	<dep>	359.9</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0222</x-m>
+    <y-m>0</y-m>
+    <z-m>0.0051</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_a_decths</object-name>
+  <expression>
+    <table>
+      <mod>
+        <property>/instrumentation/altimeter[1]/indicated-altitude-ft</property>
+        <value>100000</value>
+      </mod>
+      <entry><ind>	    0</ind>	<dep>	0</dep></entry>
+      <entry><ind>	 9990</ind>	<dep>	0</dep></entry>
+      <entry><ind>	10000</ind>	<dep>	36</dep></entry>
+      <entry><ind>	19990</ind>	<dep>	36</dep></entry>
+      <entry><ind>	20000</ind>	<dep>	72</dep></entry>
+      <entry><ind>	29990</ind>	<dep>	72</dep></entry>
+      <entry><ind>	30000</ind>	<dep>	108</dep></entry>
+      <entry><ind>	39990</ind>	<dep>	108</dep></entry>
+      <entry><ind>	40000</ind>	<dep>	144</dep></entry>
+      <entry><ind>	49990</ind>	<dep>	144</dep></entry>
+      <entry><ind>	50000</ind>	<dep>	180</dep></entry>
+      <entry><ind>	59990</ind>	<dep>	180</dep></entry>
+      <entry><ind>	60000</ind>	<dep>	216</dep></entry>
+      <entry><ind>	69990</ind>	<dep>	216</dep></entry>
+      <entry><ind>	70000</ind>	<dep>	252</dep></entry>
+      <entry><ind>	79990</ind>	<dep>	252</dep></entry>
+      <entry><ind>	80000</ind>	<dep>	288</dep></entry>
+      <entry><ind>	89990</ind>	<dep>	288</dep></entry>
+      <entry><ind>	90000</ind>	<dep>	324</dep></entry>
+      <entry><ind>	99990</ind>	<dep>	324</dep></entry>
+      <entry><ind>	99999</ind>	<dep>	359.9</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0222</x-m>
+    <y-m>0</y-m>
+    <z-m>0.0051</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Pressure digits -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_ths</object-name>
+  <expression>
+    <table>
+     <mod>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+      <value>100.0</value>
+     </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	9.99</ind>	<dep>	0</dep></entry>
+      <entry><ind>	10.0</ind>	<dep>	36</dep></entry>
+      <entry><ind>	19.99</ind>	<dep>	36</dep></entry>
+      <entry><ind>	20.0</ind>	<dep>	72</dep></entry>
+      <entry><ind>	29.99</ind>	<dep>	72</dep></entry>
+      <entry><ind>	30.0</ind>	<dep>	108</dep></entry>
+      <entry><ind>	39.99</ind>	<dep>	108</dep></entry>
+      <entry><ind>	40.0</ind>	<dep>	144</dep></entry>
+      <entry><ind>	49.99</ind>	<dep>	144</dep></entry>
+      <entry><ind>	50.0</ind>	<dep>	180</dep></entry>
+      <entry><ind>	59.99</ind>	<dep>	180</dep></entry>
+      <entry><ind>	60.0</ind>	<dep>	216</dep></entry>
+      <entry><ind>	69.99</ind>	<dep>	216</dep></entry>
+      <entry><ind>	70.0</ind>	<dep>	252</dep></entry>
+      <entry><ind>	79.99</ind>	<dep>	252</dep></entry>
+      <entry><ind>	80.0</ind>	<dep>	288</dep></entry>
+      <entry><ind>	89.99</ind>	<dep>	288</dep></entry>
+      <entry><ind>	90.0</ind>	<dep>	324</dep></entry>
+      <entry><ind>	99.99</ind>	<dep>	324</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_hund</object-name>
+  <expression>
+    <table>
+     <mod>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+      <value>10.0</value>
+     </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	0.99</ind>	<dep>	0</dep></entry>
+      <entry><ind>	1.0</ind>	<dep>	36</dep></entry>
+      <entry><ind>	1.99</ind>	<dep>	36</dep></entry>
+      <entry><ind>	2.0</ind>	<dep>	72</dep></entry>
+      <entry><ind>	2.99</ind>	<dep>	72</dep></entry>
+      <entry><ind>	3.0</ind>	<dep>	108</dep></entry>
+      <entry><ind>	3.99</ind>	<dep>	108</dep></entry>
+      <entry><ind>	4.0</ind>	<dep>	144</dep></entry>
+      <entry><ind>	4.99</ind>	<dep>	144</dep></entry>
+      <entry><ind>	5.0</ind>	<dep>	180</dep></entry>
+      <entry><ind>	5.99</ind>	<dep>	180</dep></entry>
+      <entry><ind>	6.0</ind>	<dep>	216</dep></entry>
+      <entry><ind>	6.99</ind>	<dep>	216</dep></entry>
+      <entry><ind>	7.0</ind>	<dep>	252</dep></entry>
+      <entry><ind>	7.99</ind>	<dep>	252</dep></entry>
+      <entry><ind>	8.0</ind>	<dep>	288</dep></entry>
+      <entry><ind>	8.99</ind>	<dep>	288</dep></entry>
+      <entry><ind>	9.0</ind>	<dep>	324</dep></entry>
+      <entry><ind>	9.99</ind>	<dep>	324</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_dec</object-name>
+  <expression>
+    <table>
+     <mod>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+      <value>1.0</value>
+     </mod>
+      <entry><ind>	0</ind>		<dep>	0</dep></entry>
+      <entry><ind>	0.099</ind>	<dep>	0</dep></entry>
+      <entry><ind>	0.1</ind>	<dep>	36</dep></entry>
+      <entry><ind>	0.199</ind>	<dep>	36</dep></entry>
+      <entry><ind>	0.2</ind>	<dep>	72</dep></entry>
+      <entry><ind>	0.299</ind>	<dep>	72</dep></entry>
+      <entry><ind>	0.3</ind>	<dep>	108</dep></entry>
+      <entry><ind>	0.399</ind>	<dep>	108</dep></entry>
+      <entry><ind>	0.4</ind>	<dep>	144</dep></entry>
+      <entry><ind>	0.499</ind>	<dep>	144</dep></entry>
+      <entry><ind>	0.5</ind>	<dep>	180</dep></entry>
+      <entry><ind>	0.599</ind>	<dep>	180</dep></entry>
+      <entry><ind>	0.6</ind>	<dep>	216</dep></entry>
+      <entry><ind>	0.699</ind>	<dep>	216</dep></entry>
+      <entry><ind>	0.7</ind>	<dep>	252</dep></entry>
+      <entry><ind>	0.799</ind>	<dep>	252</dep></entry>
+      <entry><ind>	0.8</ind>	<dep>	288</dep></entry>
+      <entry><ind>	0.899</ind>	<dep>	288</dep></entry>
+      <entry><ind>	0.9</ind>	<dep>	324</dep></entry>
+      <entry><ind>	0.999</ind>	<dep>	324</dep></entry>
+    </table>
+  </expression>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dig_p_ones</object-name>
+     <property>/instrumentation/altimeter[0]/setting-inhg</property>
+   <factor>3600</factor>
+  <center>
+    <x-m>-0.0133</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.0211</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">UVID-15 Feet</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>

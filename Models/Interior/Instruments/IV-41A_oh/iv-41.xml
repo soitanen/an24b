@@ -5,6 +5,27 @@
 <PropertyList>
  <path>iv-41.ac</path>
 
+ <animation>
+   <type>material</type>
+   <object-name>iv_holder</object-name>
+   <emission>
+     <red>0.04</red>
+     <green>0.04</green>
+     <blue>0.0</blue>
+     <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+   </emission>
+ </animation>
+ <animation>
+   <type>material</type>
+   <object-name>iv_face</object-name>
+   <emission>
+     <red>0.4</red>
+     <green>0.4</green>
+     <blue>0.2</blue>
+     <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+   </emission>
+ </animation>
+
 <!-- Text OSG -->
 
   <animation>

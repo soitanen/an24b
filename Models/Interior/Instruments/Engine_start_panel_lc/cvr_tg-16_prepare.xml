@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<!-- Cover of "upr. lentoye" sw -->
+
+<PropertyList>
+ <path>../../shared/switches/cover_for_switch.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>cover</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/Start-Panel/tg-starter-on_cvr" ) == 1.0 ){
+        interpolate("an24/Start-Panel/tg-starter-on_cvr", 0.0, 0.2 );
+        }
+        else {
+        interpolate("an24/Start-Panel/tg-starter-on_cvr", 1.0, 0.2 );
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>cover</object-name>
+   <property>an24/Start-Panel/tg-starter-on_cvr</property>
+   <factor>80</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-0.02</y-m>
+    <z-m>0.008</z-m>
+  </center>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

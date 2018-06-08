@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!-- Buttons to fix AP bank/pitch settings -->
+
+<PropertyList>
+
+<model>
+ <path>lp_btn_pitch.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>-0.68</y-m>
+    <z-m>0.74</z-m>
+    <pitch-deg>90</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>lp_btn_bank.xml</path>
+  <offsets>
+    <x-m>2.1</x-m>
+    <y-m>-0.72</y-m>
+    <z-m>0.74</z-m>
+    <pitch-deg>90</pitch-deg>
+  </offsets>
+</model>
+
+
+</PropertyList>
