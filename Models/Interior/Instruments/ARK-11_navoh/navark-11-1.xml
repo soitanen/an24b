@@ -72,6 +72,15 @@
       <max>4</max>                
       <wrap>false</wrap>
      </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+	var adf1mode = ['off', 'adf', 'ant', 'off', 'adf'];
+	setprop("/instrumentation/adf/mode", adf1mode[getprop("an24/ARK-11/mode-1")] );
+	var adf3mode = ['off', 'off', 'adf', 'adf', 'off'];
+	setprop("/instrumentation/adf[2]/mode", adf3mode[getprop("an24/ARK-11/mode-1")] );
+      </script>
+    </binding>
     </action>
    <hovered>
     <binding>

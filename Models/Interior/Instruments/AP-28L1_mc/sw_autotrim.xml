@@ -18,12 +18,30 @@
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>autotrim</tooltip-id>
+      <label>Autotrim %s</label>
+      <property>an24/AP-28l1/switches/autotrim</property>
+      <mapping>on-off</mapping>
+    </binding>
+   </hovered>
 </animation>
 
  <animation>
   <object-name>clickspot_middle</object-name>
   <type>pick</type>
   <visible>false</visible>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>autotrim</tooltip-id>
+      <label>Autotrim %s</label>
+      <property>an24/AP-28l1/switches/autotrim</property>
+      <mapping>on-off</mapping>
+    </binding>
+   </hovered>
 </animation>
 
  <animation>
@@ -40,6 +58,15 @@
       </script>
     </binding>
   </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>autotrim</tooltip-id>
+      <label>Autotrim %s</label>
+      <property>an24/AP-28l1/switches/autotrim</property>
+      <mapping>on-off</mapping>
+    </binding>
+   </hovered>
 </animation>
 
  <animation>

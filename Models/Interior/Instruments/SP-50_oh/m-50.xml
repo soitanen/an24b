@@ -11,26 +11,7 @@
    <type>knob</type>
    <object-name>m-50_channel</object-name>
    <property>an24/SP-50/channel</property>
-    <interpolation>
-     <entry>
-      <ind>1</ind> <dep>30.0</dep>
-     </entry>
-     <entry>
-      <ind>2</ind> <dep>90.0</dep>
-     </entry>
-     <entry>
-      <ind>3</ind> <dep>150.0</dep>
-     </entry>
-     <entry>
-      <ind>4</ind> <dep>210.0</dep>
-     </entry>
-     <entry>
-      <ind>5</ind> <dep>270.0</dep>
-     </entry>
-     <entry>
-      <ind>6</ind> <dep>330.0</dep>
-     </entry>
-    </interpolation>
+   <factor>60</factor>
   <center>
    <x-m>0.0</x-m>
    <y-m>0.0121</y-m>
@@ -42,41 +23,24 @@
     <z>0.0</z>
   </axis>
     <action>
-    <binding>
-     <command>property-cycle</command>
+     <binding>
+      <command>property-adjust</command>
       <property>an24/SP-50/channel</property>
-      <value type="double">6</value>
-      <value type="double">5</value>
-      <value type="double">4</value>
-      <value type="double">3</value>
-      <value type="double">2</value>
-      <value type="double">1</value>
-      <wrap>true</wrap>
-    </binding>
-    </action>
-    <!--bindings not working as advertised... so nasal
-    <binding>
-     <command>property-cycle</command>
-      <property>an24/SP-50/course_freq-mhz</property>
-      <value type="double">110.3</value>
-      <value type="double">109.9</value>
-      <value type="double">109.5</value>
-      <value type="double">109.1</value>
-      <value type="double">108.7</value>
-      <value type="double">108.3</value>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>5</max>                
       <wrap>true</wrap>
      </binding>
-
-     <command>property-cycle</command>
-      <property>an24/SP-50/gs_freq-mhz</property>
-      <value type="double">332.6</value>
-      <value type="double">332.6</value>
-      <value type="double">333.8</value>
-      <value type="double">333.8</value>
-      <value type="double">335.0</value>
-      <value type="double">335.0</value>
-      <wrap>true</wrap>
-    </binding-->
+    <binding>
+      <command>nasal</command>
+      <script>
+	var sp50course = ["108.3", "108.7", "109.1", "109.5", "109.9", "110.3"];
+	setprop("an24/SP-50/course_freq-mhz", sp50course[getprop("an24/SP-50/channel")] );
+	var sp50gs = ["335.0", "335.0", "333.8", "333.8", "332.6", "332.6"];
+	setprop("an24/SP-50/gs_freq-mhz", sp50gs[getprop("an24/SP-50/channel")] );
+      </script>
+    </binding>
+    </action>
  </animation>
 
  <animation>

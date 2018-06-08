@@ -138,12 +138,6 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-     <!--condition>
-     <greater-than>
-      <property>engines/engine[2]/n1</property>
-      <value>90</value>
-     </greater-than>
-     </condition-->
       <command>nasal</command>
       <script>
         setprop("/instrumentation/transponder/inputs/ident-btn", 1.0 );
@@ -179,7 +173,7 @@
  <animation>
    <type>knob</type>
    <object-name>squawk1</object-name>
-    <property>/instrumentation/transponder/inputs/digit[3]</property>
+    <property>/instrumentation/transponder/inputs/anim-digit[3]</property>
    <factor>-30</factor>
   <center>
    <x-m>0.0</x-m>
@@ -193,8 +187,22 @@
   </axis>
     <action>
      <binding>
+     <condition>
+     <greater-than>
+      <property>engines/engine[2]/n1</property>
+      <value>90</value>
+     </greater-than>
+     </condition>
       <command>property-adjust</command>
       <property>/instrumentation/transponder/inputs/digit[3]</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>7</max>                
+      <wrap>false</wrap>
+     </binding>
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/transponder/inputs/anim-digit[3]</property>
       <factor>-1</factor>
       <min>0</min>
       <max>7</max>                
@@ -215,7 +223,7 @@
  <animation>
    <type>knob</type>
    <object-name>squawk2</object-name>
-    <property>/instrumentation/transponder/inputs/digit[2]</property>
+    <property>/instrumentation/transponder/inputs/anim-digit[2]</property>
    <factor>-30</factor>
   <center>
    <x-m>0.0</x-m>

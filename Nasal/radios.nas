@@ -72,33 +72,6 @@ setprop("/instrumentation/adf[2]/ident-audible", "true" );
 setprop("/instrumentation/adf[2]/serviceable", 1.0 );
 setprop("/instrumentation/adf[2]/volume-norm", 1.0 );
 
-var adf1mode = func {
-	if ( getprop("an24/ARK-11/mode-1") == 0.0 or getprop("an24/ARK-11/mode-1") == 3.0 ) {
-	setprop("/instrumentation/adf[0]/mode", "off" );
-	interpolate("an24/ARK-11/frame-offset-1", 0.0, 2.0 );
-	}
-	else if ( getprop("an24/ARK-11/mode-1") == 2.0 ) {
-	setprop("/instrumentation/adf[0]/mode", "ant" );
-	}
-	else {
-	setprop("/instrumentation/adf[0]/mode", "adf" );
-	interpolate("an24/ARK-11/frame-offset-1", 0.0, 2.0 );
-	}
-}
-
- setlistener("an24/ARK-11/mode-1", adf1mode);
-
-var adf3mode = func {
-	if ( getprop("an24/ARK-11/mode-1") == 2.0 or getprop("an24/ARK-11/mode-1") == 3.0 ) {
-	setprop("/instrumentation/adf[2]/mode", "adf" );
-	}
-	else {
-	setprop("/instrumentation/adf[2]/mode", "off" );
-	}
-}
-
- setlistener("an24/ARK-11/mode-1", adf3mode);
-
 var arkoutput1 = func {
 	var volume_knob = getprop("an24/ARK-11/volumeknob-1");
 	var signalstrength = abs(math.cos( 0.017453 * ( 90 + getprop("/instrumentation/adf[2]/indicated-bearing-deg") - getprop("/instrumentation/adf[0]/indicated-bearing-deg") ) ) );
@@ -148,33 +121,6 @@ setprop("/instrumentation/adf[3]/indicated-bearing-deg", 0.0 );
 setprop("/instrumentation/adf[3]/ident-audible", "true" );
 setprop("/instrumentation/adf[3]/serviceable", 1.0 );
 setprop("/instrumentation/adf[3]/volume-norm", 1.0 );
-
-var adf2mode = func {
-	if ( getprop("an24/ARK-11/mode-2") == 0.0 or getprop("an24/ARK-11/mode-2") == 3.0 ) {
-	setprop("/instrumentation/adf[1]/mode", "off" );
-	interpolate("an24/ARK-11/frame-offset-2", 0.0, 2.0 );
-	}
-	else if ( getprop("an24/ARK-11/mode-2") == 2.0 ) {
-	setprop("/instrumentation/adf[1]/mode", "ant" );
-	}
-	else {
-	setprop("/instrumentation/adf[1]/mode", "adf" );
-	interpolate("an24/ARK-11/frame-offset-2", 0.0, 2.0 );
-	}
-}
-
- setlistener("an24/ARK-11/mode-2", adf2mode);
-
-var adf4mode = func {
-	if ( getprop("an24/ARK-11/mode-2") == 2.0 or getprop("an24/ARK-11/mode-2") == 3.0 ) {
-	setprop("/instrumentation/adf[3]/mode", "adf" );
-	}
-	else {
-	setprop("/instrumentation/adf[3]/mode", "off" );
-	}
-}
-
- setlistener("an24/ARK-11/mode-2", adf4mode);
 
 var arkoutput2 = func {
 	var volume_knob = getprop("an24/ARK-11/volumeknob-2");
@@ -263,19 +209,3 @@ setprop("/instrumentation/comm[0]/frequencies/selected-mhz", storedfreq );
 
  setlistener("an24/R-802/channel", freqchoice);
  setlistener("an24/R-802/rememscrew", freqchoice);
-
-
-# SP-50 channel/frequency
-
-setprop("an24/SP-50/channel", 1 );
-
-var sp_chan2freq = func {
-   if( getprop("an24/SP-50/channel") == 1) setprop("/instrumentation/nav/frequencies/selected-mhz", 108.3);
-   if( getprop("an24/SP-50/channel") == 2) setprop("/instrumentation/nav/frequencies/selected-mhz", 108.7);
-   if( getprop("an24/SP-50/channel") == 3) setprop("/instrumentation/nav/frequencies/selected-mhz", 109.1);
-   if( getprop("an24/SP-50/channel") == 4) setprop("/instrumentation/nav/frequencies/selected-mhz", 109.5);
-   if( getprop("an24/SP-50/channel") == 5) setprop("/instrumentation/nav/frequencies/selected-mhz", 109.9);
-   if( getprop("an24/SP-50/channel") == 6) setprop("/instrumentation/nav/frequencies/selected-mhz", 110.3);
-}
-
-setlistener( "an24/SP-50/channel", sp_chan2freq );
