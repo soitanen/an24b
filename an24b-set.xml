@@ -191,6 +191,13 @@ alight GPK-52 with correct magnetic heading
         <label>An-24B</label>
         <enabled type="bool">true</enabled>
         <item>
+          <label>Autostart</label>
+          <binding>
+            <command>nasal</command>
+            <script>autostart.startup();</script>
+          </binding>
+        </item>
+        <item>
           <label>Tiller steering</label>
           <binding>
             <command>nasal</command>
