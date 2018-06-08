@@ -11,11 +11,11 @@
   <author>Michael Soitanen (FDM), Adrian (3D)</author>
 
   <model>
-   <path>Aircraft/an24b/Models/an24-model.xml</path>
+   <path>Aircraft/an24b/Models/An-24B.xml</path>
   </model>
 
   <status>alpha</status>
-
+  <minimum-fg-version>2.8</minimum-fg-version>
   <flight-model>jsb</flight-model>
   <aero>an24b</aero>
 
@@ -28,22 +28,21 @@
    <internal archive="y">true</internal>
    <config>
    <x-offset-m archive="y">-0.48</x-offset-m>
-   <y-offset-m archive="y">1.28</y-offset-m>
-   <z-offset-m archive="y">-5.7</z-offset-m>
-   <pitch-offset-deg type="double">-14.0</pitch-offset-deg>
-   <default-field-of-view-deg type="double">64.0</default-field-of-view-deg>
+   <y-offset-m archive="y">1.26</y-offset-m>
+   <z-offset-m archive="y">-5.6</z-offset-m>
+   <pitch-offset-deg type="double">-13.0</pitch-offset-deg>
+   <default-field-of-view-deg type="double">74.0</default-field-of-view-deg>
    </config>
   </view>
   <view n="101">
     <name>Copilot View</name>
-    <!--<enabled type="bool">true</enabled>-->
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >0.48</x-offset-m>
       <y-offset-m type="double" >1.28</y-offset-m>
-      <z-offset-m type="double" >-5.7</z-offset-m>
+      <z-offset-m type="double" >-5.6</z-offset-m>
       <pitch-offset-deg type="double">-11.0</pitch-offset-deg>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
@@ -58,6 +57,60 @@
       <back-right-direction-deg type="double">225</back-right-direction-deg>
       <right-direction-deg type="double">270</right-direction-deg>
       <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="102">
+    <name>Engineer View</name>
+    <!--<enabled type="bool">true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >0.66</x-offset-m>
+      <y-offset-m type="double" >0.84</y-offset-m>
+      <z-offset-m type="double" >-5.06</z-offset-m>
+      <pitch-offset-deg type="double">-5.0</pitch-offset-deg>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">84.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">180</front-direction-deg>
+      <front-left-direction-deg type="double">225</front-left-direction-deg>
+      <left-direction-deg type="double">270</left-direction-deg>
+      <back-left-direction-deg type="double">315</back-left-direction-deg>
+      <back-direction-deg type="double">0</back-direction-deg>
+      <back-right-direction-deg type="double">45</back-right-direction-deg>
+      <right-direction-deg type="double">90</right-direction-deg>
+      <front-right-direction-deg type="double">135</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="103">
+    <name>Navigator View</name>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >-0.44</x-offset-m>
+      <y-offset-m type="double" >1.16</y-offset-m>
+      <z-offset-m type="double" >-4.72</z-offset-m>
+      <pitch-offset-deg type="double">0.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">84.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">180</front-direction-deg>
+      <front-left-direction-deg type="double">225</front-left-direction-deg>
+      <left-direction-deg type="double">270</left-direction-deg>
+      <back-left-direction-deg type="double">315</back-left-direction-deg>
+      <back-direction-deg type="double">0</back-direction-deg>
+      <back-right-direction-deg type="double">45</back-right-direction-deg>
+      <right-direction-deg type="double">90</right-direction-deg>
+      <front-right-direction-deg type="double">135</front-right-direction-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -79,6 +132,34 @@
    	   <key>
 	    <name>=</name>
 	    <desc>Increase Idle Lock value</desc>
+	   </key>
+   	   <key>
+	    <name>less-than</name>
+	    <desc>Quick Overhead View</desc>
+	   </key>
+   	   <key>
+	    <name>d</name>
+	    <desc>(Dis-)Connect AP</desc>
+	   </key>
+   	   <key>
+	    <name>1</name>
+	    <desc>Pilot View</desc>
+	   </key>
+   	   <key>
+	    <name>2</name>
+	    <desc>F/O View</desc>
+	   </key>
+   	   <key>
+	    <name>3</name>
+	    <desc>Engineer/Radio Op View</desc>
+	   </key>
+   	   <key>
+	    <name>4</name>
+	    <desc>Navigator View</desc>
+	   </key>
+   	   <key>
+	    <name>s</name>
+	    <desc>Autostart</desc>
 	   </key>
    	   <key>
 	    <name> </name>
@@ -133,7 +214,6 @@ alight GPK-52 with correct magnetic heading
     </default>
   </menubar>
 
-
   <flaps>
 	  <setting>0.0</setting>
 	  <setting>0.1316</setting>
@@ -165,23 +245,45 @@ alight GPK-52 with correct magnetic heading
 
  <engines>
   <engine n="0">
-   <running type="bool">true</running>
+   <running type="bool">false</running>
   </engine>
   <engine n="1">
-   <running type="bool">true</running>
+   <running type="bool">false</running>
   </engine>
  </engines>
 
 <input>
  <keyboard>
-     <key n="127">
-       <name>Delete</name>
+
+     <key n="115">
+       <name>s</name>
+       <desc>Autostart</desc>
+       <binding>
+        <command>nasal</command>
+        <script>autostart.startup();</script>
+       </binding>
+     </key>
+
+     <key n="258">
+       <name>F2</name>
        <desc>Prop pitch lock</desc>
        <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0203</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
          <command>property-toggle</command>
          <property>/an24/instrumentation/prop-lock/prop-lock-left</property>
        </binding>
        <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0203</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
          <command>property-toggle</command>
          <property>/an24/instrumentation/prop-lock/prop-lock-right</property>
        </binding>
@@ -202,7 +304,7 @@ alight GPK-52 with correct magnetic heading
            <value>0</value>
          </binding>            
        </mod-up>
-      </key>
+     </key>
 
       <key n="45">
       <name>minus</name>
@@ -212,16 +314,17 @@ alight GPK-52 with correct magnetic heading
         <step>-0.02</step>
       </binding>
     </key>
-    <key n="61">
+
+     <key n="61">
       <name>equal</name>
       <binding>
         <command>property-adjust</command>
         <property>/fdm/jsbsim/fcs/throttle/idle-lock-pos</property>
         <step>0.02</step>
       </binding>
-    </key>
+     </key>
 
-      <key n="91">
+     <key n="91">
         <name>[</name>
         <desc>Decrease flaps</desc>
         <binding>
@@ -240,7 +343,7 @@ alight GPK-52 with correct magnetic heading
             </script>
           </binding>
         </mod-up>
-      </key>
+     </key>
 
       <key n="93">
         <name>]</name>
@@ -263,6 +366,109 @@ alight GPK-52 with correct magnetic heading
         </mod-up>
       </key>
 
+<!-- For gear switch animation only -->
+
+     <key n="103">
+      <name>g</name>
+      <binding>
+       <command>nasal</command>
+       <script>
+	controls.gearDown(-1);
+        interpolate("/an24/animations/gear-lever", 1.0, 0.2, 1.0, 5.0, 0.0, 0.2 );
+       </script>
+      </binding>
+     </key>
+
+     <key n="71">
+      <name>G</name>
+      <binding>
+       <command>nasal</command>
+       <script>
+	controls.gearDown(1);
+        interpolate("/an24/animations/gear-lever", -1.0, 0.2, -1.0, 5.0, 0.0, 0.2 );
+       </script>
+      </binding>
+     </key>
+
+      <key n="100">
+      <name>d</name>
+      <desc>AP (DIS-)CONNECT</desc>
+      <repeatable>false</repeatable>
+       <binding>
+       <command>nasal</command>
+        <script>
+         if( getprop("an24/AP-28l1/internal/engaged" ) == 0.0 ){
+         instruments.engage_ap();
+         }
+         else {
+         setprop("an24/AP-28l1/internal/kv", 0.0 );
+         setprop("an24/AP-28l1/internal/horizon-mode", 0.0 );
+         setprop("an24/AP-28l1/internal/engaged", 0.0 );
+         }	
+        </script>
+       </binding>
+      </key>
+
+     <key n="60">
+       <name>less-than</name>
+       <desc>Overhead View</desc>
+       <binding>
+        <command>nasal</command>
+        <script>
+	setprop("/sim/current-view/heading-offset-deg2", getprop("/sim/current-view/heading-offset-deg") );
+	setprop("/sim/current-view/pitch-offset-deg2", getprop("/sim/current-view/pitch-offset-deg") );
+	setprop("/sim/current-view/field-of-view2", getprop("/sim/current-view/field-of-view") );
+	</script>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/goal-pitch-offset-deg</property>
+          <value>89.8</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/field-of-view</property>
+          <value>90</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/x-offset-m</property>
+          <value>-0.11217</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/y-offset-m</property>
+          <value>0.954385</value>
+       </binding>
+       <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/z-offset-m</property>
+          <value>-6.0119247</value>
+       </binding>
+       <mod-up>
+       <binding>
+        <command>nasal</command>
+        <script>
+	if (getprop("/sim/current-view/view-number") > 7 ) {
+	var viewnr = getprop("/sim/current-view/view-number") + 93 ;
+	}
+	else {
+	var viewnr = getprop("/sim/current-view/view-number");
+	}
+	var offsetx = getprop("/sim/view[" ~ viewnr ~ "]/config/x-offset-m");
+	var offsety = getprop("/sim/view[" ~ viewnr ~ "]/config/y-offset-m");
+	var offsetz = getprop("/sim/view[" ~ viewnr ~ "]/config/z-offset-m");
+	setprop("/sim/current-view/x-offset-m", offsetx);
+	setprop("/sim/current-view/y-offset-m", offsety);
+	setprop("/sim/current-view/z-offset-m", offsetz);
+	setprop("/sim/current-view/heading-offset-deg", getprop("/sim/current-view/heading-offset-deg2") );
+	setprop("/sim/current-view/pitch-offset-deg", getprop("/sim/current-view/pitch-offset-deg2") );
+	setprop("/sim/current-view/field-of-view", getprop("/sim/current-view/field-of-view2") );
+	</script>
+       </binding>
+       </mod-up>
+      </key>
+
     <key n="49">
       <name>1</name>
       <desc>Captain view</desc>
@@ -277,6 +483,23 @@ alight GPK-52 with correct magnetic heading
       <binding>
         <command>nasal</command>
         <script>view.forceView(1);</script>
+      </binding>
+    </key>
+
+    <key n="51">
+      <name>3</name>
+      <desc>Engineer view</desc>
+      <binding>
+        <command>nasal</command>
+        <script>view.forceView(2);</script>
+      </binding>
+    </key>
+    <key n="52">
+      <name>4</name>
+      <desc>Navigator view</desc>
+      <binding>
+        <command>nasal</command>
+        <script>view.forceView(3);</script>
       </binding>
     </key>
 
@@ -365,8 +588,62 @@ alight GPK-52 with correct magnetic heading
     </gear>
  </gear>
 
+
+<instrumentation>
+  <adf n="1">
+    <serviceable type="bool">true</serviceable>
+  </adf>
+  <airspeed-indicator n="1">
+    <serviceable type="bool">true</serviceable>
+  </airspeed-indicator>
+  <altimeter n="1">
+    <serviceable type="bool">true</serviceable>
+  </altimeter>
+  <heading-indicator-dg>
+    <serviceable type="bool">true</serviceable>
+  </heading-indicator-dg>
+  <heading-indicator-fg>
+    <serviceable type="bool">true</serviceable>
+  </heading-indicator-fg>
+  <!--<kppm n="0">
+    <scale-offset type="double">0</scale-offset>
+  </kppm>-->
+  <marker-beacon>
+    <audio-btn type="bool">false</audio-btn>
+    <volume type="double">0.0</volume>
+  </marker-beacon>
+  <radar-altimeter>
+    <serviceable type="bool">true</serviceable>
+    <antenna>
+      <x-offset-m type="double">0</x-offset-m>
+      <y-offset-m type="double">0</y-offset-m>
+      <z-offset-m type="double">1.05</z-offset-m>
+    </antenna>
+  </radar-altimeter>
+  <transponder>
+   <inputs>
+    <knob-mode type="int">0</knob-mode>
+   </inputs>
+  </transponder>
+  <vertical-speed-indicator n="1">
+    <serviceable type="bool">true</serviceable>
+  </vertical-speed-indicator>
+  <zk2>
+    <heading-bug type="double">0</heading-bug>
+  </zk2>
+</instrumentation>
+
+<systems>
+ <static n="7">
+  <serviceable>1</serviceable>
+ </static>
+ <static n="8">
+  <serviceable>1</serviceable>
+ </static>
+</systems>
+
 <an24>
-  <ap-28l1>
+  <AP-28l1>
     <coefficients> <!-- coefficients are taken from book An-24. Technical description.-->
       <roll-angle type="double">0.52</roll-angle>
       <roll-rate type="double">0.33</roll-rate>
@@ -420,82 +697,70 @@ alight GPK-52 with correct magnetic heading
       <elevator-autotrim-feel type="bool">false</elevator-autotrim-feel>
       <elevator-alt-correction type="double">0</elevator-alt-correction>
     </internal>
-  </ap-28l1>
+  </AP-28l1>
+
   <gear>
-    <steer_mode>2</steer_mode>
+    <steer_mode>2.0</steer_mode>
   </gear>
+
+  <Pressure>
+    <pitotvalve1>1.0</pitotvalve1>
+    <pitotvalve2>1.0</pitotvalve2>
+    <pitotvalve3>1.0</pitotvalve3>
+  </Pressure>
+
   <instrumentation>
     <idle-lock>
-      <idle-lock>0</idle-lock>
+      <idle-lock>0.0</idle-lock>
     </idle-lock>
     <prop-lock>
       <prop-lock-left type="bool">false</prop-lock-left>
       <prop-lock-right type="bool">false</prop-lock-right>
     </prop-lock>
-    <eup type="double">0</eup>
+    <eup type="double">0.0</eup>
   </instrumentation>
+
+  <SP-50>
+   <course_freq-mhz type="double">110.3</course_freq-mhz>
+   <channel type="int">6</channel>
+  </SP-50>
+
 </an24>
 
-<instrumentation>
-  <adf n="1">
-    <serviceable type="bool">true</serviceable>
-  </adf>
-  <heading-indicator-dg>
-    <serviceable type="bool">true</serviceable>
-  </heading-indicator-dg>
-  <heading-indicator-fg>
-    <serviceable type="bool">true</serviceable>
-  </heading-indicator-fg>
-  <!--<kppm n="0">
-    <scale-offset type="double">0</scale-offset>
-  </kppm>-->
-  <marker-beacon>
-    <audio-btn type="bool" >false</audio-btn>
-    <volume type="double" >0.0</volume>
-  </marker-beacon>
-  <radar-altimeter>
-    <serviceable type="bool">true</serviceable>
-    <antenna>
-      <x-offset-m type="double">0</x-offset-m>
-      <y-offset-m type="double">0</y-offset-m>
-      <z-offset-m type="double">1.05</z-offset-m>
-    </antenna>
-  </radar-altimeter>
-  <zk2>
-    <heading-bug type="double">0</heading-bug>
-  </zk2>
-</instrumentation>
-
-<systems>
-  <pitot n="1">
-    <serviceable type="bool">true</serviceable>
-  </pitot>
-  <pitot n="2">
-    <serviceable type="bool">true</serviceable>
-  </pitot>
-  <static n="1">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="2">
-    <serviceable type="bool">true</serviceable>
-  </static>
-  <static n="3">
-    <serviceable type="bool">true</serviceable>
-  </static>
-</systems>
-
 <nasal>
+  <autostart>
+    <file>Aircraft/an24b/Nasal/autostart.nas</file>
+  </autostart>
+  <!--electrical>
+    <file>Aircraft/an24b/Nasal/electrical.nas</file>
+  </electrical-->
+  <engines>
+    <file>Aircraft/an24b/Nasal/enginestart.nas</file>
+  </engines>
   <friction>
     <file>Aircraft/an24b/Nasal/friction.nas</file>
   </friction>
+  <fuel>
+    <file>Aircraft/an24b/Nasal/fuel.nas</file>
+  </fuel>
   <help>
     <file>Aircraft/an24b/Nasal/help.nas</file>
   </help>
+  <icing>
+    <file>Aircraft/an24b/Nasal/icing.nas</file>
+  </icing>
   <instruments>
     <file>Aircraft/an24b/Nasal/instruments.nas</file>
     <file>Aircraft/an24b/Nasal/gpk-52.nas</file>
     <file>Aircraft/an24b/Nasal/ap-28l1.nas</file>
+    <file>Aircraft/an24b/Nasal/radios.nas</file>
   </instruments>
+  <pitotstatic>
+    <file>Aircraft/an24b/Nasal/pitotstatic.nas</file>
+  </pitotstatic>
+  <stations>
+    <file>Aircraft/an24b/Nasal/stations.nas</file>
+  </stations>
   <view>
     <file>Aircraft/an24b/Nasal/view.nas</file>
   </view>
@@ -611,7 +876,5 @@ alight GPK-52 with correct magnetic heading
    <max-lb type="double">1255.0</max-lb>
   </weight>
  </payload>
-
-
 
 </PropertyList>

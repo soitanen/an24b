@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<!-- GPK ON -->
+
+<PropertyList>
+ <path>../../../shared/switches/tv-1-4m.ac</path>
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+    <!--condition>
+     <equals>
+    	<property>an24/AZS/sw0703</property>
+     <value>1.0</value>
+     </equals>
+    </condition-->
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/gpk", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_gpk", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/gpk", 0.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_gpk", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/instrumentation/sw_gpk</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>-25.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>25.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0.0056</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

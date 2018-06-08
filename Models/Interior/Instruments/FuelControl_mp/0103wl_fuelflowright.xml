@@ -1,25 +1,29 @@
 <?xml version="1.0"?>
 
-<!-- Fuel flow to right engine -->
+<!-- Fuel pressure(!) in front of right engine, sensor SDU-5A-1 (or IDT-100 -> in front of injectors ? ) -->
 
 <PropertyList>
- <path>../../shared/lamps/warninglamp03.ac</path>
+ <path>../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../shared/lamps/warninglamp03green.png</texture>
+ <texture>../../shared/lamps/sltsngreen.png</texture>
 </animation>
 
 <animation>
  <type>select</type>
  <condition>
    <greater-than>
-    <property>fdm/jsbsim/propulsion/engine[1]/fuel-flow-rate-pps</property>
+    <property>/fdm/jsbsim/propulsion/engine[1]/fuel-flow-rate-pps</property>
     <!-- reasonable value needed -->
     <value>0.1</value>
    </greater-than>
+   <equals>
+    <property>an24/AZS/sw0213</property>
+    <value>1.0</value>
+   </equals>
   </condition>
  <object-name>lampon</object-name>
 </animation>

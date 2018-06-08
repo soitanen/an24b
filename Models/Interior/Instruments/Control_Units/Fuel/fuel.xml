@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<!-- 3 lamps at top right of middle panel
+     - low on fuel
+     - failure of L/R fuel filter
+     TG-16 cutoff-valve and valve state signal lamps on horizontal left console -->
+
+<PropertyList>
+
+<model>
+ <path>mp_wl_01_low_fuel.xml</path>
+  <offsets>
+    <x-m>2.09232</x-m>
+    <y-m>0.1985</y-m>
+    <z-m>1.079</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>mp_wl_02_fuel_filter_clogged_left.xml</path>
+  <offsets>
+    <x-m>2.09232</x-m>
+    <y-m>0.1869</y-m>
+    <z-m>1.044</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>mp_wl_03_fuel_filter_clogged_right.xml</path>
+  <offsets>
+    <x-m>2.09232</x-m>
+    <y-m>0.208</y-m>
+    <z-m>1.044</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>lc_sw_tg-16_cutoff.xml</path>
+  <offsets>
+    <x-m>2.671</x-m>
+    <y-m>-1.0073</y-m>
+    <z-m>0.6008</z-m>
+    <heading-deg>82</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>lc_wl_tg-16_cutoff_open.xml</path>
+  <offsets>
+    <x-m>2.7</x-m>
+    <y-m>-1.007</y-m>
+    <z-m>0.615</z-m>
+    <heading-deg>82</heading-deg>
+  </offsets>
+</model>
+
+<model>
+ <path>lc_wl_tg-16_cutoff_closed.xml</path>
+  <offsets>
+    <x-m>2.7</x-m>
+    <y-m>-1.007</y-m>
+    <z-m>0.582</z-m>
+    <heading-deg>82</heading-deg>
+  </offsets>
+</model>
+
+</PropertyList>

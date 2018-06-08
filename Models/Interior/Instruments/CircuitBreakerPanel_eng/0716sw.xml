@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<!-- AZS-5; Crew cabin lights-->
+
+<PropertyList>
+ <path>../../shared/switches/azs.ac</path>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/AZS/sw0716", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/AZS/sw0716", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/AZS/sw0716</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

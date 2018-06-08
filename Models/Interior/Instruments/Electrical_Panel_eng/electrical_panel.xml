@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>electrical_panel.ac</path>
+
+<!-- Panel lighting -->
+
+<model>
+ <path>knob_panel-lighting.xml</path>
+  <offsets>
+    <x-m>0.004</x-m>
+    <y-m>-0.11</y-m>
+    <z-m>0.21</z-m>
+  </offsets>
+</model>
+
+ <animation>
+   <type>material</type>
+   <object-name>lightplate</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.5</green>
+     <blue>0.5</blue>
+     <factor-prop>/controls/lighting/panel-elec_red</factor-prop>
+   </emission>
+ </animation>
+
+
+
+ <animation>
+   <type>material</type>
+   <object-name>ar1_light</object-name>
+    <condition>
+    <equals>
+    <property>an24/Electrical_Panel/sw_pt-1000</property>
+    <value>1.0</value>
+    </equals>
+    </condition>
+   <diffuse>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </diffuse>
+   <ambient>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </ambient>
+   <emission>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </emission>
+   <specular>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </specular>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>ar2_light</object-name>
+    <condition>
+    <equals>
+    <property>an24/Electrical_Panel/sw_pt-1000</property>
+    <value>1.0</value>
+    </equals>
+    </condition>
+   <diffuse>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </diffuse>
+   <ambient>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </ambient>
+   <emission>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </emission>
+   <specular>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </specular>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>gs24_light</object-name>
+    <condition>
+    <equals>
+    <property>an24/Electrical_Panel/sw_pt-1000</property>
+    <value>1.0</value>
+    </equals>
+    </condition>
+   <diffuse>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </diffuse>
+   <ambient>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </ambient>
+   <emission>
+     <red>1.0</red>
+     <green>0.0</green>
+     <blue>0.0</blue>
+   </emission>
+   <specular>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+   </specular>
+ </animation>
+
+
+<!-- VP-46 Voltmeter -->
+
+<model>
+ <path>../VP-46_eng/vp-46.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.024</y-m>
+    <z-m>0.191</z-m>
+  </offsets>
+</model>
+
+<!-- PT-1000 main/off/reserve -->
+
+<model>
+ <path>sw_pt-1000.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.1086</y-m>
+    <z-m>0.213</z-m>
+  </offsets>
+</model>
+
+<!-- Warning lamp PT-1000 reserve on (i.e. main is defect) -->
+
+<model>
+ <path>wl_pt1000working.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0903</y-m>
+    <z-m>0.172</z-m>
+  </offsets>
+</model>
+
+<!-- GF-400 Hertzmeter (fake atm!) -->
+
+<model>
+ <path>../VF-150_eng/vf-150.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.1085</y-m>
+    <z-m>0.1116</z-m>
+  </offsets>
+</model>
+
+<!-- VF-150 Voltmeter -->
+
+<model>
+ <path>../VF-150_eng/vf-150.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.0435</y-m>
+    <z-m>0.1116</z-m>
+  </offsets>
+</model>
+
+<!-- P0-750 on / off/ AUX -->
+
+<model>
+ <path>sw_po-750_ground-start.xml</path>
+  <offsets>
+    <x-m>-0.004</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.11</z-m>
+  </offsets>
+</model>
+
+<!-- AF-150 Voltmeter -->
+
+<model>
+ <path>../AF-150_eng/af-150_l.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0435</y-m>
+    <z-m>0.1116</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>../AF-150_eng/af-150_r.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.1085</y-m>
+    <z-m>0.1116</z-m>
+  </offsets>
+</model>
+
+<!-- GO-16 Voltage regulation -->
+
+<model>
+ <path>knob_go-16l_voltage_reg.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.1184</y-m>
+    <z-m>0.041</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>knob_go-16r_voltage_reg.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.07</y-m>
+    <z-m>0.041</z-m>
+  </offsets>
+</model>
+
+<!-- Signal lamps AR-1/2 working -->
+
+<model>
+ <path>sl_ar-1_working.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.0464</y-m>
+    <z-m>-0.0156</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sl_ar-2_working.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.014</y-m>
+    <z-m>-0.0156</z-m>
+  </offsets>
+</model>
+
+<!-- A-Z Amperemeter STG L and R and GS-24 -->
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.1189</y-m>
+    <z-m>-0.0669</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.0616</y-m>
+    <z-m>-0.0669</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.0044</y-m>
+    <z-m>-0.0669</z-m>
+  </offsets>
+</model>
+
+<!-- A-2 Amperemeter accumulator-->
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.0529</y-m>
+    <z-m>-0.0669</z-m>
+  </offsets>
+</model>
+
+<!-- V-1 Voltmeter -->
+
+<model>
+ <path>../A-Z_eng/a-z.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>0.1102</y-m>
+    <z-m>-0.0669</z-m>
+  </offsets>
+</model>
+
+<!-- AC Voltage indication source select -->
+
+<model>
+ <path>knob_ac-volt-sel.xml</path>
+  <offsets>
+    <x-m>0.0</x-m>
+    <y-m>-0.015</y-m>
+    <z-m>0.041</z-m>
+  </offsets>
+</model>
+
+<!-- DC Voltage indication source select -->
+
+<model>
+ <path>knob_dc-volt-sel.xml</path>
+  <offsets>
+    <x-m>0.002</x-m>
+    <y-m>0.108</y-m>
+    <z-m>-0.132</z-m>
+    <roll-deg>150</roll-deg>
+  </offsets>
+</model>
+
+<!-- Include AC-Generators GO-16 -->
+
+<model>
+ <path>sw_go-16l_on.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.0374</y-m>
+    <z-m>0.0426</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_go-16r_on.xml</path>
+  <offsets>
+    <x-m>-0.002</x-m>
+    <y-m>0.06</y-m>
+    <z-m>0.0426</z-m>
+  </offsets>
+</model>
+
+<!-- Include DC-Generators STG-18 -->
+
+<model>
+ <path>sw_connect_stg-18l.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.13</y-m>
+    <z-m>-0.2066</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>sw_connect_stg-18r.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.111</y-m>
+    <z-m>-0.2066</z-m>
+  </offsets>
+</model>
+
+<!-- Include Generator GS-24A -->
+
+<model>
+ <path>sw_connect_gs-24.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.075</y-m>
+    <z-m>-0.2066</z-m>
+  </offsets>
+</model>
+
+<!-- Boardnet main switch -->
+
+<model>
+ <path>sw_aerodrome_onboard.xml</path>
+  <offsets>
+    <x-m>-0.005</x-m>
+    <y-m>-0.035</y-m>
+    <z-m>-0.2066</z-m>
+  </offsets>
+</model>
+
+</PropertyList>

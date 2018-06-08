@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<!-- Lamp signalising TG-16 APU cut-off valve open -->
+
+<PropertyList>
+ <path>../../../shared/lamps/sltsn.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../../shared/lamps/sltsngreenplain.png</texture>
+</animation>
+
+<animation>
+ <type>select</type>
+ <object-name>lampon</object-name>
+ <condition>
+   <equals>
+    <property>an24/FuelControl/TG-16_cutoff</property>
+    <value>0</value>
+   </equals>
+  </condition>
+</animation>
+
+</PropertyList>

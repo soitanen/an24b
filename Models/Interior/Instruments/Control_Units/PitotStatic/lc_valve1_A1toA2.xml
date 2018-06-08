@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+<!-- Lever to swap pitots from A1 to A2 -->
+
+<PropertyList>
+ <path>../../../shared/pressure-valve.ac</path>
+
+ <animation>
+   <type>knob</type>
+   <object-name>valvescrew</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/Pressure/pitotvalve1</property>
+      <factor>0.2</factor>
+      <min>-1</min>
+      <max>1</max>                
+      <wrap>false</wrap>
+     </binding>
+
+<!-- A1 selected or not -->
+     <binding>
+      <condition>
+       <greater-than>
+	<property>an24/Pressure/pitotvalve1</property>
+	<value>0.9</value>
+       </greater-than>
+      </condition>
+      <command>nasal</command>
+      <script>
+	pitotstatic.pitotswap_A1selected.start();
+      </script>
+     </binding>
+
+     <binding>
+      <condition>
+       <less-than>
+	<property>an24/Pressure/pitotvalve1</property>
+	<value>0.9</value>
+       </less-than>
+      </condition>
+      <command>nasal</command>
+      <script>
+	pitotstatic.pitotswap_A1selected.stop();
+      </script>
+     </binding>
+
+<!-- A2 selected or not -->
+     <binding>
+      <condition>
+       <less-than>
+	<property>an24/Pressure/pitotvalve1</property>
+	<value>0.1</value>
+       </less-than>
+      </condition>
+      <command>nasal</command>
+      <script>
+	pitotstatic.pitotswap_A2selected.start();
+      </script>
+     </binding>
+
+     <binding>
+      <condition>
+       <greater-than>
+	<property>an24/Pressure/pitotvalve1</property>
+	<value>0.1</value>
+       </greater-than>
+      </condition>
+      <command>nasal</command>
+      <script>
+	pitotstatic.pitotswap_A2selected.stop();
+      </script>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>valvelever</object-name>
+  <type>rotate</type>
+   <property>an24/Pressure/pitotvalve1</property>
+   <factor>30</factor>
+   <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+   </axis>
+ </animation>
+
+</PropertyList>

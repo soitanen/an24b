@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<!-- Overhead panel of of RPSN -->
+
+<PropertyList>
+ <path>controlpanel_oh.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>rpsnface</object-name>
+   <object-name>rpsnface2</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.7</green>
+     <blue>0.4</blue>
+   <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+   </emission>
+ </animation>
+
+<model>
+  <name>Signal_lamp</name>
+  <path>sl_01.xml</path>
+  <offsets>
+    <x-m>-0.003</x-m>
+    <y-m>-0.022</y-m>
+    <z-m>0.0035</z-m>
+    <roll-deg>30</roll-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>Signal_lamp</name>
+  <path>sl_02.xml</path>
+  <offsets>
+    <x-m>-0.003</x-m>
+    <y-m>0.022</y-m>
+    <z-m>0.0035</z-m>
+    <roll-deg>30</roll-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>Signal_lamp</name>
+  <path>sl_03.xml</path>
+  <offsets>
+    <x-m>-0.003</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.08</z-m>
+    <roll-deg>30</roll-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>Signal_lamp</name>
+  <path>sl_04.xml</path>
+  <offsets>
+    <x-m>-0.003</x-m>
+    <y-m>0.062</y-m>
+    <z-m>-0.033</z-m>
+    <roll-deg>30</roll-deg>
+  </offsets>
+</model>
+
+</PropertyList>

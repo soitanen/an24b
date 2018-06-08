@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<!-- Aileron trim switch on middle console -->
+
+<PropertyList>
+ <path>../../../shared/switches/png-15k.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+  <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0301</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+	controls.aileronTrim(-1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
+	interpolate("an24/animations/sw_aileron-trim", -1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+	interpolate("an24/animations/sw_aileron-trim", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Aileron Trim %3d%%</label>
+         <measure-text>Aileron Trim 100%</measure-text>
+         <tooltip-id>ail-trim-l</tooltip-id>
+         <mapping>percent</mapping>
+         <property>controls/flight/aileron-trim</property>
+       </binding>
+     </hovered>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+  <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0301</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+	controls.aileronTrim(1);
+   </script>
+  </binding>
+  <binding>
+   <command>nasal</command>
+   <script>
+	interpolate("an24/animations/sw_aileron-trim", 1.0, 0.1 );
+   </script>
+  </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+	interpolate("an24/animations/sw_aileron-trim", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Aileron Trim %3d%%</label>
+         <measure-text>Aileron Trim 100%</measure-text>
+         <tooltip-id>ail-trim-r</tooltip-id>
+         <mapping>percent</mapping>
+         <property>controls/flight/aileron-trim</property>
+       </binding>
+     </hovered>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/animations/sw_aileron-trim</property>
+  <interpolation>
+    <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

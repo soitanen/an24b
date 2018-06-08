@@ -1,0 +1,1013 @@
+<?xml version="1.0"?>
+
+<!-- ARK-11, remote panel of the ARK-P (ADF) system  -->
+
+<PropertyList>
+ <path>ark-11.ac</path>
+
+ <animation>
+   <type>pick</type>
+  <object-name>canvstations1</object-name>
+  <object-name>clickspot_tlf</object-name>
+  <object-name>clickspot_tlg</object-name>
+  <object-name>clickspot_narrow</object-name>
+  <object-name>clickspot_wide</object-name>
+  <visible>false</visible>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>light_plate</object-name>
+   <object-name>subband_disk</object-name>
+   <!--object-name>fine_freq_disk</object-name-->
+   <emission>
+     <red>1.0</red>
+     <green>0.4</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/nav_panel_instr_red</factor-prop>
+   </emission>
+ </animation>
+
+ <animation>
+   <type>material</type>
+   <object-name>freqtable</object-name>
+   <object-name>canvstations2</object-name>
+   <object-name>rangetable</object-name>
+   <emission>
+     <red>0.25</red>
+     <green>0.2</green>
+     <blue>0.1</blue>
+     <factor-prop>/controls/lighting/nav_panel_red</factor-prop>
+   </emission>
+ </animation>
+
+  <effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>arkcover</object-name>
+   </effect>
+
+<!-- Mode selector OFF-Compass1-Antenna-Frame-Compass2 -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>mode_handle</object-name>
+    <property>an24/ARK-11/mode-2</property>
+   <factor>40</factor>
+  <center>
+   <x-m>-0.0749</x-m>
+   <y-m>-0.0958</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/mode-2</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>4</max>                
+      <wrap>false</wrap>
+     </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+	var adf2mode = ['off', 'adf', 'ant', 'off', 'adf'];
+	setprop("/instrumentation/adf[1]/mode", adf2mode[getprop("an24/ARK-11/mode-2")] );
+	var adf4mode = ['off', 'off', 'adf', 'adf', 'off'];
+	setprop("/instrumentation/adf[3]/mode", adf4mode[getprop("an24/ARK-11/mode-2")] );
+      </script>
+    </binding>
+    </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>ark2-mode</tooltip-id>
+      <label>%s</label>
+      <property>an24/ARK-11/mode-2</property>
+      <mapping>nasal</mapping>
+      <script>
+        var ark2mode = ['OFF', 'Compass I', 'Antenna', 'Frame', 'Compass II'];
+        return ark2mode[arg[0]];
+      </script>
+    </binding>
+   </hovered>
+ </animation>
+
+<!-- Volume control -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>vol_general</object-name>
+   <property>an24/ARK-11/volumeknob-2</property>
+   <factor>-100</factor>
+  <center>
+   <x-m>0.0703</x-m>
+   <y-m>-0.0124</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/volumeknob-2</property>
+      <factor>-0.05</factor>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>ark2-vol</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/ARK-11/volumeknob-2</property>
+       </binding>
+     </hovered>
+ </animation>
+
+<!-- Subband handle -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>subband_handle</object-name>
+   <object-name>subband_lock</object-name>
+   <object-name>subband_disk</object-name>
+   <property>an24/ARK-11/sub-band-khz-2</property>
+    <interpolation>
+     <entry>
+      <ind>120.0</ind> <dep>0.0</dep>
+     </entry>
+     <entry>
+      <ind>280.0</ind> <dep>45.0</dep>
+     </entry>
+     <entry>
+      <ind>420.0</ind> <dep>90.0</dep>
+     </entry>
+     <entry>
+      <ind>580.0</ind> <dep>135.0</dep>
+     </entry>
+     <entry>
+      <ind>720.0</ind> <dep>180.0</dep>
+     </entry>
+     <entry>
+      <ind>880.0</ind> <dep>225.0</dep>
+     </entry>
+     <entry>
+      <ind>1020.0</ind> <dep>270.0</dep>
+     </entry>
+     <entry>
+      <ind>1180.0</ind> <dep>315.0</dep>
+     </entry>
+    </interpolation>
+  <center>
+   <x-m>0.0452</x-m>
+   <y-m>-0.068</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+    <action>
+    <binding>
+    <condition>
+     <property>an24/ARK-11/mem2/fixp</property>
+     <value>0.0</value>
+    </condition>
+     <command>property-cycle</command>
+      <property>an24/ARK-11/sub-band-khz-2</property>
+      <value type="double">1180.0</value>
+      <value type="double">1020.0</value>
+      <value type="double">880.0</value>
+      <value type="double">720.0</value>
+      <value type="double">580.0</value>
+      <value type="double">420.0</value>
+      <value type="double">280.0</value>
+      <value type="double">120.0</value>
+      <wrap>false</wrap>
+      </binding>
+    </action>
+ </animation>
+
+<!-- Rough adjustment handle -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>rough_adj_handle</object-name>
+   <object-name>rough_lock</object-name>
+   <property>an24/ARK-11/fine-khz-2</property>
+  <factor>2.25</factor>
+  <center>
+   <x-m>-0.028</x-m>
+   <y-m>-0.0084</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+    <action>
+     <binding>
+    <condition>
+     <property>an24/ARK-11/mem2/fixp</property>
+     <value>0.0</value>
+    </condition>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/fine-khz-2</property>
+      <factor>-10</factor>
+      <min>0</min>
+      <max>160</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+<!-- Smooth adjustment handle -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>smooth_adj_handle</object-name>
+   <property>an24/ARK-11/fine-khz-2</property>
+  <factor>2</factor>
+  <center>
+   <x-m>-0.0752</x-m>
+   <y-m>0.0684</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+    <action>
+     <binding>
+    <condition>
+     <property>an24/ARK-11/mem2/fixp</property>
+     <value>0.0</value>
+    </condition>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/fine-khz-2</property>
+      <factor>-0.5</factor>
+      <min>0</min>
+      <max>160</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>fine_freq_disk</object-name>
+  <type>rotate</type>
+   <property>an24/ARK-11/fine-khz-2</property>
+  <factor>2</factor>
+  <center>
+   <x-m>-0.0505</x-m>
+   <y-m>-0.005</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+ </animation>
+
+<!-- Frame left-right switch -->
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_left</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+<!-- Mode "Compass I/II" -->
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/frame-offset-2</property>
+       <condition>
+        <equals>
+         <property>an24/AZS/sw0514</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0515</property>
+         <value>1.0</value>
+        </equals>
+        <or>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>1</value>
+        </equals>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>4</value>
+        </equals>
+        </or>
+       </condition>
+      <step>4</step>
+      <min>-180</min>
+      <max>180</max>                
+      <wrap>true</wrap>
+     </binding>
+<!-- Mode "Antenna" -->
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/frame-offset-2</property>
+       <condition>
+        <and>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>2</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0514</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0515</property>
+         <value>1.0</value>
+        </equals>
+        </and>
+       </condition>
+      <step>1</step>
+      <min>-180</min>
+      <max>180</max>
+      <wrap>true</wrap>
+     </binding>
+<!-- Mode "Frame" -->
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/adf[1]/indicated-bearing-deg</property>
+       <condition>
+        <and>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>3</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0514</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0515</property>
+         <value>1.0</value>
+        </equals>
+        </and>
+       </condition>
+      <step>-1</step>
+      <!--min>-180</min>
+      <max>180</max>
+      <wrap>true</wrap-->
+     </binding>
+
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/frame_l-r-2", -1.0, 0.1 );
+      </script>
+    </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/frame_l-r-2", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_right</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+<!-- Mode "Compass I/II" -->
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/frame-offset-2</property>
+       <condition>
+        <equals>
+         <property>an24/AZS/sw0514</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0515</property>
+         <value>1.0</value>
+        </equals>
+        <or>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>1</value>
+        </equals>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>4</value>
+        </equals>
+        </or>
+       </condition>
+      <step>-4</step>
+      <min>-180</min>
+      <max>180</max>
+      <wrap>true</wrap>
+     </binding>
+<!-- Mode "Antenna" -->
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/ARK-11/frame-offset-2</property>
+       <condition>
+        <and>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>2</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0514</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0515</property>
+         <value>1.0</value>
+        </equals>
+        </and>
+       </condition>
+      <step>-1</step>
+      <min>-180</min>
+      <max>180</max>
+      <wrap>true</wrap>
+     </binding>
+<!-- Mode "Frame" -->
+     <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/adf[1]/indicated-bearing-deg</property>
+       <condition>
+        <and>
+        <equals>
+         <property>an24/ARK-11/mode-2</property>
+         <value>3</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0514</property>
+         <value>1.0</value>
+        </equals>
+        <equals>
+         <property>an24/AZS/sw0515</property>
+         <value>1.0</value>
+        </equals>
+        </and>
+       </condition>
+      <step>1</step>
+      <min>-180</min>
+      <max>180</max>
+      <wrap>true</wrap>
+     </binding>
+
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/frame_l-r-2", 1.0, 0.1 );
+      </script>
+    </binding>
+    <mod-up>
+      <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/frame_l-r-2", 0.0, 0.1 );
+      </script>
+    </binding>
+    </mod-up>
+  </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever_frame</object-name>
+   <property>an24/ARK-11/frame_l-r-2</property>
+  <interpolation>
+    <entry><ind>-1.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>-30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0443</y-m>
+    <z-m>0.0025</z-m>
+   </center>
+ </animation>
+
+<!-- Fixed Frequency buttons 1-9 / "P" button pressed for smooth tuning mode -->
+
+<animation>
+  <type>pick</type>
+  <object-name>fixp</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/mem2/fixp", 0.0, 0.1 );
+	}
+	else {
+	interpolate("an24/ARK-11/mem2/fixp", 1.0, 0.1 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fixp</object-name>
+  <property>an24/ARK-11/mem2/fixp</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix1</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix1", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix1", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix1sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix1ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid12.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst12.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra12.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid12.setText("");
+	stations.textra12.setText("");
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix1sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix1ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix1</object-name>
+  <property>an24/ARK-11/mem2/animfix1</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix2", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix2", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix2sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix2ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid22.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst22.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra22.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid22.setText("");
+	stations.textra22.setText("");	
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix2sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix2ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix2</object-name>
+  <property>an24/ARK-11/mem2/animfix2</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix3</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix3", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix3", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix3sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix3ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid32.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst32.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra32.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid32.setText("");
+	stations.textra32.setText("");	
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix3sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix3ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix3</object-name>
+  <property>an24/ARK-11/mem2/animfix3</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix4</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix4", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix4", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix4sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix4ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid42.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst42.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra42.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid42.setText("");
+	stations.textra42.setText("");	
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix4sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix4ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix4</object-name>
+  <property>an24/ARK-11/mem2/animfix4</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix5</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix5", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix5", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix5sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix5ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid52.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst52.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra52.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid52.setText("");
+	stations.textra52.setText("");
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix5sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix5ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix5</object-name>
+  <property>an24/ARK-11/mem2/animfix5</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix6</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix6", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix6", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix6sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix6ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid62.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst62.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra62.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid62.setText("");
+	stations.textra62.setText("");
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix6sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix6ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix6</object-name>
+  <property>an24/ARK-11/mem2/animfix6</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix7</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix7", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix7", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix7sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix7ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid72.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst72.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra72.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid72.setText("");
+	stations.textra72.setText("");	
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix7sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix7ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix7</object-name>
+  <property>an24/ARK-11/mem2/animfix7</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix8</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix8", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix8", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix8sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix8ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid82.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst82.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra82.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid82.setText("");
+	stations.textra82.setText("");
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix8sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix8ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix8</object-name>
+  <property>an24/ARK-11/mem2/animfix8</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>fix9</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/ARK-11/mem2/animfix9", 1.0, 0.1 );
+        settimer(func {interpolate("an24/ARK-11/mem2/animfix9", 0.0, 0.1 );},0.1);
+	if ( getprop("an24/ARK-11/mem2/fixp") == 1.0 and getprop("an24/AZS/sw0514") == 1.0 ) {
+	setprop("an24/ARK-11/mem2/fix9sb", getprop("an24/ARK-11/sub-band-khz-2") );
+	setprop("an24/ARK-11/mem2/fix9ff", getprop("an24/ARK-11/fine-khz-2") );
+	var navaid = findNDBByFrequencyKHz( getprop("/instrumentation/adf[1]/frequencies/selected-khz") );
+	if (navaid != nil) {
+	stations.textid92.setText(sprintf("%.5s\n", navaid.name ));
+	stations.textst92.setText(sprintf("%.1f", getprop("/instrumentation/adf[1]/frequencies/selected-khz")));
+	stations.textra92.setText(sprintf("%.i", navaid.range_nm * 1.85 ));
+	}
+	else {
+	stations.textid92.setText("");
+	stations.textra92.setText("");
+	}}
+	else if ( getprop("an24/AZS/sw0514") == 1.0 ) {
+	interpolate("an24/ARK-11/sub-band-khz-2", getprop("an24/ARK-11/mem2/fix9sb"), 2.0 );
+	interpolate("an24/ARK-11/fine-khz-2", getprop("an24/ARK-11/mem2/fix9ff"), 2.4 );
+	}
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>fix9</object-name>
+  <property>an24/ARK-11/mem2/animfix9</property>
+  <factor>0.003</factor>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+<!-- Text OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>desc</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>desc</name>
+    <type type="string">literal</type>
+    <text type="string">ARK-11 No.2 Control Panel</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.044</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>xy-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.18</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.025 </z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+  </text>
+
+  <text>
+    <name>textosg</name>
+    <offsets>
+      <x-m>-0.076</x-m>
+      <y-m>-0.0075</y-m>
+      <z-m>0.008</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <alignment>center-center</alignment>
+    <axis-alignment>xy-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <property>an24/ARK-11/final-freq-2</property>
+    <format type="string">%.1f</format>
+    <truncate type="bool">false</truncate>
+    <font>arial_black.txf</font>
+    <character-size type="double">0.004</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+  </text>
+
+</PropertyList>

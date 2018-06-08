@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!-- Right fuel filter clogged -->
+
+<PropertyList>
+ <path>../../../shared/lamps/sltsn.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../../shared/lamps/sltsnredplain.png</texture>
+</animation>
+
+ <animation>
+  <object-name>lampon</object-name>
+  <type>pick</type>
+  <visible>false</visible>
+</animation>
+
+<!--animation>
+ <type>select</type>
+ <condition>
+   <equals>
+    <property>Pressure signalizer SgDFR-1T observes press diff > 0.4kg/cm2 between front/after fine-filter</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ <object-name>lampon</object-name>
+</animation-->
+
+</PropertyList>

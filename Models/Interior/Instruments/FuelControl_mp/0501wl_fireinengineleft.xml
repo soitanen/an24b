@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 
-<!-- Cutoff due to fire in left engine -->
+<!-- Cutoff valve -->
 
 <PropertyList>
- <path>../../shared/lamps/warninglamp03.ac</path>
+ <path>../../shared/lamps/sltsn.ac</path>
 
 <animation>
  <type>material</type>
  <object-name>holder</object-name>
  <object-name>lampon</object-name>
- <texture>../../shared/lamps/warninglamp03red.png</texture>
+ <texture>../../shared/lamps/sltsnred.png</texture>
 </animation>
 
 <animation>
  <type>select</type>
  <condition>
    <equals>
-    <property>engines/engine[0]/cutoff</property>
-    <value>true</value>
+    <property>an24/FuelControl/cutoff-l-by-sw</property>
+    <value>1.0</value>
    </equals>
   </condition>
  <object-name>lampon</object-name>

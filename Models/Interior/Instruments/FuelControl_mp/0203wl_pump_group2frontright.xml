@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Fuel transfer to right engine -->
+<!-- Front Pump 463 of right AUX tank working -->
 
 <PropertyList>
  <path>../../shared/lamps/warninglamp02.ac</path>
@@ -15,10 +15,10 @@
 <animation>
  <type>select</type>
  <condition>
-   <equals>
-    <property>an24/FuelControl/gr2rightpumps</property>
-    <value>1</value>
-   </equals>
+   <greater-than>
+    <property>an24/FuelControl/rfront463_press</property>
+    <value>0.15</value>
+   </greater-than>
   </condition>
  <object-name>lampon</object-name>
 </animation>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<!-- AZR-15; Prop and "Kokov" anti-ice; Control box PU-24 -->
+
+<PropertyList>
+ <path>../../shared/switches/azr.ac</path>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/AZS/sw0408", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/AZS/sw0408", -1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/AZS/sw0408</property>
+  <interpolation>
+    <entry><ind>-1.0</ind>	<dep>-26.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>26.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

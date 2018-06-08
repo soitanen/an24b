@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+
+<!-- Navigator's SPU-7, crew/radio communication subscriber unit -->
+
+<PropertyList>
+  <path>spu-7.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>light_plate</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>0.7</blue>
+     <factor-prop>/controls/lighting/panel-elec_red</factor-prop>
+   </emission>
+ </animation>
+
+<!-- Emergency call (set all stations listening and their volume up)-->
+
+<animation>
+  <type>pick</type>
+  <object-name>press_me</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        if( getprop("an24/SPU-7/nav_emerg-call" ) == 1.0 ){
+        setprop("an24/SPU-7/nav_emerg-call", 0.0 );
+        }
+        else {
+        setprop("an24/SPU-7/nav_emerg-call", 1.0 );
+        }
+        interpolate("an24/animations/spu_nav-emerg", 1.0, 0.1 );
+        settimer(func {interpolate("an24/animations/spu_nav-emerg", 0.0, 0.1 );},0.1);
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>press_me</object-name>
+  <property>an24/animations/spu_nav-emerg</property>
+  <factor>0.0016</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- Source selector, -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>source_select</object-name>
+   <property>an24/SPU-7/nav_source</property>
+   <factor>32</factor>
+   <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+   <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0027</z-m>
+   </center>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/SPU-7/nav_source</property>
+      <factor>-1</factor>
+      <min>0</min>
+      <max>5</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>spu-source_nav</tooltip-id>
+      <label>Source: %s</label>
+      <property>an24/SPU-7/nav_source</property>
+      <mapping>nasal</mapping>
+      <script>
+        var spusourcenav = ['R-802 Comm1', 'US-8K HF/AM', 'R-836 HF/AM', 'R-802 Comm 2', 'ARK I', 'ARK II'];
+        return spusourcenav[arg[0]];
+      </script>
+    </binding>
+   </hovered>
+ </animation>
+
+<!-- "Listen" volume -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>vol_listen</object-name>
+   <property>an24/SPU-7/listen_viewnr10</property>
+   <factor>800</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-0.0327</y-m>
+   <z-m>0.0436</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/SPU-7/listen_viewnr10</property>
+      <factor>-0.1</factor>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>spu-list-vol_nav</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/SPU-7/listen_viewnr10</property>
+       </binding>
+     </hovered>
+ </animation>
+
+<!-- "General" volume -->
+
+ <animation>
+   <type>knob</type>
+   <object-name>vol_general</object-name>
+   <property>an24/SPU-7/general_viewnr10</property>
+   <factor>800</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0327</y-m>
+   <z-m>0.0436</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/SPU-7/general_viewnr10</property>
+      <factor>-0.1</factor>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+     </binding>
+    </action>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <label>Volume: %3d%%</label>
+         <measure-text>Volume: 100%</measure-text>
+         <tooltip-id>spu-gen-vol_eng</tooltip-id>
+         <mapping>percent</mapping>
+         <property>an24/SPU-7/general_viewnr10</property>
+       </binding>
+     </hovered>
+ </animation>
+
+<!-- Network selector
+
+ <animation>
+   <type>knob</type>
+   <object-name>vol_general</object-name>
+    <action>
+     <binding>
+      <command>property-adjust</command>
+      <property>an24/SPU-7/lc_vol_general</property>
+      <factor>-0.05</factor>
+      <min>0</min>
+      <max>1</max>                
+      <wrap>false</wrap>
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <object-name>vol_general</object-name>
+  <type>rotate</type>
+   <property>an24/SPU-7/lc_vol_general</property>
+   <factor>400</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0327</y-m>
+   <z-m>0.0436</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+ -->
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">SPU-7 Comm device</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.02</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.08</max-height>
+    <max-width>0.08</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.018</x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<!-- AZS-10; Heating for pressure sensors of KV-11 and FDR -->
+
+<PropertyList>
+ <path>../../shared/switches/azs.ac</path>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/AZS/sw0410", 1.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S3A2", getprop("an24/Anti-Ice/sw_pitot_S3A2"), 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S4S7", getprop("an24/Anti-Ice/sw_pitot_S4S7"), 0.1 );
+      </script>
+    </binding>
+  </action>
+ </animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/AZS/sw0410", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S3A2", 0.0, 0.1 );
+        interpolate("an24/Anti-Ice/pitot_S4S7", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/AZS/sw0410</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>20.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

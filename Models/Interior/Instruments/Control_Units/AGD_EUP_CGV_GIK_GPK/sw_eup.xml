@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<!-- EUP ON -->
+
+<PropertyList>
+ <path>../../../shared/switches/vg-15k.ac</path>
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+    <condition>
+     <equals>
+    	<property>an24/AZS/sw0605</property>
+     <value>1.0</value>
+     </equals>
+    </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/eup", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_eup", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/eup", 0.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/instrumentation/sw_eup", 0.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/instrumentation/sw_eup</property>
+  <interpolation>
+    <entry><ind>0.0</ind>	<dep>-30.0</dep></entry>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+ 
+
+</PropertyList>

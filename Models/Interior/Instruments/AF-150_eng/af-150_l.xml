@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<!-- AF-150, Amperemeter -->
+
+<PropertyList>
+ <path>af-150.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>back</object-name>
+   <object-name>af-needle</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>0.7</blue>
+     <factor-prop>/controls/lighting/panel-elec_red</factor-prop>
+   </emission>
+ </animation>
+
+<!--animation>
+  <type>rotate</type>
+  <object-name>needle_1</object-name>
+  <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	46.9</dep></entry>
+    <entry><ind>       1245</ind>	<dep>  360.0</dep></entry>
+    <entry><ind>       1370</ind>	<dep>  391.3</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation-->
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">AF-150 Amperemeter</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>

@@ -1,0 +1,37 @@
+<PropertyList>
+
+<!-- Test panel above navigator's window -->
+
+  <path>firetestpanel.ac</path>
+
+ <!--animation>
+  <type>material</type>
+  <object-name>lightplate</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.9</green>
+   <blue>0.5</blue>
+   <factor-prop>/controls/lighting/overhead_instr</factor-prop>
+  </emission>
+ </animation-->
+
+<model>
+ <path>knob_group-select.xml</path>
+  <offsets>
+    <x-m>0.037</x-m>
+    <y-m>-0.0282</y-m>
+    <z-m>0.0315</z-m>
+  </offsets>
+</model>
+
+<model>
+ <path>btn_push-to-test.xml</path>
+  <offsets>
+    <x-m>0.033</x-m>
+    <y-m>0.0451</y-m>
+    <z-m>0.0338</z-m>
+    <pitch-deg>90</pitch-deg>
+  </offsets>
+</model>
+
+</PropertyList>

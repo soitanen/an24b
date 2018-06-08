@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<!-- URVK-18, air flow indicator left engine to cabin -->
+
+<PropertyList>
+ <path>urvk-18.ac</path>
+
+ <animation>
+   <type>material</type>
+   <object-name>urvk_housing</object-name>
+   <object-name>urvk_needle</object-name>
+   <emission>
+     <red>1.0</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+     <factor-prop>/controls/lighting/panel-m_red</factor-prop>
+   </emission>
+ </animation>
+
+<!--animation>
+  <type>rotate</type>
+  <object-name>urvk_needle</object-name>
+  <property>still/to/come/airflow_r</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>0.0</dep></entry>
+    <entry><ind>1.0</ind><dep>10.0</dep></entry>
+    <entry><ind>3.0</ind><dep>94.0</dep></entry>
+    <entry><ind>5.0</ind><dep>168.0</dep></entry>
+    <entry><ind>7.0</ind><dep>230.0</dep></entry>
+    <entry><ind>10.0</ind><dep>310.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation-->
+
+<!-- TEXT OSG -->
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">URVK-18 Air Flow</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+</PropertyList>

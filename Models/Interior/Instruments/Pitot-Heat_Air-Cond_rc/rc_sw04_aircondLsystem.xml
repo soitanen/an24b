@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<!-- Switch for air conditioning hot/cold -->
+
+<PropertyList>
+ <path>../../shared/switches/vng-15.ac</path>
+
+<animation>
+  <type>pick</type>
+  <object-name>clickspot_up</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <!--binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0411</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Air-Cond/left-system", 1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0411</property>
+         <value>0.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Anti-Ice/pitot_S1S5A1", 0.0, 0.1 );
+      </script>
+    </binding-->
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Air-Cond/left-system", 1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>clickspot_down</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <!--binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0411</property>
+         <value>1.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Anti-Ice/pitot_S1S5A1", -1.0, 0.1 );
+      </script>
+    </binding>
+    <binding>
+        <condition>
+         <equals>
+         <property>an24/AZS/sw0411</property>
+         <value>0.0</value>
+         </equals>
+        </condition>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Anti-Ice/pitot_S1S5A1", 0.0, 0.1 );
+      </script>
+    </binding-->
+    <binding>
+      <command>nasal</command>
+      <script>
+        interpolate("an24/Air-Cond/left-system", -1.0, 0.1 );
+      </script>
+    </binding>
+  </action>
+</animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lever</object-name>
+   <property>an24/Air-Cond/left-system</property>
+  <interpolation>
+    <entry><ind>1.0</ind>	<dep>30.0</dep></entry>
+    <entry><ind>-1.0</ind>	<dep>-30.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

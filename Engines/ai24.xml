@@ -39,7 +39,8 @@ itt_delay [-] time constant for ITT change
   <betarangeend>                 64     </betarangeend>
   <reversemaxpower>              60     </reversemaxpower>
 
-  <table name="EnginePowerVC">
+  <function name="EnginePowerVC">
+   <table>
     <description> Engine power, function of airspeed and pressure </description>
     <independentVar lookup="row">atmosphere/rho-slugs_ft3</independentVar>
     <independentVar lookup="column">velocities/ve-kts</independentVar>
@@ -74,7 +75,8 @@ itt_delay [-] time constant for ITT change
 0.002376848	0.9082	0.9082	0.9081	0.9082	0.9081
 0.002613549	0.9082	0.9082	0.9081	0.9082	0.9081
     </tableData>
-  </table>
+   </table>
+  </function>
 
   <table name="EnginePowerRPM_N1" type="internal">
     <description> Engine Power, function of RPM and N1 </description>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!-- Warning lamp indicating functionality of fire extinguishing system IIB -->
+
+<PropertyList>
+ <path>../../shared/lamps/warninglamp02.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>holder</object-name>
+ <object-name>lampon</object-name>
+ <texture>../../shared/lamps/warninglamp02orangeplain.png</texture>
+</animation>
+
+<animation>
+ <type>select</type>
+ <condition>
+   <or>
+   <equals>
+    <property>an24/FireFeather/main</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>an24/FireFeather/main</property>
+    <value>-1</value>
+   </equals>
+   </or>
+  </condition>
+ <object-name>lampon</object-name>
+</animation>
+
+</PropertyList>

@@ -3,7 +3,7 @@
 <!-- Instruments' background, clamp and bolt-on lamps -->
 
 <PropertyList>
- <path>../../../shared/switches/switch03.ac</path>
+ <path>../../../shared/switches/3ppng-15k.ac</path>
  <animation>
   <type>pick</type>
   <object-name>clickspot_up</object-name>
@@ -14,7 +14,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/lights/instrlights", 1.0, 0.1 );
+        interpolate("/controls/lighting/main-emerg", 1.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -36,7 +36,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("an24/lights/instrlights", 0.0, 0.1 );
+        interpolate("/controls/lighting/main-emerg", 0.0, 0.1 );
       </script>
     </binding>
   </action>
@@ -45,7 +45,7 @@
  <animation>
    <type>rotate</type>
    <object-name>lever</object-name>
-   <property>an24/lights/instrlights</property>
+   <property>/controls/lighting/main-emerg</property>
   <interpolation>
     <entry><ind>0.0</ind>	<dep>-20.0</dep></entry>
     <entry><ind>1.0</ind>	<dep>20.0</dep></entry>

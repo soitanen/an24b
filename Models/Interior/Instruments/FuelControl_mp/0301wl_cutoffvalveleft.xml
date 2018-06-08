@@ -15,10 +15,10 @@
 <animation>
  <type>select</type>
  <condition>
-   <less-than>
-    <property>an24/FuelControl/cutoffeng0</property>
-    <value>0.5</value>
-   </less-than>
+   <equals>
+    <property>an24/FuelControl/cutoff-l-by-sw</property>
+    <value>0.0</value>
+   </equals>
   </condition>
  <object-name>lampon</object-name>
 </animation>
